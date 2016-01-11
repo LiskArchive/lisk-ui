@@ -1,0 +1,192 @@
+<div class="app-modal valign-wrapper">
+    <div class="container height100">
+        <div class="row height100">
+            <div class="col-md-6 col-md-offset-4 height100 valign-wrapper">
+                <div class="modal-content" ng-show="step==1">
+                    <div class="modal-header modal-iconed">
+                        <div class="close-modal" ng-click="close()"><span class="sr-only">Close modal</span></div>
+                    </div>
+                    <div class="modal-header clearfix">
+                        <div><h2>Step 1/3 - Preamble</h2>
+                        </div>
+                        <div>Please read carefully.
+                        </div>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="scrolling" style="margin-left: 10px">
+                        <div class="modal-body">
+                        <span class="multi-info-text flat-text"><p>This walkthrough will guide you through the necessary
+                            steps to create a multi-signature group. It's very important that you know what
+                            multi-signatures are, else you risk loosing your XCR balance.</p><p class="top-margin-10">
+
+                            A multi-signature group consists of N accounts, the one who created the group is the group
+                            owner. When the owner wants to make a transaction, M of N accounts within the group need to
+                            confirm it, otherwise the transaction will not be processed. The values M and N are
+                            specified in this walkthrough.</p><p class="top-margin-10">
+
+                            <b>
+                                Things you need to know for the multi-signature group setup:</b></p>
+                                - The number of group members (N).</p><p>
+                                - The number of needed confirmations (M).</p><p>
+                                - The account names or IDs from the Crypti accounts you want to add to the
+                                group.</p></span>
+
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="nav modal-buttons pull-right">
+                            <li>
+                                <a href="#" ng-click="close()">CANCEL
+                                </a>
+                            </li>
+                            <li><a href="#" class="green-link" ng-click="step=2;">NEXT</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-content" ng-show="step==2">
+                    <div class="modal-header modal-iconed">
+                        <div class="close-modal" ng-click="close()"><span class="sr-only">Close modal</span></div>
+                    </div>
+                    <div class="modal-header clearfix">
+                        <div><h2>Step 2/3 - Specify Group Members</h2>
+                        </div>
+                        <div>Add group members by typing in their account name, ID or public key.
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <form ng-submit="addMember(contact)">
+                            <div class="input-group app-addon">
+                                <span class="input-group-addon search"></span>
+                                <input ng-focus="focus == 'contact'" id="contact" type="text" class="form-control"
+                                       placeholder="Account name, ID or public key"
+                                       ng-model="contact">
+                                <span class="input-group-addon clear" ng-click="contact='';"></span>
+                            </div>
+                            <span class="app-addon-error" style="margin-top: 3px;"
+                                  ng-show="addingError">{{addingError}}</span>
+                            <input type="submit" ng-show="false">
+                        </form>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="owners-list" ng-class="{'add-border': totalCount}">
+                            <li ng-repeat="(key, member) in members">
+                                <span class="address-linen tooltipped" data-position="right"
+                                      data-tooltip="{{key}}">{{member.address}}</span><span class="delete"
+                                                                                            ng-click="deleteMember(member.publicKey)"></span>
+                            </li>
+                            <li><span>{{currentAddress}}</span></li>
+                        </ul>
+                    </div>
+                    <div class="modal-body" id="multi-range" ng-show="totalCount">
+                        <div class="range-wrapper" style="padding: 20px 40px; display: table; width: 100%;">
+                            <div style="display: table-row;">
+                                <label style="display: table-cell; font-size: 16px;">Confirmations needed: <strong>{{sign}}</strong></label>
+
+                                <p class="range-field">
+                                    <input style="display: table-cell;" type="range" ng-model="sign" min="2"
+                                           max="{{totalCount+1}}">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-body">
+                        <span class="send-info-text flat-text">Pressing enter confirms each member.</span>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="nav modal-buttons pull-right">
+                            <li>
+                                <a href="#" ng-click="close()">Cancel
+                                </a>
+                            </li>
+                            <li><a href="#" class="green-link" ng-click="goToStep3();">next</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-content" ng-show="step==3">
+                    <div class="modal-header modal-iconed">
+                        <div class="close-modal" ng-click="close()"><span class="sr-only">Close modal</span></div>
+                    </div>
+                    <div class="modal-header clearfix">
+                        <div><h2>Step 3/3 - Confirmation</h2>
+                        </div>
+                        <div>Please check your input below and go back if necessary. Double-check the group members,
+                            else you risk losing your XCR balance!
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="multi-total">
+                            <li>Number of members:<span>{{totalCount+1}}</span></li>
+                            <li>Confirmations needed:<span>{{sign}}</span></li>
+                        </ul>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="owners-list" ng-class="{'add-border': totalCount}">
+                            <li ng-repeat="(key, member) in members">
+                                <span>{{member.address}}</span>
+                            </li>
+                            <li>{{currentAddress}}</li>
+                        </ul>
+                    </div>
+                    <div class="modal-body" ng-show="errorMessage">
+                        <span class="app-addon-error" style="margin-top: 3px;">{{errorMessage}}</span>
+                    </div>
+
+                    <div class="modal-body">
+                        <ul class="nav modal-buttons pull-right">
+                            <li>
+                                <a href="#" ng-click="step = 2;">BACK
+                                </a>
+                            </li>
+                            <li><a href="#" class="green-link" ng-click="putMembers();">confirm</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-content" ng-show="step==4">
+                    <div class="modal-header modal-iconed">
+                        <div class="close-modal" ng-click="close()"><span class="sr-only">Close modal</span></div>
+                    </div>
+                    <div class="modal-header clearfix">
+                        <div><h2>Account Verification</h2>
+                        </div>
+                        <div>Please enter your passphrase.
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <form ng-submit="putMembers(true)">
+                            <div class="field-padding">
+                                <div class="input-field" ng-hide="rememberedPassword">
+                                    <input id="password" type="password" ng-model="authData.password" ng-trim="false"
+                                           autofocus
+                                           ng-focus="focus == 'password'">
+                                    <label for="password">Your Passphrase</label>
+                                </div>
+                                <div class="input-field" ng-if="secondPassphrase">
+                                    <input id="secondPhrase" type="password" ng-model="authData.secondPassword"
+                                           ng-trim="false"
+                                           autofocus
+                                           ng-focus="focus == 'secondPhrase'">
+                                    <label for="secondPhrase">Your Second Passphrase</label>
+                                </div>
+                                <span class="pass-error" ng-show="errorMessage">{{errorMessage}}</span>
+                                <input type="submit" ng-show="false">
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="nav modal-buttons pull-right">
+                            <li>
+                                <a href="#" ng-click="errorMessage=''; step=3;">BACK
+                                </a>
+                            </li>
+                            <li><a href="#" class="green-link" ng-click="putMembers(true)">confirm</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

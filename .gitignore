@@ -1,0 +1,10 @@
+dapps/
+.project
+npm-debug.log
+.idea
+bower_components
+static
+node_modules
+webkitbuilds
+build
+tmp
