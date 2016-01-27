@@ -5,26 +5,26 @@
                 <div class="modal-content">
                     <div class="modal-content">
                         <div class="modal-header modal-iconed">
-                            <div class="close-modal" ng-click="close()"><span class="sr-only">Close modal</span>
+                            <div class="close-modal" ng-click="close()">
+                                <span class="sr-only">Close modal</span>
                             </div>
                         </div>
                         <div class="modal-header clearfix">
-                            <div><h2>{{label}}</h2>
+                            <div>
+                                <h2>{{label}}</h2>
                             </div>
                         </div>
                         <div class="modal-body">
                             <form ng-submit="forgingState()">
                                 <div class="field-padding">
-                                    <span class="pass-error" style="margin-top: 20px;
-    font-size: 14px;" ng-show="error">{{error}}</span>
+                                    <span class="pass-error" style="margin-top: 20px; font-size: 14px;" ng-show="error">{{error}}</span>
                                 </div>
                                 <input type="submit" ng-show="false">
                             </form>
                             <div class="modal-body">
                                 <ul class="nav modal-buttons pull-right">
                                     <li>
-                                        <a href="#" ng-click="close()">OK
-                                        </a>
+                                        <a href="#" ng-click="close()">OK</a>
                                     </li>
                                 </ul>
                             </div>

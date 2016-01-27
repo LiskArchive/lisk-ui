@@ -2,12 +2,15 @@
     <div class="container height100">
         <div class="row height100">
             <div class="col-md-6 col-md-offset-4 height100 valign-wrapper">
-               <div class="modal-content">
+                <div class="modal-content">
                     <div class="modal-header modal-iconed">
-                        <div class="close-modal" ng-click="close()"><span class="sr-only">Close modal</span></div>
+                        <div class="close-modal" ng-click="close()">
+                            <span class="sr-only">Close modal</span>
+                        </div>
                     </div>
                     <div class="modal-header clearfix">
-                        <div><h2>{{title}}</h2>
+                        <div>
+                            <h2>{{title}}</h2>
                         </div>
                     </div>
                     <div class="modal-body">
@@ -17,7 +20,6 @@
                                 <span class="title">{{line.address}}</span>
                                 <p>{{line.name}}</p>
                             </li>
-
                         </ul>
                     </div>
                 </div>
