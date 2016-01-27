@@ -85,7 +85,7 @@ angular.module('webApp').controller('dappController', ['$scope', 'viewFactory', 
             $scope.view.inLoading = false;
         });
 
-        $scope.uninsatallRequest = function (masterPassword) {
+        $scope.uninstallRequest = function (masterPassword) {
             data = {
                 "id": $stateParams.dappId
             };
@@ -119,13 +119,13 @@ angular.module('webApp').controller('dappController', ['$scope', 'viewFactory', 
                             $scope.masterPasswordModal = masterPasswordModal.activate({
                                 destroy: function (masterPass) {
                                     if (masterPass) {
-                                        $scope.uninsatallRequest(masterPass);
+                                        $scope.uninstallRequest(masterPass);
                                     }
                                 }
                             })
                         }
                         else {
-                            $scope.uninsatallRequest();
+                            $scope.uninstallRequest();
                         }
                     }
                 }
@@ -134,7 +134,7 @@ angular.module('webApp').controller('dappController', ['$scope', 'viewFactory', 
 
         }
 
-        $scope.insatallRequest = function (masterPassword) {
+        $scope.installRequest = function (masterPassword) {
             data = {
                 "id": $stateParams.dappId
             };
@@ -169,13 +169,13 @@ angular.module('webApp').controller('dappController', ['$scope', 'viewFactory', 
                 $scope.masterPasswordModal = masterPasswordModal.activate({
                     destroy: function (masterPass) {
                         if (masterPass) {
-                            $scope.insatallRequest(masterPass);
+                            $scope.installRequest(masterPass);
                         }
                     }
                 })
             }
             else {
-                $scope.insatallRequest();
+                $scope.installRequest();
             }
         }
 
