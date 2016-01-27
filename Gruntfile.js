@@ -10,7 +10,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         cssmin: {
-            compress: {
+            release: {
                 options: {
                     keepSpecialComments: "0"
                 },
@@ -27,7 +27,7 @@ module.exports = function (grunt) {
             }
         },
         less: {
-            app: {
+            release: {
                 files: {
                     "tmp/app.css": [
                         "css/application.less"
@@ -36,19 +36,19 @@ module.exports = function (grunt) {
             }
         },
         concat: {
-            develop: {
+            release: {
                 files: {
                     "static/js/app.js": files
                 }
             },
-            ignoringBrowserify: {
+            withoutBrowserify: {
                 files: {
                     "static/js/vendor_app.js": withoutBrowserify
                 }
             }
         },
         browserify: {
-            main: {
+            release: {
                 src: 'static/js/app.js',
                 dest: 'static/js/br_app.js'
             }
@@ -73,6 +73,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks('grunt-browserify');
 
-    grunt.registerTask("default", ["less", "cssmin", "concat:develop", 'browserify', "concat:ignoringBrowserify"]);
+    grunt.registerTask("default", ["less", "cssmin", "concat:release", 'browserify', "concat:withoutBrowserify"]);
     grunt.registerTask("release", ["default", "uglify:release"]);
 };
