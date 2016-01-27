@@ -23,7 +23,7 @@ angular.module('webApp').controller('accountController', ['$state','$scope', '$r
         * 100;
 
         $scope.graphs = {
-            cryptiPrice: {
+            liskPrice: {
                 labels: ['1', '2'],
                 series: ['Series B'],
                 data: [
@@ -105,7 +105,7 @@ angular.module('webApp').controller('accountController', ['$state','$scope', '$r
         $scope.getPrice = function () {
             $http.get(" http://data.bter.com/api/1/trade/XCR_BTC")
                 .then(function (response) {
-                    $scope.graphs.cryptiPrice.data = [
+                    $scope.graphs.liskPrice.data = [
                         response.data.data.map(
                             function (line) {
                                 return line.price

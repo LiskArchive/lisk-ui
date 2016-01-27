@@ -61,8 +61,8 @@ angular.module('webApp').controller('multisignatureModalController',
 
                     }
                     if (buffer.length == 32) {
-                        var crypti = require('lisk-js');
-                        var address = crypti.crypto.getAddress($scope.contact);
+                        var lisk = require('lisk-js');
+                        var address = lisk.crypto.getAddress($scope.contact);
                         if ($scope.members[$scope.contact] || address == userService.address){
                             return;
                         }
