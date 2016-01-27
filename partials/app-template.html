@@ -161,7 +161,7 @@
                     <span class="forging-state" ng-class="{'disabled': !forgingEnabled}" ng-if="forgingStatus && view.bar.forgingMenu">{{forgingStatus}}</span></div>
                 <div id="top-menu">
                 <span id="balance">
-                {{unconfirmedBalance | xcrFilter}} XCR
+                {{unconfirmedBalance | liskFilter}} LISK
             </span>
                     <a class="btn btn-sky-blue waves-effect waves-light left-margin-20" ng-click="sendTransaction()"><i
                             class="mdi-content-send left"></i>SEND

@@ -24,9 +24,9 @@
                            class="vertical-text mdi-image-brightness-1 cloud-font"></i>
                         <i ng-if="transaction.recipientId!=transaction.senderId" class="vertical-text"
                            ng-class="{'mdi-content-add-circle dark-meent-font': transaction.recipientId==address, 'mdi-content-remove-circle dark-red-font': transaction.senderId==address}"></i>
-                        {{transaction.amount | xcrFilter}}
+                        {{transaction.amount | liskFilter}}
                     </td>
-                    <td data-title="'Fee'" sortable="'t_fee'">{{transaction.fee | xcrFilter}}
+                    <td data-title="'Fee'" sortable="'t_fee'">{{transaction.fee | liskFilter}}
                     </td>
                     <td data-title="'Confirmations'">
                      {{transaction.multi.confirmations}}/{{transaction.multi.needed}}

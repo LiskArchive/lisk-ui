@@ -18,10 +18,10 @@
                         {{item.transaction.timestamp | timeAgoFilter:false}}
                     </td>
                     <td data-title="'Amount'" sortable="'transaction.amount'">
-                        {{item.transaction.amount | xcrFilter}}
+                        {{item.transaction.amount | liskFilter}}
                     </td>
                     <td data-title="'Fee'" sortable="'transaction.fee'">
-                        {{item.transaction.fee | xcrFilter}}
+                        {{item.transaction.fee | liskFilter}}
                     </td>
                     <td data-title="'Confirmations'" sortable="'countSing(transaction)'">
                         {{countSign(item.transaction)}}/{{confirmationsNeeded(item)}}

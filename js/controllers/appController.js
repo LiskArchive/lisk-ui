@@ -8,7 +8,7 @@ angular.module('webApp').controller('appController', ['dappsService', '$scope', 
         $scope.searchBlocks = blockService;
         $scope.toggled = false;
         $scope.rememberedPassword = userService.rememberPassword ? userService.rememberedPassword : false;
-        $scope.xcr_usd = 0;
+        $scope.lisk_usd = 0;
         $scope.version = 'ersion load';
         $scope.diffVersion = 0;
         $scope.subForgingCollapsed = true;
@@ -114,10 +114,10 @@ angular.module('webApp').controller('appController', ['dappsService', '$scope', 
         $scope.getUSDPrice = function () {
             $http.get("//146.148.61.64:4060/api/1/ticker/XCR_BTC")
                 .then(function (response) {
-                    var xcr_btc = response.data.last;
+                    var lisk_btc = response.data.last;
                     $http.get("//146.148.61.64:4060/api/1/ticker/BTC_USD")
                         .then(function (response) {
-                            $scope.xcr_usd = xcr_btc * response.data.last;
+                            $scope.lisk_usd = lisk_btc * response.data.last;
                         });
                 });
         };
@@ -138,8 +138,8 @@ angular.module('webApp').controller('appController', ['dappsService', '$scope', 
             });
         };
 
-        $scope.convertToUSD = function (xcr) {
-            return (xcr / 100000000) * $scope.xcr_usd;
+        $scope.convertToUSD = function (lisk) {
+            return (lisk / 100000000) * $scope.lisk_usd;
         };
 
         $scope.clearSearch = function () {

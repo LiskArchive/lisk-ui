@@ -3,17 +3,17 @@
         <h1 class="heading">New company</h1>
         <p class="description">
             Your company address entitles you to 50% of the fees paid for transactions made to your company address.
-            Service Cost: <b>1000 XCR</b>. Your balance: <b>{{ totalBalance }} XCR</b>. Editing a company's information is not possible once the company has been created.
+            Service Cost: <b>1000 LISK</b>. Your balance: <b>{{ totalBalance }} LISK</b>. Editing a company's information is not possible once the company has been created.
             Click "Get Token" to recieve further instructions.
         </p>
         <div class="instruction" ng-show="token">
             <b>Instructions: </b>
             <ul>
                 <li>1. Double check form data</li>
-                <li>2. Create a new .txt file named: <b>cryptixcr.txt</b></li>
-                <li>3. Open cryptixcr.txt, paste in the token below and save the file. Token: {{ token }}</li>
-                <li>4. Upload cryptixcr.txt file to the root dir of your website</li>
-                <li>5. Check that the file is accessible:: <a href="http://{{ domain }}/cryptixcr.txt" target="_blank">http://{{ domain }}/cryptixcr.txt</a></li>
+                <li>2. Create a new .txt file named: <b>cryptilisk.txt</b></li>
+                <li>3. Open cryptilisk.txt, paste in the token below and save the file. Token: {{ token }}</li>
+                <li>4. Upload cryptilisk.txt file to the root dir of your website</li>
+                <li>5. Check that the file is accessible:: <a href="http://{{ domain }}/cryptilisk.txt" target="_blank">http://{{ domain }}/cryptilisk.txt</a></li>
                 <li>6. Click "Create company"</li>
             </ul>
         </div>
@@ -24,7 +24,7 @@
             <p class="error" ng-show="domainError">{{ domainError }}</p>
             <input class="input-text" type="text" ng-readonly="token" ng-model="email" placeholder="Email">
             <p class="error" ng-show="emailError">{{ emailError }}</p>
-            <input class="input-text" type="text" value="1000 XCR (Service cost)" readonly>
+            <input class="input-text" type="text" value="1000 LISK (Service cost)" readonly>
             <input class="input-text" type="password" ng-readonly="token" ng-model="secretPhrase" placeholder="Your SecretPhrase" ng-trim="false">
             <input class="input-text" type="password" ng-readonly="token" ng-model="secondPhrase" placeholder="Your second secretPhrase" ng-show="secondPassphrase" ng-trim="false">
             <input class="input-text" type="text" ng-model="token" ng-show="token" readonly>

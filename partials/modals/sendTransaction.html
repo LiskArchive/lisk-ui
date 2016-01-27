@@ -9,7 +9,7 @@
                         <div class="close-modal" ng-click="close()"><span class="sr-only">Close modal</span></div>
                     </div>
                     <div class="modal-header clearfix">
-                        <div><h2>Send XCR</h2>
+                        <div><h2>Send LISK</h2>
                         </div>
                         <div>Please type in an account name or ID below
                         </div>
@@ -26,7 +26,7 @@
                             <div class="field-padding">
                                 <div class="input-field">
                                     <input id="amount" type="text" ng-model="amount" ng-focus="focus == 'amount'">
-                                    <label for="amount">XCR Amount</label>
+                                    <label for="amount">LISK Amount</label>
                                 </div>
                                 <span class="pass-error"
                                       ng-show="errorMessage && (rememberedPassword || presendError)">{{errorMessage}}</span>
@@ -35,7 +35,7 @@
                         </form>
                     </div>
                     <div class="modal-body bordered">
-                        <span class="send-info-text flat-text">Make sure you're sending XCR to the right contact. This action can't be undone later.</span>
+                        <span class="send-info-text flat-text">Make sure you're sending LISK to the right contact. This action can't be undone later.</span>
                     </div>
                     <div class="modal-body">
                         <ul class="nav modal-buttons pull-right">
@@ -43,7 +43,7 @@
                                 <a href="#" ng-click="close()">Cancel
                                 </a>
                             </li>
-                            <li><a href="#" class="green-link" ng-click="passcheck()">send xcr</a></li>
+                            <li><a href="#" class="green-link" ng-click="passcheck()">send lisk</a></li>
                         </ul>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                                 <a href="#" ng-click="passcheck()">BACK
                                 </a>
                             </li>
-                            <li><a href="#" class="green-link" ng-click="sendTransaction(secretPhrase)">send xcr</a></li>
+                            <li><a href="#" class="green-link" ng-click="sendTransaction(secretPhrase)">send lisk</a></li>
                         </ul>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                                 <a href="#" ng-click="passcheck(true)">BACK
                                 </a>
                             </li>
-                            <li><a href="#" class="green-link" ng-click="sendTransaction(secretPhrase, true)">send xcr</a>
+                            <li><a href="#" class="green-link" ng-click="sendTransaction(secretPhrase, true)">send lisk</a>
                             </li>
                         </ul>
                     </div>

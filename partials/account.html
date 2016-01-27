@@ -8,7 +8,7 @@
             <div class="panel-body">
                 <div class="wg-label">Balance</div>
                 <div class="wg-data"><span class="strong">{{balanceToShow[0] || 0}}<span class="small">{{balanceToShow[1]}}</span></span>
-                    XCR
+                    LISK
                 </div>
             </div>
         </div>
@@ -86,7 +86,7 @@
                            class="vertical-text mdi-image-brightness-1 cloud-font"></i>
                         <i ng-if="transaction.recipientId!=transaction.senderId" class="vertical-text"
                            ng-class="{'mdi-content-add-circle dark-meent-font': transaction.recipientId==address, 'mdi-content-remove-circle dark-red-font': transaction.senderId==address}"></i>
-                        {{transaction.amount  | xcrFilter}} ({{transaction.fee  | xcrFilter}})
+                        {{transaction.amount  | liskFilter}} ({{transaction.fee  | liskFilter}})
                     </td>
                 </tr>
                 </tbody>
@@ -100,7 +100,7 @@
     <div class="col-lg-3 col-md-6 col-sm-6  col-xs-12">
         <div class="light-graph line-graph">
             <div class="light-graph-heading">No Data Available</div>
-            <div class="light-graph-sub-heading">Return when you have forged at least 100 XCR</div>
+            <div class="light-graph-sub-heading">Return when you have forged at least 100 LISK</div>
             <div class="light-graph-body">
 
                 <canvas id="line" class="chart chart-line" data="graphs.cryptiPrice.data"
@@ -113,7 +113,7 @@
                 <div class="row">
                     <div class="col-xs-6 description">Amount Forged</br>in last year
                     </div>
-                    <div class="col-xs-6 forged-amount"><span class="value">0.00 <span class="legend">XCR</span></span>
+                    <div class="col-xs-6 forged-amount"><span class="value">0.00 <span class="legend">LISK</span></span>
                     </div>
                     <div class="clearfix visible-lg visible-md visible-sm visible-xs"></div>
                 </div>
