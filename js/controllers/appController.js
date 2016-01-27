@@ -9,7 +9,7 @@ angular.module('webApp').controller('appController', ['dappsService', '$scope', 
         $scope.toggled = false;
         $scope.rememberedPassword = userService.rememberPassword ? userService.rememberedPassword : false;
         $scope.lisk_usd = 0;
-        $scope.version = 'ersion load';
+        $scope.version = 'version load';
         $scope.diffVersion = 0;
         $scope.subForgingCollapsed = true;
         $scope.categories = {};
@@ -133,7 +133,7 @@ angular.module('webApp').controller('appController', ['dappsService', '$scope', 
                 }
                 else {
                     $scope.diffVersion = -1;
-                    $scope.version = 'ersion error';
+                    $scope.version = 'version error';
                 }
             });
         };
