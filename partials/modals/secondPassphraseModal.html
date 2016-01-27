@@ -7,13 +7,8 @@
                         <div class="close-modal" ng-click="close()"><span class="sr-only">Close modal</span></div>
                     </div>
                     <div class="modal-header clearfix">
-                        <div><h2>Add second passphrase</h2>
-                        </div>
-                        <div>Further protect your account with an optional second passphrase! Please allow some time for
-                            the changes to take effect. Service Cost <b>{{fee | liskFilter}}
-                                LISK</b>. Your
-                            balance: <b>{{totalBalance | liskFilter}} LISK</b>.
-                        </div>
+                        <div><h2>Add second passphrase</h2></div>
+                        <div>Further protect your account with an optional second passphrase! Please allow some time for the changes to take effect. Service cost: <b>{{fee | liskFilter}} LISK</b>. Your balance: <b>{{totalBalance | liskFilter}} LISK</b>.</div>
                     </div>
                     <div class="modal-body">
                         <form ng-submit="passcheck()">
