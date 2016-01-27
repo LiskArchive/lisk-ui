@@ -112,10 +112,10 @@ angular.module('webApp').controller('appController', ['dappsService', '$scope', 
 
 
         $scope.getUSDPrice = function () {
-            $http.get("//146.148.61.64:4060/api/1/ticker/XCR_BTC")
+            $http.get("http://data.bter.com/api/1/ticker/XCR_BTC")
                 .then(function (response) {
                     var lisk_btc = response.data.last;
-                    $http.get("//146.148.61.64:4060/api/1/ticker/BTC_USD")
+                    $http.get("http://data.bter.com/api/1/ticker/BTC_USD")
                         .then(function (response) {
                             $scope.lisk_usd = lisk_btc * response.data.last;
                         });

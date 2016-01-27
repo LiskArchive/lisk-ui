@@ -103,7 +103,7 @@ angular.module('webApp').controller('accountController', ['$state','$scope', '$r
         }
 
         $scope.getPrice = function () {
-            $http.get(" http://146.148.61.64:4060/api/1/trade/XCR_BTC")
+            $http.get(" http://data.bter.com/api/1/trade/XCR_BTC")
                 .then(function (response) {
                     $scope.graphs.cryptiPrice.data = [
                         response.data.data.map(
