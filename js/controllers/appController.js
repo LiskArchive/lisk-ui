@@ -433,10 +433,10 @@ angular.module('webApp').controller('appController', ['dappsService', '$scope', 
                     userService.username = response.username;
 
                 }
-                if ($scope.delegateInRegistration) {
-                    /*  $scope.delegateInRegistration = !(!!response);
-                     userService.setDelegateProcess($scope.delegateInRegistration);*/
-                }
+                // if ($scope.delegateInRegistration) {
+                //     $scope.delegateInRegistration = !(!!response);
+                //     userService.setDelegateProcess($scope.delegateInRegistration);
+                // }
                 $scope.delegate = response;
                 userService.setDelegate($scope.delegate);
                 if (!response.noDelegate) {
