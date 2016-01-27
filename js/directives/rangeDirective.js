@@ -1,5 +1,5 @@
 require('angular');
-angular.module('webApp').directive('input', function () {
+angular.module('liskApp').directive('input', function () {
     return {
         restrict: 'E',
         require: '?ngModel',

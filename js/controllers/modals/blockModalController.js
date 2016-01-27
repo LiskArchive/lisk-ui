@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').controller('blockModalController', ["$scope", "$http", "blockModal", "userInfo", function ($scope, $http, blockModal, userInfo) {
+angular.module('liskApp').controller('blockModalController', ["$scope", "$http", "blockModal", "userInfo", function ($scope, $http, blockModal, userInfo) {
     $scope.loading = true;
     $scope.transactions = [];
     $scope.getTransactionsOfBlock = function (blockId) {

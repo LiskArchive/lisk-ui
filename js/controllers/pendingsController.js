@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').controller('pendingsController', ['$scope', '$rootScope', '$http', 'viewFactory', 'contactsService', 'ngTableParams',
+angular.module('liskApp').controller('pendingsController', ['$scope', '$rootScope', '$http', 'viewFactory', 'contactsService', 'ngTableParams',
     function ($rootScope, $scope, $http, viewFactory, contactsService, ngTableParams) {
         $scope.view = viewFactory;
         $scope.view.inLoading = true;

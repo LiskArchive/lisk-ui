@@ -1,5 +1,5 @@
 require('angular');
-angular.module('webApp').directive('ngFocus', function ($timeout) {
+angular.module('liskApp').directive('ngFocus', function ($timeout) {
     return {
         link: function (scope, element, attrs) {
             scope.$watch(attrs.ngFocus, function (val) {

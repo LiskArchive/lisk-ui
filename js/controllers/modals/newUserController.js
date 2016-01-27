@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').controller('newUserController', ["$scope", "$http", "newUser", "userService", "$state", "viewFactory",
+angular.module('liskApp').controller('newUserController', ["$scope", "$http", "newUser", "userService", "$state", "viewFactory",
     function ($scope, $http, newUser, userService, $state, viewFactory) {
     $scope.noMatch = false;
     $scope.firstStep = true;

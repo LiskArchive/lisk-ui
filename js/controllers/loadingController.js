@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').controller("loadingController", ["$scope", "$http", "$interval", "$window", function ($scope, $http, $interval, $window) {
+angular.module('liskApp').controller("loadingController", ["$scope", "$http", "$interval", "$window", function ($scope, $http, $interval, $window) {
     $scope.height = null;
     $scope.height = 0;
     $scope.getHeight = function () {

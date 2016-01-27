@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').filter('decimalFilter', function () {
+angular.module('liskApp').filter('decimalFilter', function () {
 
     return function (fee) {
         if (!fee) {

@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').controller('multisignatureModalController',
+angular.module('liskApp').controller('multisignatureModalController',
     ["$scope", "$http", "multisignatureModal", "viewFactory", "userService",
         function ($scope, $http, multisignatureModal, viewFactory, userService) {
             $scope.view = viewFactory;

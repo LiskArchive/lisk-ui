@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').service('dappsService', function () {
+angular.module('liskApp').service('dappsService', function () {
 
 
     var dapp = {

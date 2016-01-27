@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').controller('voteController', ["$scope", "voteModal", "$http", "userService", "$timeout", function ($scope, voteModal, $http, userService, $timeout) {
+angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "$http", "userService", "$timeout", function ($scope, voteModal, $http, userService, $timeout) {
     $scope.voting = false;
     $scope.fromServer = '';
     $scope.passmode = false;

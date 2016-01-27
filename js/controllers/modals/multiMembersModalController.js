@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').controller('multiMembersModalController', ["$scope", "multiMembersModal", function ($scope, multiMembersModal) {
+angular.module('liskApp').controller('multiMembersModalController', ["$scope", "multiMembersModal", function ($scope, multiMembersModal) {
 
     $scope.title = $scope.confirmed ? 'Confirmed by' : 'Members';
     $scope.close = function () {

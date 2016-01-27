@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').controller('addDappModalController', ["$scope", "$http", "addDappModal", "userService", "viewFactory",
+angular.module('liskApp').controller('addDappModalController', ["$scope", "$http", "addDappModal", "userService", "viewFactory",
     function ($scope, $http, addDappModal, userService, viewFactory) {
         $scope.view = viewFactory;
         $scope.view.loadingText = "Saving new dapp";

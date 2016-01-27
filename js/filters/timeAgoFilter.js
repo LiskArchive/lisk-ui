@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').filter('timeAgoFilter', function ($filter) {
+angular.module('liskApp').filter('timeAgoFilter', function ($filter) {
     return function (time, fullTime) {
         if (fullTime) {
             return $filter('timestampFilter')(time);

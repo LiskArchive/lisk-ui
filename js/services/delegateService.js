@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').service('delegateService', function ($http, $filter) {
+angular.module('liskApp').service('delegateService', function ($http, $filter) {
 
     function filterData(data, filter) {
         return $filter('filter')(data, filter)

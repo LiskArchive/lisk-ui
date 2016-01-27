@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').controller('sendTransactionController', ["$scope", "sendTransactionModal", "$http", "userService", "$timeout", "$filter",
+angular.module('liskApp').controller('sendTransactionController', ["$scope", "sendTransactionModal", "$http", "userService", "$timeout", "$filter",
     function ($scope, sendTransactionModal, $http, userService, $timeout, $filter) {
     $scope.sending = false;
     $scope.passmode = false;

@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').service('blockService', function ($http) {
+angular.module('liskApp').service('blockService', function ($http) {
 
     var blocks = {
         lastBlockId: null,

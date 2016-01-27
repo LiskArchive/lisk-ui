@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').controller('dappsCategoryController', ['$scope', 'viewFactory', '$http', '$stateParams', 'dappsService', '$timeout',
+angular.module('liskApp').controller('dappsCategoryController', ['$scope', 'viewFactory', '$http', '$stateParams', 'dappsService', '$timeout',
     function ($scope, viewFactory, $http, $stateParams, dappsService, $timeout) {
         $scope.view = viewFactory;
         $scope.view.inLoading = true;

@@ -11,9 +11,9 @@ require('../bower_components/angular-socket-io/socket.js');
 //require('../bower_components/angular-materialize/src/angular-materialize.js');
 require('../node_modules/ng-table/dist/ng-table.js');
 
-webApp = angular.module('webApp', ['ui.router', 'btford.modal', 'ngTable', 'ngAnimate',  'chart.js', 'btford.socket-io', 'ui.bootstrap', 'ngClipboard', 'angular.filter']);
+liskApp = angular.module('liskApp', ['ui.router', 'btford.modal', 'ngTable', 'ngAnimate',  'chart.js', 'btford.socket-io', 'ui.bootstrap', 'ngClipboard', 'angular.filter']);
 
-webApp.config(["ngClipProvider",
+liskApp.config(["ngClipProvider",
     "$locationProvider",
     "$stateProvider",
     "$urlRouterProvider",

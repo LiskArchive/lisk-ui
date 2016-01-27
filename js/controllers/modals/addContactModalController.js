@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').controller('addContactModalController', ["$scope", "addContactModal", "$http", "userService", "contactsService", "viewFactory","$timeout",
+angular.module('liskApp').controller('addContactModalController', ["$scope", "addContactModal", "$http", "userService", "contactsService", "viewFactory","$timeout",
     function ($scope, addContactModal, $http, userService, contactsService, viewFactory, $timeout) {
         $scope.passmode = false;
         $scope.view = viewFactory;

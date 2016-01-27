@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').service('multiService', function ($http, userService, $filter) {
+angular.module('liskApp').service('multiService', function ($http, userService, $filter) {
 
     var service = {
         gettingPendings: false,

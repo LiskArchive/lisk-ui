@@ -1,5 +1,5 @@
 require('angular');
-angular.module('webApp').controller('dappController', ['$scope', 'viewFactory', '$stateParams', '$http', "$interval", "userService", "errorModal", "masterPassphraseModal","confirmeDeletingModal",
+angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory', '$stateParams', '$http', "$interval", "userService", "errorModal", "masterPassphraseModal","confirmeDeletingModal",
     function ($scope, viewFactory, $stateParams, $http, $interval, userService, errorModal, masterPassphraseModal, confirmeDeletingModal) {
         $scope.view = viewFactory;
         $scope.view.inLoading = true;

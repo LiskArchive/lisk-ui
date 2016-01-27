@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').controller('blockInfoController', ["$scope", "$http", "blockInfo", "userInfo", function ($scope, $http, blockInfo, userInfo) {
+angular.module('liskApp').controller('blockInfoController', ["$scope", "$http", "blockInfo", "userInfo", function ($scope, $http, blockInfo, userInfo) {
 
     $scope.transactions = [];
     $scope.transactionsLength = 0;

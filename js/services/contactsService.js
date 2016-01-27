@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').service('contactsService', function ($http, userService, $filter) {
+angular.module('liskApp').service('contactsService', function ($http, userService, $filter) {
     function filterData(data, filter) {
         return $filter('filter')(data, filter)
     }

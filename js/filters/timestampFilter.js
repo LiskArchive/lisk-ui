@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').filter('timestampFilter', function () {
+angular.module('liskApp').filter('timestampFilter', function () {
     return function (timestamp) {
 		// epoch time
 		var d = new Date(Date.UTC(2015, 3, 9, 0, 0, 0, 0));

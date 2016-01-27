@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').controller('transactionInfoController', ["$scope", "$http", "transactionInfo", "userInfo", function ($scope, $http, transactionInfo, userInfo) {
+angular.module('liskApp').controller('transactionInfoController', ["$scope", "$http", "transactionInfo", "userInfo", function ($scope, $http, transactionInfo, userInfo) {
 
     $scope.userInfo = function (userId) {
         transactionInfo.deactivate();

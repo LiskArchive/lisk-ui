@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').service('transactionsService', function ($http, userService) {
+angular.module('liskApp').service('transactionsService', function ($http, userService) {
 
     var transactionsList = {
         requestTransactions: function (params, cb) {

@@ -1,5 +1,5 @@
 require('angular');
-angular.module('webApp').directive('stopEvent', function () {
+angular.module('liskApp').directive('stopEvent', function () {
     return {
         restrict: 'A',
         link: function (scope, element, attr) {

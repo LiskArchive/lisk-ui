@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').controller('forgingModalController', ["$scope", "forgingModal", "$http", "userService", function ($scope, forgingModal, $http, userService) {
+angular.module('liskApp').controller('forgingModalController', ["$scope", "forgingModal", "$http", "userService", function ($scope, forgingModal, $http, userService) {
     $scope.error = null;
     $scope.forging = userService.forging;
     $scope.fee = 0;

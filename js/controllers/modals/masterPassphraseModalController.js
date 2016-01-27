@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').controller('masterPassphraseModalController', ["$scope", "masterPassphraseModal", function ($scope, masterPassphraseModal) {
+angular.module('liskApp').controller('masterPassphraseModalController', ["$scope", "masterPassphraseModal", function ($scope, masterPassphraseModal) {
 
     $scope.masterPass = '';
     $scope.emptyPass = false;

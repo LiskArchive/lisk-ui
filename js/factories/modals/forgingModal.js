@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').factory('forgingModal', function (btfModal) {
+angular.module('liskApp').factory('forgingModal', function (btfModal) {
     return btfModal({
         controller: 'forgingModalController',
         templateUrl: '/partials/modals/forgingModal.html'

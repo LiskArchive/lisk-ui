@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').controller('walletsController',
+angular.module('liskApp').controller('walletsController',
     ['$scope', '$rootScope', '$http', 'viewFactory', 'ngTableParams', '$filter', 'multiMembersModal', 'multiService', 'userService', "errorModal", 'masterPassphraseModal',
         function ($rootScope, $scope, $http, viewFactory, ngTableParams, $filter, multiMembersModal, multiService, userService, errorModal, masterPassphraseModal) {
             $scope.view = viewFactory;

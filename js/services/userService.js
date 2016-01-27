@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').service('userService', function () {
+angular.module('liskApp').service('userService', function () {
     this.rememberPassphrase = false;
     this.rememberedPassphrase = '';
 

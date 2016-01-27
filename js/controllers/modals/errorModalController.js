@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('webApp').controller('errorModalController', ["$scope", "errorModal", "userService", function ($scope, errorModal, userService) {
+angular.module('liskApp').controller('errorModalController', ["$scope", "errorModal", "userService", function ($scope, errorModal, userService) {
     $scope.forging =  userService.forging;
     $scope.fee = 0;
     $scope.focus = 'secretPhrase';
