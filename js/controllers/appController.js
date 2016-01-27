@@ -126,7 +126,7 @@ angular.module('webApp').controller('appController', ['dappsService', '$scope', 
             $http.get("/api/peers/version").then(function (response) {
                 if (response.data.success) {
                     $scope.version = response.data.version;
-                    $http.get("https://wallet.crypti.me/api/peers/version").then(function (response) {
+                    $http.get("https://login.lisk.io/api/peers/version").then(function (response) {
                         $scope.latest = response.data.version;
                         $scope.diffVersion = compareVersion($scope.version, $scope.latest);
                     });
