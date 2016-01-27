@@ -1,13 +1,13 @@
 require('angular');
 
-angular.module('webApp').controller('userInfoController', ["$scope", "$http", "userInfo", "userService","sendCryptiModal", function ($scope, $http, userInfo, userService, sendCryptiModal) {
+angular.module('webApp').controller('userInfoController', ["$scope", "$http", "userInfo", "userService","sendTransactionModal", function ($scope, $http, userInfo, userService, sendTransactionModal) {
 
     $scope.userIdOld = '';
     $scope.thisUser = userService;
 
-    $scope.sendCryptiToUser = function () {
+    $scope.sendTransactionToUser = function () {
         userInfo.deactivate();
-        $scope.sendCryptiModal = sendCryptiModal.activate({
+        $scope.sendTransactionModal = sendTransactionModal.activate({
             totalBalance: $scope.unconfirmedBalance,
             to: $scope.userId,
             destroy: function () {

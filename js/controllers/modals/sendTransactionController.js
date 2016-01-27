@@ -1,7 +1,7 @@
 require('angular');
 
-angular.module('webApp').controller('sendCryptiController', ["$scope", "sendCryptiModal", "$http", "userService", "$timeout", "$filter",
-    function ($scope, sendCryptiModal, $http, userService, $timeout, $filter) {
+angular.module('webApp').controller('sendTransactionController', ["$scope", "sendTransactionModal", "$http", "userService", "$timeout", "$filter",
+    function ($scope, sendTransactionModal, $http, userService, $timeout, $filter) {
     $scope.sending = false;
     $scope.passmode = false;
     $scope.accountValid = true;
@@ -66,14 +66,14 @@ angular.module('webApp').controller('sendCryptiController', ["$scope", "sendCryp
                       if (correctAddress) {
                           $scope.presendError = false;
                           $scope.errorMessage = ''
-                          $scope.sendXCR($scope.rememberedPassword);
+                          $scope.sendTransaction($scope.rememberedPassword);
                       }
                         else{
                         $http.get("/api/accounts/username/get?username=" + encodeURIComponent($scope.to)).then(function (response) {
                             if (response.data.success || correctAddress) {
                                 $scope.presendError = false;
                                 $scope.errorMessage = ''
-                                $scope.sendXCR($scope.rememberedPassword);
+                                $scope.sendTransaction($scope.rememberedPassword);
                             }
                             else {
                                 $scope.errorMessage = response.data.error;
@@ -140,7 +140,7 @@ angular.module('webApp').controller('sendCryptiController', ["$scope", "sendCryp
         if ($scope.destroy) {
             $scope.destroy();
         }
-        sendCryptiModal.deactivate();
+        sendTransactionModal.deactivate();
     }
 
 
@@ -306,7 +306,7 @@ angular.module('webApp').controller('sendCryptiController', ["$scope", "sendCryp
         $scope.to = '';
     }
 
-    $scope.sendXCR = function (secretPhrase, withSecond) {
+    $scope.sendTransaction = function (secretPhrase, withSecond) {
         if ($scope.secondPassphrase && !withSecond) {
             $scope.checkSecondPass = true;
             $scope.focus = 'secondPhrase';
@@ -347,7 +347,7 @@ angular.module('webApp').controller('sendCryptiController', ["$scope", "sendCryp
                     if ($scope.destroy) {
                         $scope.destroy();
                     }
-                    sendCryptiModal.deactivate();
+                    sendTransactionModal.deactivate();
                 }
             });
 

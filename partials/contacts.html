@@ -11,7 +11,7 @@
                     <td data-title="'Username'" sortable="'username'">{{tx.asset.contact.username || '-'}}</td>
                     <td data-title="'Address'" sortable="'address'">
                         <a href="#" ng-click="userInfo(contact.address)">{{tx.asset.contact.address}}</a></td>
-                    <td data-title="''"><a class="btn btn-dark-meant" ng-click="sendCrypti(contact.address)"><i
+                    <td data-title="''"><a class="btn btn-dark-meant" ng-click="sendTransaction(contact.address)"><i
                             class="mdi-content-send left"></i>SEND
                     </a></td>
                     <td data-title="">
@@ -34,7 +34,7 @@
                     <td data-title="'Username'" sortable="'username'">{{contact.username || '-'}}</td>
                     <td data-title="'Address'" sortable="'address'">
                        <a href="#" ng-click="userInfo(contact.address)">{{contact.address}}</a></td>
-                    <td data-title="''"><a class="btn btn-dark-meant" ng-click="sendCrypti(contact.address)"><i
+                    <td data-title="''"><a class="btn btn-dark-meant" ng-click="sendTransaction(contact.address)"><i
                             class="mdi-content-send left"></i>SEND
                     </a></td>
                     <td data-title="">

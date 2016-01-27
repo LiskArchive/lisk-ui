@@ -1,8 +1,8 @@
 require('angular');
 var compareVersion = require('../../node_modules/compare-version/index.js');
 
-angular.module('webApp').controller('appController', ['dappsService', '$scope', '$rootScope', '$http', "userService", "$interval", "$timeout", 'viewFactory', '$state', 'blockService', 'sendCryptiModal', 'registrationDelegateModal', 'userSettingsModal', 'serverSocket', 'delegateService', '$window', 'forgingModal', 'errorModal', 'contactsService', 'addContactModal', 'userInfo', 'transactionsService', 'secondPassphraseModal', 'focusFactory',
-    function (dappsService, $rootScope, $scope, $http, userService, $interval, $timeout, viewFactory, $state, blockService, sendCryptiModal, registrationDelegateModal, userSettingsModal, serverSocket, delegateService, $window, forgingModal, errorModal, contactsService, addContactModal, userInfo, transactionsService, secondPassphraseModal, focusFactory) {
+angular.module('webApp').controller('appController', ['dappsService', '$scope', '$rootScope', '$http', "userService", "$interval", "$timeout", 'viewFactory', '$state', 'blockService', 'sendTransactionModal', 'registrationDelegateModal', 'userSettingsModal', 'serverSocket', 'delegateService', '$window', 'forgingModal', 'errorModal', 'contactsService', 'addContactModal', 'userInfo', 'transactionsService', 'secondPassphraseModal', 'focusFactory',
+    function (dappsService, $rootScope, $scope, $http, userService, $interval, $timeout, viewFactory, $state, blockService, sendTransactionModal, registrationDelegateModal, userSettingsModal, serverSocket, delegateService, $window, forgingModal, errorModal, contactsService, addContactModal, userInfo, transactionsService, secondPassphraseModal, focusFactory) {
         $scope.searchTransactions = transactionsService;
         $scope.searchDapp = dappsService;
         $scope.searchBlocks = blockService;
@@ -212,9 +212,9 @@ angular.module('webApp').controller('appController', ['dappsService', '$scope', 
                 });
         }
 
-        $scope.sendCrypti = function (to) {
+        $scope.sendTransaction = function (to) {
             to = to || '';
-            $scope.sendCryptiModal = sendCryptiModal.activate({
+            $scope.sendTransactionModal = sendTransactionModal.activate({
                 totalBalance: $scope.unconfirmedBalance,
                 to: to,
                 destroy: function () {

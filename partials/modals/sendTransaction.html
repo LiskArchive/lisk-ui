@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <div class="modal-body">
-                        <form ng-submit="sendXCR(secretPhrase)">
+                        <form ng-submit="sendTransaction(secretPhrase)">
                             <div class="field-padding">
                                 <div class="input-field">
                                     <input id="passPhrase" type="password" ng-model="secretPhrase"
@@ -78,7 +78,7 @@
                                 <a href="#" ng-click="passcheck()">BACK
                                 </a>
                             </li>
-                            <li><a href="#" class="green-link" ng-click="sendXCR(secretPhrase)">send xcr</a></li>
+                            <li><a href="#" class="green-link" ng-click="sendTransaction(secretPhrase)">send xcr</a></li>
                         </ul>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                         </div>
                     </div>
                     <div class="modal-body">
-                        <form ng-submit="sendXCR(secretPhrase, true)">
+                        <form ng-submit="sendTransaction(secretPhrase, true)">
                             <div class="field-padding">
                                 <div class="input-field">
                                     <input id="secondPhrase" type="password" ng-model="secondPhrase" ng-trim="false"
@@ -112,7 +112,7 @@
                                 <a href="#" ng-click="passcheck(true)">BACK
                                 </a>
                             </li>
-                            <li><a href="#" class="green-link" ng-click="sendXCR(secretPhrase, true)">send xcr</a>
+                            <li><a href="#" class="green-link" ng-click="sendTransaction(secretPhrase, true)">send xcr</a>
                             </li>
                         </ul>
                     </div>
