@@ -112,7 +112,3 @@ liskApp.config(["ngClipProvider",
             });
     }
 ]);
-
-
-
-
