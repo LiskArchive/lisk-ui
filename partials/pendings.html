@@ -6,7 +6,7 @@
             <table ng-table="tableFollowers" border="0" width="100%" cellpadding="0" cellspacing="0"
                    template-pagination="custom/pager" ng-show="contactsView.followersCount">
                 <tr ng-repeat="follower in $data">
-                    <td data-title="''" class="user-icon-col"><img src="images/samples/account.png"
+                    <td data-title="''" class="user-icon-col"><img src="images/account.png"
                                                                    class="small-user-icon"></td>
                     <td data-title="'Username'" sortable="'username'">{{follower.username || '-'}}</td>
                     <td data-title="'Address'" sortable="'address'"><a href="#" ng-click="userInfo(follower.address)">{{follower.address}}</a></td>
