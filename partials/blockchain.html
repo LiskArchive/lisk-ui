@@ -32,6 +32,7 @@
                     <td data-title="'Transactions'" ng-click="showBlock(block)" class="pointer"><a href="#">{{block.numberOfTransactions}}</a></td>
                     <td data-title="'Amount'" sortable="'totalAmount'">{{block.totalAmount  | liskFilter}}</td>
                     <td data-title="'Fee'" sortable="'totalFee'">{{block.totalFee  | liskFilter}}</td>
+                    <td data-title="'Reward'" sortable="'reward'">{{block.reward | liskFilter}}</td>
                     <td data-title="" class="width-80"></td>
                 </tr>
                 <tr ng-show="!loading && (!$data || $data.length == 0) && !searchBlocks.searchForBlock">
