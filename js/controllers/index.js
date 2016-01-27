@@ -21,7 +21,6 @@ require('../../js/controllers/dappsCategoryController');
 //modals
 require('../../js/controllers/modals/userSettingsModalController');
 require('../../js/controllers/modals/blockModalController');
-require('../../js/controllers/modals/companyModalController');
 require('../../js/controllers/modals/forgingModalController');
 require('../../js/controllers/modals/freeModalController');
 require('../../js/controllers/modals/secondPassphraseController');

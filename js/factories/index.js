@@ -11,7 +11,6 @@ require('../../js/factories/modals/newUser');
 require('../../js/factories/modals/blockInfo');
 require('../../js/factories/modals/transactionInfo');
 require('../../js/factories/modals/userInfo');
-require('../../js/factories/modals/companyModal');
 require('../../js/factories/modals/forgingModal');
 require('../../js/factories/modals/secondPassphraseModal');
 require('../../js/factories/modals/sendTransactionModal');
