@@ -176,7 +176,7 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
         $scope.getForgedAmount = function () {
             $http.get("/api/delegates/forging/getForgedByAccount", {params: {generatorPublicKey: userService.publicKey}})
                 .then(function (resp) {
-                    $scope.totalForged = resp.data.fees;
+                    $scope.totalForged = resp.data.forged;
                 });
         }
 
