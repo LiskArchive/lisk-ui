@@ -1,8 +1,8 @@
 require('angular');
 
 
-angular.module('webApp').controller('forgingController', ['$scope', '$rootScope', '$http', "userService", "$interval", "companyModal", "forgingModal", "delegateService", "viewFactory", "blockInfo", "ngTableParams", "blockService",
-    function ($rootScope, $scope, $http, userService, $interval, companyModal, forgingModal, delegateService, viewFactory, blockInfo, ngTableParams, blockService) {
+angular.module('webApp').controller('forgingController', ['$scope', '$rootScope', '$http', "userService", "$interval", "forgingModal", "delegateService", "viewFactory", "blockInfo", "ngTableParams", "blockService",
+    function ($rootScope, $scope, $http, userService, $interval, forgingModal, delegateService, viewFactory, blockInfo, ngTableParams, blockService) {
 
         $scope.allVotes = 100
             * 1000
@@ -193,15 +193,6 @@ angular.module('webApp').controller('forgingController', ['$scope', '$rootScope'
         $scope.getForgedAmount();
         $scope.updateGraphs();
 
-
-        $scope.newCompany = function () {
-            $scope.companyModal = companyModal.activate({
-                totalBalance: $scope.unconfirmedBalance,
-                destroy: function () {
-                    $scope.getInfo();
-                }
-            });
-        }
 
         $scope.blockInfo = function (block) {
             $scope.modal = blockInfo.activate({block: block});

@@ -80,7 +80,6 @@ angular.module('webApp').controller('sendCryptiController', ["$scope", "sendCryp
                                 $scope.presendError = true;
                             }
                         });}
-
                     }
                     else {
                         $scope.presendError = true;
@@ -91,12 +90,8 @@ angular.module('webApp').controller('sendCryptiController', ["$scope", "sendCryp
                     $scope.presendError = true;
                 }
             }
-
-
         }
         else {
-
-
             var isAddress = /^[0-9]+[C|c]$/g;
             var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
             var correctAddress = isAddress.test($scope.to);
@@ -173,9 +168,7 @@ angular.module('webApp').controller('sendCryptiController', ["$scope", "sendCryp
             }
             // calculate fee.
 
-
             var fee = parseInt($scope.amount * 100000000 / 100 * $scope.currentFee) / 100000000;
-            //($scope.amount / 100 * $scope.currentFee).roundTo(8);
 
             if ($scope.amount == 0) {
                 fee = 0;
@@ -186,27 +179,7 @@ angular.module('webApp').controller('sendCryptiController', ["$scope", "sendCryp
                 $scope.fee = fee.toFixed(8);
             }
         }
-
-        /*
-         if (!$scope.amount) {
-         $scope.fee = "";
-         return;
-         }
-
-         if($scope.moreThanEightDigits(parseFloat($scope.amount))){
-         console.log('fee');
-         $scope.amount = parseFloat($scope.amount).roundTo(8).toString();
-         console.log($scope.amount);
-         }
-         if($scope.currentFee){
-         var fee = $scope.amount * $scope.currentFee * 0.01;
-         }
-
-
-         $scope.fee = fee.roundTo(8);
-         */
     }
-
 
     $scope.accountChanged = function (e) {
         var string = $scope.to;
@@ -214,7 +187,6 @@ angular.module('webApp').controller('sendCryptiController', ["$scope", "sendCryp
         if (!string) {
             return;
         }
-
 
         if (string[string.length - 1] == "C") {
             var isnum = /^\d+$/.test(string.substring(0, string.length - 1));
@@ -250,8 +222,6 @@ angular.module('webApp').controller('sendCryptiController', ["$scope", "sendCryp
                 $scope.currentFee = resp.data.fee;
             });
     }
-
-
 
     $scope.convertXCR = function (currency) {
         currency = String(currency);
@@ -351,9 +321,6 @@ angular.module('webApp').controller('sendCryptiController', ["$scope", "sendCryp
         if ($scope.lengthError) {
             return;
         }
-
-        /*$scope.amountError = $scope.convertXCR($scope.fee) + $scope.convertXCR($scope.amount) > userService._unconfirmedBalance;
-         $scope.errorMessage = $scope.amountError ? "Not enough XCR" : "";*/
 
         var data = {
             secret: secretPhrase,
