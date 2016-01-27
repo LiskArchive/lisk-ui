@@ -1,6 +1,6 @@
 {
-  "name": "web-app",
-  "version": "0.0.1",
+  "name": "lisk-ui",
+  "version": "0.1.0",
   "dependencies": {
     "jquery": "~2.1.1",
     "bootstrap": "~3.3.4",
