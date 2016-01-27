@@ -1,6 +1,6 @@
 require('angular');
-angular.module('webApp').controller('dappController', ['$scope', 'viewFactory', '$stateParams', '$http', "$interval", "userService", "errorModal", "masterPasswordModal","confirmeDeletingModal",
-    function ($scope, viewFactory, $stateParams, $http, $interval, userService, errorModal, masterPasswordModal, confirmeDeletingModal) {
+angular.module('webApp').controller('dappController', ['$scope', 'viewFactory', '$stateParams', '$http', "$interval", "userService", "errorModal", "masterPassphraseModal","confirmeDeletingModal",
+    function ($scope, viewFactory, $stateParams, $http, $interval, userService, errorModal, masterPassphraseModal, confirmeDeletingModal) {
         $scope.view = viewFactory;
         $scope.view.inLoading = true;
         $scope.view.loadingText = "Loading dapp";
@@ -85,12 +85,12 @@ angular.module('webApp').controller('dappController', ['$scope', 'viewFactory', 
             $scope.view.inLoading = false;
         });
 
-        $scope.uninstallRequest = function (masterPassword) {
+        $scope.uninstallRequest = function (masterPassphrase) {
             data = {
                 "id": $stateParams.dappId
             };
-            if (masterPassword) {
-                data.master = masterPassword;
+            if (masterPassphrase) {
+                data.master = masterPassphrase;
             }
             $http.post("/api/dapps/uninstall", data).then(function (response) {
                 $scope.getInstalling();
@@ -116,7 +116,7 @@ angular.module('webApp').controller('dappController', ['$scope', 'viewFactory', 
                 destroy: function (yesDelete) {
                     if (yesDelete) {
                         if ($scope.ismasterpasswordenabled) {
-                            $scope.masterPasswordModal = masterPasswordModal.activate({
+                            $scope.masterPassphraseModal = masterPassphraseModal.activate({
                                 destroy: function (masterPass) {
                                     if (masterPass) {
                                         $scope.uninstallRequest(masterPass);
@@ -134,12 +134,12 @@ angular.module('webApp').controller('dappController', ['$scope', 'viewFactory', 
 
         }
 
-        $scope.installRequest = function (masterPassword) {
+        $scope.installRequest = function (masterPassphrase) {
             data = {
                 "id": $stateParams.dappId
             };
-            if (masterPassword) {
-                data.master = masterPassword;
+            if (masterPassphrase) {
+                data.master = masterPassphrase;
             }
             $scope.installingIds.push($stateParams.dappId);
             $http.post("/api/dapps/install", data).then(function (response) {
@@ -166,7 +166,7 @@ angular.module('webApp').controller('dappController', ['$scope', 'viewFactory', 
 
         $scope.installDapp = function () {
             if ($scope.ismasterpasswordenabled) {
-                $scope.masterPasswordModal = masterPasswordModal.activate({
+                $scope.masterPassphraseModal = masterPassphraseModal.activate({
                     destroy: function (masterPass) {
                         if (masterPass) {
                             $scope.installRequest(masterPass);
@@ -181,7 +181,7 @@ angular.module('webApp').controller('dappController', ['$scope', 'viewFactory', 
 
         $scope.launchRequest = function(masterPass){
             data = {
-                "params": [userService.rememberPassword],
+                "params": [userService.rememberPassphrase],
                 "id": $stateParams.dappId
             }
             if (masterPass) {
@@ -213,7 +213,7 @@ angular.module('webApp').controller('dappController', ['$scope', 'viewFactory', 
             }
             else {
                 if ($scope.ismasterpasswordenabled) {
-                    $scope.masterPasswordModal = masterPasswordModal.activate({
+                    $scope.masterPassphraseModal = masterPassphraseModal.activate({
                         destroy: function (masterPass) {
                             if (masterPass) {
                                 $scope.launchRequest(masterPass);

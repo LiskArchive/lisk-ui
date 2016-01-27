@@ -5,7 +5,7 @@ angular.module('webApp').controller('addDappModalController', ["$scope", "$http"
         $scope.view = viewFactory;
         $scope.view.loadingText = "Saving new dapp";
         $scope.secondPassphrase = userService.secondPassphrase;
-        $scope.rememberedPassword = userService.rememberPassword ? userService.rememberedPassword : false;
+        $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
         $scope.passmode = false;
         $scope.errorMessage = "";
         $scope.checkSecondPass = false;
@@ -20,13 +20,13 @@ angular.module('webApp').controller('addDappModalController', ["$scope", "$http"
             $scope.errorMessage = "";
             if (fromSecondPass) {
                 $scope.checkSecondPass = false;
-                $scope.passmode = $scope.rememberedPassword ? false : true;
+                $scope.passmode = $scope.rememberedPassphrase ? false : true;
                 $scope.secondPhrase = '';
                 $scope.secretPhrase = '';
                 return;
             }
-            if ($scope.rememberedPassword) {
-                $scope.sendData($scope.rememberedPassword);
+            if ($scope.rememberedPassphrase) {
+                $scope.sendData($scope.rememberedPassphrase);
             }
             else {
                 $scope.passmode = !$scope.passmode;
@@ -96,8 +96,8 @@ angular.module('webApp').controller('addDappModalController', ["$scope", "$http"
 
             if ($scope.secondPassphrase) {
                 data.secondSecret = $scope.secondPhrase;
-                if ($scope.rememberedPassword) {
-                    data.secret = $scope.rememberedPassword;
+                if ($scope.rememberedPassphrase) {
+                    data.secret = $scope.rememberedPassphrase;
                 }
             }
 

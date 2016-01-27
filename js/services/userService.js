@@ -1,8 +1,8 @@
 require('angular');
 
 angular.module('webApp').service('userService', function () {
-    this.rememberPassword = false;
-    this.rememberedPassword = '';
+    this.rememberPassphrase = false;
+    this.rememberedPassphrase = '';
 
     this.setData = function (address, publicKey, balance, unconfirmedBalance, effectiveBalance) {
 		this.address = address;
@@ -14,9 +14,9 @@ angular.module('webApp').service('userService', function () {
 		this._unconfirmedBalance = unconfirmedBalance;
 	}
 
-    this.setSessionPassword = function(pass){
-        this.rememberPassword = true;
-        this.rememberedPassword = pass;
+    this.setSessionPassphrase = function(pass){
+        this.rememberPassphrase = true;
+        this.rememberedPassphrase = pass;
     }
 
 	this.setForging = function (forging) {

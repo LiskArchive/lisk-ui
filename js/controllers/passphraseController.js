@@ -3,9 +3,9 @@ require('angular');
 angular.module('webApp').controller('passphraseController', ['$scope', '$rootScope', '$http', "$state", "userService", "newUser",
     function ($rootScope, $scope, $http, $state, userService, newUser) {
         userService.setData();
-        userService.rememberPassword = false;
-        userService.rememberedPassword = '';
-        $scope.rememberPassword = true;
+        userService.rememberPassphrase = false;
+        userService.rememberedPassphrase = '';
+        $scope.rememberPassphrase = true;
         $scope.errorMessage = "";
 
         // angular.element(document.getElementById("forgingButton")).show();
@@ -17,7 +17,7 @@ angular.module('webApp').controller('passphraseController', ['$scope', '$rootSco
         }
         $scope.login = function (pass, remember) {
             if (pass.length>100) {
-                $scope.errorMessage = 'Password must contain less than 100 characters.';
+                $scope.errorMessage = 'Passphrase must contain less than 100 characters.';
                 return;
             }
             var data = {secret: pass};
@@ -30,7 +30,7 @@ angular.module('webApp').controller('passphraseController', ['$scope', '$rootSco
                         userService.setSecondPassphrase(resp.data.account.secondSignature || resp.data.account.unconfirmedSignature);
                         userService.unconfirmedPassphrase = resp.data.account.unconfirmedSignature;
                         if (remember) {
-                            userService.setSessionPassword(pass);
+                            userService.setSessionPassphrase(pass);
                         }
                         //angular.element(document.getElementById("forgingButton")).hide();
                         $state.go('main.dashboard');

@@ -1,15 +1,15 @@
 require('angular');
 
 angular.module('webApp').controller('walletsController',
-    ['$scope', '$rootScope', '$http', 'viewFactory', 'ngTableParams', '$filter', 'multiMembersModal', 'multiService', 'userService', "errorModal", 'masterPasswordModal',
-        function ($rootScope, $scope, $http, viewFactory, ngTableParams, $filter, multiMembersModal, multiService, userService, errorModal, masterPasswordModal) {
+    ['$scope', '$rootScope', '$http', 'viewFactory', 'ngTableParams', '$filter', 'multiMembersModal', 'multiService', 'userService', "errorModal", 'masterPassphraseModal',
+        function ($rootScope, $scope, $http, viewFactory, ngTableParams, $filter, multiMembersModal, multiService, userService, errorModal, masterPassphraseModal) {
             $scope.view = viewFactory;
             $scope.view.inLoading = false;
             $scope.view.loadingText = "Loading multisignature wallets";
             $scope.view.page = {title: 'Multisignature', previos: null};
             $scope.view.bar = {showWalletBar: true};
             $scope.secondPassphrase = userService.secondPassphrase;
-            $scope.rememberedPassword = userService.rememberPassword ? userService.rememberedPassword : false;
+            $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
             $scope.countWallets = 0;
             $scope.countPendings = 0;
 
@@ -45,7 +45,7 @@ angular.module('webApp').controller('walletsController',
                 var queryParams = {
                     publicKey: userService.publicKey,
                     transactionId: transactionId,
-                    secret: userService.rememberedPassword || pass
+                    secret: userService.rememberedPassphrase || pass
                 }
                 multiService.confirmTransaction(queryParams, function (err) {
                     $scope.tableMultiTransactions.reload();
@@ -62,10 +62,10 @@ angular.module('webApp').controller('walletsController',
             }
 
             $scope.confirmTransaction = function (transactionId) {
-                if (!userService.rememberedPassword) {
-                    $scope.masterPasswordModal = masterPasswordModal.activate({
+                if (!userService.rememberedPassphrase) {
+                    $scope.masterPassphraseModal = masterPassphraseModal.activate({
                         title: 'Enter your password below.',
-                        label: 'Password',
+                        label: 'Passphrase',
                         destroy: function (pass) {
                             if (pass) {
                                 $scope.confirmRequest(transactionId, pass);

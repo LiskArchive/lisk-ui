@@ -157,14 +157,14 @@
                     <div class="modal-body">
                         <form ng-submit="putMembers(true)">
                             <div class="field-padding">
-                                <div class="input-field" ng-hide="rememberedPassword">
+                                <div class="input-field" ng-hide="rememberedPassphrase">
                                     <input id="password" type="password" ng-model="authData.password" ng-trim="false"
                                            autofocus
                                            ng-focus="focus == 'password'">
                                     <label for="password">Your Passphrase</label>
                                 </div>
                                 <div class="input-field" ng-if="secondPassphrase">
-                                    <input id="secondPhrase" type="password" ng-model="authData.secondPassword"
+                                    <input id="secondPhrase" type="password" ng-model="authData.secondPassphrase"
                                            ng-trim="false"
                                            autofocus
                                            ng-focus="focus == 'secondPhrase'">

@@ -9,7 +9,7 @@ angular.module('webApp').controller('registrationDelegateModalController', ["$sc
         $scope.passmode = false;
         $scope.delegateData = {username: ''};
         $scope.secondPassphrase = userService.secondPassphrase;
-        $scope.rememberedPassword = userService.rememberPassword ? userService.rememberedPassword : false;
+        $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
 
         $scope.fee = 0;
         $scope.focus = 'username';
@@ -39,7 +39,7 @@ angular.module('webApp').controller('registrationDelegateModalController', ["$sc
             $scope.error = null;
             if (fromSecondPass) {
                 $scope.checkSecondPass = false;
-                $scope.passmode = $scope.rememberedPassword ? false : true;
+                $scope.passmode = $scope.rememberedPassphrase ? false : true;
                 $scope.secondPhrase = '';
                 $scope.pass = '';
                 if ($scope.passmode) {
@@ -50,7 +50,7 @@ angular.module('webApp').controller('registrationDelegateModalController', ["$sc
                 }
                 return;
             }
-            if ($scope.rememberedPassword) {
+            if ($scope.rememberedPassphrase) {
                 var isAddress = /^[0-9]+[C|c]$/g;
                 var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
                 if ($scope.delegateData.username.trim() == '' && !$scope.username) {
@@ -59,7 +59,7 @@ angular.module('webApp').controller('registrationDelegateModalController', ["$sc
                     if (!isAddress.test($scope.delegateData.username) || !!$scope.username) {
                         if (allowSymbols.test($scope.delegateData.username.toLowerCase()) || !!$scope.username) {
                             $scope.error = null;
-                            $scope.registrationDelegate($scope.rememberedPassword);
+                            $scope.registrationDelegate($scope.rememberedPassphrase);
                         }
                         else {
                             $scope.error = 'Username can only contain alphanumeric characters with the exception of !@$&_.'
@@ -117,8 +117,8 @@ angular.module('webApp').controller('registrationDelegateModalController', ["$sc
             }
             if ($scope.secondPassphrase) {
                 data.secondSecret = $scope.secondPhrase;
-                if ($scope.rememberedPassword) {
-                    data.secret = $scope.rememberedPassword;
+                if ($scope.rememberedPassphrase) {
+                    data.secret = $scope.rememberedPassphrase;
                 }
             }
             $http.put("/api/delegates/", data)

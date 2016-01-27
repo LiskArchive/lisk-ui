@@ -10,7 +10,7 @@ angular.module('webApp').controller('addContactModalController', ["$scope", "add
         $scope.errorMessage = "";
         $scope.secondPassphrase = userService.secondPassphrase;
         $scope.publicKey = userService.publicKey;
-        $scope.rememberedPassword = userService.rememberPassword ? userService.rememberedPassword : false;
+        $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
         $scope.checkSecondPass = false;
         $scope.focus = 'contact';
         $scope.presendError = false;
@@ -18,7 +18,7 @@ angular.module('webApp').controller('addContactModalController', ["$scope", "add
         $scope.passcheck = function (fromSecondPass) {
             if (fromSecondPass) {
                 $scope.checkSecondPass = false;
-                $scope.passmode = $scope.rememberedPassword ? false : true;
+                $scope.passmode = $scope.rememberedPassphrase ? false : true;
                 if ($scope.passmode) {
                     $scope.focus = 'secretPhrase';
                 }
@@ -29,7 +29,7 @@ angular.module('webApp').controller('addContactModalController', ["$scope", "add
                 $scope.pass = '';
                 return;
             }
-            if ($scope.rememberedPassword) {
+            if ($scope.rememberedPassphrase) {
                 var isAddress = /^[0-9]+[C|c]$/g;
                 var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
                 if ($scope.contact.trim() == '') {
@@ -39,7 +39,7 @@ angular.module('webApp').controller('addContactModalController', ["$scope", "add
                     if (isAddress.test($scope.contact) || allowSymbols.test($scope.contact.toLowerCase())) {
                         $scope.presendError = false;
                         $scope.errorMessage = ''
-                        $scope.addFolower($scope.rememberedPassword);
+                        $scope.addFolower($scope.rememberedPassphrase);
                     }
                     else {
                         $scope.errorMessage = 'Incorrect contact name or address'
@@ -91,8 +91,8 @@ angular.module('webApp').controller('addContactModalController', ["$scope", "add
             }
             if ($scope.secondPassphrase) {
                 queryParams.secondSecret = $scope.secondPhrase;
-                if ($scope.rememberedPassword) {
-                    queryParams.secret = $scope.rememberedPassword;
+                if ($scope.rememberedPassphrase) {
+                    queryParams.secret = $scope.rememberedPassphrase;
                 }
             }
             $scope.view.inLoading = true;

@@ -17,7 +17,7 @@ angular.module('webApp').controller('sendTransactionController', ["$scope", "sen
         console.log('submited');
     };
 
-    $scope.rememberedPassword = userService.rememberPassword ? userService.rememberedPassword : false;
+    $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
 
     Number.prototype.roundTo = function (digitsCount) {
         var digitsCount = typeof digitsCount !== 'undefined' ? digitsCount : 2;
@@ -45,7 +45,7 @@ angular.module('webApp').controller('sendTransactionController', ["$scope", "sen
     $scope.passcheck = function (fromSecondPass) {
         if (fromSecondPass) {
             $scope.checkSecondPass = false;
-            $scope.passmode = $scope.rememberedPassword ? false : true;
+            $scope.passmode = $scope.rememberedPassphrase ? false : true;
             if ($scope.passmode) {
                 $scope.focus = 'secretPhrase';
             }
@@ -53,7 +53,7 @@ angular.module('webApp').controller('sendTransactionController', ["$scope", "sen
             $scope.secretPhrase = '';
             return;
         }
-        if ($scope.rememberedPassword) {
+        if ($scope.rememberedPassphrase) {
             var isAddress = /^[0-9]+[C|c]$/g;
             var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
             var correctAddress = isAddress.test($scope.to);
@@ -66,14 +66,14 @@ angular.module('webApp').controller('sendTransactionController', ["$scope", "sen
                       if (correctAddress) {
                           $scope.presendError = false;
                           $scope.errorMessage = ''
-                          $scope.sendTransaction($scope.rememberedPassword);
+                          $scope.sendTransaction($scope.rememberedPassphrase);
                       }
                         else{
                         $http.get("/api/accounts/username/get?username=" + encodeURIComponent($scope.to)).then(function (response) {
                             if (response.data.success || correctAddress) {
                                 $scope.presendError = false;
                                 $scope.errorMessage = ''
-                                $scope.sendTransaction($scope.rememberedPassword);
+                                $scope.sendTransaction($scope.rememberedPassphrase);
                             }
                             else {
                                 $scope.errorMessage = response.data.error;
@@ -331,8 +331,8 @@ angular.module('webApp').controller('sendTransactionController', ["$scope", "sen
 
         if ($scope.secondPassphrase) {
             data.secondSecret = $scope.secondPhrase;
-            if ($scope.rememberedPassword) {
-                data.secret = $scope.rememberedPassword;
+            if ($scope.rememberedPassphrase) {
+                data.secret = $scope.rememberedPassphrase;
             }
         }
 

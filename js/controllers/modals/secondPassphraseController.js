@@ -2,7 +2,7 @@ require('angular');
 
 angular.module('webApp').controller('secondPassphraseModalController', ["$scope", "secondPassphraseModal", "$http", "userService", function ($scope, secondPassphraseModal, $http, userService) {
 
-    $scope.rememberedPassword = userService.rememberPassword ? userService.rememberedPassword : false;
+    $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
     $scope.passmode = false;
     $scope.focus = 'secondPass';
     $scope.fee = 0;
@@ -27,8 +27,8 @@ angular.module('webApp').controller('secondPassphraseModalController', ["$scope"
     }
 
     $scope.passcheck = function () {
-        if ($scope.rememberedPassword) {
-            $scope.addNewPassphrase($scope.rememberedPassword);
+        if ($scope.rememberedPassphrase) {
+            $scope.addNewPassphrase($scope.rememberedPassphrase);
         }
         else {
             $scope.passmode = !$scope.passmode;
@@ -45,11 +45,11 @@ angular.module('webApp').controller('secondPassphraseModalController', ["$scope"
     $scope.addNewPassphrase = function (pass) {
         $scope.fromServer = '';
         if ($scope.repeatSecretPhrase != $scope.newSecretPhrase) {
-            $scope.fromServer = 'Password and Confirm Password don\'t match';
+            $scope.fromServer = 'Passphrase and Confirm Passphrase don\'t match';
             return;
         }
         if ((($scope.repeatSecretPhrase ? $scope.repeatSecretPhrase.trim() : '') == '') || (($scope.newSecretPhrase ? $scope.newSecretPhrase.trim() : '') == '')) {
-            $scope.fromServer = 'Missing Password or Confirm Password';
+            $scope.fromServer = 'Missing Passphrase or Confirm Passphrase';
             return;
         }
         $http.put("/api/signatures", {

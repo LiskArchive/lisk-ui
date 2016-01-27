@@ -1,8 +1,8 @@
 require('angular');
 
-angular.module('webApp').factory('passwordCheck', function (btfModal) {
+angular.module('webApp').factory('passphraseCheck', function (btfModal) {
     return btfModal({
-        controller: 'passwordCheckController',
-        templateUrl: '/partials/modals/passwordCheck.html'
+        controller: 'passphraseCheckController',
+        templateUrl: '/partials/modals/passphraseCheck.html'
     });
 });

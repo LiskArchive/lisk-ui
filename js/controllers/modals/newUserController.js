@@ -12,7 +12,7 @@ angular.module('webApp').controller('newUserController', ["$scope", "$http", "ne
         return pass != '';
     }
 
-    $scope.generatePassword = function () {
+    $scope.generatePassphrase = function () {
         var Mnemonic = require('bitcore-mnemonic');
         var code = new Mnemonic(Mnemonic.Words.ENGLISH);
         //$scope.newPassphrase = code.toHDPrivateKey();
@@ -62,7 +62,7 @@ angular.module('webApp').controller('newUserController', ["$scope", "$http", "ne
     }
 
     //runtime
-    $scope.generatePassword();
+    $scope.generatePassphrase();
 }
 ])
 ;

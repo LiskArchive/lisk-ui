@@ -35,6 +35,6 @@ require('../../js/controllers/modals/multisignatureModalController');
 require('../../js/controllers/modals/newUserController');
 require('../../js/controllers/modals/multiMembersModalController');
 require('../../js/controllers/modals/addDappModalController');
-require('../../js/controllers/modals/masterPasswordModalController');
+require('../../js/controllers/modals/masterPassphraseModalController');
 require('../../js/controllers/modals/errorModalController');
 require('../../js/controllers/modals/confirmeDeletingModalController');

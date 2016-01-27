@@ -7,7 +7,7 @@ angular.module('webApp').controller('appController', ['dappsService', '$scope', 
         $scope.searchDapp = dappsService;
         $scope.searchBlocks = blockService;
         $scope.toggled = false;
-        $scope.rememberedPassword = userService.rememberPassword ? userService.rememberedPassword : false;
+        $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
         $scope.lisk_usd = 0;
         $scope.version = 'version load';
         $scope.diffVersion = 0;
@@ -203,7 +203,7 @@ angular.module('webApp').controller('appController', ['dappsService', '$scope', 
                 });
         };
 
-        $scope.getMasterPassword = function () {
+        $scope.getMasterPassphrase = function () {
             $http.get("api/dapps/ismasterpasswordenabled")
                 .then(function (resp) {
                     if (resp.data.success) {
@@ -250,9 +250,9 @@ angular.module('webApp').controller('appController', ['dappsService', '$scope', 
         }
 
         $scope.enableForging = function () {
-            if ($scope.rememberedPassword) {
+            if ($scope.rememberedPassphrase) {
                 $http.post("/api/delegates/forging/enable", {
-                    secret: $scope.rememberedPassword,
+                    secret: $scope.rememberedPassphrase,
                     publicKey: userService.publicKey
                 })
                     .then(function (resp) {
@@ -290,12 +290,12 @@ angular.module('webApp').controller('appController', ['dappsService', '$scope', 
         }
 
         $scope.disableForging = function () {
-            if ($scope.rememberedPassword) {
+            if ($scope.rememberedPassphrase) {
 
                 $scope.error = null;
 
                 $http.post("/api/delegates/forging/disable", {
-                    secret: $scope.rememberedPassword,
+                    secret: $scope.rememberedPassphrase,
                     publicKey: userService.publicKey
                 })
                     .then(function (resp) {
@@ -584,7 +584,7 @@ angular.module('webApp').controller('appController', ['dappsService', '$scope', 
         $scope.getAppData();
         $scope.getUSDPrice();
         $scope.getVersion();
-        $scope.getMasterPassword();
+        $scope.getMasterPassphrase();
         $timeout(function () {
             $scope.getVersion();
         }, 60 * 10 * 1000);

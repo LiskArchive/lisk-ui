@@ -6,10 +6,10 @@ angular.module('webApp').controller('multisignatureModalController',
             $scope.view = viewFactory;
             $scope.view.loadingText = "Set members of account";
             $scope.secondPassphrase = userService.secondPassphrase;
-            $scope.rememberedPassword = userService.rememberPassword ? userService.rememberedPassword : false;
+            $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
             $scope.authData = {
-                password: $scope.rememberedPassword || '',
-                secondPassword: ''
+                password: $scope.rememberedPassphrase || '',
+                secondPassphrase: ''
             }
             $scope.addingError = '';
             $scope.currentAddress = userService.address;
@@ -123,13 +123,13 @@ angular.module('webApp').controller('multisignatureModalController',
             $scope.putMembers = function (fromPass) {
                 $scope.errorMessage = '';
                 if (fromPass) {
-                    if ($scope.authData.password.trim() == '' || ($scope.authData.secondPassword.trim() == '' && $scope.secondPassphrase)) {
-                        $scope.errorMessage = "Missing Password or Second Password";
+                    if ($scope.authData.password.trim() == '' || ($scope.authData.secondPassphrase.trim() == '' && $scope.secondPassphrase)) {
+                        $scope.errorMessage = "Missing Passphrase or Second Passphrase";
                         return;
                     }
                 }
                 else {
-                    if ($scope.secondPassphrase || !$scope.rememberedPassword) {
+                    if ($scope.secondPassphrase || !$scope.rememberedPassphrase) {
                         $scope.step = 4;
                         return;
                     }
@@ -145,7 +145,7 @@ angular.module('webApp').controller('multisignatureModalController',
                     })
                 };
                 if ($scope.secondPassphrase) {
-                    data.secondSecret = $scope.authData.secondPassword;
+                    data.secondSecret = $scope.authData.secondPassphrase;
                 }
                 $scope.view.inLoading = true;
                 $http.put('/api/multisignatures', data).then(function (response) {

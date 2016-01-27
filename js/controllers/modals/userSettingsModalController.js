@@ -3,7 +3,7 @@ require('angular');
 angular.module('webApp').controller('userSettingsModalController', ["$scope", "$http", "userSettingsModal", "userService", function ($scope, $http, userSettingsModal, userService) {
 
     $scope.error = null;
-    $scope.rememberedPassword = userService.rememberPassword ? userService.rememberedPassword : false;
+    $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
     $scope.secondPassphrase = userService.secondPassphrase;
     $scope.focus = 'username';
     $scope.presendError = false;
@@ -13,7 +13,7 @@ angular.module('webApp').controller('userSettingsModalController', ["$scope", "$
         $scope.error =  null;
         if (fromSecondPass) {
             $scope.checkSecondPass = false;
-            $scope.passmode = $scope.rememberedPassword ? false : true;
+            $scope.passmode = $scope.rememberedPassphrase ? false : true;
             if ($scope.passmode){
                 $scope.focus = 'passPhrase';
             }
@@ -26,7 +26,7 @@ angular.module('webApp').controller('userSettingsModalController', ["$scope", "$
         }
         var isAddress = (/^[0-9]+[C|c]$/g).test($scope.username);
         var allowSymbols = (/^[a-z0-9!@$&_.]+$/g).test($scope.username.toLowerCase());
-        if ($scope.rememberedPassword) {
+        if ($scope.rememberedPassphrase) {
 
             if ($scope.username.trim() == '') {
                 $scope.error = 'Empty username'
@@ -36,7 +36,7 @@ angular.module('webApp').controller('userSettingsModalController', ["$scope", "$
                     if (allowSymbols) {
                         $scope.presendError = false;
                         $scope.error = null;
-                        $scope.saveName($scope.rememberedPassword);
+                        $scope.saveName($scope.rememberedPassphrase);
                     }
                     else {
                         $scope.error = 'Username can only contain alphanumeric characters with the exception of !@$&_.'
@@ -98,8 +98,8 @@ angular.module('webApp').controller('userSettingsModalController', ["$scope", "$
 
         if ($scope.secondPassphrase) {
             data.secondSecret = $scope.secondPhrase;
-            if ($scope.rememberedPassword) {
-                data.secret = $scope.rememberedPassword;
+            if ($scope.rememberedPassphrase) {
+                data.secret = $scope.rememberedPassphrase;
             }
         }
         $http.put("/api/accounts/username", data)

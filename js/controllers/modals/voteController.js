@@ -4,7 +4,7 @@ angular.module('webApp').controller('voteController', ["$scope", "voteModal", "$
     $scope.voting = false;
     $scope.fromServer = '';
     $scope.passmode = false;
-    $scope.rememberedPassword = userService.rememberPassword ? userService.rememberedPassword : false;
+    $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
     $scope.secondPassphrase = userService.secondPassphrase;
     $scope.focus = 'secretPhrase';
     $scope.fee = 0;
@@ -34,7 +34,7 @@ angular.module('webApp').controller('voteController', ["$scope", "voteModal", "$
         $scope.fromServer=null;
         if (fromSecondPass) {
             $scope.checkSecondPass = false;
-            $scope.passmode = $scope.rememberedPassword ? false : true;
+            $scope.passmode = $scope.rememberedPassphrase ? false : true;
             if ($scope.passmode){
                 $scope.focus = 'secretPhrase';
             }
@@ -42,8 +42,8 @@ angular.module('webApp').controller('voteController', ["$scope", "voteModal", "$
             $scope.secretPhrase = '';
             return;
         }
-        if ($scope.rememberedPassword) {
-            $scope.vote($scope.rememberedPassword);
+        if ($scope.rememberedPassphrase) {
+            $scope.vote($scope.rememberedPassphrase);
         }
         else {
             $scope.passmode = !$scope.passmode;
@@ -90,8 +90,8 @@ angular.module('webApp').controller('voteController', ["$scope", "voteModal", "$
 
         if ($scope.secondPassphrase) {
             data.secondSecret = $scope.secondPhrase;
-            if ($scope.rememberedPassword) {
-                data.secret = $scope.rememberedPassword;
+            if ($scope.rememberedPassphrase) {
+                data.secret = $scope.rememberedPassphrase;
             }
         }
 
