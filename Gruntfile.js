@@ -7,7 +7,6 @@ module.exports = function (grunt) {
 
     var withoutBrowserify = ['static/js/br_app.js', 'bower_components/materialize/bin/materialize.js'];
 
-    // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         cssmin: {
@@ -74,10 +73,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks('grunt-browserify');
 
-
-    // Default task.
     grunt.registerTask("default", ["less", "cssmin", "concat:develop", 'browserify', "concat:ignoringBrowserify"]);
-    // Release task
     grunt.registerTask("release", ["default", "uglify:release"]);
-
 };
