@@ -243,7 +243,6 @@ angular.module('webApp').controller('dappController', ['$scope', 'viewFactory', 
         }
 
         $scope.githubLink = function (git) {
-            //git@github.com:crypti/cryptipad.git
             return git.replace("git@", "https://").replace(".com:", ".com/").replace('.git', '');
         }
 
