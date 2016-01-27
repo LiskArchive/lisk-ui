@@ -17,14 +17,14 @@
                                     <input ng-focus="focus=='secondPass'" id="newSecretPhrase" type="password"
                                            ng-model="newSecretPhrase" ng-trim="false"
                                            ng-class="{'invalid': errorMessage}">
-                                    <label for="newSecretPhrase">New second password</label>
+                                    <label for="newSecretPhrase">New second passphrase</label>
                                 </div>
                                 <div class="input-field">
                                     <input id="repeatSecretPhrase" type="password" ng-model="repeatSecretPhrase"
                                            ng-trim="false"
                                            autofocus
                                            ng-class="{'invalid': errorMessage}">
-                                    <label for="repeatSecretPhrase">Repeat second password</label>
+                                    <label for="repeatSecretPhrase">Repeat second passphrase</label>
                                 </div>
                                 <span class="pass-error"
                                       ng-show="fromServer && rememberedPassword">{{fromServer}}</span>
