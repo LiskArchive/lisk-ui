@@ -14,17 +14,17 @@
                             <ul class="list-group transactions">
                                 <!-- ngRepeat: transaction in transactions -->
                                 <li class="list-group-item" ng-repeat="transaction in transactions">
-                                    <div class="transaction-data">{{transaction.id}}
+                                    <div class="transaction-data"><strong>Transaction ID:</strong> {{transaction.id}}
                                         <span class="pull-right">{{transaction.timestamp | timestampFilter}}</span>
                                     </div>
                                     <div class="transaction-path">
                                         <div class="transaction-part pull-left">
-                                            <a href="#" ng-click="userInfo(transaction.senderId)">{{transaction.senderId}}</a>
+                                            <a href="#" class="blue-link" ng-click="userInfo(transaction.senderId)">{{transaction.senderId}}</a>
                                             <span class="lisk">{{transaction.amount | liskFilter}} LISK</span>
                                         </div>
                                         <div class="transaction-direction"></div>
                                         <div class="transaction-part pull-right">
-                                            <a href="#" ng-click="userInfo(transaction.recipientId)">{{transaction.recipientId || "-"}}</a>
+                                            <a href="#" class="blue-link" ng-click="userInfo(transaction.recipientId)">{{transaction.recipientId || "-"}}</a>
                                             <span class="lisk">{{transaction.amount | liskFilter}} LISK</span>
                                         </div>
                                     </div>
