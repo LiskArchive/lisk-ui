@@ -4,12 +4,7 @@ require('angular');
 angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope', '$http', "userService", "$interval", "forgingModal", "delegateService", "viewFactory", "blockInfo", "ngTableParams", "blockService",
     function ($rootScope, $scope, $http, userService, $interval, forgingModal, delegateService, viewFactory, blockInfo, ngTableParams, blockService) {
 
-        $scope.allVotes = 100
-            * 1000
-            * 1000
-            * 1000
-            * 1000
-            * 100;
+        $scope.allVotes = 1 * Math.pow(10,16);
         $scope.showAllColumns = false;
         $scope.showFullTime = false;
         $scope.countForgingBlocks = 0;
