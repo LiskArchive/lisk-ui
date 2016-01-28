@@ -38,16 +38,16 @@ input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([
 }
 
 .switch.blue-switch label input[type=checkbox]:checked + .lever {
-  background-color: #0288d1;
+  background-color: @blue;
 }
 
 .switch.blue-switch label input[type=checkbox]:checked + .lever:after {
-  background-color: lighten(#0288d1, 20%);
+  background-color: lighten(@blue, 20%);
 }
 
 [type=checkbox].filled-in.violet:checked + label:after {
-  border: 2px solid @violet;
-  background-color: @violet;
+  border: 2px solid @blue;
+  background-color: @blue;
 }
 
 label {
