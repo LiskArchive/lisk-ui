@@ -1,6 +1,5 @@
 require('angular');
 
-
 angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope', '$http', "userService", "$interval", "forgingModal", "delegateService", "viewFactory", "blockInfo", "ngTableParams", "blockService",
     function ($rootScope, $scope, $http, userService, $interval, forgingModal, delegateService, viewFactory, blockInfo, ngTableParams, blockService) {
 
@@ -129,7 +128,6 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
         };
         //end Blocks
 
-
         $scope.updateGraphs = function () {
             delegateService.getDelegate(userService.publicKey, function (response) {
                 var totalDelegates = 108;
@@ -147,7 +145,6 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
 
                 $scope.rank = rank;
 
-
                 var uptime = parseFloat(response.productivity || 0);
 
                 $scope.graphs.uptime.values = [uptime, 100 - uptime];
@@ -163,8 +160,6 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
                     $scope.graphs.approval.colours = [approval >= 95 ? '#7cb342' : (approval >= 50 ? '#ffa000' : '#d32f2f'), '#f5f5f5'];
                 }
                 $scope.approval = approval;
-
-
             });
         };
 
@@ -174,7 +169,6 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
                     $scope.totalForged = resp.data.forged;
                 });
         }
-
 
         $scope.$on('updateControllerData', function (event, data) {
             if (data.indexOf('main.forging') != -1) {
@@ -187,7 +181,6 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
         $scope.updateBlocks();
         $scope.getForgedAmount();
         $scope.updateGraphs();
-
 
         $scope.blockInfo = function (block) {
             $scope.modal = blockInfo.activate({block: block});
