@@ -16,7 +16,7 @@
     border-radius: @border-radius;
     .modal-header {
       &.modal-iconed {
-        background-color: @menu-background;
+        background-color: @gray2;
         background-image: url('@{images}/logo-white.png');
         background-position: center;
         background-repeat: no-repeat;
@@ -205,7 +205,7 @@
   }
   .modal-header {
     &.modal-iconed {
-      background-color: @menu-background;
+      background-color: @gray2;
       background-image: url('@{images}/logo-white.png');
       background-position: center;
       background-repeat: no-repeat;
@@ -255,7 +255,7 @@
     border: none;
     .modal-header {
       &.modal-iconed {
-        background-color: @menu-background;
+        background-color: @gray2;
         background-image: url('@{images}/logo-white.png');
         background-position: center;
         background-repeat: no-repeat;
@@ -496,12 +496,12 @@
       }
     }
     a.primary-action {
-      color: #7cb342;
+      color: @blue;
       text-decoration: none;
       padding: 20px 10px;
       &:hover, &:active {
         text-decoration: none;
-        color: lighten(#7cb342, 20%);
+        color: @orange;
         .card-title {
           color: lighten(@black, 20%);
         }
@@ -517,32 +517,40 @@
 }
 
 .modal-footer {
-  a.second-action {
-    color: #000;
-    text-decoration: none;
-  }
-
-  a.second-action:hover, a.second-action:active {
-    color: #333
-  }
+  font-size: @content-text;
+  text-transform: uppercase;
+  color: @black;
+  font-weight: 500;
 
   a.second-action {
     cursor: pointer;
     display: inline;
     color: #000;
     font-size: 1rem;
-    font-weight: 300
+    text-decoration: none,
+  }
+
+  a.second-action:hover, a.second-action:active {
+    color: #333
   }
 
   a.primary-action {
     cursor: pointer;
     display: inline;
-    color: #7cb342;
+    color: @blue;
     text-decoration: none;
   }
 
   a.primary-action:hover, a.primary-action:active {
     text-decoration: none;
-    color: #aed388
+    color: @orange;
+  }
+}
+
+.blue-link {
+  color: @blue;
+  &:hover, &:active, &:focus {
+    background-color: @grey;
+    color: @orange;
   }
 }
