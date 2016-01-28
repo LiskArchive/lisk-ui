@@ -24,10 +24,10 @@
                             <span class="sr-only">Close modal</span>
                         </div>
                     </div>
-                    <div class="modal-nav">
+                    <div class="modal-nav" ng-if="account.address != address">
                         <ul class="nav nav-justified nav-actions">
                             <li>
-                                <a href="#" class="green-link" ng-click="sendTransactionToUser()"><i class="mdi-content-send"></i>Send LISK</a>
+                                <a href="#" class="blue-link" ng-click="sendTransactionToUser()"><i class="mdi-content-send"></i>Send LISK</a>
                             </li>
                             <!-- <li><a href="#"><i class="mdi-communication-message"></i> Send Message</a></li>-->
                             <!-- <li><a href="#"><i class="mdi-action-stars"></i> Add Favorite</a></li> -->
@@ -49,9 +49,9 @@
                             </ul>
                         </div>
                         <div class="modal-chapter clearfix">
-                            <div class="multiline">
+                            <div class="multiline" ng-class="{'open': transactions.view}" ng-click="toggleTransactions()">
                                 <h2>Transactions</h2>
-                                <div class="chapter-more pull-right" ng-class="{'open': transactions.view}" ng-click="toggleTransactions()">{{transactions.list.length || '0'}} Transactions</div>
+                                <div class="chapter-more pull-right">{{transactions.list.length || '0'}} Transactions</div>
                             </div>
                         </div>
                         <div ng-repeat="transaction in transactions.list" ng-show="transactions.view">
@@ -80,17 +80,17 @@
                                 <ul class="list-group transactions">
                                     <!-- ngRepeat: transaction in transactions -->
                                     <li class="list-group-item">
-                                        <div class="transaction-data">{{transaction.id}}
+                                        <div class="transaction-data"><strong>Transaction ID:</strong> {{transaction.id}}
                                             <span class="pull-right">{{transaction.timestamp | timestampFilter}}</span>
                                         </div>
                                         <div class="transaction-path">
                                             <div class="transaction-part pull-left">
-                                                <a href="#" ng-click="getAccountDetail(transaction.senderId)">{{transaction.senderId}}</a>
+                                                <a href="#" class="blue-link" ng-click="getAccountDetail(transaction.senderId)">{{transaction.senderId}}</a>
                                                 <span class="lisk">{{transaction.amount | liskFilter}} LISK</span>
                                             </div>
                                             <div class="transaction-direction"></div>
                                             <div class="transaction-part pull-right">
-                                                <a href="#" ng-click="getAccountDetail(transaction.recipientId)">{{transaction.recipientId
+                                                <a href="#" class="blue-link" ng-click="getAccountDetail(transaction.recipientId)">{{transaction.recipientId
                                                 || ""}}</a>
                                                 <span class="lisk">{{transaction.amount | liskFilter}} LISK</span>
                                             </div>
