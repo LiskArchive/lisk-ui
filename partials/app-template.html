@@ -152,7 +152,7 @@
                     {{unconfirmedBalance | liskFilter}}
                     LISK
                 </span>
-                <a class="btn btn-sky-blue waves-effect waves-light left-margin-20" ng-click="sendTransaction()">
+                <a class="btn btn-blue-nav waves-effect waves-light left-margin-20" ng-click="sendTransaction()">
                     <i class="mdi-content-send left"></i>SEND
                 </a>
                 <!-- <div class="notifications left-margin-20 valign-wrapper" dropdown is-open="moreNotificationsStatus.isopen"><span dropdown-toggle>9</span>
@@ -258,7 +258,7 @@
             <ul class="nav nav-underline pull-right forgin-start" ng-show="delegate.username">
                 <li>
                     <span>FORGING:</span>
-                    <div class="switch">
+                    <div class="switch blue-switch">
                         <label>
                             Off
                             <input type="checkbox" ng-model="dataToShow.forging" ng-click="toggleForging()">
@@ -355,10 +355,10 @@
                 <a href="#" ui-sref="main.contacts">Contacts</a>
             </li>
             <li ui-sref-active="active">
-                <a href="#" ui-sref="main.pending">Pending({{contacts.followersCount}})</a>
+                <a href="#" ui-sref="main.pending">Pending ({{contacts.followersCount}})</a>
             </li>
         </ul>
-        <a ng-click="addContact()" class="btn-floating btn-large waves-effect waves-light green" style="position: absolute; right: 60px; top: 36px;"><i class="mdi-content-add"></i></a>
+        <a ng-click="addContact()" class="btn-floating btn-large waves-effect waves-light blue" style="position: absolute; right: 60px; top: 36px;"><i class="mdi-content-add"></i></a>
     </div>
 </div>
 <div class="container-fluid" ui-view></div>
