@@ -80,16 +80,17 @@
       opacity: @font-opacity;
       font-size: 18px;
       font-weight: 500;
-
+      -webkit-text-stroke: 0.005px;
     }
   }
   table {
-    border: 0;
+    //border: 0;
     width: 100%;
     cellpadding: 0;
     cellspacing: 0;
     margin-top: 0;
     .head {
+      border-bottom: 2px solid @border-grey;
       th {
         opacity: @font-opacity;
         padding: 24px 0;
@@ -121,9 +122,9 @@
     }
     td {
       a {
-        color: #1976d2;
+        color: @blue;
         &:hover, &:focus, &:active {
-          color: #1976d2;
+          color: @orange;
         }
       }
       padding: 13px 0 13px 5px;
@@ -147,6 +148,10 @@
   position: relative;
   -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, .12);
   box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, .12);
+  &.widget-brown {
+    color: @brown;
+    border-top: 4px solid @brown;
+  }  
   &.widget-green {
     color: @green;
     border-top: 4px solid @green;
@@ -182,7 +187,7 @@
     display: block;
     font-size: @big-text;
     padding: 10px 0 20px;
-
+    -webkit-text-stroke: 0.2px;
   }
   .wg-data {
     &.version {
