@@ -35,7 +35,7 @@
     }
     &.active {
       opacity: 1;
-      background-color: @active-menu;
+      background-color: @gray3;
     }
     > a {
       display: block;
@@ -211,7 +211,7 @@ span.menu-text {
 }
 
 #header {
-  background-color: @blue;
+  background-color: @brown;
   min-height: 65px;
   .logo {
     display: inline-block;
@@ -222,6 +222,7 @@ span.menu-text {
   .more-down {
     display: inline-block;
     vertical-align: middle;
+    color: @white;
     @media (max-width: @screen-xs-max) {
       position: absolute;
       top: 14px;
@@ -265,7 +266,7 @@ span.menu-text {
   .send-button {
     padding: 8px 14px;
     margin: 0 0 0 20px;
-    background-color: @sky-blue;
+    background-color: @blue;
     color: #fff;
     font-size: 1rem;
     font-weight: normal;
@@ -290,8 +291,8 @@ span.menu-text {
       top: 0;
       background-image: none;
       outline: 0;
-      -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .3);
-      box-shadow: inset 0 3px 5px rgba(0, 0, 0, .3);
+      /*-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .3);
+      box-shadow: inset 0 3px 5px rgba(0, 0, 0, .3);*/
     }
 
   }
@@ -301,6 +302,8 @@ span.menu-text {
     font-weight: normal;
     color: @white;
     opacity: @font-opacity;
+    -webkit-text-stroke: 0.5px;
+    margin-top: 3px;
   }
   .title-icon {
     background-image: url('@{images}/sprites/iconset.png');
@@ -325,12 +328,14 @@ span.menu-text {
 
   }
   #balance {
+    position: relative;
+    top: 1px;
     line-height: 36px;
-    padding: 0 16px;
+    padding: 0px 16px;
     border-radius: @border-radius;
     color: @white;
     font-size: 1rem;
-    background-color: @navy;
+    background-color: @brown1;
     min-width: 60px;
     text-align: right;
     display: inline-block;
