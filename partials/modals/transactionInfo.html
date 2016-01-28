@@ -1,7 +1,7 @@
 <div class="app-modal" id="transaction-modal">
     <div class="modal-content">
         <div class="modal-header">
-            <h2>Transaction ID: </h2> {{block.id}}
+            <h2>Block ID: </h2> {{block.id}}
             <span class="blockchain-icon" clip-copy="block.id"></span>
             <div class="close-modal" ng-click="close()">
                 <span class="sr-only">Close modal</span>
@@ -29,17 +29,17 @@
             <ul class="list-group transactions">
                 <!-- ngRepeat: transaction in transactions -->
                 <li class="list-group-item">
-                    <div class="transaction-data">{{block.id}}
+                    <div class="transaction-data"><strong>Block ID:</strong> {{block.id}}
                         <span class="pull-right">{{block.timestamp | timestampFilter}}</span>
                     </div>
                     <div class="transaction-path">
                         <div class="transaction-part pull-left">
-                            <a href="#" ng-click="userInfo(block.recipientId)">{{block.senderId}}</a>
+                            <a href="#" class="blue-link" ng-click="userInfo(block.recipientId)">{{block.senderId}}</a>
                             <span class="lisk">{{block.amount | liskFilter}} LISK</span>
                         </div>
                         <div class="transaction-direction"></div>
                         <div class="transaction-part pull-right">
-                            <a href="#" ng-click="userInfo(block.recipientId)">{{block.recipientId || ""}}</a>
+                            <a href="#" class="blue-link" ng-click="userInfo(block.recipientId)">{{block.recipientId || ""}}</a>
                             <span class="lisk">{{block.amount | liskFilter}} LISK</span>
                         </div>
                     </div>
