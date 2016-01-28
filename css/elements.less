@@ -213,6 +213,13 @@ span.badge.tag-badge {
         background-color: @grey;
         color: @black;
       }
+      &.blue-link {
+        color: @blue;
+        &:hover, &:active, &:focus {
+          background-color: @grey;
+          color: @orange;
+        }
+      }
       &.green-link {
         color: @dark-meant;
         &:hover, &:active, &:focus {
@@ -433,6 +440,13 @@ a {
       font-weight: 500;
       text-transform: uppercase;
       color: @black;
+      &.blue-link {
+        color: @blue;
+        &:hover, &:active, &:focus {
+          color: @blue;
+          background-color: @white;
+        }
+      }
       &.green-link {
         color: @dark-meant;
         &:hover, &:active, &:focus {
@@ -923,7 +937,7 @@ a {
 .waves-effect.waves-blue .waves-ripple {
   /* The alpha value allows the text and background color
   of the button to still show through. */
-  background-color: rgba(25, 118, 210, 0.65);
+  background-color: rgba(2, 136, 209, 0.35);
 }
 
 .equal, .equal > div[class*='col-'] {
