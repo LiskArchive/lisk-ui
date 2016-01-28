@@ -22,4 +22,4 @@ require('../../js/factories/modals/signTransactionModal');
 require('../../js/factories/modals/multisignatureModal');
 require('../../js/factories/modals/errorModal');
 require('../../js/factories/modals/masterPassphraseModal');
-require('../../js/factories/modals/confirmeDeletingModal');
+require('../../js/factories/modals/confirmDeletionModal');

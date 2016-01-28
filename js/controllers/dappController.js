@@ -1,6 +1,6 @@
 require('angular');
-angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory', '$stateParams', '$http', "$interval", "userService", "errorModal", "masterPassphraseModal","confirmeDeletingModal",
-    function ($scope, viewFactory, $stateParams, $http, $interval, userService, errorModal, masterPassphraseModal, confirmeDeletingModal) {
+angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory', '$stateParams', '$http', "$interval", "userService", "errorModal", "masterPassphraseModal","confirmDeletionModal",
+    function ($scope, viewFactory, $stateParams, $http, $interval, userService, errorModal, masterPassphraseModal, confirmDeletionModal) {
         $scope.view = viewFactory;
         $scope.view.inLoading = true;
         $scope.view.loadingText = "Loading dapp";
@@ -112,7 +112,7 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
         }
 
         $scope.uninstallDapp = function () {
-            $scope.confirmeDeletingModal = confirmeDeletingModal.activate({
+            $scope.confirmDeletionModal = confirmDeletionModal.activate({
                 destroy: function (yesDelete) {
                     if (yesDelete) {
                         if ($scope.ismasterpasswordenabled) {
