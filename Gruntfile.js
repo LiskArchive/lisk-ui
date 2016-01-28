@@ -2,7 +2,7 @@ module.exports = function (grunt) {
     var files = [
         "js/main.js",
         "js/modal.js",
-        "js/ui-bootstrap-custom-0.12.1.min.js"
+        "js/ui-bootstrap.js"
     ];
 
     var withoutBrowserify = ['static/js/br_app.js', 'bower_components/materialize/bin/materialize.js'];
