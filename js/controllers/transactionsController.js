@@ -5,7 +5,7 @@ angular.module('liskApp').controller('transactionsController', ['$scope', '$root
         $scope.view = viewFactory;
         $scope.view.inLoading = true;
         $scope.view.loadingText = "Loading transactions";
-        $scope.view.page = {title: 'Transactions', previos: 'main.dashboard'};
+        $scope.view.page = {title: 'Transactions', previous: 'main.dashboard'};
         $scope.view.bar = {showTransactionsSearchBar: true};
         $scope.showAllColumns = false;
         $scope.showFullTime = false;

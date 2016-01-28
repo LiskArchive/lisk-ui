@@ -6,7 +6,7 @@ angular.module('liskApp').controller('walletsController',
             $scope.view = viewFactory;
             $scope.view.inLoading = false;
             $scope.view.loadingText = "Loading multisignature wallets";
-            $scope.view.page = {title: 'Multisignature', previos: null};
+            $scope.view.page = {title: 'Multisignature', previous: null};
             $scope.view.bar = {showWalletBar: true};
             $scope.secondPassphrase = userService.secondPassphrase;
             $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;

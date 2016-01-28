@@ -6,7 +6,7 @@ angular.module('liskApp').controller('dappsCategoryController', ['$scope', 'view
         $scope.view.inLoading = true;
         $scope.view.loadingText = "Loading dapps";
         $scope.category = $stateParams.categoryId;
-        $scope.view.page = {title: $scope.category, previos: 'main.dappstore'};
+        $scope.view.page = {title: $scope.category, previous: 'main.dappstore'};
         $scope.view.bar = {showDappsCategoryBar: true};
         $scope.searchedText = '';
         $scope.searchDapp = dappsService;

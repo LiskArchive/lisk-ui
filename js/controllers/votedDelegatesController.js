@@ -5,7 +5,7 @@ angular.module('liskApp').controller('votedDelegatesController', ['$scope', '$ro
         $scope.view = viewFactory;
         $scope.view.inLoading = true;
         $scope.view.loadingText = "Loading delegates";
-        $scope.view.page = {title: 'Forging', previos: null};
+        $scope.view.page = {title: 'Forging', previous: null};
         $scope.view.bar = {forgingMenu: true};
         $scope.allVotes = 100
         * 1000

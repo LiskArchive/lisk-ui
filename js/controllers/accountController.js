@@ -5,7 +5,7 @@ angular.module('liskApp').controller('accountController', ['$state','$scope', '$
         $scope.view = viewFactory;
         $scope.view.inLoading = true;
         $scope.view.loadingText = "Loading dashboard";
-        $scope.view.page = {title: 'Dashboard', previos: null};
+        $scope.view.page = {title: 'Dashboard', previous: null};
         $scope.view.bar = {};
         $scope.delegate = undefined;
         $scope.address = userService.address;

@@ -491,8 +491,8 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
             return $scope.modules.indexOf(state) != -1;
         }
 
-        $scope.goToPrevios = function () {
-            $state.go($scope.view.page.previos);
+        $scope.goToPrevious = function () {
+            $state.go($scope.view.page.previous);
         }
 
         $rootScope.$on('$stateChangeSuccess',

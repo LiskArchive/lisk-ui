@@ -67,8 +67,8 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
             });
         };
 
-        //previos != previous :)
-        $scope.view.page = {title: '', previos: 'main.dappstore'};
+        //previous != previous :)
+        $scope.view.page = {title: '', previous: 'main.dappstore'};
         $scope.view.bar = {};
         $scope.showMore = false;
         $scope.changeShowMore = function () {
@@ -81,7 +81,7 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
                 $scope.dapp.githublink = $scope.githubLink($scope.dapp.git);
                 console.log($scope.githublink);
             }
-            $scope.view.page = {title: $scope.dapp.name, previos: 'main.dappstore'};
+            $scope.view.page = {title: $scope.dapp.name, previous: 'main.dappstore'};
             $scope.view.inLoading = false;
         });
 

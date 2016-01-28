@@ -6,7 +6,7 @@ angular.module('liskApp').controller('walletPendingsController', ['$scope', '$ro
         $scope.view = viewFactory;
         $scope.view.inLoading = true;
         $scope.view.loadingText = "Loading transactions";
-        $scope.view.page = {title: 'Pending transactions', previos: null};
+        $scope.view.page = {title: 'Pending transactions', previous: null};
         $scope.view.bar = {showWalletBar: true};
         $scope.showAllColumns = true;
         $scope.showFullTime = false;

@@ -5,7 +5,7 @@ angular.module('liskApp').controller('contactsController', ['$scope', '$rootScop
         $scope.view = viewFactory;
         $scope.view.inLoading = true;
         $scope.view.loadingText = "Loading contacts";
-        $scope.view.page = {title: 'Contacts', previos: null};
+        $scope.view.page = {title: 'Contacts', previous: null};
         $scope.view.bar = {showContactsBar: true};
         $scope.contactsView = contactsService;
 

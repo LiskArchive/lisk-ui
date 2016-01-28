@@ -5,7 +5,7 @@ angular.module('liskApp').controller('blockchainController', ['$scope', '$timeou
         $scope.view = viewFactory;
         $scope.view.inLoading = true;
         $scope.view.loadingText = "Loading blockchain";
-        $scope.view.page = {title: 'Blockchain', previos: null};
+        $scope.view.page = {title: 'Blockchain', previous: null};
         $scope.view.bar = {showBlockSearchBar: true};
         $scope.address = userService.address;
         $scope.loading = true;

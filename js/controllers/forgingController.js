@@ -87,7 +87,7 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
         $scope.view = viewFactory;
         $scope.view.inLoading = true;
         $scope.view.loadingText = "Loading forging status";
-        $scope.view.page = {title: 'Forging', previos: null};
+        $scope.view.page = {title: 'Forging', previous: null};
         $scope.view.bar = {forgingMenu: true};
 
         $scope.address = userService.address;
