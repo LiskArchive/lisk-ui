@@ -1,13 +1,13 @@
 {
-  "name": "lisk-ui",
+  "name": "Lisk UI",
   "version": "0.1.0",
-  "description": "Lisk user-interface module",
+  "description": "Lisk user-interface submodule",
   "repository": {
     "type": "git",
     "url": "git@github.com:LiskHQ/lisk-ui.git"
   },
   "private": true,
-  "author": "Vera Nekrasova <vera.limita@gmail.com>",
+  "author": "Vera Nekrasova <vera.limita@gmail.com>, Boris Povod <boris@crypti.me>",
   "license": "MIT",
   "devDependencies": {
     "browserify": "latest",
