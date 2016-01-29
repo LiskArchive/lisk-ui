@@ -106,7 +106,7 @@ angular.module('liskApp').controller('accountController', ['$state','$scope', '$
             $http.get("https://explorer.lisk.io/api/candles/getCandles")
                 .then(function (response) {
                     $scope.graphs.liskPrice.data = [
-                        response.data.map(
+                        response.data.candles.map(
                             function (candle) {
                                 return candle.close
                             })
