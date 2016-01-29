@@ -102,20 +102,17 @@ angular.module('liskApp').controller('accountController', ['$state','$scope', '$
                 });
         }
 
-        $scope.getPrice = function () {
-            $http.get(" http://data.bter.com/api/1/trade/XCR_BTC")
+        $scope.getCandles = function () {
+            $http.get("https://explorer.lisk.io/api/candles/getCandles")
                 .then(function (response) {
                     $scope.graphs.liskPrice.data = [
-                        response.data.data.map(
-                            function (line) {
-                                return line.price
+                        response.data.map(
+                            function (candle) {
+                                return candle.close
                             })
                     ];
-
                 });
-
         }
-
 
         $scope.$on('updateControllerData', function (event, data) {
             if (data.indexOf('main.transactions') != -1) {
@@ -161,6 +158,6 @@ angular.module('liskApp').controller('accountController', ['$state','$scope', '$
         });
 
         $scope.updateAppView();
-        $scope.getPrice();
+        $scope.getCandles();
 
     }]);

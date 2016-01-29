@@ -111,14 +111,12 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
         ];
 
 
-        $scope.getUSDPrice = function () {
-            $http.get("http://data.bter.com/api/1/ticker/XCR_BTC")
+        $scope.getPriceTicker = function () {
+            $http.get("https://explorer.lisk.io/api/getPriceTicker")
                 .then(function (response) {
-                    var lisk_btc = response.data.last;
-                    $http.get("http://data.bter.com/api/1/ticker/BTC_USD")
-                        .then(function (response) {
-                            $scope.lisk_usd = lisk_btc * response.data.last;
-                        });
+                    $scope.btc_usd = response.data.btc_usd;
+                    $scope.lisk_btc = response.data.lisk_btc;
+                    $scope.lisk_usd = response.data.lisk_usd;
                 });
         };
 
@@ -582,7 +580,7 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
         }
 
         $scope.getAppData();
-        $scope.getUSDPrice();
+        $scope.getPriceTicker();
         $scope.getVersion();
         $scope.getMasterPassphrase();
         $timeout(function () {
