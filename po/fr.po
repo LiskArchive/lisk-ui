@@ -12,6 +12,10 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: js/controllers/accountController.js:8 partials/app-template.html:73
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
 #: partials/passphrase.html:25
 msgid "NEW ACCOUNT"
 msgstr "CONT NOU"

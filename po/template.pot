@@ -4,6 +4,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 
+#: js/controllers/accountController.js:8
+#: partials/app-template.html:73
+msgid "Dashboard"
+msgstr ""
+
 #: partials/passphrase.html:25
 msgid "NEW ACCOUNT"
 msgstr ""
