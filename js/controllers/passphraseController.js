@@ -1,7 +1,7 @@
 require('angular');
 
-angular.module('liskApp').controller('passphraseController', ['$scope', '$rootScope', '$http', "$state", "userService", "newUser",
-    function ($rootScope, $scope, $http, $state, userService, newUser) {
+angular.module('liskApp').controller('passphraseController', ['$scope', '$rootScope', '$http', "$state", "userService", "newUser", "gettextCatalog",
+    function ($rootScope, $scope, $http, $state, userService, newUser, gettextCatalog) {
         userService.setData();
         userService.rememberPassphrase = false;
         userService.rememberedPassphrase = '';
@@ -39,4 +39,6 @@ angular.module('liskApp').controller('passphraseController', ['$scope', '$rootSc
                     }
                 });
         }
+
+        gettextCatalog.setCurrentLanguage('en');
     }]);
