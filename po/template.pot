@@ -1,0 +1,21 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+
+#: partials/passphrase.html:25
+msgid "NEW ACCOUNT"
+msgstr ""
+
+#: partials/passphrase.html:16
+msgid "Remember during this session"
+msgstr ""
+
+#: partials/passphrase.html:26
+msgid "SIGN IN"
+msgstr ""
+
+#: partials/passphrase.html:9
+msgid "Your Passphrase"
+msgstr ""
