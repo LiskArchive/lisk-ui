@@ -2,13 +2,13 @@
   "name": "lisk-ui",
   "version": "0.1.0",
   "dependencies": {
-    "jquery": "~2.1.1",
-    "bootstrap": "~3.3.4",
-    "angular-chart.js": "~0.6.0",
+    "jquery": "~2.2.0",
+    "bootstrap": "~3.3.6",
+    "angular-chart.js": "~0.8.8",
     "angular-socket-io": "~0.7.0",
-    "materialize": "~0.96.1",
+    "materialize": "~0.97.5",
     "file-saver": "*",
     "blob": "*",
-    "angular-animate": "~1.4.0"
+    "angular-animate": "~1.4.9"
   }
 }
