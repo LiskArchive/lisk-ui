@@ -9,6 +9,7 @@
     "materialize": "=0.97.5",
     "file-saver": "*",
     "blob": "*",
-    "angular-animate": "=1.4.9"
+    "angular-animate": "=1.4.9",
+    "angular-gettext": "=2.2.1"
   }
 }
