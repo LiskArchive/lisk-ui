@@ -11,76 +11,76 @@
                                 </a>
                             </div>
                             <div class="media-body text-left">
-                                <h2 class="media-heading">Account:
+                                <h2 class="media-heading">{{'Account'|translate}}:
                                     <span class="id">{{account.address}}</span>
                                     <span class="blockchain-icon" clip-copy="account.address"></span>
                                 </h2>
-                                <strong>Name:</strong>
+                                <strong><translate>Name</translate>:</strong>
                                 {{account.username || 'N/A'}}
-                                <p ng-if="thisUser.publicKey==account.publicKey"><strong>Public key:</strong> {{account.publicKey}}</p>
+                                <p ng-if="thisUser.publicKey==account.publicKey"><strong><translate>Public key</translate>:</strong> {{account.publicKey}}</p>
                             </div>
                         </div>
                         <div class="close-modal" ng-click="close()">
-                            <span class="sr-only">Close modal</span>
+                            <span class="sr-only"><translate>Close modal</translate></span>
                         </div>
                     </div>
                     <div class="modal-nav" ng-if="account.address != address">
                         <ul class="nav nav-justified nav-actions">
                             <li>
-                                <a href="#" class="blue-link" ng-click="sendTransactionToUser()"><i class="mdi-content-send"></i>Send LISK</a>
+                                <a href="#" class="blue-link" ng-click="sendTransactionToUser()"><i class="mdi-content-send"></i><translate>Send LISK</translate></a>
                             </li>
                             <!-- <li><a href="#"><i class="mdi-communication-message"></i> Send Message</a></li>-->
                             <!-- <li><a href="#"><i class="mdi-action-stars"></i> Add Favorite</a></li> -->
                             <li ng-if="!isUserInContactList(account.address)">
-                                <a href="#" ng-click="addContact(account.address)"><i class="mdi-social-person-add"></i>Contact Request</a>
+                                <a href="#" ng-click="addContact(account.address)"><i class="mdi-social-person-add"></i><translate>Contact Request</translate></a>
                             </li>
                         </ul>
                     </div>
                     <div class="scrolling">
                         <div class="modal-body">
                             <ul class="list-group">
-                                <li class="list-group-item summary">Summary</li>
-                                <li class="list-group-item bordered">Total Balance
+                                <li class="list-group-item summary"><translate>Summary</translate></li>
+                                <li class="list-group-item bordered"><translate>Total Balance</translate>
                                     <span class="pull-right small-text">{{account.unconfirmedBalance  | liskFilter }} LISK</span>
                                 </li>
-                                <li class="list-group-item">USD Equivalent
+                                <li class="list-group-item"><translate>USD Equivalent</translate>
                                     <span class="pull-right small-text">{{convertToUSD(account.unconfirmedBalance)| number: 2}}$</span>
                                 </li>
                             </ul>
                         </div>
                         <div class="modal-chapter clearfix">
                             <div class="multiline" ng-class="{'open': transactions.view}" ng-click="toggleTransactions()">
-                                <h2>Transactions</h2>
-                                <div class="chapter-more pull-right">{{transactions.list.length || '0'}} Transactions</div>
+                                <h2>{{'Transaction'|translate}}</h2>
+                                <div class="chapter-more pull-right">{{transactions.list.length || '0'}} <translate>Transactions</translate></div>
                             </div>
                         </div>
                         <div ng-repeat="transaction in transactions.list" ng-show="transactions.view">
                             <div class="modal-header">
-                                <h2>Transaction ID:</h2> {{transaction.id}}
+                                <h2>{{'Transaction ID'|translate}}:</h2> {{transaction.id}}
                                 <span class="blockchain-icon" clip-copy="transaction.id"></span>
                             </div>
                             <div class="modal-body">
                                 <ul class="list-group">
-                                    <li class="list-group-item bordered">Confirmations
+                                    <li class="list-group-item bordered"><translate>Confirmations</translate>
                                         <span class="pull-right small-text">{{transaction.confirmations}}</span>
                                     </li>
-                                    <li class="list-group-item">Amount
+                                    <li class="list-group-item"><translate>Amount</translate>
                                         <span class="pull-right small-text">{{transaction.amount / 100000000}} LISK</span>
                                     </li>
-                                    <li class="list-group-item bordered">Fee
+                                    <li class="list-group-item bordered"><translate>Fee</translate>
                                         <span class="pull-right small-text">{{transaction.fee / 100000000}} LISK</span>
                                     </li>
-                                    <li class="list-group-item">USD Equivalent
+                                    <li class="list-group-item"><translate>USD Equivalent</translate>
                                         <span class="pull-right small-text">{{convertToUSD(transaction.amount)| number: 2}}$</span>
                                     </li>
-                                    <li class="list-group-item bordered">Time
+                                    <li class="list-group-item bordered"><translate>Time</translate>
                                         <span class="pull-right small-text">{{transaction.timestamp | timestampFilter}}</span>
                                     </li>
                                 </ul>
                                 <ul class="list-group transactions">
                                     <!-- ngRepeat: transaction in transactions -->
                                     <li class="list-group-item">
-                                        <div class="transaction-data"><strong>Transaction ID:</strong> {{transaction.id}}
+                                        <div class="transaction-data"><strong><translate>Transaction ID</translate>:</strong> {{transaction.id}}
                                             <span class="pull-right">{{transaction.timestamp | timestampFilter}}</span>
                                         </div>
                                         <div class="transaction-path">
@@ -96,9 +96,9 @@
                                             </div>
                                         </div>
                                         <div class="transaction-bottom">
-                                            <div class="fee">FEE: {{transaction.fee | liskFilter}} LISK</div>
+                                            <div class="fee"><translate>FEE</translate>: {{transaction.fee | liskFilter}} LISK</div>
                                             <div class="lisk">{{transaction.amount | liskFilter}} LISK</div>
-                                            <div class="confirmations">{{transaction.confirmations || 0 }} CONFIRMATIONS</div>
+                                            <div class="confirmations">{{transaction.confirmations || 0 }} <translate>CONFIRMATIONS</translate></div>
                                         </div>
                                     </li>
                                     <!-- end ngRepeat: transaction in transactions -->
