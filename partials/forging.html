@@ -2,13 +2,13 @@
     <div class="col-sm-12 col-xs-12 col-md-8">
         <div class="info-panel info-panel-grey">
             <span class="title" ng-if="delegate.username">{{delegate.username}}</span>
-            <span class="title" ng-if="!delegate.username">To become a delegate, click on the 'Delegate Registration' button.</span>
-            <span class="plain-text" ng-show="delegate.time">Registered on {{delegate.time | timestampFilter}}</span>
+            <span class="title" ng-if="!delegate.username">{{'To become a delegate, click on the "Delegate Registration" button.'|translate}}</span>
+            <span class="plain-text" ng-show="delegate.time">{{'Registered on'|translate}} {{delegate.time | timestampFilter}}</span>
         </div>
     </div>
     <div class="col-md-4 col-xs-12 col-sm-12">
         <div class="info-panel info-panel-grey">
-            <span class="title">LISK Earned</span>
+            <span class="title">{{'LISK Earned'|translate}}</span>
             <span class="plain-text">{{totalForged  | liskFilter }} LISK</span>
         </div>
         <!-- <div class="light-graph">
@@ -23,7 +23,7 @@
 <div class="row">
     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
         <div class="light-graph">
-            <div class="light-graph-heading">Rank</div>
+            <div class="light-graph-heading">{{'Rank'|translate}}</div>
             <div class="light-graph-body">
                 <div class="chart-legend">{{rank}}</div>
                 <canvas id="rank" class="chart chart-doughnut" data="graphs.rank.values" labels="graphs.rank.labels" options="graphs.rank.options" colours="graphs.rank.colours"></canvas>
@@ -32,7 +32,7 @@
     </div>
     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
         <div class="light-graph">
-            <div class="light-graph-heading">Uptime</div>
+            <div class="light-graph-heading">{{'Uptime'|translate}}</div>
             <div class="light-graph-body">
                 <div class="chart-legend">{{uptime | number:2}}%</div>
                 <canvas id="uptime" class="chart chart-doughnut" data="graphs.uptime.values" labels="graphs.uptime.labels" options="graphs.uptime.options" colours="graphs.uptime.colours"></canvas>
@@ -42,7 +42,7 @@
     <div class="clearfix visible-md visible-sm visible-xs"></div>
     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
         <div class="light-graph">
-            <div class="light-graph-heading">Approval</div>
+            <div class="light-graph-heading">{{'Approval'|translate}}</div>
             <div class="light-graph-body">
                 <div class="chart-legend">{{approval | number:2}}%</div>
                 <canvas id="approval" class="chart chart-doughnut" data="graphs.approval.values" labels="graphs.approval.labels" options="graphs.approval.options" colours="graphs.approval.colours"></canvas>
@@ -71,7 +71,7 @@
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="panel panel-default" ng-class="{'paginated': countForgingBlocks}">
             <div class="panel-heading">
-                <h2>Forged Blocks</h2>
+                <h2>{{'Forged Blocks'|translate}}</h2>
             </div>
             <table ng-table="tableBlocks" border="0" width="100%" cellpadding="0" cellspacing="0" ng-show="countForgingBlocks">
                 <div class="table-menu" ng-show="countForgingBlocks">
@@ -79,10 +79,10 @@
                         <i class="mdi-navigation-more-vert" dropdown-toggle aria-haspopup="true" aria-expanded="false"></i>
                         <div class="dropdown-menu" role="menu">
                             <p ng-click="check($event)"><input type="checkbox" class="filled-in violet" id="advanced" ng-model="showAllColumns">
-                                <label for="advanced">Show All Columns</label>
+                                <label for="advanced"><translate>Show All Columns</translate></label>
                             </p>
                             <p ng-click="check($event)"><input type="checkbox" class="filled-in violet" id="fulltime" ng-model="showFullTime">
-                                <label for="fulltime">Show Full Time</label>
+                                <label for="fulltime"><translate>Show Full Time</translate></label>
                             </p>
                         </div>
                     </div>
@@ -103,7 +103,7 @@
             </table>
             <div class="panel-body empty-body empty-table without-margin-top" ng-if="!countForgingBlocks">
                 <div class="logo-grey"></div>
-                <p class="empty-state-text">You haven't forged any blocks yet.</p>
+                <p class="empty-state-text">{{'You have not forged any blocks yet.'|translate}}</p>
             </div>
         </div>
     </div>
