@@ -3,11 +3,11 @@
     <div class="col-xs-12">
         <div class="panel panel-default" ng-class="{'paginated': !!countPendings, 'not_paginated': !countPendings}">
             <div class="panel-heading">
-                <h2>Latest Multi-Signature Transactions</h2>
+                <h2>{{'Latest Multi-Signature Transactions'|translate}}</h2>
             </div>
             <div ng-show="!countPendings" class="panel-body empty-body">
                 <div class="logo-grey"></div>
-                <p class="empty-state-text">Your Multi-Signature group(s) haven't made any transactions yet.</p>
+                <p class="empty-state-text">{{'Your Multi-Signature group(s) have not made any transactions yet.'|translate}}</p>
             </div>
             <table ng-show="!!countPendings" ng-table="tableMultiTransactions" border="0" width="100%" cellpadding="0" cellspacing="0" template-pagination="custom/pager">
                 <tr ng-class="{'voted': transaction.confirmations>=transaction.needed}" style="height: 63px;" ng-repeat="item in $data">
@@ -28,7 +28,7 @@
                         {{countSign(item.transaction)}}/{{confirmationsNeeded(item)}}
                     </td>
                     <td data-title="">
-                        <a ng-click="confirmTransaction(item.transaction.id)" ng-if="!signedByUser(item)" class="btn btn-dark-meant"><i class="mdi-action-done left"></i>CONFIRM</a>
+                        <a ng-click="confirmTransaction(item.transaction.id)" ng-if="!signedByUser(item)" class="btn btn-dark-meant"><i class="mdi-action-done left"></i><translate>CONFIRM</translate></a>
                     </td>
                 </tr>
             </table>
@@ -39,11 +39,11 @@
     <div class="col-xs-12">
         <div class="panel panel-default" ng-class="{'paginated': !!countWallets, 'not_paginated': !countWallets}">
             <div class="panel-heading">
-                <h2>My Multi-Signature Groups</h2>
+                <h2>{{'My Multi-Signature Groups'|translate}}</h2>
             </div>
             <div ng-show="!countWallets" class="panel-body empty-body">
                 <div class="logo-grey"></div>
-                <p class="empty-state-text">You are not a member of any one Multi-Signature group.</p>
+                <p class="empty-state-text">{{'You are not a member of any one Multi-Signature group.'|translate}}</p>
             </div>
             <table ng-show="!!countWallets" ng-table="tableWallets" border="0" width="100%" cellpadding="0" cellspacing="0" template-pagination="custom/pager">
                 <tr ng-repeat="wallet in $data">
@@ -56,7 +56,7 @@
                     </td>
                     <td data-title="''">
                         <a class="btn btn-dark-meant" ui-sref="main.walletTransactions({walletId:wallet.address})">
-                            <i class="material-icons left">been here</i>CONFIRMED TRANSACTIONS
+                            <i class="material-icons left">{{'been here'|translate}}</i><translate>CONFIRMED TRANSACTIONS</translate>
                         </a>
                     </td>
                 </tr>
