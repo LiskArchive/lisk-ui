@@ -8,10 +8,10 @@
                         <i class="mdi-navigation-more-vert" dropdown-toggle aria-haspopup="true" aria-expanded="false"></i>
                         <div class="dropdown-menu" role="menu">
                             <p ng-click="check($event)"><input type="checkbox" class="filled-in violet" id="advanced" ng-model="showAllColumns">
-                                <label for="advanced">Show All Columns</label>
+                                <label for="advanced"><translate>Show All Columns</translate></label>
                             </p>
                             <p ng-click="check($event)"><input type="checkbox" class="filled-in violet" id="fulltime" ng-model="showFullTime">
-                                <label for="fulltime">Show Full Time</label>
+                                <label for="fulltime"><translate>Show Full Time</translate></label>
                             </p>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
             </table>
             <div class="panel-body empty-body empty-table without-margin-top" ng-if="!countForgingBlocks && searchTransactions.searchForTransaction">
                 <div class="logo-grey"></div>
-                <p class="empty-state-text">No results for this search.</p>
+                <p class="empty-state-text">{{'No results for this search.'|translate}}</p>
             </div>
         </div>
     </div>
