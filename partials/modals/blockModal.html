@@ -4,9 +4,9 @@
             <div class="col-md-9 col-md-offset-2 height100 valign-wrapper">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2>Transactions ({{block.numberOfTransactions}})</h2>
+                        <h2>{{'Transactions'|translate}} ({{block.numberOfTransactions}})</h2>
                         <div class="close-modal" ng-click="close()">
-                            <span class="sr-only">Close modal</span>
+                            <span class="sr-only"><translate>Close modal</translate></span>
                         </div>
                     </div>
                     <div class="scrolling">
@@ -14,7 +14,7 @@
                             <ul class="list-group transactions">
                                 <!-- ngRepeat: transaction in transactions -->
                                 <li class="list-group-item" ng-repeat="transaction in transactions">
-                                    <div class="transaction-data"><strong>Transaction ID:</strong> {{transaction.id}}
+                                    <div class="transaction-data"><strong><translate>Transaction ID</translate>:</strong> {{transaction.id}}
                                         <span class="pull-right">{{transaction.timestamp | timestampFilter}}</span>
                                     </div>
                                     <div class="transaction-path">
@@ -29,9 +29,9 @@
                                         </div>
                                     </div>
                                     <div class="transaction-bottom">
-                                        <div class="fee">FEE: {{transaction.fee | liskFilter}} LISK</div>
+                                        <div class="fee"><translate>FEE</translate>: {{transaction.fee | liskFilter}} LISK</div>
                                         <div class="lisk">{{transaction.amount | liskFilter}} LISK</div>
-                                        <div class="confirmations">{{transaction.confirmations || 0}} CONFIRMATIONS</div>
+                                        <div class="confirmations">{{transaction.confirmations || 0}} <translate>CONFIRMATIONS</translate></div>
                                     </div>
                                 </li>
                                 <!-- end ngRepeat: transaction in transactions -->
