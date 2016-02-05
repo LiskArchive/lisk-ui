@@ -107,7 +107,16 @@ msgstr "设置支付密码"
 msgid "Adding new contact"
 msgstr "添加新联系人"
 
+#: js/controllers/contactsController.js:55
+#: js/controllers/pendingsController.js:30
+msgid "Address"
+msgstr ""
+
 #: js/controllers/blockchainController.js:45
+#: js/controllers/transactionsController.js:66
+#: js/controllers/walletPendingsController.js:163
+#: js/controllers/walletsController.js:151
+#: js/controllers/walletTransactionsController.js:76
 #: partials/modals/transactionInfo.html:16 partials/modals/userInfo.html:67
 msgid "Amount"
 msgstr "金额"
@@ -116,7 +125,9 @@ msgstr "金额"
 msgid "Amount (Fee)"
 msgstr "金额(手续费)"
 
-#: js/controllers/forgingController.js:67 partials/forging.html:45
+#: js/controllers/delegatesController.js:171
+#: js/controllers/forgingController.js:67
+#: js/controllers/votedDelegatesController.js:133 partials/forging.html:45
 msgid "Approval"
 msgstr "得票率"
 
@@ -160,7 +171,8 @@ msgstr ""
 "有得票排名在前101名以内才有资格进行锻造，锻造的所有手续费将均分给所有的101位"
 "受托人"
 
-#: js/controllers/blockchainController.js:41 partials/modals/blockInfo.html:7
+#: js/controllers/blockchainController.js:41
+#: js/controllers/forgingController.js:122 partials/modals/blockInfo.html:7
 #: partials/modals/transactionInfo.html:32
 #: partials/modals/transactionInfo.html:4
 msgid "Block ID"
@@ -274,6 +286,8 @@ msgstr "确认投票"
 msgid "Confirmation"
 msgstr "确认"
 
+#: js/controllers/walletsController.js:117
+#: js/controllers/walletTransactionsController.js:78
 #: partials/modals/blockInfo.html:20 partials/modals/transactionInfo.html:13
 #: partials/modals/userInfo.html:64
 msgid "Confirmations"
@@ -288,6 +302,11 @@ msgstr "确认数"
 #: partials/modals/multisignatureModal.html:73
 msgid "Confirmations needed"
 msgstr "需要的确认数"
+
+#: js/controllers/walletPendingsController.js:165
+#: js/controllers/walletsController.js:153
+msgid "Confirmations Needed"
+msgstr ""
 
 #: js/controllers/modals/multiMembersModalController.js:5
 msgid "Confirmed by"
@@ -377,6 +396,11 @@ msgid "Enable Multi-Signature on this account"
 msgstr "在此帐户开启多重签名"
 
 #: js/controllers/blockchainController.js:46
+#: js/controllers/forgingController.js:124
+#: js/controllers/transactionsController.js:67
+#: js/controllers/walletPendingsController.js:164
+#: js/controllers/walletsController.js:152
+#: js/controllers/walletTransactionsController.js:77
 #: partials/modals/transactionInfo.html:19 partials/modals/userInfo.html:70
 msgid "Fee"
 msgstr "费用"
@@ -458,7 +482,15 @@ msgstr "返回"
 msgid "Go to previous page"
 msgstr "返回上一页"
 
-#: js/controllers/blockchainController.js:40 partials/modals/blockInfo.html:23
+#: js/controllers/walletsController.js:115
+msgid "Group Name"
+msgstr ""
+
+#: js/controllers/blockchainController.js:40
+#: js/controllers/forgingController.js:121
+#: js/controllers/transactionsController.js:61
+#: js/controllers/walletTransactionsController.js:72
+#: partials/modals/blockInfo.html:23
 msgid "Height"
 msgstr "高度"
 
@@ -509,6 +541,11 @@ msgstr "运行"
 #: wallet.html:19
 msgid "Lisk - Decentralized Application Platform"
 msgstr "Lisk - 去中心化应用平台"
+
+#: js/controllers/delegatesController.js:169
+#: js/controllers/votedDelegatesController.js:131
+msgid "Lisk Address"
+msgstr ""
 
 #: partials/modals/sendTransaction.html:27
 msgid "LISK Amount"
@@ -592,6 +629,7 @@ msgid "Master Passphrase"
 msgstr "Dapp安装密码"
 
 #: js/controllers/modals/multiMembersModalController.js:5
+#: js/controllers/walletsController.js:116
 msgid "Members"
 msgstr "成员"
 
@@ -628,6 +666,8 @@ msgstr "我的投票"
 msgid "My votes ({{myVotesCount||'0'}})"
 msgstr "我的投票 ({{myVotesCount||'0'}})"
 
+#: js/controllers/delegatesController.js:168
+#: js/controllers/votedDelegatesController.js:130
 #: partials/modals/addDappModal.html:126 partials/modals/addDappModal.html:359
 #: partials/modals/addDappModal.html:388 partials/modals/addDappModal.html:62
 #: partials/modals/userInfo.html:18
@@ -846,7 +886,9 @@ msgstr "个人信息"
 msgid "Public key"
 msgstr "公钥"
 
-#: js/controllers/forgingController.js:44 partials/forging.html:26
+#: js/controllers/delegatesController.js:167
+#: js/controllers/forgingController.js:44
+#: js/controllers/votedDelegatesController.js:129 partials/forging.html:26
 msgid "Rank"
 msgstr "排名"
 
@@ -854,7 +896,10 @@ msgstr "排名"
 msgid "READ MORE"
 msgstr "详细"
 
-#: partials/account.html:86
+#: js/controllers/transactionsController.js:64
+#: js/controllers/walletPendingsController.js:161
+#: js/controllers/walletsController.js:149
+#: js/controllers/walletTransactionsController.js:74 partials/account.html:86
 msgid "Recipient"
 msgstr "接收者"
 
@@ -888,7 +933,7 @@ msgstr "去除投票"
 msgid "REMOVE VOTE"
 msgstr ""
 
-#: js/directives/voteTitleDirective.js:16
+#: js/directives/voteTitleDirective.js:17
 msgid "Removing vote from delegates"
 msgstr ""
 
@@ -896,7 +941,8 @@ msgstr ""
 msgid "Repeat second passphrase"
 msgstr "再次输入支付密码"
 
-#: js/controllers/blockchainController.js:47 partials/modals/blockInfo.html:26
+#: js/controllers/blockchainController.js:47
+#: js/controllers/forgingController.js:125 partials/modals/blockInfo.html:26
 msgid "Reward"
 msgstr "奖励"
 
@@ -946,7 +992,7 @@ msgstr "发送Lisk"
 msgid "SEND LISK"
 msgstr "发送Lisk"
 
-#: partials/account.html:83
+#: js/controllers/transactionsController.js:63 partials/account.html:83
 msgid "Sender"
 msgstr "发送者"
 
@@ -1069,7 +1115,7 @@ msgid ""
 "go back and generate a new one."
 msgstr "您输入的主密码与刚才创建的主密码不一致，请返回上一步重新创建."
 
-#: js/directives/voteTitleDirective.js:21
+#: js/directives/voteTitleDirective.js:22
 msgid "This action will cost"
 msgstr ""
 
@@ -1095,7 +1141,12 @@ msgstr ""
 "签名组的成员数量N.<br>• 每次交易需要确认的人数M<br>• 您需要添加到多重签名组的"
 "人员的帐户名称或者帐户ID."
 
-#: js/controllers/blockchainController.js:43 partials/account.html:89
+#: js/controllers/blockchainController.js:43
+#: js/controllers/forgingController.js:123
+#: js/controllers/transactionsController.js:65
+#: js/controllers/walletPendingsController.js:162
+#: js/controllers/walletsController.js:150
+#: js/controllers/walletTransactionsController.js:75 partials/account.html:89
 #: partials/modals/blockInfo.html:38 partials/modals/transactionInfo.html:25
 #: partials/modals/userInfo.html:76
 msgid "Time"
@@ -1133,8 +1184,12 @@ msgstr "总锻造"
 msgid "Transaction"
 msgstr "交易"
 
-#: partials/account.html:80 partials/modals/blockModal.html:17
-#: partials/modals/userInfo.html:59 partials/modals/userInfo.html:83
+#: js/controllers/transactionsController.js:62
+#: js/controllers/walletPendingsController.js:160
+#: js/controllers/walletsController.js:148
+#: js/controllers/walletTransactionsController.js:73 partials/account.html:80
+#: partials/modals/blockModal.html:17 partials/modals/userInfo.html:59
+#: partials/modals/userInfo.html:83
 msgid "Transaction ID"
 msgstr "交易ID"
 
@@ -1156,7 +1211,9 @@ msgstr "卸载"
 msgid "UPDATE"
 msgstr "更新"
 
-#: js/controllers/forgingController.js:56 partials/forging.html:35
+#: js/controllers/delegatesController.js:170
+#: js/controllers/forgingController.js:56
+#: js/controllers/votedDelegatesController.js:132 partials/forging.html:35
 msgid "Uptime"
 msgstr "在线率"
 
@@ -1165,6 +1222,8 @@ msgstr "在线率"
 msgid "USD Equivalent"
 msgstr "美元折算"
 
+#: js/controllers/contactsController.js:54
+#: js/controllers/pendingsController.js:29
 #: partials/modals/userSettingsModal.html:21
 msgid "Username"
 msgstr "用户名"
@@ -1177,8 +1236,12 @@ msgstr "查看已选"
 msgid "vote"
 msgstr "投票"
 
-#: js/directives/voteTitleDirective.js:14
+#: js/directives/voteTitleDirective.js:15
 msgid "Voting for delegates"
+msgstr ""
+
+#: js/controllers/walletPendingsController.js:159
+msgid "Wallet Address"
 msgstr ""
 
 #: partials/app-template.html:64
