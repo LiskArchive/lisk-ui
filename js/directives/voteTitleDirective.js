@@ -1,4 +1,5 @@
 require('angular');
+
 angular.module('liskApp').directive('voteTitle', function (gettextCatalog, liskFilterFilter) {
     return {
         restrict: 'E',
