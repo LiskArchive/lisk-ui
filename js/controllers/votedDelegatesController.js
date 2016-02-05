@@ -1,11 +1,11 @@
 require('angular');
 
-angular.module('liskApp').controller('votedDelegatesController', ['$scope', '$rootScope', '$http', "userService", "$interval", "$timeout", "$filter", "ngTableParams", "delegateService", "voteModal", "viewFactory",
-    function ($rootScope, $scope, $http, userService, $interval, $timeout, $filter, ngTableParams, delegateService, voteModal, viewFactory) {
+angular.module('liskApp').controller('votedDelegatesController', ['$scope', '$rootScope', '$http', "userService", "$interval", "$timeout", "$filter", "ngTableParams", "delegateService", "voteModal", "viewFactory", 'gettextCatalog',
+    function ($rootScope, $scope, $http, userService, $interval, $timeout, $filter, ngTableParams, delegateService, voteModal, viewFactory, gettextCatalog) {
         $scope.view = viewFactory;
         $scope.view.inLoading = true;
-        $scope.view.loadingText = "Loading delegates";
-        $scope.view.page = {title: 'Forging', previous: null};
+        $scope.view.loadingText = gettextCatalog.getString('Loading delegates');
+        $scope.view.page = {title: gettextCatalog.getString('Forging'), previous: null};
         $scope.view.bar = {forgingMenu: true};
         $scope.allVotes = 100
         * 1000

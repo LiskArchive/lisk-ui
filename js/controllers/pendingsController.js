@@ -1,11 +1,11 @@
 require('angular');
 
-angular.module('liskApp').controller('pendingsController', ['$scope', '$rootScope', '$http', 'viewFactory', 'contactsService', 'ngTableParams',
-    function ($rootScope, $scope, $http, viewFactory, contactsService, ngTableParams) {
+angular.module('liskApp').controller('pendingsController', ['$scope', '$rootScope', '$http', 'viewFactory', 'contactsService', 'ngTableParams', 'gettextCatalog',
+    function ($rootScope, $scope, $http, viewFactory, contactsService, ngTableParams, gettextCatalog) {
         $scope.view = viewFactory;
         $scope.view.inLoading = true;
-        $scope.view.loadingText = "Loading contacts";
-        $scope.view.page = {title: 'Contacts', previous: null};
+        $scope.view.loadingText = gettextCatalog.getString('Loading contacts');
+        $scope.view.page = {title: gettextCatalog.getString('Contacts'), previous: null};
         $scope.view.bar = {showContactsBar: true};
         $scope.contactsView = contactsService;
         //Contacts table

@@ -1,10 +1,10 @@
 require('angular');
 
-angular.module('liskApp').controller('addContactModalController', ["$scope", "addContactModal", "$http", "userService", "contactsService", "viewFactory","$timeout",
-    function ($scope, addContactModal, $http, userService, contactsService, viewFactory, $timeout) {
+angular.module('liskApp').controller('addContactModalController', ["$scope", "addContactModal", "$http", "userService", "contactsService", "viewFactory", "$timeout", 'gettextCatalog', 
+    function ($scope, addContactModal, $http, userService, contactsService, viewFactory, $timeout, gettextCatalog) {
         $scope.passmode = false;
         $scope.view = viewFactory;
-        $scope.view.loadingText = "Adding new contact";
+        $scope.view.loadingText = gettextCatalog.getString('Adding new contact');
         $scope.view.inLoading = false;
         $scope.accountValid = true;
         $scope.errorMessage = "";

@@ -1,12 +1,12 @@
 require('angular');
 
-angular.module('liskApp').controller('masterPassphraseModalController', ["$scope", "masterPassphraseModal", function ($scope, masterPassphraseModal) {
+angular.module('liskApp').controller('masterPassphraseModalController', ["$scope", "masterPassphraseModal", 'gettextCatalog', function ($scope, masterPassphraseModal, gettextCatalog) {
 
     $scope.masterPass = '';
     $scope.emptyPass = false;
 
-    $scope.title = $scope.title || 'Please enter master password.';
-    $scope.label = $scope.label || 'Master Passphrase';
+    $scope.title = $scope.title || gettextCatalog.getString('Please enter master password.');
+    $scope.label = $scope.label || gettextCatalog.getString('Master Passphrase');
 
     $scope.close = function (pass) {
         if ($scope.destroy) {

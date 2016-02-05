@@ -1,16 +1,16 @@
 require('angular');
 
-angular.module('liskApp').controller('forgingModalController', ["$scope", "forgingModal", "$http", "userService", function ($scope, forgingModal, $http, userService) {
+angular.module('liskApp').controller('forgingModalController', ["$scope", "forgingModal", "$http", "userService", 'gettextCatalog', function ($scope, forgingModal, $http, userService, gettextCatalog) {
     $scope.error = null;
     $scope.forging = userService.forging;
     $scope.fee = 0;
     $scope.focus = 'secretPhrase';
 
     if ($scope.forging) {
-        $scope.label = "Disable Forging"
+        $scope.label = gettextCatalog.getString('Disable Forging');
     }
     else {
-        $scope.label = "Enable Forging"
+        $scope.label = gettextCatalog.getString('Enable Forging');
     }
 
     $scope.close = function () {

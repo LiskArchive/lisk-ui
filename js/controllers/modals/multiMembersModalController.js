@@ -1,8 +1,8 @@
 require('angular');
 
-angular.module('liskApp').controller('multiMembersModalController', ["$scope", "multiMembersModal", function ($scope, multiMembersModal) {
+angular.module('liskApp').controller('multiMembersModalController', ["$scope", "multiMembersModal", 'gettextCatalog', function ($scope, multiMembersModal, gettextCatalog) {
 
-    $scope.title = $scope.confirmed ? 'Confirmed by' : 'Members';
+    $scope.title = $scope.confirmed ? gettextCatalog.getString('Confirmed by') : gettextCatalog.getString('Members');
     $scope.close = function () {
         if ($scope.destroy) {
             $scope.destroy();

@@ -1,9 +1,9 @@
 require('angular');
-angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory', '$stateParams', '$http', "$interval", "userService", "errorModal", "masterPassphraseModal","confirmDeletionModal",
-    function ($scope, viewFactory, $stateParams, $http, $interval, userService, errorModal, masterPassphraseModal, confirmDeletionModal) {
+angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory', '$stateParams', '$http', "$interval", "userService", "errorModal", "masterPassphraseModal","confirmDeletionModal", 'gettextCatalog',
+    function ($scope, viewFactory, $stateParams, $http, $interval, userService, errorModal, masterPassphraseModal, confirmDeletionModal, gettextCatalog) {
         $scope.view = viewFactory;
         $scope.view.inLoading = true;
-        $scope.view.loadingText = "Loading dapp";
+        $scope.view.loadingText = gettextCatalog.getString('Loading dapp');
         $scope.loading = true;
         $scope.installed = false;
         $scope.showSiaInstall = false;

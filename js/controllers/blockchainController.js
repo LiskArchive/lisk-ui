@@ -1,11 +1,11 @@
 require('angular');
 
-angular.module('liskApp').controller('blockchainController', ['$scope', '$timeout', '$rootScope', '$http', "userService", "$interval", 'blockService', 'blockModal', 'blockInfo', 'userInfo', 'ngTableParams', 'viewFactory',
-    function ($rootScope, $timeout, $scope, $http, userService, $interval, blockService, blockModal, blockInfo, userInfo, ngTableParams, viewFactory) {
+angular.module('liskApp').controller('blockchainController', ['$scope', '$timeout', '$rootScope', '$http', "userService", "$interval", 'blockService', 'blockModal', 'blockInfo', 'userInfo', 'ngTableParams', 'viewFactory', 'gettextCatalog',
+    function ($rootScope, $timeout, $scope, $http, userService, $interval, blockService, blockModal, blockInfo, userInfo, ngTableParams, viewFactory, gettextCatalog) {
         $scope.view = viewFactory;
         $scope.view.inLoading = true;
-        $scope.view.loadingText = "Loading blockchain";
-        $scope.view.page = {title: 'Blockchain', previous: null};
+        $scope.view.loadingText = gettextCatalog.getString('Loading blockchain');
+        $scope.view.page = {title: gettextCatalog.getString('Blockchain'), previous: null};
         $scope.view.bar = {showBlockSearchBar: true};
         $scope.address = userService.address;
         $scope.loading = true;

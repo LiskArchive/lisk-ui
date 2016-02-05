@@ -4,7 +4,7 @@ angular.module('liskApp').controller('accountController', ['$state','$scope', '$
     function ($state, $rootScope, $scope, $http, userService, $interval, $timeout, sendTransactionModal, secondPassphraseModal, delegateService, viewFactory, transactionInfo, userInfo, $filter, gettextCatalog) {
         $scope.view = viewFactory;
         $scope.view.inLoading = true;
-        $scope.view.loadingText = "Loading dashboard";
+        $scope.view.loadingText = gettextCatalog.getString('Loading dashboard');
         $scope.view.page = {title: gettextCatalog.getString('Dashboard'), previous: null};
         $scope.view.bar = {};
         $scope.delegate = undefined;

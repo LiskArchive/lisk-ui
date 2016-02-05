@@ -1,9 +1,9 @@
 require('angular');
 
-angular.module('liskApp').controller('addDappModalController', ["$scope", "$http", "addDappModal", "userService", "viewFactory",
-    function ($scope, $http, addDappModal, userService, viewFactory) {
+angular.module('liskApp').controller('addDappModalController', ["$scope", "$http", "addDappModal", "userService", "viewFactory", 'gettextCatalog',
+    function ($scope, $http, addDappModal, userService, viewFactory, gettextCatalog) {
         $scope.view = viewFactory;
-        $scope.view.loadingText = "Saving new dapp";
+        $scope.view.loadingText = gettextCatalog.getString('Saving new dapp');
         $scope.secondPassphrase = userService.secondPassphrase;
         $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
         $scope.passmode = false;
@@ -148,7 +148,7 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
         }
 
         $scope.getUlrSiaText = function () {
-            return $scope.urlSiaMode ? 'change to url link' : 'change to SIA ASCII';
+            return $scope.urlSiaMode ? gettextCatalog.getString('change to url link') : gettextCatalog.getString('change to SIA ASCII');
         }
 
         $scope.goToStep2 = function () {
@@ -168,11 +168,11 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
         }
 
         $scope.getRepositoryHeaderText = function () {
-            return $scope.repository == 'sia' ? 'Please set the Sia ASCII code below.' : 'Please set the GitHub repository link below.';
+            return $scope.repository == 'sia' ? gettextCatalog.getString('Please set the Sia ASCII code below.') : gettextCatalog.getString('Please set the GitHub repository link below.');
         }
 
         $scope.getRepositoryHelpText = function () {
-            return $scope.repository == 'sia' ? 'Please make sure you copy and paste the whole Sia ASCII code. Additionally please check that there were no characters added.' : 'Please make sure you copy the complete repository link from GitHub. It ends in .git.';
+            return $scope.repository == 'sia' ? gettextCatalog.getString('Please make sure you copy and paste the whole Sia ASCII code. Additionally please check that there were no characters added.') : gettextCatalog.getString('Please make sure you copy the complete repository link from GitHub. It ends in .git.');
         }
 
         $scope.selectRepository = function (name) {

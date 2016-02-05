@@ -1,12 +1,12 @@
 require('angular');
 
 angular.module('liskApp').controller('walletsController',
-    ['$scope', '$rootScope', '$http', 'viewFactory', 'ngTableParams', '$filter', 'multiMembersModal', 'multiService', 'userService', "errorModal", 'masterPassphraseModal',
-        function ($rootScope, $scope, $http, viewFactory, ngTableParams, $filter, multiMembersModal, multiService, userService, errorModal, masterPassphraseModal) {
+    ['$scope', '$rootScope', '$http', 'viewFactory', 'ngTableParams', '$filter', 'multiMembersModal', 'multiService', 'userService', "errorModal", 'masterPassphraseModal', 'gettextCatalog',
+        function ($rootScope, $scope, $http, viewFactory, ngTableParams, $filter, multiMembersModal, multiService, userService, errorModal, masterPassphraseModal, gettextCatalog) {
             $scope.view = viewFactory;
             $scope.view.inLoading = false;
-            $scope.view.loadingText = "Loading multisignature wallets";
-            $scope.view.page = {title: 'Multisignature', previous: null};
+            $scope.view.loadingText = gettextCatalog.getString('Loading Multi-Signature Groups');
+            $scope.view.page = {title: gettextCatalog.getString('Multi-Signature'), previous: null};
             $scope.view.bar = {showWalletBar: true};
             $scope.secondPassphrase = userService.secondPassphrase;
             $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
