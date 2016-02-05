@@ -36,6 +36,17 @@ angular.module('liskApp').controller('blockchainController', ['$scope', '$timeou
             }
         });
 
+        $scope.tableBlocks.cols = {
+            height : gettextCatalog.getString('Height'),
+            blockID : gettextCatalog.getString('Block ID'),
+            generator : gettextCatalog.getString('Generator'),
+            time : gettextCatalog.getString('Time'),
+            transactions : gettextCatalog.getString('Transactions'),
+            amount : gettextCatalog.getString('Amount'),
+            fee : gettextCatalog.getString('Fee'),
+            reward : gettextCatalog.getString('Reward')
+        };
+
         $scope.tableBlocks.settings().$scope = $scope;
 
         $scope.$watch("filter.$", function () {

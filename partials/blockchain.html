@@ -22,17 +22,17 @@
                     </div>
                 </div>
                 <tr ng-repeat="block in $data" ng-class="{'voted': address == block.generatorId}">
-                    <td data-title="'Height'" sortable="'height'" ng-click="blockInfo(block)" class="pointer"><a href="#">{{block.height}}</a></td>
-                    <td data-title="'Block ID'" ng-click="blockInfo(block)" class="pointer" ng-show="showAllColumns"><a href="#">{{block.id}}</a></td>
-                    <td data-title="'Generator'" ng-show="showAllColumns"><a href="#"
+                    <td data-title="tableBlocks.cols.height" sortable="'height'" ng-click="blockInfo(block)" class="pointer"><a href="#">{{block.height}}</a></td>
+                    <td data-title="tableBlocks.cols.blockID" ng-click="blockInfo(block)" class="pointer" ng-show="showAllColumns"><a href="#">{{block.id}}</a></td>
+                    <td data-title="tableBlocks.cols.generator" ng-show="showAllColumns"><a href="#"
                                                                              ng-click="userInfo(block.generatorId)">{{block.generatorId}}</a></td>
-                    <td data-title="'Time'" sortable="'timestamp'"><span
+                    <td data-title="tableBlocks.cols.time" sortable="'timestamp'"><span
                             ng-show="block.timestamp > 0">{{block.timestamp | timeAgoFilter : showFullTime}}</span>
                         <span ng-show="block.timestamp == 0">-</span></td>
-                    <td data-title="'Transactions'" ng-click="showBlock(block)" class="pointer"><a href="#">{{block.numberOfTransactions}}</a></td>
-                    <td data-title="'Amount'" sortable="'totalAmount'">{{block.totalAmount  | liskFilter}}</td>
-                    <td data-title="'Fee'" sortable="'totalFee'">{{block.totalFee  | liskFilter}}</td>
-                    <td data-title="'Reward'" sortable="'reward'">{{block.reward | liskFilter}}</td>
+                    <td data-title="tableBlocks.cols.transactions" ng-click="showBlock(block)" class="pointer"><a href="#">{{block.numberOfTransactions}}</a></td>
+                    <td data-title="tableBlocks.cols.amount" sortable="'totalAmount'">{{block.totalAmount  | liskFilter}}</td>
+                    <td data-title="tableBlocks.cols.fee" sortable="'totalFee'">{{block.totalFee  | liskFilter}}</td>
+                    <td data-title="tableBlocks.cols.reward" sortable="'reward'">{{block.reward | liskFilter}}</td>
                     <td data-title="" class="width-80"></td>
                 </tr>
                 <tr ng-show="!loading && (!$data || $data.length == 0) && !searchBlocks.searchForBlock">

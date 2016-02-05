@@ -101,6 +101,7 @@ msgstr ""
 msgid "Adding new contact"
 msgstr ""
 
+#: js/controllers/blockchainController.js:45
 #: partials/modals/transactionInfo.html:16
 #: partials/modals/userInfo.html:67
 msgid "Amount"
@@ -149,6 +150,7 @@ msgstr ""
 msgid "Becoming a delegate requires registration. You may choose your own delegate name, which can be used to promote your delegate. Only the top 101 delegates are eligible to forge. All fees are shared equally between the top 101 delegates. Registration costs: {{fee | liskFilter}} LISK."
 msgstr ""
 
+#: js/controllers/blockchainController.js:41
 #: partials/modals/blockInfo.html:7
 #: partials/modals/transactionInfo.html:32
 #: partials/modals/transactionInfo.html:4
@@ -408,6 +410,7 @@ msgstr ""
 msgid "Enable Multi-Signature on this account"
 msgstr ""
 
+#: js/controllers/blockchainController.js:46
 #: partials/modals/transactionInfo.html:19
 #: partials/modals/userInfo.html:70
 msgid "Fee"
@@ -448,6 +451,7 @@ msgstr ""
 msgid "Generate New"
 msgstr ""
 
+#: js/controllers/blockchainController.js:42
 #: partials/modals/blockInfo.html:46
 msgid "Generator"
 msgstr ""
@@ -482,6 +486,7 @@ msgstr ""
 msgid "Go to previous page"
 msgstr ""
 
+#: js/controllers/blockchainController.js:40
 #: partials/modals/blockInfo.html:23
 msgid "Height"
 msgstr ""
@@ -910,6 +915,7 @@ msgstr ""
 msgid "Repeat second passphrase"
 msgstr ""
 
+#: js/controllers/blockchainController.js:47
 #: partials/modals/blockInfo.html:26
 msgid "Reward"
 msgstr ""
@@ -1086,6 +1092,7 @@ msgstr ""
 msgid "This walkthrough will guide you through the necessary steps to create a multi-signature group. It's very important that you know what multi-signatures are, else you risk loosing your LISK balance.<br><br>A multi-signature group consists of N accounts, the one who created the group is the group owner. When the owner wants to make a transaction, M of N accounts within the group need to confirm it, otherwise the transaction will not be processed. The values M and N are specified in this walkthrough.<br><br><b>Things you need to know for the multi-signature group setup:</b><br><br>• The number of group members (N).<br>• The number of needed confirmations (M).<br>• The account names or IDs from the Lisk accounts you want to add to the group."
 msgstr ""
 
+#: js/controllers/blockchainController.js:43
 #: partials/account.html:89
 #: partials/modals/blockInfo.html:38
 #: partials/modals/transactionInfo.html:25
@@ -1132,6 +1139,7 @@ msgstr ""
 msgid "Transaction ID"
 msgstr ""
 
+#: js/controllers/blockchainController.js:44
 #: js/controllers/transactionsController.js:8
 #: partials/modals/blockInfo.html:17
 #: partials/modals/blockModal.html:7
