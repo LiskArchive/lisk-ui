@@ -910,7 +910,7 @@ msgstr ""
 msgid "REMOVE VOTE"
 msgstr ""
 
-#: js/directives/voteTitleDirective.js:16
+#: js/directives/voteTitleDirective.js:17
 msgid "Removing vote from delegates"
 msgstr ""
 
@@ -1091,7 +1091,7 @@ msgstr ""
 msgid "The passphrase entered doesn't match with the one generated before. Please go back and generate a new one."
 msgstr ""
 
-#: js/directives/voteTitleDirective.js:21
+#: js/directives/voteTitleDirective.js:22
 msgid "This action will cost"
 msgstr ""
 
@@ -1191,7 +1191,7 @@ msgstr ""
 msgid "vote"
 msgstr ""
 
-#: js/directives/voteTitleDirective.js:14
+#: js/directives/voteTitleDirective.js:15
 msgid "Voting for delegates"
 msgstr ""
 
