@@ -155,6 +155,16 @@ angular.module('liskApp').controller('walletPendingsController', ['$scope', '$ro
             }
         });
 
+        $scope.tableTransactions.cols = {
+            wallet : gettextCatalog.getString('Wallet Address'),
+            transactionId : gettextCatalog.getString('Transaction ID'),
+            t_recipientId : gettextCatalog.getString('Recipient'),
+            t_timestamp : gettextCatalog.getString('Time'),
+            t_amount : gettextCatalog.getString('Amount'),
+            fee : gettextCatalog.getString('Fee'),
+            confirmations : gettextCatalog.getString('Confirmations Needed')
+        };
+
         $scope.tableTransactions.settings().$scope = $scope;
 
         $scope.$watch("filter.$", function () {

@@ -38,12 +38,12 @@ angular.module('liskApp').controller('blockchainController', ['$scope', '$timeou
 
         $scope.tableBlocks.cols = {
             height : gettextCatalog.getString('Height'),
-            blockID : gettextCatalog.getString('Block ID'),
+            blockId : gettextCatalog.getString('Block ID'),
             generator : gettextCatalog.getString('Generator'),
-            time : gettextCatalog.getString('Time'),
-            transactions : gettextCatalog.getString('Transactions'),
-            amount : gettextCatalog.getString('Amount'),
-            fee : gettextCatalog.getString('Fee'),
+            timestamp : gettextCatalog.getString('Time'),
+            numberOfTransactions : gettextCatalog.getString('Transactions'),
+            totalAmount : gettextCatalog.getString('Amount'),
+            totalFee : gettextCatalog.getString('Fee'),
             reward : gettextCatalog.getString('Reward')
         };
 

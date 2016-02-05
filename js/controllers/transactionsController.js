@@ -57,6 +57,16 @@ angular.module('liskApp').controller('transactionsController', ['$scope', '$root
             }
         });
 
+        $scope.tableTransactions.cols = {
+            b_height : gettextCatalog.getString('Height'),
+            transactionId : gettextCatalog.getString('Transaction ID'),
+            t_senderId : gettextCatalog.getString('Sender'),
+            t_recipientId : gettextCatalog.getString('Recipient'),
+            t_timestamp : gettextCatalog.getString('Time'),
+            t_amount : gettextCatalog.getString('Amount'),
+            fee : gettextCatalog.getString('Fee')
+        };
+
         $scope.tableTransactions.settings().$scope = $scope;
 
         $scope.$watch("filter.$", function () {

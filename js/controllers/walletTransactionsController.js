@@ -68,6 +68,16 @@ angular.module('liskApp').controller('walletTransactionsController',
                 }
             });
 
+            $scope.tableWalletTransactions = {
+                b_height : gettextCatalog.getString('Height'),
+                t_id : gettextCatalog.getString('Transaction ID'),
+                t_recipientId : gettextCatalog.getString('Recipient'),
+                t_timestamp : gettextCatalog.getString('Time'),
+                t_amount : gettextCatalog.getString('Amount'),
+                fee : gettextCatalog.getString('Fee'),
+                confirmations : gettextCatalog.getString('Confirmations')
+            };
+
             $scope.tableWalletTransactions.settings().$scope = $scope;
 
             $scope.$watch("filter.$", function () {

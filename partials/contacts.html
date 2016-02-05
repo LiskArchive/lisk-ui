@@ -7,8 +7,8 @@
             <table ng-table="tableContacts" border="0" width="100%" cellpadding="0" cellspacing="0" template-pagination="custom/pager" ng-show="contactsView.count || unconfirmedContacts.length">
                 <tr ng-repeat="tx in unconfirmedContacts track by $index" class="checked">
                     <td data-title="''" class="user-icon-col"><img src="/images/account.png" class="small-user-icon"></td>
-                    <td data-title="'Username'" sortable="'username'">{{tx.asset.contact.username || '-'}}</td>
-                    <td data-title="'Address'" sortable="'address'">
+                    <td data-title="tableContacts.cols.username" sortable="'username'">{{tx.asset.contact.username || '-'}}</td>
+                    <td data-title="tableContacts.cols.address" sortable="'address'">
                         <a href="#" ng-click="userInfo(contact.address)">{{tx.asset.contact.address}}</a>
                     </td>
                     <td data-title="''">
@@ -16,7 +16,7 @@
                             <i class="mdi-content-send left"></i><translate>SEND</translate>
                         </a>
                     </td>
-                    <td data-title="">
+                    <td data-title="''">
                         <div class="dropdown-more-group" dropdown>
                             <span class="table-more-actions" dropdown-toggle>
                                 <span class="dots"></span>
@@ -35,8 +35,8 @@
                 <tr ng-repeat="contact in $data">
                     {{contact}}
                     <td data-title="''" class="user-icon-col"><img src="/images/account.png" class="small-user-icon"></td>
-                    <td data-title="'Username'" sortable="'username'">{{contact.username || '-'}}</td>
-                    <td data-title="'Address'" sortable="'address'">
+                    <td data-title="tableContacts.cols.username" sortable="'username'">{{contact.username || '-'}}</td>
+                    <td data-title="tableContacts.cols.address" sortable="'address'">
                         <a href="#" ng-click="userInfo(contact.address)">{{contact.address}}</a>
                     </td>
                     <td data-title="''">
@@ -44,7 +44,7 @@
                             <i class="mdi-content-send left"></i><translate>SEND</translate>
                         </a>
                     </td>
-                    <td data-title="">
+                    <td data-title="''">
                         <div class="dropdown-more-group" dropdown>
                             <span class="table-more-actions" dropdown-toggle>
                                 <span class="dots"></span>

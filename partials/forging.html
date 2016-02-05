@@ -88,17 +88,17 @@
                     </div>
                 </div>
                 <tr ng-repeat="block in $data">
-                    <td data-title="'Height'" sortable="'height'">{{block.height}}</td>
-                    <td data-title="'Block ID'" ng-click="blockInfo(block)" class="pointer" ng-show="showAllColumns">
+                    <td data-title="tableBlocks.cols.height" sortable="'height'">{{block.height}}</td>
+                    <td data-title="tableBlocks.cols.blockId" ng-click="blockInfo(block)" class="pointer" ng-show="showAllColumns">
                         <a href="#">{{block.id}}</a>
                     </td>
-                    <td data-title="'Time'" sortable="'timestamp'">
+                    <td data-title="tableBlocks.cols.timestamp" sortable="'timestamp'">
                         <span ng-show="block.timestamp > 0">{{block.timestamp | timeAgoFilter : showFullTime}}</span>
                         <span ng-show="block.timestamp == 0">-</span>
                     </td>
-                    <td data-title="'Fee'" sortable="'totalFee'">{{block.totalFee | liskFilter}}</td>
-                    <td data-title="'Reward'" sortable="'reward'">{{block.reward | liskFilter}}</td>
-                    <td data-title="" class="width-80"></td>
+                    <td data-title="tableBlocks.cols.totalFee" sortable="'totalFee'">{{block.totalFee | liskFilter}}</td>
+                    <td data-title="tableBlocks.cols.reward" sortable="'reward'">{{block.reward | liskFilter}}</td>
+                    <td data-title="''" class="width-80"></td>
                 </tr>
             </table>
             <div class="panel-body empty-body empty-table without-margin-top" ng-if="!countForgingBlocks">

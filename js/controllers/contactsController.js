@@ -50,6 +50,11 @@ angular.module('liskApp').controller('contactsController', ['$scope', '$rootScop
         })
         ;
 
+        $scope.tableContacts.cols = {
+            username : gettextCatalog.getString('Username'),
+            address : gettextCatalog.getString('Address')
+        };
+
         $scope.tableContacts.settings().$scope = $scope;
 
         $scope.$watch("filter.$", function () {

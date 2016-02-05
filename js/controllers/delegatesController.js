@@ -163,6 +163,14 @@ angular.module('liskApp').controller('delegatesController', ['$scope', '$rootSco
             }
         });
 
+        $scope.tableTopDelegates.cols = {
+            rate : gettextCatalog.getString('Rank'),
+            username : gettextCatalog.getString('Name'),
+            address : gettextCatalog.getString('Lisk Address'),
+            productivity : gettextCatalog.getString('Uptime'),
+            vote : gettextCatalog.getString('Approval')
+        };
+
         $scope.tableTopDelegates.settings().$scope = $scope;
 
         $scope.$watch("filter.$", function () {
@@ -197,6 +205,7 @@ angular.module('liskApp').controller('delegatesController', ['$scope', '$rootSco
             }
         });
 
+        $scope.tableStandbyDelegates.cols = $scope.tableTopDelegates.cols;
         $scope.tableStandbyDelegates.settings().$scope = $scope;
 
         $scope.$watch("filter.$", function () {

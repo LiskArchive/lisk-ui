@@ -31,17 +31,17 @@
                         <!-- <span class="app-chekbox" ng-show="delegates.voted(delegate.publicKey) || unconfirmedTransactions.inList(delegate.publicKey)"></span>
                         <span class="app-chekbox" ng-click="voteList.vote(delegate.publicKey, delegate.username)" ng-hide="delegates.voted(delegate.publicKey) || unconfirmedTransactions.inList(delegate.publicKey)" ng-class="{'unchecked':!voteList.inList(delegate.publicKey), 'checked':voteList.inList(delegate.publicKey)}"></span> -->
                     </td>
-                    <td data-title="'Rank'" sortable="'rate'">{{delegate.rate}}</td>
-                    <td data-title="'Name'" sortable="'username'" class="username">{{delegate.username}}</td>
-                    <td data-title="'Lisk Address'">
+                    <td data-title="tableTopDelegates.cols.rate" sortable="'rate'">{{delegate.rate}}</td>
+                    <td data-title="tableTopDelegates.cols.username" sortable="'username'" class="username">{{delegate.username}}</td>
+                    <td data-title="tableTopDelegates.cols.address">
                         <a href="#" ng-click="userInfo(delegate.address)">{{delegate.address}}</a>
                     </td>
-                    <td data-title="'Uptime'" sortable="'productivity'">
+                    <td data-title="tableTopDelegates.cols.productivity" sortable="'productivity'">
                         <span ng-show="delegate.productivity">{{(delegate.productivity)}}%</span>
                         <span ng-show="!delegate.productivity">-</span>
                     </td>
-                    <td data-title="'Approval'" sortable="'vote'">{{getApproval(delegate.vote) | number: 2}}%</td>
-                    <td data-title="">
+                    <td data-title="tableTopDelegates.cols.vote" sortable="'vote'">{{getApproval(delegate.vote) | number: 2}}%</td>
+                    <td data-title="''">
                         <div class="dropdown-more-group" dropdown>
                             <span class="table-more-actions" dropdown-toggle>
                                 <span class="dots"></span>
@@ -100,17 +100,17 @@
                         <!-- <span class="app-chekbox" ng-show="delegates.voted(delegate.publicKey) || unconfirmedTransactions.inList(delegate.publicKey)"></span>
                         <span class="app-chekbox" ng-click="voteList.vote(delegate.publicKey, delegate.username)" ng-hide="delegates.voted(delegate.publicKey) || unconfirmedTransactions.inList(delegate.publicKey)" ng-class="{'unchecked':!voteList.inList(delegate.publicKey), 'checked':voteList.inList(delegate.publicKey)}"></span> -->
                     </td>
-                    <td data-title="'Rank'" sortable="'rate'">{{delegate.rate}}</td>
-                    <td data-title="'Name'" sortable="'username'" class="username">{{delegate.username}}</td>
-                    <td data-title="'Lisk Address'">
+                    <td data-title="tableStandbyDelegates.cols.rate" sortable="'rate'">{{delegate.rate}}</td>
+                    <td data-title="tableStandbyDelegates.cols.username" sortable="'username'" class="username">{{delegate.username}}</td>
+                    <td data-title="tableStandbyDelegates.cols.address">
                         <a href="#" ng-click="userInfo(delegate.address)">{{delegate.address}}</a>
                     </td>
-                    <td data-title="'Uptime'" sortable="'productivity'">
+                    <td data-title="tableStandbyDelegates.cols.productivity" sortable="'productivity'">
                         <span ng-show="delegate.productivity">{{(delegate.productivity)}}%</span>
                         <span ng-show="!delegate.productivity">-</span>
                     </td>
-                    <td data-title="'Approval'" sortable="'vote'">{{getApproval(delegate.vote) | number: 2}}%</td>
-                    <td data-title="">
+                    <td data-title="tableStandbyDelegates.cols.vote" sortable="'vote'">{{getApproval(delegate.vote) | number: 2}}%</td>
+                    <td data-title="''">
                         <div class="dropdown-more-group" dropdown>
                             <span class="table-more-actions" dropdown-toggle>
                                 <span class="dots"></span>

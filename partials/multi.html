@@ -11,23 +11,23 @@
             </div>
             <table ng-show="!!countPendings" ng-table="tableMultiTransactions" border="0" width="100%" cellpadding="0" cellspacing="0" template-pagination="custom/pager">
                 <tr ng-class="{'voted': transaction.confirmations>=transaction.needed}" style="height: 63px;" ng-repeat="item in $data">
-                    <td data-title="'Transaction ID'" sortable="'transaction.id'">{{item.transaction.id}}</td>
-                    <td data-title="'Recipient'" sortable="'transaction.recipientId'">
+                    <td data-title="tableMultiTransactions.cols.transactionId" sortable="'transaction.id'">{{item.transaction.id}}</td>
+                    <td data-title="tableMultiTransactions.cols.recipientId" sortable="'transaction.recipientId'">
                         {{item.transaction.recipientId}}
                     </td>
-                    <td data-title="'Time'" sortable="'transaction.timestamp'">
+                    <td data-title="tableMultiTransactions.cols.timestamp" sortable="'transaction.timestamp'">
                         {{item.transaction.timestamp | timeAgoFilter:false}}
                     </td>
-                    <td data-title="'Amount'" sortable="'transaction.amount'">
+                    <td data-title="tableMultiTransactions.cols.amount" sortable="'transaction.amount'">
                         {{item.transaction.amount | liskFilter}}
                     </td>
-                    <td data-title="'Fee'" sortable="'transaction.fee'">
+                    <td data-title="tableMultiTransactions.cols.fee" sortable="'transaction.fee'">
                         {{item.transaction.fee | liskFilter}}
                     </td>
-                    <td data-title="'Confirmations'" sortable="'countSing(transaction)'">
+                    <td data-title="tableMultiTransactions.cols.confirmations" sortable="'countSing(transaction)'">
                         {{countSign(item.transaction)}}/{{confirmationsNeeded(item)}}
                     </td>
-                    <td data-title="">
+                    <td data-title="''">
                         <a ng-click="confirmTransaction(item.transaction.id)" ng-if="!signedByUser(item)" class="btn btn-dark-meant"><i class="mdi-action-done left"></i><translate>CONFIRM</translate></a>
                     </td>
                 </tr>
@@ -45,13 +45,13 @@
                 <div class="logo-grey"></div>
                 <p class="empty-state-text">{{'You are not a member of any one Multi-Signature group.'|translate}}</p>
             </div>
-            <table ng-show="!!countWallets" ng-table="tableWallets" border="0" width="100%" cellpadding="0" cellspacing="0" template-pagination="custom/pager">
+            <table ng-show="!!countWallets" ng-table="" border="0" width="100%" cellpadding="0" cellspacing="0" template-pagination="custom/pager">
                 <tr ng-repeat="wallet in $data">
-                    <td data-title="'Group Name'" sortable="'address'">{{wallet.address}}</td>
-                    <td data-title="'Members'" sortable="'multimin'">
+                    <td data-title="tableWallets.cols.address" sortable="'address'">{{wallet.address}}</td>
+                    <td data-title="tableWallets.cols.members" sortable="'multimin'">
                         <a href="#" ng-click="showMembers(false, wallet.multisigaccounts, wallet.address)">{{wallet.multisignatures.length + 1}}</a>
                     </td>
-                    <td data-title="'Confirmations required'" sortable="'multimin'">
+                    <td data-title="tableWallets.cols.confirmations" sortable="'multimin'">
                         {{wallet.multimin}}
                     </td>
                     <td data-title="''">

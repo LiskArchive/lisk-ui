@@ -117,6 +117,14 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
             }
         });
 
+        $scope.tableBlocks.cols = {
+            height : gettextCatalog.getString('Height'),
+            blockId : gettextCatalog.getString('Block ID'),
+            timestamp : gettextCatalog.getString('Time'),
+            totalFee : gettextCatalog.getString('Fee'),
+            reward : gettextCatalog.getString('Reward')
+        };
+
         $scope.tableBlocks.settings().$scope = $scope;
 
         $scope.$watch("filter.$", function () {

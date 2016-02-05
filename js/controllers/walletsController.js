@@ -111,6 +111,12 @@ angular.module('liskApp').controller('walletsController',
                 }
             });
 
+            $scope.tableWallets.cols = {
+                address : gettextCatalog.getString('Group Name'),
+                members : gettextCatalog.getString('Members'),
+                confirmations : gettextCatalog.getString('Confirmations')
+            };
+
             $scope.tableWallets.settings().$scope = $scope;
 
             $scope.$watch("filter.$", function () {
@@ -137,6 +143,15 @@ angular.module('liskApp').controller('walletsController',
                     });
                 }
             });
+
+            $scope.tableMultiTransactions.cols = {
+                transactionId : gettextCatalog.getString('Transaction ID'),
+                recipientId : gettextCatalog.getString('Recipient'),
+                timestamp : gettextCatalog.getString('Time'),
+                amount : gettextCatalog.getString('Amount'),
+                fee : gettextCatalog.getString('Fee'),
+                confirmations : gettextCatalog.getString('Confirmations Needed')
+            };
 
             $scope.tableMultiTransactions.settings().$scope = $scope;
 
