@@ -3,13 +3,13 @@ require('angular');
 angular.module('liskApp').service('languageService', function ($rootScope, gettextCatalog) {
 
     $rootScope.languages = [
-        { id: 'cn', name: '中文' },
         { id: 'de', name: 'Deutsch' },
-        { id: 'en', name: 'English' }
+        { id: 'en', name: 'English' },
+        { id: 'zh', name: '中文' }
     ];
 
     return function (lang) {
-        $rootScope.lang = $rootScope.languages[2];
+        $rootScope.lang = $rootScope.languages[1];
 
         $rootScope.changeLang = function () {
             gettextCatalog.setCurrentLanguage(this.lang.id);
