@@ -904,7 +904,7 @@ msgstr "VOTE ENTFERNEN"
 
 #: js/directives/voteTitleDirective.js:16
 msgid "Removing vote from delegates"
-msgstr ""
+msgstr "Abstimmung entfernen von delegates"
 
 #: partials/modals/secondPassphraseModal.html:26
 msgid "Repeat second passphrase"
@@ -928,7 +928,7 @@ msgstr "Speichere neue Dapp"
 
 #: partials/app-template.html:223
 msgid "Search for blocks"
-msgstr ""
+msgstr "Suche nach Blöcke"
 
 #: partials/app-template.html:323 partials/app-template.html:348
 msgid "Search for Dapps"
@@ -1084,7 +1084,7 @@ msgstr ""
 
 #: js/directives/voteTitleDirective.js:21
 msgid "This action will cost"
-msgstr ""
+msgstr "Diese Aktion kostet"
 
 #: partials/modals/multisignatureModal.html:21
 msgid ""
@@ -1188,7 +1188,7 @@ msgstr "vote"
 
 #: js/directives/voteTitleDirective.js:14
 msgid "Voting for delegates"
-msgstr ""
+msgstr "Vote für Delegates"
 
 #: partials/app-template.html:64
 msgid "Welcome back, {{username}}"
