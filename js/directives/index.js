@@ -5,3 +5,5 @@ require('../../js/directives/autofocusDirective');
 require('../../js/directives/focusOnShowDirective');
 require('../../js/directives/targetBlankDirective');
 require('../../js/directives/rangeDirective');
+require('../../js/directives/voteActionDirective');
+require('../../js/directives/voteTitleDirective');

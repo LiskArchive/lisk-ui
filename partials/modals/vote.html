@@ -4,7 +4,7 @@
             <div class="col-md-6 col-md-offset-4 height100 valign-wrapper">
                 <div class="modal-content" ng-show="!passmode && !checkSecondPass">
                     <div class="modal-header">
-                        <h2>{{'Vote for Delegates'|translate}}:</h2> <translate>this action will cost {{fee | liskFilter}} LISK</translate></h2>
+                        <vote-title adding="adding" fee="fee"></vote-title>
                     <div class="close-modal" ng-click="close()">
                         <span class="sr-only"><translate>Close modal</translate></span>
                     </div>
@@ -12,7 +12,7 @@
                 <div class="modal-nav">
                     <ul class="nav nav-vote">
                         <li>
-                            <a href="#" ng-class="{'green-link': adding,  'red-link': !adding}" ng-click="passcheck()"><i class="mdi-action-favorite-outline left"></i><translate>CONFIRM VOTE</translate></a>
+                            <a href="#" ng-class="{'green-link': adding,  'red-link': !adding}" ng-click="passcheck()"><i class="mdi-action-favorite-outline left"></i> <vote-action adding="adding"></vote-action></a>
                         </li>
                         <li>
                             <a href="#" ng-click="close()"><i class="mdi-navigation-close left"></i><translate>CANCEL</translate></a>
@@ -63,7 +63,7 @@
                         <a href="#" ng-click="passcheck()"><translate>Cancel</translate></a>
                     </li>
                     <li>
-                        <a href="#" class="green-link" ng-click="vote(secretPhrase)"><translate>Confirm Vote</translate></a>
+                        <a href="#" class="green-link" ng-click="vote(secretPhrase)"><vote-action adding="adding"></vote-action></a>
                     </li>
                 </ul>
             </div>
@@ -98,7 +98,7 @@
                         <a href="#" ng-click="passcheck(true)"><translate>BACK</translate></a>
                     </li>
                     <li>
-                        <a href="#" class="green-link" ng-click="vote(secretPhrase, true)"><translate>Confirm Vote</translate></a>
+                        <a href="#" class="green-link" ng-click="vote(secretPhrase, true)"><vote-action adding="adding"></vote-action></a>
                     </li>
                 </ul>
             </div>
