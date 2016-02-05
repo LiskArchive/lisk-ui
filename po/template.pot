@@ -278,12 +278,7 @@ msgstr ""
 msgid "CONFIRM"
 msgstr ""
 
-#: partials/modals/vote.html:101
-#: partials/modals/vote.html:66
-msgid "Confirm Vote"
-msgstr ""
-
-#: partials/modals/vote.html:15
+#: js/directives/voteActionDirective.js:14
 msgid "CONFIRM VOTE"
 msgstr ""
 
@@ -598,7 +593,7 @@ msgstr ""
 msgid "Loading transactions"
 msgstr ""
 
-#: partials/blockchain.html:45
+#: partials/blockchain.html:35
 #: partials/delegates.html:150
 #: partials/delegates.html:81
 msgid "Loading..."
@@ -700,7 +695,7 @@ msgstr ""
 msgid "NO"
 msgstr ""
 
-#: partials/blockchain.html:40
+#: partials/blockchain.html:30
 msgid "No blockchain"
 msgstr ""
 
@@ -718,7 +713,7 @@ msgstr ""
 msgid "No results for search '{{searchDapp.searchForDappGlobal}}' in dapps."
 msgstr ""
 
-#: partials/blockchain.html:52
+#: partials/blockchain.html:42
 #: partials/transactions.html:65
 msgid "No results for this search."
 msgstr ""
@@ -911,6 +906,14 @@ msgstr ""
 msgid "remove vote"
 msgstr ""
 
+#: js/directives/voteActionDirective.js:16
+msgid "REMOVE VOTE"
+msgstr ""
+
+#: js/directives/voteTitleDirective.js:16
+msgid "Removing vote from delegates"
+msgstr ""
+
 #: partials/modals/secondPassphraseModal.html:26
 msgid "Repeat second passphrase"
 msgstr ""
@@ -930,6 +933,10 @@ msgstr ""
 
 #: js/controllers/modals/addDappModalController.js:6
 msgid "Saving new dapp"
+msgstr ""
+
+#: partials/app-template.html:223
+msgid "Search for blocks"
 msgstr ""
 
 #: partials/app-template.html:323
@@ -979,13 +986,13 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: partials/blockchain.html:16
+#: partials/blockchain.html:12
 #: partials/forging.html:82
 #: partials/transactions.html:11
 msgid "Show All Columns"
 msgstr ""
 
-#: partials/blockchain.html:20
+#: partials/blockchain.html:13
 #: partials/forging.html:85
 #: partials/transactions.html:14
 msgid "Show Full Time"
@@ -1084,8 +1091,8 @@ msgstr ""
 msgid "The passphrase entered doesn't match with the one generated before. Please go back and generate a new one."
 msgstr ""
 
-#: partials/modals/vote.html:7
-msgid "this action will cost {{fee | liskFilter}} LISK"
+#: js/directives/voteTitleDirective.js:21
+msgid "This action will cost"
 msgstr ""
 
 #: partials/modals/multisignatureModal.html:21
@@ -1184,8 +1191,8 @@ msgstr ""
 msgid "vote"
 msgstr ""
 
-#: partials/modals/vote.html:7
-msgid "Vote for Delegates"
+#: js/directives/voteTitleDirective.js:14
+msgid "Voting for delegates"
 msgstr ""
 
 #: partials/app-template.html:64
