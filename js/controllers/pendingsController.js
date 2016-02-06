@@ -27,7 +27,7 @@ angular.module('liskApp').controller('pendingsController', ['$scope', '$rootScop
 
         $scope.tableFollowers.cols = {
             username : gettextCatalog.getString('Username'),
-            address : gettextCatalog.getString('Address')
+            address : gettextCatalog.getString('Lisk Address')
         };
 
         $scope.tableContacts.settings().$scope = $scope;

@@ -52,7 +52,7 @@ angular.module('liskApp').controller('contactsController', ['$scope', '$rootScop
 
         $scope.tableContacts.cols = {
             username : gettextCatalog.getString('Username'),
-            address : gettextCatalog.getString('Address')
+            address : gettextCatalog.getString('Lisk Address')
         };
 
         $scope.tableContacts.settings().$scope = $scope;
