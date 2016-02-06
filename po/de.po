@@ -260,7 +260,7 @@ msgstr "Bestätigungen"
 #: js/controllers/walletPendingsController.js:165
 #: js/controllers/walletsController.js:153
 msgid "Confirmations Needed"
-msgstr ""
+msgstr "Benötigte Bestätigungen"
 
 #: partials/modals/multisignatureModal.html:113
 #: partials/modals/multisignatureModal.html:73
@@ -438,7 +438,7 @@ msgstr "Zur vorherigen Seite"
 
 #: js/controllers/walletsController.js:115
 msgid "Group Name"
-msgstr ""
+msgstr "Gruppen Name"
 
 #: partials/app-template.html:291
 msgid "HOME"
@@ -510,7 +510,7 @@ msgstr "Lisk - Die Dezentrale Applikations Plattform"
 #: js/controllers/votedDelegatesController.js:131
 #: js/controllers/walletPendingsController.js:159
 msgid "Lisk Address"
-msgstr ""
+msgstr "Lisk Adresse"
 
 #: partials/account.html:46
 msgid "Lisk Client"
