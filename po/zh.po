@@ -256,7 +256,7 @@ msgstr "确认数"
 #: js/controllers/walletPendingsController.js:165
 #: js/controllers/walletsController.js:153
 msgid "Confirmations Needed"
-msgstr ""
+msgstr "需要的确认数"
 
 #: partials/modals/multisignatureModal.html:113
 #: partials/modals/multisignatureModal.html:73
@@ -431,7 +431,7 @@ msgstr "返回上一页"
 
 #: js/controllers/walletsController.js:115
 msgid "Group Name"
-msgstr ""
+msgstr "组名"
 
 #: partials/app-template.html:291
 msgid "HOME"
@@ -503,7 +503,7 @@ msgstr "Lisk - 去中心化应用平台"
 #: js/controllers/votedDelegatesController.js:131
 #: js/controllers/walletPendingsController.js:159
 msgid "Lisk Address"
-msgstr ""
+msgstr "Lisk地址"
 
 #: partials/account.html:46
 msgid "Lisk Client"
@@ -838,7 +838,7 @@ msgstr "详细"
 
 #: js/directives/voteActionDirective.js:16
 msgid "REMOVE VOTE"
-msgstr ""
+msgstr "移除投票"
 
 #: js/controllers/delegatesController.js:167
 #: js/controllers/forgingController.js:44
@@ -871,7 +871,7 @@ msgstr "保持Session状态"
 
 #: js/directives/voteTitleDirective.js:17
 msgid "Removing vote from delegates"
-msgstr ""
+msgstr "正在移除受托人投票"
 
 #: partials/modals/secondPassphraseModal.html:26
 msgid "Repeat second passphrase"
@@ -914,7 +914,7 @@ msgstr "搜索Dapps"
 
 #: partials/app-template.html:223
 msgid "Search for blocks"
-msgstr ""
+msgstr "搜索区块链"
 
 #: partials/app-template.html:197
 msgid ""
@@ -1043,7 +1043,7 @@ msgstr "您输入的主密码与刚才创建的主密码不一致，请返回上
 
 #: js/directives/voteTitleDirective.js:22
 msgid "This action will cost"
-msgstr ""
+msgstr "此操作将花费"
 
 #: partials/modals/multisignatureModal.html:21
 msgid ""
@@ -1160,7 +1160,7 @@ msgstr "查看已选"
 
 #: js/directives/voteTitleDirective.js:15
 msgid "Voting for delegates"
-msgstr ""
+msgstr "选举受托人"
 
 #: partials/app-template.html:64
 msgid "Welcome back, {{username}}"
