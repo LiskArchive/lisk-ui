@@ -2,7 +2,25 @@
     <div class="pass-banner"></div>
     <div class="pass-bottom">
         <div class="pass-window">
-            <div class="pass-window-icon"></div>
+            <div class="pass-window-icon">
+                <div class="more-down" dropdown is-open="moreDropdownStatus.isopen">
+                    <i class="mdi-action-language" dropdown-toggle></i>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="#" ng-mouseover="changeLang('de')" ng-click="changeLang('de')"><strong>Deutsch</strong><img src="images/flags/flag_germany.png"> </a>
+                        </li>
+                        <li>
+                            <a href="#" ng-mouseover="changeLang('cn')" ng-click="changeLang('cn')"><strong>中文</strong><img src="images/flags/flag_china.png"> </a>
+                        </li>
+                        <li>
+                            <a href="#" ng-mouseover="changeLang('en')" ng-click="changeLang('en')"><strong>English</strong><img src="images/flags/flag_uk.png"> </a>
+                        </li>
+                        <li>
+                            <a href="#" ng-mouseover="changeLang('fr')" ng-click="changeLang('fr')"><strong>Français</strong><img src="images/flags/flag_france.png"> </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <form class="clearfix pass-window-form" _lpchecked="1" ng-submit="login(pass, rememberPassphrase)">
                 <div class="input-field ">
                     <input id="password" type="password" ng-model="pass" ng-trim="false" autofocus>
@@ -15,11 +33,6 @@
                         <span class="lever"></span>
                         <translate>Remember during this session</translate>
                     </label>
-                </div>
-                <div class="row clearfix" style="height: inherit;">
-                    <div class="input-field col s12">
-                        <select class="browser-default" ng-model="lang" ng-options="option.name for option in languages track by option.id" ng-change="changeLang()"></select>
-                    </div>
                 </div>
                 <div class="pull-right buttons-panel">
                     <a class="btn btn-white waves-effect btn-marging" ng-click="newUser()"><translate>NEW ACCOUNT</translate></a>
