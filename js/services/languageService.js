@@ -11,23 +11,16 @@ angular.module('liskApp').service('languageService', function ($rootScope, gette
     return function (lang) {
         $rootScope.lang = $rootScope.languages[1];
 
-        $rootScope.changeLang = function (language) {
-            switch(language) {
-                case 'de':
-                    this.lang.id = 'de';
-                    break;
-                case 'cn':
-                    this.lang.id = 'zh';
-                    break;
-                case 'en':
-                    this.lang.id = 'en';
-                    break;
-                default:
-                    this.lang.id ='en';
-            }
+        $rootScope.changeLang = function (changed) {
+            var lang = _.find($rootScope.languages, function (lang) {
+                return lang.id == changed
+            });
 
-            gettextCatalog.setCurrentLanguage(this.lang.id);
-            console.log('Language changed to:', this.lang.name);
+            if (lang) {
+                $rootScope.lang = lang;
+                gettextCatalog.setCurrentLanguage(lang.id);
+                console.log('Language changed to:', lang.name);
+            }
         }
 
         gettextCatalog.setCurrentLanguage($rootScope.lang.id);

@@ -6,17 +6,8 @@
                 <div class="more-down" dropdown is-open="moreDropdownStatus.isopen">
                     <i class="mdi-action-language" dropdown-toggle></i>
                     <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <a href="#" ng-mouseover="changeLang('de')" ng-click="changeLang('de')"><strong>Deutsch</strong><img src="images/flags/flag_germany.png"> </a>
-                        </li>
-                        <li>
-                            <a href="#" ng-mouseover="changeLang('cn')" ng-click="changeLang('cn')"><strong>中文</strong><img src="images/flags/flag_china.png"> </a>
-                        </li>
-                        <li>
-                            <a href="#" ng-mouseover="changeLang('en')" ng-click="changeLang('en')"><strong>English</strong><img src="images/flags/flag_uk.png"> </a>
-                        </li>
-                        <li>
-                            <a href="#" ng-mouseover="changeLang('fr')" ng-click="changeLang('fr')"><strong>Français</strong><img src="images/flags/flag_france.png"> </a>
+                        <li ng-repeat="lang in languages track by $index">
+                            <a href="#" ng-mouseover="changeLang(lang.id)" ng-click="changeLang(land.id)"><strong>{{lang.name}}</strong><img ng-src="images/flags/{{lang.id}}.png"></a>
                         </li>
                     </ul>
                 </div>
