@@ -10,6 +10,7 @@
     "file-saver": "*",
     "blob": "*",
     "angular-animate": "=1.4.9",
-    "angular-gettext": "=2.2.1"
+    "angular-gettext": "=2.2.1",
+    "underscore": "=1.8.3"
   }
 }
