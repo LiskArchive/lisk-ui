@@ -10,32 +10,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.7\n"
 
 #: partials/dapp-entry.html:79
 msgid "(1449)"
 msgstr "(1449)"
 
-#: partials/votes.html:25
-msgid "{{count}} in Total"
-msgstr "合计{{count}} 个"
-
-#: partials/delegates.html:24
-msgid "{{countTop}} in Total"
-msgstr "合计{{countTop}} 个"
-
-#: partials/votes.html:4
-msgid "{{voteList.length}} out of {{count}} Delegates selected"
-msgstr "已选受托人 ({{voteList.length}} / {{count}})"
-
-#: partials/delegates.html:4
-msgid ""
-"{{voteList.length}} out of {{countStandby + countTop}} Delegates selected"
-msgstr "已选受托人 ({{countStandby + countTop}} / {{voteList.length}})"
-
 #: partials/app-template.html:177
 msgid "2nd Passphrase"
 msgstr "支付密码"
+
+#: partials/dapps.html:152
+msgid "ADD NEW DAPP"
+msgstr "发布新DAPP"
 
 #: partials/modals/addDappModal.html:36
 msgid "Accept / Next Step"
@@ -44,15 +31,6 @@ msgstr "接受 / 下一步"
 #: partials/modals/userInfo.html:14
 msgid "Account"
 msgstr "账户名"
-
-#: partials/modals/addContactModal.html:21
-#: partials/modals/sendTransaction.html:21
-msgid "Account name or ID"
-msgstr "帐户名或 ID"
-
-#: partials/modals/multisignatureModal.html:52
-msgid "Account name, ID or public key"
-msgstr "帐户名、 ID 或公钥"
 
 #: partials/modals/addContactModal.html:50
 #: partials/modals/addContactModal.html:85
@@ -71,16 +49,19 @@ msgstr "帐户名、 ID 或公钥"
 msgid "Account Verification"
 msgstr "帐户验证"
 
+#: partials/modals/addContactModal.html:21
+#: partials/modals/sendTransaction.html:21
+msgid "Account name or ID"
+msgstr "帐户名或 ID"
+
+#: partials/modals/multisignatureModal.html:52
+msgid "Account name, ID or public key"
+msgstr "帐户名、 ID 或公钥"
+
 #: partials/delegates.html:136 partials/delegates.html:67
 #: partials/votes.html:65
 msgid "Add as Contact"
 msgstr "添加为联系人"
-
-#: partials/modals/addContactModal.html:107
-#: partials/modals/addContactModal.html:37
-#: partials/modals/addContactModal.html:72
-msgid "add contact"
-msgstr "添加联系人"
 
 #: partials/modals/multisignatureModal.html:46
 msgid "Add group members by typing in their account name, ID or public key."
@@ -90,15 +71,6 @@ msgstr "使用帐户名、ID或者公钥添加组员"
 msgid "Add new contact"
 msgstr "添加新联系人"
 
-#: partials/dapps.html:152
-msgid "ADD NEW DAPP"
-msgstr "发布新DAPP"
-
-#: partials/modals/secondPassphraseModal.html:39
-#: partials/modals/secondPassphraseModal.html:74
-msgid "add second passphrase"
-msgstr "设置支付密码"
-
 #: partials/modals/secondPassphraseModal.html:13
 msgid "Add second passphrase"
 msgstr "设置支付密码"
@@ -107,16 +79,11 @@ msgstr "设置支付密码"
 msgid "Adding new contact"
 msgstr "添加新联系人"
 
-#: js/controllers/contactsController.js:55
-#: js/controllers/pendingsController.js:30
-msgid "Address"
-msgstr ""
-
 #: js/controllers/blockchainController.js:45
 #: js/controllers/transactionsController.js:66
 #: js/controllers/walletPendingsController.js:163
-#: js/controllers/walletsController.js:151
 #: js/controllers/walletTransactionsController.js:76
+#: js/controllers/walletsController.js:151
 #: partials/modals/transactionInfo.html:16 partials/modals/userInfo.html:67
 msgid "Amount"
 msgstr "金额"
@@ -139,10 +106,6 @@ msgstr "您确定要删除吗？"
 msgid "Attention!"
 msgstr "请注意"
 
-#: partials/modals/userSettingsModal.html:64
-msgid "Back"
-msgstr "返回"
-
 #: partials/modals/addContactModal.html:104
 #: partials/modals/addContactModal.html:69
 #: partials/modals/addDappModal.html:471
@@ -154,6 +117,10 @@ msgstr "返回"
 #: partials/modals/sendTransaction.html:75
 #: partials/modals/userSettingsModal.html:100 partials/modals/vote.html:98
 msgid "BACK"
+msgstr "返回"
+
+#: partials/modals/userSettingsModal.html:64
+msgid "Back"
 msgstr "返回"
 
 #: partials/account.html:8
@@ -182,6 +149,33 @@ msgstr "区域ID"
 msgid "Blockchain"
 msgstr "区域链"
 
+#: partials/modals/addDappModal.html:37
+#: partials/modals/multisignatureModal.html:28 partials/modals/vote.html:18
+msgid "CANCEL"
+msgstr "取消"
+
+#: partials/app-template.html:275
+msgid "CATEGORIES"
+msgstr "分类"
+
+#: partials/multi.html:31 partials/pendings.html:15
+#: partials/wallet-pendings.html:28
+msgid "CONFIRM"
+msgstr "确认"
+
+#: js/directives/voteActionDirective.js:14
+msgid "CONFIRM VOTE"
+msgstr "确认投票"
+
+#: partials/modals/blockInfo.html:74 partials/modals/blockModal.html:34
+#: partials/modals/transactionInfo.html:50 partials/modals/userInfo.html:101
+msgid "CONFIRMATIONS"
+msgstr "确认数"
+
+#: partials/multi.html:59
+msgid "CONFIRMED TRANSACTIONS"
+msgstr "确认交易"
+
 #: partials/modals/addContactModal.html:34 partials/modals/forgingModal.html:32
 #: partials/modals/masterPassphraseModal.html:32
 #: partials/modals/multisignatureModal.html:88
@@ -194,15 +188,6 @@ msgstr "区域链"
 msgid "Cancel"
 msgstr "取消"
 
-#: partials/modals/addDappModal.html:37
-#: partials/modals/multisignatureModal.html:28 partials/modals/vote.html:18
-msgid "CANCEL"
-msgstr "取消"
-
-#: partials/app-template.html:275
-msgid "CATEGORIES"
-msgstr "分类"
-
 #: partials/modals/addDappModal.html:371 partials/modals/addDappModal.html:397
 msgid "Category"
 msgstr "分类"
@@ -214,14 +199,6 @@ msgstr "分类："
 #: partials/modals/addDappModal.html:226
 msgid "Centralized"
 msgstr "中心化"
-
-#: js/controllers/modals/addDappModalController.js:151
-msgid "change to SIA ASCII"
-msgstr "转化为SIA ASCII编码"
-
-#: js/controllers/modals/addDappModalController.js:151
-msgid "change to url link"
-msgstr "转化为URL链接"
 
 #: partials/modals/addDappModal.html:313 partials/modals/addDappModal.html:323
 msgid "Check"
@@ -262,59 +239,33 @@ msgstr "检查"
 msgid "Close modal"
 msgstr "关闭"
 
-#: partials/modals/multisignatureModal.html:135
-#: partials/modals/multisignatureModal.html:174
-#: partials/modals/userSettingsModal.html:103
-#: partials/modals/userSettingsModal.html:67
-msgid "confirm"
-msgstr "确认"
-
 #: partials/modals/addDappModal.html:406 partials/modals/addDappModal.html:438
 msgid "Confirm"
 msgstr "确认"
-
-#: partials/multi.html:31 partials/pendings.html:15
-#: partials/wallet-pendings.html:28
-msgid "CONFIRM"
-msgstr "确认"
-
-#: js/directives/voteActionDirective.js:14
-msgid "CONFIRM VOTE"
-msgstr "确认投票"
 
 #: partials/modals/confirmDeletionModal.html:13
 msgid "Confirmation"
 msgstr "确认"
 
-#: js/controllers/walletsController.js:117
 #: js/controllers/walletTransactionsController.js:78
-#: partials/modals/blockInfo.html:20 partials/modals/transactionInfo.html:13
-#: partials/modals/userInfo.html:64
+#: js/controllers/walletsController.js:117 partials/modals/blockInfo.html:20
+#: partials/modals/transactionInfo.html:13 partials/modals/userInfo.html:64
 msgid "Confirmations"
 msgstr "确认数"
-
-#: partials/modals/blockInfo.html:74 partials/modals/blockModal.html:34
-#: partials/modals/transactionInfo.html:50 partials/modals/userInfo.html:101
-msgid "CONFIRMATIONS"
-msgstr "确认数"
-
-#: partials/modals/multisignatureModal.html:113
-#: partials/modals/multisignatureModal.html:73
-msgid "Confirmations needed"
-msgstr "需要的确认数"
 
 #: js/controllers/walletPendingsController.js:165
 #: js/controllers/walletsController.js:153
 msgid "Confirmations Needed"
 msgstr ""
 
+#: partials/modals/multisignatureModal.html:113
+#: partials/modals/multisignatureModal.html:73
+msgid "Confirmations needed"
+msgstr "需要的确认数"
+
 #: js/controllers/modals/multiMembersModalController.js:5
 msgid "Confirmed by"
 msgstr "确认者"
-
-#: partials/multi.html:59
-msgid "CONFIRMED TRANSACTIONS"
-msgstr "确认交易"
 
 #: partials/modals/userInfo.html:35
 msgid "Contact Request"
@@ -342,6 +293,11 @@ msgstr "复制地址"
 msgid "Copy Name"
 msgstr "复制名称"
 
+#: partials/dapp-entry.html:22 partials/dapp-entry.html:37
+#: partials/dapp-entry.html:46
+msgid "DOWNLOAD"
+msgstr "下载"
+
 #: js/controllers/dappsController.js:8 partials/app-template.html:97
 msgid "Dapp Store"
 msgstr "Dapp商店"
@@ -358,10 +314,6 @@ msgstr "去中心化"
 msgid "Delegate Name"
 msgstr "受托人名称"
 
-#: partials/app-template.html:255
-msgid "delegate registration"
-msgstr "受托人注册"
-
 #: partials/app-template.html:111 partials/app-template.html:247
 msgid "Delegates"
 msgstr "受托人"
@@ -377,11 +329,6 @@ msgstr "描述"
 msgid "Disable Forging"
 msgstr "关闭锻造"
 
-#: partials/dapp-entry.html:22 partials/dapp-entry.html:37
-#: partials/dapp-entry.html:46
-msgid "DOWNLOAD"
-msgstr "下载"
-
 #: partials/modals/masterPassphraseModal.html:24
 msgid "Empty passphrase"
 msgstr "空主密码"
@@ -395,19 +342,23 @@ msgstr "开启锻造"
 msgid "Enable Multi-Signature on this account"
 msgstr "在此帐户开启多重签名"
 
+#: partials/modals/blockInfo.html:72 partials/modals/blockModal.html:32
+#: partials/modals/transactionInfo.html:47 partials/modals/userInfo.html:99
+msgid "FEE"
+msgstr "费用"
+
+#: partials/app-template.html:260
+msgid "FORGING"
+msgstr "锻造"
+
 #: js/controllers/blockchainController.js:46
 #: js/controllers/forgingController.js:124
 #: js/controllers/transactionsController.js:67
 #: js/controllers/walletPendingsController.js:164
-#: js/controllers/walletsController.js:152
 #: js/controllers/walletTransactionsController.js:77
+#: js/controllers/walletsController.js:152
 #: partials/modals/transactionInfo.html:19 partials/modals/userInfo.html:70
 msgid "Fee"
-msgstr "费用"
-
-#: partials/modals/blockInfo.html:72 partials/modals/blockModal.html:32
-#: partials/modals/transactionInfo.html:47 partials/modals/userInfo.html:99
-msgid "FEE"
 msgstr "费用"
 
 #: partials/forging.html:74
@@ -421,10 +372,6 @@ msgstr "锻造的区块"
 msgid "Forging"
 msgstr "锻造"
 
-#: partials/app-template.html:260
-msgid "FORGING"
-msgstr "锻造"
-
 #: partials/modals/secondPassphraseModal.html:15
 msgid ""
 "Further protect your account with an optional second passphrase! Please "
@@ -435,6 +382,14 @@ msgstr ""
 "使用支付密码(可选)来保障帐户安全! 请稍待片刻以使信息成功保存到区块链. 本次费"
 "用: <b>{{fee | liskFilter}} LISK</b>. 您的余额: <b>{{totalBalance | "
 "liskFilter}} LISK</b>."
+
+#: partials/modals/newUser.html:67
+msgid "GET STARTED"
+msgstr "开始吧！"
+
+#: partials/modals/newUser.html:66
+msgid "GO BACK"
+msgstr "返回"
 
 #: partials/settings.html:6
 msgid "General"
@@ -447,10 +402,6 @@ msgstr "新创建"
 #: js/controllers/blockchainController.js:42 partials/modals/blockInfo.html:46
 msgid "Generator"
 msgstr "创建者"
-
-#: partials/modals/newUser.html:67
-msgid "GET STARTED"
-msgstr "开始吧！"
 
 #: partials/modals/addDappModal.html:285 partials/modals/addDappModal.html:311
 msgid "Git repository link"
@@ -474,10 +425,6 @@ msgstr ""
 msgid "Go back"
 msgstr "返回"
 
-#: partials/modals/newUser.html:66
-msgid "GO BACK"
-msgstr "返回"
-
 #: partials/app-template.html:144
 msgid "Go to previous page"
 msgstr "返回上一页"
@@ -485,6 +432,10 @@ msgstr "返回上一页"
 #: js/controllers/walletsController.js:115
 msgid "Group Name"
 msgstr ""
+
+#: partials/app-template.html:291
+msgid "HOME"
+msgstr "首页"
 
 #: js/controllers/blockchainController.js:40
 #: js/controllers/forgingController.js:121
@@ -494,21 +445,9 @@ msgstr ""
 msgid "Height"
 msgstr "高度"
 
-#: partials/app-template.html:291
-msgid "HOME"
-msgstr "首页"
-
 #: partials/modals/addDappModal.html:375 partials/modals/addDappModal.html:400
 msgid "Hosted at"
 msgstr "存储于"
-
-#: partials/modals/addDappModal.html:106 partials/modals/addDappModal.html:169
-msgid "Icon Sia ASCII"
-msgstr "Icon的Sia ASCII码"
-
-#: partials/modals/addDappModal.html:162 partials/modals/addDappModal.html:99
-msgid "Icon URL"
-msgstr "Icon URL"
 
 #: partials/dapp-entry.html:21
 msgid "INSTALL"
@@ -518,9 +457,29 @@ msgstr "安装"
 msgid "INSTALLED"
 msgstr "已安装"
 
+#: partials/modals/addDappModal.html:106 partials/modals/addDappModal.html:169
+msgid "Icon Sia ASCII"
+msgstr "Icon的Sia ASCII码"
+
+#: partials/modals/addDappModal.html:162 partials/modals/addDappModal.html:99
+msgid "Icon URL"
+msgstr "Icon URL"
+
 #: partials/dapps.html:236
 msgid "Installed Dapps"
 msgstr "安装Dapps"
+
+#: partials/dapp-entry.html:36
+msgid "LAUNCH"
+msgstr "运行"
+
+#: partials/modals/sendTransaction.html:27
+msgid "LISK Amount"
+msgstr "LISK金额"
+
+#: partials/forging.html:11
+msgid "LISK Earned"
+msgstr "赚取的LISK"
 
 #: partials/multi.html:6
 msgid "Latest Multi-Signature Transactions"
@@ -534,22 +493,17 @@ msgstr "最新交易"
 msgid "Latest version"
 msgstr "最新版本"
 
-#: partials/dapp-entry.html:36
-msgid "LAUNCH"
-msgstr "运行"
-
 #: wallet.html:19
 msgid "Lisk - Decentralized Application Platform"
 msgstr "Lisk - 去中心化应用平台"
 
+#: js/controllers/contactsController.js:55
 #: js/controllers/delegatesController.js:169
+#: js/controllers/pendingsController.js:30
 #: js/controllers/votedDelegatesController.js:131
+#: js/controllers/walletPendingsController.js:159
 msgid "Lisk Address"
 msgstr ""
-
-#: partials/modals/sendTransaction.html:27
-msgid "LISK Amount"
-msgstr "LISK金额"
 
 #: partials/account.html:46
 msgid "Lisk Client"
@@ -559,9 +513,9 @@ msgstr "Lisk 客户端"
 msgid "Lisk Client Outdated"
 msgstr "Lisk 客户端已过期"
 
-#: partials/forging.html:11
-msgid "LISK Earned"
-msgstr "赚取的LISK"
+#: js/controllers/walletsController.js:8
+msgid "Loading Multi-Signature Groups"
+msgstr "正在加载多重签名组"
 
 #: js/controllers/blockchainController.js:7
 msgid "Loading blockchain"
@@ -594,10 +548,6 @@ msgstr "正在加载受托人"
 msgid "Loading forging status"
 msgstr "正在加载锻造状态"
 
-#: js/controllers/walletsController.js:8
-msgid "Loading Multi-Signature Groups"
-msgstr "正在加载多重签名组"
-
 #: js/controllers/transactionsController.js:7
 #: js/controllers/walletPendingsController.js:8
 msgid "Loading transactions"
@@ -611,6 +561,10 @@ msgstr "加载中..."
 #: partials/app-template.html:183
 msgid "Logout"
 msgstr "退出登陆"
+
+#: partials/modals/addDappModal.html:214 partials/modals/addDappModal.html:232
+msgid "MORE INFO"
+msgstr "更多信息"
 
 #: partials/modals/newUser.html:31
 msgid ""
@@ -637,10 +591,6 @@ msgstr "成员"
 msgid "More"
 msgstr "更多"
 
-#: partials/modals/addDappModal.html:214 partials/modals/addDappModal.html:232
-msgid "MORE INFO"
-msgstr "更多信息"
-
 #: js/controllers/walletsController.js:9 partials/app-template.html:79
 #: partials/settings.html:9
 msgid "Multi-Signature"
@@ -666,34 +616,13 @@ msgstr "我的投票"
 msgid "My votes ({{myVotesCount||'0'}})"
 msgstr "我的投票 ({{myVotesCount||'0'}})"
 
-#: js/controllers/delegatesController.js:168
-#: js/controllers/votedDelegatesController.js:130
-#: partials/modals/addDappModal.html:126 partials/modals/addDappModal.html:359
-#: partials/modals/addDappModal.html:388 partials/modals/addDappModal.html:62
-#: partials/modals/userInfo.html:18
-msgid "Name"
-msgstr "名称"
-
 #: partials/passphrase.html:25
 msgid "NEW ACCOUNT"
 msgstr "新帐户"
 
-#: partials/modals/secondPassphraseModal.html:22
-msgid "New second passphrase"
-msgstr "新支付密码"
-
-#: partials/modals/multisignatureModal.html:91
-msgid "next"
-msgstr "下一步"
-
 #: partials/modals/multisignatureModal.html:31
 msgid "NEXT"
 msgstr "下一步"
-
-#: partials/modals/addDappModal.html:183 partials/modals/addDappModal.html:260
-#: partials/modals/addDappModal.html:332
-msgid "Next Step"
-msgstr "接受 / 下一步"
 
 #: partials/modals/newUser.html:36
 msgid "NEXT STEP"
@@ -702,6 +631,23 @@ msgstr "接受 / 下一步"
 #: partials/modals/confirmDeletionModal.html:22
 msgid "NO"
 msgstr "取消"
+
+#: js/controllers/delegatesController.js:168
+#: js/controllers/votedDelegatesController.js:130
+#: partials/modals/addDappModal.html:126 partials/modals/addDappModal.html:359
+#: partials/modals/addDappModal.html:388 partials/modals/addDappModal.html:62
+#: partials/modals/userInfo.html:18
+msgid "Name"
+msgstr "名称"
+
+#: partials/modals/secondPassphraseModal.html:22
+msgid "New second passphrase"
+msgstr "新支付密码"
+
+#: partials/modals/addDappModal.html:183 partials/modals/addDappModal.html:260
+#: partials/modals/addDappModal.html:332
+msgid "Next Step"
+msgstr "接受 / 下一步"
 
 #: partials/blockchain.html:30
 msgid "No blockchain"
@@ -727,21 +673,21 @@ msgstr "本次搜索无搜索结果."
 msgid "Number of members"
 msgstr "成员数量"
 
-#: partials/app-template.html:263
-msgid "Off"
-msgstr "关闭"
-
 #: partials/modals/errorModal.html:27
 msgid "OK"
 msgstr "OK"
 
-#: partials/app-template.html:266
-msgid "On"
-msgstr "开启"
-
 #: partials/dapp-entry.html:45
 msgid "OPEN"
 msgstr "打开"
+
+#: partials/app-template.html:263
+msgid "Off"
+msgstr "关闭"
+
+#: partials/app-template.html:266
+msgid "On"
+msgstr "开启"
 
 #: js/controllers/forgingController.js:44
 #: js/controllers/forgingController.js:56
@@ -849,10 +795,6 @@ msgstr "请重新输入您的主密码"
 msgid "Please read carefully."
 msgstr "请仔细阅读."
 
-#: partials/modals/addDappModal.html:53
-msgid "Please set the dapp parameters below."
-msgstr "请在填写Dapp信息"
-
 #: js/controllers/modals/addDappModalController.js:171
 msgid "Please set the GitHub repository link below."
 msgstr "请填写GitHub源码库链接."
@@ -860,6 +802,10 @@ msgstr "请填写GitHub源码库链接."
 #: js/controllers/modals/addDappModalController.js:171
 msgid "Please set the Sia ASCII code below."
 msgstr "请填写Sia ASCII 编码."
+
+#: partials/modals/addDappModal.html:53
+msgid "Please set the dapp parameters below."
+msgstr "请在填写Dapp信息"
 
 #: partials/modals/userSettingsModal.html:15
 msgid "Please set your username."
@@ -886,28 +832,26 @@ msgstr "个人信息"
 msgid "Public key"
 msgstr "公钥"
 
+#: partials/dapp-entry.html:102
+msgid "READ MORE"
+msgstr "详细"
+
+#: js/directives/voteActionDirective.js:16
+msgid "REMOVE VOTE"
+msgstr ""
+
 #: js/controllers/delegatesController.js:167
 #: js/controllers/forgingController.js:44
 #: js/controllers/votedDelegatesController.js:129 partials/forging.html:26
 msgid "Rank"
 msgstr "排名"
 
-#: partials/dapp-entry.html:102
-msgid "READ MORE"
-msgstr "详细"
-
 #: js/controllers/transactionsController.js:64
 #: js/controllers/walletPendingsController.js:161
-#: js/controllers/walletsController.js:149
-#: js/controllers/walletTransactionsController.js:74 partials/account.html:86
+#: js/controllers/walletTransactionsController.js:74
+#: js/controllers/walletsController.js:149 partials/account.html:86
 msgid "Recipient"
 msgstr "接收者"
-
-#: partials/modals/registrationDelegateModal.html:107
-#: partials/modals/registrationDelegateModal.html:37
-#: partials/modals/registrationDelegateModal.html:69
-msgid "register"
-msgstr "注册"
 
 #: partials/modals/registrationDelegateModal.html:13
 msgid "Register as a Delegate"
@@ -925,14 +869,6 @@ msgstr "用户注册"
 msgid "Remember during this session"
 msgstr "保持Session状态"
 
-#: partials/votes.html:14
-msgid "remove vote"
-msgstr "去除投票"
-
-#: js/directives/voteActionDirective.js:16
-msgid "REMOVE VOTE"
-msgstr ""
-
 #: js/directives/voteTitleDirective.js:17
 msgid "Removing vote from delegates"
 msgstr ""
@@ -946,50 +882,49 @@ msgstr "再次输入支付密码"
 msgid "Reward"
 msgstr "奖励"
 
-#: partials/modals/userSettingsModal.html:33
-msgid "save Name"
-msgstr "保存名称"
-
 #: partials/modals/newUser.html:35
 msgid "SAVE PASSPHRASE"
 msgstr "保存主密码"
-
-#: js/controllers/modals/addDappModalController.js:6
-msgid "Saving new dapp"
-msgstr "保存新Dapp"
-
-#: partials/app-template.html:223
-msgid "Search for blocks"
-msgstr ""
-
-#: partials/app-template.html:323 partials/app-template.html:348
-msgid "Search for Dapps"
-msgstr "搜索Dapps"
-
-#: partials/app-template.html:197
-msgid ""
-"Search for transactions (Transaction ID, Sender address, Recipient address)"
-msgstr "搜索交易(交易ID，发送者地址，接收者地址)"
 
 #: partials/app-template.html:156 partials/contacts.html:16
 #: partials/contacts.html:44 partials/modals/masterPassphraseModal.html:35
 msgid "SEND"
 msgstr "发送"
 
-#: partials/modals/sendTransaction.html:113
-#: partials/modals/sendTransaction.html:43
-#: partials/modals/sendTransaction.html:78
-msgid "send lisk"
+#: partials/modals/addDappModal.html:470
+msgid "SEND LISK"
 msgstr "发送Lisk"
+
+#: partials/passphrase.html:26
+msgid "SIGN IN"
+msgstr "登陆"
+
+#: partials/dapp-entry.html:31 partials/dapp-entry.html:40
+#: partials/dapp-entry.html:49 partials/dapp-entry.html:56
+msgid "SOURCE CODE"
+msgstr "源码"
+
+#: js/controllers/modals/addDappModalController.js:6
+msgid "Saving new dapp"
+msgstr "保存新Dapp"
+
+#: partials/app-template.html:323 partials/app-template.html:348
+msgid "Search for Dapps"
+msgstr "搜索Dapps"
+
+#: partials/app-template.html:223
+msgid "Search for blocks"
+msgstr ""
+
+#: partials/app-template.html:197
+msgid ""
+"Search for transactions (Transaction ID, Sender address, Recipient address)"
+msgstr "搜索交易(交易ID，发送者地址，接收者地址)"
 
 #: partials/delegates.html:120 partials/delegates.html:51
 #: partials/modals/sendTransaction.html:13 partials/modals/userInfo.html:30
 #: partials/votes.html:49
 msgid "Send LISK"
-msgstr "发送Lisk"
-
-#: partials/modals/addDappModal.html:470
-msgid "SEND LISK"
 msgstr "发送Lisk"
 
 #: js/controllers/transactionsController.js:63 partials/account.html:83
@@ -1042,15 +977,6 @@ msgstr "Sia 为必须"
 #: partials/modals/passphraseCheck.html:35
 msgid "Sign"
 msgstr "提交"
-
-#: partials/passphrase.html:26
-msgid "SIGN IN"
-msgstr "登陆"
-
-#: partials/dapp-entry.html:31 partials/dapp-entry.html:40
-#: partials/dapp-entry.html:49 partials/dapp-entry.html:56
-msgid "SOURCE CODE"
-msgstr "源码"
 
 #: partials/delegates.html:92
 msgid "Standby Delegates"
@@ -1145,8 +1071,8 @@ msgstr ""
 #: js/controllers/forgingController.js:123
 #: js/controllers/transactionsController.js:65
 #: js/controllers/walletPendingsController.js:162
-#: js/controllers/walletsController.js:150
-#: js/controllers/walletTransactionsController.js:75 partials/account.html:89
+#: js/controllers/walletTransactionsController.js:75
+#: js/controllers/walletsController.js:150 partials/account.html:89
 #: partials/modals/blockInfo.html:38 partials/modals/transactionInfo.html:25
 #: partials/modals/userInfo.html:76
 msgid "Time"
@@ -1186,8 +1112,8 @@ msgstr "交易"
 
 #: js/controllers/transactionsController.js:62
 #: js/controllers/walletPendingsController.js:160
-#: js/controllers/walletsController.js:148
-#: js/controllers/walletTransactionsController.js:73 partials/account.html:80
+#: js/controllers/walletTransactionsController.js:73
+#: js/controllers/walletsController.js:148 partials/account.html:80
 #: partials/modals/blockModal.html:17 partials/modals/userInfo.html:59
 #: partials/modals/userInfo.html:83
 msgid "Transaction ID"
@@ -1211,16 +1137,16 @@ msgstr "卸载"
 msgid "UPDATE"
 msgstr "更新"
 
+#: partials/modals/blockInfo.html:35 partials/modals/transactionInfo.html:22
+#: partials/modals/userInfo.html:46 partials/modals/userInfo.html:73
+msgid "USD Equivalent"
+msgstr "美元折算"
+
 #: js/controllers/delegatesController.js:170
 #: js/controllers/forgingController.js:56
 #: js/controllers/votedDelegatesController.js:132 partials/forging.html:35
 msgid "Uptime"
 msgstr "在线率"
-
-#: partials/modals/blockInfo.html:35 partials/modals/transactionInfo.html:22
-#: partials/modals/userInfo.html:46 partials/modals/userInfo.html:73
-msgid "USD Equivalent"
-msgstr "美元折算"
 
 #: js/controllers/contactsController.js:54
 #: js/controllers/pendingsController.js:29
@@ -1232,16 +1158,8 @@ msgstr "用户名"
 msgid "View selection"
 msgstr "查看已选"
 
-#: partials/delegates.html:13
-msgid "vote"
-msgstr "投票"
-
 #: js/directives/voteTitleDirective.js:15
 msgid "Voting for delegates"
-msgstr ""
-
-#: js/controllers/walletPendingsController.js:159
-msgid "Wallet Address"
 msgstr ""
 
 #: partials/app-template.html:64
@@ -1324,26 +1242,6 @@ msgid ""
 "You shall receive notification when the contact has accepted your request."
 msgstr "当该联系人接受您的请求时，你会收到提醒."
 
-#: partials/modals/addDappModal.html:144 partials/modals/addDappModal.html:80
-msgid "Your dapp description cannot be longer than 160 characters."
-msgstr "您的DAPP描述不得超过80个汉字"
-
-#: partials/modals/addDappModal.html:69
-msgid "Your dapp name cannot be longer than 32 characters"
-msgstr "您的DAPP名称不得超过16个汉字"
-
-#: partials/modals/addDappModal.html:133
-msgid "Your dapp name cannot be longer than 32 characters."
-msgstr "您的DAPP名称不得超过16个汉字"
-
-#: partials/modals/addDappModal.html:130 partials/modals/addDappModal.html:66
-msgid "Your dapp name is required."
-msgstr "请填写您的DAPP名称"
-
-#: partials/modals/addDappModal.html:155 partials/modals/addDappModal.html:92
-msgid "Your dapp tags cannot be longer than 160 characters."
-msgstr "您的DAPP标签不得超过80个汉字"
-
 #: partials/multi.html:10
 msgid "Your Multi-Signature group(s) have not made any transactions yet."
 msgstr "您的多重签名组还未产生任何交易."
@@ -1368,6 +1266,101 @@ msgstr "您的主密码"
 #: partials/modals/userSettingsModal.html:90 partials/modals/vote.html:88
 msgid "Your Second Passphrase"
 msgstr "您的支付密码"
+
+#: partials/modals/addDappModal.html:144 partials/modals/addDappModal.html:80
+msgid "Your dapp description cannot be longer than 160 characters."
+msgstr "您的DAPP描述不得超过80个汉字"
+
+#: partials/modals/addDappModal.html:69
+msgid "Your dapp name cannot be longer than 32 characters"
+msgstr "您的DAPP名称不得超过16个汉字"
+
+#: partials/modals/addDappModal.html:133
+msgid "Your dapp name cannot be longer than 32 characters."
+msgstr "您的DAPP名称不得超过16个汉字"
+
+#: partials/modals/addDappModal.html:130 partials/modals/addDappModal.html:66
+msgid "Your dapp name is required."
+msgstr "请填写您的DAPP名称"
+
+#: partials/modals/addDappModal.html:155 partials/modals/addDappModal.html:92
+msgid "Your dapp tags cannot be longer than 160 characters."
+msgstr "您的DAPP标签不得超过80个汉字"
+
+#: partials/modals/addContactModal.html:107
+#: partials/modals/addContactModal.html:37
+#: partials/modals/addContactModal.html:72
+msgid "add contact"
+msgstr "添加联系人"
+
+#: partials/modals/secondPassphraseModal.html:39
+#: partials/modals/secondPassphraseModal.html:74
+msgid "add second passphrase"
+msgstr "设置支付密码"
+
+#: js/controllers/modals/addDappModalController.js:151
+msgid "change to SIA ASCII"
+msgstr "转化为SIA ASCII编码"
+
+#: js/controllers/modals/addDappModalController.js:151
+msgid "change to url link"
+msgstr "转化为URL链接"
+
+#: partials/modals/multisignatureModal.html:135
+#: partials/modals/multisignatureModal.html:174
+#: partials/modals/userSettingsModal.html:103
+#: partials/modals/userSettingsModal.html:67
+msgid "confirm"
+msgstr "确认"
+
+#: partials/app-template.html:255
+msgid "delegate registration"
+msgstr "受托人注册"
+
+#: partials/modals/multisignatureModal.html:91
+msgid "next"
+msgstr "下一步"
+
+#: partials/modals/registrationDelegateModal.html:107
+#: partials/modals/registrationDelegateModal.html:37
+#: partials/modals/registrationDelegateModal.html:69
+msgid "register"
+msgstr "注册"
+
+#: partials/votes.html:14
+msgid "remove vote"
+msgstr "去除投票"
+
+#: partials/modals/userSettingsModal.html:33
+msgid "save Name"
+msgstr "保存名称"
+
+#: partials/modals/sendTransaction.html:113
+#: partials/modals/sendTransaction.html:43
+#: partials/modals/sendTransaction.html:78
+msgid "send lisk"
+msgstr "发送Lisk"
+
+#: partials/delegates.html:13
+msgid "vote"
+msgstr "投票"
+
+#: partials/delegates.html:24
+msgid "{{countTop}} in Total"
+msgstr "合计{{countTop}} 个"
+
+#: partials/votes.html:25
+msgid "{{count}} in Total"
+msgstr "合计{{count}} 个"
+
+#: partials/delegates.html:4
+msgid ""
+"{{voteList.length}} out of {{countStandby + countTop}} Delegates selected"
+msgstr "已选受托人 ({{countStandby + countTop}} / {{voteList.length}})"
+
+#: partials/votes.html:4
+msgid "{{voteList.length}} out of {{count}} Delegates selected"
+msgstr "已选受托人 ({{voteList.length}} / {{count}})"
 
 #~ msgid "Confirm Vote"
 #~ msgstr "确认投票"
