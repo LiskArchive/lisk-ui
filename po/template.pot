@@ -74,11 +74,6 @@ msgstr ""
 msgid "Adding new contact"
 msgstr ""
 
-#: js/controllers/contactsController.js:55
-#: js/controllers/pendingsController.js:30
-msgid "Address"
-msgstr ""
-
 #: js/controllers/blockchainController.js:45
 #: js/controllers/transactionsController.js:66
 #: js/controllers/walletPendingsController.js:163
@@ -530,8 +525,11 @@ msgstr ""
 msgid "Lisk - Decentralized Application Platform"
 msgstr ""
 
+#: js/controllers/contactsController.js:55
 #: js/controllers/delegatesController.js:169
+#: js/controllers/pendingsController.js:30
 #: js/controllers/votedDelegatesController.js:131
+#: js/controllers/walletPendingsController.js:159
 msgid "Lisk Address"
 msgstr ""
 
@@ -1179,10 +1177,6 @@ msgstr ""
 
 #: js/directives/voteTitleDirective.js:15
 msgid "Voting for delegates"
-msgstr ""
-
-#: js/controllers/walletPendingsController.js:159
-msgid "Wallet Address"
 msgstr ""
 
 #: partials/app-template.html:64
