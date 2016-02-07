@@ -329,6 +329,10 @@ msgstr "描述"
 msgid "Disable Forging"
 msgstr "关闭锻造"
 
+#: js/controllers/appController.js:342
+msgid "Disabled"
+msgstr "残"
+
 #: partials/modals/masterPassphraseModal.html:24
 msgid "Empty passphrase"
 msgstr "空主密码"
@@ -338,9 +342,13 @@ msgstr "空主密码"
 msgid "Enable Forging"
 msgstr "开启锻造"
 
-#: partials/settings.html:14
+#: partials/settings.html:19
 msgid "Enable Multi-Signature on this account"
 msgstr "在此帐户开启多重签名"
+
+#: js/controllers/appController.js:342
+msgid "Enabled"
+msgstr "启用"
 
 #: partials/modals/blockInfo.html:72 partials/modals/blockModal.html:32
 #: partials/modals/transactionInfo.html:47 partials/modals/userInfo.html:99
@@ -481,6 +489,10 @@ msgstr "LISK金额"
 msgid "LISK Earned"
 msgstr "赚取的LISK"
 
+#: partials/settings.html:10
+msgid "Language"
+msgstr "语言"
+
 #: partials/multi.html:6
 msgid "Latest Multi-Signature Transactions"
 msgstr "最新的多重签名交易"
@@ -592,7 +604,7 @@ msgid "More"
 msgstr "更多"
 
 #: js/controllers/walletsController.js:9 partials/app-template.html:79
-#: partials/settings.html:9
+#: partials/settings.html:14
 msgid "Multi-Signature"
 msgstr "多重签名"
 
@@ -616,7 +628,7 @@ msgstr "我的投票"
 msgid "My votes ({{myVotesCount||'0'}})"
 msgstr "我的投票 ({{myVotesCount||'0'}})"
 
-#: partials/passphrase.html:25
+#: partials/passphrase.html:26
 msgid "NEW ACCOUNT"
 msgstr "新帐户"
 
@@ -865,7 +877,7 @@ msgstr "注册于"
 msgid "Registering user"
 msgstr "用户注册"
 
-#: partials/passphrase.html:16
+#: partials/passphrase.html:18
 msgid "Remember during this session"
 msgstr "保持Session状态"
 
@@ -895,7 +907,7 @@ msgstr "发送"
 msgid "SEND LISK"
 msgstr "发送Lisk"
 
-#: partials/passphrase.html:26
+#: partials/passphrase.html:27
 msgid "SIGN IN"
 msgstr "登陆"
 
@@ -1253,7 +1265,7 @@ msgstr "您的多重签名组还未产生任何交易."
 #: partials/modals/secondPassphraseModal.html:61
 #: partials/modals/sendTransaction.html:65
 #: partials/modals/userSettingsModal.html:55 partials/modals/vote.html:53
-#: partials/passphrase.html:9
+#: partials/passphrase.html:10
 msgid "Your Passphrase"
 msgstr "您的主密码"
 
