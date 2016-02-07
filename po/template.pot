@@ -373,7 +373,7 @@ msgstr ""
 msgid "Enable Forging"
 msgstr ""
 
-#: partials/settings.html:14
+#: partials/settings.html:19
 msgid "Enable Multi-Signature on this account"
 msgstr ""
 
@@ -517,6 +517,10 @@ msgstr ""
 msgid "LISK Earned"
 msgstr ""
 
+#: partials/settings.html:10
+msgid "Language"
+msgstr ""
+
 #: partials/multi.html:6
 msgid "Latest Multi-Signature Transactions"
 msgstr ""
@@ -629,7 +633,7 @@ msgstr ""
 
 #: js/controllers/walletsController.js:9
 #: partials/app-template.html:79
-#: partials/settings.html:9
+#: partials/settings.html:14
 msgid "Multi-Signature"
 msgstr ""
 
@@ -654,7 +658,7 @@ msgstr ""
 msgid "My votes ({{myVotesCount||'0'}})"
 msgstr ""
 
-#: partials/passphrase.html:29
+#: partials/passphrase.html:26
 msgid "NEW ACCOUNT"
 msgstr ""
 
@@ -897,7 +901,7 @@ msgstr ""
 msgid "Registering user"
 msgstr ""
 
-#: partials/passphrase.html:25
+#: partials/passphrase.html:18
 msgid "Remember during this session"
 msgstr ""
 
@@ -930,7 +934,7 @@ msgstr ""
 msgid "SEND LISK"
 msgstr ""
 
-#: partials/passphrase.html:30
+#: partials/passphrase.html:27
 msgid "SIGN IN"
 msgstr ""
 
@@ -1257,7 +1261,7 @@ msgstr ""
 #: partials/modals/sendTransaction.html:65
 #: partials/modals/userSettingsModal.html:55
 #: partials/modals/vote.html:53
-#: partials/passphrase.html:18
+#: partials/passphrase.html:10
 msgid "Your Passphrase"
 msgstr ""
 
