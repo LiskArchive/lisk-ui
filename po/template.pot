@@ -360,6 +360,10 @@ msgstr ""
 msgid "Disable Forging"
 msgstr ""
 
+#: js/controllers/appController.js:342
+msgid "Disabled"
+msgstr ""
+
 #: partials/modals/masterPassphraseModal.html:24
 msgid "Empty passphrase"
 msgstr ""
@@ -371,6 +375,10 @@ msgstr ""
 
 #: partials/settings.html:14
 msgid "Enable Multi-Signature on this account"
+msgstr ""
+
+#: js/controllers/appController.js:342
+msgid "Enabled"
 msgstr ""
 
 #: partials/modals/blockInfo.html:72
