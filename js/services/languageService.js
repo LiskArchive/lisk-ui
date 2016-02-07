@@ -34,7 +34,7 @@ angular.module('liskApp').service('languageService', function ($rootScope, $wind
         });
     }
 
-    return function (lang) {
+    return function () {
         $rootScope.lang = detectLang() || $rootScope.languages[1];
         gettextCatalog.setCurrentLanguage($rootScope.lang.id);
     }
