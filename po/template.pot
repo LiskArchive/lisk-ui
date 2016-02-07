@@ -373,7 +373,7 @@ msgstr ""
 msgid "Enable Forging"
 msgstr ""
 
-#: partials/settings.html:19
+#: partials/settings.html:22
 msgid "Enable Multi-Signature on this account"
 msgstr ""
 
@@ -517,7 +517,7 @@ msgstr ""
 msgid "LISK Earned"
 msgstr ""
 
-#: partials/settings.html:10
+#: partials/settings.html:9
 msgid "Language"
 msgstr ""
 
@@ -633,7 +633,7 @@ msgstr ""
 
 #: js/controllers/walletsController.js:9
 #: partials/app-template.html:79
-#: partials/settings.html:14
+#: partials/settings.html:11
 msgid "Multi-Signature"
 msgstr ""
 
