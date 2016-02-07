@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.7\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: partials/dapp-entry.html:79
@@ -346,7 +346,7 @@ msgstr "Passphrase leer"
 msgid "Enable Forging"
 msgstr "Forging aktivieren"
 
-#: partials/settings.html:14
+#: partials/settings.html:19
 msgid "Enable Multi-Signature on this account"
 msgstr "Multi-Signature auf diesem Account aktivieren"
 
@@ -496,6 +496,10 @@ msgstr "LISK Summe"
 msgid "LISK Earned"
 msgstr "LISK verdient"
 
+#: partials/settings.html:10
+msgid "Language"
+msgstr "Sprache"
+
 #: partials/multi.html:6
 msgid "Latest Multi-Signature Transactions"
 msgstr "Neueste Multi-Signature Transaktionen"
@@ -611,7 +615,7 @@ msgid "More"
 msgstr "Mehr"
 
 #: js/controllers/walletsController.js:9 partials/app-template.html:79
-#: partials/settings.html:9
+#: partials/settings.html:14
 msgid "Multi-Signature"
 msgstr "Multi-Signature"
 
@@ -635,7 +639,7 @@ msgstr "Meine Votes"
 msgid "My votes ({{myVotesCount||'0'}})"
 msgstr "Meine Votes ({{myVotesCount||'0'}})"
 
-#: partials/passphrase.html:29
+#: partials/passphrase.html:26
 msgid "NEW ACCOUNT"
 msgstr "NEUER ACCOUNT"
 
@@ -886,7 +890,7 @@ msgstr "Registriert am"
 msgid "Registering user"
 msgstr "Registriere User"
 
-#: partials/passphrase.html:25
+#: partials/passphrase.html:18
 msgid "Remember during this session"
 msgstr "Passphrase für diese Sitzung merken"
 
@@ -916,7 +920,7 @@ msgstr "SENDEN"
 msgid "SEND LISK"
 msgstr "VERSENDE LISK"
 
-#: partials/passphrase.html:30
+#: partials/passphrase.html:27
 msgid "SIGN IN"
 msgstr "EINLOGGEN"
 
@@ -1266,7 +1270,7 @@ msgstr ""
 #: partials/modals/secondPassphraseModal.html:61
 #: partials/modals/sendTransaction.html:65
 #: partials/modals/userSettingsModal.html:55 partials/modals/vote.html:53
-#: partials/passphrase.html:18
+#: partials/passphrase.html:10
 msgid "Your Passphrase"
 msgstr "Deine Passphrase"
 
