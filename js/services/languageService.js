@@ -3,16 +3,19 @@ require('angular');
 angular.module('liskApp').service('languageService', function ($rootScope, $window, gettextCatalog) {
 
     $rootScope.languages = [
-        { id: 'de', name: 'Deutsch' },
         { id: 'en', name: 'English' },
+        { id: 'de', name: 'Deutsch' },
         { id: 'zh', name: '中文' }
     ];
 
     $rootScope.changeLang = function (changed) {
+        if (!changed) { return; }
+
         var lang = findLang(changed);
 
         if (lang) {
             $rootScope.lang = lang;
+            $rootScope.selectedLang = $rootScope.lang.id;
             gettextCatalog.setCurrentLanguage(lang.id);
             console.log('Language changed to:', lang.name);
         }
@@ -25,17 +28,18 @@ angular.module('liskApp').service('languageService', function ($rootScope, $wind
         if (lang.indexOf('-') !== -1) { lang = lang.split('-')[0]; }
         if (lang.indexOf('_') !== -1) { lang = lang.split('_')[0]; }
 
-        return findLang(lang);
+        return findLang(lang) || $rootScope.languages[0];
     };
 
     var findLang = function (id) {
         return _.find($rootScope.languages, function (lang) {
-            return lang.id == id
+            return (lang.id == id) || (lang == id);
         });
     }
 
     return function () {
-        $rootScope.lang = detectLang() || $rootScope.languages[1];
+        $rootScope.lang = detectLang();
+        $rootScope.selectedLang = $rootScope.lang.id;
         gettextCatalog.setCurrentLanguage($rootScope.lang.id);
     }
 
