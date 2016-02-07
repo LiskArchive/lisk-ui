@@ -39,6 +39,4 @@ angular.module('liskApp').controller('passphraseController', ['$scope', '$rootSc
                     }
                 });
         }
-
-        gettextCatalog.setCurrentLanguage('en');
     }]);
