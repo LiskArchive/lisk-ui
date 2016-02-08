@@ -101,7 +101,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
             } else {
                 if (correctAddress || allowSymbols.test($scope.to.toLowerCase())) {
                     if ($scope.isCorrectValue($scope.amount)) {
-                        if (correctAddress){
+                        if (correctAddress) {
                             $scope.presendError = false;
                             $scope.errorMessage = ''
                             $scope.passmode = !$scope.passmode;
@@ -265,7 +265,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
         return parseInt(result);
     }
 
-    $scope.isCorrectValue = function(currency){
+    $scope.isCorrectValue = function (currency) {
         currency = String(currency);
 
         var parts = currency.split(".");

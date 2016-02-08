@@ -180,7 +180,7 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
         }
     }
 
-    $scope.launchRequest = function(masterPass){
+    $scope.launchRequest = function (masterPass) {
         data = {
             "params": [userService.rememberPassphrase],
             "id": $stateParams.dappId

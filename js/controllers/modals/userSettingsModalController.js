@@ -14,7 +14,7 @@ angular.module('liskApp').controller('userSettingsModalController', ["$scope", "
         if (fromSecondPass) {
             $scope.checkSecondPass = false;
             $scope.passmode = $scope.rememberedPassphrase ? false : true;
-            if ($scope.passmode){
+            if ($scope.passmode) {
                 $scope.focus = 'passPhrase';
             }
             else {

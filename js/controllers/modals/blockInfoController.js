@@ -25,7 +25,7 @@ angular.module('liskApp').controller('blockInfoController', ["$scope", "$http", 
     }
 
 
-    $scope.showGenerator = function(generatorId){
+    $scope.showGenerator = function (generatorId) {
         blockInfo.deactivate();
         $scope.userInfo = userInfo.activate({userId: generatorId});
     }

@@ -12,7 +12,7 @@ angular.module('liskApp').controller('dappsController', ['$scope', 'viewFactory'
     $scope.searchDapp.inSearch = false;
     $scope.showPlaceholder = false;
 
-    $scope.shuffle = function(array) {
+    $scope.shuffle = function (array) {
         var currentIndex = array.length, temporaryValue, randomIndex;
 
         while (0 !== currentIndex) {

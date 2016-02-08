@@ -16,7 +16,7 @@ angular.module('liskApp').controller('userInfoController', ["$scope", "$http", "
     }
 
     $scope.getAccountDetail = function (userId) {
-        if ($scope.userIdOld == userId){
+        if ($scope.userIdOld == userId) {
             return;
         }
         $scope.userIdOld = userId;

@@ -56,13 +56,13 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
             var buffer =  []
             try {
                 buffer = Buffer(contact, "hex")}
-            catch(err){
+            catch(err) {
 
             }
             if (buffer.length == 32) {
                 var lisk = require('lisk-js');
                 var address = lisk.crypto.getAddress($scope.contact);
-                if ($scope.members[$scope.contact] || address == userService.address){
+                if ($scope.members[$scope.contact] || address == userService.address) {
                     return;
                 }
                 $scope.members[$scope.contact] = {address: address, publicKey: $scope.contact};

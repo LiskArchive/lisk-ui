@@ -88,7 +88,7 @@ angular.module('liskApp').controller('accountController', ['$state','$scope', '$
                 $scope.balance = userService.balance;
                 $scope.unconfirmedBalance = userService.unconfirmedBalance;
                 $scope.balanceToShow = $filter('decimalFilter')(userService.unconfirmedBalance);
-                if ($scope.balanceToShow[1]){
+                if ($scope.balanceToShow[1]) {
                     $scope.balanceToShow[1]='.'+ $scope.balanceToShow[1];
                 }
                 $scope.secondPassphrase = userService.secondPassphrase;

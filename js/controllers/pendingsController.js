@@ -20,7 +20,7 @@ angular.module('liskApp').controller('pendingsController', ['$scope', '$rootScop
         counts: [],
         total: 0,
         getData: function ($defer, params) {
-            contactsService.getSortedFollowers($defer, params, $scope.filter, function(err){
+            contactsService.getSortedFollowers($defer, params, $scope.filter, function (err) {
                 $scope.view.inLoading = false;
             });
         }

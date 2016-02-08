@@ -18,7 +18,7 @@ angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "
         return size;
     };
 
-    $scope.getFee = function(){
+    $scope.getFee = function () {
         $http.get("/api/accounts/delegates/fee").then(function (resp) {
             if (resp.data.success) {
                 $scope.fee = resp.data.fee;
@@ -34,7 +34,7 @@ angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "
         if (fromSecondPass) {
             $scope.checkSecondPass = false;
             $scope.passmode = $scope.rememberedPassphrase ? false : true;
-            if ($scope.passmode){
+            if ($scope.passmode) {
                 $scope.focus = 'secretPhrase';
             }
             $scope.secondPhrase = '';
@@ -66,7 +66,7 @@ angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "
 
     $scope.removeVote = function (publicKey) {
         delete $scope.voteList[publicKey];
-        if (!Object.size($scope.voteList)){
+        if (!Object.size($scope.voteList)) {
             $scope.close();
         }
     }

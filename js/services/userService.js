@@ -15,7 +15,7 @@ angular.module('liskApp').service('userService', function () {
         this._unconfirmedBalance = unconfirmedBalance;
     }
 
-    this.setSessionPassphrase = function(pass){
+    this.setSessionPassphrase = function (pass) {
         this.rememberPassphrase = true;
         this.rememberedPassphrase = pass;
     }
@@ -33,7 +33,7 @@ angular.module('liskApp').service('userService', function () {
         this.delegate = delegate;
     }
 
-    this.setDelegateTime = function(transactions){
+    this.setDelegateTime = function (transactions) {
         this.delegate.time = transactions[0].timestamp;
     }
 
