@@ -4,7 +4,7 @@ angular.module('liskApp').controller('walletTransactionsController',
     ['$scope', '$rootScope', '$http', "userService", "$interval", "sendTransactionModal", "secondPassphraseModal", "delegateService", 'viewFactory', 'transactionsService', 'ngTableParams', 'transactionInfo', '$timeout', 'userInfo', '$filter', 'multiMembersModal', '$stateParams', 'multiService',
         function ($rootScope, $scope, $http, userService, $interval, sendTransactionModal, secondPassphraseModal, delegateService, viewFactory, transactionsService, ngTableParams, transactionInfo, $timeout, userInfo, $filter, multiMembersModal, $stateParams, multiService) {
             $scope.view = viewFactory;
-            $scope.view.page = {title: 'Transactions for 17649443584386761059C', previous: 'main.multi'};
+            $scope.view.page = {title: 'Transactions for 17649443584386761059L', previous: 'main.multi'};
             $scope.view.bar = {};
             $scope.showAllColumns = true;
             $scope.showFullTime = false;
