@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('liskApp').controller('templateController', ['$scope', '$rootScope', '$http', 'userService', "$interval", function($rootScope, $scope, $http, userService, $interval) {
+angular.module('liskApp').controller('templateController', ['$scope', '$rootScope', '$http', 'userService', "$interval", 'gettextCatalog', function($rootScope, $scope, $http, userService, $interval, gettextCatalog) {
     $scope.getSync = function () {
         $http.get("/api/loader/status/sync").then(function (resp) {
             if (resp.data.success) {

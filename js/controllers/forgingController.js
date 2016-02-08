@@ -1,7 +1,7 @@
 require('angular');
 
-angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope', '$http', "userService", "$interval", "forgingModal", "delegateService", "viewFactory", "blockInfo", "ngTableParams", "blockService",
-    function ($rootScope, $scope, $http, userService, $interval, forgingModal, delegateService, viewFactory, blockInfo, ngTableParams, blockService) {
+angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope', '$http', "userService", "$interval", "forgingModal", "delegateService", "viewFactory", "blockInfo", "ngTableParams", "blockService", 'gettextCatalog',
+    function ($rootScope, $scope, $http, userService, $interval, forgingModal, delegateService, viewFactory, blockInfo, ngTableParams, blockService, gettextCatalog) {
 
         $scope.allVotes = 1 * Math.pow(10,16);
         $scope.showAllColumns = false;
@@ -25,7 +25,7 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
                 }
             },
             totalForged: {
-                labels: ['Total Forged'],
+                labels: [gettextCatalog.getString('Total Forged')],
                 values: [1],
                 colours: ['#fff'],
                 options: {
@@ -41,7 +41,7 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
                 }
             },
             rank: {
-                labels: ['Others', 'Rank'],
+                labels: [gettextCatalog.getString('Others'), gettextCatalog.getString('Rank')],
                 values: [0, 100],
                 colours: ['#90a4ae', '#f5f5f5'],
                 options: {
@@ -53,7 +53,7 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
                 }
             },
             uptime: {
-                labels: ['Others', 'Uptime'],
+                labels: [gettextCatalog.getString('Others'), gettextCatalog.getString('Uptime')],
                 values: [0, 100],
                 colours: ['#90a4ae', '#f5f5f5'],
                 options: {
@@ -64,7 +64,7 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
                 }
             },
             approval: {
-                labels: ['Others', 'Approval'],
+                labels: [gettextCatalog.getString('Others'), gettextCatalog.getString('Approval')],
                 values: [0, $scope.allVotes],
                 colours: ['#90a4ae', '#f5f5f5'],
                 options: {
@@ -86,8 +86,8 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
         $scope.uptime = 0;
         $scope.view = viewFactory;
         $scope.view.inLoading = true;
-        $scope.view.loadingText = "Loading forging status";
-        $scope.view.page = {title: 'Forging', previous: null};
+        $scope.view.loadingText = gettextCatalog.getString('Loading forging status');
+        $scope.view.page = {title: gettextCatalog.getString('Forging'), previous: null};
         $scope.view.bar = {forgingMenu: true};
 
         $scope.address = userService.address;
@@ -116,6 +116,14 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
                 }, userService.publicKey);
             }
         });
+
+        $scope.tableBlocks.cols = {
+            height : gettextCatalog.getString('Height'),
+            blockId : gettextCatalog.getString('Block ID'),
+            timestamp : gettextCatalog.getString('Time'),
+            totalFee : gettextCatalog.getString('Fee'),
+            reward : gettextCatalog.getString('Reward')
+        };
 
         $scope.tableBlocks.settings().$scope = $scope;
 

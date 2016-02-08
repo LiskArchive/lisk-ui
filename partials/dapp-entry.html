@@ -18,57 +18,53 @@
                     <div ng-if="showSiaInstall">
                         <a class="btn btn-sky-blue waves-effect waves-light" ng-click="installDapp()" ng-switch on="dapp.type">
                             <i class="mdi-file-file-download left"></i>
-                            <span ng-switch-default>INSTALL</span>
-                            <span ng-switch-when="1">DOWNLOAD</span>
+                            <span ng-switch-default><translate>INSTALL</translate></span>
+                            <span ng-switch-when="1"><translate>DOWNLOAD</translate></span>
                         </a>
                     </div>
                     <div ng-if="!showSiaInstall">
                         <span class="btn btn-white">
-                            <span>Sia required</span>
+                            <span><translate>Sia required</translate></span>
                         </span>
                     </div>
                     <!-- <a class="btn btn-white waves-effect left-margin-14">SHARE</a> -->
-                    <a ng-show="dapp.git" href="{{dapp.githublink}}" target="_blank" class="btn btn-white waves-effect pull-right source">SOURCE CODE
-                    </a>
+                    <a ng-show="dapp.git" href="{{dapp.githublink}}" target="_blank" class="btn btn-white waves-effect pull-right source"><translate>SOURCE CODE</translate></a>
                 </div>
                 <div ng-show="!loading && installed && !isInstalling() && !isRemoving() && !isLaunched()" class="details-actions">
                     <a class="btn btn-sky-blue waves-effect waves-light" ng-click="runDApp()" ng-switch on="dapp.type">
                         <i class="mdi-file-file-download left"></i>
-                        <span ng-switch-default>LAUNCH</span>
-                        <span ng-switch-when="1">DOWNLOAD</span>
+                        <span ng-switch-default><translate>LAUNCH</translate></span>
+                        <span ng-switch-when="1"><translate>DOWNLOAD</translate></span>
                     </a>
                     <!-- <a class="btn btn-white waves-effect left-margin-14">SHARE</a> -->
-                    <a ng-show="dapp.git" href="{{dapp.githublink}}" target="_blank" class="btn btn-white waves-effect pull-right source">SOURCE CODE
-                    </a>
+                    <a ng-show="dapp.git" href="{{dapp.githublink}}" target="_blank" class="btn btn-white waves-effect pull-right source"><translate>SOURCE CODE</translate></a>
                 </div>
                 <div ng-show="!isInstalling() && !isRemoving() && isLaunched()" class="details-actions">
                     <a class="btn btn-sky-blue waves-effect waves-light" ng-click="openDapp(dapp.type)" ng-switch on="dapp.type">
                         <i class="mdi-file-file-download left"></i>
-                        <span ng-switch-default>OPEN</span>
-                        <span ng-switch-when="1">DOWNLOAD</span>
+                        <span ng-switch-default><translate>OPEN</translate></span>
+                        <span ng-switch-when="1"><translate>DOWNLOAD</translate></span>
                     </a>
                     <!-- <a class="btn btn-white waves-effect left-margin-14">SHARE</a> -->
-                    <a ng-show="dapp.git" href="{{dapp.githublink}}" target="_blank" class="btn btn-white waves-effect pull-right source">SOURCE CODE
-                    </a>
+                    <a ng-show="dapp.git" href="{{dapp.githublink}}" target="_blank" class="btn btn-white waves-effect pull-right source"><translate>SOURCE CODE</translate></a>
                 </div>
                 <div ng-show="(isInstalling() || isRemoving()) && !isLaunched()" class="details-actions">
                     <div class="progress" style="display: inline-block; width: 120px;">
                         <div class="indeterminate"></div>
                     </div>
                     <!-- <a class="btn btn-white waves-effect left-margin-14">SHARE</a> -->
-                    <a ng-show="dapp.git" href="{{dapp.githublink}}" target="_blank" class="btn btn-white waves-effect pull-right source">SOURCE CODE
-                    </a>
+                    <a ng-show="dapp.git" href="{{dapp.githublink}}" target="_blank" class="btn btn-white waves-effect pull-right source"><translate>SOURCE CODE</translate></a>
                 </div>
                 <div ng-show="installed" class="details-actions">
                     <div>
                         <a class="btn btn-white waves-effect waves-light" ng-click="uninstallDapp()">
                             <i class="mdi-action-delete left"></i>
-                            <span>UNINSTALL</span>
+                            <span><translate>UNINSTALL</translate></span>
                         </a>
                     </div>
                 </div>
                 <div class="subtitle-container">
-                    <div class="document-subtitle large-subtitle">Category:</div>
+                    <div class="document-subtitle large-subtitle"><translate>Category:</translate></div>
                     <a class="document-subtitle primary" ui-sref='main.dappsCategory({categoryId:getCategoryName(dapp.category)})'>
                         <span>{{getCategoryName(dapp.category)}}</span>
                     </a>
@@ -77,10 +73,10 @@
                 <div class="reason-set">
                     <span class="stars-container">
                         <div class="reason-set-star-rating">
-                            <div class="small-star star-rating-non-editable-container" aria-label="Средняя оценка: 4,3 из 5">
+                            <div class="small-star star-rating-non-editable-container" aria-label="Average Rating: 4.3 out of 5">
                                 <div class="current-rating" style="width: 68.29926300048828%;"></div>
                             </div>
-                            <div class="stars-count">(1449)</div>
+                            <div class="stars-count"><translate>(1449)</translate></div>
                         </div>
                     </span>
                 </div>
@@ -92,20 +88,18 @@
     <div class="col-xs-12">
         <div class="dapp-info clearfix">
             <div class="description">
-                <h1 class="heading">Description</h1>
+                <h1 class="heading">{{'Description'|translate}}</h1>
                 <div style="color: #f34235; border-color: #f34235; padding: 10px; border: 1px solid; border-radius: 2px;">
-                    <b>Attention!</b>
+                    <b><translate>Attention!</translate></b>
                     <span style="opacity: 0.7;">
-                        Please be aware, Lisk decentralized applications do not currently run within a sandboxed virtual machine. This means you are potentially vulnerable to malicious application behaviour. Before installing any new application, we recommend checking the source code or asking the Lisk community for further verification.
-                        <br>
-                        We will enable sandboxing of decentralized applications with the next Lisk update.
+                        <translate>Please be aware, Lisk decentralized applications do not currently run within a sandboxed virtual machine. This means you are potentially vulnerable to malicious application behaviour. Before installing any new application, we recommend checking the source code or asking the Lisk community for further verification.<br>We will enable sandboxing of decentralized applications with the next Lisk update.</translate>
                     </span>
                 </div>
                 <div class="text-body" ng-class="{'expanded': showMore}">
                     <p>{{dapp.description | cut:true:100:' ...':!showMore}}</p>
                 </div>
                 <div class="show-more clearfix" ng-if="!showMore">
-                    <a ng-show="dapp.description.length > 100" class="btn btn-white" ng-click="changeShowMore()">READ MORE</a>
+                    <a ng-show="dapp.description.length > 100" class="btn btn-white" ng-click="changeShowMore()"><translate>READ MORE</translate></a>
                 </div>
                 <div class="text-body expanded">
                     <span class="badge tag-badge" ng-repeat="tag in getTags() track by $index">{{tag}}</span>
@@ -114,22 +108,23 @@
         </div>
     </div>
 </div>
+<!--
 <div class="row clearfix">
     <div class="in_develop col-md-4 col-sm-6 col-xs-12">
-        <div class="in_develop_text">in development</div>
+        <div class="in_develop_text"><translate>in development</translate></div>
         <div class="dapp-info clearfix in_develop_feature">
             <div class="in_develop_blure_color"></div>
             <div class="description">
-                <h1 class="heading">Rating</h1>
+                <h1 class="heading"><translate>Rating</translate></h1>
                 <div class="score-container">
-                    <div class="score">4,5</div>
+                    <div class="score"><translate>4.5</translate></div>
                     <div class="reason-set">
                         <span class="stars-container">
                             <div class="reason-set-star-rating">
-                                <div class="small-star star-rating-non-editable-container" aria-label="Средняя оценка: 4,5 из 5">
+                                <div class="small-star star-rating-non-editable-container" aria-label="Average Rating: 4.5 out of 5">
                                     <div class="current-rating" style="width: 90.1%;"></div>
                                 </div>
-                                <div class="stars-count">(1449)</div>
+                                <div class="stars-count"><translate>(1449)</translate></div>
                             </div>
                         </span>
                     </div>
@@ -138,11 +133,11 @@
         </div>
     </div>
     <div class="in_develop col-md-8 col-sm-6 col-xs-12">
-        <div class="in_develop_text">in development</div>
+        <div class="in_develop_text"><translate>in development</translate></div>
         <div class="dapp-info clearfix in_develop_feature">
             <div class="in_develop_blure_color"></div>
             <div class="description">
-                <h1 class="heading">User Reviews</h1>
+                <h1 class="heading"><translate>User Reviews</translate></h1>
                 <div class="comments-wrapper">
                     <div class="comment-wrapper">
                         <div class="comment">
@@ -199,7 +194,7 @@
     </div>
 </div>
 <div class="row clearfix margin"></div>
-<!-- <div class="row clearfix" ng-if="false">
+<div class="row clearfix" ng-if="false">
     <div class="col-xs-12">
         <div class="panel  panel-default no-margin-bottom">
             <div class="panel-heading cursor">
@@ -210,8 +205,8 @@
             </div>
         </div>
     </div>
-</div> -->
-<!-- <div class="row clearfix" ng-if="false">
+</div>
+<div class="row clearfix" ng-if="false">
     <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
         <div class="dapp-content small-dapp clearfix">
             <div class="cover">

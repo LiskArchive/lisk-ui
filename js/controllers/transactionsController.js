@@ -1,11 +1,11 @@
 require('angular');
 
-angular.module('liskApp').controller('transactionsController', ['$scope', '$rootScope', '$http', "userService", "$interval", "sendTransactionModal", "secondPassphraseModal", "delegateService", 'viewFactory', 'transactionsService', 'ngTableParams', 'transactionInfo', '$timeout', 'userInfo',
-    function ($rootScope, $scope, $http, userService, $interval, sendTransactionModal, secondPassphraseModal, delegateService, viewFactory, transactionsService, ngTableParams, transactionInfo, $timeout, userInfo) {
+angular.module('liskApp').controller('transactionsController', ['$scope', '$rootScope', '$http', "userService", "$interval", "sendTransactionModal", "secondPassphraseModal", "delegateService", 'viewFactory', 'transactionsService', 'ngTableParams', 'transactionInfo', '$timeout', 'userInfo', 'gettextCatalog',
+    function ($rootScope, $scope, $http, userService, $interval, sendTransactionModal, secondPassphraseModal, delegateService, viewFactory, transactionsService, ngTableParams, transactionInfo, $timeout, userInfo, gettextCatalog) {
         $scope.view = viewFactory;
         $scope.view.inLoading = true;
-        $scope.view.loadingText = "Loading transactions";
-        $scope.view.page = {title: 'Transactions', previous: 'main.dashboard'};
+        $scope.view.loadingText = gettextCatalog.getString('Loading transactions');
+        $scope.view.page = {title: gettextCatalog.getString('Transactions'), previous: 'main.dashboard'};
         $scope.view.bar = {showTransactionsSearchBar: true};
         $scope.showAllColumns = false;
         $scope.showFullTime = false;
@@ -56,6 +56,16 @@ angular.module('liskApp').controller('transactionsController', ['$scope', '$root
                     });
             }
         });
+
+        $scope.tableTransactions.cols = {
+            b_height : gettextCatalog.getString('Height'),
+            transactionId : gettextCatalog.getString('Transaction ID'),
+            t_senderId : gettextCatalog.getString('Sender'),
+            t_recipientId : gettextCatalog.getString('Recipient'),
+            t_timestamp : gettextCatalog.getString('Time'),
+            t_amount : gettextCatalog.getString('Amount'),
+            fee : gettextCatalog.getString('Fee')
+        };
 
         $scope.tableTransactions.settings().$scope = $scope;
 

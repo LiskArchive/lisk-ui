@@ -1,10 +1,10 @@
 require('angular');
 
 angular.module('liskApp').controller('multisignatureModalController',
-    ["$scope", "$http", "multisignatureModal", "viewFactory", "userService",
-        function ($scope, $http, multisignatureModal, viewFactory, userService) {
+    ["$scope", "$http", "multisignatureModal", "viewFactory", "userService", 'gettextCatalog',
+        function ($scope, $http, multisignatureModal, viewFactory, userService, gettextCatalog) {
             $scope.view = viewFactory;
-            $scope.view.loadingText = "Set members of account";
+            $scope.view.loadingText = gettextCatalog.getString('Set members of account');
             $scope.secondPassphrase = userService.secondPassphrase;
             $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
             $scope.authData = {

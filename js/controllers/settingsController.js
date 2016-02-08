@@ -1,9 +1,9 @@
 require('angular');
 
 
-angular.module('liskApp').controller('settingsController', ['$scope', '$rootScope', '$http', "userService", "$interval", "multisignatureModal",
-    function ($rootScope, $scope, $http, userService, $interval, multisignatureModal) {
-        $scope.view.page = {title: 'Settings', previous: null};
+angular.module('liskApp').controller('settingsController', ['$scope', '$rootScope', '$http', "userService", "$interval", "multisignatureModal", 'gettextCatalog',
+    function ($rootScope, $scope, $http, userService, $interval, multisignatureModal, gettextCatalog) {
+        $scope.view.page = {title: gettextCatalog.getString('Settings'), previous: null};
         $scope.view.bar = {};
 
         $scope.settings = {

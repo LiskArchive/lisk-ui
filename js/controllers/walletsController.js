@@ -1,12 +1,12 @@
 require('angular');
 
 angular.module('liskApp').controller('walletsController',
-    ['$scope', '$rootScope', '$http', 'viewFactory', 'ngTableParams', '$filter', 'multiMembersModal', 'multiService', 'userService', "errorModal", 'masterPassphraseModal',
-        function ($rootScope, $scope, $http, viewFactory, ngTableParams, $filter, multiMembersModal, multiService, userService, errorModal, masterPassphraseModal) {
+    ['$scope', '$rootScope', '$http', 'viewFactory', 'ngTableParams', '$filter', 'multiMembersModal', 'multiService', 'userService', "errorModal", 'masterPassphraseModal', 'gettextCatalog',
+        function ($rootScope, $scope, $http, viewFactory, ngTableParams, $filter, multiMembersModal, multiService, userService, errorModal, masterPassphraseModal, gettextCatalog) {
             $scope.view = viewFactory;
             $scope.view.inLoading = false;
-            $scope.view.loadingText = "Loading multisignature wallets";
-            $scope.view.page = {title: 'Multisignature', previous: null};
+            $scope.view.loadingText = gettextCatalog.getString('Loading Multi-Signature Groups');
+            $scope.view.page = {title: gettextCatalog.getString('Multi-Signature'), previous: null};
             $scope.view.bar = {showWalletBar: true};
             $scope.secondPassphrase = userService.secondPassphrase;
             $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
@@ -111,6 +111,12 @@ angular.module('liskApp').controller('walletsController',
                 }
             });
 
+            $scope.tableWallets.cols = {
+                address : gettextCatalog.getString('Group Name'),
+                members : gettextCatalog.getString('Members'),
+                confirmations : gettextCatalog.getString('Confirmations')
+            };
+
             $scope.tableWallets.settings().$scope = $scope;
 
             $scope.$watch("filter.$", function () {
@@ -137,6 +143,15 @@ angular.module('liskApp').controller('walletsController',
                     });
                 }
             });
+
+            $scope.tableMultiTransactions.cols = {
+                transactionId : gettextCatalog.getString('Transaction ID'),
+                recipientId : gettextCatalog.getString('Recipient'),
+                timestamp : gettextCatalog.getString('Time'),
+                amount : gettextCatalog.getString('Amount'),
+                fee : gettextCatalog.getString('Fee'),
+                confirmations : gettextCatalog.getString('Confirmations Needed')
+            };
 
             $scope.tableMultiTransactions.settings().$scope = $scope;
 

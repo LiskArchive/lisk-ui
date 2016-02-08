@@ -5,7 +5,7 @@
       <div class="lisk-icon"></div>
       <div class="panel-body">
         <div class="wg-label">
-          Balance
+          {{'Balance'|translate}}
         </div>
         <div class="wg-data">
           <span class="strong">{{balanceToShow[0] || 0}}<span class="small">{{balanceToShow[1]}}</span></span>&nbsp;LISK
@@ -18,7 +18,7 @@
       <div class="contacts-icon"></div>
       <div class="panel-body">
         <div class="wg-label">
-          Contacts
+          {{'Contacts'|translate}}
         </div>
         <div class="wg-data">
           <span class="strong">{{contacts.count}}</span><!-- <span ng-if="false" class="wg-legend new-contacts"><span>12 this week</span> --></span>
@@ -43,20 +43,20 @@
     <div class="panel  widget widget-brown" ng-show="diffVersion!=-1">
       <div class="panel-body">
         <div class="wg-label">
-          Lisk Client
+          {{'Lisk Client'|translate}}
         </div>
         <div class="wg-data version">
-          <span class="strong">v{{version}}</span><span class="wg-legend">Latest version</span>
+          <span class="strong">v{{version}}</span><span class="wg-legend"><translate>Latest version</translate></span>
         </div>
       </div>
     </div>
     <div class="panel  widget widget-red" ng-show="diffVersion==-1">
       <div class="panel-body">
         <div class="wg-label">
-          Lisk Client Outdated
+          <translate>Lisk Client Outdated</translate>
         </div>
         <div class="wg-data version">
-          <span class="strong">v{{version}}</span> <a href="https://lisk.io/download" target="_blank" class="btn btn-white waves-effect pull-right">UPDATE</a>
+          <span class="strong">v{{version}}</span> <a href="https://lisk.io/download" target="_blank" class="btn btn-white waves-effect pull-right"><translate>UPDATE</translate></a>
         </div>
       </div>
     </div>
@@ -67,29 +67,29 @@
     <div class="panel panel-default">
       <div class="panel-heading" ng-class="{'cursor': transactions.length}" eat-click-if="!transactions.length" ui-sref="main.transactions">
         <h2>
-          Latest Transactions
+          {{'Latest Transactions'|translate}}
         </h2>
         <div class="more" ng-show="transactions.length">
-          <span class="sr-only">More</span>
+          <span class="sr-only"><translate>More</translate></span>
         </div>
       </div>
       <table id="transactions" ng-if="transactions.length">
         <thead>
           <tr class="head">
             <th class="hide-in-1400">
-              Transaction ID
+              <translate>Transaction ID</translate>
             </th>
             <th class="padding-in-1400">
-              Sender
+              <translate>Sender</translate>
             </th>
             <th>
-              Recipient
+              <translate>Recipient</translate>
             </th>
             <th>
-              Time
+              <translate>Time</translate>
             </th>
             <th>
-              Amount (Fee)
+              <translate>Amount (Fee)</translate>
             </th>
           </tr>
         </thead>
@@ -119,7 +119,7 @@
       <div class="panel-body empty-body" ng-if="!transactions.length">
         <div class="logo-grey"></div>
         <p class="empty-state-text">
-          You haven't made any transactions yet.
+          {{'You have not made any transactions yet.'|translate}}
         </p>
       </div>
     </div>

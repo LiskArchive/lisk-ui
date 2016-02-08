@@ -2,17 +2,17 @@
     <div ng-show="step==1" class="modal modal-fixed-footer col-md-6 dapp-modal">
         <div class="modal-header modal-iconed hide-in-small">
             <div class="close-modal" ng-click="close()">
-                <span class="sr-only">Close modal</span>
+                <span class="sr-only"><translate>Close modal</translate></span>
             </div>
         </div>
         <div class="modal-header modal-header-mobile clearfix">
             <div class="close-modal show-in-small" ng-click="close()">
-                <span class="sr-only">Close modal</span>
+                <span class="sr-only"><translate>Close modal</translate></span>
             </div>
             <div>
-                <h2>Step 1/5 - Preamble</h2>
+                <h2>{{'Step 1/5 - Preamble'|translate}}</h2>
             </div>
-            <div>Please read carefully.</div>
+            <div><translate>Please read carefully.</translate></div>
         </div>
         <div class="modal-content pretty-scrolling hide-in-small" style="height: calc(100% - 290px); padding: 0;  -webkit-box-shadow:none;
   box-shadow: none;">
@@ -20,14 +20,7 @@
                 <input type="submit" ng-show="false">
             </form>
             <span class="send-info-text flat-text">
-                <p>You are about to register your decentralized application (dapp) on the Lisk network. After the registration all Lisk users will be able to see your dapp on the Lisk Dapp Store and they will also be able to install and launch it.</p>
-                <p class="top-margin-10">One of the characteristics of blockchains is that you can't delete any content from them. Therefore make sure you have used the correct dapp parameters. We also advise you to test your dapp on the official Lisk testnet so you can guarantee that it is working flawlessly.</p>
-                <p class="top-margin-10"><b>Things you need to know for the registration process:</b></p>
-                <p>- Dapp names are unique, you can't register the same name twice on the Lisk network.</p>
-                <p>- You can either use a centralized (GitHub) or decentralized (Sia) hosting method.</p>
-                <p>- Make sure that your dapp icon's format is a square.</p>
-                <p>- Choose your tags wisely, with them your users will be able to find your dapp in the Dapp Store.</p>
-                <p class="top-margin-10">The Lisk Team isn't liable for a dapp, solely the uploader is. So you have to make sure that your dapp is legal and doesn't harm its users.</p>
+                <p translate>You are about to register your decentralized application (dapp) on the Lisk network. After the registration all Lisk users will be able to see your dapp on the Lisk Dapp Store and they will also be able to install and launch it.<br><br>One of the characteristics of blockchains is that you can't delete any content from them. Therefore make sure you have used the correct dapp parameters. We also advise you to test your dapp on the official Lisk testnet so you can guarantee that its working flawlessly.<br><br><b>Things you need to know for the registration process:</b><br><br>• Dapp names are unique, you can't register the same name twice on the Lisk network.<br>• You can either use a centralized (GitHub) or decentralized (Sia) hosting method.<br>• Make sure that your dapp icon's format is a square.<br>• Choose your tags wisely, with them your users will be able to find your dapp in the Dapp Store.<br><br>The Lisk Team isn't liable for a dapp, solely the uploader is. So you have to make sure that your dapp is legal and doesn't harm its users.</p>
             </span>
         </div>
         <div class="modal-content pretty-scrolling show-in-small" style="  height: calc(100% - 130px); padding: 0;  -webkit-box-shadow:none;
@@ -36,31 +29,28 @@
                 <input type="submit" ng-show="false">
             </form>
             <span class="send-info-text flat-text">
-                <p>You are about to register your decentralized application (dapp) on the Lisk network. After the registration all Lisk users will be able to see your dapp on the Lisk Dapp Store and they will also be able to install and launch it.</p>
-                <p>One of the characteristics of blockchains is that you can't delete any content from them. Therefore make sure you used the correct dapp parameters. We also advise you to test your dapp on the official Lisk testnet so you can guarantee that its working flawlessly.</p>
-                <p>Things you need to know for the registration process: - Dapp names are unique, you can't register the same name twice on the Lisk network. - You can either use a centralized (GitHub) or decentralized (Sia) hosting method. - Make sure that your dapp icon's format is a square. - Choose your tags wisely, with them your users will be able to find your dapp in the Dapp Store.</p>
-                <p>The Lisk Team isn't liable for a dapp, solely the uploader is. So you have to make sure that your dapp is legal and doesn't harm its users.</p>
+                <p translate>You are about to register your decentralized application (dapp) on the Lisk network. After the registration all Lisk users will be able to see your dapp on the Lisk Dapp Store and they will also be able to install and launch it.<br><br>One of the characteristics of blockchains is that you can't delete any content from them. Therefore make sure you have used the correct dapp parameters. We also advise you to test your dapp on the official Lisk testnet so you can guarantee that its working flawlessly.<br><br><b>Things you need to know for the registration process:</b><br><br>• Dapp names are unique, you can't register the same name twice on the Lisk network.<br>• You can either use a centralized (GitHub) or decentralized (Sia) hosting method.<br>• Make sure that your dapp icon's format is a square.<br>• Choose your tags wisely, with them your users will be able to find your dapp in the Dapp Store.<br><br>The Lisk Team isn't liable for a dapp, solely the uploader is. So you have to make sure that your dapp is legal and doesn't harm its users.</p>
             </span>
         </div>
         <div class="modal-footer">
-            <a class="waves-effect btn-flat primary-action" ng-click="step=step+1;">Accept / Next Step</a>
-            <a class="waves-effect btn-flat second-action" ng-click="close()">CANCEL</a>
+            <a class="waves-effect btn-flat primary-action" ng-click="step=step+1;"><translate>Accept / Next Step</translate></a>
+            <a class="waves-effect btn-flat second-action" ng-click="close()"><translate>CANCEL</translate></a>
         </div>
     </div>
     <div ng-show="step==2" class="modal modal-fixed-footer col-md-6 dapp-modal">
         <div class="modal-header  modal-iconed hide-in-small">
             <div class="close-modal" ng-click="close()">
-                <span class="sr-only">Close modal</span>
+                <span class="sr-only"><translate>Close modal</translate></span>
             </div>
         </div>
         <div class="modal-header modal-header-mobile clearfix">
             <div class="close-modal show-in-small" ng-click="close()">
-                <span class="sr-only">Close modal</span>
+                <span class="sr-only"><translate>Close modal</translate></span>
             </div>
             <div>
-                <h2>Step 2/5 Dapp Specifications</h2>
+                <h2>{{'Step 2/5 Dapp Specifications'|translate}}</h2>
             </div>
-            <div>Please set the dapp parameters below.</div>
+            <div><translate>Please set the dapp parameters below.</translate></div>
         </div>
         <div class="modal-content pretty-scrolling hide-in-small" style="  height: calc(100% - 290px); padding: 0;  -webkit-box-shadow:none;
   box-shadow: none;">
@@ -69,51 +59,51 @@
                 <div class="row clearfix" style="height: inherit;">
                     <div class="input-field">
                         <input ng-minlength=1 ng-maxlength=32 required ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.name.$invalid , 'valid':  dapp_data_form.submitted && dapp_data_form.name.$valid}" id="name" name="name" type="text" class="validate" ng-model="newDapp.name" maxlength="32">
-                        <label for="name">Name</label>
+                        <label for="name"><translate>Name</translate></label>
                     </div>
                     <div class="error-newdapp-container" ng-show="dapp_data_form.name.$invalid && dapp_data_form.submitted">
                         <small class="error" ng-show="dapp_data_form.name.$error.required">
-                            Your dapp name is required.
+                            <translate>Your dapp name is required.</translate>
                         </small>
                         <small class="error" ng-show="dapp_data_form.name.$error.maxlength">
-                            Your dapp name cannot be longer than 32 characters
+                            <translate>Your dapp name cannot be longer than 32 characters</translate>
                         </small>
                     </div>
                 </div>
                 <div class="row clearfix" style="height: inherit;">
                     <div class="input-field materialize-textarea-big">
                         <textarea ng-maxlength=160 id="description" ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.description.$invalid , 'valid':  dapp_data_form.submitted && dapp_data_form.description.$valid}" name="description" class="materialize-textarea validate" ng-model="newDapp.description"></textarea>
-                        <label for="description">Description</label>
+                        <label for="description"><translate>Description</translate></label>
                     </div>
                     <div class="error-newdapp-container" ng-show="dapp_data_form.description.$invalid && dapp_data_form.submitted">
                         <small class="error" ng-show="dapp_data_form.description.$error.maxlength">
-                            Your dapp description cannot be longer than 160 characters
+                            <translate>Your dapp description cannot be longer than 160 characters.</translate>
                         </small>
                     </div>
                 </div>
                 <div class="row clearfix" style="height: inherit;">
                     <div class="input-field">
                         <input ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.tags.$invalid , 'valid':  dapp_data_form.submitted && dapp_data_form.tags.$valid}" ng-maxlength=160 maxlength=160 id="tags" type="text" name="tags" class="validate" ng-model="newDapp.tags">
-                        <label for="tags">Tags (separated with comma)</label>
+                        <label for="tags"><translate>Tags (separated with comma)</translate></label>
                     </div>
                     <div class="error-newdapp-container" ng-show="dapp_data_form.tags.$invalid && dapp_data_form.submitted">
                         {{dapp_data_form.tags.$error}}
                         <small class="error" ng-show="dapp_data_form.tags.$error">
-                            Your dapp tags cannot be longer than 160 characters
+                            <translate>Your dapp tags cannot be longer than 160 characters.</translate>
                         </small>
                     </div>
                 </div>
                 <div class="row clearfix" style="height: inherit;">
                     <div ng-if="!urlSiaMode" class="file-field input-field">
                         <input ng-model="newDapp.icon" id="icon" class="file-path validate" style="margin-left: 250px;  width: calc(100% - 250px);" type="text"/>
-                        <label for="icon" style="left:250px;">Icon URL</label>
+                        <label for="icon" style="left:250px;"><translate>Icon URL</translate></label>
                         <div class="btn btn-sky-blue" ng-click="changeUrlSiaMode()">
                             <span>{{getUlrSiaText()}}</span>
                         </div>
                     </div>
                     <div ng-if="!!urlSiaMode" class="file-field input-field materialize-textarea-big">
                         <textarea ng-model="newDapp.siaIcon" id="icon" class="materialize-textarea validate" style="margin-left: 250px;  width: calc(100% - 250px); max-height: 100px;" type="text"/>
-                        <label for="icon" style="left:250px;">Icon Sia ASCII</label>
+                        <label for="icon" style="left:250px;"><translate>Icon Sia ASCII</translate></label>
                         <div class="btn btn-sky-blue" ng-click="changeUrlSiaMode()">
                             <span>{{getUlrSiaText()}}</span>
                         </div>
@@ -133,50 +123,50 @@
                 <div class="row clearfix" style="height: inherit;">
                     <div class="input-field">
                         <input ng-minlength=1 ng-maxlength=32 required ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.name.$invalid , 'valid':  dapp_data_form.submitted && dapp_data_form.name.$valid}" id="name" name="name" class="validate" type="text" ng-model="newDapp.name">
-                        <label for="name">Name</label>
+                        <label for="name"><translate>Name</translate></label>
                     </div>
                     <div class="error-newdapp-container" ng-show="dapp_data_form.name.$invalid && dapp_data_form.submitted">
                         <small class="error" ng-show="dapp_data_form.name.$error.required">
-                            Your dapp name is required.
+                            <translate>Your dapp name is required.</translate>
                         </small>
                         <small class="error" ng-show="dapp_data_form.name.$error.maxlength">
-                            Your dapp name cannot be longer than 32 characters.
+                            <translate>Your dapp name cannot be longer than 32 characters.</translate>
                         </small>
                     </div>
                 </div>
                 <div class="row clearfix" style="height: inherit;">
                     <div class="input-field materialize-textarea-big">
                         <textarea ng-maxlength=160 id="description" ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.description.$invalid , 'valid':  dapp_data_form.submitted && dapp_data_form.description.$valid}" name="description" class="materialize-textarea validate" ng-model="newDapp.description"></textarea>
-                        <label for="description">Description</label>
+                        <label for="description"><translate>Description</translate></label>
                     </div>
                     <div class="error-newdapp-container" ng-show="dapp_data_form.description.$invalid && dapp_data_form.submitted">
                         <small class="error" ng-show="dapp_data_form.description.$error.maxlength">
-                            Your dapp description cannot be longer than 160 characters.
+                            <translate>Your dapp description cannot be longer than 160 characters.</translate>
                         </small>
                     </div>
                 </div>
                 <div class="row clearfix" style="height: inherit;">
                     <div class="input-field">
                         <input ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.tags.$invalid , 'valid':  dapp_data_form.submitted && dapp_data_form.tags.$valid}" ng-maxlength=160 maxlength=160 id="tags" type="text" name="tags" class="validate" ng-model="newDapp.tags">
-                        <label for="tags">Tags (separated with comma)</label>
+                        <label for="tags"><translate>Tags (separated with comma)</translate></label>
                     </div>
                     <div class="error-newdapp-container" ng-show="dapp_data_form.tags.$invalid && dapp_data_form.submitted">
                         <small class="error" ng-show="dapp_data_form.description.$error.maxlength">
-                            Your dapp tags cannot be longer than 160 characters.
+                            <translate>Your dapp tags cannot be longer than 160 characters.</translate>
                         </small>
                     </div>
                 </div>
                 <div class="row clearfix" style="height: inherit;">
                     <div ng-if="!urlSiaMode" class="file-field input-field">
                         <input ng-model="newDapp.icon" id="icon" class="file-path" style="width: 100%" type="text"/>
-                        <label for="icon">Icon URL</label>
+                        <label for="icon"><translate>Icon URL</translate></label>
                         <div id="change-btn" class="btn btn-sky-blue" ng-click="changeUrlSiaMode()">
                             <span>{{getUlrSiaText()}}</span>
                         </div>
                     </div>
                     <div ng-if="!!urlSiaMode" class="file-field input-field materialize-textarea-big">
                         <textarea ng-model="newDapp.siaIcon" id="icon" class="materialize-textarea validate" style="width: 100%; max-height: 100px;" type="text"/>
-                        <label for="icon">Icon Sia ASCII</label>
+                        <label for="icon"><translate>Icon Sia ASCII</translate></label>
                         <div id="change-btn" class="btn btn-sky-blue" ng-click="changeUrlSiaMode()">
                             <span>{{getUlrSiaText()}}</span>
                         </div>
@@ -190,40 +180,38 @@
             </form>
         </div>
         <div class="modal-footer">
-            <a class="waves-effect btn-flat primary-action" ng-click="goToStep3(dapp_data_form.$invalid)">Next Step</a>
-            <a class="waves-effect btn-flat second-action" ng-click="step=step-1;">Go back</a>
+            <a class="waves-effect btn-flat primary-action" ng-click="goToStep3(dapp_data_form.$invalid)"><translate>Next Step</translate></a>
+            <a class="waves-effect btn-flat second-action" ng-click="step=step-1;"><translate>Go back</translate></a>
         </div>
     </div>
     <div ng-show="step==3 && !passmode && !checkSecondPass" class="modal modal-fixed-footer col-md-6 dapp-modal">
         <div class="modal-header modal-iconed hide-in-small">
             <div class="close-modal" ng-click="close()">
-                <span class="sr-only">Close modal</span>
+                <span class="sr-only"><translate>Close modal</translate></span>
             </div>
         </div>
         <div class="modal-header modal-header-mobile clearfix">
             <div class="close-modal show-in-small" ng-click="close()">
-                <span class="sr-only">Close modal</span>
+                <span class="sr-only"><translate>Close modal</translate></span>
             </div>
             <div>
-                <h2>Step 3/5 - Choose Storage Solution</h2>
+                <h2>{{'Step 3/5 - Choose Storage Solution'|translate}}</h2>
             </div>
-            <div class="hide-in-small">Please choose between the available options.</div>
+            <div class="hide-in-small"><translate>Please choose between the available options.</translate></div>
         </div>
         <div class="modal-content pretty-scrolling hide-in-small" style="height: calc(100% - 290px); padding: 0;  -webkit-box-shadow:none;
   box-shadow: none;">
             <ul class="collection with-header dapp-collection">
                 <li class="collection-header">
-                    <h4>Decentralized</h4>
+                    <h4>{{'Decentralized'|translate}}</h4>
                 </li>
                 <li class="collection-item">
                     <input ng-click="selectRepository('sia')" type="checkbox" ng-checked="repository=='sia' || repository==null" class="filled-in violet" id="sia"/>
                     <label class="imaged" for="sia"><img src="/images/sia_logo.png"></label>
                     <div style="margin-top: 10px; margin-bottom: 10px;">
-                        <p>Sia is a new decentralized cloud storage platform aimed at giving users control of their data. Storage is pulled from a large network of hosts, each using Sia's blockchain to form storage contracts with clients. Out of the hundreds of hosts, only a fraction need to be online for the data to be recovered. Even in a network with many unreliable hosts, the data is safe.</p>
-                        <p>You need to upload your dapp source code as a .zip file to the Sia network. Once the upload was successful you need to specify the ASCII code of the file in the next step.</p>
+                        <p><translate>Sia is a new decentralized cloud storage platform aimed at giving users control of their data. Storage is pulled from a large network of hosts, each using Sia's blockchain to form storage contracts with clients. Out of the hundreds of hosts, only a fraction need to be online for the data to be recovered. Even in a network with many unreliable hosts, the data is safe.<br><br>You need to upload your dapp source code as a .zip file to the Sia network. Once the upload was successful you need to specify the ASCII code of the file in the next step.</translate></p>
                     </div>
-                    <a target="_blank" href="http://siacoin.com" class="btn btn-sky-blue waves-effect waves-light right">MORE INFO
-                    </a>
+                    <a target="_blank" href="http://siacoin.com" class="btn btn-sky-blue waves-effect waves-light right"><translate>MORE INFO</translate></a>
                 </li>
                 <!-- <li class="collection-item">
                     <input type="checkbox" class="filled-in violet" id="starj"/>
@@ -235,13 +223,13 @@
             </ul>
             <ul class="collection with-header dapp-collection">
                 <li class="collection-header">
-                    <h4>Centralized</h4>
+                    <h4>{{'Centralized'|translate}}</h4>
                 </li>
                 <li class="collection-item">
                     <input ng-click="selectRepository('git')" ng-checked="repository=='git'" type="checkbox" class="filled-in violet" id="git"/>
                     <label class="imaged" for="git"><img src="/images/github_logo.png"></label>
-                    <div style="margin-top: 10px;  margin-bottom: 10px;">GitHub is a Web-based Git repository hosting service, which offers amongst other things a source code management functionality. GitHub provides a graphical interface and desktop as well as mobile integration. If you add your dapp source code to a GitHub repository you need to specify the repository link in the next step.</div>
-                    <a href="http://github.com" target="_blank" class="btn btn-sky-blue waves-effect waves-light right">MORE INFO</a>
+                    <div style="margin-top: 10px;  margin-bottom: 10px;"><translate>GitHub is a Web-based Git repository hosting service, which offers amongst other things a source code management functionality. GitHub provides a graphical interface and desktop as well as mobile integration. If you add your dapp source code to a GitHub repository you need to specify the repository link in the next step.</translate></div>
+                    <a href="http://github.com" target="_blank" class="btn btn-sky-blue waves-effect waves-light right"><translate>MORE INFO</translate></a>
                 </li>
             </ul>
         </div>
@@ -254,8 +242,7 @@
                 </li>
                 <li class="collection-item">
                     <div style="margin-top: 10px;  margin-bottom: 10px;">
-                        <p>Sia is a new decentralized cloud storage platform aimed at giving users control of their data. Storage is pulled from a large network of hosts, each using Sia's blockchain to form storage contracts with clients. Out of the hundreds of hosts, only a fraction need to be online for the data to be recovered. Even in a network with many unreliable hosts, the data is safe.</p>
-                        <p>You need to upload your dapp source code as a .zip file to the Sia network. Once the upload was successful you need to specify the ASCII code of the file in the next step.</p>
+                        <p><translate>Sia is a new decentralized cloud storage platform aimed at giving users control of their data. Storage is pulled from a large network of hosts, each using Sia's blockchain to form storage contracts with clients. Out of the hundreds of hosts, only a fraction need to be online for the data to be recovered. Even in a network with many unreliable hosts, the data is safe.<br><br>You need to upload your dapp source code as a .zip file to the Sia network. Once the upload was successful you need to specify the ASCII code of the file in the next step.</translate></p>
                     </div>
                 </li>
             </ul>
@@ -265,27 +252,27 @@
                     <label class="imaged" for="git"><img src="/images/github_logo.png"></label>
                 </li>
                 <li class="collection-item">
-                    <div style="margin-top: 10px; margin-bottom: 10px;">GitHub is a Web-based Git repository hosting service, which offers amongst other things a source code management functionality. GitHub provides a graphical interface and desktop as well as mobile integration. If you add your dapp source code to a GitHub repository you need to specify the repository link in the next step.</div>
+                    <div style="margin-top: 10px; margin-bottom: 10px;"><translate>GitHub is a Web-based Git repository hosting service, which offers amongst other things a source code management functionality. GitHub provides a graphical interface and desktop as well as mobile integration. If you add your dapp source code to a GitHub repository you need to specify the repository link in the next step.</translate></div>
                 </li>
             </ul>
         </div>
         <div class="modal-footer">
-            <a class="waves-effect btn-flat primary-action" ng-click="step=step+1;">Next Step</a>
-            <a class="waves-effect btn-flat second-action" ng-click="step=step-1;">Go back</a>
+            <a class="waves-effect btn-flat primary-action" ng-click="step=step+1;"><translate>Next Step</translate></a>
+            <a class="waves-effect btn-flat second-action" ng-click="step=step-1;"><translate>Go back</translate></a>
         </div>
     </div>
     <div ng-show="step==4 && !passmode && !checkSecondPass" class="modal modal-fixed-footer col-md-6 dapp-modal" style="height: 80%; max-height: 80%; z-index: 1003; display: block; opacity: 1; /* transform: scaleX(1); */ top: 0;bottom: 0;">
         <div class="modal-header modal-iconed hide-in-small">
             <div class="close-modal" ng-click="close()">
-                <span class="sr-only">Close modal</span>
+                <span class="sr-only"><translate>Close modal</translate></span>
             </div>
         </div>
         <div class="modal-header modal-header-mobile clearfix">
             <div class="close-modal show-in-small" ng-click="close()">
-                <span class="sr-only">Close modal</span>
+                <span class="sr-only"><translate>Close modal</translate></span>
             </div>
             <div>
-                <h2>Step 4/5 - Storage Specifications</h2>
+                <h2>{{'Step 4/5 - Storage Specifications'|translate}}</h2>
             </div>
             <div>{{getRepositoryHeaderText()}}</div>
         </div>
@@ -295,7 +282,7 @@
                 <div class="field-padding">
                     <div class="input-field">
                         <input id="gitRepository" type="text" ng-model="newDapp.git" ng-class="{'invalid': errorAppLink}">
-                        <label for="amount">Git repository link</label>
+                        <label for="amount"><translate>Git repository link</translate></label>
                     </div>
                     <!-- <a class="btn btn-sky-blue waves-effect waves-light right">Check</a> -->
                 </div>
@@ -305,7 +292,7 @@
                 <div class="field-padding">
                     <div class="input-field materialize-textarea-big">
                         <textarea id="siaRepository" class="materialize-textarea" ng-class="{'invalid': errorAppLink}" ng-model="newDapp.siaAscii" style="max-height: 250px;"></textarea>
-                        <label for="textarea1">Sia ASCII Code</label>
+                        <label for="textarea1"><translate>Sia ASCII Code</translate></label>
                     </div>
                     <!-- <a class="btn btn-sky-blue waves-effect waves-light right">Check</a> -->
                 </div>
@@ -321,9 +308,9 @@
                 <div class="field-padding">
                     <div class="input-field">
                         <input id="amount" type="text" ng-model="newDapp.git">
-                        <label for="amount">Git repository link</label>
+                        <label for="amount"><translate>Git repository link</translate></label>
                     </div>
-                    <a class="btn btn-sky-blue waves-effect waves-light right">Check</a>
+                    <a class="btn btn-sky-blue waves-effect waves-light right"><translate>Check</translate></a>
                 </div>
                 <input type="submit" ng-show="false">
             </form>
@@ -331,9 +318,9 @@
                 <div class="field-padding">
                     <div class="input-field materialize-textarea-big">
                         <textarea id="textarea1" class="materialize-textarea" ng-model="newDapp.siaAscii" style="max-height: 250px;"></textarea>
-                        <label for="textarea1">Sia ASCII Code</label>
+                        <label for="textarea1"><translate>Sia ASCII Code</translate></label>
                     </div>
-                    <a class="btn btn-sky-blue waves-effect waves-light right">Check</a>
+                    <a class="btn btn-sky-blue waves-effect waves-light right"><translate>Check</translate></a>
                 </div>
                 <input type="submit" ng-show="false">
             </form>
@@ -342,24 +329,24 @@
             </div>
         </div>
         <div class="modal-footer">
-            <a class="waves-effect btn-flat primary-action" ng-click="goToStep5()">Next Step</a>
-            <a class="waves-effect btn-flat second-action" ng-click="step=step-1;">Go back</a>
+            <a class="waves-effect btn-flat primary-action" ng-click="goToStep5()"><translate>Next Step</translate></a>
+            <a class="waves-effect btn-flat second-action" ng-click="step=step-1;"><translate>Go back</translate></a>
         </div>
     </div>
     <div ng-show="step==5 && !passmode && !checkSecondPass" class="modal modal-fixed-footer col-md-6 dapp-modal">
         <div class="modal-header modal-iconed hide-in-small">
             <div class="close-modal" ng-click="close()">
-                <span class="sr-only">Close modal</span>
+                <span class="sr-only"><translate>Close modal</translate></span>
             </div>
         </div>
         <div class="modal-header  modal-header-mobile clearfix">
             <div class="close-modal show-in-small" ng-click="close()">
-                <span class="sr-only">Close modal</span>
+                <span class="sr-only"><translate>Close modal</translate></span>
             </div>
             <div>
-                <h2>Step 5/5 - Confirmation</h2>
+                <h2>{{'Step 5/5 - Confirmation'|translate}}</h2>
             </div>
-            <div class="hide-in-small">Please check your input below and go back if necessary.</div>
+            <div class="hide-in-small"><translate>Please check your input below and go back if necessary.</translate></div>
         </div>
         <div class="modal-content pretty-scrolling hide-in-small" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
@@ -369,23 +356,23 @@
             </div>
             <ul class="collection dapp-collection">
                 <li class="collection-item">
-                    <h4>Name:</h4>
+                    <h4>{{'Name'|translate}}:</h4>
                     {{newDapp.name}}
                 </li>
                 <li class="collection-item">
-                    <h4>Description:</h4>
+                    <h4>{{'Description'|translate}}:</h4>
                     {{newDapp.description}}
                 </li>
                 <li class="collection-item">
-                    <h4>Tags:</h4>
+                    <h4>{{'Tags'|translate}}:</h4>
                     <span class="cut-text">{{newDapp.tags}}</span>
                 </li>
                 <li class="collection-item">
-                    <h4>Category:</h4>
+                    <h4>{{'Category'|translate}}:</h4>
                     {{getCategoryName(newDapp.category)}}
                 </li>
                 <li class="collection-item">
-                    <h4>Hosted at {{getRepositoryName()}}:</h4>
+                    <h4>{{'Hosted at'|translate}} {{getRepositoryName()}}:</h4>
                     <span class="cut-text">{{getRepositoryText()}}</span>
                 </li>
             </ul>
@@ -398,39 +385,39 @@
             </div>
             <ul class="collection dapp-collection">
                 <li class="collection-item">
-                    <h4>Name:</h4>
+                    <h4>{{'Name'|translate}}:</h4>
                     {{newDapp.name}}</li>
                 <li class="collection-item">
-                    <h4>Description:</h4>
+                    <h4>{{'Description'|translate}}:</h4>
                     {{newDapp.description}}</li>
                 <li class="collection-item">
-                    <h4>Tags:</h4>
+                    <h4>{{'Tags'|translate}}:</h4>
                     {{newDapp.tags}}</li>
                 <li class="collection-item">
-                    <h4>Category:</h4>
+                    <h4>{{'Category'|translate}}:</h4>
                     {{getCategoryName(newDapp.category)}}</li>
                 <li class="collection-item">
-                    <h4>Hosted at {{getRepositoryName()}}:</h4>
+                    <h4>{{'Hosted at'|translate}} {{getRepositoryName()}}:</h4>
                     <span class="cut-text">{{getRepositoryText()}}</span>
                 </li>
             </ul>
         </div>
         <div class="modal-footer">
-            <a class="waves-effect btn-flat primary-action" ng-click="passcheck()">Confirm</a>
-            <a class="waves-effect btn-flat second-action" ng-click="goToStep4()">Go back</a>
+            <a class="waves-effect btn-flat primary-action" ng-click="passcheck()"><translate>Confirm</translate></a>
+            <a class="waves-effect btn-flat second-action" ng-click="goToStep4()"><translate>Go back</translate></a>
         </div>
     </div>
     <div ng-show="passmode && !checkSecondPass" class="modal modal-fixed-footer col-md-6 dapp-modal">
         <div class="modal-header modal-iconed">
             <div class="close-modal" ng-click="close()">
-                <span class="sr-only">Close modal</span>
+                <span class="sr-only"><translate>Close modal</translate></span>
             </div>
         </div>
         <div class="modal-header modal-header-mobile clearfix">
             <div>
-                <h2>Account Verification</h2>
+                <h2>{{'Account Verification'|translate}}</h2>
             </div>
-            <div>Please enter your passphrase below.</div>
+            <div><translate>Please enter your passphrase below.</translate></div>
         </div>
         <div class="modal-content pretty-scrolling" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
@@ -439,7 +426,7 @@
                     <div class="field-padding">
                         <div class="input-field">
                             <input id="passPhrase" type="password" ng-model="secretPhrase" ng-trim="false" autofocus ng-class="{'invalid': errorMessage}">
-                            <label for="passPhrase">Your Passphrase</label>
+                            <label for="passPhrase"><translate>Your Passphrase</translate></label>
                         </div>
                         <span class="pass-error" ng-show="errorMessage && !secondSecret">{{errorMessage}}</span>
                     </div>
@@ -448,21 +435,21 @@
             </div>
         </div>
         <div class="modal-footer">
-            <a class="waves-effect btn-flat primary-action" ng-click="sendData(secretPhrase)">Confirm</a>
-            <a class="waves-effect btn-flat second-action" ng-click="passcheck()">Go back</a>
+            <a class="waves-effect btn-flat primary-action" ng-click="sendData(secretPhrase)"><translate>Confirm</translate></a>
+            <a class="waves-effect btn-flat second-action" ng-click="passcheck()"><translate>Go back</translate></a>
         </div>
     </div>
     <div ng-show="checkSecondPass" class="modal modal-fixed-footer col-md-6 dapp-modal">
         <div class="modal-header modal-iconed">
             <div class="close-modal" ng-click="close()">
-                <span class="sr-only">Close modal</span>
+                <span class="sr-only"><translate>Close modal</translate></span>
             </div>
         </div>
         <div class="modal-header modal-header-mobile clearfix">
             <div>
-                <h2>Account Verification</h2>
+                <h2>{{'Account Verification'|translate}}</h2>
             </div>
-            <div>Please enter your second passphrase below.</div>
+            <div><translate>Please enter your second passphrase below.</translate></div>
         </div>
         <div class="modal-content pretty-scrolling" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
@@ -471,7 +458,7 @@
                     <div class="field-padding">
                         <div class="input-field">
                             <input id="secondPhrase" type="password" ng-model="secondPhrase" ng-trim="false" autofocus ng-focus="focus == 'secondPhrase'" ng-class="{'invalid': errorMessage}">
-                            <label for="secondPhrase">Your Second Passphrase</label>
+                            <label for="secondPhrase"><translate>Your Second Passphrase</translate></label>
                         </div>
                         <span class="pass-error" ng-show="errorMessage">{{errorMessage}}</span>
                     </div>
@@ -480,8 +467,8 @@
             </div>
         </div>
         <div class="modal-footer">
-            <a class="waves-effect btn-flat primary-action" ng-click="sendData(secretPhrase, true)">SEND LISK</a>
-            <a class="waves-effect btn-flat second-action" ng-click="passcheck(true)">BACK</a>
+            <a class="waves-effect btn-flat primary-action" ng-click="sendData(secretPhrase, true)"><translate>SEND LISK</translate></a>
+            <a class="waves-effect btn-flat second-action" ng-click="passcheck(true)"><translate>BACK</translate></a>
         </div>
     </div>
 </div>

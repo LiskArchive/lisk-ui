@@ -1,12 +1,12 @@
 require('angular');
 
-angular.module('liskApp').controller('delegatesController', ['$scope', '$rootScope', '$http', "userService", "$interval", "$timeout", "$filter", "ngTableParams", "delegateService", "voteModal", "viewFactory", "userInfo",
-    function ($rootScope, $scope, $http, userService, $interval, $timeout, $filter, ngTableParams, delegateService, voteModal, viewFactory, userInfo) {
+angular.module('liskApp').controller('delegatesController', ['$scope', '$rootScope', '$http', "userService", "$interval", "$timeout", "$filter", "ngTableParams", "delegateService", "voteModal", "viewFactory", "userInfo", 'gettextCatalog',
+    function ($rootScope, $scope, $http, userService, $interval, $timeout, $filter, ngTableParams, delegateService, voteModal, viewFactory, userInfo, gettextCatalog) {
         $scope.view = viewFactory;
         $scope.view.inLoading = true;
-        $scope.view.loadingText = "Loading delegates";
+        $scope.view.loadingText = gettextCatalog.getString('Loading delegates');
 
-        $scope.view.page = {title: 'Forging', previous: null};
+        $scope.view.page = {title: gettextCatalog.getString('Forging'), previous: null};
         $scope.view.bar = {forgingMenu: true};
         $scope.allVotes = 100
             * 1000
@@ -163,6 +163,14 @@ angular.module('liskApp').controller('delegatesController', ['$scope', '$rootSco
             }
         });
 
+        $scope.tableTopDelegates.cols = {
+            rate : gettextCatalog.getString('Rank'),
+            username : gettextCatalog.getString('Name'),
+            address : gettextCatalog.getString('Lisk Address'),
+            productivity : gettextCatalog.getString('Uptime'),
+            vote : gettextCatalog.getString('Approval')
+        };
+
         $scope.tableTopDelegates.settings().$scope = $scope;
 
         $scope.$watch("filter.$", function () {
@@ -197,6 +205,7 @@ angular.module('liskApp').controller('delegatesController', ['$scope', '$rootSco
             }
         });
 
+        $scope.tableStandbyDelegates.cols = $scope.tableTopDelegates.cols;
         $scope.tableStandbyDelegates.settings().$scope = $scope;
 
         $scope.$watch("filter.$", function () {

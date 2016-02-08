@@ -1,10 +1,10 @@
 require('angular');
 
 angular.module('liskApp').controller('walletTransactionsController',
-    ['$scope', '$rootScope', '$http', "userService", "$interval", "sendTransactionModal", "secondPassphraseModal", "delegateService", 'viewFactory', 'transactionsService', 'ngTableParams', 'transactionInfo', '$timeout', 'userInfo', '$filter', 'multiMembersModal', '$stateParams', 'multiService',
-        function ($rootScope, $scope, $http, userService, $interval, sendTransactionModal, secondPassphraseModal, delegateService, viewFactory, transactionsService, ngTableParams, transactionInfo, $timeout, userInfo, $filter, multiMembersModal, $stateParams, multiService) {
+    ['$scope', '$rootScope', '$http', "userService", "$interval", "sendTransactionModal", "secondPassphraseModal", "delegateService", 'viewFactory', 'transactionsService', 'ngTableParams', 'transactionInfo', '$timeout', 'userInfo', '$filter', 'multiMembersModal', '$stateParams', 'multiService', 'gettextCatalog',
+        function ($rootScope, $scope, $http, userService, $interval, sendTransactionModal, secondPassphraseModal, delegateService, viewFactory, transactionsService, ngTableParams, transactionInfo, $timeout, userInfo, $filter, multiMembersModal, $stateParams, multiService, gettextCatalog) {
             $scope.view = viewFactory;
-            $scope.view.page = {title: 'Transactions for 17649443584386761059L', previous: 'main.multi'};
+            $scope.view.page = {title: gettextCatalog.getString('Transactions for 17649443584386761059L'), previous: 'main.multi'};
             $scope.view.bar = {};
             $scope.showAllColumns = true;
             $scope.showFullTime = false;
@@ -67,6 +67,16 @@ angular.module('liskApp').controller('walletTransactionsController',
 
                 }
             });
+
+            $scope.tableWalletTransactions = {
+                b_height : gettextCatalog.getString('Height'),
+                t_id : gettextCatalog.getString('Transaction ID'),
+                t_recipientId : gettextCatalog.getString('Recipient'),
+                t_timestamp : gettextCatalog.getString('Time'),
+                t_amount : gettextCatalog.getString('Amount'),
+                fee : gettextCatalog.getString('Fee'),
+                confirmations : gettextCatalog.getString('Confirmations')
+            };
 
             $scope.tableWalletTransactions.settings().$scope = $scope;
 

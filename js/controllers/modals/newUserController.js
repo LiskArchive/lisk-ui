@@ -1,11 +1,11 @@
 require('angular');
 
-angular.module('liskApp').controller('newUserController', ["$scope", "$http", "newUser", "userService", "$state", "viewFactory",
-    function ($scope, $http, newUser, userService, $state, viewFactory) {
+angular.module('liskApp').controller('newUserController', ["$scope", "$http", "newUser", "userService", "$state", "viewFactory", 'gettextCatalog',
+    function ($scope, $http, newUser, userService, $state, viewFactory, gettextCatalog) {
     $scope.noMatch = false;
     $scope.firstStep = true;
     $scope.view = viewFactory;
-    $scope.view.loadingText = "Registering user";
+    $scope.view.loadingText = gettextCatalog.getString('Registering user');
     $scope.view.inLoading = false;
 
     $scope.activeLabel = function (pass) {

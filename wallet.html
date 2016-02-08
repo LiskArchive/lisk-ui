@@ -16,7 +16,7 @@
         <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
         <link rel="icon" type="image/png" href="/images/favicon-128.png" sizes="128x128" />
         <meta charset="UTF-8">
-        <meta name="application-name" content="Lisk.io - Decentralized Application Platform"/>
+        <meta name="application-name" content="{{'Lisk - Decentralized Application Platform'|translate}}"/>
         <meta name="msapplication-TileColor" content="#F3F3E1" />
         <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
         <meta name="msapplication-square70x70logo" content="/images/mstile-70x70.png" />
@@ -35,6 +35,6 @@
         </script>
     </head>
     <body>
-        <div ui-view class="container-app"></div>
+        <div ui-view ng-class="lang.id" class="container-app"></div>
     </body>
 </html>

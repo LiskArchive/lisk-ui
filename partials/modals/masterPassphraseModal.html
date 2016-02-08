@@ -5,12 +5,12 @@
                 <div class="modal-content">
                     <div class="modal-header modal-iconed">
                         <div class="close-modal" ng-click="close()">
-                            <span class="sr-only">Close modal</span>
+                            <span class="sr-only"><translate>Close modal</translate></span>
                         </div>
                     </div>
                     <div class="modal-header clearfix">
                         <div>
-                            <h2>Account Verification</h2>
+                            <h2>{{'Account Verification'|translate}}</h2>
                         </div>
                         <div>{{title}}</div>
                     </div>
@@ -21,7 +21,7 @@
                                     <input id="masterpass" type="password" ng-model="masterPass" ng-trim="false" autofocus ng-focus="true" ng-class="{'invalid': emptyPass}">
                                     <label for="masterpass">{{label}}</label>
                                 </div>
-                                <span class="pass-error" ng-if="emptyPass">Empty passphrase</span>
+                                <span class="pass-error" ng-if="emptyPass"><translate>Empty passphrase</translate></span>
                             </div>
                             <input type="submit" ng-show="false">
                         </form>
@@ -29,10 +29,10 @@
                     <div class="modal-body">
                         <ul class="nav modal-buttons pull-right">
                             <li>
-                                <a href="#" ng-click="close()">Cancel</a>
+                                <a href="#" ng-click="close()"><translate>Cancel</translate></a>
                             </li>
                             <li>
-                                <a href="#" class="blue-link" ng-click="passcheck(masterPass)">SEND</a>
+                                <a href="#" class="blue-link" ng-click="passcheck(masterPass)"><translate>SEND</translate></a>
                             </li>
                         </ul>
                     </div>

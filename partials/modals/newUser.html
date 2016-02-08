@@ -7,14 +7,14 @@
                         <div class="material-modal-content" ng-show="firstStep">
                             <div class="modal-header modal-iconed">
                                 <div class="close-modal" ng-click="close()">
-                                    <span class="sr-only">Close modal</span>
+                                    <span class="sr-only"><translate>Close modal</translate></span>
                                 </div>
                             </div>
                             <div class="modal-header clearfix">
                                 <div>
-                                    <h2>Step 1/2 - Generate a Passphrase</h2>
+                                    <h2>{{'Step 1/2 - Generate a Passphrase'|translate}}</h2>
                                 </div>
-                                <div>You can find your passphrase below.</div>
+                                <div><translate>You can find your passphrase below.</translate></div>
                             </div>
                             <div class="modal-body clearfix">
                                 <div class="left-margin-40 right-margin-40">
@@ -23,48 +23,48 @@
                                         <label for="newPassphrase" ng-class="{'active':activeLabel(newPassphrase)}">Passphrase</label>
                                     </div>
                                     <span class="pull-right generate no-select" ng-click="generatePassphrase()">
-                                        <span>Generate New</span>
+                                        <span><translate>Generate New</translate></span>
                                     </span>
                                 </div>
                             </div>
                             <div class="modal-body bordered">
-                                <span class="send-info-text">Make sure that you keep the passphrase safe. You will be asked to re-type it for confirmation.</span>
+                                <span class="send-info-text"><translate>Make sure that you keep the passphrase safe. You will be asked to re-type it for confirmation.</translate></span>
                             </div>
                             <div class="card-action clearfix">
                                 <div class="pull-right">
-                                    <a href="#" class="waves-effect second-action" ng-click="savePassToFile(newPassphrase)">SAVE PASSPHRASE</a>
-                                    <a href='#' class="primary-action waves-effect" ng-click="step()">NEXT STEP</a>
+                                    <a href="#" class="waves-effect second-action" ng-click="savePassToFile(newPassphrase)"><translate>SAVE PASSPHRASE</translate></a>
+                                    <a href='#' class="primary-action waves-effect" ng-click="step()"><translate>NEXT STEP</translate></a>
                                 </div>
                             </div>
                         </div>
                         <div class="material-modal-content" ng-show="!firstStep">
                             <div class="modal-header modal-iconed">
                                 <div class="close-modal" ng-click="close()">
-                                    <span class="sr-only">Close modal</span>
+                                    <span class="sr-only"><translate>Close modal</translate></span>
                                 </div>
                             </div>
                             <div class="modal-header clearfix">
                                 <div>
-                                    <h2>Step 2/2 - Confirm the Passphrase</h2>
+                                    <h2>{{'Step 2/2 - Confirm the Passphrase'|translate}}</h2>
                                 </div>
-                                <div>Please re-enter your passphrase below.</div>
+                                <div><translate>Please re-enter your passphrase below.</translate></div>
                             </div>
                             <div class="modal-body clearfix">
                                 <div class="left-margin-40 right-margin-40">
                                     <div class="input-field passphraseGeneration">
                                         <textarea id="repeatPassphrase" class="materialize-textarea" ng-trim="false" ng-model="repeatPassphrase" ng-class="{'invalid': noMatch}" autofocus></textarea>
-                                        <label for="repeatPassphrase" ng-class="{'active':activeLabel(repeatPassphrase)}">Passphrase</label>
+                                        <label for="repeatPassphrase" ng-class="{'active':activeLabel(repeatPassphrase)}"><translate>Passphrase</translate></label>
                                     </div>
-                                    <span class="pass-error" style="margin-top: 0;" ng-show="noMatch">Passphrase doesn't match.</span>
+                                    <span class="pass-error" style="margin-top: 0;" ng-show="noMatch"><translate>Passphrase doesn't match.</translate></span>
                                 </div>
                             </div>
                             <div class="modal-body bordered" ng-show="noMatch">
-                                <span class="send-info-text">The passphrase entered doesn't match with the one generated before. Please go back and generate a new one.</span>
+                                <span class="send-info-text"><translate>The passphrase entered doesn't match with the one generated before. Please go back and generate a new one.</translate></span>
                             </div>
                             <div class="card-action clearfix">
                                 <div class="pull-right">
-                                    <a href="#" class="waves-effect second-action" ng-click="step()">GO BACK</a>
-                                    <a href='#' class="primary-action waves-effect" ng-click="login(repeatPassphrase)">GET STARTED</a>
+                                    <a href="#" class="waves-effect second-action" ng-click="step()"><translate>GO BACK</translate></a>
+                                    <a href='#' class="primary-action waves-effect" ng-click="login(repeatPassphrase)"><translate>GET STARTED</translate></a>
                                 </div>
                             </div>
                         </div>

@@ -1,10 +1,10 @@
 require('angular');
 
-angular.module('liskApp').controller('dappsCategoryController', ['$scope', 'viewFactory', '$http', '$stateParams', 'dappsService', '$timeout',
-    function ($scope, viewFactory, $http, $stateParams, dappsService, $timeout) {
+angular.module('liskApp').controller('dappsCategoryController', ['$scope', 'viewFactory', '$http', '$stateParams', 'dappsService', '$timeout', 'gettextCatalog',
+    function ($scope, viewFactory, $http, $stateParams, dappsService, $timeout, gettextCatalog) {
         $scope.view = viewFactory;
         $scope.view.inLoading = true;
-        $scope.view.loadingText = "Loading dapps";
+        $scope.view.loadingText = gettextCatalog.getString('Loading dapps');
         $scope.category = $stateParams.categoryId;
         $scope.view.page = {title: $scope.category, previous: 'main.dappstore'};
         $scope.view.bar = {showDappsCategoryBar: true};

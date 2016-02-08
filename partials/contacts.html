@@ -2,31 +2,31 @@
     <div class="col-xs-12">
         <div class="panel panel-default" ng-class="{'paginated': contactsView.count || unconfirmedContacts.length}">
             <div class="panel-heading">
-                <h2>My Contacts</h2>
+                <h2>{{'My Contacts'|translate}}</h2>
             </div>
             <table ng-table="tableContacts" border="0" width="100%" cellpadding="0" cellspacing="0" template-pagination="custom/pager" ng-show="contactsView.count || unconfirmedContacts.length">
                 <tr ng-repeat="tx in unconfirmedContacts track by $index" class="checked">
                     <td data-title="''" class="user-icon-col"><img src="/images/account.png" class="small-user-icon"></td>
-                    <td data-title="'Username'" sortable="'username'">{{tx.asset.contact.username || '-'}}</td>
-                    <td data-title="'Address'" sortable="'address'">
+                    <td data-title="tableContacts.cols.username" sortable="'username'">{{tx.asset.contact.username || '-'}}</td>
+                    <td data-title="tableContacts.cols.address" sortable="'address'">
                         <a href="#" ng-click="userInfo(contact.address)">{{tx.asset.contact.address}}</a>
                     </td>
                     <td data-title="''">
                         <a class="btn btn-dark-meant" ng-click="sendTransaction(contact.address)">
-                            <i class="mdi-content-send left"></i>SEND
+                            <i class="mdi-content-send left"></i><translate>SEND</translate>
                         </a>
                     </td>
-                    <td data-title="">
+                    <td data-title="''">
                         <div class="dropdown-more-group" dropdown>
                             <span class="table-more-actions" dropdown-toggle>
                                 <span class="dots"></span>
                             </span>
                             <ul class="list-group" role="menu">
                                 <li class="list-group-item">
-                                    <a href="#" clip-copy="tx.asset.contact.address">Copy Address</a>
+                                    <a href="#" clip-copy="tx.asset.contact.address"><translate>Copy Address</translate></a>
                                 </li>
                                 <li ng-if="tx.asset.contact.username" class="list-group-item">
-                                    <a href="#" clip-copy="tx.asset.contact.username">Copy Name</a>
+                                    <a href="#" clip-copy="tx.asset.contact.username"><translate>Copy Name</translate></a>
                                 </li>
                             </ul>
                         </div>
@@ -35,26 +35,26 @@
                 <tr ng-repeat="contact in $data">
                     {{contact}}
                     <td data-title="''" class="user-icon-col"><img src="/images/account.png" class="small-user-icon"></td>
-                    <td data-title="'Username'" sortable="'username'">{{contact.username || '-'}}</td>
-                    <td data-title="'Address'" sortable="'address'">
+                    <td data-title="tableContacts.cols.username" sortable="'username'">{{contact.username || '-'}}</td>
+                    <td data-title="tableContacts.cols.address" sortable="'address'">
                         <a href="#" ng-click="userInfo(contact.address)">{{contact.address}}</a>
                     </td>
                     <td data-title="''">
                         <a class="btn btn-dark-meant" ng-click="sendTransaction(contact.address)">
-                            <i class="mdi-content-send left"></i>SEND
+                            <i class="mdi-content-send left"></i><translate>SEND</translate>
                         </a>
                     </td>
-                    <td data-title="">
+                    <td data-title="''">
                         <div class="dropdown-more-group" dropdown>
                             <span class="table-more-actions" dropdown-toggle>
                                 <span class="dots"></span>
                             </span>
                             <ul class="list-group" role="menu">
                                 <li class="list-group-item">
-                                    <a href="#" clip-copy="contact.address">Copy Address</a>
+                                    <a href="#" clip-copy="contact.address"><translate>Copy Address</translate></a>
                                 </li>
                                 <li ng-if="contact.username" class="list-group-item">
-                                    <a href="#" clip-copy="contact.username">Copy Name</a>
+                                    <a href="#" clip-copy="contact.username"><translate>Copy Name</translate></a>
                                 </li>
                             </ul>
                         </div>
@@ -65,7 +65,7 @@
                 <p class="empty-state-icon">
                     <i class="mdi-social-people medium"></i>
                 </p>
-                <p class="empty-state-text">You don't have any contacts, try adding a new one!</p>
+                <p class="empty-state-text">{{'You do not have any contacts, try adding a new one!'|translate}}</p>
             </div>
         </div>
     </div>

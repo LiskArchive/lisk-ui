@@ -5,10 +5,33 @@ module.exports = function (grunt) {
         "js/ui-bootstrap.js"
     ];
 
-    var withoutBrowserify = ['static/js/br_app.js', 'bower_components/materialize/bin/materialize.js'];
+    var withoutBrowserify = ['static/js/br_app.js', 'static/js/translations.js', 'bower_components/underscore/underscore.js', 'bower_components/materialize/bin/materialize.js'];
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        nggettext_extract: {
+            pot: {
+                files: {
+                    'po/template.pot': [
+                        'js/**/*.js',
+                        '*.html',
+                        'partials/*.html',
+                        'partials/modals/*.html',
+                        'template/tooltip/*.html'
+                    ]
+                }
+            },
+        },
+        nggettext_compile: {
+            all: {
+                options: {
+                    module: 'liskApp'
+                },
+                files: {
+                    'static/js/translations.js': ['po/*.po']
+                }
+            }
+        },
         cssmin: {
             release: {
                 options: {
@@ -67,12 +90,13 @@ module.exports = function (grunt) {
         }
     });
 
+    grunt.loadNpmTasks("grunt-angular-gettext");
     grunt.loadNpmTasks("grunt-contrib-concat");
     grunt.loadNpmTasks("grunt-contrib-cssmin");
     grunt.loadNpmTasks("grunt-contrib-less");
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks('grunt-browserify');
 
-    grunt.registerTask("default", ["less", "cssmin", "concat:release", 'browserify', "concat:withoutBrowserify"]);
+    grunt.registerTask("default", ["nggettext_extract", "nggettext_compile", "less", "cssmin", "concat:release", 'browserify', "concat:withoutBrowserify"]);
     grunt.registerTask("release", ["default", "uglify:release"]);
 };

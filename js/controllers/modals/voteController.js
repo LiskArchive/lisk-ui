@@ -8,7 +8,6 @@ angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "
     $scope.secondPassphrase = userService.secondPassphrase;
     $scope.focus = 'secretPhrase';
     $scope.fee = 0;
-    $scope.confirmText = $scope.adding ? 'CONFIRM VOTE' : 'REMOVE VOTE';
 
     Object.size = function (obj) {
         var size = 0, key;
