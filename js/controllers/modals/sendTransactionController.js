@@ -188,7 +188,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
             return;
         }
 
-        if (string[string.length - 1] == "C") {
+        if (string[string.length - 1] == 'L') {
             var isnum = /^\d+$/.test(string.substring(0, string.length - 1));
             if (isnum && string.length - 1 >= 1 && string.length - 1 <= 20) {
                 $scope.accountValid = true;
