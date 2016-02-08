@@ -2,7 +2,15 @@ require('angular');
 
 angular.module('liskApp').controller('settingsController', ['$scope', '$rootScope', '$http', "userService", "$interval", "multisignatureModal", 'gettextCatalog', function ($rootScope, $scope, $http, userService, $interval, multisignatureModal, gettextCatalog) {
 
-    $scope.view.page = {title: gettextCatalog.getString('Settings'), previous: null};
+    var setPage = function () {
+        $scope.view.page = {title: gettextCatalog.getString('Settings'), previous: null};
+    }
+
+    // Refresh $scope.view.page object on change of language.
+    $rootScope.$on('gettextLanguageChanged', setPage);
+    // Set $scope.view.page at runtime.
+    setPage();
+
     $scope.view.bar = {};
 
     $scope.settings = {
