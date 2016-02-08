@@ -1,267 +1,266 @@
 require('angular');
-angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory', '$stateParams', '$http', "$interval", "userService", "errorModal", "masterPassphraseModal","confirmDeletionModal", 'gettextCatalog',
-    function ($scope, viewFactory, $stateParams, $http, $interval, userService, errorModal, masterPassphraseModal, confirmDeletionModal, gettextCatalog) {
-        $scope.view = viewFactory;
-        $scope.view.inLoading = true;
-        $scope.view.loadingText = gettextCatalog.getString('Loading dapp');
-        $scope.loading = true;
-        $scope.installed = false;
-        $scope.showSiaInstall = false;
 
-        $scope.getTags = function () {
-            try {
-                return $scope.dapp.tags.split(',');
-            }
-            catch (err) {
-                return []
-            }
+angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory', '$stateParams', '$http', "$interval", "userService", "errorModal", "masterPassphraseModal","confirmDeletionModal", 'gettextCatalog', function ($scope, viewFactory, $stateParams, $http, $interval, userService, errorModal, masterPassphraseModal, confirmDeletionModal, gettextCatalog) {
+
+    $scope.view = viewFactory;
+    $scope.view.inLoading = true;
+    $scope.view.loadingText = gettextCatalog.getString('Loading dapp');
+    $scope.loading = true;
+    $scope.installed = false;
+    $scope.showSiaInstall = false;
+
+    $scope.getTags = function () {
+        try {
+            return $scope.dapp.tags.split(',');
         }
+        catch (err) {
+            return []
+        }
+    }
 
-        $http.get('/api/dapps/siaenabled').then(function (response) {
+    $http.get('/api/dapps/siaenabled').then(function (response) {
+        if (response.data.success) {
+            $scope.showSiaInstall = response.data.enabled || $scope.dapp.siaAscii.trim() == "";
+        }
+    })
+
+    $scope.isInstalled = function () {
+        $http.get('/api/dapps/installedIds').then(function (response) {
+            $scope.installed = (response.data.ids.indexOf($stateParams.dappId) >= 0);
+            $scope.loading = false;
+            console.log("Loading: false");
+        });
+    }
+
+    $scope.installingIds = [];
+    $scope.removingIds = [];
+    $scope.launchedIds = [];
+
+    $scope.isInstalling = function () {
+        return ($scope.installingIds.indexOf($stateParams.dappId) >= 0);
+    }
+    $scope.isLaunched = function () {
+        return ($scope.launchedIds.indexOf($stateParams.dappId) >= 0);
+    }
+    $scope.isRemoving = function () {
+        return ($scope.removingIds.indexOf($stateParams.dappId) >= 0);
+    }
+
+    $scope.getInstalling = function () {
+        $http.get("/api/dapps/installing").then(function (response) {
             if (response.data.success) {
-                $scope.showSiaInstall = response.data.enabled || $scope.dapp.siaAscii.trim() == "";
+                $scope.installingIds = response.data.installing;
+            }
+        });
+    };
+
+    $scope.getRemoving = function () {
+        $http.get("/api/dapps/removing").then(function (response) {
+            if (response.data.success) {
+                $scope.removingIds = response.data.removing;
+            }
+        });
+    };
+
+    $scope.getLaunched = function () {
+        $http.get("/api/dapps/launched").then(function (response) {
+            if (response.data.success) {
+                $scope.launchedIds = response.data.launched;
+            }
+        });
+    };
+
+    // previous != previous :)
+    $scope.view.page = {title: '', previous: 'main.dappstore'};
+    $scope.view.bar = {};
+    $scope.showMore = false;
+    $scope.changeShowMore = function () {
+        $scope.showMore = !$scope.showMore;
+    };
+
+    $http.get("/api/dapps/get?id=" + $stateParams.dappId).then(function (response) {
+        $scope.dapp = response.data.dapp;
+        if ($scope.dapp.git) {
+            $scope.dapp.githublink = $scope.githubLink($scope.dapp.git);
+            console.log($scope.githublink);
+        }
+        $scope.view.page = {title: $scope.dapp.name, previous: 'main.dappstore'};
+        $scope.view.inLoading = false;
+    });
+
+    $scope.uninstallRequest = function (masterPassphrase) {
+        data = {
+            "id": $stateParams.dappId
+        };
+        if (masterPassphrase) {
+            data.master = masterPassphrase;
+        }
+        $http.post("/api/dapps/uninstall", data).then(function (response) {
+            $scope.getInstalling();
+            $scope.getLaunched();
+            $scope.getRemoving();
+            if (response.data.success == true) {
+                $scope.installed = false;
+            }
+            else {
+                $scope.errorModal = errorModal.activate({
+                    title: 'Uninstalling Dapp error',
+                    error: response.data.error,
+                    destroy: function () {
+
+                    }
+                })
+            }
+        });
+    }
+
+    $scope.uninstallDapp = function () {
+        $scope.confirmDeletionModal = confirmDeletionModal.activate({
+            destroy: function (yesDelete) {
+                if (yesDelete) {
+                    if ($scope.ismasterpasswordenabled) {
+                        $scope.masterPassphraseModal = masterPassphraseModal.activate({
+                            destroy: function (masterPass) {
+                                if (masterPass) {
+                                    $scope.uninstallRequest(masterPass);
+                                }
+                            }
+                        })
+                    }
+                    else {
+                        $scope.uninstallRequest();
+                    }
+                }
             }
         })
+    }
 
-        $scope.isInstalled = function () {
-            $http.get('/api/dapps/installedIds').then(function (response) {
-                $scope.installed = (response.data.ids.indexOf($stateParams.dappId) >= 0);
-                $scope.loading = false;
-                console.log("Loading: false");
-            });
+    $scope.installRequest = function (masterPassphrase) {
+        data = {
+            "id": $stateParams.dappId
+        };
+        if (masterPassphrase) {
+            data.master = masterPassphrase;
         }
-
-        $scope.installingIds = [];
-        $scope.removingIds = [];
-        $scope.launchedIds = [];
-
-        $scope.isInstalling = function () {
-            return ($scope.installingIds.indexOf($stateParams.dappId) >= 0);
-        }
-        $scope.isLaunched = function () {
-            return ($scope.launchedIds.indexOf($stateParams.dappId) >= 0);
-        }
-        $scope.isRemoving = function () {
-            return ($scope.removingIds.indexOf($stateParams.dappId) >= 0);
-        }
-
-        $scope.getInstalling = function () {
-            $http.get("/api/dapps/installing").then(function (response) {
-                if (response.data.success) {
-                    $scope.installingIds = response.data.installing;
+        $scope.installingIds.push($stateParams.dappId);
+        $http.post("/api/dapps/install", data).then(function (response) {
+            $scope.getInstalling();
+            $scope.getLaunched();
+            $scope.getRemoving();
+            if (response.data.success == true) {
+                $scope.installed = true;
+                if ($scope.dapp.type == 1) {
+                    $scope.openDapp();
                 }
-            });
-        };
-        $scope.getRemoving = function () {
-            $http.get("/api/dapps/removing").then(function (response) {
-                if (response.data.success) {
-                    $scope.removingIds = response.data.removing;
-                }
-            });
-        };
-        $scope.getLaunched = function () {
-            $http.get("/api/dapps/launched").then(function (response) {
-                if (response.data.success) {
-                    $scope.launchedIds = response.data.launched;
-                }
-            });
-        };
-
-        //previous != previous :)
-        $scope.view.page = {title: '', previous: 'main.dappstore'};
-        $scope.view.bar = {};
-        $scope.showMore = false;
-        $scope.changeShowMore = function () {
-            $scope.showMore = !$scope.showMore;
-        };
-
-        $http.get("/api/dapps/get?id=" + $stateParams.dappId).then(function (response) {
-            $scope.dapp = response.data.dapp;
-            if ($scope.dapp.git) {
-                $scope.dapp.githublink = $scope.githubLink($scope.dapp.git);
-                console.log($scope.githublink);
             }
-            $scope.view.page = {title: $scope.dapp.name, previous: 'main.dappstore'};
-            $scope.view.inLoading = false;
+            else {
+                $scope.errorModal = errorModal.activate({
+                    title: 'Installing Dapp error',
+                    error: response.data.error,
+                    destroy: function () {
+
+                    }
+                })
+            }
         });
+    }
 
-        $scope.uninstallRequest = function (masterPassphrase) {
-            data = {
-                "id": $stateParams.dappId
-            };
-            if (masterPassphrase) {
-                data.master = masterPassphrase;
-            }
-            $http.post("/api/dapps/uninstall", data).then(function (response) {
-                $scope.getInstalling();
-                $scope.getLaunched();
-                $scope.getRemoving();
-                if (response.data.success == true) {
-                    $scope.installed = false;
-                }
-                else {
-                    $scope.errorModal = errorModal.activate({
-                        title: 'Uninstalling Dapp error',
-                        error: response.data.error,
-                        destroy: function () {
-
-                        }
-                    })
-                }
-            });
-        }
-
-        $scope.uninstallDapp = function () {
-            $scope.confirmDeletionModal = confirmDeletionModal.activate({
-                destroy: function (yesDelete) {
-                    if (yesDelete) {
-                        if ($scope.ismasterpasswordenabled) {
-                            $scope.masterPassphraseModal = masterPassphraseModal.activate({
-                                destroy: function (masterPass) {
-                                    if (masterPass) {
-                                        $scope.uninstallRequest(masterPass);
-                                    }
-                                }
-                            })
-                        }
-                        else {
-                            $scope.uninstallRequest();
-                        }
+    $scope.installDapp = function () {
+        if ($scope.ismasterpasswordenabled) {
+            $scope.masterPassphraseModal = masterPassphraseModal.activate({
+                destroy: function (masterPass) {
+                    if (masterPass) {
+                        $scope.installRequest(masterPass);
                     }
                 }
             })
-
-
         }
+        else {
+            $scope.installRequest();
+        }
+    }
 
-        $scope.installRequest = function (masterPassphrase) {
-            data = {
-                "id": $stateParams.dappId
-            };
-            if (masterPassphrase) {
-                data.master = masterPassphrase;
+    $scope.launchRequest = function(masterPass){
+        data = {
+            "params": [userService.rememberPassphrase],
+            "id": $stateParams.dappId
+        }
+        if (masterPass) {
+            data.master = masterPass;
+        }
+        $http.post("/api/dapps/launch", data).then(function (response) {
+            $scope.getInstalling();
+            $scope.getLaunched();
+            $scope.getRemoving();
+            if (response.data.success == true) {
+                $scope.openDapp();
             }
-            $scope.installingIds.push($stateParams.dappId);
-            $http.post("/api/dapps/install", data).then(function (response) {
-                $scope.getInstalling();
-                $scope.getLaunched();
-                $scope.getRemoving();
-                if (response.data.success == true) {
-                    $scope.installed = true;
-                    if ($scope.dapp.type == 1) {
-                        $scope.openDapp();
+            else {
+                $scope.errorModal = errorModal.activate({
+                    title: 'Launching Dapp error',
+                    error: response.data.error,
+                    destroy: function () {
+
                     }
-                }
-                else {
-                    $scope.errorModal = errorModal.activate({
-                        title: 'Installing Dapp error',
-                        error: response.data.error,
-                        destroy: function () {
+                })
+            }
+        });
+    }
 
-                        }
-                    })
-                }
-            });
+    $scope.runDApp = function (type) {
+        if (type == 1) {
+            $scope.openDapp();
         }
-
-        $scope.installDapp = function () {
+        else {
             if ($scope.ismasterpasswordenabled) {
                 $scope.masterPassphraseModal = masterPassphraseModal.activate({
                     destroy: function (masterPass) {
                         if (masterPass) {
-                            $scope.installRequest(masterPass);
+                            $scope.launchRequest(masterPass);
                         }
                     }
                 })
             }
             else {
-                $scope.installRequest();
+                $scope.launchRequest();
             }
         }
+    }
 
-        $scope.launchRequest = function(masterPass){
-            data = {
-                "params": [userService.rememberPassphrase],
-                "id": $stateParams.dappId
-            }
-            if (masterPass) {
-                data.master = masterPass;
-            }
-            $http.post("/api/dapps/launch", data).then(function (response) {
-                $scope.getInstalling();
-                $scope.getLaunched();
-                $scope.getRemoving();
-                if (response.data.success == true) {
-                    $scope.openDapp();
-                }
-                else {
-                    $scope.errorModal = errorModal.activate({
-                        title: 'Launching Dapp error',
-                        error: response.data.error,
-                        destroy: function () {
-
-                        }
-                    })
-                }
-            });
+    $scope.openDapp = function () {
+        if ($scope.dapp.type == 1) {
+            var link = angular.element('<a href="' + $scope.dapp.link + '" target="_blank"></a>');
         }
-
-        $scope.runDApp = function (type) {
-            // open dapp
-            if (type == 1) {
-                $scope.openDapp();
-            }
-            else {
-                if ($scope.ismasterpasswordenabled) {
-                    $scope.masterPassphraseModal = masterPassphraseModal.activate({
-                        destroy: function (masterPass) {
-                            if (masterPass) {
-                                $scope.launchRequest(masterPass);
-                            }
-                        }
-                    })
-                }
-                else {
-                    $scope.launchRequest();
-                }
-            }
+        else {
+            var link = angular.element('<a href="' +
+                '/dapps/' + $stateParams.dappId + '" target="_blank"></a>');
         }
+        angular.element(document.body).append(link);
+        link[0].style.display = "none";
+        link[0].click();
+        link.remove();
+    }
 
-        $scope.openDapp = function () {
-            // open dapp
-            if ($scope.dapp.type == 1) {
-                var link = angular.element('<a href="' + $scope.dapp.link + '" target="_blank"></a>');
-            }
-            else {
-                var link = angular.element('<a href="' +
-                    '/dapps/' + $stateParams.dappId + '" target="_blank"></a>');
-            }
-            angular.element(document.body).append(link);
-            link[0].style.display = "none";
-            link[0].click();
-            link.remove();
+    $scope.githubLink = function (git) {
+        return git.replace("git@", "https://").replace(".com:", ".com/").replace('.git', '');
+    }
+
+    $scope.isInstalled();
+
+    $scope.getInstalling();
+    $scope.getLaunched();
+    $scope.getRemoving();
+
+    $scope.$on('$destroy', function () {
+        $interval.cancel($scope.stateDappInterval);
+    });
+
+    $scope.$on('updateControllerData', function (event, data) {
+        if (data.indexOf('main.dapps') != -1) {
+            $scope.getInstalling();
+            $scope.getLaunched();
+            $scope.getRemoving();
         }
+    });
 
-        $scope.githubLink = function (git) {
-            return git.replace("git@", "https://").replace(".com:", ".com/").replace('.git', '');
-        }
-
-        $scope.isInstalled();
-
-        $scope.getInstalling();
-        $scope.getLaunched();
-        $scope.getRemoving();
-
-        $scope.$on('$destroy', function () {
-            $interval.cancel($scope.stateDappInterval);
-        });
-
-        $scope.$on('updateControllerData', function (event, data) {
-            if (data.indexOf('main.dapps') != -1) {
-                $scope.getInstalling();
-                $scope.getLaunched();
-                $scope.getRemoving();
-            }
-        });
-
-    }]);
+}]);

@@ -45,6 +45,5 @@ angular.module('liskApp').filter('timeAgoFilter', function ($filter) {
         }
 
         return Math.floor(diffTime / 60 / 60 / 24 / 30 / 12) + ' years ago';
-
     }
 });

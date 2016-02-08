@@ -10,4 +10,5 @@ angular.module('liskApp').controller('transactionInfoController', ["$scope", "$h
     $scope.close = function () {
         transactionInfo.deactivate();
     }
+
 }]);

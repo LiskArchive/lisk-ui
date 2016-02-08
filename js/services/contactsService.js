@@ -1,6 +1,7 @@
 require('angular');
 
 angular.module('liskApp').service('contactsService', function ($http, userService, $filter) {
+
     function filterData(data, filter) {
         return $filter('filter')(data, filter)
     }
@@ -83,4 +84,5 @@ angular.module('liskApp').service('contactsService', function ($http, userServic
     }
 
     return contacts;
+
 });

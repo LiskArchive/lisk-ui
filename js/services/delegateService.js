@@ -131,5 +131,7 @@ angular.module('liskApp').service('delegateService', function ($http, $filter) {
                 });
         }
     };
+
     return delegates;
+
 });

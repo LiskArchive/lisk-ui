@@ -21,5 +21,4 @@ angular.module('liskApp').controller('masterPassphraseModalController', ["$scope
         }
     }
 
-
 }]);

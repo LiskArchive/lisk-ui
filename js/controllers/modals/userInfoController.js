@@ -59,4 +59,5 @@ angular.module('liskApp').controller('userInfoController', ["$scope", "$http", "
     }
 
     $scope.getAccountDetail($scope.userId);
+
 }]);

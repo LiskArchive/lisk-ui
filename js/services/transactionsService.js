@@ -134,5 +134,5 @@ angular.module('liskApp').service('transactionsService', function ($http, userSe
     }
 
     return transactionsList;
-})
-;
+
+});

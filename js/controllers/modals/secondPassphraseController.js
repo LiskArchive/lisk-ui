@@ -17,6 +17,7 @@ angular.module('liskApp').controller('secondPassphraseModalController', ["$scope
             }
         });
     }
+
     $scope.getFee();
 
     $scope.close = function () {
@@ -69,4 +70,5 @@ angular.module('liskApp').controller('secondPassphraseModalController', ["$scope
             }
         });
     }
+
 }]);

@@ -3,7 +3,7 @@ require('../../js/factories/viewFactory');
 require('../../js/factories/socketFactory');
 require('../../js/factories/focusFactory');
 require('../../js/factories/cutFactory');
-//modals
+// Modals
 require('../../js/factories/modals/addContactModal');
 require('../../js/factories/modals/blockModal');
 require('../../js/factories/modals/userSettingsModal');

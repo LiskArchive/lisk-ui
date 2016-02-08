@@ -1,6 +1,7 @@
 require('angular');
 
 angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "$http", "userService", "$timeout", function ($scope, voteModal, $http, userService, $timeout) {
+
     $scope.voting = false;
     $scope.fromServer = '';
     $scope.passmode = false;
@@ -16,7 +17,6 @@ angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "
         }
         return size;
     };
-
 
     $scope.getFee = function(){
         $http.get("/api/accounts/delegates/fee").then(function (resp) {
@@ -108,4 +108,5 @@ angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "
             }
         });
     }
+
 }]);

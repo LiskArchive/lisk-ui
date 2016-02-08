@@ -1,7 +1,7 @@
 require('angular');
 
-angular.module('liskApp').controller('sendTransactionController', ["$scope", "sendTransactionModal", "$http", "userService", "$timeout", "$filter",
-    function ($scope, sendTransactionModal, $http, userService, $timeout, $filter) {
+angular.module('liskApp').controller('sendTransactionController', ["$scope", "sendTransactionModal", "$http", "userService", "$timeout", "$filter", function ($scope, sendTransactionModal, $http, userService, $timeout, $filter) {
+
     $scope.sending = false;
     $scope.passmode = false;
     $scope.accountValid = true;
@@ -143,7 +143,6 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
         sendTransactionModal.deactivate();
     }
 
-
     $scope.moreThanEightDigits = function (number) {
         if (number.indexOf(".") < 0) {
             return false;
@@ -166,8 +165,8 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
                 var strs = $scope.amount.split('.');
                 $scope.maxlength = strs[0].length + 9;
             }
-            // calculate fee.
 
+            // Calculate fee
             var fee = parseInt($scope.amount * 100000000 / 100 * $scope.currentFee) / 100000000;
 
             if ($scope.amount == 0) {
@@ -230,7 +229,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
 
         var amount = parts[0];
 
-        //no fractional part
+        // No fractional part
         if (parts.length == 1) {
             var fraction = "00000000";
         } else if (parts.length == 2) {
@@ -250,13 +249,13 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
 
         var result = amount + "" + fraction;
 
-        //in case there's a comma or something else in there.. at this point there should only be numbers
+        // In case there's a comma or something else in there. At this point there should only be numbers.
         if (!/^\d+$/.test(result)) {
             $scope.errorMessage = "Wrong LISK value";
             throw "Invalid input.";
         }
 
-        //remove leading zeroes
+        // Remove leading zeroes
         result = result.replace(/^0+/, "");
 
         if (result === "") {
@@ -273,7 +272,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
 
         var amount = parts[0];
 
-        //no fractional part
+        // No fractional part
         if (parts.length == 1) {
             var fraction = "00000000";
         } else if (parts.length == 2) {
@@ -293,7 +292,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
 
         var result = amount + "" + fraction;
 
-        //in case there's a comma or something else in there.. at this point there should only be numbers
+        // In case there's a comma or something else in there. At this point there should only be numbers.
         if (!/^\d+$/.test(result)) {
             $scope.errorMessage = "Wrong LISK value";
          return false;
@@ -353,5 +352,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
 
         }
     }
+
     $scope.getCurrentFee();
+
 }]);

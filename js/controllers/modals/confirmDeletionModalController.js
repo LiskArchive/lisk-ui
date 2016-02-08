@@ -9,6 +9,4 @@ angular.module('liskApp').controller('confirmDeletionModalController', ["$scope"
         confirmDeletionModal.deactivate();
     }
 
-
-
 }]);

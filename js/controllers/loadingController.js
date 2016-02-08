@@ -1,8 +1,10 @@
 require('angular');
 
 angular.module('liskApp').controller("loadingController", ["$scope", "$http", "$interval", "$window", function ($scope, $http, $interval, $window) {
+
     $scope.height = null;
     $scope.height = 0;
+
     $scope.getHeight = function () {
         $http.get("/api/loader/status")
             .then(function (resp) {
@@ -23,4 +25,5 @@ angular.module('liskApp').controller("loadingController", ["$scope", "$http", "$
     $scope.heightInterval = $interval(function () {
         $scope.getHeight();
     }, 2000);
+
 }]);

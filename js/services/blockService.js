@@ -143,4 +143,5 @@ angular.module('liskApp').service('blockService', function ($http) {
     }
 
     return blocks;
+
 });

@@ -1,7 +1,7 @@
 require('angular');
 
-angular.module('liskApp').controller('newUserController', ["$scope", "$http", "newUser", "userService", "$state", "viewFactory", 'gettextCatalog',
-    function ($scope, $http, newUser, userService, $state, viewFactory, gettextCatalog) {
+angular.module('liskApp').controller('newUserController', ["$scope", "$http", "newUser", "userService", "$state", "viewFactory", 'gettextCatalog', function ($scope, $http, newUser, userService, $state, viewFactory, gettextCatalog) {
+
     $scope.noMatch = false;
     $scope.firstStep = true;
     $scope.view = viewFactory;
@@ -15,7 +15,6 @@ angular.module('liskApp').controller('newUserController', ["$scope", "$http", "n
     $scope.generatePassphrase = function () {
         var Mnemonic = require('bitcore-mnemonic');
         var code = new Mnemonic(Mnemonic.Words.ENGLISH);
-        //$scope.newPassphrase = code.toHDPrivateKey();
         $scope.newPassphrase = code.toString();
     };
 
@@ -48,8 +47,6 @@ angular.module('liskApp').controller('newUserController', ["$scope", "$http", "n
                         userService.setForging(resp.data.account.forging);
                         userService.setSecondPassphrase(resp.data.account.secondSignature);
                         userService.unconfirmedPassphrase = resp.data.account.unconfirmedSignature;
-
-                        //angular.element(document.getElementById("forgingButton")).hide();
                         $state.go('main.dashboard');
                     } else {
                         alert("Something wrong. Restart server please.");
@@ -57,12 +54,11 @@ angular.module('liskApp').controller('newUserController', ["$scope", "$http", "n
                 });
         }
     }
+
     $scope.close = function () {
         newUser.deactivate();
     }
 
-    //runtime
     $scope.generatePassphrase();
-}
-])
-;
+
+}]);

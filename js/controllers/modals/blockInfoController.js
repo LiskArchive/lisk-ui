@@ -4,6 +4,7 @@ angular.module('liskApp').controller('blockInfoController', ["$scope", "$http", 
 
     $scope.transactions = [];
     $scope.transactionsLength = 0;
+
     $scope.getTransactionsOfBlock = function (blockId) {
         $http.get("/api/transactions/", {params: {blockId: blockId}})
             .then(function (resp) {
@@ -39,4 +40,5 @@ angular.module('liskApp').controller('blockInfoController', ["$scope", "$http", 
                 $scope.getTransactionsOfBlock($scope.block.id);
             });
     }
+
 }]);

@@ -1,4 +1,5 @@
 'use strict';
+
 window.$ = require('../../bower_components/jquery/dist/jquery.js');
 window.jQuery = require('../../bower_components/jquery/dist/jquery.js');
 window.Chart = require('../../node_modules/chart.js/Chart.min.js');

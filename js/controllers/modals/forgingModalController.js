@@ -1,6 +1,7 @@
 require('angular');
 
 angular.module('liskApp').controller('forgingModalController', ["$scope", "forgingModal", "$http", "userService", 'gettextCatalog', function ($scope, forgingModal, $http, userService, gettextCatalog) {
+
     $scope.error = null;
     $scope.forging = userService.forging;
     $scope.fee = 0;
@@ -67,11 +68,11 @@ angular.module('liskApp').controller('forgingModalController', ["$scope", "forgi
                         $scope.destroy(!resp.data.success);
                     }
 
-
                     forgingModal.deactivate();
                 } else {
                     $scope.error = resp.data.error;
                 }
             });
     }
+
 }]);

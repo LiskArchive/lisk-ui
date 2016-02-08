@@ -1,7 +1,6 @@
 require('angular');
 
 angular.module('liskApp').filter('decimalFilter', function () {
-
     return function (fee) {
         if (!fee) {
             return [0][0];

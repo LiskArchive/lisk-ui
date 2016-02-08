@@ -98,5 +98,5 @@ angular.module('liskApp').service('multiService', function ($http, userService, 
     }
 
     return service;
-})
-;
+
+});

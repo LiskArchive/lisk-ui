@@ -2,9 +2,9 @@ require('angular');
 
 angular.module('liskApp').filter('timestampFilter', function () {
     return function (timestamp) {
-		// epoch time
-		var d = new Date(Date.UTC(2015, 3, 9, 0, 0, 0, 0));
-		var t = parseInt(d.getTime() / 1000);
+        // Epoch time
+        var d = new Date(Date.UTC(2015, 3, 9, 0, 0, 0, 0));
+        var t = parseInt(d.getTime() / 1000);
 
         var d = new Date((timestamp + t) * 1000);
         var month = d.getMonth() + 1;
