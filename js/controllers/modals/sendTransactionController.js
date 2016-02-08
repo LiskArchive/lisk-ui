@@ -54,7 +54,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
             return;
         }
         if ($scope.rememberedPassphrase) {
-            var isAddress = /^[0-9]+[C|c]$/g;
+            var isAddress = /^[0-9]+[L|l]$/g;
             var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
             var correctAddress = isAddress.test($scope.to);
             if ($scope.to.trim() == '') {
@@ -92,7 +92,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
             }
         }
         else {
-            var isAddress = /^[0-9]+[C|c]$/g;
+            var isAddress = /^[0-9]+[L|l]$/g;
             var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
             var correctAddress = isAddress.test($scope.to);
             if ($scope.to.trim() == '') {

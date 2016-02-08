@@ -44,7 +44,7 @@ angular.module('liskApp').controller('multisignatureModalController',
 
             $scope.addMember = function (contact) {
                 $scope.addingError = '';
-                var isAddress = /^[0-9]+[C|c]$/g;
+                var isAddress = /^[0-9]+[L|l]$/g;
                 var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
                 var correctAddress = isAddress.test(contact);
                 var correctName = allowSymbols.test(contact.toLowerCase());

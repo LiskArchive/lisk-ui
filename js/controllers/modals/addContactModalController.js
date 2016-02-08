@@ -30,7 +30,7 @@ angular.module('liskApp').controller('addContactModalController', ["$scope", "ad
                 return;
             }
             if ($scope.rememberedPassphrase) {
-                var isAddress = /^[0-9]+[C|c]$/g;
+                var isAddress = /^[0-9]+[L|l]$/g;
                 var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
                 if ($scope.contact.trim() == '') {
                     $scope.errorMessage = 'Empty contact'
@@ -49,7 +49,7 @@ angular.module('liskApp').controller('addContactModalController', ["$scope", "ad
 
             }
             else {
-                var isAddress = /^[0-9]+[C|c]$/g;
+                var isAddress = /^[0-9]+[L|l]$/g;
                 var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
                 if ($scope.contact.trim() == '') {
                     $scope.errorMessage = 'Empty contact'

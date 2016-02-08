@@ -51,7 +51,7 @@ angular.module('liskApp').controller('registrationDelegateModalController', ["$s
                 return;
             }
             if ($scope.rememberedPassphrase) {
-                var isAddress = /^[0-9]+[C|c]$/g;
+                var isAddress = /^[0-9]+[L|l]$/g;
                 var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
                 if ($scope.delegateData.username.trim() == '' && !$scope.username) {
                     $scope.error = 'Empty username'
@@ -72,7 +72,7 @@ angular.module('liskApp').controller('registrationDelegateModalController', ["$s
 
             }
             else {
-                var isAddress = /^[0-9]+[C|c]$/g;
+                var isAddress = /^[0-9]+[L|l]$/g;
                 var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
                 if ($scope.delegateData.username.trim() == '' && !$scope.username) {
                     $scope.error = 'Empty username'

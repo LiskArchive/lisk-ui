@@ -24,7 +24,7 @@ angular.module('liskApp').controller('userSettingsModalController', ["$scope", "
             $scope.pass = '';
             return;
         }
-        var isAddress = (/^[0-9]+[C|c]$/g).test($scope.username);
+        var isAddress = (/^[0-9]+[L|l]$/g).test($scope.username);
         var allowSymbols = (/^[a-z0-9!@$&_.]+$/g).test($scope.username.toLowerCase());
         if ($scope.rememberedPassphrase) {
 
