@@ -76,7 +76,7 @@ msgstr ""
 
 #: js/controllers/blockchainController.js:45
 #: js/controllers/transactionsController.js:66
-#: js/controllers/walletPendingsController.js:163
+#: js/controllers/walletPendingsController.js:48
 #: js/controllers/walletTransactionsController.js:76
 #: js/controllers/walletsController.js:151
 #: partials/modals/transactionInfo.html:16
@@ -270,7 +270,7 @@ msgstr ""
 msgid "Confirmations"
 msgstr ""
 
-#: js/controllers/walletPendingsController.js:165
+#: js/controllers/walletPendingsController.js:50
 #: js/controllers/walletsController.js:153
 msgid "Confirmations Needed"
 msgstr ""
@@ -395,7 +395,7 @@ msgstr ""
 #: js/controllers/blockchainController.js:46
 #: js/controllers/forgingController.js:124
 #: js/controllers/transactionsController.js:67
-#: js/controllers/walletPendingsController.js:164
+#: js/controllers/walletPendingsController.js:49
 #: js/controllers/walletTransactionsController.js:77
 #: js/controllers/walletsController.js:152
 #: partials/modals/transactionInfo.html:19
@@ -541,7 +541,7 @@ msgstr ""
 #: js/controllers/delegatesController.js:169
 #: js/controllers/pendingsController.js:30
 #: js/controllers/votedDelegatesController.js:131
-#: js/controllers/walletPendingsController.js:159
+#: js/controllers/walletPendingsController.js:44
 msgid "Lisk Address"
 msgstr ""
 
@@ -882,7 +882,7 @@ msgid "Rank"
 msgstr ""
 
 #: js/controllers/transactionsController.js:64
-#: js/controllers/walletPendingsController.js:161
+#: js/controllers/walletPendingsController.js:46
 #: js/controllers/walletTransactionsController.js:74
 #: js/controllers/walletsController.js:149
 #: partials/account.html:86
@@ -1089,7 +1089,7 @@ msgstr ""
 #: js/controllers/blockchainController.js:43
 #: js/controllers/forgingController.js:123
 #: js/controllers/transactionsController.js:65
-#: js/controllers/walletPendingsController.js:162
+#: js/controllers/walletPendingsController.js:47
 #: js/controllers/walletTransactionsController.js:75
 #: js/controllers/walletsController.js:150
 #: partials/account.html:89
@@ -1132,7 +1132,7 @@ msgid "Transaction"
 msgstr ""
 
 #: js/controllers/transactionsController.js:62
-#: js/controllers/walletPendingsController.js:160
+#: js/controllers/walletPendingsController.js:45
 #: js/controllers/walletTransactionsController.js:73
 #: js/controllers/walletsController.js:148
 #: partials/account.html:80
@@ -1151,7 +1151,7 @@ msgid "Transactions"
 msgstr ""
 
 #: js/controllers/walletTransactionsController.js:7
-msgid "Transactions for 17649443584386761059C"
+msgid "Transactions for 17649443584386761059L"
 msgstr ""
 
 #: partials/dapp-entry.html:62
