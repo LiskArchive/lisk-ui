@@ -82,10 +82,10 @@ msgid "Adding new contact"
 msgstr "Neuen Kontakt hinzufügen"
 
 #: js/controllers/blockchainController.js:45
-#: js/controllers/transactionsController.js:66
-#: js/controllers/walletPendingsController.js:163
-#: js/controllers/walletTransactionsController.js:76
-#: js/controllers/walletsController.js:151
+#: js/controllers/transactionsController.js:67
+#: js/controllers/walletPendingsController.js:47
+#: js/controllers/walletTransactionsController.js:72
+#: js/controllers/walletsController.js:148
 #: partials/modals/transactionInfo.html:16 partials/modals/userInfo.html:67
 msgid "Amount"
 msgstr "Summe"
@@ -94,9 +94,9 @@ msgstr "Summe"
 msgid "Amount (Fee)"
 msgstr "Summe (Gebühren)"
 
-#: js/controllers/delegatesController.js:171
-#: js/controllers/forgingController.js:67
-#: js/controllers/votedDelegatesController.js:133 partials/forging.html:45
+#: js/controllers/delegatesController.js:164
+#: js/controllers/forgingController.js:66
+#: js/controllers/votedDelegatesController.js:127 partials/forging.html:45
 msgid "Approval"
 msgstr "Zustimmung"
 
@@ -143,7 +143,7 @@ msgstr ""
 "Delegates verteilt. Gebühren: {{fee | liskFilter}} LISK."
 
 #: js/controllers/blockchainController.js:41
-#: js/controllers/forgingController.js:122 partials/modals/blockInfo.html:7
+#: js/controllers/forgingController.js:121 partials/modals/blockInfo.html:7
 #: partials/modals/transactionInfo.html:32
 #: partials/modals/transactionInfo.html:4
 msgid "Block ID"
@@ -251,14 +251,14 @@ msgstr "Bestätigen"
 msgid "Confirmation"
 msgstr "Bestätigung"
 
-#: js/controllers/walletTransactionsController.js:78
-#: js/controllers/walletsController.js:117 partials/modals/blockInfo.html:20
+#: js/controllers/walletTransactionsController.js:74
+#: js/controllers/walletsController.js:115 partials/modals/blockInfo.html:20
 #: partials/modals/transactionInfo.html:13 partials/modals/userInfo.html:64
 msgid "Confirmations"
 msgstr "Bestätigungen"
 
-#: js/controllers/walletPendingsController.js:165
-#: js/controllers/walletsController.js:153
+#: js/controllers/walletPendingsController.js:49
+#: js/controllers/walletsController.js:150
 msgid "Confirmations Needed"
 msgstr "Benötigte Bestätigungen"
 
@@ -329,11 +329,11 @@ msgid "Description"
 msgstr "Beschreibung"
 
 #: js/controllers/modals/errorModalController.js:10
-#: js/controllers/modals/forgingModalController.js:10
+#: js/controllers/modals/forgingModalController.js:11
 msgid "Disable Forging"
 msgstr "Forging deaktivieren"
 
-#: js/controllers/appController.js:342
+#: js/controllers/appController.js:335
 msgid "Disabled"
 msgstr "Deaktiviert"
 
@@ -341,16 +341,16 @@ msgstr "Deaktiviert"
 msgid "Empty passphrase"
 msgstr "Passphrase leer"
 
-#: js/controllers/modals/errorModalController.js:13
+#: js/controllers/modals/errorModalController.js:12
 #: js/controllers/modals/forgingModalController.js:13
 msgid "Enable Forging"
 msgstr "Forging aktivieren"
 
-#: partials/settings.html:19
+#: partials/settings.html:22
 msgid "Enable Multi-Signature on this account"
 msgstr "Multi-Signature auf diesem Account aktivieren"
 
-#: js/controllers/appController.js:342
+#: js/controllers/appController.js:335
 msgid "Enabled"
 msgstr "Aktiviert"
 
@@ -364,11 +364,11 @@ msgid "FORGING"
 msgstr "FORGING"
 
 #: js/controllers/blockchainController.js:46
-#: js/controllers/forgingController.js:124
-#: js/controllers/transactionsController.js:67
-#: js/controllers/walletPendingsController.js:164
-#: js/controllers/walletTransactionsController.js:77
-#: js/controllers/walletsController.js:152
+#: js/controllers/forgingController.js:123
+#: js/controllers/transactionsController.js:68
+#: js/controllers/walletPendingsController.js:48
+#: js/controllers/walletTransactionsController.js:73
+#: js/controllers/walletsController.js:149
 #: partials/modals/transactionInfo.html:19 partials/modals/userInfo.html:70
 msgid "Fee"
 msgstr "Gebühren"
@@ -378,7 +378,7 @@ msgid "Forged Blocks"
 msgstr "Generierte Blöcke"
 
 #: js/controllers/delegatesController.js:9
-#: js/controllers/forgingController.js:90
+#: js/controllers/forgingController.js:89
 #: js/controllers/votedDelegatesController.js:8 partials/app-template.html:103
 #: partials/app-template.html:244
 msgid "Forging"
@@ -444,7 +444,7 @@ msgstr "Zurückgehen"
 msgid "Go to previous page"
 msgstr "Zur vorherigen Seite"
 
-#: js/controllers/walletsController.js:115
+#: js/controllers/walletsController.js:113
 msgid "Group Name"
 msgstr "Gruppen Name"
 
@@ -453,9 +453,9 @@ msgid "HOME"
 msgstr "HOME"
 
 #: js/controllers/blockchainController.js:40
-#: js/controllers/forgingController.js:121
-#: js/controllers/transactionsController.js:61
-#: js/controllers/walletTransactionsController.js:72
+#: js/controllers/forgingController.js:120
+#: js/controllers/transactionsController.js:62
+#: js/controllers/walletTransactionsController.js:68
 #: partials/modals/blockInfo.html:23
 msgid "Height"
 msgstr "Höhe"
@@ -496,7 +496,7 @@ msgstr "LISK Summe"
 msgid "LISK Earned"
 msgstr "LISK verdient"
 
-#: partials/settings.html:10
+#: partials/settings.html:9
 msgid "Language"
 msgstr "Sprache"
 
@@ -516,11 +516,11 @@ msgstr "Neueste Version"
 msgid "Lisk - Decentralized Application Platform"
 msgstr "Lisk - Die Dezentrale Applikations Plattform"
 
-#: js/controllers/contactsController.js:55
-#: js/controllers/delegatesController.js:169
-#: js/controllers/pendingsController.js:30
-#: js/controllers/votedDelegatesController.js:131
-#: js/controllers/walletPendingsController.js:159
+#: js/controllers/contactsController.js:54
+#: js/controllers/delegatesController.js:162
+#: js/controllers/pendingsController.js:31
+#: js/controllers/votedDelegatesController.js:125
+#: js/controllers/walletPendingsController.js:43
 msgid "Lisk Address"
 msgstr "Lisk Adresse"
 
@@ -532,7 +532,7 @@ msgstr "Lisk Client"
 msgid "Lisk Client Outdated"
 msgstr "Lisk Client Veraltet"
 
-#: js/controllers/walletsController.js:8
+#: js/controllers/walletsController.js:7
 msgid "Loading Multi-Signature Groups"
 msgstr "Lade Multi-Signature Gruppen"
 
@@ -545,7 +545,7 @@ msgstr "Lade die Blockchain"
 msgid "Loading contacts"
 msgstr "Lade deine Kontakte"
 
-#: js/controllers/dappController.js:6
+#: js/controllers/dappController.js:7
 msgid "Loading dapp"
 msgstr "Lade die Dapp"
 
@@ -563,12 +563,12 @@ msgstr "Lade das Dashboard"
 msgid "Loading delegates"
 msgstr "Lade die Delegates"
 
-#: js/controllers/forgingController.js:89
+#: js/controllers/forgingController.js:88
 msgid "Loading forging status"
 msgstr "Lade den Forging Status"
 
 #: js/controllers/transactionsController.js:7
-#: js/controllers/walletPendingsController.js:8
+#: js/controllers/walletPendingsController.js:7
 msgid "Loading transactions"
 msgstr "Lade Transaktionen"
 
@@ -606,7 +606,7 @@ msgid "Master Passphrase"
 msgstr "Master Passphrase"
 
 #: js/controllers/modals/multiMembersModalController.js:5
-#: js/controllers/walletsController.js:116
+#: js/controllers/walletsController.js:114
 msgid "Members"
 msgstr "Mitglieder"
 
@@ -614,8 +614,8 @@ msgstr "Mitglieder"
 msgid "More"
 msgstr "Mehr"
 
-#: js/controllers/walletsController.js:9 partials/app-template.html:79
-#: partials/settings.html:14
+#: js/controllers/walletsController.js:8 partials/app-template.html:79
+#: partials/settings.html:11
 msgid "Multi-Signature"
 msgstr "Multi-Signature"
 
@@ -655,8 +655,8 @@ msgstr "NÄCHSTER SCHRITT"
 msgid "NO"
 msgstr "NEIN"
 
-#: js/controllers/delegatesController.js:168
-#: js/controllers/votedDelegatesController.js:130
+#: js/controllers/delegatesController.js:161
+#: js/controllers/votedDelegatesController.js:124
 #: partials/modals/addDappModal.html:126 partials/modals/addDappModal.html:359
 #: partials/modals/addDappModal.html:388 partials/modals/addDappModal.html:62
 #: partials/modals/userInfo.html:18
@@ -713,9 +713,9 @@ msgstr "Aus"
 msgid "On"
 msgstr "An"
 
-#: js/controllers/forgingController.js:44
-#: js/controllers/forgingController.js:56
-#: js/controllers/forgingController.js:67
+#: js/controllers/forgingController.js:43
+#: js/controllers/forgingController.js:55
+#: js/controllers/forgingController.js:66
 msgid "Others"
 msgstr "Andere"
 
@@ -735,7 +735,7 @@ msgstr "Wartend ({{contacts.followersCount}})"
 msgid "Pending Requests"
 msgstr "Wartende Anfragen"
 
-#: js/controllers/walletPendingsController.js:9
+#: js/controllers/walletPendingsController.js:8
 msgid "Pending transactions"
 msgstr "Wartende Transaktionen"
 
@@ -799,13 +799,13 @@ msgstr "Bitte gibt deine Passphrase ein."
 msgid "Please enter your second passphrase below."
 msgstr "Bitte gib unten deine 2. Passphrase ein."
 
-#: js/controllers/modals/addDappModalController.js:175
+#: js/controllers/modals/addDappModalController.js:166
 msgid ""
 "Please make sure you copy and paste the whole Sia ASCII code. Additionally "
 "please check that there were no characters added."
 msgstr "Bitte kopiere den gesamten Sia ASCII code. "
 
-#: js/controllers/modals/addDappModalController.js:175
+#: js/controllers/modals/addDappModalController.js:166
 msgid ""
 "Please make sure you copy the complete repository link from GitHub. It ends "
 "in .git."
@@ -820,11 +820,11 @@ msgstr "Bitte gib unten deine Passphrase erneut ein."
 msgid "Please read carefully."
 msgstr "Bitte aufmerksam lesen."
 
-#: js/controllers/modals/addDappModalController.js:171
+#: js/controllers/modals/addDappModalController.js:162
 msgid "Please set the GitHub repository link below."
 msgstr "Bitte füge unten den GitHub Repository link ein."
 
-#: js/controllers/modals/addDappModalController.js:171
+#: js/controllers/modals/addDappModalController.js:162
 msgid "Please set the Sia ASCII code below."
 msgstr "Bitte füge unten den SIA ASCII code ein."
 
@@ -865,16 +865,16 @@ msgstr "MEHR"
 msgid "REMOVE VOTE"
 msgstr "VOTE ENTFERNEN"
 
-#: js/controllers/delegatesController.js:167
-#: js/controllers/forgingController.js:44
-#: js/controllers/votedDelegatesController.js:129 partials/forging.html:26
+#: js/controllers/delegatesController.js:160
+#: js/controllers/forgingController.js:43
+#: js/controllers/votedDelegatesController.js:123 partials/forging.html:26
 msgid "Rank"
 msgstr "Rang"
 
-#: js/controllers/transactionsController.js:64
-#: js/controllers/walletPendingsController.js:161
-#: js/controllers/walletTransactionsController.js:74
-#: js/controllers/walletsController.js:149 partials/account.html:86
+#: js/controllers/transactionsController.js:65
+#: js/controllers/walletPendingsController.js:45
+#: js/controllers/walletTransactionsController.js:70
+#: js/controllers/walletsController.js:146 partials/account.html:86
 msgid "Recipient"
 msgstr "Empfänger"
 
@@ -903,7 +903,7 @@ msgid "Repeat second passphrase"
 msgstr "2. Passphrase wiederholen"
 
 #: js/controllers/blockchainController.js:47
-#: js/controllers/forgingController.js:125 partials/modals/blockInfo.html:26
+#: js/controllers/forgingController.js:124 partials/modals/blockInfo.html:26
 msgid "Reward"
 msgstr "Verdienst"
 
@@ -954,11 +954,11 @@ msgstr ""
 msgid "Send LISK"
 msgstr "Versende LISK"
 
-#: js/controllers/transactionsController.js:63 partials/account.html:83
+#: js/controllers/transactionsController.js:64 partials/account.html:83
 msgid "Sender"
 msgstr "Absender"
 
-#: js/controllers/modals/multisignatureModalController.js:7
+#: js/controllers/modals/multisignatureModalController.js:6
 msgid "Set members of account"
 msgstr "Wähle Mitglieder des Accounts"
 
@@ -1088,11 +1088,11 @@ msgstr ""
 "wurde."
 
 #: js/controllers/blockchainController.js:43
-#: js/controllers/forgingController.js:123
-#: js/controllers/transactionsController.js:65
-#: js/controllers/walletPendingsController.js:162
-#: js/controllers/walletTransactionsController.js:75
-#: js/controllers/walletsController.js:150 partials/account.html:89
+#: js/controllers/forgingController.js:122
+#: js/controllers/transactionsController.js:66
+#: js/controllers/walletPendingsController.js:46
+#: js/controllers/walletTransactionsController.js:71
+#: js/controllers/walletsController.js:147 partials/account.html:89
 #: partials/modals/blockInfo.html:38 partials/modals/transactionInfo.html:25
 #: partials/modals/userInfo.html:76
 msgid "Time"
@@ -1122,7 +1122,7 @@ msgstr "Gesamtes Guthaben"
 msgid "Total Fee"
 msgstr "Gesamte Gebühren"
 
-#: js/controllers/forgingController.js:28
+#: js/controllers/forgingController.js:27
 msgid "Total Forged"
 msgstr "Gesamt Geforged"
 
@@ -1130,10 +1130,10 @@ msgstr "Gesamt Geforged"
 msgid "Transaction"
 msgstr "Transaktion"
 
-#: js/controllers/transactionsController.js:62
-#: js/controllers/walletPendingsController.js:160
-#: js/controllers/walletTransactionsController.js:73
-#: js/controllers/walletsController.js:148 partials/account.html:80
+#: js/controllers/transactionsController.js:63
+#: js/controllers/walletPendingsController.js:44
+#: js/controllers/walletTransactionsController.js:69
+#: js/controllers/walletsController.js:145 partials/account.html:80
 #: partials/modals/blockModal.html:17 partials/modals/userInfo.html:59
 #: partials/modals/userInfo.html:83
 msgid "Transaction ID"
@@ -1145,9 +1145,9 @@ msgstr "Transaktions ID"
 msgid "Transactions"
 msgstr "Transaktionen"
 
-#: js/controllers/walletTransactionsController.js:7
-msgid "Transactions for 17649443584386761059C"
-msgstr "Transaktionen für 17649443584386761059C"
+#: js/controllers/walletTransactionsController.js:6
+msgid "Transactions for 17649443584386761059L"
+msgstr "Transaktionen für 17649443584386761059L"
 
 #: partials/dapp-entry.html:62
 msgid "UNINSTALL"
@@ -1162,14 +1162,14 @@ msgstr "UPDATEN"
 msgid "USD Equivalent"
 msgstr "USD Äquivalent"
 
-#: js/controllers/delegatesController.js:170
-#: js/controllers/forgingController.js:56
-#: js/controllers/votedDelegatesController.js:132 partials/forging.html:35
+#: js/controllers/delegatesController.js:163
+#: js/controllers/forgingController.js:55
+#: js/controllers/votedDelegatesController.js:126 partials/forging.html:35
 msgid "Uptime"
 msgstr "Verfügbarkeit"
 
-#: js/controllers/contactsController.js:54
-#: js/controllers/pendingsController.js:29
+#: js/controllers/contactsController.js:53
+#: js/controllers/pendingsController.js:30
 #: partials/modals/userSettingsModal.html:21
 msgid "Username"
 msgstr "Username"
@@ -1315,11 +1315,11 @@ msgstr "Kontakt hinzufügen"
 msgid "add second passphrase"
 msgstr "2. Passphrase hinzufügen"
 
-#: js/controllers/modals/addDappModalController.js:151
+#: js/controllers/modals/addDappModalController.js:142
 msgid "change to SIA ASCII"
 msgstr "wechsel zu SIA ASCII"
 
-#: js/controllers/modals/addDappModalController.js:151
+#: js/controllers/modals/addDappModalController.js:142
 msgid "change to url link"
 msgstr "wechsel zu URL Link"
 
@@ -1379,6 +1379,9 @@ msgstr ""
 #: partials/votes.html:4
 msgid "{{voteList.length}} out of {{count}} Delegates selected"
 msgstr "{{voteList.length}} von {{count}} Delegates ausgewählt"
+
+#~ msgid "Transactions for 17649443584386761059C"
+#~ msgstr "Transaktionen für 17649443584386761059C"
 
 #~ msgid "Confirm Vote"
 #~ msgstr "Vote bestätigen"

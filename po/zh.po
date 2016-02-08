@@ -80,10 +80,10 @@ msgid "Adding new contact"
 msgstr "添加新联系人"
 
 #: js/controllers/blockchainController.js:45
-#: js/controllers/transactionsController.js:66
-#: js/controllers/walletPendingsController.js:163
-#: js/controllers/walletTransactionsController.js:76
-#: js/controllers/walletsController.js:151
+#: js/controllers/transactionsController.js:67
+#: js/controllers/walletPendingsController.js:47
+#: js/controllers/walletTransactionsController.js:72
+#: js/controllers/walletsController.js:148
 #: partials/modals/transactionInfo.html:16 partials/modals/userInfo.html:67
 msgid "Amount"
 msgstr "金额"
@@ -92,9 +92,9 @@ msgstr "金额"
 msgid "Amount (Fee)"
 msgstr "金额(手续费)"
 
-#: js/controllers/delegatesController.js:171
-#: js/controllers/forgingController.js:67
-#: js/controllers/votedDelegatesController.js:133 partials/forging.html:45
+#: js/controllers/delegatesController.js:164
+#: js/controllers/forgingController.js:66
+#: js/controllers/votedDelegatesController.js:127 partials/forging.html:45
 msgid "Approval"
 msgstr "得票率"
 
@@ -139,7 +139,7 @@ msgstr ""
 "受托人"
 
 #: js/controllers/blockchainController.js:41
-#: js/controllers/forgingController.js:122 partials/modals/blockInfo.html:7
+#: js/controllers/forgingController.js:121 partials/modals/blockInfo.html:7
 #: partials/modals/transactionInfo.html:32
 #: partials/modals/transactionInfo.html:4
 msgid "Block ID"
@@ -247,14 +247,14 @@ msgstr "确认"
 msgid "Confirmation"
 msgstr "确认"
 
-#: js/controllers/walletTransactionsController.js:78
-#: js/controllers/walletsController.js:117 partials/modals/blockInfo.html:20
+#: js/controllers/walletTransactionsController.js:74
+#: js/controllers/walletsController.js:115 partials/modals/blockInfo.html:20
 #: partials/modals/transactionInfo.html:13 partials/modals/userInfo.html:64
 msgid "Confirmations"
 msgstr "确认数"
 
-#: js/controllers/walletPendingsController.js:165
-#: js/controllers/walletsController.js:153
+#: js/controllers/walletPendingsController.js:49
+#: js/controllers/walletsController.js:150
 msgid "Confirmations Needed"
 msgstr "需要的确认数"
 
@@ -325,11 +325,11 @@ msgid "Description"
 msgstr "描述"
 
 #: js/controllers/modals/errorModalController.js:10
-#: js/controllers/modals/forgingModalController.js:10
+#: js/controllers/modals/forgingModalController.js:11
 msgid "Disable Forging"
 msgstr "关闭锻造"
 
-#: js/controllers/appController.js:342
+#: js/controllers/appController.js:335
 msgid "Disabled"
 msgstr "残"
 
@@ -337,16 +337,16 @@ msgstr "残"
 msgid "Empty passphrase"
 msgstr "空主密码"
 
-#: js/controllers/modals/errorModalController.js:13
+#: js/controllers/modals/errorModalController.js:12
 #: js/controllers/modals/forgingModalController.js:13
 msgid "Enable Forging"
 msgstr "开启锻造"
 
-#: partials/settings.html:19
+#: partials/settings.html:22
 msgid "Enable Multi-Signature on this account"
 msgstr "在此帐户开启多重签名"
 
-#: js/controllers/appController.js:342
+#: js/controllers/appController.js:335
 msgid "Enabled"
 msgstr "启用"
 
@@ -360,11 +360,11 @@ msgid "FORGING"
 msgstr "锻造"
 
 #: js/controllers/blockchainController.js:46
-#: js/controllers/forgingController.js:124
-#: js/controllers/transactionsController.js:67
-#: js/controllers/walletPendingsController.js:164
-#: js/controllers/walletTransactionsController.js:77
-#: js/controllers/walletsController.js:152
+#: js/controllers/forgingController.js:123
+#: js/controllers/transactionsController.js:68
+#: js/controllers/walletPendingsController.js:48
+#: js/controllers/walletTransactionsController.js:73
+#: js/controllers/walletsController.js:149
 #: partials/modals/transactionInfo.html:19 partials/modals/userInfo.html:70
 msgid "Fee"
 msgstr "费用"
@@ -374,7 +374,7 @@ msgid "Forged Blocks"
 msgstr "锻造的区块"
 
 #: js/controllers/delegatesController.js:9
-#: js/controllers/forgingController.js:90
+#: js/controllers/forgingController.js:89
 #: js/controllers/votedDelegatesController.js:8 partials/app-template.html:103
 #: partials/app-template.html:244
 msgid "Forging"
@@ -437,7 +437,7 @@ msgstr "返回"
 msgid "Go to previous page"
 msgstr "返回上一页"
 
-#: js/controllers/walletsController.js:115
+#: js/controllers/walletsController.js:113
 msgid "Group Name"
 msgstr "组名"
 
@@ -446,9 +446,9 @@ msgid "HOME"
 msgstr "首页"
 
 #: js/controllers/blockchainController.js:40
-#: js/controllers/forgingController.js:121
-#: js/controllers/transactionsController.js:61
-#: js/controllers/walletTransactionsController.js:72
+#: js/controllers/forgingController.js:120
+#: js/controllers/transactionsController.js:62
+#: js/controllers/walletTransactionsController.js:68
 #: partials/modals/blockInfo.html:23
 msgid "Height"
 msgstr "高度"
@@ -489,7 +489,7 @@ msgstr "LISK金额"
 msgid "LISK Earned"
 msgstr "赚取的LISK"
 
-#: partials/settings.html:10
+#: partials/settings.html:9
 msgid "Language"
 msgstr "语言"
 
@@ -509,11 +509,11 @@ msgstr "最新版本"
 msgid "Lisk - Decentralized Application Platform"
 msgstr "Lisk - 去中心化应用平台"
 
-#: js/controllers/contactsController.js:55
-#: js/controllers/delegatesController.js:169
-#: js/controllers/pendingsController.js:30
-#: js/controllers/votedDelegatesController.js:131
-#: js/controllers/walletPendingsController.js:159
+#: js/controllers/contactsController.js:54
+#: js/controllers/delegatesController.js:162
+#: js/controllers/pendingsController.js:31
+#: js/controllers/votedDelegatesController.js:125
+#: js/controllers/walletPendingsController.js:43
 msgid "Lisk Address"
 msgstr "Lisk地址"
 
@@ -525,7 +525,7 @@ msgstr "Lisk 客户端"
 msgid "Lisk Client Outdated"
 msgstr "Lisk 客户端已过期"
 
-#: js/controllers/walletsController.js:8
+#: js/controllers/walletsController.js:7
 msgid "Loading Multi-Signature Groups"
 msgstr "正在加载多重签名组"
 
@@ -538,7 +538,7 @@ msgstr "正在加载区块链"
 msgid "Loading contacts"
 msgstr "正在加载联系人"
 
-#: js/controllers/dappController.js:6
+#: js/controllers/dappController.js:7
 msgid "Loading dapp"
 msgstr "正在加载Dapp"
 
@@ -556,12 +556,12 @@ msgstr "正在加载控制面板"
 msgid "Loading delegates"
 msgstr "正在加载受托人"
 
-#: js/controllers/forgingController.js:89
+#: js/controllers/forgingController.js:88
 msgid "Loading forging status"
 msgstr "正在加载锻造状态"
 
 #: js/controllers/transactionsController.js:7
-#: js/controllers/walletPendingsController.js:8
+#: js/controllers/walletPendingsController.js:7
 msgid "Loading transactions"
 msgstr "正在加载交易记录"
 
@@ -595,7 +595,7 @@ msgid "Master Passphrase"
 msgstr "Dapp安装密码"
 
 #: js/controllers/modals/multiMembersModalController.js:5
-#: js/controllers/walletsController.js:116
+#: js/controllers/walletsController.js:114
 msgid "Members"
 msgstr "成员"
 
@@ -603,8 +603,8 @@ msgstr "成员"
 msgid "More"
 msgstr "更多"
 
-#: js/controllers/walletsController.js:9 partials/app-template.html:79
-#: partials/settings.html:14
+#: js/controllers/walletsController.js:8 partials/app-template.html:79
+#: partials/settings.html:11
 msgid "Multi-Signature"
 msgstr "多重签名"
 
@@ -644,8 +644,8 @@ msgstr "接受 / 下一步"
 msgid "NO"
 msgstr "取消"
 
-#: js/controllers/delegatesController.js:168
-#: js/controllers/votedDelegatesController.js:130
+#: js/controllers/delegatesController.js:161
+#: js/controllers/votedDelegatesController.js:124
 #: partials/modals/addDappModal.html:126 partials/modals/addDappModal.html:359
 #: partials/modals/addDappModal.html:388 partials/modals/addDappModal.html:62
 #: partials/modals/userInfo.html:18
@@ -701,9 +701,9 @@ msgstr "关闭"
 msgid "On"
 msgstr "开启"
 
-#: js/controllers/forgingController.js:44
-#: js/controllers/forgingController.js:56
-#: js/controllers/forgingController.js:67
+#: js/controllers/forgingController.js:43
+#: js/controllers/forgingController.js:55
+#: js/controllers/forgingController.js:66
 msgid "Others"
 msgstr "其它"
 
@@ -723,7 +723,7 @@ msgstr "待处理 ({{contacts.followersCount}})"
 msgid "Pending Requests"
 msgstr "待处理请求"
 
-#: js/controllers/walletPendingsController.js:9
+#: js/controllers/walletPendingsController.js:8
 msgid "Pending transactions"
 msgstr "待处理交易"
 
@@ -786,13 +786,13 @@ msgstr "请填写主密码"
 msgid "Please enter your second passphrase below."
 msgstr "请在下方填写支付密码"
 
-#: js/controllers/modals/addDappModalController.js:175
+#: js/controllers/modals/addDappModalController.js:166
 msgid ""
 "Please make sure you copy and paste the whole Sia ASCII code. Additionally "
 "please check that there were no characters added."
 msgstr "请确认您复制并粘贴了全部的Sia ASCII编码，同时请确认没有添加额外的字符."
 
-#: js/controllers/modals/addDappModalController.js:175
+#: js/controllers/modals/addDappModalController.js:166
 msgid ""
 "Please make sure you copy the complete repository link from GitHub. It ends "
 "in .git."
@@ -807,11 +807,11 @@ msgstr "请重新输入您的主密码"
 msgid "Please read carefully."
 msgstr "请仔细阅读."
 
-#: js/controllers/modals/addDappModalController.js:171
+#: js/controllers/modals/addDappModalController.js:162
 msgid "Please set the GitHub repository link below."
 msgstr "请填写GitHub源码库链接."
 
-#: js/controllers/modals/addDappModalController.js:171
+#: js/controllers/modals/addDappModalController.js:162
 msgid "Please set the Sia ASCII code below."
 msgstr "请填写Sia ASCII 编码."
 
@@ -852,16 +852,16 @@ msgstr "详细"
 msgid "REMOVE VOTE"
 msgstr "移除投票"
 
-#: js/controllers/delegatesController.js:167
-#: js/controllers/forgingController.js:44
-#: js/controllers/votedDelegatesController.js:129 partials/forging.html:26
+#: js/controllers/delegatesController.js:160
+#: js/controllers/forgingController.js:43
+#: js/controllers/votedDelegatesController.js:123 partials/forging.html:26
 msgid "Rank"
 msgstr "排名"
 
-#: js/controllers/transactionsController.js:64
-#: js/controllers/walletPendingsController.js:161
-#: js/controllers/walletTransactionsController.js:74
-#: js/controllers/walletsController.js:149 partials/account.html:86
+#: js/controllers/transactionsController.js:65
+#: js/controllers/walletPendingsController.js:45
+#: js/controllers/walletTransactionsController.js:70
+#: js/controllers/walletsController.js:146 partials/account.html:86
 msgid "Recipient"
 msgstr "接收者"
 
@@ -890,7 +890,7 @@ msgid "Repeat second passphrase"
 msgstr "再次输入支付密码"
 
 #: js/controllers/blockchainController.js:47
-#: js/controllers/forgingController.js:125 partials/modals/blockInfo.html:26
+#: js/controllers/forgingController.js:124 partials/modals/blockInfo.html:26
 msgid "Reward"
 msgstr "奖励"
 
@@ -939,11 +939,11 @@ msgstr "搜索交易(交易ID，发送者地址，接收者地址)"
 msgid "Send LISK"
 msgstr "发送Lisk"
 
-#: js/controllers/transactionsController.js:63 partials/account.html:83
+#: js/controllers/transactionsController.js:64 partials/account.html:83
 msgid "Sender"
 msgstr "发送者"
 
-#: js/controllers/modals/multisignatureModalController.js:7
+#: js/controllers/modals/multisignatureModalController.js:6
 msgid "Set members of account"
 msgstr "设置帐户的成员数"
 
@@ -1080,11 +1080,11 @@ msgstr ""
 "人员的帐户名称或者帐户ID."
 
 #: js/controllers/blockchainController.js:43
-#: js/controllers/forgingController.js:123
-#: js/controllers/transactionsController.js:65
-#: js/controllers/walletPendingsController.js:162
-#: js/controllers/walletTransactionsController.js:75
-#: js/controllers/walletsController.js:150 partials/account.html:89
+#: js/controllers/forgingController.js:122
+#: js/controllers/transactionsController.js:66
+#: js/controllers/walletPendingsController.js:46
+#: js/controllers/walletTransactionsController.js:71
+#: js/controllers/walletsController.js:147 partials/account.html:89
 #: partials/modals/blockInfo.html:38 partials/modals/transactionInfo.html:25
 #: partials/modals/userInfo.html:76
 msgid "Time"
@@ -1114,7 +1114,7 @@ msgstr "总余额"
 msgid "Total Fee"
 msgstr "总手续费"
 
-#: js/controllers/forgingController.js:28
+#: js/controllers/forgingController.js:27
 msgid "Total Forged"
 msgstr "总锻造"
 
@@ -1122,10 +1122,10 @@ msgstr "总锻造"
 msgid "Transaction"
 msgstr "交易"
 
-#: js/controllers/transactionsController.js:62
-#: js/controllers/walletPendingsController.js:160
-#: js/controllers/walletTransactionsController.js:73
-#: js/controllers/walletsController.js:148 partials/account.html:80
+#: js/controllers/transactionsController.js:63
+#: js/controllers/walletPendingsController.js:44
+#: js/controllers/walletTransactionsController.js:69
+#: js/controllers/walletsController.js:145 partials/account.html:80
 #: partials/modals/blockModal.html:17 partials/modals/userInfo.html:59
 #: partials/modals/userInfo.html:83
 msgid "Transaction ID"
@@ -1137,9 +1137,9 @@ msgstr "交易ID"
 msgid "Transactions"
 msgstr "交易信息"
 
-#: js/controllers/walletTransactionsController.js:7
-msgid "Transactions for 17649443584386761059C"
-msgstr "17649443584386761059C的交易信息"
+#: js/controllers/walletTransactionsController.js:6
+msgid "Transactions for 17649443584386761059L"
+msgstr "17649443584386761059L 的交易记录"
 
 #: partials/dapp-entry.html:62
 msgid "UNINSTALL"
@@ -1154,14 +1154,14 @@ msgstr "更新"
 msgid "USD Equivalent"
 msgstr "美元折算"
 
-#: js/controllers/delegatesController.js:170
-#: js/controllers/forgingController.js:56
-#: js/controllers/votedDelegatesController.js:132 partials/forging.html:35
+#: js/controllers/delegatesController.js:163
+#: js/controllers/forgingController.js:55
+#: js/controllers/votedDelegatesController.js:126 partials/forging.html:35
 msgid "Uptime"
 msgstr "在线率"
 
-#: js/controllers/contactsController.js:54
-#: js/controllers/pendingsController.js:29
+#: js/controllers/contactsController.js:53
+#: js/controllers/pendingsController.js:30
 #: partials/modals/userSettingsModal.html:21
 msgid "Username"
 msgstr "用户名"
@@ -1310,11 +1310,11 @@ msgstr "添加联系人"
 msgid "add second passphrase"
 msgstr "设置支付密码"
 
-#: js/controllers/modals/addDappModalController.js:151
+#: js/controllers/modals/addDappModalController.js:142
 msgid "change to SIA ASCII"
 msgstr "转化为SIA ASCII编码"
 
-#: js/controllers/modals/addDappModalController.js:151
+#: js/controllers/modals/addDappModalController.js:142
 msgid "change to url link"
 msgstr "转化为URL链接"
 
@@ -1373,6 +1373,9 @@ msgstr "已选受托人 ({{countStandby + countTop}} / {{voteList.length}})"
 #: partials/votes.html:4
 msgid "{{voteList.length}} out of {{count}} Delegates selected"
 msgstr "已选受托人 ({{voteList.length}} / {{count}})"
+
+#~ msgid "Transactions for 17649443584386761059C"
+#~ msgstr "17649443584386761059C的交易信息"
 
 #~ msgid "Confirm Vote"
 #~ msgstr "确认投票"
