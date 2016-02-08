@@ -71,8 +71,7 @@ angular.module('liskApp').controller('walletsController', ['$scope', '$rootScope
                     }
                 }
             })
-        }
-        else {
+        } else {
             $scope.confirmRequest(transactionId);
         }
 

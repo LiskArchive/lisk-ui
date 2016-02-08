@@ -29,8 +29,7 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
         $http.get("/api/dapps/categories").then(function (response) {
             if (response.data.success) {
                 $scope.categories = response.data.categories;
-            }
-            else {
+            } else {
                 $scope.categories = {};
             }
         });
@@ -129,8 +128,7 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
                     $scope.latest = response.data.version;
                     $scope.diffVersion = compareVersion($scope.version, $scope.latest);
                 });
-            }
-            else {
+            } else {
                 $scope.diffVersion = -1;
                 $scope.version = 'version error';
             }
@@ -156,8 +154,7 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
                     userService.secondPassphrase = '';
                     userService.unconfirmedPassphrase = '';
                     userService.username = '';
-                }
-                else {
+                } else {
                     userService.balance = account.balance;
                     userService.unconfirmedBalance = account.unconfirmedBalance;
                     userService.multisignatures = account.multisignatures;
@@ -259,8 +256,7 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
                         userService.setForging(resp.data.success);
                         $scope.forging = resp.data.success;
                         $scope.dataToShow.forging = $scope.forging;
-                    }
-                    else {
+                    } else {
                         $scope.errorModal = errorModal.activate({
                             error: resp.data.error,
                             destroy: function () {
@@ -272,8 +268,7 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
                 });
 
 
-        }
-        else {
+        } else {
             $scope.forgingModal = forgingModal.activate({
                 forging: false,
                 totalBalance: userService.unconfirmedBalance,
@@ -302,8 +297,7 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
                         userService.setForging(!resp.data.success);
                         $scope.forging = !resp.data.success;
                         $scope.dataToShow.forging = $scope.forging;
-                    }
-                    else {
+                    } else {
                         $scope.errorModal = errorModal.activate({
                             error: resp.data.error,
                             destroy: function () {
@@ -315,8 +309,7 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
 
 
                 });
-        }
-        else {
+        } else {
             $scope.forgingModal = forgingModal.activate({
                 forging: true,
                 totalBalance: userService.unconfirmedBalance,
@@ -332,8 +325,7 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
     $scope.toggleForging = function () {
         if ($scope.forging) {
             $scope.disableForging();
-        }
-        else {
+        } else {
             $scope.enableForging();
         }
     }
@@ -342,8 +334,7 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
         if ($state.current.name == 'main.forging' || $state.current.name == 'main.votes' || $state.current.name == 'main.delegates') {
             $scope.forgingStatus = forging ? gettextCatalog.getString('Enabled') : gettextCatalog.getString('Disabled');
             $scope.forgingEnabled = forging;
-        }
-        else {
+        } else {
             $scope.forgingStatus = null;
         }
     }
@@ -370,8 +361,7 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
                 if (response.data.success) {
                     if (response.data.accounts.length) {
                         return userService.setMultisignature(true, cb);
-                    }
-                    else {
+                    } else {
                         $http.get("/api/multisignatures/pending", {
                             params: queryParams
                         })
@@ -379,19 +369,16 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
                                 if (response.data.success) {
                                     if (response.data.transactions.length) {
                                         return userService.setMultisignature(true, cb);
-                                    }
-                                    else {
+                                    } else {
                                         return userService.setMultisignature(false, cb);
                                     }
-                                }
-                                else {
+                                } else {
                                     return userService.setMultisignature(false, cb);
                                 }
                             });
 
                     }
-                }
-                else {
+                } else {
                     return userService.setMultisignature(false, cb);
                 }
             });
@@ -447,8 +434,7 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
                 }).then(function (response) {
                     if (response.data.success) {
                         userService.setDelegateTime(response.data.transactions);
-                    }
-                    else {
+                    } else {
                         userService.setDelegateTime([{timestamp: null}]);
                     }
                 });

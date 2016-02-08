@@ -11,8 +11,7 @@ angular.module('liskApp').controller('secondPassphraseModalController', ["$scope
         $http.get("/api/signatures/fee").then(function (resp) {
             if (resp.data.success) {
                 $scope.fee = resp.data.fee;
-            }
-            else {
+            } else {
                 $scope.fee = 0;
             }
         });
@@ -30,13 +29,11 @@ angular.module('liskApp').controller('secondPassphraseModalController', ["$scope
     $scope.passcheck = function () {
         if ($scope.rememberedPassphrase) {
             $scope.addNewPassphrase($scope.rememberedPassphrase);
-        }
-        else {
+        } else {
             $scope.passmode = !$scope.passmode;
             if ($scope.passmode) {
                 $scope.focus = 'pass';
-            }
-            else {
+            } else {
                 $scope.focus = 'secondPass';
             }
             $scope.pass = '';
@@ -60,8 +57,7 @@ angular.module('liskApp').controller('secondPassphraseModalController', ["$scope
         }).then(function (resp) {
             if (resp.data.error) {
                 $scope.fromServer = resp.data.error;
-            }
-            else {
+            } else {
                 if ($scope.destroy) {
                     $scope.destroy(true);
                 }

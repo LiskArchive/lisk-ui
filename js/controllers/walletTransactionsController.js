@@ -33,8 +33,7 @@ angular.module('liskApp').controller('walletTransactionsController', ['$scope', 
                         senderId: response.data.account.address
                     };
                     $scope.updateTransactions();
-                }
-                else {
+                } else {
                     console.log('Cant get account ' + $scope.walletAddress);
                 }
             });

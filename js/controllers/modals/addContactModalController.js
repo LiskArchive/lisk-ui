@@ -21,8 +21,7 @@ angular.module('liskApp').controller('addContactModalController', ["$scope", "ad
             $scope.passmode = $scope.rememberedPassphrase ? false : true;
             if ($scope.passmode) {
                 $scope.focus = 'secretPhrase';
-            }
-            else {
+            } else {
                 $scope.focus = 'contact';
             }
             $scope.secondPhrase = '';
@@ -40,15 +39,12 @@ angular.module('liskApp').controller('addContactModalController', ["$scope", "ad
                     $scope.presendError = false;
                     $scope.errorMessage = ''
                     $scope.addFolower($scope.rememberedPassphrase);
-                }
-                else {
+                } else {
                     $scope.errorMessage = 'Incorrect contact name or address'
                     $scope.presendError = true;
                 }
             }
-
-        }
-        else {
+        } else {
             var isAddress = /^[0-9]+[L|l]$/g;
             var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
             if ($scope.contact.trim() == '') {
@@ -61,8 +57,7 @@ angular.module('liskApp').controller('addContactModalController', ["$scope", "ad
                     $scope.passmode = !$scope.passmode;
                     $scope.focus = 'secretPhrase';
                     $scope.pass = '';
-                }
-                else {
+                } else {
                     $scope.errorMessage = 'Incorrect contact name or address'
                     $scope.presendError = true;
                 }
@@ -103,8 +98,7 @@ angular.module('liskApp').controller('addContactModalController', ["$scope", "ad
                     $scope.$broadcast('updateControllerData', ['main.contacts']);
                 });
                 $scope.close();
-            }
-            else {
+            } else {
                 $scope.errorMessage = response.data.error;
             }
         });

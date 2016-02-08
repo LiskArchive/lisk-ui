@@ -22,8 +22,7 @@ angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "
         $http.get("/api/accounts/delegates/fee").then(function (resp) {
             if (resp.data.success) {
                 $scope.fee = resp.data.fee;
-            }
-            else {
+            } else {
                 $scope.fee = 0;
             }
         });
@@ -43,8 +42,7 @@ angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "
         }
         if ($scope.rememberedPassphrase) {
             $scope.vote($scope.rememberedPassphrase);
-        }
-        else {
+        } else {
             $scope.passmode = !$scope.passmode;
             if ($scope.passmode) {
                 $scope.focus = 'secretPhrase';
@@ -99,8 +97,7 @@ angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "
             $scope.voting = !$scope.voting;
             if (resp.data.error) {
                 $scope.fromServer = resp.data.error;
-            }
-            else {
+            } else {
                 if ($scope.destroy) {
                     $scope.destroy();
                 }

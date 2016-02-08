@@ -74,24 +74,20 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
                                 $scope.presendError = false;
                                 $scope.errorMessage = ''
                                 $scope.sendTransaction($scope.rememberedPassphrase);
-                            }
-                            else {
+                            } else {
                                 $scope.errorMessage = response.data.error;
                                 $scope.presendError = true;
                             }
                         });}
-                    }
-                    else {
+                    } else {
                         $scope.presendError = true;
                     }
-                }
-                else {
+                } else {
                     $scope.errorMessage = 'Incorrect recipient name or address'
                     $scope.presendError = true;
                 }
             }
-        }
-        else {
+        } else {
             var isAddress = /^[0-9]+[L|l]$/g;
             var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
             var correctAddress = isAddress.test($scope.to);
@@ -107,8 +103,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
                             $scope.passmode = !$scope.passmode;
                             $scope.focus = 'secretPhrase';
                             $scope.secretPhrase = '';
-                        }
-                        else {
+                        } else {
                         $http.get("/api/accounts/username/get?username=" + $scope.to).then(function (response) {
                             if (response.data.success || correctAddress) {
                                 $scope.presendError = false;
@@ -116,19 +111,16 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
                                 $scope.passmode = !$scope.passmode;
                                 $scope.focus = 'secretPhrase';
                                 $scope.secretPhrase = '';
-                            }
-                            else {
+                            } else {
                                 $scope.errorMessage = response.data.error;
                                 $scope.presendError = true;
                             }
                         });}
 
-                    }
-                    else {
+                    } else {
                         $scope.presendError = true;
                     }
-                }
-                else {
+                } else {
                     $scope.errorMessage = 'Incorrect recipient name or address'
                     $scope.presendError = true;
                 }
@@ -146,12 +138,10 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
     $scope.moreThanEightDigits = function (number) {
         if (number.indexOf(".") < 0) {
             return false;
-        }
-        else {
+        } else {
             if (number.split('.')[1].length > 8) {
                 return true;
-            }
-            else {
+            } else {
                 return false;
             }
         }
@@ -191,12 +181,10 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
             var isnum = /^\d+$/.test(string.substring(0, string.length - 1));
             if (isnum && string.length - 1 >= 1 && string.length - 1 <= 20) {
                 $scope.accountValid = true;
-            }
-            else {
+            } else {
                 $scope.accountValid = false;
             }
-        }
-        else {
+        } else {
             $scope.accountValid = false;
         }
     }
@@ -204,12 +192,10 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
     $scope.moreThanEightDigits = function (number) {
         if (number.toString().indexOf(".") < 0) {
             return false;
-        }
-        else {
+        } else {
             if (number.toString().split('.')[1].length > 8) {
                 return true;
-            }
-            else {
+            } else {
                 return false;
             }
         }
@@ -341,8 +327,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
                 $scope.sending = false;
                 if (resp.data.error) {
                     $scope.errorMessage = resp.data.error;
-                }
-                else {
+                } else {
                     if ($scope.destroy) {
                         $scope.destroy();
                     }

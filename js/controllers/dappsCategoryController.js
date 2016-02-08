@@ -41,8 +41,7 @@ angular.module('liskApp').controller('dappsCategoryController', ['$scope', 'view
         if (searchForDappIDTimeout) $timeout.cancel(searchForDappIDTimeout);
         if (val.trim() != '') {
             $scope.searchDapp.inSearch = true;
-        }
-        else {
+        } else {
             $scope.searchDapp.inSearch = false;
             if (tempsearchForDappID != val) {
                 tempsearchForDappID = val;
@@ -70,8 +69,7 @@ angular.module('liskApp').controller('dappsCategoryController', ['$scope', 'view
                     $scope.view.inLoading = false;
                     $scope.searchedText = '(search for "' + $scope.searchDapp.searchForDapp + '")';
                 });
-            }
-            else {
+            } else {
                 $http.get("/api/dapps/installed").then(function (response) {
                     $scope.dapps = $scope.shuffle(response.data.dapps);
                     $scope.searchedText = '';
@@ -79,8 +77,7 @@ angular.module('liskApp').controller('dappsCategoryController', ['$scope', 'view
                     $scope.inLoading = false;
                 });
             }
-        }
-        else {
+        } else {
             if ($scope.searchDapp.searchForDapp.trim() != '') {
                 $http.get("/api/dapps/search?q=" + $scope.searchDapp.searchForDapp + "&category=" + $scope.categoryId).then(function (response) {
                     $scope.dapps = $scope.shuffle(response.data.dapps);
@@ -88,8 +85,7 @@ angular.module('liskApp').controller('dappsCategoryController', ['$scope', 'view
                     $scope.view.inLoading = false;
                     $scope.searchedText = '(search for "' + $scope.searchDapp.searchForDapp + '")';
                 });
-            }
-            else {
+            } else {
                 $http.get("/api/dapps/?category=" + $scope.category).then(function (response) {
                     $scope.dapps = $scope.shuffle(response.data.dapps);
                     $scope.searchDapp.inSearch = false;

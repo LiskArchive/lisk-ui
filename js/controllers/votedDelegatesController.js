@@ -38,8 +38,7 @@ angular.module('liskApp').controller('votedDelegatesController', ['$scope', '$ro
             }
             if (this.inList(publicKey)) {
                 delete this.list[publicKey];
-            }
-            else {
+            } else {
                 this.list[publicKey] = username;
             }
             this.recalcLength();

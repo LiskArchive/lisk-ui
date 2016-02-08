@@ -25,8 +25,7 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
         }
         if ($scope.rememberedPassphrase) {
             $scope.sendData($scope.rememberedPassphrase);
-        }
-        else {
+        } else {
             $scope.passmode = !$scope.passmode;
             if ($scope.passmode) {
                 $scope.focus = 'secretPhrase';
@@ -56,26 +55,22 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
             tags: $scope.newDapp.tags
         }
         if (!!$scope.urlSiaMode || $scope.newDapp.icon.trim() == '') {
-        }
-        else {
+        } else {
             data.icon = $scope.newDapp.icon.trim();
         }
 
         if (!$scope.urlSiaMode || $scope.newDapp.siaIcon.trim() == '') {
-        }
-        else {
+        } else {
             data.siaIcon = $scope.newDapp.siaIcon.trim();
         }
 
         if ($scope.repository == 'sia' || $scope.newDapp.git.trim() == '') {
-        }
-        else {
+        } else {
             data.git = $scope.newDapp.git.trim();
         }
 
         if ($scope.repository != 'sia' || $scope.newDapp.siaAscii.trim() == '') {
-        }
-        else {
+        } else {
             data.siaAscii = $scope.newDapp.siaAscii.trim();
         }
 
@@ -103,8 +98,7 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
             $scope.view.inLoading = false;
             if (response.data.error) {
                 $scope.errorMessage = response.data.error;
-            }
-            else {
+            } else {
                 if ($scope.destroy) {
                     $scope.destroy();
                 }
@@ -130,13 +124,12 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
 
     $scope.goToStep5 = function () {
         $scope.errorAppLink = $scope.repository == 'sia' ? $scope.newDapp.siaAscii.trim() == '' : $scope.newDapp.git.trim() == '';
-       /* if ($scope.repository == 'sia') {
-            $scope.errorAppLink = $scope.errorAppLink || ($scope.newDapp.siaAscii.trim().indexOf('H4sIAAAJbogC')!=0);
-        }*/
+        // if ($scope.repository == 'sia') {
+        //     $scope.errorAppLink = $scope.errorAppLink || ($scope.newDapp.siaAscii.trim().indexOf('H4sIAAAJbogC')!=0);
+        // }
         if (!$scope.errorAppLink) {
             $scope.step = 5;
         }
-
     };
 
     $scope.urlSiaMode = 0;

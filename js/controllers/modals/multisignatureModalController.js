@@ -28,8 +28,7 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
         $scope.addingError = '';
         if ($scope.totalCount) {
             $scope.step = 3;
-        }
-        else {
+        } else {
             $scope.addingError = 'Please add at least one additional member to create a multi signature account';
         }
     }
@@ -50,8 +49,7 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
         if ($scope.contact.trim() == '') {
             $scope.addingError = 'Empty contact';
             console.log($scope.addingError);
-        }
-        else {
+        } else {
             var Buffer = require('buffer/').Buffer;
             var buffer =  []
             try {
@@ -68,8 +66,7 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
                 $scope.members[$scope.contact] = {address: address, publicKey: $scope.contact};
                 $scope.totalCount = $scope.totalCount + 1;
                 $scope.contact = '';
-            }
-            else {
+            } else {
                 if (correctAddress || correctName) {
                     if (correctAddress) {
                         $http.get("/api/accounts?address=" + contact).then(function (response) {
@@ -82,15 +79,13 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
                                 $scope.members[response.data.account.publicKey] = response.data.account;
                                 $scope.totalCount = $scope.totalCount + 1;
                                 $scope.contact = '';
-                            }
-                            else {
+                            } else {
                                 $scope.addingError = response.data.error;
                                 console.log($scope.addingError);
                             }
                         });
 
-                    }
-                    else {
+                    } else {
                         $http.get("/api/accounts/username/get?username=" + encodeURIComponent(contact)).then(function (response) {
                             if (response.data.success) {
                                 $scope.presendError = false;
@@ -101,15 +96,13 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
                                 $scope.members[response.data.account.publicKey] = response.data.account;
                                 $scope.totalCount = $scope.totalCount + 1;
                                 $scope.contact = '';
-                            }
-                            else {
+                            } else {
                                 $scope.addingError = response.data.error;
                             }
                         });
                     }
 
-                }
-                else {
+                } else {
 
                     $scope.addingError = 'Incorrect contact name or address';
                     console.log($scope.addingError);
@@ -126,8 +119,7 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
                 $scope.errorMessage = "Missing Passphrase or Second Passphrase";
                 return;
             }
-        }
-        else {
+        } else {
             if ($scope.secondPassphrase || !$scope.rememberedPassphrase) {
                 $scope.step = 4;
                 return;
@@ -151,8 +143,7 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
             $scope.view.inLoading = false;
             if (response.data.error) {
                 $scope.errorMessage = response.data.error;
-            }
-            else {
+            } else {
                 if ($scope.destroy) {
                     $scope.destroy(true);
                 }

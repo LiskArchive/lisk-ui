@@ -101,8 +101,7 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
             $scope.getRemoving();
             if (response.data.success == true) {
                 $scope.installed = false;
-            }
-            else {
+            } else {
                 $scope.errorModal = errorModal.activate({
                     title: 'Uninstalling Dapp error',
                     error: response.data.error,
@@ -126,8 +125,7 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
                                 }
                             }
                         })
-                    }
-                    else {
+                    } else {
                         $scope.uninstallRequest();
                     }
                 }
@@ -152,8 +150,7 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
                 if ($scope.dapp.type == 1) {
                     $scope.openDapp();
                 }
-            }
-            else {
+            } else {
                 $scope.errorModal = errorModal.activate({
                     title: 'Installing Dapp error',
                     error: response.data.error,
@@ -174,8 +171,7 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
                     }
                 }
             })
-        }
-        else {
+        } else {
             $scope.installRequest();
         }
     }
@@ -194,8 +190,7 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
             $scope.getRemoving();
             if (response.data.success == true) {
                 $scope.openDapp();
-            }
-            else {
+            } else {
                 $scope.errorModal = errorModal.activate({
                     title: 'Launching Dapp error',
                     error: response.data.error,
@@ -210,8 +205,7 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
     $scope.runDApp = function (type) {
         if (type == 1) {
             $scope.openDapp();
-        }
-        else {
+        } else {
             if ($scope.ismasterpasswordenabled) {
                 $scope.masterPassphraseModal = masterPassphraseModal.activate({
                     destroy: function (masterPass) {
@@ -220,8 +214,7 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
                         }
                     }
                 })
-            }
-            else {
+            } else {
                 $scope.launchRequest();
             }
         }
@@ -230,8 +223,7 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
     $scope.openDapp = function () {
         if ($scope.dapp.type == 1) {
             var link = angular.element('<a href="' + $scope.dapp.link + '" target="_blank"></a>');
-        }
-        else {
+        } else {
             var link = angular.element('<a href="' +
                 '/dapps/' + $stateParams.dappId + '" target="_blank"></a>');
         }

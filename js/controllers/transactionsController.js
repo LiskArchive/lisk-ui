@@ -95,8 +95,7 @@ angular.module('liskApp').controller('transactionsController', ['$scope', '$root
         if (searchTransactionIDTimeout) $timeout.cancel(searchTransactionIDTimeout);
         if (val.trim() != '') {
             $scope.searchTransactions.inSearch = true;
-        }
-        else {
+        } else {
             $scope.searchTransactions.inSearch = false;
             if (tempSearchTransactionID != val) {
                 tempSearchTransactionID = val;

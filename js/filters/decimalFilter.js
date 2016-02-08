@@ -20,8 +20,7 @@ angular.module('liskApp').filter('decimalFilter', function () {
         while (!clearView) {
             if (decimal[decimal.length - 1] == '0') {
                 decimal = decimal.slice(0, decimal.length - 1);
-            }
-            else {
+            } else {
                 clearView = true;
             }
         }

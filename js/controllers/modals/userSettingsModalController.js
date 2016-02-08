@@ -16,8 +16,7 @@ angular.module('liskApp').controller('userSettingsModalController', ["$scope", "
             $scope.passmode = $scope.rememberedPassphrase ? false : true;
             if ($scope.passmode) {
                 $scope.focus = 'passPhrase';
-            }
-            else {
+            } else {
                 $scope.focus = 'username';
             }
             $scope.secondPhrase = '';
@@ -37,20 +36,17 @@ angular.module('liskApp').controller('userSettingsModalController', ["$scope", "
                         $scope.presendError = false;
                         $scope.error = null;
                         $scope.saveName($scope.rememberedPassphrase);
-                    }
-                    else {
+                    } else {
                         $scope.error = 'Username can only contain alphanumeric characters with the exception of !@$&_.'
                         $scope.presendError = true;
                     }
-                }
-                else {
+                } else {
                     $scope.error = 'Username cannot be a potential address.'
                     $scope.presendError = true;
                 }
             }
 
-        }
-        else {
+        } else {
             if ($scope.username.trim() == '') {
                 $scope.error = 'Empty username'
                 $scope.presendError = true;
@@ -62,13 +58,11 @@ angular.module('liskApp').controller('userSettingsModalController', ["$scope", "
                         $scope.focus = 'passPhrase';
                         $scope.passmode = !$scope.passmode;
                         $scope.pass = '';
-                    }
-                    else {
+                    } else {
                         $scope.error = 'Username can only contain alphanumeric characters with the exception of !@$&_.'
                         $scope.presendError = true;
                     }
-                }
-                else {
+                } else {
                     $scope.error = 'Username cannot be a potential address.'
                     $scope.presendError = true;
                 }

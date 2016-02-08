@@ -37,8 +37,7 @@ angular.module('liskApp').controller('dappsController', ['$scope', 'viewFactory'
         if (searchForDappIDTimeout) $timeout.cancel(searchForDappIDTimeout);
         if (val.trim() != '') {
             $scope.searchDapp.inSearch = true;
-        }
-        else {
+        } else {
             $scope.searchDapp.inSearch = false;
             if (tempsearchForDappID != val) {
                 tempsearchForDappID = val;
@@ -79,8 +78,7 @@ angular.module('liskApp').controller('dappsController', ['$scope', 'viewFactory'
                     $scope.showPlaceholder = !response.data.success;
             });
 
-        }
-        else {
+        } else {
             $http.get("/api/dapps/search?q=" + $scope.searchDapp.searchForDappGlobal).then(function (response) {
                 $scope.dapps = $scope.shuffle(response.data.dapps);
                 $scope.searchDapp.inSearch = false;

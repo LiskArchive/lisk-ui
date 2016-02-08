@@ -141,8 +141,7 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
             var rank = response.rate;
             if (!rank || rank == 0) {
                 $scope.graphs.rank.values = [0, 100];
-            }
-            else {
+            } else {
                 $scope.graphs.rank.values = [totalDelegates - rank, totalDelegates - 1 - (totalDelegates - rank) == -1 ? 0 : totalDelegates - 1 - (totalDelegates - rank)];
             }
 

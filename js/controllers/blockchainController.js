@@ -90,8 +90,7 @@ angular.module('liskApp').controller('blockchainController', ['$scope', '$timeou
         if (searchBlockIDTimeout) $timeout.cancel(searchBlockIDTimeout);
         if (val.trim() != '') {
             $scope.searchBlocks.inSearch = true;
-        }
-        else {
+        } else {
             $scope.searchBlocks.inSearch = false;
             if (tempSearchBlockID != val) {
                 tempSearchBlockID = val;

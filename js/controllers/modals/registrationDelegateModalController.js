@@ -18,8 +18,7 @@ angular.module('liskApp').controller('registrationDelegateModalController', ["$s
         $http.get("/api/delegates/fee").then(function (resp) {
             if (resp.data.success) {
                 $scope.fee = resp.data.fee;
-            }
-            else {
+            } else {
                 $scope.fee = 0;
             }
         });
@@ -44,8 +43,7 @@ angular.module('liskApp').controller('registrationDelegateModalController', ["$s
             $scope.pass = '';
             if ($scope.passmode) {
                 $scope.focus = 'secretPhrase';
-            }
-            else {
+            } else {
                 $scope.focus = 'username';
             }
             return;
@@ -60,18 +58,15 @@ angular.module('liskApp').controller('registrationDelegateModalController', ["$s
                     if (allowSymbols.test($scope.delegateData.username.toLowerCase()) || !!$scope.username) {
                         $scope.error = null;
                         $scope.registrationDelegate($scope.rememberedPassphrase);
-                    }
-                    else {
+                    } else {
                         $scope.error = 'Username can only contain alphanumeric characters with the exception of !@$&_.'
                     }
-                }
-                else {
+                } else {
                     $scope.error = 'Username cannot be a potential address.'
                 }
             }
 
-        }
-        else {
+        } else {
             var isAddress = /^[0-9]+[L|l]$/g;
             var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
             if ($scope.delegateData.username.trim() == '' && !$scope.username) {
@@ -83,12 +78,10 @@ angular.module('liskApp').controller('registrationDelegateModalController', ["$s
                         $scope.focus = 'secretPhrase';
                         $scope.passmode = !$scope.passmode;
                         $scope.pass = '';
-                    }
-                    else {
+                    } else {
                         $scope.error = 'Username can only contain alphanumeric characters with the exception of !@$&_.'
                     }
-                }
-                else {
+                } else {
                     $scope.error = 'Username cannot be a potential address.'
                 }
             }

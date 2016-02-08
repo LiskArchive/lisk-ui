@@ -8,8 +8,7 @@ angular.module('liskApp').controller('errorModalController', ["$scope", "errorMo
 
     if ($scope.forging) {
         $scope.label = gettextCatalog.getString('Disable Forging');
-    }
-    else {
+    } else {
         $scope.label = gettextCatalog.getString('Enable Forging');
     }
 

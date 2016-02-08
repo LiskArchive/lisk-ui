@@ -9,8 +9,7 @@ angular.module('liskApp').controller('forgingModalController', ["$scope", "forgi
 
     if ($scope.forging) {
         $scope.label = gettextCatalog.getString('Disable Forging');
-    }
-    else {
+    } else {
         $scope.label = gettextCatalog.getString('Enable Forging');
     }
 
@@ -25,8 +24,7 @@ angular.module('liskApp').controller('forgingModalController', ["$scope", "forgi
     $scope.forgingState = function () {
         if ($scope.forging) {
             $scope.stopForging();
-        }
-        else {
+        } else {
             $scope.startForging();
         }
     }

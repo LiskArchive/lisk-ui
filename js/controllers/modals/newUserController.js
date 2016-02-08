@@ -35,8 +35,7 @@ angular.module('liskApp').controller('newUserController', ["$scope", "$http", "n
         var data = {secret: pass};
         if ($scope.passToCheck != pass) {
             $scope.noMatch = true;
-        }
-        else {
+        } else {
             $scope.view.inLoading = true;
             $http.post("/api/accounts/open/", {secret: pass})
                 .then(function (resp) {
