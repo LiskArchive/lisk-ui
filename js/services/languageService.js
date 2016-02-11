@@ -5,6 +5,7 @@ angular.module('liskApp').service('languageService', function ($rootScope, $wind
     $rootScope.languages = [
         { id: 'en', name: 'English' },
         { id: 'de', name: 'Deutsch' },
+        { id: 'ru', name: 'русский' },
         { id: 'zh', name: '中文' }
     ];
 
