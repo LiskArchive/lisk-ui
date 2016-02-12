@@ -1,9 +1,10 @@
 .paginated {
   position: relative;
+
   .ng-table-pager {
-    // border-bottom: 1px solid @border-grey;
     background-color: @background;
   }
+
   .ng-table {
     border-left: 1px solid @border-grey;
     border-right: 1px solid @border-grey;
@@ -23,6 +24,7 @@
       }
     }
   }
+
   .pagination > li > a, .pagination > li > span {
     position: relative;
     float: left;
@@ -43,22 +45,18 @@
 
   .pagination > li:first-child > a, .pagination > li:first-child > span {
     content: '';
-
   }
 
   .pagination > li:last-child > a, .pagination > li:last-child > span {
     content: '';
-
   }
 
   .pagination > li:first-child > a:hover, .pagination > li:first-child > a:focus, .pagination > li:first-child > span:hover, .pagination > li:first-child > span:focus {
     content: '';
-
   }
 
   .pagination > li:last-child > a:hover, .pagination > li:last-child > a:focus, .pagination > li:last-child > span:hover, .pagination > li:last-child > span:focus {
     content: '';
-
   }
 
   .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
@@ -83,8 +81,8 @@
     background-color: none;
     border-color: none
   }
-
 }
+
 .not_paginated {
   .ng-isolate-scope {
     height: 0 !important;
@@ -136,7 +134,6 @@
 .ng-table th.sortable div span:after {
   background-position: -70px -0;
   border: none;
-
 }
 
 .ng-table th.sortable.sort-asc div span:before {
@@ -217,7 +214,6 @@ td {
     text-decoration: underline;
     line-height: 1.5rem;
   }
-
   &.username {
     min-width: 200px;
     .favorite &:before {
