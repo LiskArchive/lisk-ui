@@ -5,7 +5,7 @@ module.exports = function (grunt) {
         "js/ui-bootstrap.js"
     ];
 
-    var withoutBrowserify = ['static/js/br_app.js', 'static/js/translations.js', 'bower_components/underscore/underscore.js', 'bower_components/materialize/bin/materialize.js'];
+    var withoutBrowserify = ['static/js/br_app.js', 'static/js/translations.js', 'bower_components/underscore/underscore.js', 'bower_components/materialize/dist/js/materialize.js'];
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -40,8 +40,8 @@ module.exports = function (grunt) {
                 files: {
                     "static/css/app.css": [
                         "bower_components/angular-chart.js/dist/angular-chart.css",
-                        "node_modules/materialize-css/bin/materialize.css",
-                        "node_modules/bootstrap/dist/css/bootstrap.css",
+                        "bower_components/materialize/dist/css/materialize.css",
+                        "bower_components/bootstrap/dist/css/bootstrap.css",
                         "bower_components/angular-modal/modal.css",
                         "node_modules/ng-table/ng-table.css",
                         "tmp/app.css"
