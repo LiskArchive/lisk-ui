@@ -1342,7 +1342,7 @@ msgstr "投票"
 
 #: partials/delegates.html:93
 msgid "{{countStandby}} in Total"
-msgstr "{{countStandby}} 总数"
+msgstr "合计{{countStandby}} 个"
 
 #: partials/delegates.html:24
 msgid "{{countTop}} in Total"
