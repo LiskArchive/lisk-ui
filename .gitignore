@@ -5,6 +5,7 @@ dapps/
 node_modules
 npm-debug.log
 .project
-static
+static/css
+static/js
 tmp
 webkitbuilds
