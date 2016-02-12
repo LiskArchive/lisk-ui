@@ -105,10 +105,6 @@ msgstr "Одобрение"
 msgid "Are you sure you want to delete this item?"
 msgstr "Вы уверены, что хотите удалить выбранное."
 
-#: partials/dapp-entry.html:93
-msgid "Attention!"
-msgstr "Внимание!"
-
 #: partials/modals/addContactModal.html:104
 #: partials/modals/addContactModal.html:69
 #: partials/modals/addDappModal.html:471
@@ -741,23 +737,6 @@ msgstr "Запросы в ожидании"
 msgid "Pending transactions"
 msgstr "Транзакции в ожидании"
 
-#: partials/dapp-entry.html:95
-msgid ""
-"Please be aware, Lisk decentralized applications do not currently run within "
-"a sandboxed virtual machine. This means you are potentially vulnerable to "
-"malicious application behaviour. Before installing any new application, we "
-"recommend checking the source code or asking the Lisk community for further "
-"verification.<br>We will enable sandboxing of decentralized applications "
-"with the next Lisk update."
-msgstr ""
-"Обратите внимание, децентрализованные приложения Lisk в настоящее время не "
-"работают в изолированной виртуальной машине (песочница). Это означает, что "
-"вы потенциально уязвимы к злонамеренному поведению приложений. Перед "
-"установкой любого нового приложения, мы рекомендуем проверять исходный код "
-"или обратиться с просьбой к сообществу Lisk для дальнейшей проверки. <br> Мы "
-"добавим песочницы для децентрализованных приложений в следующем обновлении "
-"Lisk."
-
 #: partials/modals/addDappModal.html:349
 msgid "Please check your input below and go back if necessary."
 msgstr ""
@@ -868,7 +847,7 @@ msgstr "Информация о профиле"
 msgid "Public key"
 msgstr "Публичный ключ"
 
-#: partials/dapp-entry.html:102
+#: partials/dapp-entry.html:96
 msgid "READ MORE"
 msgstr "ПРОЧИТАТЬ БОЛЬШЕ"
 
@@ -1402,6 +1381,10 @@ msgstr "отправить lisk"
 msgid "vote"
 msgstr "голосовать"
 
+#: partials/delegates.html:93
+msgid "{{countStandby}} in Total"
+msgstr "{{countStandby}} Всего"
+
 #: partials/delegates.html:24
 msgid "{{countTop}} in Total"
 msgstr "{{countTop}} Всего"
@@ -1419,6 +1402,3 @@ msgstr ""
 #: partials/votes.html:4
 msgid "{{voteList.length}} out of {{count}} Delegates selected"
 msgstr "{{voteList.length}} out of {{count}} Делегатов выбрано"
-
-#~ msgid "{{countStandby}} in Total"
-#~ msgstr "{{countStandby}} Всего"

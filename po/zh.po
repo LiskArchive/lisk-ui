@@ -102,10 +102,6 @@ msgstr "得票率"
 msgid "Are you sure you want to delete this item?"
 msgstr "您确定要删除吗？"
 
-#: partials/dapp-entry.html:93
-msgid "Attention!"
-msgstr "请注意"
-
 #: partials/modals/addContactModal.html:104
 #: partials/modals/addContactModal.html:69
 #: partials/modals/addDappModal.html:471
@@ -727,19 +723,6 @@ msgstr "待处理请求"
 msgid "Pending transactions"
 msgstr "待处理交易"
 
-#: partials/dapp-entry.html:95
-msgid ""
-"Please be aware, Lisk decentralized applications do not currently run within "
-"a sandboxed virtual machine. This means you are potentially vulnerable to "
-"malicious application behaviour. Before installing any new application, we "
-"recommend checking the source code or asking the Lisk community for further "
-"verification.<br>We will enable sandboxing of decentralized applications "
-"with the next Lisk update."
-msgstr ""
-"请注意，Lisk去中心化应用目前并不是运行在沙箱虚拟机上，这意味着您可能容易受到"
-"恶意应用程序的行为，所以在安装任何新的Dapp之前，我们推荐您检查该Dapp的源码或"
-"者询问Lisk社区以进一步验证.我们将在下一次Lisk的升级时，开始启用Dapp的沙盒."
-
 #: partials/modals/addDappModal.html:349
 msgid "Please check your input below and go back if necessary."
 msgstr "请检查您以下的输入内容，或者返回上一步"
@@ -844,7 +827,7 @@ msgstr "个人信息"
 msgid "Public key"
 msgstr "公钥"
 
-#: partials/dapp-entry.html:102
+#: partials/dapp-entry.html:96
 msgid "READ MORE"
 msgstr "详细"
 
@@ -1356,6 +1339,10 @@ msgstr "发送Lisk"
 #: partials/delegates.html:13
 msgid "vote"
 msgstr "投票"
+
+#: partials/delegates.html:93
+msgid "{{countStandby}} in Total"
+msgstr "{{countStandby}} 总数"
 
 #: partials/delegates.html:24
 msgid "{{countTop}} in Total"
