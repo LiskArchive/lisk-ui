@@ -1348,7 +1348,7 @@ msgstr "vote"
 
 #: partials/delegates.html:93
 msgid "{{countStandby}} in Total"
-msgstr "{{CountStandby}} insgesamt"
+msgstr "Insgesamt {{countStandby}}"
 
 #: partials/delegates.html:24
 msgid "{{countTop}} in Total"
