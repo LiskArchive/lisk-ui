@@ -1,17 +1,17 @@
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Language-Team: \n"
-"MIME-Version: 1.0\n"
-"X-Generator: Poedit 1.8.7\n"
 "Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"Language: ru\n"
 
 #: partials/dapp-entry.html:79
 msgid "(1449)"
@@ -306,7 +306,7 @@ msgstr "СКАЧАТЬ"
 
 #: js/controllers/dappsController.js:8 partials/app-template.html:97
 msgid "Dapp Store"
-msgstr "DAPP Магазин"
+msgstr "Dapp Магазин"
 
 #: js/controllers/accountController.js:8 partials/app-template.html:73
 msgid "Dashboard"
@@ -1419,3 +1419,6 @@ msgstr ""
 #: partials/votes.html:4
 msgid "{{voteList.length}} out of {{count}} Delegates selected"
 msgstr "{{voteList.length}} out of {{count}} Делегатов выбрано"
+
+#~ msgid "{{countStandby}} in Total"
+#~ msgstr "{{countStandby}} Всего"

@@ -1373,15 +1373,3 @@ msgstr "已选受托人 ({{countStandby + countTop}} / {{voteList.length}})"
 #: partials/votes.html:4
 msgid "{{voteList.length}} out of {{count}} Delegates selected"
 msgstr "已选受托人 ({{voteList.length}} / {{count}})"
-
-#~ msgid "Transactions for 17649443584386761059C"
-#~ msgstr "17649443584386761059C的交易信息"
-
-#~ msgid "Confirm Vote"
-#~ msgstr "确认投票"
-
-#~ msgid "this action will cost {{fee | liskFilter}} LISK"
-#~ msgstr "此操作将花费 {{fee | liskFilter}} LISK"
-
-#~ msgid "Vote for Delegates"
-#~ msgstr "投票给受托人"
