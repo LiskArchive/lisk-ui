@@ -90,7 +90,7 @@
         <div class="panel panel-default paginated">
             <div class="panel-heading">
                 <h2>{{'Standby Delegates'|translate}}</h2>
-                <div class="plain-text">{{countStandby}} in Total</div>
+                <div class="plain-text"><translate>{{countStandby}} in Total</translate></div>
             </div>
             <table ng-table="tableStandbyDelegates" border="0" width="100%" cellpadding="0" cellspacing="0" template-pagination="custom/pager">
                 <tr ng-repeat="delegate in $data" ng-class="{'voted' : (delegates.voted(delegate.publicKey) || unconfirmedTransactions.inList(delegate.publicKey)), 'checked': voteList.inList(delegate.publicKey)}">
