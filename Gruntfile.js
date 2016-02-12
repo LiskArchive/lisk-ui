@@ -87,6 +87,34 @@ module.exports = function (grunt) {
                     "static/js/app.js": files
                 }
             }
+        },
+        watch: {
+          js: {
+              files: ["js/**/*.js"],
+              tasks: ["concat:release"]
+          },
+          css: {
+             files: ["css/**/*.less"],
+             tasks: ["less", "cssmin"]
+          },
+          po_extract: {
+               files: ["partials/**/*.html"],
+               tasks: ["nggettext_extract"]
+          },
+          po_compile: {
+               files: ["po/*.mo", "po/*.po", "template.pot"],
+               tasks: ["nggettext_compile"]
+          },
+          livereload: {
+              options: {
+                  livereload: 35729
+              },
+              files: [
+                  "partials/{,**/}*.html",
+                  "static/css/{,**/}*.css",
+                  "static/js/{,**/}*.js"
+              ]
+          }
         }
     });
 
@@ -95,8 +123,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-cssmin");
     grunt.loadNpmTasks("grunt-contrib-less");
     grunt.loadNpmTasks("grunt-contrib-uglify");
-    grunt.loadNpmTasks('grunt-browserify');
+    grunt.loadNpmTasks("grunt-browserify");
+    grunt.loadNpmTasks("grunt-contrib-watch");
 
-    grunt.registerTask("default", ["nggettext_extract", "nggettext_compile", "less", "cssmin", "concat:release", 'browserify', "concat:withoutBrowserify"]);
-    grunt.registerTask("release", ["default", "uglify:release"]);
+    grunt.registerTask("default", ["watch"]);
+    grunt.registerTask("release", ["nggettext_extract", "nggettext_compile", "less", "cssmin", "concat:release", "browserify", "concat:withoutBrowserify", "uglify:release"]);
 };
