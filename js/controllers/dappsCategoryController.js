@@ -63,7 +63,6 @@ angular.module('liskApp').controller('dappsCategoryController', ['$scope', 'view
         if ($scope.category == 'Installed') {
             if ($scope.searchDapp.searchForDapp.trim() != '') {
                 $http.get("/api/dapps/search?q=" + $scope.searchDapp.searchForDapp + "&installed=1").then(function (response) {
-                    console.log("here");
                     $scope.dapps = $scope.shuffle(response.data.dapps);
                     $scope.searchDapp.inSearch=false;
                     $scope.view.inLoading = false;

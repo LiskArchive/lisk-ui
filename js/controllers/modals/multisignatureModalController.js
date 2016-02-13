@@ -48,7 +48,6 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
         var correctName = allowSymbols.test(contact.toLowerCase());
         if ($scope.contact.trim() == '') {
             $scope.addingError = 'Empty contact';
-            console.log($scope.addingError);
         } else {
             var Buffer = require('buffer/').Buffer;
             var buffer =  []
@@ -81,7 +80,6 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
                                 $scope.contact = '';
                             } else {
                                 $scope.addingError = response.data.error;
-                                console.log($scope.addingError);
                             }
                         });
 
@@ -105,7 +103,6 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
                 } else {
 
                     $scope.addingError = 'Incorrect contact name or address';
-                    console.log($scope.addingError);
                 }
             }
 

@@ -28,7 +28,6 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
         $http.get('/api/dapps/installedIds').then(function (response) {
             $scope.installed = (response.data.ids.indexOf($stateParams.dappId) >= 0);
             $scope.loading = false;
-            console.log("Loading: false");
         });
     }
 
@@ -82,7 +81,6 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
         $scope.dapp = response.data.dapp;
         if ($scope.dapp.git) {
             $scope.dapp.githublink = $scope.githubLink($scope.dapp.git);
-            console.log($scope.githublink);
         }
         $scope.view.page = {title: $scope.dapp.name, previous: 'main.dappstore'};
         $scope.view.inLoading = false;

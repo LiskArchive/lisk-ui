@@ -14,7 +14,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
     $scope.presendError = false;
 
     $scope.submit = function () {
-        console.log('submited');
+        console.log('Transaction sent');
     };
 
     $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;

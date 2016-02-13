@@ -516,7 +516,6 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
     });
 
     $scope.$on('socket:rounds/change', function (ev, data) {
-        console.log("I\'m here");
         $scope.getAppData();
         $scope.updateViews([
             'main.delegates',

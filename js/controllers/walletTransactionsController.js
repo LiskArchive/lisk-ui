@@ -34,7 +34,7 @@ angular.module('liskApp').controller('walletTransactionsController', ['$scope', 
                     };
                     $scope.updateTransactions();
                 } else {
-                    console.log('Cant get account ' + $scope.walletAddress);
+                    console.warn('Failed to get account: ' + $scope.walletAddress);
                 }
             });
 
