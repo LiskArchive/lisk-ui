@@ -165,7 +165,7 @@
                 </div> -->
                 <div class="mini-chart valign-wrapper" ng-show="syncState!=0">
                     <div class="mini-chart-label">{{syncState}}%</div>
-                    <canvas id="total-forged" class="chart chart-doughnut" data="loading.values" labels="loading.labels" options="loading.options" colours="loading.colours"></canvas>
+                    <canvas id="total-forged" class="chart chart-doughnut" chart-data="loading.values" chart-labels="loading.labels" chart-options="loading.options" chart-colours="loading.colours"></canvas>
                 </div>
                 <div class="more-down left-margin-20" dropdown is-open="moreDropdownStatus.isopen">
                     <i class="mdi-navigation-more-vert" dropdown-toggle></i>

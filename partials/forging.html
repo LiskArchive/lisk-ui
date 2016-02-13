@@ -26,7 +26,7 @@
             <div class="light-graph-heading">{{'Rank'|translate}}</div>
             <div class="light-graph-body">
                 <div class="chart-legend">{{rank}}</div>
-                <canvas id="rank" class="chart chart-doughnut" data="graphs.rank.values" labels="graphs.rank.labels" options="graphs.rank.options" colours="graphs.rank.colours"></canvas>
+                <canvas id="rank" class="chart chart-doughnut" chart-data="graphs.rank.values" chart-labels="graphs.rank.labels" chart-options="graphs.rank.options" chart-colours="graphs.rank.colours"></canvas>
             </div>
         </div>
     </div>
@@ -35,7 +35,7 @@
             <div class="light-graph-heading">{{'Uptime'|translate}}</div>
             <div class="light-graph-body">
                 <div class="chart-legend">{{uptime | number:2}}%</div>
-                <canvas id="uptime" class="chart chart-doughnut" data="graphs.uptime.values" labels="graphs.uptime.labels" options="graphs.uptime.options" colours="graphs.uptime.colours"></canvas>
+                <canvas id="uptime" class="chart chart-doughnut" chart-data="graphs.uptime.values" chart-labels="graphs.uptime.labels" chart-options="graphs.uptime.options" chart-colours="graphs.uptime.colours"></canvas>
             </div>
         </div>
     </div>
@@ -45,7 +45,7 @@
             <div class="light-graph-heading">{{'Approval'|translate}}</div>
             <div class="light-graph-body">
                 <div class="chart-legend">{{approval | number:2}}%</div>
-                <canvas id="approval" class="chart chart-doughnut" data="graphs.approval.values" labels="graphs.approval.labels" options="graphs.approval.options" colours="graphs.approval.colours"></canvas>
+                <canvas id="approval" class="chart chart-doughnut" chart-data="graphs.approval.values" chart-labels="graphs.approval.labels" chart-options="graphs.approval.options" chart-colours="graphs.approval.colours"></canvas>
             </div>
         </div>
     </div>
@@ -55,7 +55,7 @@
         <div class="light-graph-heading">No Data Available</div>
         <div class="light-graph-sub-heading">Return when you have forged at least 100 LISK</div>
         <div class="light-graph-body">
-            <canvas id="line" class="chart chart-line" data="graphs.amountForged.data" colours="graphs.amountForged.colours" labels="graphs.amountForged.labels" legend="false" series="graphs.amountForged.series" options="graphs.amountForged.options">
+            <canvas id="line" class="chart chart-line" chart-data="graphs.amountForged.data" chart-colours="graphs.amountForged.colours" labels="graphs.amountForged.labels" legend="false" chart-series="graphs.amountForged.series" chart-options="graphs.amountForged.options">
             </canvas>
         </div>
         <div class="light-graph-footer">
