@@ -1397,8 +1397,8 @@ msgstr "{{count}} Всего"
 msgid ""
 "{{voteList.length}} out of {{countStandby + countTop}} Delegates selected"
 msgstr ""
-"{{voteList.length}} out of {{countStandby + countTop}} Делегатов выбрано"
+"{{voteList.length}} из {{countStandby + countTop}} Делегатов выбрано"
 
 #: partials/votes.html:4
 msgid "{{voteList.length}} out of {{count}} Delegates selected"
-msgstr "{{voteList.length}} out of {{count}} Делегатов выбрано"
+msgstr "{{voteList.length}} из {{count}} Делегатов выбрано"
