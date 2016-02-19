@@ -300,7 +300,7 @@ msgstr "DOWNLOAD"
 
 #: js/controllers/dappsController.js:8 partials/app-template.html:97
 msgid "Dapp Store"
-msgstr "Dapp Winkel"
+msgstr "Dapp Store"
 
 #: js/controllers/accountController.js:8 partials/app-template.html:73
 msgid "Dashboard"
