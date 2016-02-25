@@ -7,7 +7,7 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.7\n"
 "Last-Translator: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language: nl\n"
@@ -67,11 +67,11 @@ msgstr "Toevoegen als Contactpersoon"
 msgid "Add group members by typing in their account name, ID or public key."
 msgstr ""
 "Groepsleden toevoegen door hun accountnaam, ID of openbare sleutel in te "
-"geven."
+"voeren."
 
 #: partials/modals/addContactModal.html:13
 msgid "Add new contact"
-msgstr "Nieuwe contactpersoon toevoegen"
+msgstr "Nieuw contactpersoon toevoegen"
 
 #: partials/modals/secondPassphraseModal.html:13
 msgid "Add second passphrase"
@@ -79,7 +79,7 @@ msgstr "Tweede wachtwoordzin toevoegen"
 
 #: js/controllers/modals/addContactModalController.js:7
 msgid "Adding new contact"
-msgstr "Nieuwe contactpersoon wordt toegevoegd"
+msgstr "Voeg een nieuw contact toe"
 
 #: js/controllers/blockchainController.js:45
 #: js/controllers/transactionsController.js:67
@@ -92,7 +92,7 @@ msgstr "Aantal"
 
 #: partials/account.html:92
 msgid "Amount (Fee)"
-msgstr "Aantal (Verheffing)"
+msgstr "Aantal (Fee)"
 
 #: js/controllers/delegatesController.js:164
 #: js/controllers/forgingController.js:66
@@ -102,7 +102,7 @@ msgstr "Goedkeuring"
 
 #: partials/modals/confirmDeletionModal.html:16
 msgid "Are you sure you want to delete this item?"
-msgstr "Ben je zeker dat je dit item wil verwijderen?"
+msgstr "Weet je zeker dat je dit item wil verwijderen?"
 
 #: partials/modals/addContactModal.html:104
 #: partials/modals/addContactModal.html:69
@@ -123,7 +123,7 @@ msgstr "Terug"
 
 #: partials/account.html:8
 msgid "Balance"
-msgstr "Balans"
+msgstr "Saldo"
 
 #: partials/modals/registrationDelegateModal.html:29
 msgid ""
@@ -353,7 +353,7 @@ msgstr "Geactiveerd"
 #: partials/modals/blockInfo.html:72 partials/modals/blockModal.html:32
 #: partials/modals/transactionInfo.html:47 partials/modals/userInfo.html:99
 msgid "FEE"
-msgstr "VERHEFFING"
+msgstr "FEE"
 
 #: partials/app-template.html:260
 msgid "FORGING"
@@ -367,7 +367,7 @@ msgstr "FORGING"
 #: js/controllers/walletsController.js:149
 #: partials/modals/transactionInfo.html:19 partials/modals/userInfo.html:70
 msgid "Fee"
-msgstr "Verheffing"
+msgstr "Fee"
 
 #: partials/forging.html:74
 msgid "Forged Blocks"
@@ -629,15 +629,15 @@ msgstr "Mijn Profiel"
 
 #: partials/app-template.html:117 partials/votes.html:24
 msgid "My Votes"
-msgstr "Mijn Stemmingen"
+msgstr "Mijn Stemmen"
 
 #: partials/app-template.html:250
 msgid "My votes ({{myVotesCount||'0'}})"
-msgstr "Mijn stemmingen ({{myVotesCount||'0'}})"
+msgstr "Mijn stemmen ({{myVotesCount||'0'}})"
 
 #: partials/passphrase.html:26
 msgid "NEW ACCOUNT"
-msgstr "NIEUWE ACCOUNT"
+msgstr "NIEUW ACCOUNT"
 
 #: partials/modals/multisignatureModal.html:31
 msgid "NEXT"
@@ -674,7 +674,7 @@ msgstr "Geen blockchain"
 
 #: partials/dapps-category.html:6 partials/dapps-category.html:7
 msgid "No dapps matching your search criteria were found."
-msgstr "Er werden geen dapps met uw zoek criteria gevonden."
+msgstr "Er worden geen dapps met uw zoek criteria gevonden."
 
 #: partials/delegates.html:145 partials/delegates.html:76
 msgid "No delegates"
@@ -712,7 +712,7 @@ msgstr "Aan"
 #: js/controllers/forgingController.js:55
 #: js/controllers/forgingController.js:66
 msgid "Others"
-msgstr "Andere"
+msgstr "Anderen"
 
 #: partials/modals/newUser.html:56
 msgid "Passphrase"
@@ -744,8 +744,8 @@ msgid ""
 "group members, else you risk losing your LISK balance!"
 msgstr ""
 "Controleer alstublieft onderstaande invoer en ga terug indien nodig. De "
-"groepsleden kan je best dubbel controleren, anders loop je het risico om je "
-"LISK balans te verliezen!"
+"groepsleden kan je het best dubbel controleren, anders loop je het risico om "
+"je LISK balans te verliezen!"
 
 #: partials/modals/registrationDelegateModal.html:15
 msgid "Please choose a delegate name."
@@ -931,7 +931,7 @@ msgstr "Zoeken naar blokken"
 #: partials/app-template.html:197
 msgid ""
 "Search for transactions (Transaction ID, Sender address, Recipient address)"
-msgstr "Zoeken naar transacties (transactie ID, zender adres, ontvanger adres)"
+msgstr "Zoeken naar transacties (transactie ID, adres zender, adres ontvanger)"
 
 #: partials/delegates.html:120 partials/delegates.html:51
 #: partials/modals/sendTransaction.html:13 partials/modals/userInfo.html:30
@@ -976,9 +976,9 @@ msgid ""
 "network. Once the upload was successful you need to specify the ASCII code "
 "of the file in the next step."
 msgstr ""
-"Sia is een nieuw gedecentraliseerd cloud opslag platform dat zich toespitst "
-"om gebruikers controle te geven over hun data. Opslag wordt verkregen van "
-"een groot nerwerk van hosts, die elk de Sia blockchain gebruiken om opslag "
+"Sia is een nieuw gedecentraliseerd cloud opslag platform dat zich richt om "
+"gebruikers controle te geven over hun data. Opslag wordt verkregen van een "
+"groot nerwerk van hosts, die elk de Sia blockchain gebruiken om opslag "
 "contracten te vormen met cliënten. Uit de honderden hosts, is slechts een "
 "fractie nodig die online is om de data te verkrijgen. Zelfs in een netwerk "
 "met veel onbetrouwbare hosts, is de data veilig. <br><br>U moet uw dapp "
@@ -1119,7 +1119,7 @@ msgstr "Totaal Aantal"
 
 #: partials/modals/userInfo.html:43
 msgid "Total Balance"
-msgstr "Totale Balans"
+msgstr "Totale Saldo"
 
 #: partials/modals/blockInfo.html:29
 msgid "Total Fee"
@@ -1365,7 +1365,7 @@ msgstr "verwijder stem"
 
 #: partials/modals/userSettingsModal.html:33
 msgid "save Name"
-msgstr "slaag Naam op"
+msgstr "sla Naam op"
 
 #: partials/modals/sendTransaction.html:113
 #: partials/modals/sendTransaction.html:43
