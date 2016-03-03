@@ -28,7 +28,7 @@ grunt release
 
 - Vera Nekrasova <vera.limita@gmail.com>
 - Boris Povod <boris@crypti.me>
-- Olivier Beddows <olivier@lisk.io>
+- Oliver Beddows <oliver@lisk.io>
 - Max Kordek <max@lisk.io>
 
 ## License
