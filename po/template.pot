@@ -799,6 +799,9 @@ msgid "Please re-enter your passphrase below."
 msgstr ""
 
 #: partials/modals/addDappModal.html:15
+msgid "Please read carefully before proceeding."
+msgstr ""
+
 #: partials/modals/multisignatureModal.html:15
 msgid "Please read carefully."
 msgstr ""
@@ -999,7 +1002,7 @@ msgid "Step 1/3 - Preamble"
 msgstr ""
 
 #: partials/modals/addDappModal.html:13
-msgid "Step 1/4 - Preamble"
+msgid "Step 1/4 - Dapp Store Preamble"
 msgstr ""
 
 #: partials/modals/newUser.html:48
