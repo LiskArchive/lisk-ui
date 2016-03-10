@@ -1,0 +1,25 @@
+<div class="field-padding" ng-show="errorMessage && (rememberedPassphrase)">
+    <span style="margin-top: 10px; margin-bottom: 0;" class="pass-error">{{errorMessage}}</span>
+</div>
+<ul class="collection dapp-collection">
+    <li class="collection-item">
+        <h4>{{'Name'|translate}}:</h4>
+        {{newDapp.name}}
+    </li>
+    <li class="collection-item">
+        <h4>{{'Description'|translate}}:</h4>
+        {{newDapp.description}}
+    </li>
+    <li class="collection-item">
+        <h4>{{'Tags'|translate}}:</h4>
+        <span class="cut-text">{{newDapp.tags}}</span>
+    </li>
+    <li class="collection-item">
+        <h4>{{'Category'|translate}}:</h4>
+        {{getCategoryName(newDapp.category)}}
+    </li>
+    <li class="collection-item">
+        <h4>{{'Hosted at'|translate}} {{getRepositoryName()}}:</h4>
+        <span class="cut-text">{{getRepositoryText()}}</span>
+    </li>
+</ul>

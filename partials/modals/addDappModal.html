@@ -16,21 +16,11 @@
         </div>
         <div class="modal-content pretty-scrolling hide-in-small" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
-            <form name="license_data-form" novalidate class="clearfix" ng-submit="goToStep2()" style="padding: 0 40px;">
-                <input type="submit" ng-show="false">
-            </form>
-            <span class="send-info-text flat-text">
-                <p translate>You are about to register your decentralized application (dapp) on the Lisk network. After the registration all Lisk users will be able to see your dapp on the Lisk Dapp Store and they will also be able to install and launch it.<br><br>One of the characteristics of blockchains is that you can't delete any content from them. Therefore make sure you have used the correct dapp parameters. We also advise you to test your dapp on the official Lisk testnet so you can guarantee that its working flawlessly.<br><br><b>Things you need to know for the registration process:</b><br><br>• Dapp names are unique, you can't register the same name twice on the Lisk network.<br>• You can either use a centralized (GitHub) or decentralized (Sia) hosting method.<br>• Make sure that your dapp icon's format is a square.<br>• Choose your tags wisely, with them your users will be able to find your dapp in the Dapp Store.<br><br>The Lisk Team isn't liable for a dapp, solely the uploader is. So you have to make sure that your dapp is legal and doesn't harm its users.</p>
-            </span>
+            <div ng-include="'partials/modals/addDappModal/licenseDataForm.html'"></div>
         </div>
         <div class="modal-content pretty-scrolling show-in-small" style="height: calc(100% - 130px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
-            <form name="license_data-form" novalidate class="clearfix" ng-submit="goToStep2()" style="padding: 0 40px;">
-                <input type="submit" ng-show="false">
-            </form>
-            <span class="send-info-text flat-text">
-                <p translate>You are about to register your decentralized application (dapp) on the Lisk network. After the registration all Lisk users will be able to see your dapp on the Lisk Dapp Store and they will also be able to install and launch it.<br><br>One of the characteristics of blockchains is that you can't delete any content from them. Therefore make sure you have used the correct dapp parameters. We also advise you to test your dapp on the official Lisk testnet so you can guarantee that its working flawlessly.<br><br><b>Things you need to know for the registration process:</b><br><br>• Dapp names are unique, you can't register the same name twice on the Lisk network.<br>• You can either use a centralized (GitHub) or decentralized (Sia) hosting method.<br>• Make sure that your dapp icon's format is a square.<br>• Choose your tags wisely, with them your users will be able to find your dapp in the Dapp Store.<br><br>The Lisk Team isn't liable for a dapp, solely the uploader is. So you have to make sure that your dapp is legal and doesn't harm its users.</p>
-            </span>
+            <div ng-include="'partials/modals/addDappModal/licenseDataForm.html'"></div>
         </div>
         <div class="modal-footer">
             <a class="waves-effect btn-flat primary-action" ng-click="step=step+1;"><translate>Accept / Next Step</translate></a>
@@ -54,130 +44,11 @@
         </div>
         <div class="modal-content pretty-scrolling hide-in-small" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
-            <form name="dapp_data_form" novalidate class="clearfix" ng-submit="goToStep3(dapp_data_form.$invalid)" style="padding: 0 40px;">
-                <input type="submit" ng-show="false">
-                <div class="row clearfix" style="height: inherit;">
-                    <div class="input-field">
-                        <input ng-minlength=1 ng-maxlength=32 required ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.name.$invalid, 'valid': dapp_data_form.submitted && dapp_data_form.name.$valid}" id="name" name="name" type="text" class="validate" ng-model="newDapp.name" maxlength="32">
-                        <label for="name"><translate>Name</translate></label>
-                    </div>
-                    <div class="error-newdapp-container" ng-show="dapp_data_form.name.$invalid && dapp_data_form.submitted">
-                        <small class="error" ng-show="dapp_data_form.name.$error.required">
-                            <translate>Your dapp name is required.</translate>
-                        </small>
-                        <small class="error" ng-show="dapp_data_form.name.$error.maxlength">
-                            <translate>Your dapp name cannot be longer than 32 characters</translate>
-                        </small>
-                    </div>
-                </div>
-                <div class="row clearfix" style="height: inherit;">
-                    <div class="input-field materialize-textarea-big">
-                        <textarea ng-maxlength=160 id="description" ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.description.$invalid, 'valid': dapp_data_form.submitted && dapp_data_form.description.$valid}" name="description" class="materialize-textarea validate" ng-model="newDapp.description"></textarea>
-                        <label for="description"><translate>Description</translate></label>
-                    </div>
-                    <div class="error-newdapp-container" ng-show="dapp_data_form.description.$invalid && dapp_data_form.submitted">
-                        <small class="error" ng-show="dapp_data_form.description.$error.maxlength">
-                            <translate>Your dapp description cannot be longer than 160 characters.</translate>
-                        </small>
-                    </div>
-                </div>
-                <div class="row clearfix" style="height: inherit;">
-                    <div class="input-field">
-                        <input ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.tags.$invalid , 'valid':  dapp_data_form.submitted && dapp_data_form.tags.$valid}" ng-maxlength=160 maxlength=160 id="tags" type="text" name="tags" class="validate" ng-model="newDapp.tags">
-                        <label for="tags"><translate>Tags (separated with comma)</translate></label>
-                    </div>
-                    <div class="error-newdapp-container" ng-show="dapp_data_form.tags.$invalid && dapp_data_form.submitted">
-                        {{dapp_data_form.tags.$error}}
-                        <small class="error" ng-show="dapp_data_form.tags.$error">
-                            <translate>Your dapp tags cannot be longer than 160 characters.</translate>
-                        </small>
-                    </div>
-                </div>
-                <div class="row clearfix" style="height: inherit;">
-                    <div ng-if="!urlSiaMode" class="file-field input-field">
-                        <input ng-model="newDapp.icon" id="icon" class="file-path validate" style="margin-left: 250px;  width: calc(100% - 250px);" type="text"/>
-                        <label for="icon" style="left:250px;"><translate>Icon URL</translate></label>
-                        <div class="btn btn-sky-blue" ng-click="changeUrlSiaMode()">
-                            <span>{{getUlrSiaText()}}</span>
-                        </div>
-                    </div>
-                    <div ng-if="!!urlSiaMode" class="file-field input-field materialize-textarea-big">
-                        <textarea ng-model="newDapp.siaIcon" id="icon" class="materialize-textarea validate" style="margin-left: 250px;  width: calc(100% - 250px); max-height: 100px;" type="text"/>
-                        <label for="icon" style="left:250px;"><translate>Icon Sia ASCII</translate></label>
-                        <div class="btn btn-sky-blue" ng-click="changeUrlSiaMode()">
-                            <span>{{getUlrSiaText()}}</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row clearfix" style="height: inherit;">
-                    <div class="input-field col s12">
-                        <select ng-init="newDapp.category = 0" class="browser-default" ng-model="newDapp.category" ng-options="key for (key, value) in categories"></select>
-                    </div>
-                </div>
-            </form>
+            <div ng-include="'partials/modals/addDappModal/dataDataForm.html'"></div>
         </div>
         <div class="modal-content pretty-scrolling show-in-small" style="height: calc(100% - 130px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
-            <form name="dapp_data_form" novalidate class="clearfix" ng-submit="goToStep3(dapp_data_form.$invalid)" style="padding: 0 40px;">
-                <input type="submit" ng-show="false">
-                <div class="row clearfix" style="height: inherit;">
-                    <div class="input-field">
-                        <input ng-minlength=1 ng-maxlength=32 required ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.name.$invalid, 'valid': dapp_data_form.submitted && dapp_data_form.name.$valid}" id="name" name="name" class="validate" type="text" ng-model="newDapp.name">
-                        <label for="name"><translate>Name</translate></label>
-                    </div>
-                    <div class="error-newdapp-container" ng-show="dapp_data_form.name.$invalid && dapp_data_form.submitted">
-                        <small class="error" ng-show="dapp_data_form.name.$error.required">
-                            <translate>Your dapp name is required.</translate>
-                        </small>
-                        <small class="error" ng-show="dapp_data_form.name.$error.maxlength">
-                            <translate>Your dapp name cannot be longer than 32 characters.</translate>
-                        </small>
-                    </div>
-                </div>
-                <div class="row clearfix" style="height: inherit;">
-                    <div class="input-field materialize-textarea-big">
-                        <textarea ng-maxlength=160 id="description" ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.description.$invalid, 'valid': dapp_data_form.submitted && dapp_data_form.description.$valid}" name="description" class="materialize-textarea validate" ng-model="newDapp.description"></textarea>
-                        <label for="description"><translate>Description</translate></label>
-                    </div>
-                    <div class="error-newdapp-container" ng-show="dapp_data_form.description.$invalid && dapp_data_form.submitted">
-                        <small class="error" ng-show="dapp_data_form.description.$error.maxlength">
-                            <translate>Your dapp description cannot be longer than 160 characters.</translate>
-                        </small>
-                    </div>
-                </div>
-                <div class="row clearfix" style="height: inherit;">
-                    <div class="input-field">
-                        <input ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.tags.$invalid, 'valid': dapp_data_form.submitted && dapp_data_form.tags.$valid}" ng-maxlength=160 maxlength=160 id="tags" type="text" name="tags" class="validate" ng-model="newDapp.tags">
-                        <label for="tags"><translate>Tags (separated with comma)</translate></label>
-                    </div>
-                    <div class="error-newdapp-container" ng-show="dapp_data_form.tags.$invalid && dapp_data_form.submitted">
-                        <small class="error" ng-show="dapp_data_form.description.$error.maxlength">
-                            <translate>Your dapp tags cannot be longer than 160 characters.</translate>
-                        </small>
-                    </div>
-                </div>
-                <div class="row clearfix" style="height: inherit;">
-                    <div ng-if="!urlSiaMode" class="file-field input-field">
-                        <input ng-model="newDapp.icon" id="icon" class="file-path" style="width: 100%" type="text"/>
-                        <label for="icon"><translate>Icon URL</translate></label>
-                        <div id="change-btn" class="btn btn-sky-blue" ng-click="changeUrlSiaMode()">
-                            <span>{{getUlrSiaText()}}</span>
-                        </div>
-                    </div>
-                    <div ng-if="!!urlSiaMode" class="file-field input-field materialize-textarea-big">
-                        <textarea ng-model="newDapp.siaIcon" id="icon" class="materialize-textarea validate" style="width: 100%; max-height: 100px;" type="text"/>
-                        <label for="icon"><translate>Icon Sia ASCII</translate></label>
-                        <div id="change-btn" class="btn btn-sky-blue" ng-click="changeUrlSiaMode()">
-                            <span>{{getUlrSiaText()}}</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row clearfix" style="height: inherit;">
-                    <div class="input-field col s12">
-                        <select ng-init="newDapp.category = 0" class="browser-default" ng-model="newDapp.category" ng-options="key for (key, value) in categories"></select>
-                    </div>
-                </div>
-            </form>
+            <div ng-include="'partials/modals/addDappModal/dataDataForm.html'"></div>
         </div>
         <div class="modal-footer">
             <a class="waves-effect btn-flat primary-action" ng-click="goToStep3(dapp_data_form.$invalid)"><translate>Next Step</translate></a>
@@ -278,55 +149,11 @@
         </div>
         <div class="modal-content pretty-scrolling hide-in-small" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
-            <form ng-if="repository=='git'" ng-submit="goToStep5()" style="padding-bottom: 30px;">
-                <div class="field-padding">
-                    <div class="input-field">
-                        <input id="gitRepository" type="text" ng-model="newDapp.git" ng-class="{'invalid': errorAppLink}">
-                        <label for="amount"><translate>Git repository link</translate></label>
-                    </div>
-                    <!-- <a class="btn btn-sky-blue waves-effect waves-light right">Check</a> -->
-                </div>
-                <input type="submit" ng-show="false">
-            </form>
-            <form ng-if="repository=='sia'" ng-submit="goToStep5()" style="padding-bottom: 30px;">
-                <div class="field-padding">
-                    <div class="input-field materialize-textarea-big">
-                        <textarea id="siaRepository" class="materialize-textarea" ng-class="{'invalid': errorAppLink}" ng-model="newDapp.siaAscii" style="max-height: 250px;"></textarea>
-                        <label for="textarea1"><translate>Sia ASCII Code</translate></label>
-                    </div>
-                    <!-- <a class="btn btn-sky-blue waves-effect waves-light right">Check</a> -->
-                </div>
-                <input type="submit" ng-show="false">
-            </form>
-            <div class="modal-body bordered">
-                <span class="send-info-text flat-text">{{getRepositoryHelpText()}}</span>
-            </div>
+            <div ng-include="'partials/modals/addDappModal/storageDataForm.html'"></div>
         </div>
         <div class="modal-content pretty-scrolling show-in-small" style="height: calc(100% - 130px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
-            <form ng-if="repository=='git'" ng-submit="goToStep5()" style="padding-bottom: 30px;">
-                <div class="field-padding">
-                    <div class="input-field">
-                        <input id="amount" type="text" ng-model="newDapp.git">
-                        <label for="amount"><translate>Git repository link</translate></label>
-                    </div>
-                    <a class="btn btn-sky-blue waves-effect waves-light right"><translate>Check</translate></a>
-                </div>
-                <input type="submit" ng-show="false">
-            </form>
-            <form ng-if="repository=='sia'" ng-submit="passcheck()" style="padding-bottom: 30px;">
-                <div class="field-padding">
-                    <div class="input-field materialize-textarea-big">
-                        <textarea id="textarea1" class="materialize-textarea" ng-model="newDapp.siaAscii" style="max-height: 250px;"></textarea>
-                        <label for="textarea1"><translate>Sia ASCII Code</translate></label>
-                    </div>
-                    <a class="btn btn-sky-blue waves-effect waves-light right"><translate>Check</translate></a>
-                </div>
-                <input type="submit" ng-show="false">
-            </form>
-            <div class="modal-body bordered">
-                <span class="send-info-text flat-text">{{getRepositoryHelpText()}}</span>
-            </div>
+            <div ng-include="'partials/modals/addDappModal/storageDataForm.html'"></div>
         </div>
         <div class="modal-footer">
             <a class="waves-effect btn-flat primary-action" ng-click="goToStep5()"><translate>Next Step</translate></a>
@@ -350,55 +177,11 @@
         </div>
         <div class="modal-content pretty-scrolling hide-in-small" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
-            <div class="field-padding" ng-show="errorMessage && (rememberedPassphrase)">
-                <span style="margin-top: 10px; margin-bottom: 0;" class="pass-error">{{errorMessage}}</span>
-            </div>
-            <ul class="collection dapp-collection">
-                <li class="collection-item">
-                    <h4>{{'Name'|translate}}:</h4>
-                    {{newDapp.name}}
-                </li>
-                <li class="collection-item">
-                    <h4>{{'Description'|translate}}:</h4>
-                    {{newDapp.description}}
-                </li>
-                <li class="collection-item">
-                    <h4>{{'Tags'|translate}}:</h4>
-                    <span class="cut-text">{{newDapp.tags}}</span>
-                </li>
-                <li class="collection-item">
-                    <h4>{{'Category'|translate}}:</h4>
-                    {{getCategoryName(newDapp.category)}}
-                </li>
-                <li class="collection-item">
-                    <h4>{{'Hosted at'|translate}} {{getRepositoryName()}}:</h4>
-                    <span class="cut-text">{{getRepositoryText()}}</span>
-                </li>
-            </ul>
+            <div ng-include="'partials/modals/addDappModal/dappDataConfirmation.html'"></div>
         </div>
         <div class="modal-content pretty-scrolling show-in-small" style="height: calc(100% - 130px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
-            <div class="field-padding" ng-show="errorMessage && (rememberedPassphrase)">
-                <span style="margin-top: 10px; margin-bottom: 0;" class="pass-error">{{errorMessage}}</span>
-            </div>
-            <ul class="collection dapp-collection">
-                <li class="collection-item">
-                    <h4>{{'Name'|translate}}:</h4>
-                    {{newDapp.name}}</li>
-                <li class="collection-item">
-                    <h4>{{'Description'|translate}}:</h4>
-                    {{newDapp.description}}</li>
-                <li class="collection-item">
-                    <h4>{{'Tags'|translate}}:</h4>
-                    {{newDapp.tags}}</li>
-                <li class="collection-item">
-                    <h4>{{'Category'|translate}}:</h4>
-                    {{getCategoryName(newDapp.category)}}</li>
-                <li class="collection-item">
-                    <h4>{{'Hosted at'|translate}} {{getRepositoryName()}}:</h4>
-                    <span class="cut-text">{{getRepositoryText()}}</span>
-                </li>
-            </ul>
+            <div ng-include="'partials/modals/addDappModal/dappDataConfirmation.html'"></div>
         </div>
         <div class="modal-footer">
             <a class="waves-effect btn-flat primary-action" ng-click="passcheck()"><translate>Confirm</translate></a>
@@ -419,18 +202,7 @@
         </div>
         <div class="modal-content pretty-scrolling" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
-            <div class="modal-body">
-                <form ng-submit="sendData(secretPhrase)">
-                    <div class="field-padding">
-                        <div class="input-field">
-                            <input id="passPhrase" type="password" ng-model="secretPhrase" ng-trim="false" autofocus ng-class="{'invalid': errorMessage}">
-                            <label for="passPhrase"><translate>Your Passphrase</translate></label>
-                        </div>
-                        <span class="pass-error" ng-show="errorMessage && !secondSecret">{{errorMessage}}</span>
-                    </div>
-                    <input type="submit" ng-show="false">
-                </form>
-            </div>
+            <div ng-include="'partials/modals/addDappModal/accountVerification.html'"></div>
         </div>
         <div class="modal-footer">
             <a class="waves-effect btn-flat primary-action" ng-click="sendData(secretPhrase)"><translate>Confirm</translate></a>
@@ -450,18 +222,7 @@
             <div><translate>Please enter your second passphrase below.</translate></div>
         </div>
         <div class="modal-content pretty-scrolling" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none; box-shadow: none;">
-            <div class="modal-body">
-                <form ng-submit="sendData(secretPhrase, true)">
-                    <div class="field-padding">
-                        <div class="input-field">
-                            <input id="secondPhrase" type="password" ng-model="secondPhrase" ng-trim="false" autofocus ng-focus="focus == 'secondPhrase'" ng-class="{'invalid': errorMessage}">
-                            <label for="secondPhrase"><translate>Your Second Passphrase</translate></label>
-                        </div>
-                        <span class="pass-error" ng-show="errorMessage">{{errorMessage}}</span>
-                    </div>
-                    <input type="submit" ng-show="false">
-                </form>
-            </div>
+            <div ng-include="'partials/modals/addDappModal/accountVerification.html'"></div>
         </div>
         <div class="modal-footer">
             <a class="waves-effect btn-flat primary-action" ng-click="sendData(secretPhrase, true)"><translate>SEND LISK</translate></a>

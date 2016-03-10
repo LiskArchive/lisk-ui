@@ -1,0 +1,23 @@
+<form ng-if="repository=='git'" ng-submit="goToStep5()" style="padding-bottom: 30px;">
+    <div class="field-padding">
+        <div class="input-field">
+            <input id="gitRepository" type="text" ng-model="newDapp.git" ng-class="{'invalid': errorAppLink}">
+            <label for="amount"><translate>Git repository link</translate></label>
+        </div>
+        <!-- <a class="btn btn-sky-blue waves-effect waves-light right">Check</a> -->
+    </div>
+    <input type="submit" ng-show="false">
+</form>
+<form ng-if="repository=='sia'" ng-submit="goToStep5()" style="padding-bottom: 30px;">
+    <div class="field-padding">
+        <div class="input-field materialize-textarea-big">
+            <textarea id="siaRepository" class="materialize-textarea" ng-class="{'invalid': errorAppLink}" ng-model="newDapp.siaAscii" style="max-height: 250px;"></textarea>
+            <label for="textarea1"><translate>Sia ASCII Code</translate></label>
+        </div>
+        <!-- <a class="btn btn-sky-blue waves-effect waves-light right">Check</a> -->
+    </div>
+    <input type="submit" ng-show="false">
+</form>
+<div class="modal-body bordered">
+    <span class="send-info-text flat-text">{{getRepositoryHelpText()}}</span>
+</div>
