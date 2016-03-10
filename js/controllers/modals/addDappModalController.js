@@ -53,13 +53,11 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
             tags: $scope.newDapp.tags,
         }
 
-        if ($scope.newDapp.icon.trim() == '') {
-        } else {
+        if ($scope.newDapp.icon.trim() != '') {
             data.icon = $scope.newDapp.icon.trim();
         }
 
-        if ($scope.newDapp.link.trim() == '') {
-        } else {
+        if ($scope.newDapp.link.trim() != '') {
             data.link = $scope.newDapp.link.trim();
         }
 
