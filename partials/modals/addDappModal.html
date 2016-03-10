@@ -1,4 +1,4 @@
-<div class="app-modal">
+<div class="app-modal" ng-controller="addDappModalController">
     <div ng-show="step==1" class="modal modal-fixed-footer col-md-6 dapp-modal">
         <div class="modal-header modal-iconed hide-in-small">
             <div class="close-modal" ng-click="close()">
@@ -36,22 +36,22 @@
                 <span class="sr-only"><translate>Close modal</translate></span>
             </div>
             <div>
-                <h2>{{'Step 2/4 Dapp Specifications'|translate}}</h2>
+                <h2>{{'Step 2/4 Specifications'|translate}}</h2>
             </div>
-            <div><translate>Please set the dapp parameters below.</translate></div>
+            <div><translate>Please provide a specification for your dapp below.</translate></div>
         </div>
         <div class="modal-content pretty-scrolling hide-in-small" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none; box-shadow: none;">
-            <div ng-include="'partials/modals/addDappModal/dataDataForm.html'"></div>
+            <div ng-include="'partials/modals/addDappModal/dappDataForm.html'"></div>
         </div>
         <div class="modal-content pretty-scrolling show-in-small" style="height: calc(100% - 130px); padding: 0; -webkit-box-shadow:none; box-shadow: none;">
-            <div ng-include="'partials/modals/addDappModal/dataDataForm.html'"></div>
+            <div ng-include="'partials/modals/addDappModal/dappDataForm.html'"></div>
         </div>
         <div class="modal-footer">
-            <a class="waves-effect btn-flat primary-action" ng-click="goToStep3(dapp_data_form.$invalid)"><translate>Next Step</translate></a>
+            <a class="waves-effect btn-flat primary-action" ng-click="goToStep3()"><translate>Next Step</translate></a>
             <a class="waves-effect btn-flat second-action" ng-click="step=step-1;"><translate>Go back</translate></a>
         </div>
     </div>
-    <div ng-show="step==3 && !passmode && !checkSecondPass" class="modal modal-fixed-footer col-md-6 dapp-modal" style="height: 80%; max-height: 80%; z-index: 1003; display: block; opacity: 1; /* transform: scaleX(1); */ top: 0;bottom: 0;">
+    <div ng-show="step==3 && !passmode && !checkSecondPass" class="modal modal-fixed-footer col-md-6 dapp-modal" style="height: 80%; max-height: 80%; z-index: 1003; display: block; opacity: 1; top: 0; bottom: 0;">
         <div class="modal-header modal-iconed hide-in-small">
             <div class="close-modal" ng-click="close()">
                 <span class="sr-only"><translate>Close modal</translate></span>
@@ -62,9 +62,9 @@
                 <span class="sr-only"><translate>Close modal</translate></span>
             </div>
             <div>
-                <h2>{{'Step 3/4 - Storage Specifications'|translate}}</h2>
+                <h2>{{'Step 3/4 - Storage Links'|translate}}</h2>
             </div>
-            <div>{{getRepositoryHeaderText()}}</div>
+            <div><translate>Please provide storage links for your dapp below.</translate></div>
         </div>
         <div class="modal-content pretty-scrolling hide-in-small" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none; box-shadow: none;">
             <div ng-include="'partials/modals/addDappModal/storageDataForm.html'"></div>
@@ -73,7 +73,7 @@
             <div ng-include="'partials/modals/addDappModal/storageDataForm.html'"></div>
         </div>
         <div class="modal-footer">
-            <a class="waves-effect btn-flat primary-action" ng-click="goToStep5()"><translate>Next Step</translate></a>
+            <a class="waves-effect btn-flat primary-action" ng-click="goToStep4()"><translate>Next Step</translate></a>
             <a class="waves-effect btn-flat second-action" ng-click="step=step-1;"><translate>Go back</translate></a>
         </div>
     </div>
@@ -90,7 +90,7 @@
             <div>
                 <h2>{{'Step 4/4 - Confirmation'|translate}}</h2>
             </div>
-            <div class="hide-in-small"><translate>Please check your input below and go back if necessary.</translate></div>
+            <div class="hide-in-small"><translate>Please ensure all details are correct before confirming your dapp.</translate></div>
         </div>
         <div class="modal-content pretty-scrolling hide-in-small" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none; box-shadow: none;">
             <div ng-include="'partials/modals/addDappModal/dappDataConfirmation.html'"></div>
@@ -100,7 +100,7 @@
         </div>
         <div class="modal-footer">
             <a class="waves-effect btn-flat primary-action" ng-click="passcheck()"><translate>Confirm</translate></a>
-            <a class="waves-effect btn-flat second-action" ng-click="goToStep4()"><translate>Go back</translate></a>
+            <a class="waves-effect btn-flat second-action" ng-click="step=step-1;"><translate>Go back</translate></a>
         </div>
     </div>
     <div ng-show="passmode && !checkSecondPass" class="modal modal-fixed-footer col-md-6 dapp-modal">

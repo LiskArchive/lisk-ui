@@ -40,7 +40,7 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
         category: 0,
         type: 0,
         tags: "",
-        git: "",
+        link: "",
         icon: ""
     };
 
@@ -50,7 +50,7 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
             description: $scope.newDapp.description,
             category: $scope.newDapp.category,
             type: $scope.newDapp.type,
-            tags: $scope.newDapp.tags
+            tags: $scope.newDapp.tags,
         }
 
         if ($scope.newDapp.icon.trim() == '') {
@@ -58,9 +58,9 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
             data.icon = $scope.newDapp.icon.trim();
         }
 
-        if ($scope.newDapp.git.trim() == '') {
+        if ($scope.newDapp.link.trim() == '') {
         } else {
-            data.git = $scope.newDapp.git.trim();
+            data.link = $scope.newDapp.link.trim();
         }
 
         $scope.errorMessage = "";
@@ -97,51 +97,30 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
     }
 
     $scope.step = 1;
+    $scope.form = { dapp_data: {}, storage_data: {} };
 
     $scope.goToStep2 = function () {
         $scope.step = 2;
     }
 
-    $scope.goToStep3 = function (invalid) {
-        if ($scope.dapp_data_form.$valid) {
-            $scope.dapp_data_form.submitted = false;
-            $scope.step = 3;
+    $scope.goToStep3 = function () {
+        if ($scope.form.dapp_data.$invalid) {
+            $scope.form.dapp_data.submitted = true;
+            $scope.step = 2;
         } else {
-            $scope.dapp_data_form.submitted = true;
+            $scope.step = 3;
+            $scope.form.dapp_data.submitted = false;
         }
     }
 
     $scope.goToStep4 = function () {
-        $scope.errorMessage = "";
-        $scope.step = 4;
-        $scope.errorAppLink = false;
-    }
-
-    $scope.goToStep5 = function () {
-        $scope.errorAppLink = $scope.newDapp.git.trim() == '';
-        if (!$scope.errorAppLink) {
-            $scope.step = 5;
+        if ($scope.form.storage_data.$invalid) {
+            $scope.form.storage_data.submitted = true;
+            $scope.step = 3;
+        } else {
+            $scope.step = 4;
+            $scope.form.storage_data.submitted = false;
         }
-    };
-
-    $scope.getRepositoryText = function () {
-        return $scope.newDapp.git;
-    }
-
-    $scope.getRepositoryName = function () {
-        return 'GitHub';
-    }
-
-    $scope.getRepositoryHeaderText = function () {
-        return gettextCatalog.getString('Please set the GitHub repository link below.');
-    }
-
-    $scope.getRepositoryHelpText = function () {
-        return gettextCatalog.getString('Please make sure you copy the complete repository link from GitHub. It ends in .git.');
-    }
-
-    $scope.selectRepository = function (name) {
-        $scope.repository = name;
     }
 
 }]);

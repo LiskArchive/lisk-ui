@@ -1,56 +1,40 @@
-<form name="dapp_data_form" novalidate class="clearfix" ng-submit="goToStep3(dapp_data_form.$invalid)" style="padding: 0 40px;">
+<form name="form.dapp_data" novalidate class="clearfix" style="padding: 0 40px;">
     <input type="submit" ng-show="false">
     <div class="row clearfix" style="height: inherit;">
         <div class="input-field">
-            <input ng-minlength=1 ng-maxlength=32 required ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.name.$invalid, 'valid': dapp_data_form.submitted && dapp_data_form.name.$valid}" id="name" name="name" type="text" class="validate" ng-model="newDapp.name" maxlength="32">
+            <input ng-minlength=1 ng-maxlength=32 required ng-class="{'invalid': form.dapp_data.submitted && form.dapp_data.name.$invalid, 'valid': form.dapp_data.submitted && form.dapp_data.name.$valid}" id="name" name="name" type="text" class="validate" ng-model="newDapp.name" maxlength="32">
             <label for="name"><translate>Name</translate></label>
         </div>
-        <div class="error-newdapp-container" ng-show="dapp_data_form.name.$invalid && dapp_data_form.submitted">
-            <small class="error" ng-show="dapp_data_form.name.$error.required">
+        <div class="error-newdapp-container" ng-show="form.dapp_data.name.$invalid && form.dapp_data.submitted">
+            <small class="error" ng-show="form.dapp_data.name.$error.required">
                 <translate>Your dapp name is required.</translate>
             </small>
-            <small class="error" ng-show="dapp_data_form.name.$error.maxlength">
+            <small class="error" ng-show="form.dapp_data.name.$error.maxlength">
                 <translate>Your dapp name cannot be longer than 32 characters</translate>
             </small>
         </div>
     </div>
     <div class="row clearfix" style="height: inherit;">
         <div class="input-field materialize-textarea-big">
-            <textarea ng-maxlength=160 id="description" ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.description.$invalid, 'valid': dapp_data_form.submitted && dapp_data_form.description.$valid}" name="description" class="materialize-textarea validate" ng-model="newDapp.description"></textarea>
+            <textarea ng-maxlength="160" id="description" ng-class="{'invalid': form.dapp_data.submitted && form.dapp_data.description.$invalid, 'valid': form.dapp_data.submitted && form.dapp_data.description.$valid}" name="description" class="materialize-textarea validate" ng-model="newDapp.description"></textarea>
             <label for="description"><translate>Description</translate></label>
         </div>
-        <div class="error-newdapp-container" ng-show="dapp_data_form.description.$invalid && dapp_data_form.submitted">
-            <small class="error" ng-show="dapp_data_form.description.$error.maxlength">
+        <div class="error-newdapp-container" ng-show="form.dapp_data.description.$invalid && form.dapp_data.submitted">
+            <small class="error" ng-show="form.dapp_data.description.$error.maxlength">
                 <translate>Your dapp description cannot be longer than 160 characters.</translate>
             </small>
         </div>
     </div>
     <div class="row clearfix" style="height: inherit;">
         <div class="input-field">
-            <input ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.tags.$invalid , 'valid':  dapp_data_form.submitted && dapp_data_form.tags.$valid}" ng-maxlength=160 maxlength=160 id="tags" type="text" name="tags" class="validate" ng-model="newDapp.tags">
-            <label for="tags"><translate>Tags (separated with comma)</translate></label>
+            <input ng-class="{'invalid': form.dapp_data.submitted && form.dapp_data.tags.$invalid , 'valid': form.dapp_data.submitted && form.dapp_data.tags.$valid}" ng-maxlength=160 maxlength=160 id="tags" type="text" name="tags" class="validate" ng-model="newDapp.tags">
+            <label for="tags"><translate>Tags (comma separated)</translate></label>
         </div>
-        <div class="error-newdapp-container" ng-show="dapp_data_form.tags.$invalid && dapp_data_form.submitted">
-            {{dapp_data_form.tags.$error}}
-            <small class="error" ng-show="dapp_data_form.tags.$error">
+        <div class="error-newdapp-container" ng-show="form.dapp_data.tags.$invalid && form.dapp_data.submitted">
+            {{form.dapp_data.tags.$error}}
+            <small class="error" ng-show="form.dapp_data.tags.$error">
                 <translate>Your dapp tags cannot be longer than 160 characters.</translate>
             </small>
-        </div>
-    </div>
-    <div class="row clearfix" style="height: inherit;">
-        <div ng-if="!urlSiaMode" class="file-field input-field">
-            <input ng-model="newDapp.icon" id="icon" class="file-path validate" style="margin-left: 250px;  width: calc(100% - 250px);" type="text"/>
-            <label for="icon" style="left:250px;"><translate>Icon URL</translate></label>
-            <div class="btn btn-sky-blue" ng-click="changeUrlSiaMode()">
-                <span>{{getUlrSiaText()}}</span>
-            </div>
-        </div>
-        <div ng-if="!!urlSiaMode" class="file-field input-field materialize-textarea-big">
-            <textarea ng-model="newDapp.siaIcon" id="icon" class="materialize-textarea validate" style="margin-left: 250px;  width: calc(100% - 250px); max-height: 100px;" type="text"/>
-            <label for="icon" style="left:250px;"><translate>Icon Sia ASCII</translate></label>
-            <div class="btn btn-sky-blue" ng-click="changeUrlSiaMode()">
-                <span>{{getUlrSiaText()}}</span>
-            </div>
         </div>
     </div>
     <div class="row clearfix" style="height: inherit;">
