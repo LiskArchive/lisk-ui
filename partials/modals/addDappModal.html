@@ -52,13 +52,13 @@
             </div>
             <div><translate>Please set the dapp parameters below.</translate></div>
         </div>
-        <div class="modal-content pretty-scrolling hide-in-small" style="  height: calc(100% - 290px); padding: 0;  -webkit-box-shadow:none;
+        <div class="modal-content pretty-scrolling hide-in-small" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
             <form name="dapp_data_form" novalidate class="clearfix" ng-submit="goToStep3(dapp_data_form.$invalid)" style="padding: 0 40px;">
                 <input type="submit" ng-show="false">
                 <div class="row clearfix" style="height: inherit;">
                     <div class="input-field">
-                        <input ng-minlength=1 ng-maxlength=32 required ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.name.$invalid , 'valid':  dapp_data_form.submitted && dapp_data_form.name.$valid}" id="name" name="name" type="text" class="validate" ng-model="newDapp.name" maxlength="32">
+                        <input ng-minlength=1 ng-maxlength=32 required ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.name.$invalid, 'valid': dapp_data_form.submitted && dapp_data_form.name.$valid}" id="name" name="name" type="text" class="validate" ng-model="newDapp.name" maxlength="32">
                         <label for="name"><translate>Name</translate></label>
                     </div>
                     <div class="error-newdapp-container" ng-show="dapp_data_form.name.$invalid && dapp_data_form.submitted">
@@ -72,7 +72,7 @@
                 </div>
                 <div class="row clearfix" style="height: inherit;">
                     <div class="input-field materialize-textarea-big">
-                        <textarea ng-maxlength=160 id="description" ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.description.$invalid , 'valid':  dapp_data_form.submitted && dapp_data_form.description.$valid}" name="description" class="materialize-textarea validate" ng-model="newDapp.description"></textarea>
+                        <textarea ng-maxlength=160 id="description" ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.description.$invalid, 'valid': dapp_data_form.submitted && dapp_data_form.description.$valid}" name="description" class="materialize-textarea validate" ng-model="newDapp.description"></textarea>
                         <label for="description"><translate>Description</translate></label>
                     </div>
                     <div class="error-newdapp-container" ng-show="dapp_data_form.description.$invalid && dapp_data_form.submitted">
@@ -116,13 +116,13 @@
                 </div>
             </form>
         </div>
-        <div class="modal-content pretty-scrolling show-in-small" style="  height: calc(100% - 130px); padding: 0;  -webkit-box-shadow:none;
+        <div class="modal-content pretty-scrolling show-in-small" style="height: calc(100% - 130px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
             <form name="dapp_data_form" novalidate class="clearfix" ng-submit="goToStep3(dapp_data_form.$invalid)" style="padding: 0 40px;">
                 <input type="submit" ng-show="false">
                 <div class="row clearfix" style="height: inherit;">
                     <div class="input-field">
-                        <input ng-minlength=1 ng-maxlength=32 required ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.name.$invalid , 'valid':  dapp_data_form.submitted && dapp_data_form.name.$valid}" id="name" name="name" class="validate" type="text" ng-model="newDapp.name">
+                        <input ng-minlength=1 ng-maxlength=32 required ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.name.$invalid, 'valid': dapp_data_form.submitted && dapp_data_form.name.$valid}" id="name" name="name" class="validate" type="text" ng-model="newDapp.name">
                         <label for="name"><translate>Name</translate></label>
                     </div>
                     <div class="error-newdapp-container" ng-show="dapp_data_form.name.$invalid && dapp_data_form.submitted">
@@ -147,7 +147,7 @@
                 </div>
                 <div class="row clearfix" style="height: inherit;">
                     <div class="input-field">
-                        <input ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.tags.$invalid , 'valid':  dapp_data_form.submitted && dapp_data_form.tags.$valid}" ng-maxlength=160 maxlength=160 id="tags" type="text" name="tags" class="validate" ng-model="newDapp.tags">
+                        <input ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.tags.$invalid, 'valid': dapp_data_form.submitted && dapp_data_form.tags.$valid}" ng-maxlength=160 maxlength=160 id="tags" type="text" name="tags" class="validate" ng-model="newDapp.tags">
                         <label for="tags"><translate>Tags (separated with comma)</translate></label>
                     </div>
                     <div class="error-newdapp-container" ng-show="dapp_data_form.tags.$invalid && dapp_data_form.submitted">
@@ -199,7 +199,7 @@
             </div>
             <div class="hide-in-small"><translate>Please choose between the available options.</translate></div>
         </div>
-        <div class="modal-content pretty-scrolling hide-in-small" style="height: calc(100% - 290px); padding: 0;  -webkit-box-shadow:none;
+        <div class="modal-content pretty-scrolling hide-in-small" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
             <ul class="collection with-header dapp-collection">
                 <li class="collection-header">
@@ -233,7 +233,7 @@
                 </li>
             </ul>
         </div>
-        <div class="modal-content pretty-scrolling show-in-small" style="height: calc(100% - 130px); padding: 0;  -webkit-box-shadow:none;
+        <div class="modal-content pretty-scrolling show-in-small" style="height: calc(100% - 130px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
             <ul class="collection with-header dapp-collection">
                 <li class="collection-item">
@@ -276,7 +276,7 @@
             </div>
             <div>{{getRepositoryHeaderText()}}</div>
         </div>
-        <div class="modal-content pretty-scrolling hide-in-small" style="  height: calc(100% - 290px); padding: 0;  -webkit-box-shadow:none;
+        <div class="modal-content pretty-scrolling hide-in-small" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
             <form ng-if="repository=='git'" ng-submit="goToStep5()" style="padding-bottom: 30px;">
                 <div class="field-padding">
