@@ -14,7 +14,7 @@
             </div>
             <div><translate>Please read carefully.</translate></div>
         </div>
-        <div class="modal-content pretty-scrolling hide-in-small" style="height: calc(100% - 290px); padding: 0;  -webkit-box-shadow:none;
+        <div class="modal-content pretty-scrolling hide-in-small" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
             <form name="license_data-form" novalidate class="clearfix" ng-submit="goToStep2()" style="padding: 0 40px;">
                 <input type="submit" ng-show="false">
@@ -23,7 +23,7 @@
                 <p translate>You are about to register your decentralized application (dapp) on the Lisk network. After the registration all Lisk users will be able to see your dapp on the Lisk Dapp Store and they will also be able to install and launch it.<br><br>One of the characteristics of blockchains is that you can't delete any content from them. Therefore make sure you have used the correct dapp parameters. We also advise you to test your dapp on the official Lisk testnet so you can guarantee that its working flawlessly.<br><br><b>Things you need to know for the registration process:</b><br><br>• Dapp names are unique, you can't register the same name twice on the Lisk network.<br>• You can either use a centralized (GitHub) or decentralized (Sia) hosting method.<br>• Make sure that your dapp icon's format is a square.<br>• Choose your tags wisely, with them your users will be able to find your dapp in the Dapp Store.<br><br>The Lisk Team isn't liable for a dapp, solely the uploader is. So you have to make sure that your dapp is legal and doesn't harm its users.</p>
             </span>
         </div>
-        <div class="modal-content pretty-scrolling show-in-small" style="  height: calc(100% - 130px); padding: 0;  -webkit-box-shadow:none;
+        <div class="modal-content pretty-scrolling show-in-small" style="height: calc(100% - 130px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
             <form name="license_data-form" novalidate class="clearfix" ng-submit="goToStep2()" style="padding: 0 40px;">
                 <input type="submit" ng-show="false">
@@ -136,7 +136,7 @@
                 </div>
                 <div class="row clearfix" style="height: inherit;">
                     <div class="input-field materialize-textarea-big">
-                        <textarea ng-maxlength=160 id="description" ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.description.$invalid , 'valid':  dapp_data_form.submitted && dapp_data_form.description.$valid}" name="description" class="materialize-textarea validate" ng-model="newDapp.description"></textarea>
+                        <textarea ng-maxlength=160 id="description" ng-class="{'invalid': dapp_data_form.submitted && dapp_data_form.description.$invalid, 'valid': dapp_data_form.submitted && dapp_data_form.description.$valid}" name="description" class="materialize-textarea validate" ng-model="newDapp.description"></textarea>
                         <label for="description"><translate>Description</translate></label>
                     </div>
                     <div class="error-newdapp-container" ng-show="dapp_data_form.description.$invalid && dapp_data_form.submitted">
@@ -302,7 +302,7 @@
                 <span class="send-info-text flat-text">{{getRepositoryHelpText()}}</span>
             </div>
         </div>
-        <div class="modal-content pretty-scrolling show-in-small" style="  height: calc(100% - 130px); padding: 0;  -webkit-box-shadow:none;
+        <div class="modal-content pretty-scrolling show-in-small" style="height: calc(100% - 130px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
             <form ng-if="repository=='git'" ng-submit="goToStep5()" style="padding-bottom: 30px;">
                 <div class="field-padding">
@@ -351,8 +351,7 @@
         <div class="modal-content pretty-scrolling hide-in-small" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
             <div class="field-padding" ng-show="errorMessage && (rememberedPassphrase)">
-                <span style="margin-top: 10px;
-    margin-bottom: 0;" class="pass-error">{{errorMessage}}</span>
+                <span style="margin-top: 10px; margin-bottom: 0;" class="pass-error">{{errorMessage}}</span>
             </div>
             <ul class="collection dapp-collection">
                 <li class="collection-item">
@@ -380,8 +379,7 @@
         <div class="modal-content pretty-scrolling show-in-small" style="height: calc(100% - 130px); padding: 0; -webkit-box-shadow:none;
   box-shadow: none;">
             <div class="field-padding" ng-show="errorMessage && (rememberedPassphrase)">
-                <span style="margin-top: 10px;
-    margin-bottom: 0;" class="pass-error">{{errorMessage}}</span>
+                <span style="margin-top: 10px; margin-bottom: 0;" class="pass-error">{{errorMessage}}</span>
             </div>
             <ul class="collection dapp-collection">
                 <li class="collection-item">
@@ -451,8 +449,7 @@
             </div>
             <div><translate>Please enter your second passphrase below.</translate></div>
         </div>
-        <div class="modal-content pretty-scrolling" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none;
-  box-shadow: none;">
+        <div class="modal-content pretty-scrolling" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none; box-shadow: none;">
             <div class="modal-body">
                 <form ng-submit="sendData(secretPhrase, true)">
                     <div class="field-padding">
