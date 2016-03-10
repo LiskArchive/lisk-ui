@@ -1,9 +1,8 @@
 <div class="row clearfix">
     <div class="col-xs-12">
         <div class="dapp-info clearfix">
-            <div class="cover-container"><img ng-if="!dapp.icon && !dapp.siaIcon" class="cover-image" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=208%C3%97208&w=208&h=208">
+            <div class="cover-container"><img ng-if="!dapp.icon" class="cover-image" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=208%C3%97208&w=208&h=208">
                 <img ng-if="dapp.icon" class="cover-image" ng-src="{{dapp.icon}}">
-                <img ng-if="dapp.siaIcon" class="cover-image" ng-src="/api/dapps/icon?id={{dapp.transactionId}}">
             </div>
             <div class="info-container">
                 <div class="document-title">
@@ -15,20 +14,15 @@
                 </div>
                 <div class="details-info-divider"></div>
                 <div ng-show="!loading && !installed && !isInstalling() && !isRemoving() && !isLaunched()" class="details-actions">
-                    <div ng-if="showSiaInstall">
+                    <div>
                         <a class="btn btn-sky-blue waves-effect waves-light" ng-click="installDapp()" ng-switch on="dapp.type">
                             <i class="mdi-file-file-download left"></i>
                             <span ng-switch-default><translate>INSTALL</translate></span>
                             <span ng-switch-when="1"><translate>DOWNLOAD</translate></span>
                         </a>
                     </div>
-                    <div ng-if="!showSiaInstall">
-                        <span class="btn btn-white">
-                            <span><translate>Sia required</translate></span>
-                        </span>
-                    </div>
                     <!-- <a class="btn btn-white waves-effect left-margin-14">SHARE</a> -->
-                    <a ng-show="dapp.git" href="{{dapp.githublink}}" target="_blank" class="btn btn-white waves-effect pull-right source"><translate>SOURCE CODE</translate></a>
+                    <a ng-show="dapp.link" href="{{dapp.link}}" target="_blank" class="btn btn-white waves-effect pull-right source"><translate>SOURCE CODE</translate></a>
                 </div>
                 <div ng-show="!loading && installed && !isInstalling() && !isRemoving() && !isLaunched()" class="details-actions">
                     <a class="btn btn-sky-blue waves-effect waves-light" ng-click="runDApp()" ng-switch on="dapp.type">

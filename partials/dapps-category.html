@@ -24,9 +24,8 @@
             <div class="cover">
                 <div class="cover-image-container">
                     <div class="cover-outer-align">
-                        <div class="cover-inner-align"><img ng-if="!dapp.icon && !dapp.siaIcon" class="cover-image" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=208%C3%97208&w=208&h=208">
+                        <div class="cover-inner-align"><img ng-if="!dapp.icon" class="cover-image" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=208%C3%97208&w=208&h=208">
                             <img ng-if="dapp.icon" class="cover-image" ng-src="{{dapp.icon}}">
-                            <img ng-if="dapp.siaIcon" class="cover-image" ng-src="/api/dapps/icon?id={{dapp.transactionId}}">
                         </div>
                     </div>
                 </div>
