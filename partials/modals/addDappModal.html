@@ -10,7 +10,7 @@
                 <span class="sr-only"><translate>Close modal</translate></span>
             </div>
             <div>
-                <h2>{{'Step 1/5 - Preamble'|translate}}</h2>
+                <h2>{{'Step 1/4 - Preamble'|translate}}</h2>
             </div>
             <div><translate>Please read carefully.</translate></div>
         </div>
@@ -38,7 +38,7 @@
                 <span class="sr-only"><translate>Close modal</translate></span>
             </div>
             <div>
-                <h2>{{'Step 2/5 Dapp Specifications'|translate}}</h2>
+                <h2>{{'Step 2/4 Dapp Specifications'|translate}}</h2>
             </div>
             <div><translate>Please set the dapp parameters below.</translate></div>
         </div>
@@ -55,7 +55,7 @@
             <a class="waves-effect btn-flat second-action" ng-click="step=step-1;"><translate>Go back</translate></a>
         </div>
     </div>
-    <div ng-show="step==3 && !passmode && !checkSecondPass" class="modal modal-fixed-footer col-md-6 dapp-modal">
+    <div ng-show="step==3 && !passmode && !checkSecondPass" class="modal modal-fixed-footer col-md-6 dapp-modal" style="height: 80%; max-height: 80%; z-index: 1003; display: block; opacity: 1; /* transform: scaleX(1); */ top: 0;bottom: 0;">
         <div class="modal-header modal-iconed hide-in-small">
             <div class="close-modal" ng-click="close()">
                 <span class="sr-only"><translate>Close modal</translate></span>
@@ -66,84 +66,7 @@
                 <span class="sr-only"><translate>Close modal</translate></span>
             </div>
             <div>
-                <h2>{{'Step 3/5 - Choose Storage Solution'|translate}}</h2>
-            </div>
-            <div class="hide-in-small"><translate>Please choose between the available options.</translate></div>
-        </div>
-        <div class="modal-content pretty-scrolling hide-in-small" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none;
-  box-shadow: none;">
-            <ul class="collection with-header dapp-collection">
-                <li class="collection-header">
-                    <h4>{{'Decentralized'|translate}}</h4>
-                </li>
-                <li class="collection-item">
-                    <input ng-click="selectRepository('sia')" type="checkbox" ng-checked="repository=='sia' || repository==null" class="filled-in violet" id="sia"/>
-                    <label class="imaged" for="sia"><img src="/images/sia_logo.png"></label>
-                    <div style="margin-top: 10px; margin-bottom: 10px;">
-                        <p><translate>Sia is a new decentralized cloud storage platform aimed at giving users control of their data. Storage is pulled from a large network of hosts, each using Sia's blockchain to form storage contracts with clients. Out of the hundreds of hosts, only a fraction need to be online for the data to be recovered. Even in a network with many unreliable hosts, the data is safe.<br><br>You need to upload your dapp source code as a .zip file to the Sia network. Once the upload was successful you need to specify the ASCII code of the file in the next step.</translate></p>
-                    </div>
-                    <a target="_blank" href="http://siacoin.com" class="btn btn-sky-blue waves-effect waves-light right"><translate>MORE INFO</translate></a>
-                </li>
-                <!-- <li class="collection-item">
-                    <input type="checkbox" class="filled-in violet" id="starj"/>
-                    <label for="starj">StarJ</label>
-
-                    <div style="margin-top: 10px;"></div>
-                    <a class="btn btn-sky-blue waves-effect waves-light right">MORE INFO</a>
-                </li> -->
-            </ul>
-            <ul class="collection with-header dapp-collection">
-                <li class="collection-header">
-                    <h4>{{'Centralized'|translate}}</h4>
-                </li>
-                <li class="collection-item">
-                    <input ng-click="selectRepository('git')" ng-checked="repository=='git'" type="checkbox" class="filled-in violet" id="git"/>
-                    <label class="imaged" for="git"><img src="/images/github_logo.png"></label>
-                    <div style="margin-top: 10px;  margin-bottom: 10px;"><translate>GitHub is a Web-based Git repository hosting service, which offers amongst other things a source code management functionality. GitHub provides a graphical interface and desktop as well as mobile integration. If you add your dapp source code to a GitHub repository you need to specify the repository link in the next step.</translate></div>
-                    <a href="http://github.com" target="_blank" class="btn btn-sky-blue waves-effect waves-light right"><translate>MORE INFO</translate></a>
-                </li>
-            </ul>
-        </div>
-        <div class="modal-content pretty-scrolling show-in-small" style="height: calc(100% - 130px); padding: 0; -webkit-box-shadow:none;
-  box-shadow: none;">
-            <ul class="collection with-header dapp-collection">
-                <li class="collection-item">
-                    <input ng-click="selectRepository('sia')" type="checkbox" ng-checked="repository=='sia' || repository==null" class="filled-in violet" id="sia"/>
-                    <label class="imaged" for="sia"><img src="/images/sia_logo.png"></label>
-                </li>
-                <li class="collection-item">
-                    <div style="margin-top: 10px;  margin-bottom: 10px;">
-                        <p><translate>Sia is a new decentralized cloud storage platform aimed at giving users control of their data. Storage is pulled from a large network of hosts, each using Sia's blockchain to form storage contracts with clients. Out of the hundreds of hosts, only a fraction need to be online for the data to be recovered. Even in a network with many unreliable hosts, the data is safe.<br><br>You need to upload your dapp source code as a .zip file to the Sia network. Once the upload was successful you need to specify the ASCII code of the file in the next step.</translate></p>
-                    </div>
-                </li>
-            </ul>
-            <ul class="collection with-header dapp-collection">
-                <li class="collection-item">
-                    <input ng-click="selectRepository('git')" ng-checked="repository=='git'" type="checkbox" class="filled-in violet" id="git"/>
-                    <label class="imaged" for="git"><img src="/images/github_logo.png"></label>
-                </li>
-                <li class="collection-item">
-                    <div style="margin-top: 10px; margin-bottom: 10px;"><translate>GitHub is a Web-based Git repository hosting service, which offers amongst other things a source code management functionality. GitHub provides a graphical interface and desktop as well as mobile integration. If you add your dapp source code to a GitHub repository you need to specify the repository link in the next step.</translate></div>
-                </li>
-            </ul>
-        </div>
-        <div class="modal-footer">
-            <a class="waves-effect btn-flat primary-action" ng-click="step=step+1;"><translate>Next Step</translate></a>
-            <a class="waves-effect btn-flat second-action" ng-click="step=step-1;"><translate>Go back</translate></a>
-        </div>
-    </div>
-    <div ng-show="step==4 && !passmode && !checkSecondPass" class="modal modal-fixed-footer col-md-6 dapp-modal" style="height: 80%; max-height: 80%; z-index: 1003; display: block; opacity: 1; /* transform: scaleX(1); */ top: 0;bottom: 0;">
-        <div class="modal-header modal-iconed hide-in-small">
-            <div class="close-modal" ng-click="close()">
-                <span class="sr-only"><translate>Close modal</translate></span>
-            </div>
-        </div>
-        <div class="modal-header modal-header-mobile clearfix">
-            <div class="close-modal show-in-small" ng-click="close()">
-                <span class="sr-only"><translate>Close modal</translate></span>
-            </div>
-            <div>
-                <h2>{{'Step 4/5 - Storage Specifications'|translate}}</h2>
+                <h2>{{'Step 3/4 - Storage Specifications'|translate}}</h2>
             </div>
             <div>{{getRepositoryHeaderText()}}</div>
         </div>
@@ -160,7 +83,7 @@
             <a class="waves-effect btn-flat second-action" ng-click="step=step-1;"><translate>Go back</translate></a>
         </div>
     </div>
-    <div ng-show="step==5 && !passmode && !checkSecondPass" class="modal modal-fixed-footer col-md-6 dapp-modal">
+    <div ng-show="step==4 && !passmode && !checkSecondPass" class="modal modal-fixed-footer col-md-6 dapp-modal">
         <div class="modal-header modal-iconed hide-in-small">
             <div class="close-modal" ng-click="close()">
                 <span class="sr-only"><translate>Close modal</translate></span>
@@ -171,7 +94,7 @@
                 <span class="sr-only"><translate>Close modal</translate></span>
             </div>
             <div>
-                <h2>{{'Step 5/5 - Confirmation'|translate}}</h2>
+                <h2>{{'Step 4/4 - Confirmation'|translate}}</h2>
             </div>
             <div class="hide-in-small"><translate>Please check your input below and go back if necessary.</translate></div>
         </div>
