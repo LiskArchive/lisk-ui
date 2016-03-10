@@ -95,10 +95,11 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
             }
         });
     }
-    $scope.goToStep4 = function () {
-        $scope.errorMessage = "";
-        $scope.step = 4;
-        $scope.errorAppLink = false;
+
+    $scope.step = 1;
+
+    $scope.goToStep2 = function () {
+        $scope.step = 2;
     }
 
     $scope.goToStep3 = function (invalid) {
@@ -110,18 +111,18 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
         }
     }
 
+    $scope.goToStep4 = function () {
+        $scope.errorMessage = "";
+        $scope.step = 4;
+        $scope.errorAppLink = false;
+    }
+
     $scope.goToStep5 = function () {
         $scope.errorAppLink = $scope.newDapp.git.trim() == '';
         if (!$scope.errorAppLink) {
             $scope.step = 5;
         }
     };
-
-    $scope.goToStep2 = function () {
-        $scope.step = 2;
-    }
-
-    $scope.step = 1;
 
     $scope.getRepositoryText = function () {
         return $scope.newDapp.git;
