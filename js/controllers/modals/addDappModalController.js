@@ -34,7 +34,6 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
         }
     }
 
-
     $scope.newDapp = {
         name: "",
         description: "",
@@ -42,10 +41,9 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
         type: 0,
         tags: "",
         git: "",
-        siaAscii: "",
-        siaIcon: "",
         icon: ""
     };
+
     $scope.sendData = function (pass, withSecond) {
         var data = {
             name: $scope.newDapp.name,
@@ -54,24 +52,15 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
             type: $scope.newDapp.type,
             tags: $scope.newDapp.tags
         }
-        if (!!$scope.urlSiaMode || $scope.newDapp.icon.trim() == '') {
+
+        if ($scope.newDapp.icon.trim() == '') {
         } else {
             data.icon = $scope.newDapp.icon.trim();
         }
 
-        if (!$scope.urlSiaMode || $scope.newDapp.siaIcon.trim() == '') {
-        } else {
-            data.siaIcon = $scope.newDapp.siaIcon.trim();
-        }
-
-        if ($scope.repository == 'sia' || $scope.newDapp.git.trim() == '') {
+        if ($scope.newDapp.git.trim() == '') {
         } else {
             data.git = $scope.newDapp.git.trim();
-        }
-
-        if ($scope.repository != 'sia' || $scope.newDapp.siaAscii.trim() == '') {
-        } else {
-            data.siaAscii = $scope.newDapp.siaAscii.trim();
         }
 
         $scope.errorMessage = "";
@@ -104,7 +93,6 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
                 }
                 addDappModal.deactivate();
             }
-
         });
     }
     $scope.goToStep4 = function () {
@@ -123,24 +111,11 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
     }
 
     $scope.goToStep5 = function () {
-        $scope.errorAppLink = $scope.repository == 'sia' ? $scope.newDapp.siaAscii.trim() == '' : $scope.newDapp.git.trim() == '';
-        // if ($scope.repository == 'sia') {
-        //     $scope.errorAppLink = $scope.errorAppLink || ($scope.newDapp.siaAscii.trim().indexOf('H4sIAAAJbogC')!=0);
-        // }
+        $scope.errorAppLink = $scope.newDapp.git.trim() == '';
         if (!$scope.errorAppLink) {
             $scope.step = 5;
         }
     };
-
-    $scope.urlSiaMode = 0;
-
-    $scope.changeUrlSiaMode = function () {
-        $scope.urlSiaMode = $scope.urlSiaMode ? 0 : 1;
-    }
-
-    $scope.getUlrSiaText = function () {
-        return $scope.urlSiaMode ? gettextCatalog.getString('change to url link') : gettextCatalog.getString('change to SIA ASCII');
-    }
 
     $scope.goToStep2 = function () {
         $scope.step = 2;
@@ -148,22 +123,20 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
 
     $scope.step = 1;
 
-    $scope.repository = 'sia';
-
     $scope.getRepositoryText = function () {
-        return $scope.repository == 'sia' ? $scope.newDapp.siaAscii : $scope.newDapp.git;
+        return $scope.newDapp.git;
     }
 
     $scope.getRepositoryName = function () {
-        return $scope.repository == 'sia' ? 'Sia' : 'GitHub';
+        return 'GitHub';
     }
 
     $scope.getRepositoryHeaderText = function () {
-        return $scope.repository == 'sia' ? gettextCatalog.getString('Please set the Sia ASCII code below.') : gettextCatalog.getString('Please set the GitHub repository link below.');
+        return gettextCatalog.getString('Please set the GitHub repository link below.');
     }
 
     $scope.getRepositoryHelpText = function () {
-        return $scope.repository == 'sia' ? gettextCatalog.getString('Please make sure you copy and paste the whole Sia ASCII code. Additionally please check that there were no characters added.') : gettextCatalog.getString('Please make sure you copy the complete repository link from GitHub. It ends in .git.');
+        return gettextCatalog.getString('Please make sure you copy the complete repository link from GitHub. It ends in .git.');
     }
 
     $scope.selectRepository = function (name) {
