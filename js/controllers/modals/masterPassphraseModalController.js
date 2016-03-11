@@ -5,7 +5,7 @@ angular.module('liskApp').controller('masterPassphraseModalController', ["$scope
     $scope.masterPass = '';
     $scope.emptyPass = false;
 
-    $scope.title = $scope.title || gettextCatalog.getString('Please enter master password.');
+    $scope.title = $scope.title || gettextCatalog.getString('Please enter the master passphrase for this node.');
     $scope.label = $scope.label || gettextCatalog.getString('Master Passphrase');
 
     $scope.close = function (pass) {

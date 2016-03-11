@@ -758,7 +758,7 @@ msgid "Please ensure all details are correct before confirming your dapp."
 msgstr ""
 
 #: js/controllers/modals/masterPassphraseModalController.js:8
-msgid "Please enter master password."
+msgid "Please enter the master passphrase for this node."
 msgstr ""
 
 #: partials/modals/addContactModal.html:52
