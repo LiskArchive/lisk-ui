@@ -72,9 +72,6 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
 
     $http.get("/api/dapps/get?id=" + $stateParams.dappId).then(function (response) {
         $scope.dapp = response.data.dapp;
-        if ($scope.dapp.git) {
-            $scope.dapp.githublink = $scope.githubLink($scope.dapp.git);
-        }
         $scope.view.page = {title: $scope.dapp.name, previous: 'main.dappstore'};
         $scope.view.inLoading = false;
     });
@@ -224,12 +221,7 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
         link.remove();
     }
 
-    $scope.githubLink = function (git) {
-        return git.replace("git@", "https://").replace(".com:", ".com/").replace('.git', '');
-    }
-
     $scope.isInstalled();
-
     $scope.getInstalling();
     $scope.getLaunched();
     $scope.getRemoving();
