@@ -94,7 +94,7 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
                 $scope.installed = false;
             } else {
                 $scope.errorModal = errorModal.activate({
-                    title: 'Uninstalling Dapp error',
+                    title: gettextCatalog.getString('Failed to uninstall Dapp'),
                     error: response.data.error,
                     destroy: function () {
 
@@ -143,7 +143,7 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
                 }
             } else {
                 $scope.errorModal = errorModal.activate({
-                    title: 'Installing Dapp error',
+                    title: gettextCatalog.getString('Failed to install dapp'),
                     error: response.data.error,
                     destroy: function () {
 
@@ -183,7 +183,7 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
                 $scope.openDapp();
             } else {
                 $scope.errorModal = errorModal.activate({
-                    title: 'Launching Dapp error',
+                    title: gettextCatalog.getString('Failed to launch Dapp'),
                     error: response.data.error,
                     destroy: function () {
 
