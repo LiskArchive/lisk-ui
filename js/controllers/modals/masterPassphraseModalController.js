@@ -14,6 +14,7 @@ angular.module('liskApp').controller('masterPassphraseModalController', ["$scope
         }
         masterPassphraseModal.deactivate();
     }
+
     $scope.passcheck = function (pass) {
         $scope.emptyPass = !pass;
         if (!$scope.emptyPass) {
