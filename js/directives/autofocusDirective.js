@@ -13,7 +13,6 @@ angular.module('liskApp').directive('ngFocus', function ($timeout) {
             element.bind('blur', function () {
                 if (angular.isDefined(attrs.ngFocusLost)) {
                     scope.$apply(attrs.ngFocusLost);
-
                 }
             });
         }
