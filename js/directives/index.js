@@ -7,3 +7,4 @@ require('../../js/directives/targetBlankDirective');
 require('../../js/directives/rangeDirective');
 require('../../js/directives/voteActionDirective');
 require('../../js/directives/voteTitleDirective');
+require('../../js/directives/validLinkDirective');
