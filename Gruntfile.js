@@ -39,10 +39,10 @@ module.exports = function (grunt) {
                 },
                 files: {
                     "static/css/app.css": [
-                        "bower_components/angular-chart.js/dist/angular-chart.css",
+                        "node_modules/angular-chart.js/dist/angular-chart.css",
                         "bower_components/materialize/dist/css/materialize.css",
                         "bower_components/bootstrap/dist/css/bootstrap.css",
-                        "bower_components/angular-modal/modal.css",
+                        "node_modules/angular-modal/modal.css",
                         "node_modules/ng-table/ng-table.css",
                         "tmp/app.css"
                     ]

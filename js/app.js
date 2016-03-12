@@ -5,11 +5,10 @@ require('angular-resource');
 require('angular-filter');
 require('browserify-angular-animate');
 require('ng-clip');
-// require('../bower_components//angular-animate/angular-animate.js')
-require('../bower_components/angular-gettext/dist/angular-gettext.min.js');
-require('../bower_components/angular-chart.js/dist/angular-chart.js');
-require('../bower_components/angular-socket-io/socket.js');
-// require('../bower_components/angular-materialize/src/angular-materialize.js');
+require('../node_modules/angular-animate/angular-animate.js')
+require('../node_modules/angular-gettext/dist/angular-gettext.min.js');
+require('../node_modules/angular-chart.js/dist/angular-chart.js');
+require('../node_modules/angular-socket-io/socket.js');
 require('../node_modules/ng-table/dist/ng-table.js');
 
 liskApp = angular.module('liskApp', ['ui.router', 'btford.modal', 'ngTable', 'ngAnimate',  'chart.js', 'btford.socket-io', 'ui.bootstrap', 'ngClipboard', 'angular.filter', 'gettext']);

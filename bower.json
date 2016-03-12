@@ -4,13 +4,9 @@
   "dependencies": {
     "jquery": "=2.2.0",
     "bootstrap": "=3.3.6",
-    "angular-chart.js": "=0.8.9",
-    "angular-socket-io": "=0.7.0",
     "materialize": "=0.97.5",
     "file-saver": "*",
     "blob": "*",
-    "angular-animate": "=1.4.9",
-    "angular-gettext": "=2.2.1",
     "underscore": "=1.8.3"
   }
 }
