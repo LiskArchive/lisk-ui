@@ -1,6 +1,5 @@
 require('angular');
 require('angular-ui-router');
-require('angular-modal');
 require('angular-resource');
 require('angular-filter');
 require('browserify-angular-animate');
