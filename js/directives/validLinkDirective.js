@@ -3,6 +3,7 @@ require('angular');
 angular.module('liskApp').directive('validLink', function () {
     return {
         require: 'ngModel',
+        restrict: 'A',
         scope: {
             validLink: '@validLink',
         },
