@@ -22,6 +22,7 @@ angular.module('liskApp').controller('delegatesController', ['$scope', '$rootSco
     $scope.moreDropdownSeelction = {
         isopen: false
     };
+
     $scope.getApproval = function (vote) {
         return (vote / $scope.allVotes ) * 100;
     };
