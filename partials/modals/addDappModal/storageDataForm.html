@@ -1,7 +1,7 @@
 <form name="form.storage_data" style="padding: 0 40px;">
     <input type="submit" ng-show="false">
     <div class="row clearfix" style="height: inherit;">
-        <div class="input-field">
+        <div class="file-field input-field">
             <input required valid-link=".zip" ng-class="{'invalid': form.storage_data.submitted && form.storage_data.link.$invalid, 'valid': form.storage_data.submitted && form.storage_data.link.$valid}" id="link" name="link" type="text" class="file-path validate" ng-model="newDapp.link">
             <label for="link"><translate>Dapp Link</translate></label>
         </div>
