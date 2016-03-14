@@ -16,8 +16,13 @@
     </div>
     <div class="row clearfix" style="height: inherit;">
         <div class="file-field input-field">
-            <input id="icon" name="icon" type="text" class="file-path validate" ng-model="newDapp.icon">
+            <input valid-link=".png|.jpg|.jpeg" ng-class="{'invalid': form.storage_data.submitted && form.storage_data.icon.$invalid, 'valid': form.storage_data.submitted && form.storage_data.icon.$valid}" id="icon" name="icon" type="text" class="file-path validate" ng-model="newDapp.icon">
             <label for="icon"><translate>Icon Link</translate></label>
+        </div>
+        <div class="error-newdapp-container" ng-show="form.storage_data.icon.$invalid && form.storage_data.submitted">
+            <small class="error" ng-show="form.storage_data.icon.$error.validLink">
+                <translate>Dapp icon is invalid.</translate>
+            </small>
         </div>
     </div>
 </form>
