@@ -19,7 +19,8 @@
                         </div>
                     </div>
                     <div class="col s10">
-                        <p translate>Enable Multi-Signature on this account</p>
+                        <p ng-if="!settings.enabledMultisign" translate>Multi-Signature is Disabled</p>
+                        <p ng-if="settings.enabledMultisign" translate>Multi-Signature is Enabled</p>
                     </div>
                 </div>
             </div>
