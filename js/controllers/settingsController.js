@@ -37,6 +37,8 @@ angular.module('liskApp').controller('settingsController', ['$scope', '$rootScop
     $scope.setMultisignature = function () {
         if ($scope.checkEnabledMultisign()) {
             return;
+        } else {
+            $scope.settings.enabledMultisign = true;
         }
         $interval.cancel($scope.updateSettings);
         $scope.multisignatureModal = multisignatureModal.activate({
