@@ -8,7 +8,6 @@ angular.module('liskApp').controller('delegatesController', ['$scope', '$rootSco
 
     $scope.view.page = {title: gettextCatalog.getString('Forging'), previous: null};
     $scope.view.bar = {forgingMenu: true};
-    $scope.allVotes = 100 * 1000 * 1000 * 1000 * 1000 * 100;
 
     $scope.countTop = 0;
     $scope.countStandby = 0;
@@ -21,10 +20,6 @@ angular.module('liskApp').controller('delegatesController', ['$scope', '$rootSco
     $scope.loadingStandby = true;
     $scope.moreDropdownSeelction = {
         isopen: false
-    };
-
-    $scope.getApproval = function (vote) {
-        return (vote / $scope.allVotes ) * 100;
     };
 
     $scope.voteList = {

@@ -2,7 +2,6 @@ require('angular');
 
 angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope', '$http', "userService", "$interval", "forgingModal", "delegateService", "viewFactory", "blockInfo", "ngTableParams", "blockService", 'gettextCatalog', function ($rootScope, $scope, $http, userService, $interval, forgingModal, delegateService, viewFactory, blockInfo, ngTableParams, blockService, gettextCatalog) {
 
-    $scope.allVotes = 1 * Math.pow(10,16);
     $scope.showAllColumns = false;
     $scope.showFullTime = false;
     $scope.countForgingBlocks = 0;
@@ -35,7 +34,6 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
                 scaleLineColor: "rgba(0,0,0,0)",
                 scaleGridLineWidth: 0,
                 scaleShowHorizontalLines: false,
-
                 scaleShowVerticalLines: false
             }
         },
@@ -64,7 +62,7 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
         },
         approval: {
             labels: [gettextCatalog.getString('Others'), gettextCatalog.getString('Approval')],
-            values: [0, $scope.allVotes],
+            values: [0, 100],
             colours: ['#90a4ae', '#f5f5f5'],
             options: {
                 percentageInnerCutout: 90,
@@ -74,10 +72,6 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
             }
         }
     }
-
-    $scope.getApproval = function (vote) {
-        return (vote / $scope.allVotes ) * 100;
-    };
 
     $scope.approval = 0;
     $scope.vote = 0;
@@ -159,9 +153,9 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
             }
             $scope.uptime = response.productivity || 0;
 
-            var approval = $scope.getApproval(response.vote);
+            var approval = parseFloat(response.approval || 0);;
 
-            $scope.graphs.approval.values = [approval, $scope.getApproval($scope.allVotes) - approval];
+            $scope.graphs.approval.values = [approval, 100 - approval];
             if (($scope.approval == 0 && approval > 0) || ($scope.approval >= 95 && approval < 95) || ($scope.approval >= 50 && approval < 50)) {
                 $scope.graphs.approval.colours = [approval >= 95 ? '#7cb342' : (approval >= 50 ? '#ffa000' : '#d32f2f'), '#f5f5f5'];
             }

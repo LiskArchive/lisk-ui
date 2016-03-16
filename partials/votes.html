@@ -38,7 +38,7 @@
                         <a href="#" ng-click="userInfo(delegate.address)">{{delegate.address}}</a>
                     </td>
                     <td data-title="tableMyDelegates.cols.productivity" sortable="'productivity'">{{(delegate.productivity) || '0.00'}}%</td>
-                    <td data-title="tableMyDelegates.cols.vote" sortable="'vote'">{{getApproval(delegate.vote) | number: 2}}%</td>
+                    <td data-title="tableMyDelegates.cols.vote" sortable="'vote'">{{delegate.approval | number: 2}}%</td>
                     <td data-title="''">
                         <div class="dropdown-more-group" dropdown>
                             <span class="table-more-actions" dropdown-toggle>
