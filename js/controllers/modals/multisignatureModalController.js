@@ -66,46 +66,25 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
                 $scope.totalCount = $scope.totalCount + 1;
                 $scope.contact = '';
             } else {
-                if (correctAddress || correctName) {
-                    if (correctAddress) {
-                        $http.get("/api/accounts?address=" + contact).then(function (response) {
-                            if (response.data.success) {
-                                $scope.presendError = false;
-                                $scope.addingError = '';
-                                if ($scope.members[response.data.account.publicKey] || contact == userService.address) {
-                                    return;
-                                }
-                                $scope.members[response.data.account.publicKey] = response.data.account;
-                                $scope.totalCount = $scope.totalCount + 1;
-                                $scope.contact = '';
-                            } else {
-                                $scope.addingError = response.data.error;
+                if (correctAddress) {
+                    $http.get("/api/accounts?address=" + contact).then(function (response) {
+                        if (response.data.success) {
+                            $scope.presendError = false;
+                            $scope.addingError = '';
+                            if ($scope.members[response.data.account.publicKey] || contact == userService.address) {
+                                return;
                             }
-                        });
-
-                    } else {
-                        $http.get("/api/accounts/username/get?username=" + encodeURIComponent(contact)).then(function (response) {
-                            if (response.data.success) {
-                                $scope.presendError = false;
-                                $scope.addingError = ''
-                                if ($scope.members[response.data.account.publicKey] || response.data.account.address == userService.address) {
-                                    return;
-                                }
-                                $scope.members[response.data.account.publicKey] = response.data.account;
-                                $scope.totalCount = $scope.totalCount + 1;
-                                $scope.contact = '';
-                            } else {
-                                $scope.addingError = response.data.error;
-                            }
-                        });
-                    }
-
+                            $scope.members[response.data.account.publicKey] = response.data.account;
+                            $scope.totalCount = $scope.totalCount + 1;
+                            $scope.contact = '';
+                        } else {
+                            $scope.addingError = response.data.error;
+                        }
+                    });
                 } else {
-
-                    $scope.addingError = 'Incorrect contact name or address';
+                    $scope.addingError = 'Incorrect address';
                 }
             }
-
         }
     }
 

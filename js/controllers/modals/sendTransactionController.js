@@ -63,27 +63,14 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
             } else {
                 if (correctAddress || allowSymbols.test($scope.to.toLowerCase())) {
                     if ($scope.isCorrectValue($scope.amount)) {
-                      if (correctAddress) {
-                          $scope.presendError = false;
-                          $scope.errorMessage = ''
-                          $scope.sendTransaction($scope.rememberedPassphrase);
-                      }
-                        else{
-                        $http.get("/api/accounts/username/get?username=" + encodeURIComponent($scope.to)).then(function (response) {
-                            if (response.data.success || correctAddress) {
-                                $scope.presendError = false;
-                                $scope.errorMessage = ''
-                                $scope.sendTransaction($scope.rememberedPassphrase);
-                            } else {
-                                $scope.errorMessage = response.data.error;
-                                $scope.presendError = true;
-                            }
-                        });}
+                        $scope.presendError = false;
+                        $scope.errorMessage = ''
+                        $scope.sendTransaction($scope.rememberedPassphrase);
                     } else {
                         $scope.presendError = true;
                     }
                 } else {
-                    $scope.errorMessage = 'Incorrect recipient name or address'
+                    $scope.errorMessage = 'Incorrect recipient address'
                     $scope.presendError = true;
                 }
             }
@@ -97,31 +84,16 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
             } else {
                 if (correctAddress || allowSymbols.test($scope.to.toLowerCase())) {
                     if ($scope.isCorrectValue($scope.amount)) {
-                        if (correctAddress) {
-                            $scope.presendError = false;
-                            $scope.errorMessage = ''
-                            $scope.passmode = !$scope.passmode;
-                            $scope.focus = 'secretPhrase';
-                            $scope.secretPhrase = '';
-                        } else {
-                        $http.get("/api/accounts/username/get?username=" + $scope.to).then(function (response) {
-                            if (response.data.success || correctAddress) {
-                                $scope.presendError = false;
-                                $scope.errorMessage = ''
-                                $scope.passmode = !$scope.passmode;
-                                $scope.focus = 'secretPhrase';
-                                $scope.secretPhrase = '';
-                            } else {
-                                $scope.errorMessage = response.data.error;
-                                $scope.presendError = true;
-                            }
-                        });}
-
+                        $scope.presendError = false;
+                        $scope.errorMessage = ''
+                        $scope.passmode = !$scope.passmode;
+                        $scope.focus = 'secretPhrase';
+                        $scope.secretPhrase = '';
                     } else {
                         $scope.presendError = true;
                     }
                 } else {
-                    $scope.errorMessage = 'Incorrect recipient name or address'
+                    $scope.errorMessage = 'Incorrect recipient address'
                     $scope.presendError = true;
                 }
             }

@@ -12,13 +12,12 @@
                         <div>
                             <h2>{{'Send LISK'|translate}}</h2>
                         </div>
-                        <div><translate>Please type in an account name or ID below.</translate></div>
+                        <div><translate>Please enter the Recipient Address and LISK Amount that you would like send below.</translate></div>
                     </div>
                     <div class="modal-body">
                         <form ng-submit="passcheck()">
                             <div class="input-group app-addon">
-                                <span class="input-group-addon search"></span>
-                                <input id="to" ng-focus="focus == 'to'" type="text" class="form-control" placeholder="{{'Account name or ID'|translate}}" ng-model="to">
+                                <input id="to" ng-focus="focus == 'to'" type="text" class="form-control" placeholder="{{'Recipient Address'|translate}}" ng-model="to">
                                 <span class="input-group-addon clear" ng-click="clearRecipient()"></span>
                             </div>
                             <div class="field-padding">
@@ -32,7 +31,7 @@
                         </form>
                     </div>
                     <div class="modal-body bordered">
-                        <span class="send-info-text flat-text"><translate>Make sure you're sending LISK to the right contact. This action can't be undone later.</translate></span>
+                        <span class="send-info-text flat-text"><translate>Make sure you're sending LISK to the right address. This action can't be undone later.</translate></span>
                     </div>
                     <div class="modal-body">
                         <ul class="nav modal-buttons pull-right">

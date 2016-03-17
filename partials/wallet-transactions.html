@@ -9,7 +9,7 @@
                         <a href="#" ng-click="transactionInfo(transaction, transaction.signList)">{{transaction.id}}</a>
                     </td>
                     <td data-title="tableWalletTransactions.cols.t_recipientId" class="pointer" sortable="'t_recipientId'">
-                        <a href="#" ng-click="userInfo(transaction.recipientId)">{{transaction.recipientUsername || transaction.recipientId}}</a>
+                        <a href="#" ng-click="userInfo(transaction.recipientId)">{{transaction.recipientId}}</a>
                     </td>
                     <td data-title="tableWalletTransactions.cols.t_timestamp" sortable="'t_timestamp'">{{transaction.timestamp | timeAgoFilter : showFullTime}}
                     </td>

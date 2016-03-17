@@ -15,8 +15,6 @@
                                     <span class="id">{{account.address}}</span>
                                     <span class="blockchain-icon" clip-copy="account.address"></span>
                                 </h2>
-                                <strong><translate>Name</translate>:</strong>
-                                {{account.username || 'N/A'}}
                                 <p ng-if="thisUser.publicKey==account.publicKey"><strong><translate>Public key</translate>:</strong> {{account.publicKey}}</p>
                             </div>
                         </div>

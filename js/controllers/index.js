@@ -19,7 +19,6 @@ require('../../js/controllers/dappsController');
 require('../../js/controllers/dappController');
 require('../../js/controllers/dappsCategoryController');
 // Modals
-require('../../js/controllers/modals/userSettingsModalController');
 require('../../js/controllers/modals/blockModalController');
 require('../../js/controllers/modals/forgingModalController');
 require('../../js/controllers/modals/freeModalController');

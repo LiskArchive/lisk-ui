@@ -6,7 +6,6 @@ require('../../js/factories/cutFactory');
 // Modals
 require('../../js/factories/modals/addContactModal');
 require('../../js/factories/modals/blockModal');
-require('../../js/factories/modals/userSettingsModal');
 require('../../js/factories/modals/newUser');
 require('../../js/factories/modals/blockInfo');
 require('../../js/factories/modals/transactionInfo');

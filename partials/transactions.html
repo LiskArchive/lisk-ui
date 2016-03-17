@@ -22,10 +22,10 @@
                         <a href="#" ng-click="transactionInfo(transaction)">{{transaction.id}}</a>
                     </td>
                     <td class="td-amount" data-title="tableTransactions.cols.t_senderId" class="pointer" sortable="'t_senderId'">
-                        <a href="#" ng-click="userInfo(transaction.senderId)">{{transaction.senderUsername || transaction.senderId}}</a>
+                        <a href="#" ng-click="userInfo(transaction.senderId)">{{transaction.senderId}}</a>
                     </td>
                     <td class="td-amount" data-title="tableTransactions.cols.t_recipientId" class="pointer" sortable="'t_recipientId'">
-                        <a href="#" ng-click="userInfo(transaction.recipientId)">{{transaction.recipientUsername || transaction.recipientId}}</a>
+                        <a href="#" ng-click="userInfo(transaction.recipientId)">{{transaction.recipientId}}</a>
                     </td>
                     <td data-title="tableTransactions.cols.t_timestamp" sortable="'t_timestamp'">{{transaction.timestamp | timeAgoFilter : showFullTime}}
                     </td>
@@ -43,10 +43,10 @@
                         <a href="#" ng-click="transactionInfo(transaction)">{{transaction.id}}</a>
                     </td>
                     <td class="td-amount" data-title="tableTransactions.cols.t_senderId" class="pointer" sortable="'t_senderId'">
-                        <a href="#" ng-click="userInfo(transaction.senderId)">{{transaction.senderUsername || transaction.senderId}}</a>
+                        <a href="#" ng-click="userInfo(transaction.senderId)">{{transaction.senderId}}</a>
                     </td>
                     <td class="td-amount" data-title="tableTransactions.cols.t_recipientId" class="pointer" sortable="'t_recipientId'">
-                        <a href="#" ng-click="userInfo(transaction.recipientId)">{{transaction.recipientUsername || transaction.recipientId}}</a>
+                        <a href="#" ng-click="userInfo(transaction.recipientId)">{{transaction.recipientId}}</a>
                     </td>
                     <td data-title="tableTransactions.cols.t_timestamp" sortable="'t_timestamp'">{{transaction.timestamp | timeAgoFilter : showFullTime}}
                     </td>

@@ -99,10 +99,10 @@
               <a href="#" ng-click="transactionInfo(transaction)">{{transaction.id}}</a>
             </td>
             <td class="padding-in-1400">
-              <a href="#" ng-click="userInfo(transaction.senderId)">{{transaction.senderUsername || transaction.senderId}}</a>
+              <a href="#" ng-click="userInfo(transaction.senderId)">{{transaction.senderId}}</a>
             </td>
             <td ng-show="transaction.type &lt;= 1">
-              <a href="#" ng-click="userInfo(transaction.recipientId)">{{transaction.recipientUsername || transaction.recipientId}}</a>
+              <a href="#" ng-click="userInfo(transaction.recipientId)">{{transaction.recipientId}}</a>
             </td>
             <td ng-show="transaction.type &gt; 1"></td>
             <td>

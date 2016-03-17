@@ -1,7 +1,7 @@
 require('angular');
 var compareVersion = require('../../node_modules/compare-version/index.js');
 
-angular.module('liskApp').controller('appController', ['dappsService', '$scope', '$rootScope', '$http', "userService", "$interval", "$timeout", 'viewFactory', '$state', 'blockService', 'sendTransactionModal', 'registrationDelegateModal', 'userSettingsModal', 'serverSocket', 'delegateService', '$window', 'forgingModal', 'errorModal', 'contactsService', 'addContactModal', 'userInfo', 'transactionsService', 'secondPassphraseModal', 'focusFactory', 'gettextCatalog', function (dappsService, $rootScope, $scope, $http, userService, $interval, $timeout, viewFactory, $state, blockService, sendTransactionModal, registrationDelegateModal, userSettingsModal, serverSocket, delegateService, $window, forgingModal, errorModal, contactsService, addContactModal, userInfo, transactionsService, secondPassphraseModal, focusFactory, gettextCatalog) {
+angular.module('liskApp').controller('appController', ['dappsService', '$scope', '$rootScope', '$http', "userService", "$interval", "$timeout", 'viewFactory', '$state', 'blockService', 'sendTransactionModal', 'registrationDelegateModal', 'serverSocket', 'delegateService', '$window', 'forgingModal', 'errorModal', 'contactsService', 'addContactModal', 'userInfo', 'transactionsService', 'secondPassphraseModal', 'focusFactory', 'gettextCatalog', function (dappsService, $rootScope, $scope, $http, userService, $interval, $timeout, viewFactory, $state, blockService, sendTransactionModal, registrationDelegateModal, serverSocket, delegateService, $window, forgingModal, errorModal, contactsService, addContactModal, userInfo, transactionsService, secondPassphraseModal, focusFactory, gettextCatalog) {
 
     $scope.searchTransactions = transactionsService;
     $scope.searchDapp = dappsService;
@@ -153,7 +153,6 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
                     userService.unconfirmedBalance = 0;
                     userService.secondPassphrase = '';
                     userService.unconfirmedPassphrase = '';
-                    userService.username = '';
                 } else {
                     userService.balance = account.balance;
                     userService.unconfirmedBalance = account.unconfirmedBalance;
@@ -161,9 +160,7 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
                     userService.u_multisignatures = account.u_multisignatures;
                     userService.secondPassphrase = account.secondSignature || account.unconfirmedSignature;
                     userService.unconfirmedPassphrase = account.unconfirmedSignature;
-                    userService.username = account.username;
                 }
-                $scope.username = userService.username;
                 $scope.balance = userService.balance;
                 $scope.unconfirmedBalance = userService.unconfirmedBalance;
                 $scope.secondPassphrase = userService.secondPassphrase;
@@ -404,19 +401,11 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
         })
     }
 
-    $scope.userSettings = function () {
-        $scope.userSettingsModal = userSettingsModal.activate({
-            destroy: function () {
-            }
-        });
-    }
-
     $scope.getDelegate = function () {
         delegateService.getDelegate(userService.publicKey, function (response) {
             if (response.username && !$scope.username) {
                 $scope.username = response.username;
                 userService.username = response.username;
-
             }
             // if ($scope.delegateInRegistration) {
             //     $scope.delegateInRegistration = !(!!response);
