@@ -27,8 +27,6 @@
                             <li>
                                 <a href="#" class="blue-link" ng-click="sendTransactionToUser()"><i class="mdi-content-send"></i><translate>Send LISK</translate></a>
                             </li>
-                            <!-- <li><a href="#"><i class="mdi-communication-message"></i> Send Message</a></li>-->
-                            <!-- <li><a href="#"><i class="mdi-action-stars"></i> Add Favorite</a></li> -->
                             <li ng-if="!isUserInContactList(account.address)">
                                 <a href="#" ng-click="addContact(account.address)"><i class="mdi-social-person-add"></i><translate>Contact Request</translate></a>
                             </li>
