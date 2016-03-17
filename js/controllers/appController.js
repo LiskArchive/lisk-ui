@@ -1,7 +1,7 @@
 require('angular');
 var compareVersion = require('../../node_modules/compare-version/index.js');
 
-angular.module('liskApp').controller('appController', ['dappsService', '$scope', '$rootScope', '$http', "userService", "$interval", "$timeout", 'viewFactory', '$state', 'blockService', 'sendTransactionModal', 'registrationDelegateModal', 'serverSocket', 'delegateService', '$window', 'forgingModal', 'errorModal', 'contactsService', 'addContactModal', 'userInfo', 'transactionsService', 'secondPassphraseModal', 'focusFactory', 'gettextCatalog', function (dappsService, $rootScope, $scope, $http, userService, $interval, $timeout, viewFactory, $state, blockService, sendTransactionModal, registrationDelegateModal, serverSocket, delegateService, $window, forgingModal, errorModal, contactsService, addContactModal, userInfo, transactionsService, secondPassphraseModal, focusFactory, gettextCatalog) {
+angular.module('liskApp').controller('appController', ['dappsService', '$scope', '$rootScope', '$http', "userService", "$interval", "$timeout", 'viewFactory', '$state', 'blockService', 'sendTransactionModal', 'registrationDelegateModal', 'serverSocket', 'delegateService', '$window', 'forgingModal', 'errorModal', 'userInfo', 'transactionsService', 'secondPassphraseModal', 'focusFactory', 'gettextCatalog', function (dappsService, $rootScope, $scope, $http, userService, $interval, $timeout, viewFactory, $state, blockService, sendTransactionModal, registrationDelegateModal, serverSocket, delegateService, $window, forgingModal, errorModal, userInfo, transactionsService, secondPassphraseModal, focusFactory, gettextCatalog) {
 
     $scope.searchTransactions = transactionsService;
     $scope.searchDapp = dappsService;
@@ -55,11 +55,6 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
         isopen: false
     };
 
-    $scope.contacts = {
-        count: 0,
-        list: []
-    };
-
     $scope.toggleDropdown = function ($event) {
 
     };
@@ -106,7 +101,6 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
         'main.forging',
         'main.blockchain',
         'passphrase',
-        'main.contacts',
         'main.dappstore',
         'main.multi'
     ];
@@ -177,14 +171,6 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
                     $scope.getForging($scope.setForgingText);
                     $scope.getDelegate();
                 }
-
-                if ($state.current.name == 'main.dashboard') {
-                    $scope.getContacts();
-
-                }
-                if ($state.current.name == 'main.pending' || $state.current.name == 'main.contacts') {
-                    $scope.getContacts();
-                }
                 if ($state.current.name == 'main.forging' || $state.current.name == 'main.votes' || $state.current.name == 'main.delegates') {
                     $scope.getMyVotesCount();
                     $scope.getForging($scope.setForgingText);
@@ -213,25 +199,6 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
             destroy: function () {
             }
         });
-    }
-
-    $scope.addContact = function (contact) {
-        contact = contact || "";
-        $scope.addContactModal = addContactModal.activate({
-            contact: contact,
-            destroy: function () {
-            }
-        });
-    }
-
-    $scope.isUserInContactList = function (address) {
-        var inList = false;
-        $scope.contacts.list.forEach(function (contact) {
-            if (contact.address == address) {
-                inList = true;
-            }
-        });
-        return inList;
     }
 
     $scope.setSecondPassphrase = function () {
@@ -381,16 +348,6 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
             });
     }
 
-    $scope.getContacts = function () {
-        contactsService.getContacts(userService.publicKey, function () {
-            $scope.contacts = {
-                count: contactsService.count,
-                followersCount: contactsService.followersCount,
-                list: contactsService.list
-            };
-        });
-    }
-
     $scope.registrationDelegate = function () {
         $scope.registrationDelegateModal = registrationDelegateModal.activate({
             totalBalance: userService.unconfirmedBalance,
@@ -481,7 +438,6 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
         $scope.getAppData();
         $scope.updateViews([
             'main.transactions',
-            'main.contacts',
             'main.multi',
             'main.dashboard'
         ]);
@@ -513,23 +469,9 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
         ]);
     })
 
-    $scope.$on('socket:contacts/change', function (ev, data) {
-        $scope.getAppData();
-        $scope.updateViews([
-            'main.contacts'
-        ]);
-    });
-
     $scope.$on('socket:dapps/change', function (ev, data) {
         $scope.updateViews([
             'main.dapps'
-        ]);
-    });
-
-    $scope.$on('socket:followers/change', function (ev, data) {
-        $scope.getAppData();
-        $scope.updateViews([
-            'main.pending'
         ]);
     });
 

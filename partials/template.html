@@ -78,12 +78,6 @@
                     <span class="menu-text"><translate>Multi-Signature</translate></span>
                 </a>
             </li>
-            <li ng-show="showMenuItem('main.contacts')" ui-sref-active="active">
-                <a ui-sref="main.contacts" class="waves-effect waves-blue">
-                    <div class="nav-icon" id="contacts-icon"></div>
-                    <span class="menu-text"><translate>Contacts</translate></span>
-                </a>
-            </li>
             <li ng-show="showMenuItem('main.conversations')" ui-sref-active="active">
                 <a ui-sref="main.conversations" class="waves-effect waves-blue">
                     <div class="nav-icon" id="conversations-icon"></div>
@@ -154,14 +148,6 @@
                 <a class="btn btn-blue-nav waves-effect waves-light left-margin-20" ng-click="sendTransaction()">
                     <i class="mdi-content-send left"></i><translate>SEND</translate>
                 </a>
-                <!-- <div class="notifications left-margin-20 valign-wrapper" dropdown is-open="moreNotificationsStatus.isopen"><span dropdown-toggle>9</span>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Incoming Payments<span class="badge meent">1</span></a></li>
-                        <li><a href="#">Messages<span class="badge blue">5</span></a></a></li>
-                        <li><a href="#">Contact Request<span class="badge cloud">2</span></a></a></li>
-                        <li><a href="#">Dapp Response<span class="badge violet">1</span></a></a></li>
-                    </ul>
-                </div> -->
                 <div class="mini-chart valign-wrapper" ng-show="syncState!=0">
                     <div class="mini-chart-label">{{syncState}}%</div>
                     <canvas id="total-forged" class="chart chart-doughnut" chart-data="loading.values" chart-labels="loading.labels" chart-options="loading.options" chart-colours="loading.colours"></canvas>
@@ -347,17 +333,6 @@
                 <input type="text" focus-on="true" class="form-control" ng-model="searchDapp.searchForDapp" placeholder="{{'Search for Dapps'|translate}}">
             </div>
         </div>
-    </div>
-    <div id="page-nav" ng-if="view.bar.showContactsBar">
-        <ul class="nav nav-underline pull-left">
-            <li ui-sref-active="active">
-                <a href="#" ui-sref="main.contacts"><translate>Contacts</translate></a>
-            </li>
-            <li ui-sref-active="active">
-                <a href="#" ui-sref="main.pending"><translate>Pending ({{contacts.followersCount}})</translate></a>
-            </li>
-        </ul>
-        <a ng-click="addContact()" class="btn-floating btn-large waves-effect waves-light blue" style="position: absolute; right: 60px; top: 36px;"><i class="mdi-content-add"></i></a>
     </div>
 </div>
 <div class="container-fluid" ui-view></div>

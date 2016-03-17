@@ -10,8 +10,6 @@ angular.module('liskApp').factory('serverSocket', ["socketFactory", "$location",
     serverSocket.forward('transactions/change');
     serverSocket.forward('blocks/change');
     serverSocket.forward('delegates/change');
-    serverSocket.forward('contacts/change');
-    serverSocket.forward('followers/change');
     serverSocket.forward('multisignatures/change');
     serverSocket.forward('multisignatures/signatures/change');
     serverSocket.forward('dapps/change');

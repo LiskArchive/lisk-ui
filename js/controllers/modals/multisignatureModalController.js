@@ -40,43 +40,41 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
         $scope.totalCount = $scope.totalCount - 1;
     }
 
-    $scope.addMember = function (contact) {
+    $scope.addMember = function (member) {
         $scope.addingError = '';
         var isAddress = /^[0-9]+[L|l]$/g;
-        var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
-        var correctAddress = isAddress.test(contact);
-        var correctName = allowSymbols.test(contact.toLowerCase());
-        if ($scope.contact.trim() == '') {
-            $scope.addingError = 'Empty contact';
+        var correctAddress = isAddress.test();
+        if ($scope.member.trim() == '') {
+            $scope.addingError = 'Empty address';
         } else {
             var Buffer = require('buffer/').Buffer;
             var buffer =  []
             try {
-                buffer = Buffer(contact, "hex")}
+                buffer = Buffer(member, "hex")}
             catch(err) {
 
             }
             if (buffer.length == 32) {
                 var lisk = require('lisk-js');
-                var address = lisk.crypto.getAddress($scope.contact);
-                if ($scope.members[$scope.contact] || address == userService.address) {
+                var address = lisk.crypto.getAddress($scope.member);
+                if ($scope.members[$scope.address] || address == userService.address) {
                     return;
                 }
-                $scope.members[$scope.contact] = {address: address, publicKey: $scope.contact};
+                $scope.members[$scope.member] = {address: address, publicKey: $scope.member};
                 $scope.totalCount = $scope.totalCount + 1;
-                $scope.contact = '';
+                $scope.member = '';
             } else {
                 if (correctAddress) {
-                    $http.get("/api/accounts?address=" + contact).then(function (response) {
+                    $http.get("/api/accounts?address=" + member).then(function (response) {
                         if (response.data.success) {
                             $scope.presendError = false;
                             $scope.addingError = '';
-                            if ($scope.members[response.data.account.publicKey] || contact == userService.address) {
+                            if ($scope.members[response.data.account.publicKey] || member == userService.address) {
                                 return;
                             }
                             $scope.members[response.data.account.publicKey] = response.data.account;
                             $scope.totalCount = $scope.totalCount + 1;
-                            $scope.contact = '';
+                            $scope.member = '';
                         } else {
                             $scope.addingError = response.data.error;
                         }

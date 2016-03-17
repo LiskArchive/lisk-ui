@@ -27,9 +27,6 @@
                             <li>
                                 <a href="#" class="blue-link" ng-click="sendTransactionToUser()"><i class="mdi-content-send"></i><translate>Send LISK</translate></a>
                             </li>
-                            <li ng-if="!isUserInContactList(account.address)">
-                                <a href="#" ng-click="addContact(account.address)"><i class="mdi-social-person-add"></i><translate>Contact Request</translate></a>
-                            </li>
                         </ul>
                     </div>
                     <div class="scrolling">
@@ -37,7 +34,7 @@
                             <ul class="list-group">
                                 <li class="list-group-item summary"><translate>Summary</translate></li>
                                 <li class="list-group-item bordered"><translate>Total Balance</translate>
-                                    <span class="pull-right small-text">{{account.unconfirmedBalance  | liskFilter }} LISK</span>
+                                    <span class="pull-right small-text">{{account.unconfirmedBalance | liskFilter }} LISK</span>
                                 </li>
                                 <li class="list-group-item"><translate>USD Equivalent</translate>
                                     <span class="pull-right small-text">${{convertToUSD(account.unconfirmedBalance)| number: 2}}</span>
