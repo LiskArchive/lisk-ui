@@ -26,7 +26,7 @@ liskApp.config(["ngClipProvider",
         $stateProvider
             .state('main', {
                 abstract: true,
-                templateUrl: "/partials/app-template.html",
+                templateUrl: "/partials/template.html",
                 controller: "templateController"
             })
             .state('main.dashboard', {
