@@ -45,9 +45,9 @@
                             </ul>
                         </div>
                         <div class="modal-chapter clearfix">
-                            <div class="multiline" ng-class="{'open': transactions.view}" ng-click="toggleTransactions()">
+                            <div class="multiline" ng-click="toggleTransactions()">
                                 <h2>{{'Transactions'|translate}}</h2>
-                                <div class="chapter-more pull-right">{{transactions.list.length || '0'}} <translate>Transactions</translate></div>
+                                <div class="chapter-more pull-right" ng-class="{'open': transactions.view, 'closed': !transactions.view}">{{transactions.list.length || '0'}} <translate>Transactions</translate></div>
                             </div>
                         </div>
                         <div ng-repeat="transaction in transactions.list" ng-show="transactions.view">
