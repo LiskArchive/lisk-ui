@@ -53,7 +53,7 @@ angular.module('liskApp').controller('userInfoController', ["$scope", "$http", "
         });
     }
 
-    $scope.transactions = { view: false, list: [1] };
+    $scope.transactions = { view: false, list: [] };
 
     $scope.toggleTransactions = function () {
         $scope.transactions.view = !$scope.transactions.view;
