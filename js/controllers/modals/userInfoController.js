@@ -23,7 +23,11 @@ angular.module('liskApp').controller('userInfoController', ["$scope", "$http", "
         $scope.transactions = {view: false, list: []};
         $http.get("/api/accounts", {params: {address: userId}})
             .then(function (resp) {
-                $scope.account = resp.data.account;
+                if (resp.data.account) {
+                    $scope.account = resp.data.account;
+                } else {
+                    $scope.account = { address: userId, publicKey: null };
+                }
                 $http.get("/api/transactions", {
                     params: {
                         senderPublicKey: $scope.account.publicKey,
