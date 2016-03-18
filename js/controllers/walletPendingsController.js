@@ -56,7 +56,6 @@ angular.module('liskApp').controller('walletPendingsController', ['$scope', '$ro
     });
     // end Transactions
 
-
     $scope.updateTransactions = function () {
         $scope.tableTransactions.reload();
     }

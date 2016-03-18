@@ -59,8 +59,6 @@ angular.module('liskApp').controller('walletTransactionsController', ['$scope', 
                         }, 1);
                     });
             }
-
-
         }
     });
 

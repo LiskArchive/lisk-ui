@@ -52,7 +52,6 @@ angular.module('liskApp').controller('transactionsController', ['$scope', '$root
                                 $scope.unconfirmedTransactions = unconfirmedTransactions;
                                 $scope.$apply();
                             }, 1);
-
                         });
                 });
         }

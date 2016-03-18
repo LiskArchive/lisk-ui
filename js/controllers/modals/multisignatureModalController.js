@@ -12,6 +12,7 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
     }
     $scope.addingError = '';
     $scope.currentAddress = userService.address;
+
     $scope.close = function () {
         if ($scope.destroy) {
             $scope.destroy(false);
@@ -20,7 +21,6 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
     }
 
     $scope.step = 1;
-
     $scope.totalCount = 0;
     $scope.sign = 2;
 
@@ -109,9 +109,11 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
                 return '+' + element;
             })
         };
+
         if ($scope.secondPassphrase) {
             data.secondSecret = $scope.authData.secondPassphrase;
         }
+
         $scope.view.inLoading = true;
         $http.put('/api/multisignatures', data).then(function (response) {
             $scope.view.inLoading = false;
@@ -123,7 +125,6 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
                 }
                 multisignatureModal.deactivate();
             }
-
         });
     }
 

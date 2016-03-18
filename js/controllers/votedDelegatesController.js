@@ -78,10 +78,8 @@ angular.module('liskApp').controller('votedDelegatesController', ['$scope', '$ro
                     $scope.unconfirmedTransactions.list = [];
                     response.data.transactions.forEach(function (transaction) {
                         $scope.unconfirmedTransactions.list = $scope.unconfirmedTransactions.list.concat(transaction.asset.votes);
-
                     });
                 });
-
         },
         inList: function (publicKey) {
             return this.list.indexOf('-' + publicKey) != -1;
@@ -89,7 +87,6 @@ angular.module('liskApp').controller('votedDelegatesController', ['$scope', '$ro
     };
     $scope.unconfirmedTransactions.getList();
     // end Unconfirmed transactions
-
 
     // My deletates
     $scope.tableMyDelegates = new ngTableParams({

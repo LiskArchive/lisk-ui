@@ -92,7 +92,6 @@ angular.module('liskApp').controller('dappsController', ['$scope', 'viewFactory'
                 });
             }
         }
-
     };
 
     $scope.$on('updateControllerData', function (event, data) {
