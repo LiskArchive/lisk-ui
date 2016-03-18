@@ -43,13 +43,13 @@
                     <div>
                         <h2>{{'Step 2/3 - Specify Group Members'|translate}}</h2>
                     </div>
-                    <div><translate>Add group members by typing in their LISK address or public key.</translate></div>
+                    <div><translate>Add group members by typing in their LISK address and pressing enter.</translate></div>
                 </div>
                 <div class="modal-body">
                     <form ng-submit="addMember(member)">
                         <div class="input-group app-addon">
                             <span class="input-group-addon search"></span>
-                            <input ng-focus="focus == 'member'" id="member" type="text" class="form-control" placeholder="{{'LISK address or public key'|translate}}" ng-model="member">
+                            <input ng-focus="focus == 'member'" id="member" type="text" class="form-control" placeholder="{{'LISK Address'|translate}}" ng-model="member">
                             <span class="input-group-addon clear" ng-click="member='';"></span>
                         </div>
                         <span class="app-addon-error" style="margin-top: 3px;" ng-show="addingError">{{addingError}}</span>
