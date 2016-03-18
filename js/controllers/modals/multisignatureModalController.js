@@ -3,7 +3,7 @@ require('angular');
 angular.module('liskApp').controller('multisignatureModalController', ["$scope", "$http", "multisignatureModal", "viewFactory", "userService", 'gettextCatalog', function ($scope, $http, multisignatureModal, viewFactory, userService, gettextCatalog) {
 
     $scope.view = viewFactory;
-    $scope.view.loadingText = gettextCatalog.getString('Set members of account');
+    $scope.view.loadingText = gettextCatalog.getString('Configuring multi-signature group');
     $scope.secondPassphrase = userService.secondPassphrase;
     $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
     $scope.authData = {
@@ -29,7 +29,7 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
         if ($scope.totalCount) {
             $scope.step = 3;
         } else {
-            $scope.addingError = 'Please add at least one additional member to create a multi signature account';
+            $scope.addingError = 'Please add at least one additional member to create a multi-signature group';
         }
     }
 
@@ -90,7 +90,7 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
         $scope.errorMessage = '';
         if (fromPass) {
             if ($scope.authData.password.trim() == '' || ($scope.authData.secondPassphrase.trim() == '' && $scope.secondPassphrase)) {
-                $scope.errorMessage = "Missing Passphrase or Second Passphrase";
+                $scope.errorMessage = "Missing passphrase or second passphrase";
                 return;
             }
         } else {
