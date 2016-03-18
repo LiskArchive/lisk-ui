@@ -20,8 +20,8 @@ angular.module('liskApp').controller('userInfoController', ["$scope", "$http", "
             return;
         }
         $scope.userIdOld = userId;
-        $scope.transactions = {view: false, list: []};
-        $http.get("/api/accounts", {params: {address: userId}})
+        $scope.transactions = { view: false, list: [] };
+        $http.get("/api/accounts", { params: { address: userId }})
         .then(function (resp) {
             if (resp.data.account) {
                 $scope.account = resp.data.account;
@@ -53,7 +53,7 @@ angular.module('liskApp').controller('userInfoController', ["$scope", "$http", "
         });
     }
 
-    $scope.transactions = {view: false, list: [1]};
+    $scope.transactions = { view: false, list: [1] };
 
     $scope.toggleTransactions = function () {
         $scope.transactions.view = !$scope.transactions.view;
