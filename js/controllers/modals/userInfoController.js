@@ -20,7 +20,7 @@ angular.module('liskApp').controller('userInfoController', ["$scope", "$http", "
             return;
         }
         $scope.userIdOld = userId;
-        $scope.transactions = {view: false, list: [1]};
+        $scope.transactions = {view: false, list: []};
         $http.get("/api/accounts", {params: {address: userId}})
             .then(function (resp) {
                 $scope.account = resp.data.account;
