@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="modal-nav" ng-if="account.address != address">
-                        <ul class="nav nav-justified nav-actions">
+                        <ul class="nav nav-justified nav-actions" ng-if="account.address">
                             <li>
                                 <a href="#" class="blue-link" ng-click="sendTransactionToUser()"><i class="mdi-content-send"></i><translate>Send LISK</translate></a>
                             </li>
