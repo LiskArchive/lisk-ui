@@ -32,20 +32,20 @@ angular.module('liskApp').controller('userInfoController', ["$scope", "$http", "
                             orderBy: 't_timestamp:desc'
                         }
                     })
-                        .then(function (resp) {
-                            var transactions = resp.data.transactions;
+                    .then(function (resp) {
+                        var transactions = resp.data.transactions;
 
-                            $http.get('/api/transactions/unconfirmed', {
-                                params: {
-                                    senderPublicKey: $scope.account.publicKey,
-                                    address: $scope.account.address
-                                }
-                            })
-                                .then(function (resp) {
-                                    var unconfirmedTransactions = resp.data.transactions;
-                                    $scope.transactions.list = unconfirmedTransactions.concat(transactions).slice(0, 6);
-                                });
-                        });
+                        $http.get('/api/transactions/unconfirmed', {
+                            params: {
+                                senderPublicKey: $scope.account.publicKey,
+                                address: $scope.account.address
+                            }
+                        })
+                            .then(function (resp) {
+                                var unconfirmedTransactions = resp.data.transactions;
+                                $scope.transactions.list = unconfirmedTransactions.concat(transactions).slice(0, 6);
+                            });
+                    });
             });
     }
 
