@@ -20,7 +20,7 @@
                     <span class="pull-right small-text">{{block.fee | liskFilter}} LISK</span>
                 </li>
                 <li class="list-group-item"><translate>USD Equivalent</translate>
-                    <span class="pull-right small-text">${{convertToUSD(block.amount)| number: 2}}</span>
+                    <span class="pull-right small-text">${{convertToUSD(block.amount) || 0 | number: 2}}</span>
                 </li>
                 <li class="list-group-item bordered"><translate>Time</translate>
                     <span class="pull-right small-text">{{block.timestamp | timestampFilter}}</span>

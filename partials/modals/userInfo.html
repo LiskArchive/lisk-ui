@@ -37,7 +37,7 @@
                                     <span class="pull-right small-text">{{account.unconfirmedBalance | liskFilter }} LISK</span>
                                 </li>
                                 <li class="list-group-item"><translate>USD Equivalent</translate>
-                                    <span class="pull-right small-text">${{convertToUSD(account.unconfirmedBalance)| number: 2}}</span>
+                                    <span class="pull-right small-text">${{convertToUSD(account.unconfirmedBalance) || 0 | number: 2}}</span>
                                 </li>
                             </ul>
                         </div>
@@ -64,7 +64,7 @@
                                         <span class="pull-right small-text">{{transaction.fee / 100000000}} LISK</span>
                                     </li>
                                     <li class="list-group-item"><translate>USD Equivalent</translate>
-                                        <span class="pull-right small-text">${{convertToUSD(transaction.amount)| number: 2}}</span>
+                                        <span class="pull-right small-text">${{convertToUSD(transaction.amount) || 0 | number: 2}}</span>
                                     </li>
                                     <li class="list-group-item bordered"><translate>Time</translate>
                                         <span class="pull-right small-text">{{transaction.timestamp | timestampFilter}}</span>
