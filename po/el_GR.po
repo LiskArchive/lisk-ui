@@ -1,0 +1,1409 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 1.8.7\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: el_GR\n"
+
+#: partials/dapp-entry.html:79
+msgid "(1449)"
+msgstr "(1449)"
+
+#: partials/app-template.html:177
+msgid "2nd Passphrase"
+msgstr "2η Φράση πρόσβασης"
+
+#: partials/dapps.html:152
+msgid "ADD NEW DAPP"
+msgstr "Προσθήκη νέου Dapp"
+
+#: partials/modals/addDappModal.html:36
+msgid "Accept / Next Step"
+msgstr "Αποδοχή / Επόμενο Βήμα"
+
+#: partials/modals/userInfo.html:14
+msgid "Account"
+msgstr "Λογαριασμός"
+
+#: partials/modals/addContactModal.html:50
+#: partials/modals/addContactModal.html:85
+#: partials/modals/addDappModal.html:418 partials/modals/addDappModal.html:450
+#: partials/modals/masterPassphraseModal.html:13
+#: partials/modals/multisignatureModal.html:148
+#: partials/modals/passphraseCheck.html:13
+#: partials/modals/registrationDelegateModal.html:50
+#: partials/modals/registrationDelegateModal.html:85
+#: partials/modals/secondPassphraseModal.html:52
+#: partials/modals/sendTransaction.html:56
+#: partials/modals/sendTransaction.html:91
+#: partials/modals/userSettingsModal.html:46
+#: partials/modals/userSettingsModal.html:81 partials/modals/vote.html:44
+#: partials/modals/vote.html:79
+msgid "Account Verification"
+msgstr "Επιβεβαίωση λογαριασμού"
+
+#: partials/modals/addContactModal.html:21
+#: partials/modals/sendTransaction.html:21
+msgid "Account name or ID"
+msgstr "Όνομα λογαριασμού ή ID"
+
+#: partials/modals/multisignatureModal.html:52
+msgid "Account name, ID or public key"
+msgstr "Όνομα λογαριασμού, ID ή δημόσιο κλειδί"
+
+#: partials/delegates.html:136 partials/delegates.html:67
+#: partials/votes.html:65
+msgid "Add as Contact"
+msgstr "Προσθήκη ως Επαφή"
+
+#: partials/modals/multisignatureModal.html:46
+msgid "Add group members by typing in their account name, ID or public key."
+msgstr ""
+"Προσθέστε τα μέλη της ομάδας πληκτρολογώντας το όνομα του λογαριασμού, το ID "
+"τους ή το δημόσιο κλειδί."
+
+#: partials/modals/addContactModal.html:13
+msgid "Add new contact"
+msgstr "Προσθήκη νέας επαφής"
+
+#: partials/modals/secondPassphraseModal.html:13
+msgid "Add second passphrase"
+msgstr "Προσθέστε δεύτερη φράση πρόσβασης"
+
+#: js/controllers/modals/addContactModalController.js:7
+msgid "Adding new contact"
+msgstr "Προσθήκη νέας επαφής"
+
+#: js/controllers/blockchainController.js:45
+#: js/controllers/transactionsController.js:67
+#: js/controllers/walletPendingsController.js:47
+#: js/controllers/walletTransactionsController.js:72
+#: js/controllers/walletsController.js:148
+#: partials/modals/transactionInfo.html:16 partials/modals/userInfo.html:67
+msgid "Amount"
+msgstr "Ποσό"
+
+#: partials/account.html:92
+msgid "Amount (Fee)"
+msgstr "Ποσό (Χρέωση)"
+
+#: js/controllers/delegatesController.js:164
+#: js/controllers/forgingController.js:66
+#: js/controllers/votedDelegatesController.js:127 partials/forging.html:45
+msgid "Approval"
+msgstr "Έγκριση"
+
+#: partials/modals/confirmDeletionModal.html:16
+msgid "Are you sure you want to delete this item?"
+msgstr "Είστε σίγουροι ότι θέλετε να διαγράψετε αυτό το στοιχείο;"
+
+#: partials/modals/addContactModal.html:104
+#: partials/modals/addContactModal.html:69
+#: partials/modals/addDappModal.html:471
+#: partials/modals/multisignatureModal.html:132
+#: partials/modals/multisignatureModal.html:171
+#: partials/modals/registrationDelegateModal.html:104
+#: partials/modals/secondPassphraseModal.html:71
+#: partials/modals/sendTransaction.html:110
+#: partials/modals/sendTransaction.html:75
+#: partials/modals/userSettingsModal.html:100 partials/modals/vote.html:98
+msgid "BACK"
+msgstr "ΠΙΣΩ"
+
+#: partials/modals/userSettingsModal.html:64
+msgid "Back"
+msgstr "Πίσω"
+
+#: partials/account.html:8
+msgid "Balance"
+msgstr "Υπόλοιπο"
+
+#: partials/modals/registrationDelegateModal.html:29
+msgid ""
+"Becoming a delegate requires registration. You may choose your own delegate "
+"name, which can be used to promote your delegate. Only the top 101 delegates "
+"are eligible to forge. All fees are shared equally between the top 101 "
+"delegates. Registration costs: {{fee | liskFilter}} LISK."
+msgstr ""
+"Για να γίνετε αντιπρόσωπος απαιτείται εγγραφή. Μπορείτε να επιλέξετε το δικό "
+"σας όνομα αντιπροσώπου, το οποίο μπορεί να χρησιμοποιηθεί για την προώθηση "
+"αντιπρόσωπο σας. Μόνο οι 101 κορυφαίοι αντιπρόσωποι έχουν το δικαίωμα να "
+"σφυρηλατήσει. Όλα τα τέλη μοιράζονται εξίσου μεταξύ των κορυφαίων 101 "
+"αντιπροσώπων. Το κόστος εγγραφής είναι: {{fee | liskFilter}} LISK."
+
+#: js/controllers/blockchainController.js:41
+#: js/controllers/forgingController.js:121 partials/modals/blockInfo.html:7
+#: partials/modals/transactionInfo.html:32
+#: partials/modals/transactionInfo.html:4
+msgid "Block ID"
+msgstr "Block ID"
+
+#: js/controllers/blockchainController.js:8 partials/app-template.html:124
+msgid "Blockchain"
+msgstr "Blockchain"
+
+#: partials/modals/addDappModal.html:37
+#: partials/modals/multisignatureModal.html:28 partials/modals/vote.html:18
+msgid "CANCEL"
+msgstr "ΑΚΥΡΩΣΗ"
+
+#: partials/app-template.html:275
+msgid "CATEGORIES"
+msgstr "ΚΑΤΗΓΟΡΙΕΣ"
+
+#: partials/multi.html:31 partials/pendings.html:15
+#: partials/wallet-pendings.html:28
+msgid "CONFIRM"
+msgstr "ΕΠΙΒΕΒΑΙΩΣΗ"
+
+#: js/directives/voteActionDirective.js:14
+msgid "CONFIRM VOTE"
+msgstr "ΕΠΙΒΕΒΑΙΩΣΗ ΨΗΦΟΥ"
+
+#: partials/modals/blockInfo.html:74 partials/modals/blockModal.html:34
+#: partials/modals/transactionInfo.html:50 partials/modals/userInfo.html:101
+msgid "CONFIRMATIONS"
+msgstr "ΕΠΙΒΕΒΑΙΩΣΕΙΣ"
+
+#: partials/multi.html:59
+msgid "CONFIRMED TRANSACTIONS"
+msgstr "ΕΠΙΒΕΒΑΙΩΜΕΝΕΣ ΣΥΝΑΛΛΑΓΕΣ"
+
+#: partials/modals/addContactModal.html:34 partials/modals/forgingModal.html:32
+#: partials/modals/masterPassphraseModal.html:32
+#: partials/modals/multisignatureModal.html:88
+#: partials/modals/passphraseCheck.html:32
+#: partials/modals/registrationDelegateModal.html:34
+#: partials/modals/registrationDelegateModal.html:66
+#: partials/modals/secondPassphraseModal.html:36
+#: partials/modals/sendTransaction.html:40
+#: partials/modals/userSettingsModal.html:30 partials/modals/vote.html:63
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: partials/modals/addDappModal.html:371 partials/modals/addDappModal.html:397
+msgid "Category"
+msgstr "Κατηγορία"
+
+#: partials/dapp-entry.html:67
+msgid "Category:"
+msgstr "Κατηγορία:"
+
+#: partials/modals/addDappModal.html:226
+msgid "Centralized"
+msgstr "Centralized"
+
+#: partials/modals/addDappModal.html:313 partials/modals/addDappModal.html:323
+msgid "Check"
+msgstr "Επιλογή"
+
+#: partials/modals/addContactModal.html:45
+#: partials/modals/addContactModal.html:8
+#: partials/modals/addContactModal.html:80 partials/modals/addDappModal.html:10
+#: partials/modals/addDappModal.html:190 partials/modals/addDappModal.html:195
+#: partials/modals/addDappModal.html:267 partials/modals/addDappModal.html:272
+#: partials/modals/addDappModal.html:339 partials/modals/addDappModal.html:344
+#: partials/modals/addDappModal.html:413 partials/modals/addDappModal.html:43
+#: partials/modals/addDappModal.html:445 partials/modals/addDappModal.html:48
+#: partials/modals/addDappModal.html:5 partials/modals/blockInfo.html:10
+#: partials/modals/blockModal.html:9
+#: partials/modals/confirmDeletionModal.html:8
+#: partials/modals/errorModal.html:9 partials/modals/forgingModal.html:9
+#: partials/modals/masterPassphraseModal.html:8
+#: partials/modals/multiMembersModal.html:8
+#: partials/modals/multisignatureModal.html:143
+#: partials/modals/multisignatureModal.html:39
+#: partials/modals/multisignatureModal.html:8
+#: partials/modals/multisignatureModal.html:99 partials/modals/newUser.html:10
+#: partials/modals/newUser.html:43 partials/modals/passphraseCheck.html:8
+#: partials/modals/registrationDelegateModal.html:45
+#: partials/modals/registrationDelegateModal.html:8
+#: partials/modals/registrationDelegateModal.html:80
+#: partials/modals/secondPassphraseModal.html:47
+#: partials/modals/secondPassphraseModal.html:8
+#: partials/modals/sendTransaction.html:51
+#: partials/modals/sendTransaction.html:8
+#: partials/modals/sendTransaction.html:86
+#: partials/modals/transactionInfo.html:7 partials/modals/userInfo.html:24
+#: partials/modals/userSettingsModal.html:41
+#: partials/modals/userSettingsModal.html:76
+#: partials/modals/userSettingsModal.html:8 partials/modals/vote.html:39
+#: partials/modals/vote.html:74 partials/modals/vote.html:9
+msgid "Close modal"
+msgstr "Close modal"
+
+#: partials/modals/addDappModal.html:406 partials/modals/addDappModal.html:438
+msgid "Confirm"
+msgstr "Επιβεβαίωση"
+
+#: partials/modals/confirmDeletionModal.html:13
+msgid "Confirmation"
+msgstr "Επιβεβαίωση"
+
+#: js/controllers/walletTransactionsController.js:74
+#: js/controllers/walletsController.js:115 partials/modals/blockInfo.html:20
+#: partials/modals/transactionInfo.html:13 partials/modals/userInfo.html:64
+msgid "Confirmations"
+msgstr "Επιβεβαιώσεις"
+
+#: js/controllers/walletPendingsController.js:49
+#: js/controllers/walletsController.js:150
+msgid "Confirmations Needed"
+msgstr "Απαιτούνται Επιβεβαιώσεις"
+
+#: partials/modals/multisignatureModal.html:113
+#: partials/modals/multisignatureModal.html:73
+msgid "Confirmations needed"
+msgstr "Απαιτούνται Επιβεβαιώσεις"
+
+#: js/controllers/modals/multiMembersModalController.js:5
+msgid "Confirmed by"
+msgstr "Επιβεβαιωμένο από"
+
+#: partials/modals/userInfo.html:35
+msgid "Contact Request"
+msgstr "Προσθήκη νέας επαφής"
+
+#: js/controllers/contactsController.js:8
+#: js/controllers/pendingsController.js:8 partials/account.html:21
+#: partials/app-template.html:355 partials/app-template.html:85
+msgid "Contacts"
+msgstr "Επαφές"
+
+#: partials/app-template.html:91
+msgid "Conversations"
+msgstr "Συνομιλίες"
+
+#: partials/contacts.html:26 partials/contacts.html:54
+#: partials/delegates.html:127 partials/delegates.html:58
+#: partials/pendings.html:24 partials/votes.html:56
+msgid "Copy Address"
+msgstr "Αντιγραφή Διεύθυνσης"
+
+#: partials/contacts.html:29 partials/contacts.html:57
+#: partials/delegates.html:130 partials/delegates.html:61
+#: partials/pendings.html:27 partials/votes.html:59
+msgid "Copy Name"
+msgstr "Αντιγραφή Ονόματος"
+
+#: partials/dapp-entry.html:22 partials/dapp-entry.html:37
+#: partials/dapp-entry.html:46
+msgid "DOWNLOAD"
+msgstr "ΛΗΨΗ"
+
+#: js/controllers/dappsController.js:8 partials/app-template.html:97
+msgid "Dapp Store"
+msgstr "Dapp Store"
+
+#: js/controllers/accountController.js:8 partials/app-template.html:73
+msgid "Dashboard"
+msgstr "Πίνακας Ελέγχου"
+
+#: partials/modals/addDappModal.html:206
+msgid "Decentralized"
+msgstr "Αποκεντρωμένες"
+
+#: partials/modals/registrationDelegateModal.html:21
+msgid "Delegate Name"
+msgstr "Όνομα Delegate"
+
+#: partials/app-template.html:111 partials/app-template.html:247
+msgid "Delegates"
+msgstr "Delegates"
+
+#: partials/dapp-entry.html:91 partials/modals/addDappModal.html:140
+#: partials/modals/addDappModal.html:363 partials/modals/addDappModal.html:391
+#: partials/modals/addDappModal.html:76
+msgid "Description"
+msgstr "Περιγραφή"
+
+#: js/controllers/modals/errorModalController.js:10
+#: js/controllers/modals/forgingModalController.js:11
+msgid "Disable Forging"
+msgstr "Απενεργοποίηση Forging"
+
+#: js/controllers/appController.js:335
+msgid "Disabled"
+msgstr "Ανενεργό"
+
+#: partials/modals/masterPassphraseModal.html:24
+msgid "Empty passphrase"
+msgstr "Κενή συνθηματική φράση"
+
+#: js/controllers/modals/errorModalController.js:12
+#: js/controllers/modals/forgingModalController.js:13
+msgid "Enable Forging"
+msgstr "Ενεργοποίηση Forging"
+
+#: partials/settings.html:22
+msgid "Enable Multi-Signature on this account"
+msgstr "Ενεργοποίηση πολλαπλών υπογραφών σε αυτό το λογαριασμό"
+
+#: js/controllers/appController.js:335
+msgid "Enabled"
+msgstr "Ενεργοποιημένο"
+
+#: partials/modals/blockInfo.html:72 partials/modals/blockModal.html:32
+#: partials/modals/transactionInfo.html:47 partials/modals/userInfo.html:99
+msgid "FEE"
+msgstr "ΑΜΟΙΒΗ"
+
+#: partials/app-template.html:260
+msgid "FORGING"
+msgstr "FORGING"
+
+#: js/controllers/blockchainController.js:46
+#: js/controllers/forgingController.js:123
+#: js/controllers/transactionsController.js:68
+#: js/controllers/walletPendingsController.js:48
+#: js/controllers/walletTransactionsController.js:73
+#: js/controllers/walletsController.js:149
+#: partials/modals/transactionInfo.html:19 partials/modals/userInfo.html:70
+msgid "Fee"
+msgstr "Αμοιβή"
+
+#: partials/forging.html:74
+msgid "Forged Blocks"
+msgstr "Πλαστά μπλοκ"
+
+#: js/controllers/delegatesController.js:9
+#: js/controllers/forgingController.js:89
+#: js/controllers/votedDelegatesController.js:8 partials/app-template.html:103
+#: partials/app-template.html:244
+msgid "Forging"
+msgstr "Forging"
+
+#: partials/modals/secondPassphraseModal.html:15
+msgid ""
+"Further protect your account with an optional second passphrase! Please "
+"allow some time for the changes to take effect. Service cost: <b>{{fee | "
+"liskFilter}} LISK</b>. Your balance: <b>{{totalBalance | liskFilter}} LISK</"
+"b>."
+msgstr ""
+"Περαιτέρω προστασία του λογαριασμού σας με μια προαιρετική δεύτερη φράση "
+"πρόσβασης! Παρακαλώ επιτρέψτε κάποιο χρόνο για να τεθούν σε ισχύ οι αλλαγές. "
+"Η υπηρεσία κοστίζει: <b>{{fee | liskFilter}} LISK</b>. Το υπόλοιπό σας: "
+"<b>{{totalBalance | liskFilter}} LISK</b>."
+
+#: partials/modals/newUser.html:67
+msgid "GET STARTED"
+msgstr "Εκκίνηση"
+
+#: partials/modals/newUser.html:66
+msgid "GO BACK"
+msgstr "Πίσω"
+
+#: partials/settings.html:6
+msgid "General"
+msgstr "Γενικά"
+
+#: partials/modals/newUser.html:26
+msgid "Generate New"
+msgstr "Δημιουργία Νέου"
+
+#: js/controllers/blockchainController.js:42 partials/modals/blockInfo.html:46
+msgid "Generator"
+msgstr "Γεννήτρια"
+
+#: partials/modals/addDappModal.html:285 partials/modals/addDappModal.html:311
+msgid "Git repository link"
+msgstr "Git repository link"
+
+#: partials/modals/addDappModal.html:231 partials/modals/addDappModal.html:255
+msgid ""
+"GitHub is a Web-based Git repository hosting service, which offers amongst "
+"other things a source code management functionality. GitHub provides a "
+"graphical interface and desktop as well as mobile integration. If you add "
+"your dapp source code to a GitHub repository you need to specify the "
+"repository link in the next step."
+msgstr ""
+"Το GitHub είναι μια Web-based Git repository hosting υπηρεσία, η οποία "
+"προσφέρει μεταξύ άλλων μια λειτουργία διαχείρισης του πηγαίου κώδικα. Το "
+"GitHub παρέχει μια γραφική διεπαφή και επιφάνεια εργασίας, καθώς και "
+"ενσωμάτωση για κινητά. Αν προσθέσετε τον πηγαίο κώδικα Dapp σας σε ένα "
+"αποθετήριο GitHub θα πρέπει να καθορίσετε το σύνδεσμο αποθετηρίου στο "
+"επόμενο βήμα."
+
+#: partials/modals/addDappModal.html:184 partials/modals/addDappModal.html:261
+#: partials/modals/addDappModal.html:333 partials/modals/addDappModal.html:407
+#: partials/modals/addDappModal.html:439
+msgid "Go back"
+msgstr "Πίσω"
+
+#: partials/app-template.html:144
+msgid "Go to previous page"
+msgstr "Μετάβαση στην προηγούμενη σελίδα"
+
+#: js/controllers/walletsController.js:113
+msgid "Group Name"
+msgstr "Όνομα ομάδας"
+
+#: partials/app-template.html:291
+msgid "HOME"
+msgstr "ΑΡΧΙΚΗ"
+
+#: js/controllers/blockchainController.js:40
+#: js/controllers/forgingController.js:120
+#: js/controllers/transactionsController.js:62
+#: js/controllers/walletTransactionsController.js:68
+#: partials/modals/blockInfo.html:23
+msgid "Height"
+msgstr "Ύψος"
+
+#: partials/modals/addDappModal.html:375 partials/modals/addDappModal.html:400
+msgid "Hosted at"
+msgstr "Φιλοξενείται στο"
+
+#: partials/dapp-entry.html:21
+msgid "INSTALL"
+msgstr "ΕΓΚΑΤΑΣΤΑΣΗ"
+
+#: partials/app-template.html:297
+msgid "INSTALLED"
+msgstr "ΕΓΚΑΤΕΣΤΗΜΕΝΟ"
+
+#: partials/modals/addDappModal.html:106 partials/modals/addDappModal.html:169
+msgid "Icon Sia ASCII"
+msgstr "Εικονίδιο SIA ASCII"
+
+#: partials/modals/addDappModal.html:162 partials/modals/addDappModal.html:99
+msgid "Icon URL"
+msgstr "Εικονίδιο URL"
+
+#: partials/dapps.html:236
+msgid "Installed Dapps"
+msgstr "Εγκατεστημένα Dapps"
+
+#: partials/dapp-entry.html:36
+msgid "LAUNCH"
+msgstr "ΕΝΑΡΞΗ"
+
+#: partials/modals/sendTransaction.html:27
+msgid "LISK Amount"
+msgstr "LISK ποσό"
+
+#: partials/forging.html:11
+msgid "LISK Earned"
+msgstr "Κερδισμένα LISK"
+
+#: partials/settings.html:9
+msgid "Language"
+msgstr "Γλώσσα"
+
+#: partials/multi.html:6
+msgid "Latest Multi-Signature Transactions"
+msgstr "Τελευταίες συναλλαγές πολλαπλών υπογραφών"
+
+#: partials/account.html:70
+msgid "Latest Transactions"
+msgstr "Τελευταίες συναλλαγές"
+
+#: partials/account.html:49
+msgid "Latest version"
+msgstr "Τελευταία έκδοση"
+
+#: wallet.html:19
+msgid "Lisk - Decentralized Application Platform"
+msgstr "Lisk - Αποκεντρωμένη Πλατφόρμα Εφαρμογών"
+
+#: js/controllers/contactsController.js:54
+#: js/controllers/delegatesController.js:162
+#: js/controllers/pendingsController.js:31
+#: js/controllers/votedDelegatesController.js:125
+#: js/controllers/walletPendingsController.js:43
+msgid "Lisk Address"
+msgstr "Διεύθυνση Lisk"
+
+#: partials/account.html:46
+msgid "Lisk Client"
+msgstr "Lisk Client"
+
+#: partials/account.html:56
+msgid "Lisk Client Outdated"
+msgstr "Lisk Client Ξεπερασμένος"
+
+#: js/controllers/walletsController.js:7
+msgid "Loading Multi-Signature Groups"
+msgstr "Φόρτωση ομάδων πολλαπλών υπογραφών"
+
+#: js/controllers/blockchainController.js:7
+msgid "Loading blockchain"
+msgstr "Φόρτωση blockchain"
+
+#: js/controllers/contactsController.js:7
+#: js/controllers/pendingsController.js:7
+msgid "Loading contacts"
+msgstr "Φόρτωση επαφών"
+
+#: js/controllers/dappController.js:7
+msgid "Loading dapp"
+msgstr "Φόρτωση dapp"
+
+#: js/controllers/dappsCategoryController.js:7
+#: js/controllers/dappsController.js:7
+msgid "Loading dapps"
+msgstr "Φόρτωση dapps"
+
+#: js/controllers/accountController.js:7
+msgid "Loading dashboard"
+msgstr "Φόρτωση πίνακα ελέγχου"
+
+#: js/controllers/delegatesController.js:7
+#: js/controllers/votedDelegatesController.js:7
+msgid "Loading delegates"
+msgstr "Φόρτωση delegates"
+
+#: js/controllers/forgingController.js:88
+msgid "Loading forging status"
+msgstr "Φόρτωση κατάστασης forging"
+
+#: js/controllers/transactionsController.js:7
+#: js/controllers/walletPendingsController.js:7
+msgid "Loading transactions"
+msgstr "Φόρτωση συναλλαγών"
+
+#: partials/blockchain.html:35 partials/delegates.html:150
+#: partials/delegates.html:81
+msgid "Loading..."
+msgstr "Φόρτωση…"
+
+#: partials/app-template.html:183
+msgid "Logout"
+msgstr "Αποσύνδεση"
+
+#: partials/modals/addDappModal.html:214 partials/modals/addDappModal.html:232
+msgid "MORE INFO"
+msgstr "ΠΕΡΙΣΣΟΤΕΡΑ"
+
+#: partials/modals/newUser.html:31
+msgid ""
+"Make sure that you keep the passphrase safe. You will be asked to re-type it "
+"for confirmation."
+msgstr ""
+"Βεβαιωθείτε ότι έχετε κρατήσει ασφαλή τη φράση πρόσβασης. Θα σας ζητηθεί να "
+"την πληκτρολογήσετε ξανά για επιβεβαίωση."
+
+#: partials/modals/sendTransaction.html:35
+msgid ""
+"Make sure you're sending LISK to the right contact. This action can't be "
+"undone later."
+msgstr ""
+"Βεβαιωθείτε ότι έχετε στείλει LISK στη σωστή επαφή. Αυτή η ενέργεια δεν "
+"μπορεί να αναιρεθεί αργότερα."
+
+#: js/controllers/modals/masterPassphraseModalController.js:9
+msgid "Master Passphrase"
+msgstr "Κύρια Φράσης Πρόσβασης"
+
+#: js/controllers/modals/multiMembersModalController.js:5
+#: js/controllers/walletsController.js:114
+msgid "Members"
+msgstr "Μέλη"
+
+#: partials/account.html:73 partials/dapps.html:177 partials/dapps.html:238
+msgid "More"
+msgstr "Περισσότερα"
+
+#: js/controllers/walletsController.js:8 partials/app-template.html:79
+#: partials/settings.html:11
+msgid "Multi-Signature"
+msgstr "Πολλαπλών υπογραφών"
+
+#: partials/contacts.html:5
+msgid "My Contacts"
+msgstr "Οι επαφές μου"
+
+#: partials/multi.html:42
+msgid "My Multi-Signature Groups"
+msgstr "Οι πολλαπλών υπογραφών ομάδες μου"
+
+#: partials/app-template.html:174
+msgid "My Profile"
+msgstr "Το προφίλ μου"
+
+#: partials/app-template.html:117 partials/votes.html:24
+msgid "My Votes"
+msgstr "Οι ψήφοι μου"
+
+#: partials/app-template.html:250
+msgid "My votes ({{myVotesCount||'0'}})"
+msgstr "Οι ψήφοι μου ({{myVotesCount||» 0’}})"
+
+#: partials/passphrase.html:26
+msgid "NEW ACCOUNT"
+msgstr "ΝΕΟΣ ΛΟΓΑΡΙΑΣΜΟΣ"
+
+#: partials/modals/multisignatureModal.html:31
+msgid "NEXT"
+msgstr "ΕΠΟΜΕΝΟ"
+
+#: partials/modals/newUser.html:36
+msgid "NEXT STEP"
+msgstr "ΕΠΟΜΕΝΟ ΒΗΜΑ"
+
+#: partials/modals/confirmDeletionModal.html:22
+msgid "NO"
+msgstr "NO"
+
+#: js/controllers/delegatesController.js:161
+#: js/controllers/votedDelegatesController.js:124
+#: partials/modals/addDappModal.html:126 partials/modals/addDappModal.html:359
+#: partials/modals/addDappModal.html:388 partials/modals/addDappModal.html:62
+#: partials/modals/userInfo.html:18
+msgid "Name"
+msgstr "Όνομα"
+
+#: partials/modals/secondPassphraseModal.html:22
+msgid "New second passphrase"
+msgstr "Νέα δεύτερη φράση πρόσβασης"
+
+#: partials/modals/addDappModal.html:183 partials/modals/addDappModal.html:260
+#: partials/modals/addDappModal.html:332
+msgid "Next Step"
+msgstr "Επόμενο βήμα"
+
+#: partials/blockchain.html:30
+msgid "No blockchain"
+msgstr "Κανένα blockchain"
+
+#: partials/dapps-category.html:6 partials/dapps-category.html:7
+msgid "No dapps matching your search criteria were found."
+msgstr "Δεν υπάρχουν dapp που να ταιριάζουν στα κριτήρια της αναζήτησής σας."
+
+#: partials/delegates.html:145 partials/delegates.html:76
+msgid "No delegates"
+msgstr "Δεν υπάρχουν delegates"
+
+#: partials/dapps.html:166
+msgid "No results for search '{{searchDapp.searchForDappGlobal}}' in dapps."
+msgstr ""
+"Δεν υπάρχουν αποτελέσματα για την αναζήτησή ‘{{searchDapp."
+"searchForDappGlobal}} “στα dapps."
+
+#: partials/blockchain.html:42 partials/transactions.html:65
+msgid "No results for this search."
+msgstr "Δεν υπάρχουν αποτελέσματα για αυτήν την αναζήτηση."
+
+#: partials/modals/multisignatureModal.html:110
+msgid "Number of members"
+msgstr "Αριθμός μελών"
+
+#: partials/modals/errorModal.html:27
+msgid "OK"
+msgstr "ΟΚ"
+
+#: partials/dapp-entry.html:45
+msgid "OPEN"
+msgstr "ΑΝΟΙΧΤΌ"
+
+#: partials/app-template.html:263
+msgid "Off"
+msgstr "Ανενεργό"
+
+#: partials/app-template.html:266
+msgid "On"
+msgstr "Ενεργό"
+
+#: js/controllers/forgingController.js:43
+#: js/controllers/forgingController.js:55
+#: js/controllers/forgingController.js:66
+msgid "Others"
+msgstr "Άλλα"
+
+#: partials/modals/newUser.html:56
+msgid "Passphrase"
+msgstr "Φράση πρόσβασης"
+
+#: partials/modals/newUser.html:58
+msgid "Passphrase doesn't match."
+msgstr "Η φράση πρόσβασης δεν ταιριάζει."
+
+#: partials/app-template.html:358
+msgid "Pending ({{contacts.followersCount}})"
+msgstr "Εν αναμονή ({{contacts.followersCount}})"
+
+#: partials/pendings.html:5
+msgid "Pending Requests"
+msgstr "Εκκρεμείς Αιτήσεις"
+
+#: js/controllers/walletPendingsController.js:8
+msgid "Pending transactions"
+msgstr "Εκκρεμείς συναλλαγές"
+
+#: partials/modals/addDappModal.html:349
+msgid "Please check your input below and go back if necessary."
+msgstr ""
+"Παρακαλώ ελέγξτε την εισαγωγή σας παρακάτω και επιστρέψτε πίσω, αν είναι "
+"απαραίτητο."
+
+#: partials/modals/multisignatureModal.html:106
+msgid ""
+"Please check your input below and go back if necessary. Double-check the "
+"group members, else you risk losing your LISK balance!"
+msgstr ""
+"Παρακαλώ ελέγξτε την εισαγωγή σας παρακάτω και επιστρέψτε πίσω, αν είναι "
+"απαραίτητο. Ελέγξτε τα μέλη της ομάδας, αλλιώς κινδυνεύετε να χάσετε τα LISK "
+"σας!"
+
+#: partials/modals/registrationDelegateModal.html:15
+msgid "Please choose a delegate name."
+msgstr "Παρακαλώ επιλέξτε ένα όνομα delegate."
+
+#: partials/modals/addDappModal.html:200
+msgid "Please choose between the available options."
+msgstr "Παρακαλώ επιλέξτε μεταξύ των διαθέσιμων επιλογών."
+
+#: js/controllers/modals/masterPassphraseModalController.js:8
+msgid "Please enter master password."
+msgstr "Παρακαλώ εισάγετε τον κύριο κωδικό."
+
+#: partials/modals/addContactModal.html:52
+#: partials/modals/addDappModal.html:420 partials/modals/forgingModal.html:16
+#: partials/modals/registrationDelegateModal.html:52
+#: partials/modals/secondPassphraseModal.html:54
+#: partials/modals/sendTransaction.html:58
+#: partials/modals/userSettingsModal.html:48 partials/modals/vote.html:46
+msgid "Please enter your passphrase below."
+msgstr "Παρακαλώ εισάγετε παρακάτω τη φράση πρόσβασης."
+
+#: partials/modals/multisignatureModal.html:150
+#: partials/modals/passphraseCheck.html:15
+msgid "Please enter your passphrase."
+msgstr "Παρακαλώ εισάγετε τη φράση πρόσβασης."
+
+#: partials/modals/addContactModal.html:87
+#: partials/modals/addDappModal.html:452
+#: partials/modals/registrationDelegateModal.html:87
+#: partials/modals/sendTransaction.html:93
+#: partials/modals/userSettingsModal.html:83 partials/modals/vote.html:81
+msgid "Please enter your second passphrase below."
+msgstr "Παρακαλώ εισάγετε παρακάτω τη δεύτερη φράση πρόσβασής σας."
+
+#: js/controllers/modals/addDappModalController.js:166
+msgid ""
+"Please make sure you copy and paste the whole Sia ASCII code. Additionally "
+"please check that there were no characters added."
+msgstr ""
+"Παρακαλώ βεβαιωθείτε ότι έχετε αντιγράψει και επικολλήσει ολόκληρο τον Sia "
+"ASCII code. Επιπλέον, ελέγξτε ότι δεν πρoστέθηκαν χαρακτήρες."
+
+#: js/controllers/modals/addDappModalController.js:166
+msgid ""
+"Please make sure you copy the complete repository link from GitHub. It ends "
+"in .git."
+msgstr ""
+"Παρακαλώ βεβαιωθείτε ότι έχετε αντιγράψει την πλήρη σύνδεση αποθετήριο από "
+"το GitHub. Τελειώνει σε .git."
+
+#: partials/modals/newUser.html:50
+msgid "Please re-enter your passphrase below."
+msgstr "Παρακαλώ ξανά εισάγετε παρακάτω τη φράση πρόσβασης."
+
+#: partials/modals/addDappModal.html:15
+#: partials/modals/multisignatureModal.html:15
+msgid "Please read carefully."
+msgstr "Παρακαλούμε να διαβάσετε προσεκτικά."
+
+#: js/controllers/modals/addDappModalController.js:162
+msgid "Please set the GitHub repository link below."
+msgstr "Παρακαλούμε να ορίσετε παρακάτω τον GitHub  σύνδεσμο."
+
+#: js/controllers/modals/addDappModalController.js:162
+msgid "Please set the Sia ASCII code below."
+msgstr "Παρακαλούμε να ορίσετε παρακάτω τον Sia ASCII κώδικα."
+
+#: partials/modals/addDappModal.html:53
+msgid "Please set the dapp parameters below."
+msgstr "Παρακαλούμε να ορίσετε παρακάτω τις παραμέτρους Dapp."
+
+#: partials/modals/userSettingsModal.html:15
+msgid "Please set your username."
+msgstr "Παρακαλούμε να ορίσετε το όνομα χρήστη σας."
+
+#: partials/modals/addContactModal.html:15
+#: partials/modals/sendTransaction.html:15
+msgid "Please type in an account name or ID below."
+msgstr "Παρακαλούμε πληκτρολογήστε παρακάτω ένα όνομα λογαριασμού ή ID."
+
+#: partials/modals/multisignatureModal.html:83
+msgid "Pressing enter confirms each member."
+msgstr "Πατώντας enter επιβεβαιώνετε κάθε μέλος."
+
+#: partials/modals/blockInfo.html:41
+msgid "Previous Block"
+msgstr "Προηγούμενο Block"
+
+#: partials/modals/userSettingsModal.html:13
+msgid "Profile Information"
+msgstr "Πληροφορίες προφίλ"
+
+#: partials/modals/userInfo.html:20
+msgid "Public key"
+msgstr "Δημόσιο κλειδί"
+
+#: partials/dapp-entry.html:96
+msgid "READ MORE"
+msgstr "ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ"
+
+#: js/directives/voteActionDirective.js:16
+msgid "REMOVE VOTE"
+msgstr "ΑΦΑΙΡΕΣΗ ΨΗΦΟΥ"
+
+#: js/controllers/delegatesController.js:160
+#: js/controllers/forgingController.js:43
+#: js/controllers/votedDelegatesController.js:123 partials/forging.html:26
+msgid "Rank"
+msgstr "Κατάταξη"
+
+#: js/controllers/transactionsController.js:65
+#: js/controllers/walletPendingsController.js:45
+#: js/controllers/walletTransactionsController.js:70
+#: js/controllers/walletsController.js:146 partials/account.html:86
+msgid "Recipient"
+msgstr "Παραλήπτης"
+
+#: partials/modals/registrationDelegateModal.html:13
+msgid "Register as a Delegate"
+msgstr "Εγγραφείτε ως Delegate"
+
+#: partials/forging.html:6
+msgid "Registered on"
+msgstr "Καταχωρηθεί στον"
+
+#: js/controllers/modals/newUserController.js:8
+msgid "Registering user"
+msgstr "Εγγραφή χρήστη"
+
+#: partials/passphrase.html:18
+msgid "Remember during this session"
+msgstr "Θυμηθείτε κατά τη διάρκεια αυτής της περιόδου λειτουργίας"
+
+#: js/directives/voteTitleDirective.js:17
+msgid "Removing vote from delegates"
+msgstr "Αφαίρεση ψήφου από τους delegates"
+
+#: partials/modals/secondPassphraseModal.html:26
+msgid "Repeat second passphrase"
+msgstr "Επαναλάβετε τη δεύτερη φράση πρόσβασης"
+
+#: js/controllers/blockchainController.js:47
+#: js/controllers/forgingController.js:124 partials/modals/blockInfo.html:26
+msgid "Reward"
+msgstr "Ανταμοιβή"
+
+#: partials/modals/newUser.html:35
+msgid "SAVE PASSPHRASE"
+msgstr "ΑΠΟΘΗΚΕΥΣΗ ΦΡΑΣΗΣ ΠΡΟΣΒΑΣΗΣ"
+
+#: partials/app-template.html:156 partials/contacts.html:16
+#: partials/contacts.html:44 partials/modals/masterPassphraseModal.html:35
+msgid "SEND"
+msgstr "ΑΠΟΣΤΟΛΗ"
+
+#: partials/modals/addDappModal.html:470
+msgid "SEND LISK"
+msgstr "ΑΠΟΣΤΟΛΗ LISK"
+
+#: partials/passphrase.html:27
+msgid "SIGN IN"
+msgstr "ΣΥΝΔΕΣΗ"
+
+#: partials/dapp-entry.html:31 partials/dapp-entry.html:40
+#: partials/dapp-entry.html:49 partials/dapp-entry.html:56
+msgid "SOURCE CODE"
+msgstr "ΠΗΓΑΙΟΣ ΚΩΔΙΚΑΣ"
+
+#: js/controllers/modals/addDappModalController.js:6
+msgid "Saving new dapp"
+msgstr "Αποθήκευση νέου Dapp"
+
+#: partials/app-template.html:323 partials/app-template.html:348
+msgid "Search for Dapps"
+msgstr "Αναζήτηση για Dapps"
+
+#: partials/app-template.html:223
+msgid "Search for blocks"
+msgstr "Αναζήτηση για blocks"
+
+#: partials/app-template.html:197
+msgid ""
+"Search for transactions (Transaction ID, Sender address, Recipient address)"
+msgstr ""
+"Αναζήτηση για συναλλαγές (Κωδικός συναλλαγής, Διεύθυνση αποστολέα, Διεύθυνση "
+"παραλήπτη)"
+
+#: partials/delegates.html:120 partials/delegates.html:51
+#: partials/modals/sendTransaction.html:13 partials/modals/userInfo.html:30
+#: partials/votes.html:49
+msgid "Send LISK"
+msgstr "Αποστολή LISK"
+
+#: js/controllers/transactionsController.js:64 partials/account.html:83
+msgid "Sender"
+msgstr "Αποστολέας"
+
+#: js/controllers/modals/multisignatureModalController.js:6
+msgid "Set members of account"
+msgstr "Ορίστε τα μέλη του λογαριασμού"
+
+#: js/controllers/settingsController.js:6 partials/app-template.html:180
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: partials/blockchain.html:12 partials/forging.html:82
+#: partials/transactions.html:11
+msgid "Show All Columns"
+msgstr "Εμφάνιση όλων των στηλών"
+
+#: partials/blockchain.html:13 partials/forging.html:85
+#: partials/transactions.html:14
+msgid "Show Full Time"
+msgstr "Εμφάνιση Full Time"
+
+#: partials/modals/addDappModal.html:295 partials/modals/addDappModal.html:321
+msgid "Sia ASCII Code"
+msgstr "Κώδικας SIA ASCII"
+
+#: partials/modals/addDappModal.html:212 partials/modals/addDappModal.html:245
+msgid ""
+"Sia is a new decentralized cloud storage platform aimed at giving users "
+"control of their data. Storage is pulled from a large network of hosts, each "
+"using Sia's blockchain to form storage contracts with clients. Out of the "
+"hundreds of hosts, only a fraction need to be online for the data to be "
+"recovered. Even in a network with many unreliable hosts, the data is safe."
+"<br><br>You need to upload your dapp source code as a .zip file to the Sia "
+"network. Once the upload was successful you need to specify the ASCII code "
+"of the file in the next step."
+msgstr ""
+"Η Sia είναι μια νέα αποκεντρωμένη πλατφόρμα cloud αποθήκευσης που έχει στόχο "
+"να δώσει στους χρήστες τον έλεγχο των δεδομένων τους. Η αποθήκευση γίνεται "
+"από ένα μεγάλο δίκτυο hosts, που το καθένα χρησιμοποιεί την Sia’s blockchain "
+"ώστε να σχηματίσει συμβόλαια αποθεματοποίησης με τους πελάτες. Από τις "
+"εκατοντάδες των hosts, μόνο ένα κλάσμα πρέπει να είναι online για τα "
+"στοιχεία που πρέπει να ανακτηθούν. Ακόμη και σε ένα δίκτυο με πολλά "
+"αναξιόπιστα hosts, τα δεδομένα είναι ασφαλή. <br><br>Χρειάζεται να ανεβάσετε "
+"τον πηγαίο κώδικα της εφαρμογής σας ως αρχείο .zip στο δίκτυο Sia. Μόλις η "
+"μεταφόρτωση ολοκληρωθεί με επιτυχία θα πρέπει να καθορίσετε τον κωδικό ASCII "
+"του αρχείου στο επόμενο βήμα."
+
+#: partials/dapp-entry.html:27
+msgid "Sia required"
+msgstr "Απαιτείται Sia"
+
+#: partials/modals/passphraseCheck.html:35
+msgid "Sign"
+msgstr "Υπογραφή"
+
+#: partials/delegates.html:92
+msgid "Standby Delegates"
+msgstr "Αναμονή Delegates"
+
+#: partials/modals/newUser.html:15
+msgid "Step 1/2 - Generate a Passphrase"
+msgstr "Βήμα 1/2 - Δημιουργήστε μια φράση πρόσβασης"
+
+#: partials/modals/multisignatureModal.html:13
+msgid "Step 1/3 - Preamble"
+msgstr "Βήμα 1/3 - Εισαγωγή"
+
+#: partials/modals/addDappModal.html:13
+msgid "Step 1/5 - Preamble"
+msgstr "Βήμα 1/5 - Εισαγωγή"
+
+#: partials/modals/newUser.html:48
+msgid "Step 2/2 - Confirm the Passphrase"
+msgstr "Βήμα 2/2 - Επιβεβαιώστε την φράση πρόσβασης"
+
+#: partials/modals/multisignatureModal.html:44
+msgid "Step 2/3 - Specify Group Members"
+msgstr "Βήμα 2/3 - Καθορισμός Μελών Group"
+
+#: partials/modals/addDappModal.html:51
+msgid "Step 2/5 Dapp Specifications"
+msgstr "Βήμα 2/5 Προδιαγραφές Dapp"
+
+#: partials/modals/multisignatureModal.html:104
+msgid "Step 3/3 - Confirmation"
+msgstr "Βήμα 3/3 - Επιβεβαίωση"
+
+#: partials/modals/addDappModal.html:198
+msgid "Step 3/5 - Choose Storage Solution"
+msgstr "Βήμα 3/5 - Επιλέξτε Λύση Αποθήκευσης"
+
+#: partials/modals/addDappModal.html:275
+msgid "Step 4/5 - Storage Specifications"
+msgstr "Βήμα 4/5 - Προδιαγραφές Αποθήκευσης"
+
+#: partials/modals/addDappModal.html:347
+msgid "Step 5/5 - Confirmation"
+msgstr "Βήμα 5/5 - Επιβεβαίωση"
+
+#: partials/modals/blockInfo.html:16 partials/modals/transactionInfo.html:12
+#: partials/modals/userInfo.html:42
+msgid "Summary"
+msgstr "Περίληψη"
+
+#: partials/modals/addDappModal.html:367 partials/modals/addDappModal.html:394
+msgid "Tags"
+msgstr "Ετικέτες"
+
+#: partials/modals/addDappModal.html:151 partials/modals/addDappModal.html:87
+msgid "Tags (separated with comma)"
+msgstr "Ετικέτες (διαχωρισμένες με κόμμα)"
+
+#: partials/modals/newUser.html:62
+msgid ""
+"The passphrase entered doesn't match with the one generated before. Please "
+"go back and generate a new one."
+msgstr ""
+"Η φράση πρόσβασης που εισαγάγατε δεν αντιστοιχεί με εκείνη που παράξατε "
+"πριν. Παρακαλώ πηγαίνετε πίσω και δημιουργήσετε μία νέα."
+
+#: js/directives/voteTitleDirective.js:22
+msgid "This action will cost"
+msgstr "Αυτή η ενέργεια θα κοστίσει"
+
+#: partials/modals/multisignatureModal.html:21
+msgid ""
+"This walkthrough will guide you through the necessary steps to create a "
+"multi-signature group. It's very important that you know what multi-"
+"signatures are, else you risk loosing your LISK balance.<br><br>A multi-"
+"signature group consists of N accounts, the one who created the group is the "
+"group owner. When the owner wants to make a transaction, M of N accounts "
+"within the group need to confirm it, otherwise the transaction will not be "
+"processed. The values M and N are specified in this walkthrough."
+"<br><br><b>Things you need to know for the multi-signature group setup:</"
+"b><br><br>• The number of group members (N).<br>• The number of needed "
+"confirmations (M).<br>• The account names or IDs from the Lisk accounts you "
+"want to add to the group."
+msgstr ""
+"Αυτή η περιδιάβαση θα σας καθοδηγήσει στα απαραίτητα βήματα για να "
+"δημιουργήσετε μια ομάδα πολλαπλών υπογραφών. Είναι πολύ σημαντικό ότι ξέρετε "
+"τι είναι οι πολυ-υπογραφές, αλλιώς κινδυνεύετε να χάσετε τα Lisk σας. <br> "
+"Μια ομάδα πολλαπλών υπογραφών αποτελείται από Ν λογαριασμούς, αυτός που "
+"δημιούργησε την ομάδα είναι ο ιδιοκτήτης της ομάδας. Όταν ο ιδιοκτήτης θέλει "
+"να κάνει μια συναλλαγή, Μ από Ν λογαριασούς, η ομάδα πρέπει να το "
+"επιβεβαιώσει, αλλιώς η συναλλαγή δεν θα υποβληθεί σε επεξεργασία. Οι τιμές Μ "
+"και Ν ορίζονται στην παρούσα περιδιάβαση <br> Η <b> Πράγματα που πρέπει να "
+"ξέρετε για τη ρύθμιση της ομάδας πολλαπλών υπογραφών:. </ b> <br> • Ο "
+"αριθμός των μελών της ομάδας ( Ν). <br> • Ο αριθμός των απαιτούμενων "
+"βεβαιώσεων (M).<br>• Τα ονόματα λογαριασμού ή αναγνωριστικά από τους Lisk "
+"λογαριασμούς που θέλετε να προσθέσετε στην ομάδα."
+
+#: js/controllers/blockchainController.js:43
+#: js/controllers/forgingController.js:122
+#: js/controllers/transactionsController.js:66
+#: js/controllers/walletPendingsController.js:46
+#: js/controllers/walletTransactionsController.js:71
+#: js/controllers/walletsController.js:147 partials/account.html:89
+#: partials/modals/blockInfo.html:38 partials/modals/transactionInfo.html:25
+#: partials/modals/userInfo.html:76
+msgid "Time"
+msgstr "Ώρα"
+
+#: partials/forging.html:5
+msgid "To become a delegate, click on the \"Delegate Registration\" button."
+msgstr "Για να γίνετε ένας delegate, κάντε κλικ στο κουμπί «Εγγραφή Delegate»."
+
+#: partials/app-template.html:137
+msgid "Toggle navigation"
+msgstr "Εναλλαγή πλοήγησης"
+
+#: partials/delegates.html:23
+msgid "Top Delegates"
+msgstr "Κορυφαίοι Delegates"
+
+#: partials/modals/blockInfo.html:32
+msgid "Total Amount"
+msgstr "Συνολικό Ποσό"
+
+#: partials/modals/userInfo.html:43
+msgid "Total Balance"
+msgstr "Συνολικό Υπόλοιπο"
+
+#: partials/modals/blockInfo.html:29
+msgid "Total Fee"
+msgstr "Συνολική Χρέωση"
+
+#: js/controllers/forgingController.js:27
+msgid "Total Forged"
+msgstr "Συνολικό Forged"
+
+#: partials/modals/userInfo.html:53
+msgid "Transaction"
+msgstr "Συναλλαγή"
+
+#: js/controllers/transactionsController.js:63
+#: js/controllers/walletPendingsController.js:44
+#: js/controllers/walletTransactionsController.js:69
+#: js/controllers/walletsController.js:145 partials/account.html:80
+#: partials/modals/blockModal.html:17 partials/modals/userInfo.html:59
+#: partials/modals/userInfo.html:83
+msgid "Transaction ID"
+msgstr "ID συναλλαγής"
+
+#: js/controllers/blockchainController.js:44
+#: js/controllers/transactionsController.js:8 partials/modals/blockInfo.html:17
+#: partials/modals/blockModal.html:7 partials/modals/userInfo.html:54
+msgid "Transactions"
+msgstr "Συναλλαγές"
+
+#: js/controllers/walletTransactionsController.js:6
+msgid "Transactions for 17649443584386761059L"
+msgstr "Συναλλαγές για 17649443584386761059L"
+
+#: partials/dapp-entry.html:62
+msgid "UNINSTALL"
+msgstr "ΑΠΕΓΚΑΤΑΣΤΑΣΗ"
+
+#: partials/account.html:59
+msgid "UPDATE"
+msgstr "ΕΝΗΜΕΡΩΣΗ"
+
+#: partials/modals/blockInfo.html:35 partials/modals/transactionInfo.html:22
+#: partials/modals/userInfo.html:46 partials/modals/userInfo.html:73
+msgid "USD Equivalent"
+msgstr "USD Ισοδύναμο"
+
+#: js/controllers/delegatesController.js:163
+#: js/controllers/forgingController.js:55
+#: js/controllers/votedDelegatesController.js:126 partials/forging.html:35
+msgid "Uptime"
+msgstr "Uptime"
+
+#: js/controllers/contactsController.js:53
+#: js/controllers/pendingsController.js:30
+#: partials/modals/userSettingsModal.html:21
+msgid "Username"
+msgstr "Όνομα χρήστη"
+
+#: partials/delegates.html:7 partials/votes.html:8
+msgid "View selection"
+msgstr "Επιλογή προβολής"
+
+#: js/directives/voteTitleDirective.js:15
+msgid "Voting for delegates"
+msgstr "Ψηφίστε για delegates"
+
+#: partials/app-template.html:64
+msgid "Welcome back, {{username}}"
+msgstr "Καλώς ήρθατε και πάλι, {{όνομα χρήστη}}"
+
+#: partials/app-template.html:65
+msgid "Welcome, click to edit profile"
+msgstr "Καλώς ορίσατε, κάντε κλικ για να επεξεργαστείτε το προφίλ"
+
+#: partials/modals/confirmDeletionModal.html:25
+msgid "YES"
+msgstr "ΝΑΙ"
+
+#: partials/modals/addDappModal.html:23 partials/modals/addDappModal.html:32
+msgid ""
+"You are about to register your decentralized application (dapp) on the Lisk "
+"network. After the registration all Lisk users will be able to see your dapp "
+"on the Lisk Dapp Store and they will also be able to install and launch it."
+"<br><br>One of the characteristics of blockchains is that you can't delete "
+"any content from them. Therefore make sure you have used the correct dapp "
+"parameters. We also advise you to test your dapp on the official Lisk "
+"testnet so you can guarantee that its working flawlessly.<br><br><b>Things "
+"you need to know for the registration process:</b><br><br>• Dapp names are "
+"unique, you can't register the same name twice on the Lisk network.<br>• You "
+"can either use a centralized (GitHub) or decentralized (Sia) hosting method."
+"<br>• Make sure that your dapp icon's format is a square.<br>• Choose your "
+"tags wisely, with them your users will be able to find your dapp in the Dapp "
+"Store.<br><br>The Lisk Team isn't liable for a dapp, solely the uploader is. "
+"So you have to make sure that your dapp is legal and doesn't harm its users."
+msgstr ""
+"Είστε έτοιμοι να εγγράψετε την αποκεντρωμένη σας εφαρμογή (Dapp) στο δίκτυο "
+"Lisk. Μετά την εγγραφή όλοι οι χρήστες Lisk θα είναι σε θέση να δoυν το Dapp "
+"σας στο Lisk Dapp Store και θα είναι επίσης σε θέση να το εγκαταστήσουν και "
+"να το ξεκινήσουν. <br> <br> Ένα από τα χαρακτηριστικά του blockchains είναι "
+"ότι δεν μπορείτε να διαγράψετε οποιαδήποτε περιεχόμενο από αυτό. Ως εκ "
+"τούτου, βεβαιωθείτε ότι έχετε χρησιμοποιήσει τις σωστές παραμέτρους Dapp. "
+"Σας συμβουλεύουμε επίσης να δοκιμάσετε το Dapp σας στο επίσημο Lisk testnet, "
+"έτσι ώστε να μπορείτε να εγγυηθείτε ότι λειτουργεί άψογα <br> Η <b> Πράγματα "
+"που πρέπει να ξέρετε για τη διαδικασία εγγραφής:. </ B> <br> <br > • Τα "
+"ονόματα Dapp είναι μοναδικά, δεν μπορείτε να καταχωρήσετε το ίδιο όνομα δύο "
+"φορές στο δίκτυο Lisk. <br> • Μπορείτε να χρησιμοποιήσετε είτε ένα κεντρική "
+"(GitHub) ή αποκεντρωμένη (SIA) μέθοδο φιλοξενίας. <br> • Βεβαιωθείτε ότι η "
+"μορφή εικονιδίου του Dapp είναι ένα τετράγωνο. <br> • Επιλέξτε τις ετικέτες "
+"σας με σύνεση, με αυτές οι χρήστες σας θα είναι σε θέση να βρουν το Dapp σας "
+"στο Dapp Store. <br> Η ομάδα του Lisk δεν ευθύνεται για τα Dapp, είναι "
+"αποκλειστικά ευθήνη του χρήστη. Έτσι πρέπει να σιγουρευτείτε ότι Dapp σας "
+"είναι νόμιμο και δεν βλάπτει τους χρήστες του."
+
+#: partials/multi.html:46
+msgid "You are not a member of any one Multi-Signature group."
+msgstr "Δεν είστε μέλος καμίας Multi-Signature ομάδας."
+
+#: partials/modals/newUser.html:17
+msgid "You can find your passphrase below."
+msgstr "Μπορείτε να βρείτε τη φράση πρόσβασής σας παρακάτω."
+
+#: partials/contacts.html:68
+msgid "You do not have any contacts, try adding a new one!"
+msgstr "Δεν έχετε καμία επαφή, δοκιμάστε να προσθέσετε μία καινούρια!"
+
+#: partials/dapps.html:165
+msgid "You do not have any dapps installed yet."
+msgstr "Δεν έχετε κανένα dapp εγκατεστημένο ακόμα."
+
+#: partials/pendings.html:38
+msgid "You do not have any pending contacts!"
+msgstr "Δεν έχετε εκκρεμείς επαφές!"
+
+#: partials/forging.html:106
+msgid "You have not forged any blocks yet."
+msgstr "Δεν έχετε κάνει forge κανένα μπλοκ ακόμα."
+
+#: partials/dapps.html:243
+msgid "You have not installed dapps yet."
+msgstr "Δεν έχετε εγκατεστημένα dapps ακόμα."
+
+#: partials/account.html:122
+msgid "You have not made any transactions yet."
+msgstr "Δεν έχετε κάνει καμία συναλλαγή ακόμα."
+
+#: partials/votes.html:75
+msgid "You have not voted for any delegates yet."
+msgstr "Δεν έχετε ψηφίσει για κάποιον delegate ακόμα."
+
+#: partials/modals/addContactModal.html:29
+msgid ""
+"You shall receive notification when the contact has accepted your request."
+msgstr "Θα πρέπει να λάβετε ειδοποίηση όταν η επαφή αποδεχθεί το αίτημά σας."
+
+#: partials/multi.html:10
+msgid "Your Multi-Signature group(s) have not made any transactions yet."
+msgstr "Η Multi-Signature ομάδα (ες) σας δεν έχουν κάνει συναλλαγές ακόμα."
+
+#: partials/modals/addContactModal.html:59
+#: partials/modals/addDappModal.html:429 partials/modals/forgingModal.html:23
+#: partials/modals/multisignatureModal.html:157
+#: partials/modals/registrationDelegateModal.html:59
+#: partials/modals/secondPassphraseModal.html:61
+#: partials/modals/sendTransaction.html:65
+#: partials/modals/userSettingsModal.html:55 partials/modals/vote.html:53
+#: partials/passphrase.html:10
+msgid "Your Passphrase"
+msgstr "Η φράση πρόσβασής σας"
+
+#: partials/modals/addContactModal.html:94
+#: partials/modals/addDappModal.html:461
+#: partials/modals/multisignatureModal.html:161
+#: partials/modals/passphraseCheck.html:22
+#: partials/modals/registrationDelegateModal.html:94
+#: partials/modals/sendTransaction.html:100
+#: partials/modals/userSettingsModal.html:90 partials/modals/vote.html:88
+msgid "Your Second Passphrase"
+msgstr "Η δεύτερη φράση πρόσβασής σας"
+
+#: partials/modals/addDappModal.html:144 partials/modals/addDappModal.html:80
+msgid "Your dapp description cannot be longer than 160 characters."
+msgstr ""
+"Η Dapp περιγραφή σας δεν μπορούν να είναι μεγαλύτερες από 160 χαρακτήρες."
+
+#: partials/modals/addDappModal.html:69
+msgid "Your dapp name cannot be longer than 32 characters"
+msgstr "Το όνομα του Dapp σας δεν μπορεί να είναι μεγαλύτερο από 32 χαρακτήρες"
+
+#: partials/modals/addDappModal.html:133
+msgid "Your dapp name cannot be longer than 32 characters."
+msgstr ""
+"Το όνομα του Dapp σας δεν μπορεί να είναι μεγαλύτερο από 32 χαρακτήρες."
+
+#: partials/modals/addDappModal.html:130 partials/modals/addDappModal.html:66
+msgid "Your dapp name is required."
+msgstr "Το όνομα Dapp σας είναι απαραίτητο."
+
+#: partials/modals/addDappModal.html:155 partials/modals/addDappModal.html:92
+msgid "Your dapp tags cannot be longer than 160 characters."
+msgstr ""
+"Οι Dapp ετικέτες σας δεν μπορούν να είναι μεγαλύτερες από 160 χαρακτήρες."
+
+#: partials/modals/addContactModal.html:107
+#: partials/modals/addContactModal.html:37
+#: partials/modals/addContactModal.html:72
+msgid "add contact"
+msgstr "προσθήκη επαφής"
+
+#: partials/modals/secondPassphraseModal.html:39
+#: partials/modals/secondPassphraseModal.html:74
+msgid "add second passphrase"
+msgstr "προσθέστε δεύτερη φράση πρόσβασης"
+
+#: js/controllers/modals/addDappModalController.js:142
+msgid "change to SIA ASCII"
+msgstr "αλλαγή σε SIA ASCII"
+
+#: js/controllers/modals/addDappModalController.js:142
+msgid "change to url link"
+msgstr "αλλαγή σε url link"
+
+#: partials/modals/multisignatureModal.html:135
+#: partials/modals/multisignatureModal.html:174
+#: partials/modals/userSettingsModal.html:103
+#: partials/modals/userSettingsModal.html:67
+msgid "confirm"
+msgstr "επιβεβαίωση"
+
+#: partials/app-template.html:255
+msgid "delegate registration"
+msgstr "εγγραφή delegate"
+
+#: partials/modals/multisignatureModal.html:91
+msgid "next"
+msgstr "επόμενο"
+
+#: partials/modals/registrationDelegateModal.html:107
+#: partials/modals/registrationDelegateModal.html:37
+#: partials/modals/registrationDelegateModal.html:69
+msgid "register"
+msgstr "εγγραφή"
+
+#: partials/votes.html:14
+msgid "remove vote"
+msgstr "αφαίρεση ψήφου"
+
+#: partials/modals/userSettingsModal.html:33
+msgid "save Name"
+msgstr "αποθήκευση Ονόματος"
+
+#: partials/modals/sendTransaction.html:113
+#: partials/modals/sendTransaction.html:43
+#: partials/modals/sendTransaction.html:78
+msgid "send lisk"
+msgstr "Αποστολή lisk"
+
+#: partials/delegates.html:13
+msgid "vote"
+msgstr "ψηφίστε"
+
+#: partials/delegates.html:93
+msgid "{{countStandby}} in Total"
+msgstr "{{CountStandby}} στο Σύνολο"
+
+#: partials/delegates.html:24
+msgid "{{countTop}} in Total"
+msgstr "{{CountTop}} στο Σύνολο"
+
+#: partials/votes.html:25
+msgid "{{count}} in Total"
+msgstr "{{count}} στο Σύνολο"
+
+#: partials/delegates.html:4
+msgid ""
+"{{voteList.length}} out of {{countStandby + countTop}} Delegates selected"
+msgstr ""
+"{{voteList.length}} από {{countStandby + countTop}}  Επιλεγμένοι delegates"
+
+#: partials/votes.html:4
+msgid "{{voteList.length}} out of {{count}} Delegates selected"
+msgstr "{{voteList.length}} από {{count}}  Επιλεγμένοι delegates"
