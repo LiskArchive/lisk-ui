@@ -6,6 +6,7 @@ angular.module('liskApp').controller('secondPassphraseModalController', ["$scope
     $scope.passmode = false;
     $scope.focus = 'secondPass';
     $scope.fee = 0;
+    $scope.step = 1;
 
     $scope.getFee = function () {
         $http.get("/api/signatures/fee").then(function (resp) {
@@ -19,11 +20,40 @@ angular.module('liskApp').controller('secondPassphraseModalController', ["$scope
 
     $scope.getFee();
 
+    $scope.goToStep = function (step) {
+        $scope.passmode = false;
+        $scope.repeatPassphrase = '';
+        $scope.noMatch = false;
+        $scope.step = step;
+    }
+
     $scope.close = function () {
         if ($scope.destroy) {
             $scope.destroy();
         }
         secondPassphraseModal.deactivate();
+    }
+
+    $scope.generatePassphrase = function () {
+        var code = new Mnemonic(Mnemonic.Words.ENGLISH);
+        $scope.newPassphrase = code.toString();
+    };
+
+    $scope.generatePassphrase();
+
+    $scope.savePassToFile = function (pass) {
+        var blob = new Blob([pass], {type: "text/plain;charset=utf-8"});
+        FS.saveAs(blob, "LiskSecondPassphrase.txt");
+    }
+
+    $scope.confirmNewPassphrase = function () {
+        if (!Mnemonic.isValid($scope.repeatPassphrase) || ($scope.repeatPassphrase != $scope.newPassphrase)) {
+            $scope.noMatch = true;
+            return;
+        } else {
+            $scope.noMatch = false;
+            $scope.passcheck();
+        }
     }
 
     $scope.passcheck = function () {
@@ -36,23 +66,15 @@ angular.module('liskApp').controller('secondPassphraseModalController', ["$scope
             } else {
                 $scope.focus = 'secondPass';
             }
+            $scope.fromServer = '';
             $scope.pass = '';
         }
     }
 
     $scope.addNewPassphrase = function (pass) {
-        $scope.fromServer = '';
-        if ($scope.repeatSecretPhrase != $scope.newSecretPhrase) {
-            $scope.fromServer = 'Passphrase and Confirm Passphrase don\'t match';
-            return;
-        }
-        if ((($scope.repeatSecretPhrase ? $scope.repeatSecretPhrase.trim() : '') == '') || (($scope.newSecretPhrase ? $scope.newSecretPhrase.trim() : '') == '')) {
-            $scope.fromServer = 'Missing Passphrase or Confirm Passphrase';
-            return;
-        }
         $http.put("/api/signatures", {
             secret: pass,
-            secondSecret: $scope.newSecretPhrase,
+            secondSecret: $scope.newPassphrase,
             publicKey: userService.publicKey
         }).then(function (resp) {
             if (resp.data.error) {
