@@ -10,6 +10,8 @@ require('../node_modules/angular-chart.js/dist/angular-chart.js');
 require('../node_modules/angular-socket-io/socket.js');
 require('../node_modules/ng-table/dist/ng-table.js');
 
+Mnemonic = require('bitcore-mnemonic');
+
 liskApp = angular.module('liskApp', ['ui.router', 'btford.modal', 'ngTable', 'ngAnimate',  'chart.js', 'btford.socket-io', 'ui.bootstrap', 'ngClipboard', 'angular.filter', 'gettext']);
 
 liskApp.config(["ngClipProvider",

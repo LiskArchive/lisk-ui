@@ -20,6 +20,10 @@ angular.module('liskApp').controller('passphraseController', ['$scope', '$rootSc
             $scope.errorMessage = 'Passphrase must contain less than 100 characters.';
             return;
         }
+        if (!Mnemonic.isValid(pass)) {
+            $scope.errorMessage = 'Passphrase must be a valid BIP39 mnemonic code.';
+            return;
+        }
         var data = {secret: pass};
         $scope.errorMessage = "";
         $http.post("/api/accounts/open/", {secret: pass})

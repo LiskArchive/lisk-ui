@@ -33,7 +33,7 @@ angular.module('liskApp').controller('newUserController', ["$scope", "$http", "n
     $scope.login = function (pass) {
         $scope.noMatch = false;
         var data = {secret: pass};
-        if ($scope.passToCheck != pass) {
+        if (!Mnemonic.isValid(pass) || $scope.passToCheck != pass) {
             $scope.noMatch = true;
         } else {
             $scope.view.inLoading = true;
