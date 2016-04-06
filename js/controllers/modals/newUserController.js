@@ -3,7 +3,7 @@ require('angular');
 angular.module('liskApp').controller('newUserController', ["$scope", "$http", "newUser", "userService", "$state", "viewFactory", 'gettextCatalog', function ($scope, $http, newUser, userService, $state, viewFactory, gettextCatalog) {
 
     $scope.noMatch = false;
-    $scope.firstStep = true;
+    $scope.step = 1;
     $scope.view = viewFactory;
     $scope.view.loadingText = gettextCatalog.getString('Registering user');
     $scope.view.inLoading = false;
@@ -17,11 +17,13 @@ angular.module('liskApp').controller('newUserController', ["$scope", "$http", "n
         $scope.newPassphrase = code.toString();
     };
 
-    $scope.step = function () {
-        if ($scope.firstStep) {
+    $scope.goToStep = function (step) {
+        if (step == 1) {
             $scope.passToCheck = $scope.newPassphrase;
+            $scope.repeatPassphrase = '';
+            $scope.noMatch = false;
         }
-        $scope.firstStep = !$scope.firstStep;
+        $scope.step = step;
     }
 
     $scope.savePassToFile = function (pass) {
@@ -30,7 +32,6 @@ angular.module('liskApp').controller('newUserController', ["$scope", "$http", "n
     }
 
     $scope.login = function (pass) {
-        $scope.noMatch = false;
         var data = {secret: pass};
         if (!Mnemonic.isValid(pass) || $scope.passToCheck != pass) {
             $scope.noMatch = true;
