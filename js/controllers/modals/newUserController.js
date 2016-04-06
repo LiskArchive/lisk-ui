@@ -47,7 +47,7 @@ angular.module('liskApp').controller('newUserController', ["$scope", "$http", "n
                         userService.unconfirmedPassphrase = resp.data.account.unconfirmedSignature;
                         $state.go('main.dashboard');
                     } else {
-                        alert("Something wrong. Restart server please.");
+                        console.error("Login failed. Failed to open account.");
                     }
                 });
         }
