@@ -23,7 +23,7 @@
                             <div class="modal-body clearfix">
                                 <div class="left-margin-40 right-margin-40">
                                     <div class="input-field passphraseGeneration">
-                                        <textarea ng-focus="focus=='secondPass'" id="newPassphrase" class="materialize-textarea" ng-model="newPassphrase" ng-trim="false" autofocus></textarea>
+                                        <textarea ng-focus="focus=='secondPass'" id="newPassphrase" class="materialize-textarea" ng-model="newPassphrase" ng-trim="false" autofocus readonly></textarea>
                                         <label for="newPassphrase" ng-class="{'active':activeLabel(newPassphrase)}">Second Passphrase</label>
                                     </div>
                                     <span class="pull-right generate no-select" ng-click="generatePassphrase()">
