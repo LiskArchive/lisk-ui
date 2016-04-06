@@ -13,7 +13,6 @@ angular.module('liskApp').controller('newUserController', ["$scope", "$http", "n
     }
 
     $scope.generatePassphrase = function () {
-        var Mnemonic = require('bitcore-mnemonic');
         var code = new Mnemonic(Mnemonic.Words.ENGLISH);
         $scope.newPassphrase = code.toString();
     };
