@@ -25,7 +25,7 @@ angular.module('liskApp').controller('newUserController', ["$scope", "$http", "n
     }
 
     $scope.savePassToFile = function (pass) {
-        var blob = new Blob([pass], {type: "text/plain;charset=utf-8"});
+        var blob = new Blob([pass], { type: "text/plain;charset=utf-8" });
         FS.saveAs(blob, "LiskPassphrase.txt");
     }
 
@@ -36,7 +36,7 @@ angular.module('liskApp').controller('newUserController', ["$scope", "$http", "n
             $scope.noMatch = true;
         } else {
             $scope.view.inLoading = true;
-            $http.post("/api/accounts/open/", {secret: pass})
+            $http.post("/api/accounts/open/", { secret: pass })
                 .then(function (resp) {
                     $scope.view.inLoading = false;
                     if (resp.data.success) {
