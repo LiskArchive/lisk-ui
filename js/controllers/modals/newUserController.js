@@ -2,8 +2,8 @@ require('angular');
 
 angular.module('liskApp').controller('newUserController', ["$scope", "$http", "newUser", "userService", "$state", "viewFactory", 'gettextCatalog', function ($scope, $http, newUser, userService, $state, viewFactory, gettextCatalog) {
 
-    $scope.noMatch = false;
     $scope.step = 1;
+    $scope.noMatch = false;
     $scope.view = viewFactory;
     $scope.view.loadingText = gettextCatalog.getString('Registering user');
     $scope.view.inLoading = false;
