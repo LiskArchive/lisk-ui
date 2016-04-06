@@ -19,7 +19,6 @@ angular.module('liskApp').controller('newUserController', ["$scope", "$http", "n
 
     $scope.goToStep = function (step) {
         if (step == 1) {
-            $scope.passToCheck = $scope.newPassphrase;
             $scope.repeatPassphrase = '';
             $scope.noMatch = false;
         }
@@ -33,7 +32,7 @@ angular.module('liskApp').controller('newUserController', ["$scope", "$http", "n
 
     $scope.login = function (pass) {
         var data = { secret: pass };
-        if (!Mnemonic.isValid(pass) || $scope.passToCheck != pass) {
+        if (!Mnemonic.isValid(pass) || $scope.newPassphrase != pass) {
             $scope.noMatch = true;
         } else {
             $scope.view.inLoading = true;
