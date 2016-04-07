@@ -5,7 +5,6 @@ dapps/
 node_modules
 npm-debug.log
 .project
-po/template.pot
 static/css
 static/js
 tmp
