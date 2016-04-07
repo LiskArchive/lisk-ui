@@ -1,0 +1,1299 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Lisk\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: ShunPing Tang <s-tang@ailwen.com>\n"
+"Language: jp\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.7\n"
+
+#: partials/dapp-entry.html:79
+msgid "(1449)"
+msgstr "(1449)"
+
+#: partials/app-template.html:177
+msgid "2nd Passphrase"
+msgstr "セカンドパスワード"
+
+#: partials/dapps.html:152
+msgid "ADD NEW DAPP"
+msgstr "新しいDAPPを追加します"
+
+#: partials/modals/addDappModal.html:36
+msgid "Accept / Next Step"
+msgstr "同意 / 次へ"
+
+#: partials/modals/userInfo.html:14
+msgid "Account"
+msgstr "ユーザー名"
+
+#: partials/modals/addContactModal.html:50 partials/modals/addContactModal.html:85
+#: partials/modals/addDappModal.html:418 partials/modals/addDappModal.html:450
+#: partials/modals/masterPassphraseModal.html:13 partials/modals/multisignatureModal.html:148
+#: partials/modals/passphraseCheck.html:13 partials/modals/registrationDelegateModal.html:50
+#: partials/modals/registrationDelegateModal.html:85
+#: partials/modals/secondPassphraseModal.html:52 partials/modals/sendTransaction.html:56
+#: partials/modals/sendTransaction.html:91 partials/modals/userSettingsModal.html:46
+#: partials/modals/userSettingsModal.html:81 partials/modals/vote.html:44
+#: partials/modals/vote.html:79
+msgid "Account Verification"
+msgstr "アカウント検証"
+
+#: partials/modals/addContactModal.html:21 partials/modals/sendTransaction.html:21
+msgid "Account name or ID"
+msgstr "ユーザー名またはID "
+
+#: partials/modals/multisignatureModal.html:52
+msgid "Account name, ID or public key"
+msgstr "ユーザー名、IDまたは公開鍵"
+
+#: partials/delegates.html:136 partials/delegates.html:67 partials/votes.html:65
+msgid "Add as Contact"
+msgstr "連絡先を追加"
+
+#: partials/modals/multisignatureModal.html:46
+msgid "Add group members by typing in their account name, ID or public key."
+msgstr "ユーザー名、IDまたは公開鍵でメンバーを追加します"
+
+#: partials/modals/addContactModal.html:13
+msgid "Add new contact"
+msgstr "新規連絡先を追加"
+
+#: partials/modals/secondPassphraseModal.html:13
+msgid "Add second passphrase"
+msgstr "セカンドパスワードを設置します"
+
+#: js/controllers/modals/addContactModalController.js:7
+msgid "Adding new contact"
+msgstr "連絡先を追加"
+
+#: js/controllers/blockchainController.js:45 js/controllers/transactionsController.js:67
+#: js/controllers/walletPendingsController.js:47
+#: js/controllers/walletTransactionsController.js:72 js/controllers/walletsController.js:148
+#: partials/modals/transactionInfo.html:16 partials/modals/userInfo.html:67
+msgid "Amount"
+msgstr "金額"
+
+#: partials/account.html:92
+msgid "Amount (Fee)"
+msgstr "金額（手数料）"
+
+#: js/controllers/delegatesController.js:164 js/controllers/forgingController.js:66
+#: js/controllers/votedDelegatesController.js:127 partials/forging.html:45
+msgid "Approval"
+msgstr "得票率"
+
+#: partials/modals/confirmDeletionModal.html:16
+msgid "Are you sure you want to delete this item?"
+msgstr "キャンセルしますか？"
+
+#: partials/dapp-entry.html:93
+msgid "Attention!"
+msgstr "注意してください"
+
+#: partials/modals/addContactModal.html:104 partials/modals/addContactModal.html:69
+#: partials/modals/addDappModal.html:471 partials/modals/multisignatureModal.html:132
+#: partials/modals/multisignatureModal.html:171
+#: partials/modals/registrationDelegateModal.html:104
+#: partials/modals/secondPassphraseModal.html:71 partials/modals/sendTransaction.html:110
+#: partials/modals/sendTransaction.html:75 partials/modals/userSettingsModal.html:100
+#: partials/modals/vote.html:98
+msgid "BACK"
+msgstr "戻る"
+
+#: partials/modals/userSettingsModal.html:64
+msgid "Back"
+msgstr "戻る"
+
+#: partials/account.html:8
+msgid "Balance"
+msgstr "残高"
+
+#: partials/modals/registrationDelegateModal.html:29
+msgid ""
+"Becoming a delegate requires registration. You may choose your own delegate name, which "
+"can be used to promote your delegate. Only the top 101 delegates are eligible to forge. "
+"All fees are shared equally between the top 101 delegates. Registration costs: {{fee | "
+"liskFilter}} LISK."
+msgstr ""
+"受託者になりたい場合、新規登録が必要です。お客様の受託者名称を選択した上、これでお客様の受"
+"託者名称を広め、得票数ランキングがトップ101です場合、鍛造の資格を取得し、鍛造の手数料はトッ"
+"プ101の皆様に等分されます。受託者-登録費用： {{fee | liskFilter}} LISK."
+
+#: js/controllers/blockchainController.js:41 js/controllers/forgingController.js:121
+#: partials/modals/blockInfo.html:7 partials/modals/transactionInfo.html:32
+#: partials/modals/transactionInfo.html:4
+msgid "Block ID"
+msgstr "区域ID "
+
+#: js/controllers/blockchainController.js:8 partials/app-template.html:124
+msgid "Blockchain"
+msgstr "ブロックチェーン"
+
+#: partials/modals/addDappModal.html:37 partials/modals/multisignatureModal.html:28
+#: partials/modals/vote.html:18
+msgid "CANCEL"
+msgstr "キャンセル"
+
+#: partials/app-template.html:275
+msgid "CATEGORIES"
+msgstr "分類"
+
+#: partials/multi.html:31 partials/pendings.html:15 partials/wallet-pendings.html:28
+msgid "CONFIRM"
+msgstr "確認"
+
+#: js/directives/voteActionDirective.js:14
+msgid "CONFIRM VOTE"
+msgstr "投票確認済み"
+
+#: partials/modals/blockInfo.html:74 partials/modals/blockModal.html:34
+#: partials/modals/transactionInfo.html:50 partials/modals/userInfo.html:101
+msgid "CONFIRMATIONS"
+msgstr "確認数"
+
+#: partials/multi.html:59
+msgid "CONFIRMED TRANSACTIONS"
+msgstr "交易確認済み"
+
+#: partials/modals/addContactModal.html:34 partials/modals/forgingModal.html:32
+#: partials/modals/masterPassphraseModal.html:32 partials/modals/multisignatureModal.html:88
+#: partials/modals/passphraseCheck.html:32 partials/modals/registrationDelegateModal.html:34
+#: partials/modals/registrationDelegateModal.html:66
+#: partials/modals/secondPassphraseModal.html:36 partials/modals/sendTransaction.html:40
+#: partials/modals/userSettingsModal.html:30 partials/modals/vote.html:63
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: partials/modals/addDappModal.html:371 partials/modals/addDappModal.html:397
+msgid "Category"
+msgstr "分類"
+
+#: partials/dapp-entry.html:67
+msgid "Category:"
+msgstr "分類："
+
+#: partials/modals/addDappModal.html:226
+msgid "Centralized"
+msgstr "分散化"
+
+#: partials/modals/addDappModal.html:313 partials/modals/addDappModal.html:323
+msgid "Check"
+msgstr "チェック"
+
+#: partials/modals/addContactModal.html:45 partials/modals/addContactModal.html:8
+#: partials/modals/addContactModal.html:80 partials/modals/addDappModal.html:10
+#: partials/modals/addDappModal.html:190 partials/modals/addDappModal.html:195
+#: partials/modals/addDappModal.html:267 partials/modals/addDappModal.html:272
+#: partials/modals/addDappModal.html:339 partials/modals/addDappModal.html:344
+#: partials/modals/addDappModal.html:413 partials/modals/addDappModal.html:43
+#: partials/modals/addDappModal.html:445 partials/modals/addDappModal.html:48
+#: partials/modals/addDappModal.html:5 partials/modals/blockInfo.html:10
+#: partials/modals/blockModal.html:9 partials/modals/confirmDeletionModal.html:8
+#: partials/modals/errorModal.html:9 partials/modals/forgingModal.html:9
+#: partials/modals/masterPassphraseModal.html:8 partials/modals/multiMembersModal.html:8
+#: partials/modals/multisignatureModal.html:143 partials/modals/multisignatureModal.html:39
+#: partials/modals/multisignatureModal.html:8 partials/modals/multisignatureModal.html:99
+#: partials/modals/newUser.html:10 partials/modals/newUser.html:43
+#: partials/modals/passphraseCheck.html:8 partials/modals/registrationDelegateModal.html:45
+#: partials/modals/registrationDelegateModal.html:8
+#: partials/modals/registrationDelegateModal.html:80
+#: partials/modals/secondPassphraseModal.html:47 partials/modals/secondPassphraseModal.html:8
+#: partials/modals/sendTransaction.html:51 partials/modals/sendTransaction.html:8
+#: partials/modals/sendTransaction.html:86 partials/modals/transactionInfo.html:7
+#: partials/modals/userInfo.html:24 partials/modals/userSettingsModal.html:41
+#: partials/modals/userSettingsModal.html:76 partials/modals/userSettingsModal.html:8
+#: partials/modals/vote.html:39 partials/modals/vote.html:74 partials/modals/vote.html:9
+msgid "Close modal"
+msgstr "閉じる"
+
+#: partials/modals/addDappModal.html:406 partials/modals/addDappModal.html:438
+msgid "Confirm"
+msgstr "確認"
+
+#: partials/modals/confirmDeletionModal.html:13
+msgid "Confirmation"
+msgstr "確認"
+
+#: js/controllers/walletTransactionsController.js:74 js/controllers/walletsController.js:115
+#: partials/modals/blockInfo.html:20 partials/modals/transactionInfo.html:13
+#: partials/modals/userInfo.html:64
+msgid "Confirmations"
+msgstr "確認数"
+
+#: js/controllers/walletPendingsController.js:49 js/controllers/walletsController.js:150
+msgid "Confirmations Needed"
+msgstr "必要な確認数"
+
+#: partials/modals/multisignatureModal.html:113 partials/modals/multisignatureModal.html:73
+msgid "Confirmations needed"
+msgstr "必要な確認数"
+
+#: js/controllers/modals/multiMembersModalController.js:5
+msgid "Confirmed by"
+msgstr "確認者"
+
+#: partials/modals/userInfo.html:35
+msgid "Contact Request"
+msgstr "連絡先のリクエスト"
+
+#: js/controllers/contactsController.js:8 js/controllers/pendingsController.js:8
+#: partials/account.html:21 partials/app-template.html:355 partials/app-template.html:85
+msgid "Contacts"
+msgstr "連絡先"
+
+#: partials/app-template.html:91
+msgid "Conversations"
+msgstr "会話"
+
+#: partials/contacts.html:26 partials/contacts.html:54 partials/delegates.html:127
+#: partials/delegates.html:58 partials/pendings.html:24 partials/votes.html:56
+msgid "Copy Address"
+msgstr "アドレスをコピーします"
+
+#: partials/contacts.html:29 partials/contacts.html:57 partials/delegates.html:130
+#: partials/delegates.html:61 partials/pendings.html:27 partials/votes.html:59
+msgid "Copy Name"
+msgstr "名称をコピーします"
+
+#: partials/dapp-entry.html:22 partials/dapp-entry.html:37 partials/dapp-entry.html:46
+msgid "DOWNLOAD"
+msgstr "ダウンロード"
+
+#: js/controllers/dappsController.js:8 partials/app-template.html:97
+msgid "Dapp Store"
+msgstr "Dapp商店"
+
+#: js/controllers/accountController.js:8 partials/app-template.html:73
+msgid "Dashboard"
+msgstr "ダッシュ ボード"
+
+#: partials/modals/addDappModal.html:206
+msgid "Decentralized"
+msgstr "分散化"
+
+#: partials/modals/registrationDelegateModal.html:21
+msgid "Delegate Name"
+msgstr "受託者名"
+
+#: partials/app-template.html:111 partials/app-template.html:247
+msgid "Delegates"
+msgstr "受託者"
+
+#: partials/dapp-entry.html:91 partials/modals/addDappModal.html:140
+#: partials/modals/addDappModal.html:363 partials/modals/addDappModal.html:391
+#: partials/modals/addDappModal.html:76
+msgid "Description"
+msgstr "説明"
+
+#: js/controllers/modals/errorModalController.js:10
+#: js/controllers/modals/forgingModalController.js:11
+msgid "Disable Forging"
+msgstr "鍛造を閉めます"
+
+#: js/controllers/appController.js:335
+msgid "Disabled"
+msgstr "使用不可"
+
+#: partials/modals/masterPassphraseModal.html:24
+msgid "Empty passphrase"
+msgstr "無効なパスワード"
+
+#: js/controllers/modals/errorModalController.js:12
+#: js/controllers/modals/forgingModalController.js:13
+msgid "Enable Forging"
+msgstr "鍛造オン"
+
+#: partials/settings.html:22
+msgid "Enable Multi-Signature on this account"
+msgstr "当該アカウントでマルチサインを開通します"
+
+#: js/controllers/appController.js:335
+msgid "Enabled"
+msgstr "使用可能"
+
+#: partials/modals/blockInfo.html:72 partials/modals/blockModal.html:32
+#: partials/modals/transactionInfo.html:47 partials/modals/userInfo.html:99
+msgid "FEE"
+msgstr "費用"
+
+#: partials/app-template.html:260
+msgid "FORGING"
+msgstr "鍛造"
+
+#: js/controllers/blockchainController.js:46 js/controllers/forgingController.js:123
+#: js/controllers/transactionsController.js:68 js/controllers/walletPendingsController.js:48
+#: js/controllers/walletTransactionsController.js:73 js/controllers/walletsController.js:149
+#: partials/modals/transactionInfo.html:19 partials/modals/userInfo.html:70
+msgid "Fee"
+msgstr "費用"
+
+#: partials/forging.html:74
+msgid "Forged Blocks"
+msgstr "鍛造ブロック"
+
+#: js/controllers/delegatesController.js:9 js/controllers/forgingController.js:89
+#: js/controllers/votedDelegatesController.js:8 partials/app-template.html:103
+#: partials/app-template.html:244
+msgid "Forging"
+msgstr "鍛造"
+
+#: partials/modals/secondPassphraseModal.html:15
+msgid ""
+"Further protect your account with an optional second passphrase! Please allow some time "
+"for the changes to take effect. Service cost: <b>{{fee | liskFilter}} LISK</b>. Your "
+"balance: <b>{{totalBalance | liskFilter}} LISK</b>."
+msgstr ""
+"セカンドパスワード（選択可能）でアカウントの安全性を保障できます！情報がブロックチェーンに"
+"保存されるように少々お待ちください。今回料金: <b>{{fee | liskFilter}} LISK</b>. 残高: "
+"<b>{{totalBalance | liskFilter}} LISK</b>."
+
+#: partials/modals/newUser.html:67
+msgid "GET STARTED"
+msgstr "始まりましょう"
+
+#: partials/modals/newUser.html:66
+msgid "GO BACK"
+msgstr "戻る"
+
+#: partials/settings.html:6
+msgid "General"
+msgstr "普通"
+
+#: partials/modals/newUser.html:26
+msgid "Generate New"
+msgstr "新規作成"
+
+#: js/controllers/blockchainController.js:42 partials/modals/blockInfo.html:46
+msgid "Generator"
+msgstr "作成者"
+
+#: partials/modals/addDappModal.html:285 partials/modals/addDappModal.html:311
+msgid "Git repository link"
+msgstr "Gitリポジトリのリンク"
+
+#: partials/modals/addDappModal.html:231 partials/modals/addDappModal.html:255
+msgid ""
+"GitHub is a Web-based Git repository hosting service, which offers amongst other things a "
+"source code management functionality. GitHub provides a graphical interface and desktop as "
+"well as mobile integration. If you add your dapp source code to a GitHub repository you "
+"need to specify the repository link in the next step."
+msgstr ""
+"GitHubはホームページに基づくリポジトリホスティングで、ソースコード管理機能を提供します。"
+"GitHubは図形画面およびデスクとモバイルの融合を提供し、DappソースコードをGitHubに添加すれ"
+"ば、次のステップでGitHubのリンクを提供する必要です"
+
+#: partials/modals/addDappModal.html:184 partials/modals/addDappModal.html:261
+#: partials/modals/addDappModal.html:333 partials/modals/addDappModal.html:407
+#: partials/modals/addDappModal.html:439
+msgid "Go back"
+msgstr "戻る"
+
+#: partials/app-template.html:144
+msgid "Go to previous page"
+msgstr "前のページへ"
+
+#: js/controllers/walletsController.js:113
+msgid "Group Name"
+msgstr "グループ名"
+
+#: partials/app-template.html:291
+msgid "HOME"
+msgstr "ホームページ"
+
+#: js/controllers/blockchainController.js:40 js/controllers/forgingController.js:120
+#: js/controllers/transactionsController.js:62
+#: js/controllers/walletTransactionsController.js:68 partials/modals/blockInfo.html:23
+msgid "Height"
+msgstr "高さ"
+
+#: partials/modals/addDappModal.html:375 partials/modals/addDappModal.html:400
+msgid "Hosted at"
+msgstr "保存位置"
+
+#: partials/dapp-entry.html:21
+msgid "INSTALL"
+msgstr "インストール"
+
+#: partials/app-template.html:297
+msgid "INSTALLED"
+msgstr "インストール済み"
+
+#: partials/modals/addDappModal.html:106 partials/modals/addDappModal.html:169
+msgid "Icon Sia ASCII"
+msgstr "IconのSia ASCIIコード"
+
+#: partials/modals/addDappModal.html:162 partials/modals/addDappModal.html:99
+msgid "Icon URL"
+msgstr "Icon URL"
+
+#: partials/dapps.html:236
+msgid "Installed Dapps"
+msgstr " インストールされたDapps"
+
+#: partials/dapp-entry.html:36
+msgid "LAUNCH"
+msgstr "運行"
+
+#: partials/modals/sendTransaction.html:27
+msgid "LISK Amount"
+msgstr "LISK金額"
+
+#: partials/forging.html:11
+msgid "LISK Earned"
+msgstr "稼いだLISK "
+
+#: partials/settings.html:9
+msgid "Language"
+msgstr "言語"
+
+#: partials/multi.html:6
+msgid "Latest Multi-Signature Transactions"
+msgstr "最新のマルチサイン取引"
+
+#: partials/account.html:70
+msgid "Latest Transactions"
+msgstr "最新の取引"
+
+#: partials/account.html:49
+msgid "Latest version"
+msgstr "最新バージョン"
+
+#: wallet.html:19
+msgid "Lisk - Decentralized Application Platform"
+msgstr "Lisk -分散化さアプリケーションプラットフォーム"
+
+#: js/controllers/contactsController.js:54 js/controllers/delegatesController.js:162
+#: js/controllers/pendingsController.js:31 js/controllers/votedDelegatesController.js:125
+#: js/controllers/walletPendingsController.js:43
+msgid "Lisk Address"
+msgstr "Liskアドレス"
+
+#: partials/account.html:46
+msgid "Lisk Client"
+msgstr "Liskクライアント"
+
+#: partials/account.html:56
+msgid "Lisk Client Outdated"
+msgstr "Liskクライアントの期限が切れました"
+
+#: js/controllers/walletsController.js:7
+msgid "Loading Multi-Signature Groups"
+msgstr "マルチサイングループがロードしています"
+
+#: js/controllers/blockchainController.js:7
+msgid "Loading blockchain"
+msgstr "ブロックチェーンがロードしています"
+
+#: js/controllers/contactsController.js:7 js/controllers/pendingsController.js:7
+msgid "Loading contacts"
+msgstr "連絡先がロードしています"
+
+#: js/controllers/dappController.js:7
+msgid "Loading dapp"
+msgstr "Dappがロードしています"
+
+#: js/controllers/dappsCategoryController.js:7 js/controllers/dappsController.js:7
+msgid "Loading dapps"
+msgstr "Dappsをインストールしています"
+
+#: js/controllers/accountController.js:7
+msgid "Loading dashboard"
+msgstr "コントロールパネルがロードしています"
+
+#: js/controllers/delegatesController.js:7 js/controllers/votedDelegatesController.js:7
+msgid "Loading delegates"
+msgstr "受託者がロードしています"
+
+#: js/controllers/forgingController.js:88
+msgid "Loading forging status"
+msgstr "鍛造状態がロードしています"
+
+#: js/controllers/transactionsController.js:7 js/controllers/walletPendingsController.js:7
+msgid "Loading transactions"
+msgstr "取引記録がロードしています"
+
+#: partials/blockchain.html:35 partials/delegates.html:150 partials/delegates.html:81
+msgid "Loading..."
+msgstr "ロードしています..."
+
+#: partials/app-template.html:183
+msgid "Logout"
+msgstr "ログアウト"
+
+#: partials/modals/addDappModal.html:214 partials/modals/addDappModal.html:232
+msgid "MORE INFO"
+msgstr "詳細情報"
+
+#: partials/modals/newUser.html:31
+msgid ""
+"Make sure that you keep the passphrase safe. You will be asked to re-type it for "
+"confirmation."
+msgstr "パスワードを安全に保つことを確認してください。念のため再入力してください。"
+
+#: partials/modals/sendTransaction.html:35
+msgid ""
+"Make sure you're sending LISK to the right contact. This action can't be undone later."
+msgstr "LISKの送信先を取消することはできませんので、正しさを確認してください。"
+
+#: js/controllers/modals/masterPassphraseModalController.js:9
+msgid "Master Passphrase"
+msgstr "マスターパスワード"
+
+#: js/controllers/modals/multiMembersModalController.js:5
+#: js/controllers/walletsController.js:114
+msgid "Members"
+msgstr "メンバー"
+
+#: partials/account.html:73 partials/dapps.html:177 partials/dapps.html:238
+msgid "More"
+msgstr "その他"
+
+#: js/controllers/walletsController.js:8 partials/app-template.html:79
+#: partials/settings.html:11
+msgid "Multi-Signature"
+msgstr "マルチサイン"
+
+#: partials/contacts.html:5
+msgid "My Contacts"
+msgstr "私の連絡先"
+
+#: partials/multi.html:42
+msgid "My Multi-Signature Groups"
+msgstr "私のマルチサイングループ"
+
+#: partials/app-template.html:174
+msgid "My Profile"
+msgstr "個人情報"
+
+#: partials/app-template.html:117 partials/votes.html:24
+msgid "My Votes"
+msgstr "私の投票"
+
+#: partials/app-template.html:250
+msgid "My votes ({{myVotesCount||'0'}})"
+msgstr "私の投票({{myVotesCount||'0'}})"
+
+#: partials/passphrase.html:26
+msgid "NEW ACCOUNT"
+msgstr "新規アカウント"
+
+#: partials/modals/multisignatureModal.html:31
+msgid "NEXT"
+msgstr "次へ"
+
+#: partials/modals/newUser.html:36
+msgid "NEXT STEP"
+msgstr "次へ"
+
+#: partials/modals/confirmDeletionModal.html:22
+msgid "NO"
+msgstr "いいえ"
+
+#: js/controllers/delegatesController.js:161 js/controllers/votedDelegatesController.js:124
+#: partials/modals/addDappModal.html:126 partials/modals/addDappModal.html:359
+#: partials/modals/addDappModal.html:388 partials/modals/addDappModal.html:62
+#: partials/modals/userInfo.html:18
+msgid "Name"
+msgstr "お名前"
+
+#: partials/modals/secondPassphraseModal.html:22
+msgid "New second passphrase"
+msgstr "新規セカンドパスワード"
+
+#: partials/modals/addDappModal.html:183 partials/modals/addDappModal.html:260
+#: partials/modals/addDappModal.html:332
+msgid "Next Step"
+msgstr "次へ"
+
+#: partials/blockchain.html:30
+msgid "No blockchain"
+msgstr "ブロックチェーン情報はありません。"
+
+#: partials/dapps-category.html:6 partials/dapps-category.html:7
+msgid "No dapps matching your search criteria were found."
+msgstr "検索条件に一致するdappsは見つかりませんでした。"
+
+#: partials/delegates.html:145 partials/delegates.html:76
+msgid "No delegates"
+msgstr "受託者がないです"
+
+#: partials/dapps.html:166
+msgid "No results for search '{{searchDapp.searchForDappGlobal}}' in dapps."
+msgstr "'{{searchDapp.searchForDappGlobal}}'に関するDappsを検索できません"
+
+#: partials/blockchain.html:42 partials/transactions.html:65
+msgid "No results for this search."
+msgstr "検索結果がないです。"
+
+#: partials/modals/multisignatureModal.html:110
+msgid "Number of members"
+msgstr "メンバー数"
+
+#: partials/modals/errorModal.html:27
+msgid "OK"
+msgstr "OK"
+
+#: partials/dapp-entry.html:45
+msgid "OPEN"
+msgstr "開く"
+
+#: partials/app-template.html:263
+msgid "Off"
+msgstr "オフ"
+
+#: partials/app-template.html:266
+msgid "On"
+msgstr "オン"
+
+#: js/controllers/forgingController.js:43 js/controllers/forgingController.js:55
+#: js/controllers/forgingController.js:66
+msgid "Others"
+msgstr "その他"
+
+#: partials/modals/newUser.html:56
+msgid "Passphrase"
+msgstr "パスワード"
+
+#: partials/modals/newUser.html:58
+msgid "Passphrase doesn't match."
+msgstr "パスワードが一致しません。"
+
+#: partials/app-template.html:358
+msgid "Pending ({{contacts.followersCount}})"
+msgstr "処理待ち({{contacts.followersCount}})"
+
+#: partials/pendings.html:5
+msgid "Pending Requests"
+msgstr "処理待ちの請求"
+
+#: js/controllers/walletPendingsController.js:8
+msgid "Pending transactions"
+msgstr "処理待ちの取引"
+
+#: partials/dapp-entry.html:95
+msgid ""
+"Please be aware, Lisk decentralized applications do not currently run within a sandboxed "
+"virtual machine. This means you are potentially vulnerable to malicious application "
+"behaviour. Before installing any new application, we recommend checking the source code or "
+"asking the Lisk community for further verification.<br>We will enable sandboxing of "
+"decentralized applications with the next Lisk update."
+msgstr ""
+"ご注意、Lisk分散化アプリはサンドボックス仮想マシンに運行されないので、悪意のアプリに侵入さ"
+"れやすく、新しいDappをインストールする前に、既存のDappソースコードまたはLiskに聞いてもらっ"
+"てチェックします。次回のLiskアップグレードする場合、Dappサンドボックスを起動します。"
+
+#: partials/modals/addDappModal.html:349
+msgid "Please check your input below and go back if necessary."
+msgstr "下記の入力内容を確認してください。または前のページに戻ります。"
+
+#: partials/modals/multisignatureModal.html:106
+msgid ""
+"Please check your input below and go back if necessary. Double-check the group members, "
+"else you risk losing your LISK balance!"
+msgstr ""
+"下記に入力した内容を確認してください。必要な場合は前のページに戻ります。グループメンバーを"
+"チェックしてください。そうでなければLISK全体を失うかもしれません。"
+
+#: partials/modals/registrationDelegateModal.html:15
+msgid "Please choose a delegate name."
+msgstr "受託者の名前を選択してください"
+
+#: partials/modals/addDappModal.html:200
+msgid "Please choose between the available options."
+msgstr "選択肢から選択してください"
+
+#: js/controllers/modals/masterPassphraseModalController.js:8
+msgid "Please enter master password."
+msgstr "マスターパスワードを入力してください。"
+
+#: partials/modals/addContactModal.html:52 partials/modals/addDappModal.html:420
+#: partials/modals/forgingModal.html:16 partials/modals/registrationDelegateModal.html:52
+#: partials/modals/secondPassphraseModal.html:54 partials/modals/sendTransaction.html:58
+#: partials/modals/userSettingsModal.html:48 partials/modals/vote.html:46
+msgid "Please enter your passphrase below."
+msgstr "パスワードを入力してください。"
+
+#: partials/modals/multisignatureModal.html:150 partials/modals/passphraseCheck.html:15
+msgid "Please enter your passphrase."
+msgstr "パスワードを入力してください"
+
+#: partials/modals/addContactModal.html:87 partials/modals/addDappModal.html:452
+#: partials/modals/registrationDelegateModal.html:87 partials/modals/sendTransaction.html:93
+#: partials/modals/userSettingsModal.html:83 partials/modals/vote.html:81
+msgid "Please enter your second passphrase below."
+msgstr "下記にセカンドパスワードを入力してください。"
+
+#: js/controllers/modals/addDappModalController.js:166
+msgid ""
+"Please make sure you copy and paste the whole Sia ASCII code. Additionally please check "
+"that there were no characters added."
+msgstr ""
+" Sia ASCIIコード全体をコピーして貼り付けることを確認してください。また不要の文字を添加しな"
+"いことを確認してください。"
+
+#: js/controllers/modals/addDappModalController.js:166
+msgid "Please make sure you copy the complete repository link from GitHub. It ends in .git."
+msgstr "完全なGitHubリポジトリリンクをコピーし、.gitで終わることを確認してください。"
+
+#: partials/modals/newUser.html:50
+msgid "Please re-enter your passphrase below."
+msgstr "下記にパスワードを再入力してください"
+
+#: partials/modals/addDappModal.html:15 partials/modals/multisignatureModal.html:15
+msgid "Please read carefully."
+msgstr "よく読んでください。"
+
+#: js/controllers/modals/addDappModalController.js:162
+msgid "Please set the GitHub repository link below."
+msgstr "下記にGitHubリポジトリリンクを入力してください。"
+
+#: js/controllers/modals/addDappModalController.js:162
+msgid "Please set the Sia ASCII code below."
+msgstr "下記にSia ASCIIコードを入力してください。"
+
+#: partials/modals/addDappModal.html:53
+msgid "Please set the dapp parameters below."
+msgstr "下記にDappパラメーターを入力してください"
+
+#: partials/modals/userSettingsModal.html:15
+msgid "Please set your username."
+msgstr "ユーザー名を入力してください"
+
+#: partials/modals/addContactModal.html:15 partials/modals/sendTransaction.html:15
+msgid "Please type in an account name or ID below."
+msgstr "下記にユーザー名またはアカウントIDを入力してください。"
+
+#: partials/modals/multisignatureModal.html:83
+msgid "Pressing enter confirms each member."
+msgstr "すべての内容を確認した上、エンターキーを押してください"
+
+#: partials/modals/blockInfo.html:41
+msgid "Previous Block"
+msgstr "前のブロック"
+
+#: partials/modals/userSettingsModal.html:13
+msgid "Profile Information"
+msgstr "個人情報"
+
+#: partials/modals/userInfo.html:20
+msgid "Public key"
+msgstr "公開鍵"
+
+#: partials/dapp-entry.html:102
+msgid "READ MORE"
+msgstr "詳細"
+
+#: js/directives/voteActionDirective.js:16
+msgid "REMOVE VOTE"
+msgstr "投票を削除します"
+
+#: js/controllers/delegatesController.js:160 js/controllers/forgingController.js:43
+#: js/controllers/votedDelegatesController.js:123 partials/forging.html:26
+msgid "Rank"
+msgstr "ランキング"
+
+#: js/controllers/transactionsController.js:65 js/controllers/walletPendingsController.js:45
+#: js/controllers/walletTransactionsController.js:70 js/controllers/walletsController.js:146
+#: partials/account.html:86
+msgid "Recipient"
+msgstr "送信先"
+
+#: partials/modals/registrationDelegateModal.html:13
+msgid "Register as a Delegate"
+msgstr "受託者として新規登録します"
+
+#: partials/forging.html:6
+msgid "Registered on"
+msgstr "新規登録"
+
+#: js/controllers/modals/newUserController.js:8
+msgid "Registering user"
+msgstr "ユーザー新規登録"
+
+#: partials/passphrase.html:18
+msgid "Remember during this session"
+msgstr " Session状態を保持します"
+
+#: js/directives/voteTitleDirective.js:17
+msgid "Removing vote from delegates"
+msgstr "受託者の投票を削除します"
+
+#: partials/modals/secondPassphraseModal.html:26
+msgid "Repeat second passphrase"
+msgstr "セカンドパスワードを再入力してください"
+
+#: js/controllers/blockchainController.js:47 js/controllers/forgingController.js:124
+#: partials/modals/blockInfo.html:26
+msgid "Reward"
+msgstr "報酬"
+
+#: partials/modals/newUser.html:35
+msgid "SAVE PASSPHRASE"
+msgstr "パスワードを保存します"
+
+#: partials/app-template.html:156 partials/contacts.html:16 partials/contacts.html:44
+#: partials/modals/masterPassphraseModal.html:35
+msgid "SEND"
+msgstr "送信"
+
+#: partials/modals/addDappModal.html:470
+msgid "SEND LISK"
+msgstr " Liskを送信します"
+
+#: partials/passphrase.html:27
+msgid "SIGN IN"
+msgstr "ログイン"
+
+#: partials/dapp-entry.html:31 partials/dapp-entry.html:40 partials/dapp-entry.html:49
+#: partials/dapp-entry.html:56
+msgid "SOURCE CODE"
+msgstr "ソースコード"
+
+#: js/controllers/modals/addDappModalController.js:6
+msgid "Saving new dapp"
+msgstr "新しいDappを保存します"
+
+#: partials/app-template.html:323 partials/app-template.html:348
+msgid "Search for Dapps"
+msgstr " Dappsを検索します"
+
+#: partials/app-template.html:223
+msgid "Search for blocks"
+msgstr "ブロックチェーンを検索します"
+
+#: partials/app-template.html:197
+msgid "Search for transactions (Transaction ID, Sender address, Recipient address)"
+msgstr "取引検索（取引ID、送信元アドレス、送信先アドレス）"
+
+#: partials/delegates.html:120 partials/delegates.html:51
+#: partials/modals/sendTransaction.html:13 partials/modals/userInfo.html:30
+#: partials/votes.html:49
+msgid "Send LISK"
+msgstr " Liskを送信します"
+
+#: js/controllers/transactionsController.js:64 partials/account.html:83
+msgid "Sender"
+msgstr "送信元"
+
+#: js/controllers/modals/multisignatureModalController.js:6
+msgid "Set members of account"
+msgstr "アカウントのメンバーを設置します"
+
+#: js/controllers/settingsController.js:6 partials/app-template.html:180
+msgid "Settings"
+msgstr "設置"
+
+#: partials/blockchain.html:12 partials/forging.html:82 partials/transactions.html:11
+msgid "Show All Columns"
+msgstr "コラム全体を表示します"
+
+#: partials/blockchain.html:13 partials/forging.html:85 partials/transactions.html:14
+msgid "Show Full Time"
+msgstr "時間を表示します"
+
+#: partials/modals/addDappModal.html:295 partials/modals/addDappModal.html:321
+msgid "Sia ASCII Code"
+msgstr "Sia ASCIIコード"
+
+#: partials/modals/addDappModal.html:212 partials/modals/addDappModal.html:245
+msgid ""
+"Sia is a new decentralized cloud storage platform aimed at giving users control of their "
+"data. Storage is pulled from a large network of hosts, each using Sia's blockchain to form "
+"storage contracts with clients. Out of the hundreds of hosts, only a fraction need to be "
+"online for the data to be recovered. Even in a network with many unreliable hosts, the "
+"data is safe.<br><br>You need to upload your dapp source code as a .zip file to the Sia "
+"network. Once the upload was successful you need to specify the ASCII code of the file in "
+"the next step."
+msgstr ""
+"Siaは最新の分散化のクラウドストレージプラットフォームで、ユーザーにデータを把握するツールを"
+"提供し、データはブロックチェーンネットワークに保存され、Siaブロックチェーンを利用する場合ク"
+"ライアントからごストレージ契約書が生成され、数百のホストの中に、一部のホストがオンラインす"
+"る限り、データの100%引き出すことを保証できます。このため、信頼できないがあっても、データの"
+"安全性に影響を与えなく、<br><br>.zipの形式でDappソースコードをSiaネットワークにアップロード"
+"する必要で、アップロードした上、Siaが生成したASCIIコードを入力してください。"
+
+msgid "Sia required"
+msgstr "Siaが必要"
+
+#: partials/modals/passphraseCheck.html:35
+msgid "Sign"
+msgstr "提出"
+
+#: partials/delegates.html:92
+msgid "Standby Delegates"
+msgstr "受託者候補"
+
+#: partials/modals/newUser.html:15
+msgid "Step 1/2 - Generate a Passphrase"
+msgstr "ステップ1/2- パスワードを設置します"
+
+#: partials/modals/multisignatureModal.html:13
+msgid "Step 1/3 - Preamble"
+msgstr "ステップ 1/3 - 序言"
+
+#: partials/modals/addDappModal.html:13
+msgid "Step 1/5 - Preamble"
+msgstr "ステップ 1/5 -前文"
+
+#: partials/modals/newUser.html:48
+msgid "Step 2/2 - Confirm the Passphrase"
+msgstr "ステップ 2/2 - パスワードを確認します"
+
+#: partials/modals/multisignatureModal.html:44
+msgid "Step 2/3 - Specify Group Members"
+msgstr "ステップ 2/3 - メンバーを指定します"
+
+#: partials/modals/addDappModal.html:51
+msgid "Step 2/5 Dapp Specifications"
+msgstr "ステップ2/5 Dapp仕様書"
+
+#: partials/modals/multisignatureModal.html:104
+msgid "Step 3/3 - Confirmation"
+msgstr "ステップ3/3- 確認内容"
+
+#: partials/modals/addDappModal.html:198
+msgid "Step 3/5 - Choose Storage Solution"
+msgstr "ステップ3/5- 保存案を選択します"
+
+#: partials/modals/addDappModal.html:275
+msgid "Step 4/5 - Storage Specifications"
+msgstr "ステップ4/5 Dapp仕様書"
+
+#: partials/modals/addDappModal.html:347
+msgid "Step 5/5 - Confirmation"
+msgstr "ステップ5/5- 確認内容"
+
+#: partials/modals/blockInfo.html:16 partials/modals/transactionInfo.html:12
+#: partials/modals/userInfo.html:42
+msgid "Summary"
+msgstr "主旨"
+
+#: partials/modals/addDappModal.html:367 partials/modals/addDappModal.html:394
+msgid "Tags"
+msgstr "タグ"
+
+#: partials/modals/addDappModal.html:151 partials/modals/addDappModal.html:87
+msgid "Tags (separated with comma)"
+msgstr "タグ（半角カンマで分けます）"
+
+#: partials/modals/newUser.html:62
+msgid ""
+"The passphrase entered doesn't match with the one generated before. Please go back and "
+"generate a new one."
+msgstr ""
+"ご入力したパスワードは前に生成されたパスワードと一致しません。前に戻って、新しいパスワード"
+"を生成してください。"
+
+#: js/directives/voteTitleDirective.js:22
+msgid "This action will cost"
+msgstr "この操作の料金"
+
+#: partials/modals/multisignatureModal.html:21
+msgid ""
+"This walkthrough will guide you through the necessary steps to create a multi-signature "
+"group. It's very important that you know what multi-signatures are, else you risk loosing "
+"your LISK balance.<br><br>A multi-signature group consists of N accounts, the one who "
+"created the group is the group owner. When the owner wants to make a transaction, M of N "
+"accounts within the group need to confirm it, otherwise the transaction will not be "
+"processed. The values M and N are specified in this walkthrough.<br><br><b>Things you need "
+"to know for the multi-signature group setup:</b><br><br>• The number of group members (N)."
+"<br>• The number of needed confirmations (M).<br>• The account names or IDs from the Lisk "
+"accounts you want to add to the group."
+msgstr ""
+"この説明書は必要なステップでマルチサイングループを建てることを紹介します。ぜひマルチサイン"
+"の意味を理解してください。操作が間違えば、アカウントのすべてのLISKを失うかもしれません。"
+"<br><br>一つのマルチサイングループはN個のアカウントからでき、マルチサイングループの創立者は"
+"サイングループの所有者で、所有者は新しい取引をする場合、サイングループのM人のメンバーの確認"
+"が必要で、そうでなければ、当該取引が合格しなく、MとNはM<Nにしなければならない。<br><br><b>"
+"理解必要な多重サイングループの内容：</b><br><br>•サイングループのメンバーの人数はN.<br>• "
+"で、取引の場合、確認必要の人数はM<br>•メンバーのアカウント名またはアカウントIDをマルチサイ"
+"ングループに添加するする必要です"
+
+#: js/controllers/blockchainController.js:43 js/controllers/forgingController.js:122
+#: js/controllers/transactionsController.js:66 js/controllers/walletPendingsController.js:46
+#: js/controllers/walletTransactionsController.js:71 js/controllers/walletsController.js:147
+#: partials/account.html:89 partials/modals/blockInfo.html:38
+#: partials/modals/transactionInfo.html:25 partials/modals/userInfo.html:76
+msgid "Time"
+msgstr "日付"
+
+#: partials/forging.html:5
+msgid "To become a delegate, click on the \"Delegate Registration\" button."
+msgstr "受託者になりたいですか？<受託者新規登録>ボタンを押してください。"
+
+#: partials/app-template.html:137
+msgid "Toggle navigation"
+msgstr "ナビゲーション切り替え"
+
+#: partials/delegates.html:23
+msgid "Top Delegates"
+msgstr "トップ受託者"
+
+#: partials/modals/blockInfo.html:32
+msgid "Total Amount"
+msgstr "総金額"
+
+#: partials/modals/userInfo.html:43
+msgid "Total Balance"
+msgstr "総残高"
+
+#: partials/modals/blockInfo.html:29
+msgid "Total Fee"
+msgstr "手数料合計"
+
+#: js/controllers/forgingController.js:27
+msgid "Total Forged"
+msgstr "鍛造合計"
+
+#: partials/modals/userInfo.html:53
+msgid "Transaction"
+msgstr "取引"
+
+#: js/controllers/transactionsController.js:63 js/controllers/walletPendingsController.js:44
+#: js/controllers/walletTransactionsController.js:69 js/controllers/walletsController.js:145
+#: partials/account.html:80 partials/modals/blockModal.html:17
+#: partials/modals/userInfo.html:59 partials/modals/userInfo.html:83
+msgid "Transaction ID"
+msgstr "取引ID "
+
+#: js/controllers/blockchainController.js:44 js/controllers/transactionsController.js:8
+#: partials/modals/blockInfo.html:17 partials/modals/blockModal.html:7
+#: partials/modals/userInfo.html:54
+msgid "Transactions"
+msgstr "取引情報"
+
+#: js/controllers/walletTransactionsController.js:6
+msgid "Transactions for 17649443584386761059L"
+msgstr "17649443584386761059L の取引記録"
+
+#: partials/dapp-entry.html:62
+msgid "UNINSTALL"
+msgstr "アンインストール"
+
+#: partials/account.html:59
+msgid "UPDATE"
+msgstr "更新"
+
+#: partials/modals/blockInfo.html:35 partials/modals/transactionInfo.html:22
+#: partials/modals/userInfo.html:46 partials/modals/userInfo.html:73
+msgid "USD Equivalent"
+msgstr "ドル換算"
+
+#: js/controllers/delegatesController.js:163 js/controllers/forgingController.js:55
+#: js/controllers/votedDelegatesController.js:126 partials/forging.html:35
+msgid "Uptime"
+msgstr "オンライン率"
+
+#: js/controllers/contactsController.js:53 js/controllers/pendingsController.js:30
+#: partials/modals/userSettingsModal.html:21
+msgid "Username"
+msgstr "ユーザー名"
+
+#: partials/delegates.html:7 partials/votes.html:8
+msgid "View selection"
+msgstr "選択済みの内容を見る"
+
+#: js/directives/voteTitleDirective.js:15
+msgid "Voting for delegates"
+msgstr "受託者を選挙します"
+
+#: partials/app-template.html:64
+msgid "Welcome back, {{username}}"
+msgstr "お帰りなさい，{{username}}"
+
+#: partials/app-template.html:65
+msgid "Welcome, click to edit profile"
+msgstr "ようこそ、プロファイルを編集するにはクリックしてください。"
+
+#: partials/modals/confirmDeletionModal.html:25
+msgid "YES"
+msgstr "はい"
+
+#: partials/modals/addDappModal.html:23 partials/modals/addDappModal.html:32
+msgid ""
+"You are about to register your decentralized application (dapp) on the Lisk network. After "
+"the registration all Lisk users will be able to see your dapp on the Lisk Dapp Store and "
+"they will also be able to install and launch it.<br><br>One of the characteristics of "
+"blockchains is that you can't delete any content from them. Therefore make sure you have "
+"used the correct dapp parameters. We also advise you to test your dapp on the official "
+"Lisk testnet so you can guarantee that its working flawlessly.<br><br><b>Things you need "
+"to know for the registration process:</b><br><br>• Dapp names are unique, you can't "
+"register the same name twice on the Lisk network.<br>• You can either use a centralized "
+"(GitHub) or decentralized (Sia) hosting method.<br>• Make sure that your dapp icon's "
+"format is a square.<br>• Choose your tags wisely, with them your users will be able to "
+"find your dapp in the Dapp Store.<br><br>The Lisk Team isn't liable for a dapp, solely the "
+"uploader is. So you have to make sure that your dapp is legal and doesn't harm its users."
+msgstr ""
+"お客様はLiskネットワークでDappを新規登録していますが、登録終了後、ユーザー全体はLiskのDapp"
+"商店でお客様のDappを見え、またお客様のDappをダウンロードし、インストールして運行でき、"
+"<br><br>ブロックチェーン技術の一つの特徴はブロックチェーンの内容を削除できなく、このため、"
+"Dappの正しさを確認してください。また、Dappのオンラインを保証するためにLiskの公式テストサイ"
+"トで試運行して"
+
+#: partials/multi.html:46
+msgid "You are not a member of any one Multi-Signature group."
+msgstr "マルチサイングループに加入していないです。"
+
+#: partials/modals/newUser.html:17
+msgid "You can find your passphrase below."
+msgstr "下記はお客様のマスターパスワードです。"
+
+#: partials/contacts.html:68
+msgid "You do not have any contacts, try adding a new one!"
+msgstr "お客様は連絡先を持っていません。追加してみてください。"
+
+#: partials/dapps.html:165
+msgid "You do not have any dapps installed yet."
+msgstr "Dappsをインストールされていません。"
+
+#: partials/pendings.html:38
+msgid "You do not have any pending contacts!"
+msgstr "お客様は保留中の連絡先を持っていません"
+
+#: partials/forging.html:106
+msgid "You have not forged any blocks yet."
+msgstr "ブロックを鋳造していませんでした。"
+
+#: partials/dapps.html:243
+msgid "You have not installed dapps yet."
+msgstr " Dappsをインストールされていませんでした。"
+
+#: partials/account.html:122
+msgid "You have not made any transactions yet."
+msgstr "取引記録がないです"
+
+#: partials/votes.html:75
+msgid "You have not voted for any delegates yet."
+msgstr "まだ投票していないです"
+
+#: partials/modals/addContactModal.html:29
+msgid "You shall receive notification when the contact has accepted your request."
+msgstr "連絡先が要求を受けたときは、提示があります。"
+
+#: partials/multi.html:10
+msgid "Your Multi-Signature group(s) have not made any transactions yet."
+msgstr "お客様のマルチサイングループは、まだ取引を行っていません。"
+
+#: partials/modals/addContactModal.html:59 partials/modals/addDappModal.html:429
+#: partials/modals/forgingModal.html:23 partials/modals/multisignatureModal.html:157
+#: partials/modals/registrationDelegateModal.html:59
+#: partials/modals/secondPassphraseModal.html:61 partials/modals/sendTransaction.html:65
+#: partials/modals/userSettingsModal.html:55 partials/modals/vote.html:53
+#: partials/passphrase.html:10
+msgid "Your Passphrase"
+msgstr "お客様のパスワード"
+
+#: partials/modals/addContactModal.html:94 partials/modals/addDappModal.html:461
+#: partials/modals/multisignatureModal.html:161 partials/modals/passphraseCheck.html:22
+#: partials/modals/registrationDelegateModal.html:94 partials/modals/sendTransaction.html:100
+#: partials/modals/userSettingsModal.html:90 partials/modals/vote.html:88
+msgid "Your Second Passphrase"
+msgstr "お客様のセカンドパスワード"
+
+#: partials/modals/addDappModal.html:144 partials/modals/addDappModal.html:80
+msgid "Your dapp description cannot be longer than 160 characters."
+msgstr "Dapp説明が160文字より長くすることはできません。"
+
+#: partials/modals/addDappModal.html:69
+msgid "Your dapp name cannot be longer than 32 characters"
+msgstr "DAPP名は、32文字より長いすることはできません"
+
+#: partials/modals/addDappModal.html:133
+msgid "Your dapp name cannot be longer than 32 characters."
+msgstr "DAPP名は、32文字より長いすることはできません"
+
+#: partials/modals/addDappModal.html:130 partials/modals/addDappModal.html:66
+msgid "Your dapp name is required."
+msgstr "DAPP名を入力してください"
+
+#: partials/modals/addDappModal.html:155 partials/modals/addDappModal.html:92
+msgid "Your dapp tags cannot be longer than 160 characters."
+msgstr "DAPPタグは160文字より長くすることはできません。"
+
+#: partials/modals/addContactModal.html:107 partials/modals/addContactModal.html:37
+#: partials/modals/addContactModal.html:72
+msgid "add contact"
+msgstr "連絡先を追加"
+
+#: partials/modals/secondPassphraseModal.html:39
+#: partials/modals/secondPassphraseModal.html:74
+msgid "add second passphrase"
+msgstr "セカンドパスワードを追加します"
+
+#: js/controllers/modals/addDappModalController.js:142
+msgid "change to SIA ASCII"
+msgstr " SIA ASCIIコードに変換します"
+
+#: js/controllers/modals/addDappModalController.js:142
+msgid "change to url link"
+msgstr " URLリンクに変換します"
+
+#: partials/modals/multisignatureModal.html:135 partials/modals/multisignatureModal.html:174
+#: partials/modals/userSettingsModal.html:103 partials/modals/userSettingsModal.html:67
+msgid "confirm"
+msgstr "確認"
+
+#: partials/app-template.html:255
+msgid "delegate registration"
+msgstr "受託者新規登録"
+
+#: partials/modals/multisignatureModal.html:91
+msgid "next"
+msgstr "次へ"
+
+#: partials/modals/registrationDelegateModal.html:107
+#: partials/modals/registrationDelegateModal.html:37
+#: partials/modals/registrationDelegateModal.html:69
+msgid "register"
+msgstr "新規登録"
+
+#: partials/votes.html:14
+msgid "remove vote"
+msgstr "投票を削除します"
+
+#: partials/modals/userSettingsModal.html:33
+msgid "save Name"
+msgstr "名前を保存します"
+
+#: partials/modals/sendTransaction.html:113 partials/modals/sendTransaction.html:43
+#: partials/modals/sendTransaction.html:78
+msgid "send lisk"
+msgstr " Liskを送信します"
+
+#: partials/delegates.html:13
+msgid "vote"
+msgstr "投票"
+
+#: partials/delegates.html:24
+msgid "{{countTop}} in Total"
+msgstr "合計{{countTop}}個"
+
+#: partials/votes.html:25
+msgid "{{count}} in Total"
+msgstr "合計{{count}}個"
+
+#: partials/delegates.html:4
+msgid "{{voteList.length}} out of {{countStandby + countTop}} Delegates selected"
+msgstr "選択済み受託者({{countStandby + countTop}} / {{voteList.length}})"
+
+#: partials/votes.html:4
+msgid "{{voteList.length}} out of {{count}} Delegates selected"
+msgstr "選択済み受託者({{voteList.length}} / {{count}})"
+
+#~ msgid "Transactions for 17649443584386761059C"
+#~ msgstr "17649443584386761059Cの取引詳細"
+
+#~ msgid "Confirm Vote"
+#~ msgstr "確認済み投票"
+
+#~ msgid "this action will cost {{fee | liskFilter}} LISK"
+#~ msgstr "この操作の費用は {{fee | liskFilter}} LISK"
+
+#~ msgid "Vote for Delegates"
+#~ msgstr "受託者に投票します"
