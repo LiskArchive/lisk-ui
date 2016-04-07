@@ -13,11 +13,11 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: partials/dapp-entry.html:79
+#: partials/dapp-entry.html:73
 msgid "(1449)"
 msgstr "(1449)"
 
-#: partials/app-template.html:177
+#: partials/template.html:162
 msgid "2nd Passphrase"
 msgstr "2-ой Пароль"
 
@@ -25,7 +25,7 @@ msgstr "2-ой Пароль"
 msgid "ADD NEW DAPP"
 msgstr "ДОДАТИ НОВЕ DAPP"
 
-#: partials/modals/addDappModal.html:36
+#: partials/modals/addDappModal.html:21
 msgid "Accept / Next Step"
 msgstr "Прийняти / Наступний Крок"
 
@@ -33,31 +33,18 @@ msgstr "Прийняти / Наступний Крок"
 msgid "Account"
 msgstr "Обліковий запис"
 
-#: partials/modals/addContactModal.html:50
-#: partials/modals/addContactModal.html:85
-#: partials/modals/addDappModal.html:418 partials/modals/addDappModal.html:450
+#: partials/modals/addDappModal.html:102 partials/modals/addDappModal.html:122
 #: partials/modals/masterPassphraseModal.html:13
 #: partials/modals/multisignatureModal.html:148
 #: partials/modals/passphraseCheck.html:13
 #: partials/modals/registrationDelegateModal.html:50
 #: partials/modals/registrationDelegateModal.html:85
-#: partials/modals/secondPassphraseModal.html:52
-#: partials/modals/sendTransaction.html:56
-#: partials/modals/sendTransaction.html:91
-#: partials/modals/userSettingsModal.html:46
-#: partials/modals/userSettingsModal.html:81 partials/modals/vote.html:44
+#: partials/modals/secondPassphraseModal.html:81
+#: partials/modals/sendTransaction.html:55
+#: partials/modals/sendTransaction.html:90 partials/modals/vote.html:44
 #: partials/modals/vote.html:79
 msgid "Account Verification"
 msgstr "Перевірка Облікового запису"
-
-#: partials/modals/addContactModal.html:21
-#: partials/modals/sendTransaction.html:21
-msgid "Account name or ID"
-msgstr "Назва Облікового запису або Ідентифікатор"
-
-#: partials/modals/multisignatureModal.html:52
-msgid "Account name, ID or public key"
-msgstr "Назва Облікового запису, Ідентифікатор або публічний ключ"
 
 #: partials/delegates.html:136 partials/delegates.html:67
 #: partials/votes.html:65
@@ -65,62 +52,31 @@ msgid "Add as Contact"
 msgstr "Додати контакт"
 
 #: partials/modals/multisignatureModal.html:46
-msgid "Add group members by typing in their account name, ID or public key."
+msgid "Add group members by typing in their LISK address and pressing enter."
 msgstr ""
-"Додайте членів групи, запроваджуючи їх ім'я облікового запису, Ідентифікатор "
-"або публічний ключ."
-
-#: partials/modals/addContactModal.html:13
-msgid "Add new contact"
-msgstr "Додати новий контакт"
-
-#: partials/modals/secondPassphraseModal.html:13
-msgid "Add second passphrase"
-msgstr "Додати другий пароль"
-
-#: js/controllers/modals/addContactModalController.js:7
-msgid "Adding new contact"
-msgstr "Додавання нового контакту"
 
 #: js/controllers/blockchainController.js:45
-#: js/controllers/transactionsController.js:67
+#: js/controllers/transactionsController.js:66
 #: js/controllers/walletPendingsController.js:47
-#: js/controllers/walletTransactionsController.js:72
+#: js/controllers/walletTransactionsController.js:70
 #: js/controllers/walletsController.js:148
-#: partials/modals/transactionInfo.html:16 partials/modals/userInfo.html:67
+#: partials/modals/transactionInfo.html:16 partials/modals/userInfo.html:60
 msgid "Amount"
 msgstr "Кількість"
 
-#: partials/account.html:92
+#: partials/account.html:79
 msgid "Amount (Fee)"
 msgstr "Кількість (Комісія)"
 
-#: js/controllers/delegatesController.js:164
-#: js/controllers/forgingController.js:66
-#: js/controllers/votedDelegatesController.js:127 partials/forging.html:45
+#: js/controllers/delegatesController.js:160
+#: js/controllers/forgingController.js:64
+#: js/controllers/votedDelegatesController.js:119 partials/forging.html:45
 msgid "Approval"
 msgstr "Одобрение"
 
 #: partials/modals/confirmDeletionModal.html:16
 msgid "Are you sure you want to delete this item?"
 msgstr "Ви впевнені, що бажаєте видалити вибране?"
-
-#: partials/modals/addContactModal.html:104
-#: partials/modals/addContactModal.html:69
-#: partials/modals/addDappModal.html:471
-#: partials/modals/multisignatureModal.html:132
-#: partials/modals/multisignatureModal.html:171
-#: partials/modals/registrationDelegateModal.html:104
-#: partials/modals/secondPassphraseModal.html:71
-#: partials/modals/sendTransaction.html:110
-#: partials/modals/sendTransaction.html:75
-#: partials/modals/userSettingsModal.html:100 partials/modals/vote.html:98
-msgid "BACK"
-msgstr "НАЗАД"
-
-#: partials/modals/userSettingsModal.html:64
-msgid "Back"
-msgstr "Назад"
 
 #: partials/account.html:8
 msgid "Balance"
@@ -141,27 +97,26 @@ msgstr ""
 "Вартість реєстрації: {{fee | liskFilter}} LISK."
 
 #: js/controllers/blockchainController.js:41
-#: js/controllers/forgingController.js:121 partials/modals/blockInfo.html:7
+#: js/controllers/forgingController.js:115 partials/modals/blockInfo.html:7
 #: partials/modals/transactionInfo.html:32
 #: partials/modals/transactionInfo.html:4
 msgid "Block ID"
 msgstr "Номер Блоку"
 
-#: js/controllers/blockchainController.js:8 partials/app-template.html:124
+#: js/controllers/blockchainController.js:8 partials/template.html:117
 msgid "Blockchain"
 msgstr "Blockchain"
 
-#: partials/modals/addDappModal.html:37
+#: partials/modals/addDappModal.html:22
 #: partials/modals/multisignatureModal.html:28 partials/modals/vote.html:18
 msgid "CANCEL"
 msgstr "СКАСУВАТИ"
 
-#: partials/app-template.html:275
+#: partials/template.html:260
 msgid "CATEGORIES"
 msgstr "КАТЕГОРІЇ"
 
-#: partials/multi.html:31 partials/pendings.html:15
-#: partials/wallet-pendings.html:28
+#: partials/multi.html:31 partials/wallet-pendings.html:28
 msgid "CONFIRM"
 msgstr "ПІДТВЕРДИТИ"
 
@@ -170,7 +125,7 @@ msgid "CONFIRM VOTE"
 msgstr "ПІДТВЕРДИТИ ГОЛОС"
 
 #: partials/modals/blockInfo.html:74 partials/modals/blockModal.html:34
-#: partials/modals/transactionInfo.html:50 partials/modals/userInfo.html:101
+#: partials/modals/transactionInfo.html:50 partials/modals/userInfo.html:94
 msgid "CONFIRMATIONS"
 msgstr "ПІДТВЕРДЖЕННЯ"
 
@@ -178,44 +133,26 @@ msgstr "ПІДТВЕРДЖЕННЯ"
 msgid "CONFIRMED TRANSACTIONS"
 msgstr "ПІДТВЕРДЖЕННЯ ТРАНЗАКЦІЇ"
 
-#: partials/modals/addContactModal.html:34 partials/modals/forgingModal.html:32
+#: partials/modals/forgingModal.html:32
 #: partials/modals/masterPassphraseModal.html:32
 #: partials/modals/multisignatureModal.html:88
 #: partials/modals/passphraseCheck.html:32
 #: partials/modals/registrationDelegateModal.html:34
 #: partials/modals/registrationDelegateModal.html:66
-#: partials/modals/secondPassphraseModal.html:36
-#: partials/modals/sendTransaction.html:40
-#: partials/modals/userSettingsModal.html:30 partials/modals/vote.html:63
+#: partials/modals/sendTransaction.html:39 partials/modals/vote.html:63
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: partials/modals/addDappModal.html:371 partials/modals/addDappModal.html:397
-msgid "Category"
-msgstr "Категорія"
-
-#: partials/dapp-entry.html:67
+#: partials/dapp-entry.html:61
 msgid "Category:"
 msgstr "Категорія:"
 
-#: partials/modals/addDappModal.html:226
-msgid "Centralized"
-msgstr "Централізовано"
-
-#: partials/modals/addDappModal.html:313 partials/modals/addDappModal.html:323
-msgid "Check"
-msgstr "Перевірка"
-
-#: partials/modals/addContactModal.html:45
-#: partials/modals/addContactModal.html:8
-#: partials/modals/addContactModal.html:80 partials/modals/addDappModal.html:10
-#: partials/modals/addDappModal.html:190 partials/modals/addDappModal.html:195
-#: partials/modals/addDappModal.html:267 partials/modals/addDappModal.html:272
-#: partials/modals/addDappModal.html:339 partials/modals/addDappModal.html:344
-#: partials/modals/addDappModal.html:413 partials/modals/addDappModal.html:43
-#: partials/modals/addDappModal.html:445 partials/modals/addDappModal.html:48
-#: partials/modals/addDappModal.html:5 partials/modals/blockInfo.html:10
-#: partials/modals/blockModal.html:9
+#: partials/modals/addDappModal.html:10 partials/modals/addDappModal.html:117
+#: partials/modals/addDappModal.html:28 partials/modals/addDappModal.html:33
+#: partials/modals/addDappModal.html:5 partials/modals/addDappModal.html:51
+#: partials/modals/addDappModal.html:56 partials/modals/addDappModal.html:74
+#: partials/modals/addDappModal.html:79 partials/modals/addDappModal.html:97
+#: partials/modals/blockInfo.html:10 partials/modals/blockModal.html:9
 #: partials/modals/confirmDeletionModal.html:8
 #: partials/modals/errorModal.html:9 partials/modals/forgingModal.html:9
 #: partials/modals/masterPassphraseModal.html:8
@@ -228,20 +165,23 @@ msgstr "Перевірка"
 #: partials/modals/registrationDelegateModal.html:45
 #: partials/modals/registrationDelegateModal.html:8
 #: partials/modals/registrationDelegateModal.html:80
-#: partials/modals/secondPassphraseModal.html:47
-#: partials/modals/secondPassphraseModal.html:8
-#: partials/modals/sendTransaction.html:51
+#: partials/modals/secondPassphraseModal.html:10
+#: partials/modals/secondPassphraseModal.html:44
+#: partials/modals/secondPassphraseModal.html:76
+#: partials/modals/sendTransaction.html:50
 #: partials/modals/sendTransaction.html:8
-#: partials/modals/sendTransaction.html:86
-#: partials/modals/transactionInfo.html:7 partials/modals/userInfo.html:24
-#: partials/modals/userSettingsModal.html:41
-#: partials/modals/userSettingsModal.html:76
-#: partials/modals/userSettingsModal.html:8 partials/modals/vote.html:39
-#: partials/modals/vote.html:74 partials/modals/vote.html:9
+#: partials/modals/sendTransaction.html:85
+#: partials/modals/transactionInfo.html:7 partials/modals/userInfo.html:22
+#: partials/modals/vote.html:39 partials/modals/vote.html:74
+#: partials/modals/vote.html:9
 msgid "Close modal"
 msgstr "Закрити modal"
 
-#: partials/modals/addDappModal.html:406 partials/modals/addDappModal.html:438
+#: js/controllers/modals/multisignatureModalController.js:6
+msgid "Configuring multi-signature group"
+msgstr ""
+
+#: partials/modals/addDappModal.html:110 partials/modals/addDappModal.html:90
 msgid "Confirm"
 msgstr "Підтвердити"
 
@@ -249,9 +189,9 @@ msgstr "Підтвердити"
 msgid "Confirmation"
 msgstr "Подтверждения"
 
-#: js/controllers/walletTransactionsController.js:74
+#: js/controllers/walletTransactionsController.js:72
 #: js/controllers/walletsController.js:115 partials/modals/blockInfo.html:20
-#: partials/modals/transactionInfo.html:13 partials/modals/userInfo.html:64
+#: partials/modals/transactionInfo.html:13 partials/modals/userInfo.html:57
 msgid "Confirmations"
 msgstr "Подтверждения"
 
@@ -269,60 +209,42 @@ msgstr "Необхідно підтверджень"
 msgid "Confirmed by"
 msgstr "Підтверджено"
 
-#: partials/modals/userInfo.html:35
-msgid "Contact Request"
-msgstr "Запит на додавання контакту"
-
-#: js/controllers/contactsController.js:8
-#: js/controllers/pendingsController.js:8 partials/account.html:21
-#: partials/app-template.html:355 partials/app-template.html:85
-msgid "Contacts"
-msgstr "Контакти"
-
-#: partials/app-template.html:91
+#: partials/template.html:84
 msgid "Conversations"
 msgstr "Повідомлення"
 
-#: partials/contacts.html:26 partials/contacts.html:54
 #: partials/delegates.html:127 partials/delegates.html:58
-#: partials/pendings.html:24 partials/votes.html:56
+#: partials/votes.html:56
 msgid "Copy Address"
 msgstr "Скопіювати Адресу"
 
-#: partials/contacts.html:29 partials/contacts.html:57
 #: partials/delegates.html:130 partials/delegates.html:61
-#: partials/pendings.html:27 partials/votes.html:59
+#: partials/votes.html:59
 msgid "Copy Name"
 msgstr "Скопіювати Ім'я"
 
-#: partials/dapp-entry.html:22 partials/dapp-entry.html:37
-#: partials/dapp-entry.html:46
+#: partials/dapp-entry.html:21 partials/dapp-entry.html:31
+#: partials/dapp-entry.html:40
 msgid "DOWNLOAD"
 msgstr "ЗАВАНТАЖИТИ"
 
-#: js/controllers/dappsController.js:8 partials/app-template.html:97
+#: js/controllers/dappsController.js:8 partials/template.html:90
 msgid "Dapp Store"
 msgstr "Dapp Магазин"
 
-#: js/controllers/accountController.js:8 partials/app-template.html:73
+#: js/controllers/accountController.js:8 partials/template.html:72
 msgid "Dashboard"
 msgstr "Загальна інформація"
-
-#: partials/modals/addDappModal.html:206
-msgid "Decentralized"
-msgstr "Децентралізований"
 
 #: partials/modals/registrationDelegateModal.html:21
 msgid "Delegate Name"
 msgstr "Ім'я Делегата"
 
-#: partials/app-template.html:111 partials/app-template.html:247
+#: partials/template.html:104 partials/template.html:232
 msgid "Delegates"
 msgstr "Делегати"
 
-#: partials/dapp-entry.html:91 partials/modals/addDappModal.html:140
-#: partials/modals/addDappModal.html:363 partials/modals/addDappModal.html:391
-#: partials/modals/addDappModal.html:76
+#: partials/dapp-entry.html:85
 msgid "Description"
 msgstr "Опис"
 
@@ -331,7 +253,7 @@ msgstr "Опис"
 msgid "Disable Forging"
 msgstr "Вимкнути Форджінг"
 
-#: js/controllers/appController.js:335
+#: js/controllers/appController.js:299
 msgid "Disabled"
 msgstr "Вимкнуто"
 
@@ -344,30 +266,38 @@ msgstr "Порожній пароль"
 msgid "Enable Forging"
 msgstr "Ввімкнути Форджінг"
 
-#: partials/settings.html:22
-msgid "Enable Multi-Signature on this account"
-msgstr "Ввімкнути Мультик-Підпис на цей обліковий запис"
-
-#: js/controllers/appController.js:335
+#: js/controllers/appController.js:299
 msgid "Enabled"
 msgstr "Ввімкнено"
 
 #: partials/modals/blockInfo.html:72 partials/modals/blockModal.html:32
-#: partials/modals/transactionInfo.html:47 partials/modals/userInfo.html:99
+#: partials/modals/transactionInfo.html:47 partials/modals/userInfo.html:92
 msgid "FEE"
 msgstr "ВИНАГОРОДA"
 
-#: partials/app-template.html:260
+#: partials/template.html:245
 msgid "FORGING"
 msgstr "ФОРДЖІНГ"
 
+#: js/controllers/dappController.js:143
+msgid "Failed to install dapp"
+msgstr ""
+
+#: js/controllers/dappController.js:183
+msgid "Failed to launch Dapp"
+msgstr ""
+
+#: js/controllers/dappController.js:94
+msgid "Failed to uninstall Dapp"
+msgstr ""
+
 #: js/controllers/blockchainController.js:46
-#: js/controllers/forgingController.js:123
-#: js/controllers/transactionsController.js:68
+#: js/controllers/forgingController.js:117
+#: js/controllers/transactionsController.js:67
 #: js/controllers/walletPendingsController.js:48
-#: js/controllers/walletTransactionsController.js:73
+#: js/controllers/walletTransactionsController.js:71
 #: js/controllers/walletsController.js:149
-#: partials/modals/transactionInfo.html:19 partials/modals/userInfo.html:70
+#: partials/modals/transactionInfo.html:19 partials/modals/userInfo.html:63
 msgid "Fee"
 msgstr "Винагорода"
 
@@ -376,13 +306,13 @@ msgid "Forged Blocks"
 msgstr "Вироблено Блоків"
 
 #: js/controllers/delegatesController.js:9
-#: js/controllers/forgingController.js:89
-#: js/controllers/votedDelegatesController.js:8 partials/app-template.html:103
-#: partials/app-template.html:244
+#: js/controllers/forgingController.js:83
+#: js/controllers/votedDelegatesController.js:8 partials/template.html:229
+#: partials/template.html:96
 msgid "Forging"
 msgstr "Форджінг"
 
-#: partials/modals/secondPassphraseModal.html:15
+#: partials/modals/secondPassphraseModal.html:18
 msgid ""
 "Further protect your account with an optional second passphrase! Please "
 "allow some time for the changes to take effect. Service cost: <b>{{fee | "
@@ -398,7 +328,14 @@ msgstr ""
 msgid "GET STARTED"
 msgstr "ПОЧАТИ"
 
-#: partials/modals/newUser.html:66
+#: partials/modals/addDappModal.html:131
+#: partials/modals/multisignatureModal.html:132
+#: partials/modals/multisignatureModal.html:171 partials/modals/newUser.html:66
+#: partials/modals/registrationDelegateModal.html:104
+#: partials/modals/secondPassphraseModal.html:68
+#: partials/modals/secondPassphraseModal.html:99
+#: partials/modals/sendTransaction.html:109
+#: partials/modals/sendTransaction.html:74 partials/modals/vote.html:98
 msgid "GO BACK"
 msgstr "НАЗАД"
 
@@ -407,6 +344,7 @@ msgid "General"
 msgstr "Основне"
 
 #: partials/modals/newUser.html:26
+#: partials/modals/secondPassphraseModal.html:30
 msgid "Generate New"
 msgstr "Створити Новий"
 
@@ -414,31 +352,12 @@ msgstr "Створити Новий"
 msgid "Generator"
 msgstr "Генератор"
 
-#: partials/modals/addDappModal.html:285 partials/modals/addDappModal.html:311
-msgid "Git repository link"
-msgstr "Посилання на Git репозиторій"
-
-#: partials/modals/addDappModal.html:231 partials/modals/addDappModal.html:255
-msgid ""
-"GitHub is a Web-based Git repository hosting service, which offers amongst "
-"other things a source code management functionality. GitHub provides a "
-"graphical interface and desktop as well as mobile integration. If you add "
-"your dapp source code to a GitHub repository you need to specify the "
-"repository link in the next step."
-msgstr ""
-"GitHub - веб-сервіс для хостингу IT-проектів і їх спільної розробки, який "
-"пропонує серед іншого функціональність управління сирцевим кодом. GitHub "
-"надає графічний інтерфейс і робочий стіл, а також мобільний інтеграцію. Якщо "
-"ви додасте сирцевий код свого dapp в сховище GitHub, вам буде необхідно "
-"вказати посилання сховища в наступному кроці."
-
-#: partials/modals/addDappModal.html:184 partials/modals/addDappModal.html:261
-#: partials/modals/addDappModal.html:333 partials/modals/addDappModal.html:407
-#: partials/modals/addDappModal.html:439
+#: partials/modals/addDappModal.html:111 partials/modals/addDappModal.html:45
+#: partials/modals/addDappModal.html:68 partials/modals/addDappModal.html:91
 msgid "Go back"
 msgstr "Назад"
 
-#: partials/app-template.html:144
+#: partials/template.html:137
 msgid "Go to previous page"
 msgstr "Повернутися на попередню сторінку"
 
@@ -446,47 +365,39 @@ msgstr "Повернутися на попередню сторінку"
 msgid "Group Name"
 msgstr "Ім'я Групи"
 
-#: partials/app-template.html:291
+#: partials/template.html:276
 msgid "HOME"
 msgstr "ДОДОМУ"
 
 #: js/controllers/blockchainController.js:40
-#: js/controllers/forgingController.js:120
-#: js/controllers/transactionsController.js:62
-#: js/controllers/walletTransactionsController.js:68
+#: js/controllers/forgingController.js:114
+#: js/controllers/transactionsController.js:61
+#: js/controllers/walletTransactionsController.js:66
 #: partials/modals/blockInfo.html:23
 msgid "Height"
 msgstr "Висота"
 
-#: partials/modals/addDappModal.html:375 partials/modals/addDappModal.html:400
-msgid "Hosted at"
-msgstr "Зберігатиметься"
-
-#: partials/dapp-entry.html:21
+#: partials/dapp-entry.html:20
 msgid "INSTALL"
 msgstr "ВСТАНОВИТИ"
 
-#: partials/app-template.html:297
+#: partials/template.html:282
 msgid "INSTALLED"
 msgstr "ВСТАНОВЛЕНО"
 
-#: partials/modals/addDappModal.html:106 partials/modals/addDappModal.html:169
-msgid "Icon Sia ASCII"
-msgstr "Піктограма Sia ASCII"
-
-#: partials/modals/addDappModal.html:162 partials/modals/addDappModal.html:99
-msgid "Icon URL"
-msgstr "URL піктограми"
-
-#: partials/dapps.html:236
+#: partials/dapps.html:235
 msgid "Installed Dapps"
 msgstr "Встановлені Dapp"
 
-#: partials/dapp-entry.html:36
+#: partials/dapp-entry.html:30
 msgid "LAUNCH"
 msgstr "ЗАПУСТИТИ"
 
-#: partials/modals/sendTransaction.html:27
+#: partials/modals/multisignatureModal.html:52
+msgid "LISK Address"
+msgstr ""
+
+#: partials/modals/sendTransaction.html:26
 msgid "LISK Amount"
 msgstr "Кількість LISK"
 
@@ -502,31 +413,29 @@ msgstr "Мова"
 msgid "Latest Multi-Signature Transactions"
 msgstr "Останні транзакції з Мульти-Підписом"
 
-#: partials/account.html:70
+#: partials/account.html:57
 msgid "Latest Transactions"
 msgstr "Останні транзакції"
 
-#: partials/account.html:49
+#: partials/account.html:36
 msgid "Latest version"
 msgstr "Остання версія"
 
-#: wallet.html:19
+#: wallet.html:20
 msgid "Lisk - Decentralized Application Platform"
 msgstr "Lisk - Платформа для децентралізованих додатків"
 
-#: js/controllers/contactsController.js:54
-#: js/controllers/delegatesController.js:162
-#: js/controllers/pendingsController.js:31
-#: js/controllers/votedDelegatesController.js:125
+#: js/controllers/delegatesController.js:158
+#: js/controllers/votedDelegatesController.js:117
 #: js/controllers/walletPendingsController.js:43
 msgid "Lisk Address"
 msgstr "Lisk Адреса"
 
-#: partials/account.html:46
+#: partials/account.html:33
 msgid "Lisk Client"
 msgstr "Lisk Клієнт"
 
-#: partials/account.html:56
+#: partials/account.html:43
 msgid "Lisk Client Outdated"
 msgstr "Версія Lisk Клієнта застаріла"
 
@@ -537,11 +446,6 @@ msgstr "Завантаження груп Мульти-Підписів"
 #: js/controllers/blockchainController.js:7
 msgid "Loading blockchain"
 msgstr "Завантаження blockchain"
-
-#: js/controllers/contactsController.js:7
-#: js/controllers/pendingsController.js:7
-msgid "Loading contacts"
-msgstr "Завантаження контактів"
 
 #: js/controllers/dappController.js:7
 msgid "Loading dapp"
@@ -561,7 +465,7 @@ msgstr "Завантаження Панелі загальної інформа�
 msgid "Loading delegates"
 msgstr "Завантаження делегатів"
 
-#: js/controllers/forgingController.js:88
+#: js/controllers/forgingController.js:82
 msgid "Loading forging status"
 msgstr "Завантаження форджінг статусу"
 
@@ -575,13 +479,9 @@ msgstr "Завантаження транзакцій"
 msgid "Loading..."
 msgstr "Завантаження…"
 
-#: partials/app-template.html:183
+#: partials/template.html:168
 msgid "Logout"
 msgstr "Вихід"
-
-#: partials/modals/addDappModal.html:214 partials/modals/addDappModal.html:232
-msgid "MORE INFO"
-msgstr "БІЛЬШЕ ІНФОРМАЦІЇ"
 
 #: partials/modals/newUser.html:31
 msgid ""
@@ -591,49 +491,54 @@ msgstr ""
 "Переконайтеся, що ваш пароль знаходиться в безпечному місці. Вам буде "
 "необхідно ввести його повторно для підтвердження."
 
-#: partials/modals/sendTransaction.html:35
+#: partials/modals/sendTransaction.html:34
 msgid ""
-"Make sure you're sending LISK to the right contact. This action can't be "
+"Make sure you're sending LISK to the right address. This action can't be "
 "undone later."
 msgstr ""
-"Переконати що відправляєте LISK правильному контакту. Дана дія не може бути "
-"скасовано."
 
 #: js/controllers/modals/masterPassphraseModalController.js:9
 msgid "Master Passphrase"
 msgstr "Основний Пароль"
 
-#: js/controllers/modals/multiMembersModalController.js:5
 #: js/controllers/walletsController.js:114
 msgid "Members"
 msgstr "Користувачі"
 
-#: partials/account.html:73 partials/dapps.html:177 partials/dapps.html:238
+#: partials/account.html:60 partials/dapps.html:177 partials/dapps.html:237
 msgid "More"
 msgstr "Більше"
 
-#: js/controllers/walletsController.js:8 partials/app-template.html:79
-#: partials/settings.html:11
+#: js/controllers/walletsController.js:8 partials/settings.html:11
+#: partials/template.html:78
 msgid "Multi-Signature"
 msgstr "Мульті-Подпісь"
 
-#: partials/contacts.html:5
-msgid "My Contacts"
-msgstr "Мої Контакти"
+#: js/controllers/modals/multiMembersModalController.js:5
+msgid "Multi-Signature Group Members"
+msgstr ""
+
+#: partials/settings.html:22
+msgid "Multi-Signature is Disabled"
+msgstr ""
+
+#: partials/settings.html:23
+msgid "Multi-Signature is Enabled"
+msgstr ""
 
 #: partials/multi.html:42
 msgid "My Multi-Signature Groups"
 msgstr "Мої групи з Мульти-Підписом"
 
-#: partials/app-template.html:174
+#: partials/template.html:159
 msgid "My Profile"
 msgstr "Мій Профіль"
 
-#: partials/app-template.html:117 partials/votes.html:24
+#: partials/template.html:110 partials/votes.html:24
 msgid "My Votes"
 msgstr "Мої Голоси"
 
-#: partials/app-template.html:250
+#: partials/template.html:235
 msgid "My votes ({{myVotesCount||'0'}})"
 msgstr "Мої голоси ({{myVotesCount||'0'}})"
 
@@ -646,6 +551,7 @@ msgid "NEXT"
 msgstr "ДАЛІ"
 
 #: partials/modals/newUser.html:36
+#: partials/modals/secondPassphraseModal.html:37
 msgid "NEXT STEP"
 msgstr "НАСТУПНИЙ КРОК"
 
@@ -653,20 +559,12 @@ msgstr "НАСТУПНИЙ КРОК"
 msgid "NO"
 msgstr "НІ"
 
-#: js/controllers/delegatesController.js:161
-#: js/controllers/votedDelegatesController.js:124
-#: partials/modals/addDappModal.html:126 partials/modals/addDappModal.html:359
-#: partials/modals/addDappModal.html:388 partials/modals/addDappModal.html:62
-#: partials/modals/userInfo.html:18
+#: js/controllers/delegatesController.js:157
+#: js/controllers/votedDelegatesController.js:116
 msgid "Name"
 msgstr "Ім'я"
 
-#: partials/modals/secondPassphraseModal.html:22
-msgid "New second passphrase"
-msgstr "Новий другий пароль"
-
-#: partials/modals/addDappModal.html:183 partials/modals/addDappModal.html:260
-#: partials/modals/addDappModal.html:332
+#: partials/modals/addDappModal.html:44 partials/modals/addDappModal.html:67
 msgid "Next Step"
 msgstr "Наступний Крок"
 
@@ -699,21 +597,21 @@ msgstr "Кількість користувачів"
 msgid "OK"
 msgstr "ОК"
 
-#: partials/dapp-entry.html:45
+#: partials/dapp-entry.html:39
 msgid "OPEN"
 msgstr "ВІДКРИТИ"
 
-#: partials/app-template.html:263
+#: partials/template.html:248
 msgid "Off"
 msgstr "Вимкнути"
 
-#: partials/app-template.html:266
+#: partials/template.html:251
 msgid "On"
 msgstr "Ввімкнути"
 
-#: js/controllers/forgingController.js:43
-#: js/controllers/forgingController.js:55
-#: js/controllers/forgingController.js:66
+#: js/controllers/forgingController.js:41
+#: js/controllers/forgingController.js:53
+#: js/controllers/forgingController.js:64
 msgid "Others"
 msgstr "Інші"
 
@@ -722,25 +620,13 @@ msgid "Passphrase"
 msgstr "Пароль"
 
 #: partials/modals/newUser.html:58
+#: partials/modals/secondPassphraseModal.html:59
 msgid "Passphrase doesn't match."
 msgstr "Пароль не збігається."
-
-#: partials/app-template.html:358
-msgid "Pending ({{contacts.followersCount}})"
-msgstr "В очікуванні ({{contacts.followersCount}})"
-
-#: partials/pendings.html:5
-msgid "Pending Requests"
-msgstr "Запити в очікуванні"
 
 #: js/controllers/walletPendingsController.js:8
 msgid "Pending transactions"
 msgstr "Транзакції в очікуванні"
-
-#: partials/modals/addDappModal.html:349
-msgid "Please check your input below and go back if necessary."
-msgstr ""
-"Будь ласка перевірте введені дані і при необхідності поверніться назад."
 
 #: partials/modals/multisignatureModal.html:106
 msgid ""
@@ -755,20 +641,23 @@ msgstr ""
 msgid "Please choose a delegate name."
 msgstr "Будь ласка виберіть ім'я делегата."
 
-#: partials/modals/addDappModal.html:200
-msgid "Please choose between the available options."
-msgstr "Будь ласка виберіть з можливих варіантів."
+#: partials/modals/addDappModal.html:84
+msgid "Please ensure all details are correct before confirming your dapp."
+msgstr ""
+
+#: partials/modals/sendTransaction.html:15
+msgid ""
+"Please enter the Recipient Address and LISK Amount that you would like send "
+"below."
+msgstr ""
 
 #: js/controllers/modals/masterPassphraseModalController.js:8
-msgid "Please enter master password."
-msgstr "Будь ласка, введіть основний пароль."
+msgid "Please enter the master passphrase for this node."
+msgstr ""
 
-#: partials/modals/addContactModal.html:52
-#: partials/modals/addDappModal.html:420 partials/modals/forgingModal.html:16
+#: partials/modals/addDappModal.html:104 partials/modals/forgingModal.html:16
 #: partials/modals/registrationDelegateModal.html:52
-#: partials/modals/secondPassphraseModal.html:54
-#: partials/modals/sendTransaction.html:58
-#: partials/modals/userSettingsModal.html:48 partials/modals/vote.html:46
+#: partials/modals/sendTransaction.html:57 partials/modals/vote.html:46
 msgid "Please enter your passphrase below."
 msgstr "Будь ласка, введіть ваш пароль нижче."
 
@@ -777,59 +666,40 @@ msgstr "Будь ласка, введіть ваш пароль нижче."
 msgid "Please enter your passphrase."
 msgstr "Будь ласка, введіть ваш пароль."
 
-#: partials/modals/addContactModal.html:87
-#: partials/modals/addDappModal.html:452
+#: partials/modals/secondPassphraseModal.html:83
+msgid "Please enter your primary passphrase below."
+msgstr ""
+
+#: partials/modals/addDappModal.html:124
 #: partials/modals/registrationDelegateModal.html:87
-#: partials/modals/sendTransaction.html:93
-#: partials/modals/userSettingsModal.html:83 partials/modals/vote.html:81
+#: partials/modals/sendTransaction.html:92 partials/modals/vote.html:81
 msgid "Please enter your second passphrase below."
 msgstr "Будь ласка, введіть ваш другий пароль нижче."
 
-#: js/controllers/modals/addDappModalController.js:166
-msgid ""
-"Please make sure you copy and paste the whole Sia ASCII code. Additionally "
-"please check that there were no characters added."
+#: partials/modals/secondPassphraseModal.html:20
+msgid "Please find your second passphrase below."
 msgstr ""
-"Будь ласка, переконайтеся, що ви скопіювали і вставили весь код ASCII Sia. "
-"Крім того, переконайтеся в тому що не було додано зайвих символів."
 
-#: js/controllers/modals/addDappModalController.js:166
-msgid ""
-"Please make sure you copy the complete repository link from GitHub. It ends "
-"in .git."
+#: partials/modals/addDappModal.html:38
+msgid "Please provide a specification for your dapp below."
 msgstr ""
-"Будь ласка переконайтеся що повністю скопіювали посилання c GitHub. Вона "
-"закінчується на .git."
+
+#: partials/modals/addDappModal.html:61
+msgid "Please provide storage links for your dapp below."
+msgstr ""
 
 #: partials/modals/newUser.html:50
 msgid "Please re-enter your passphrase below."
 msgstr "Будь ласка, введіть повторно ваш пароль нижче."
 
+#: partials/modals/secondPassphraseModal.html:51
+msgid "Please re-enter your second passphrase below."
+msgstr ""
+
 #: partials/modals/addDappModal.html:15
 #: partials/modals/multisignatureModal.html:15
 msgid "Please read carefully."
 msgstr "Будь ласка, прочитайте уважно."
-
-#: js/controllers/modals/addDappModalController.js:162
-msgid "Please set the GitHub repository link below."
-msgstr "Будь ласка, встановіть посилання на GitHub репозиторій нижче."
-
-#: js/controllers/modals/addDappModalController.js:162
-msgid "Please set the Sia ASCII code below."
-msgstr "Будь ласка, встановіть Sia ASCII код нижче"
-
-#: partials/modals/addDappModal.html:53
-msgid "Please set the dapp parameters below."
-msgstr "Будь ласка, задайте параметри dapp нижче."
-
-#: partials/modals/userSettingsModal.html:15
-msgid "Please set your username."
-msgstr "Будь ласка, вкажіть Ім'я користувача"
-
-#: partials/modals/addContactModal.html:15
-#: partials/modals/sendTransaction.html:15
-msgid "Please type in an account name or ID below."
-msgstr "Будь ласка, вкажіть Ім'я облікового запису або ідентифікатор нижче."
 
 #: partials/modals/multisignatureModal.html:83
 msgid "Pressing enter confirms each member."
@@ -839,15 +709,15 @@ msgstr "Натискаючи «Введення» ви підтверджуєт�
 msgid "Previous Block"
 msgstr "Попередній Блок"
 
-#: partials/modals/userSettingsModal.html:13
-msgid "Profile Information"
-msgstr "Інформація про профіль"
+#: partials/modals/secondPassphraseModal.html:90
+msgid "Primary Passphrase"
+msgstr ""
 
-#: partials/modals/userInfo.html:20
+#: partials/modals/userInfo.html:18
 msgid "Public key"
 msgstr "Публічний ключ"
 
-#: partials/dapp-entry.html:96
+#: partials/dapp-entry.html:90
 msgid "READ MORE"
 msgstr "ДЕТАЛЬНІШЕ"
 
@@ -855,18 +725,22 @@ msgstr "ДЕТАЛЬНІШЕ"
 msgid "REMOVE VOTE"
 msgstr "ВИДАЛИТИ ГОЛОС"
 
-#: js/controllers/delegatesController.js:160
-#: js/controllers/forgingController.js:43
-#: js/controllers/votedDelegatesController.js:123 partials/forging.html:26
+#: js/controllers/delegatesController.js:156
+#: js/controllers/forgingController.js:41
+#: js/controllers/votedDelegatesController.js:115 partials/forging.html:26
 msgid "Rank"
 msgstr "Ранг"
 
-#: js/controllers/transactionsController.js:65
+#: js/controllers/transactionsController.js:64
 #: js/controllers/walletPendingsController.js:45
-#: js/controllers/walletTransactionsController.js:70
-#: js/controllers/walletsController.js:146 partials/account.html:86
+#: js/controllers/walletTransactionsController.js:68
+#: js/controllers/walletsController.js:146 partials/account.html:73
 msgid "Recipient"
 msgstr "Одержувач"
+
+#: partials/modals/sendTransaction.html:20
+msgid "Recipient Address"
+msgstr ""
 
 #: partials/modals/registrationDelegateModal.html:13
 msgid "Register as a Delegate"
@@ -888,25 +762,21 @@ msgstr "Пам'ятати протягом даної сесії"
 msgid "Removing vote from delegates"
 msgstr "Видалення голосів з делегатів"
 
-#: partials/modals/secondPassphraseModal.html:26
-msgid "Repeat second passphrase"
-msgstr "Повторіть другий пароль"
-
 #: js/controllers/blockchainController.js:47
-#: js/controllers/forgingController.js:124 partials/modals/blockInfo.html:26
+#: js/controllers/forgingController.js:118 partials/modals/blockInfo.html:26
 msgid "Reward"
 msgstr "Винагорода"
 
 #: partials/modals/newUser.html:35
+#: partials/modals/secondPassphraseModal.html:36
 msgid "SAVE PASSPHRASE"
 msgstr "ЗБЕРЕГТИ ПАРОЛЬ"
 
-#: partials/app-template.html:156 partials/contacts.html:16
-#: partials/contacts.html:44 partials/modals/masterPassphraseModal.html:35
+#: partials/modals/masterPassphraseModal.html:35 partials/template.html:149
 msgid "SEND"
 msgstr "ВІДПРАВИТИ"
 
-#: partials/modals/addDappModal.html:470
+#: partials/modals/addDappModal.html:130
 msgid "SEND LISK"
 msgstr "ВІДПРАВИТИ LISK"
 
@@ -914,8 +784,8 @@ msgstr "ВІДПРАВИТИ LISK"
 msgid "SIGN IN"
 msgstr "УВІЙТИ"
 
-#: partials/dapp-entry.html:31 partials/dapp-entry.html:40
-#: partials/dapp-entry.html:49 partials/dapp-entry.html:56
+#: partials/dapp-entry.html:25 partials/dapp-entry.html:34
+#: partials/dapp-entry.html:43 partials/dapp-entry.html:50
 msgid "SOURCE CODE"
 msgstr "СИРЦЕВИЙ КОД"
 
@@ -923,36 +793,36 @@ msgstr "СИРЦЕВИЙ КОД"
 msgid "Saving new dapp"
 msgstr "Збереження нового  dapp"
 
-#: partials/app-template.html:323 partials/app-template.html:348
+#: partials/template.html:308 partials/template.html:333
 msgid "Search for Dapps"
 msgstr "Пошук Dapp"
 
-#: partials/app-template.html:223
+#: partials/template.html:208
 msgid "Search for blocks"
 msgstr "Пошук блоков"
 
-#: partials/app-template.html:197
+#: partials/template.html:182
 msgid ""
 "Search for transactions (Transaction ID, Sender address, Recipient address)"
 msgstr ""
 "Пошук транзакцій (Ідентифікатор транзакції, Адреса відправника, Адреса "
 "одержувача)"
 
+#: partials/modals/secondPassphraseModal.html:57
+msgid "Second Passphrase"
+msgstr ""
+
 #: partials/delegates.html:120 partials/delegates.html:51
-#: partials/modals/sendTransaction.html:13 partials/modals/userInfo.html:30
+#: partials/modals/sendTransaction.html:13 partials/modals/userInfo.html:28
 #: partials/votes.html:49
 msgid "Send LISK"
 msgstr "Відправити LISK"
 
-#: js/controllers/transactionsController.js:64 partials/account.html:83
+#: js/controllers/transactionsController.js:63 partials/account.html:70
 msgid "Sender"
 msgstr "Відправник"
 
-#: js/controllers/modals/multisignatureModalController.js:6
-msgid "Set members of account"
-msgstr "Призначити члена групи"
-
-#: js/controllers/settingsController.js:6 partials/app-template.html:180
+#: js/controllers/settingsController.js:6 partials/template.html:165
 msgid "Settings"
 msgstr "Налаштування"
 
@@ -966,35 +836,6 @@ msgstr "Показати всі стовпчики"
 msgid "Show Full Time"
 msgstr "Показати час повністю"
 
-#: partials/modals/addDappModal.html:295 partials/modals/addDappModal.html:321
-msgid "Sia ASCII Code"
-msgstr "Sia ASCII код"
-
-#: partials/modals/addDappModal.html:212 partials/modals/addDappModal.html:245
-msgid ""
-"Sia is a new decentralized cloud storage platform aimed at giving users "
-"control of their data. Storage is pulled from a large network of hosts, each "
-"using Sia's blockchain to form storage contracts with clients. Out of the "
-"hundreds of hosts, only a fraction need to be online for the data to be "
-"recovered. Even in a network with many unreliable hosts, the data is safe."
-"<br><br>You need to upload your dapp source code as a .zip file to the Sia "
-"network. Once the upload was successful you need to specify the ASCII code "
-"of the file in the next step."
-msgstr ""
-"Sia является новой децентрализованной платформой облачных систем хранения "
-"данных с целью предоставить пользователям контроль над их данными. Данные "
-"хранятся в большой сети хостов, каждый из которых использует блокчейн SIA, "
-"чтобы сформировать договор хранения с клиентами. Из сотен хостов, только "
-"часть должна находиться в активной в сети чтобы извлечь данные. Даже в сети "
-"состоящей из многих ненадежных хостов, данные в безопасности.<br><br>Вам "
-"нужно загрузить исходный код своего приложения в формате файла .zip в сеть "
-"Sia. Как только загрузка произойдет необходимо указать ASCII код файла в "
-"следующем шаге."
-
-#: partials/dapp-entry.html:27
-msgid "Sia required"
-msgstr "Sia необходим"
-
 #: partials/modals/passphraseCheck.html:35
 msgid "Sign"
 msgstr "Підписати"
@@ -1007,56 +848,53 @@ msgstr "Делегати в очікуванні"
 msgid "Step 1/2 - Generate a Passphrase"
 msgstr "Крок 1/2 - Згенерувати пароль"
 
+#: partials/modals/secondPassphraseModal.html:15
+msgid "Step 1/2 - Generate a Second Passphrase"
+msgstr ""
+
 #: partials/modals/multisignatureModal.html:13
 msgid "Step 1/3 - Preamble"
 msgstr "Крок 1/3 - Ліцензійна угода"
 
 #: partials/modals/addDappModal.html:13
-msgid "Step 1/5 - Preamble"
-msgstr "Крок 1/5 - Ліцензійна угода"
+msgid "Step 1/4 - Preamble"
+msgstr ""
 
 #: partials/modals/newUser.html:48
-msgid "Step 2/2 - Confirm the Passphrase"
-msgstr "Крок 2/2 - Підтвердіть пароль"
+msgid "Step 2/2 - Confirm your Passphrase"
+msgstr ""
+
+#: partials/modals/secondPassphraseModal.html:49
+msgid "Step 2/2 - Confirm your Second Passphrase"
+msgstr ""
 
 #: partials/modals/multisignatureModal.html:44
 msgid "Step 2/3 - Specify Group Members"
 msgstr "Крок 2/3 - Визначте членів групи"
 
-#: partials/modals/addDappModal.html:51
-msgid "Step 2/5 Dapp Specifications"
-msgstr "Крок 2/5 - Специфікації Dapp"
+#: partials/modals/addDappModal.html:36
+msgid "Step 2/4 - Specifications"
+msgstr ""
 
 #: partials/modals/multisignatureModal.html:104
 msgid "Step 3/3 - Confirmation"
 msgstr "Крок 3/3 - Підтвердження"
 
-#: partials/modals/addDappModal.html:198
-msgid "Step 3/5 - Choose Storage Solution"
-msgstr "Крок 3/5 - Виберіть спосіб збері"
+#: partials/modals/addDappModal.html:59
+msgid "Step 3/4 - Storage Links"
+msgstr ""
 
-#: partials/modals/addDappModal.html:275
-msgid "Step 4/5 - Storage Specifications"
-msgstr "Крок 4/5 - Параметри зберігання"
-
-#: partials/modals/addDappModal.html:347
-msgid "Step 5/5 - Confirmation"
-msgstr "Крок 5/5 - Підтвердження"
+#: partials/modals/addDappModal.html:82
+msgid "Step 4/4 - Confirmation"
+msgstr ""
 
 #: partials/modals/blockInfo.html:16 partials/modals/transactionInfo.html:12
-#: partials/modals/userInfo.html:42
+#: partials/modals/userInfo.html:35
 msgid "Summary"
 msgstr "Підсумок"
 
-#: partials/modals/addDappModal.html:367 partials/modals/addDappModal.html:394
-msgid "Tags"
-msgstr "Мітки"
-
-#: partials/modals/addDappModal.html:151 partials/modals/addDappModal.html:87
-msgid "Tags (separated with comma)"
-msgstr "Мітки (розділені комою)"
-
 #: partials/modals/newUser.html:62
+#: partials/modals/secondPassphraseModal.html:64
 msgid ""
 "The passphrase entered doesn't match with the one generated before. Please "
 "go back and generate a new one."
@@ -1079,29 +917,18 @@ msgid ""
 "processed. The values M and N are specified in this walkthrough."
 "<br><br><b>Things you need to know for the multi-signature group setup:</"
 "b><br><br>• The number of group members (N).<br>• The number of needed "
-"confirmations (M).<br>• The account names or IDs from the Lisk accounts you "
-"want to add to the group."
+"confirmations (M).<br>• The addresses of the Lisk accounts you want to add "
+"to the group."
 msgstr ""
-"Даний зміст допоможе вам пройти необхідні кроки для створення групи Мульти-"
-"Підписи. Дуже важливо, щоб ви мали уявлення про те що таке Мульти-Підписи, в "
-"іншому випадку ви ризикуєте втратити всі ваші LISK. <br> <br> Група Мульти-"
-"Підпис з N кількість акаунтів, засновник групи є її власником. Коли власник "
-"групи хоче зробити транзакцію, M від N користувачів знаходяться в групі "
-"повинні її підтвердити, в іншому випадку транзакція не буде здійснена. "
-"Значення М і N вказані в цьому посібнику. <br> <br> <B> Для налаштування "
-"групи з Мульти-Підписом необхідно знати наступне: </ b> <br> <br> • "
-"Кількість членів група (N). <br> • Необхідна кількість підтверджень (M). "
-"<br> • Імена облікових записів або Ідентифікатори LISK акаунтів який ви "
-"бажаєте додати в групу."
 
 #: js/controllers/blockchainController.js:43
-#: js/controllers/forgingController.js:122
-#: js/controllers/transactionsController.js:66
+#: js/controllers/forgingController.js:116
+#: js/controllers/transactionsController.js:65
 #: js/controllers/walletPendingsController.js:46
-#: js/controllers/walletTransactionsController.js:71
-#: js/controllers/walletsController.js:147 partials/account.html:89
+#: js/controllers/walletTransactionsController.js:69
+#: js/controllers/walletsController.js:147 partials/account.html:76
 #: partials/modals/blockInfo.html:38 partials/modals/transactionInfo.html:25
-#: partials/modals/userInfo.html:76
+#: partials/modals/userInfo.html:69
 msgid "Time"
 msgstr "Час"
 
@@ -1109,7 +936,7 @@ msgstr "Час"
 msgid "To become a delegate, click on the \"Delegate Registration\" button."
 msgstr "Щоб стати делегатом, натисніть на кнопку «Реєстрація делегата»."
 
-#: partials/app-template.html:137
+#: partials/template.html:130
 msgid "Toggle navigation"
 msgstr "Переключення навігації"
 
@@ -1121,7 +948,7 @@ msgstr "Кращі делегати"
 msgid "Total Amount"
 msgstr "Разом"
 
-#: partials/modals/userInfo.html:43
+#: partials/modals/userInfo.html:36
 msgid "Total Balance"
 msgstr "Підсумковий баланс"
 
@@ -1129,57 +956,45 @@ msgstr "Підсумковий баланс"
 msgid "Total Fee"
 msgstr "Підсумкова винагорода"
 
-#: js/controllers/forgingController.js:27
+#: js/controllers/forgingController.js:26
 msgid "Total Forged"
 msgstr "Разом сфорджено"
 
-#: partials/modals/userInfo.html:53
-msgid "Transaction"
-msgstr "Транзакція"
-
-#: js/controllers/transactionsController.js:63
+#: js/controllers/transactionsController.js:62
 #: js/controllers/walletPendingsController.js:44
-#: js/controllers/walletTransactionsController.js:69
-#: js/controllers/walletsController.js:145 partials/account.html:80
-#: partials/modals/blockModal.html:17 partials/modals/userInfo.html:59
-#: partials/modals/userInfo.html:83
+#: js/controllers/walletTransactionsController.js:67
+#: js/controllers/walletsController.js:145 partials/account.html:67
+#: partials/modals/blockModal.html:17 partials/modals/userInfo.html:52
+#: partials/modals/userInfo.html:76
 msgid "Transaction ID"
 msgstr "Ідентифікатор транзакції"
 
 #: js/controllers/blockchainController.js:44
-#: js/controllers/transactionsController.js:8 partials/modals/blockInfo.html:17
-#: partials/modals/blockModal.html:7 partials/modals/userInfo.html:54
+#: js/controllers/transactionsController.js:8
+#: js/controllers/walletTransactionsController.js:6
+#: partials/modals/blockInfo.html:17 partials/modals/blockModal.html:7
+#: partials/modals/userInfo.html:46 partials/modals/userInfo.html:47
 msgid "Transactions"
 msgstr "Транзакції"
 
-#: js/controllers/walletTransactionsController.js:6
-msgid "Transactions for 17649443584386761059L"
-msgstr "Транзакції для 17649443584386761059L"
-
-#: partials/dapp-entry.html:62
+#: partials/dapp-entry.html:56
 msgid "UNINSTALL"
 msgstr "ВИДАЛИТИ"
 
-#: partials/account.html:59
+#: partials/account.html:46
 msgid "UPDATE"
 msgstr "ОНОВИТИ"
 
 #: partials/modals/blockInfo.html:35 partials/modals/transactionInfo.html:22
-#: partials/modals/userInfo.html:46 partials/modals/userInfo.html:73
+#: partials/modals/userInfo.html:39 partials/modals/userInfo.html:66
 msgid "USD Equivalent"
 msgstr "Еквівалент в USD"
 
-#: js/controllers/delegatesController.js:163
-#: js/controllers/forgingController.js:55
-#: js/controllers/votedDelegatesController.js:126 partials/forging.html:35
+#: js/controllers/delegatesController.js:159
+#: js/controllers/forgingController.js:53
+#: js/controllers/votedDelegatesController.js:118 partials/forging.html:35
 msgid "Uptime"
 msgstr "Час в мережі"
-
-#: js/controllers/contactsController.js:53
-#: js/controllers/pendingsController.js:30
-#: partials/modals/userSettingsModal.html:21
-msgid "Username"
-msgstr "Ім'я користувача"
 
 #: partials/delegates.html:7 partials/votes.html:8
 msgid "View selection"
@@ -1189,52 +1004,13 @@ msgstr "Перегляд вибраного"
 msgid "Voting for delegates"
 msgstr "Голосувати за делегатів"
 
-#: partials/app-template.html:64
+#: partials/template.html:64
 msgid "Welcome back, {{username}}"
 msgstr "Ласкаво просимо, {{username}}"
-
-#: partials/app-template.html:65
-msgid "Welcome, click to edit profile"
-msgstr "Ласкаво просимо, натисніть щоб змінити профіль"
 
 #: partials/modals/confirmDeletionModal.html:25
 msgid "YES"
 msgstr "ТАК"
-
-#: partials/modals/addDappModal.html:23 partials/modals/addDappModal.html:32
-msgid ""
-"You are about to register your decentralized application (dapp) on the Lisk "
-"network. After the registration all Lisk users will be able to see your dapp "
-"on the Lisk Dapp Store and they will also be able to install and launch it."
-"<br><br>One of the characteristics of blockchains is that you can't delete "
-"any content from them. Therefore make sure you have used the correct dapp "
-"parameters. We also advise you to test your dapp on the official Lisk "
-"testnet so you can guarantee that its working flawlessly.<br><br><b>Things "
-"you need to know for the registration process:</b><br><br>• Dapp names are "
-"unique, you can't register the same name twice on the Lisk network.<br>• You "
-"can either use a centralized (GitHub) or decentralized (Sia) hosting method."
-"<br>• Make sure that your dapp icon's format is a square.<br>• Choose your "
-"tags wisely, with them your users will be able to find your dapp in the Dapp "
-"Store.<br><br>The Lisk Team isn't liable for a dapp, solely the uploader is. "
-"So you have to make sure that your dapp is legal and doesn't harm its users."
-msgstr ""
-"Ви збираєтеся зареєструвати децентралізований додаток (DAPP) в мережі Lisk. "
-"Після реєстрації всі користувачі Lisk зможуть бачити ваш додаток в магазині "
-"децентралізованих додатків. Також вони зможуть встановити і запустити його. "
-"<br> <br> Одна з особливостей блокчейна полягає в тому, що ви не можете "
-"видалити контент який в ньому знаходиться. Тому переконайтеся, що ви "
-"використовували правильні параметри DAPP. Ми також радимо вам перевірити "
-"свій DAPP в офіційній тестовій мережі Lisk таким чином ви можете "
-"гарантувати, що ваш додаток працює бездоганно. <br> <br> <б> Що необхідно "
-"знати для процесу реєстрації: </ b> <br> <br> • Імена DAPP унікальні, ви не "
-"можете зареєструвати одне і теж ім'я двічі в мережі Lisk. <br> • Ви можете "
-"використовувати централізований (GitHub) або децентралізований (Sia) спосіб "
-"розміщення. <br> • Переконайтеся, що формат значка вашого додатка "
-"квадратний. <br> • Вибирайте мітки розумно, завдяки ним користувачі зможуть "
-"знайти ваш DAPP в магазині децентралізованих додатків. <br> < br> Команда "
-"Lisk не несе відповідальності за DAPP, вся відповідальність покладається на "
-"розробника якій завантажив DAPP. Таким чином, ви повинні переконатися, що "
-"ваш DAPP є законним і не завдає шкоди користувачам."
 
 #: partials/multi.html:46
 msgid "You are not a member of any one Multi-Signature group."
@@ -1244,27 +1020,19 @@ msgstr "Ви не є членом жодної з груп Мульти-Підп
 msgid "You can find your passphrase below."
 msgstr "Ви можете знайти свій пароль нижче."
 
-#: partials/contacts.html:68
-msgid "You do not have any contacts, try adding a new one!"
-msgstr "У вас немає жодного контакту, спробуйте додати новий контакт!"
-
 #: partials/dapps.html:165
 msgid "You do not have any dapps installed yet."
 msgstr "У вас немає жодного встановленого dapp"
-
-#: partials/pendings.html:38
-msgid "You do not have any pending contacts!"
-msgstr "У вас немає жодного контакту якій чекає на підтвердження!"
 
 #: partials/forging.html:106
 msgid "You have not forged any blocks yet."
 msgstr "У вас немає винагород за блоки."
 
-#: partials/dapps.html:243
+#: partials/dapps.html:242
 msgid "You have not installed dapps yet."
 msgstr "У вас немає жодного встановленого dapp."
 
-#: partials/account.html:122
+#: partials/account.html:109
 msgid "You have not made any transactions yet."
 msgstr "У вас немає вчинених транзакцій."
 
@@ -1272,83 +1040,39 @@ msgstr "У вас немає вчинених транзакцій."
 msgid "You have not voted for any delegates yet."
 msgstr "Ви ще не проголосували ні за одного делегата."
 
-#: partials/modals/addContactModal.html:29
-msgid ""
-"You shall receive notification when the contact has accepted your request."
-msgstr "Ви отримаєте повідомлення як тільки користувач прийме ваш запит."
-
 #: partials/multi.html:10
 msgid "Your Multi-Signature group(s) have not made any transactions yet."
 msgstr "Ваша(и) група Мульти-Підписи не має транзакцій в даний час."
 
-#: partials/modals/addContactModal.html:59
-#: partials/modals/addDappModal.html:429 partials/modals/forgingModal.html:23
+#: partials/modals/forgingModal.html:23
 #: partials/modals/multisignatureModal.html:157
 #: partials/modals/registrationDelegateModal.html:59
-#: partials/modals/secondPassphraseModal.html:61
-#: partials/modals/sendTransaction.html:65
-#: partials/modals/userSettingsModal.html:55 partials/modals/vote.html:53
+#: partials/modals/sendTransaction.html:64 partials/modals/vote.html:53
 #: partials/passphrase.html:10
 msgid "Your Passphrase"
 msgstr "Ваш пароль"
 
-#: partials/modals/addContactModal.html:94
-#: partials/modals/addDappModal.html:461
 #: partials/modals/multisignatureModal.html:161
 #: partials/modals/passphraseCheck.html:22
 #: partials/modals/registrationDelegateModal.html:94
-#: partials/modals/sendTransaction.html:100
-#: partials/modals/userSettingsModal.html:90 partials/modals/vote.html:88
+#: partials/modals/sendTransaction.html:99 partials/modals/vote.html:88
 msgid "Your Second Passphrase"
 msgstr "Ваш другий пароль"
 
-#: partials/modals/addDappModal.html:144 partials/modals/addDappModal.html:80
-msgid "Your dapp description cannot be longer than 160 characters."
-msgstr "Опис вашого додатку не може бути більше 160 символів."
-
-#: partials/modals/addDappModal.html:69
-msgid "Your dapp name cannot be longer than 32 characters"
-msgstr "Ім'я вашого dapp не може бути довшим 32 символів"
-
-#: partials/modals/addDappModal.html:133
-msgid "Your dapp name cannot be longer than 32 characters."
-msgstr "Ім'я вашого dapp не може бути довшим 32 символів"
-
-#: partials/modals/addDappModal.html:130 partials/modals/addDappModal.html:66
-msgid "Your dapp name is required."
-msgstr "Необхідно ввести ім'я для вашого dapp."
-
-#: partials/modals/addDappModal.html:155 partials/modals/addDappModal.html:92
-msgid "Your dapp tags cannot be longer than 160 characters."
-msgstr "Мітки для вашого dapp не можуть бути довшими 160 символів."
-
-#: partials/modals/addContactModal.html:107
-#: partials/modals/addContactModal.html:37
-#: partials/modals/addContactModal.html:72
-msgid "add contact"
-msgstr "додати контакт"
-
-#: partials/modals/secondPassphraseModal.html:39
-#: partials/modals/secondPassphraseModal.html:74
+#: partials/modals/secondPassphraseModal.html:100
 msgid "add second passphrase"
 msgstr "додати другий пароль"
 
-#: js/controllers/modals/addDappModalController.js:142
-msgid "change to SIA ASCII"
-msgstr "змінити на SIA ASCII"
-
-#: js/controllers/modals/addDappModalController.js:142
-msgid "change to url link"
-msgstr "замінити на url посилання"
-
 #: partials/modals/multisignatureModal.html:135
 #: partials/modals/multisignatureModal.html:174
-#: partials/modals/userSettingsModal.html:103
-#: partials/modals/userSettingsModal.html:67
 msgid "confirm"
 msgstr "підтвердити"
 
-#: partials/app-template.html:255
+#: partials/modals/secondPassphraseModal.html:69
+msgid "confirm second passphrase"
+msgstr ""
+
+#: partials/template.html:240
 msgid "delegate registration"
 msgstr "реєстрація делегата"
 
@@ -1366,13 +1090,9 @@ msgstr "зареєструвати"
 msgid "remove vote"
 msgstr "видалити голос"
 
-#: partials/modals/userSettingsModal.html:33
-msgid "save Name"
-msgstr "зберегти Ім'я"
-
-#: partials/modals/sendTransaction.html:113
-#: partials/modals/sendTransaction.html:43
-#: partials/modals/sendTransaction.html:78
+#: partials/modals/sendTransaction.html:112
+#: partials/modals/sendTransaction.html:42
+#: partials/modals/sendTransaction.html:77
 msgid "send lisk"
 msgstr "відправити lisk"
 

@@ -1285,15 +1285,3 @@ msgstr "選択済み受託者({{countStandby + countTop}} / {{voteList.length}})
 #: partials/votes.html:4
 msgid "{{voteList.length}} out of {{count}} Delegates selected"
 msgstr "選択済み受託者({{voteList.length}} / {{count}})"
-
-#~ msgid "Transactions for 17649443584386761059C"
-#~ msgstr "17649443584386761059Cの取引詳細"
-
-#~ msgid "Confirm Vote"
-#~ msgstr "確認済み投票"
-
-#~ msgid "this action will cost {{fee | liskFilter}} LISK"
-#~ msgstr "この操作の費用は {{fee | liskFilter}} LISK"
-
-#~ msgid "Vote for Delegates"
-#~ msgstr "受託者に投票します"
