@@ -473,7 +473,7 @@
   .card-content, .card-reveal {
     overflow: hidden;
     padding: 0;
-    a.second-action {
+    .second-action:not(.btn):not(.btn-large):not(.btn-floating) {
       color: @black;
       text-decoration: none;
       padding: 20px 10px;
@@ -492,7 +492,7 @@
         font-weight: 300;
       }
     }
-    a.primary-action {
+    .primary-action:not(.btn):not(.btn-large):not(.btn-floating) {
       color: @blue;
       text-decoration: none;
       padding: 20px 10px;
