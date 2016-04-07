@@ -53,10 +53,11 @@
                             <div class="modal-body clearfix">
                                 <div class="left-margin-40 right-margin-40">
                                     <div class="input-field passphraseGeneration">
-                                        <textarea ng-focus="focus=='secondPass'" id="repeatPassphrase" class="materialize-textarea" ng-trim="false" ng-model="repeatPassphrase" ng-class="{'invalid': noMatch}" autofocus></textarea>
+                                        <textarea ng-focus="focus=='secondPass'" id="repeatPassphrase" class="materialize-textarea" ng-trim="false" ng-model="repeatPassphrase" ng-class="{'invalid': noMatch || fromServer}" autofocus></textarea>
                                         <label for="repeatPassphrase" ng-class="{'active':activeLabel(repeatPassphrase)}"><translate>Second Passphrase</translate></label>
                                     </div>
-                                    <span class="pass-error" style="margin-top: 0;" ng-show="noMatch"><translate>Passphrase doesn't match.</translate></span>
+                                    <span class="pass-error" style="margin-top: 0" ng-show="noMatch"><translate>Passphrase doesn't match.</translate></span>
+                                    <span class="pass-error" style="margin-top: 0" ng-show="fromServer">{{fromServer}}.</span>
                                 </div>
                             </div>
                             <div class="modal-body bordered" ng-show="noMatch">
@@ -85,7 +86,7 @@
                                 <form ng-submit="addNewPassphrase(pass)">
                                     <div class="field-padding">
                                         <div class="input-field">
-                                            <input ng-focus="focus=='pass'" id="passPhrase" type="password" ng-model="pass" ng-trim="false" ng-class="{'invalid': errorMessage}" autofocus>
+                                            <input ng-focus="focus=='pass'" id="passPhrase" type="password" ng-model="pass" ng-trim="false" ng-class="{'invalid': fromServer}" autofocus>
                                             <label for="passPhrase"><translate>Primary Passphrase</translate></label>
                                         </div>
                                         <span class="pass-error" ng-show="fromServer">{{fromServer}}.</span>
