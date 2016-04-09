@@ -5,10 +5,17 @@ angular.module('liskApp').service('languageService', function ($rootScope, $wind
     $rootScope.languages = [
         { id: 'en', name: 'English' },
         { id: 'de', name: 'Deutsch' },
-        { id: 'hu', name: 'Magyar' },
-        { id: 'nl', name: 'Nederlands' },
         { id: 'ru', name: 'Pусский' },
-        { id: 'zh', name: '中文' }
+        { id: 'zh', name: '中文' },
+        { id: 'fr', name: 'Français' },
+        { id: 'el_GR', name: 'Ελληνικά' },
+        { id: 'hu', name: 'Magyar' },
+        { id: 'it', name: 'Italiano' },
+        { id: 'ja', name: '日本語' },
+        { id: 'nl', name: 'Nederlands' },
+        { id: 'no', name: 'Norsk' },
+        { id: 'pt', name: 'Português' },
+        { id: 'ua', name: 'Yкраїнський' }
     ];
 
     $rootScope.changeLang = function (changed) {
