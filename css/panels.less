@@ -7,7 +7,6 @@
     .panel-body {
       padding: 0 15px;
     }
-    paddin: 0 15px;
     & .media-list {
       .media {
         cursor: pointer;
@@ -226,6 +225,10 @@
   box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, .12);
   border-radius: @border-radius;
   margin-bottom: 20px;
+  &.price {
+    max-height: 300px;
+    min-height: 300px;
+  }
   &-heading {
     padding: 20px 0;
     color: @grey-text;
@@ -267,8 +270,12 @@
   }
   &-body {
     width: 100%;
-    padding: 20px 0;
+    padding: 20px 0px;
     position: relative;
+    &.price {
+      max-height: 239px;
+      min-width: 100%;
+    }
     .chart-legend {
       position: absolute;
       top: 50%;
