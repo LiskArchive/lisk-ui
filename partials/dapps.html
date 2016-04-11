@@ -157,7 +157,7 @@
         </div>
     </div>
 </div>
-<div class="row clearfix margin" ng-if="!dapps.length && !installedDapps.length">
+<!--<div class="row clearfix margin" ng-if="!dapps.length && !installedDapps.length">
     <div class="col-xs-12">
         <div class="panel  panel-default no-margin-bottom">
             <div class="panel-body empty-body ng-scope">
@@ -167,7 +167,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
 <div class="row clearfix" ng-repeat-start="cat in dapps | groupBy: 'category'">
     <div class="col-xs-12">
         <div class="panel  panel-default no-margin-bottom" ui-sref='main.dappsCategory({categoryId:"{{getCategoryName(cat[0].category)}}"})'>
@@ -228,9 +228,9 @@
     </div>
 </div>
 <div class="row clearfix margin" ng-repeat-end></div>
-<div class="row clearfix" ng-if="installedDapps.length">
+<div class="row clearfix">
     <div class="col-xs-12">
-        <div class="panel  panel-default no-margin-bottom" ui-sref='main.dappsCategory({categoryId:"Installed"})' eat-click-if="!installedDapps.length">
+        <div class="panel panel-default no-margin-bottom" ui-sref='main.dappsCategory({categoryId:"Installed"})' eat-click-if="!installedDapps.length">
             <div class="panel-heading" ng-class="{'cursor': installedDapps.length}">
                 <h2>{{'Installed Dapps'|translate}} {{searchedInstalledText}}</h2>
                 <div class="more">
@@ -239,7 +239,7 @@
             </div>
             <div ng-if="!installedDapps.length" class="panel-body empty-body ng-scope">
                 <div class="logo-grey"></div>
-                <p class="empty-state-text">{{'You have not installed dapps yet.'|translate}}</p>
+                <p class="empty-state-text">{{'You do not have any dapps installed yet.'|translate}}</p>
             </div>
         </div>
     </div>
