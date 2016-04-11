@@ -10,7 +10,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="green-link" ng-click="vote()" ng-disabled="voteList.length==0"><i class="mdi-action-favorite-outline left"></i><translate>vote</translate></a>
+                    <a href="#" class="green-link" ng-click="vote()" ng-disabled="voteList.length==0"><i class="mdi-action-done left"></i><translate>vote</translate></a>
                 </li>
             </ul>
         </div>
@@ -48,7 +48,7 @@
                             </span>
                             <ul class="list-group" role="menu">
                                 <li class="list-group-item">
-                                    <a href="#" ng-click="sendTransaction(delegate.address)"><translate>Send LISK</translate></a>
+                                    <a href="#" class="send-lisk" ng-click="sendTransaction(delegate.address)"><translate>Send LISK</translate></a>
                                 </li>
                                 <!-- <li class="list-group-item"><a href="#">Send Message</a></li> -->
                                 <div class="divider-wrap">
@@ -60,12 +60,12 @@
                                 <li class="list-group-item">
                                     <a href="#" clip-copy="delegate.username"><translate>Copy Name</translate></a>
                                 </li>
-                                <div class="divider-wrap">
+                                <!--<div class="divider-wrap">
                                     <li class="divider"></li>
-                                </div>
-                                <li class="list-group-item">
+                                </div>-->
+                                <!--<li class="list-group-item">
                                     <a href="#" ng-click="addContact(delegate.address)"><translate>Add as Contact</translate></a>
-                                </li>
+                                </li>-->
                                 <!-- <li class="list-group-item"><a href="#">See Voters</a></li> -->
                             </ul>
                         </div>
