@@ -12,6 +12,7 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
     }
     $scope.addingError = '';
     $scope.currentAddress = userService.address;
+    $scope.fee = 5;
 
     $scope.close = function () {
         if ($scope.destroy) {
