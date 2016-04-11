@@ -17,12 +17,12 @@
                     <div class="modal-body"></div>
                     <div class="scrolling" style="margin-left: 10px">
                         <div class="modal-body">
-                        <div class="multi-info-text flat-text">
-                            <p translate>This walkthrough will guide you through the necessary steps to create a multi-signature group. It's very important that you know what multi-signatures are, else you risk loosing your LISK balance.<br><br>A multi-signature group consists of N accounts, the one who created the group is the group owner. When the owner wants to make a transaction, M of N accounts within the group need to confirm it, otherwise the transaction will not be processed. The values M and N are specified in this walkthrough.<br><br><b>Things you need to know for the multi-signature group setup:</b><br><br>• The number of group members (N).<br>• The number of needed confirmations (M).<br>• The addresses of the Lisk accounts you want to add to the group.</p>
+                            <div class="multi-info-text flat-text">
+                                <p translate>This walkthrough will guide you through the necessary steps to create a multi-signature group. It's very important that you know what multi-signatures are, else you risk loosing your LISK balance.<br><br>A multi-signature group consists of N accounts, the one who created the group is the group owner. When the owner wants to make a transaction, M of N accounts within the group need to confirm it, otherwise the transaction will not be processed. The values M and N are specified in this walkthrough.<br><br><b>Things you need to know for the multi-signature group setup:</b><br><br>• The number of group members (N).<br>• The number of needed confirmations (M).<br>• The addresses of the Lisk accounts you want to add to the group.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-body">
+                <div class="modal-body bordered">
                     <ul class="nav modal-buttons pull-right">
                         <li>
                             <a href="#" ng-click="close()"><translate>CANCEL</translate></a>
@@ -58,12 +58,13 @@
                 </div>
                 <div class="modal-body">
                     <ul class="owners-list" ng-class="{'add-border': totalCount}">
+                        <li>
+                            <span>{{currentAddress}}</span>
+                            <span class="pull-right">{{'Your Account'|translate}}</span>
+                        </li>
                         <li ng-repeat="(key, member) in members">
                             <span class="address-linen tooltipped" data-position="right" data-tooltip="{{key}}">{{member.address}}</span>
                             <span class="delete" ng-click="deleteMember(member.publicKey)"></span>
-                        </li>
-                        <li>
-                            <span>{{currentAddress}}</span>
                         </li>
                     </ul>
                 </div>
@@ -82,7 +83,7 @@
                 <div class="modal-body">
                     <span class="send-info-text flat-text"><translate>Pressing enter confirms each member.</translate></span>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body bordered">
                     <ul class="nav modal-buttons pull-right">
                         <li>
                             <a href="#" ng-click="close()"><translate>Cancel</translate></a>
@@ -106,6 +107,17 @@
                     <div><translate>Please check your input below and go back if necessary. Double-check the group members, else you risk losing your LISK balance!</translate></div>
                 </div>
                 <div class="modal-body">
+                    <ul class="owners-list" ng-class="{'add-border': totalCount}">
+                        <li>
+                            <span>{{currentAddress}}</span>
+                            <span class="pull-right">{{'Your Account'|translate}}</span>
+                        </li>
+                        <li ng-repeat="(key, member) in members">
+                            <span>{{member.address}}</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-body">
                     <ul class="multi-total">
                         <li>{{'Number of members'|translate}}:
                             <span>{{totalCount+1}}</span>
@@ -113,20 +125,14 @@
                         <li>{{'Confirmations needed'|translate}}:
                             <span>{{sign}}</span>
                         </li>
-                    </ul>
-                </div>
-                <div class="modal-body">
-                    <ul class="owners-list" ng-class="{'add-border': totalCount}">
-                        <li ng-repeat="(key, member) in members">
-                            <span>{{member.address}}</span>
-                        </li>
-                        <li>{{currentAddress}}</li>
+                        <li>{{'Fee'|translate}}:
+                            <span>{{fee*(totalCount+1)}} LISK</span>
                     </ul>
                 </div>
                 <div class="modal-body" ng-show="errorMessage">
                     <span class="app-addon-error" style="margin-top: 3px;">{{errorMessage}}</span>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body bordered">
                     <ul class="nav modal-buttons pull-right">
                         <li>
                             <a href="#" ng-click="step = 2;"><translate>GO BACK</translate></a>
