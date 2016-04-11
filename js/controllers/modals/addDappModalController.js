@@ -9,6 +9,7 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
     $scope.passmode = false;
     $scope.errorMessage = "";
     $scope.checkSecondPass = false;
+    $scope.fee = 500;
 
     $scope.close = function () {
         addDappModal.deactivate();
