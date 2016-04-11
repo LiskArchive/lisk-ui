@@ -72,7 +72,6 @@ input[type='range']::-ms-slider-thumb {
 }
 
 .send-info-text {
-
   position: relative;
   display: block;
   padding: 30px 84px;
@@ -93,11 +92,13 @@ input[type='range']::-ms-slider-thumb {
 }
 
 .pass-error {
-  font-size: 12px;
+  font-size: 14px;
   color: #f34235;
   display: block;
   margin-top: -8px;
+  margin-left: 25px;
   margin-bottom: 20px;
+  padding-top: 1px;
   position: relative;
   &:after {
     content: '';
@@ -108,7 +109,7 @@ input[type='range']::-ms-slider-thumb {
     background-image: url('@{images}/sprites/iconset.png');
     background-position: 0 -69px;
     top: 0;
-    right: 0;
+    left: -25px;
   }
 }
 
@@ -159,7 +160,7 @@ input[type='range']::-ms-slider-thumb {
     }
   }
   &.app-addon {
-    padding: 15px 20px;
+    padding: 15px 28px;
     background-color: @white;
     margin: -1px;
     border-radius: 0;
@@ -239,6 +240,13 @@ input[type='range']::-ms-slider-thumb {
           color: @dark-meant;
         }
       }
+      &.blue-link {
+        color: @blue;
+        &:hover, &:active, &:focus {
+          background-color: @grey;
+          color: @orange;
+        }
+      }
       &.red-link {
         color: @dark-red;
         &:hover, &:active, &:focus {
@@ -294,6 +302,7 @@ input[type='range']::-ms-slider-thumb {
           border-radius: @border-radius;
           &:hover {
             background-color: @light-grey;
+            color: @orange;
             &:after {
               background-position: 0 -51px;
             }
@@ -338,6 +347,12 @@ input[type='range']::-ms-slider-thumb {
         color: @dark-meant;
         &:hover, &:active, &:focus {
           color: @dark-meant;
+        }
+      }
+      &.blue-link {
+        color: @blue;
+        &:hover, &:active, &:focus {
+          color: @orange;
         }
       }
       &.red-link {
@@ -416,6 +431,12 @@ a {
           color: @dark-meant;
         }
       }
+      &.blue-link {
+        color: @blue;
+        &:hover, &:active, &:focus {
+          color: @orange;
+        }
+      }
       &.red-link {
         color: @dark-red;
         &:hover, &:active, &:focus {
@@ -455,7 +476,7 @@ a {
       &.blue-link {
         color: @blue;
         &:hover, &:active, &:focus {
-          color: @blue;
+          color: @orange;
           background-color: @white;
         }
       }
@@ -503,7 +524,7 @@ a {
   position: relative;
   padding: 6px 0 0;
   .zeroclipboard-is-hover {
-    color: @dark-meant !important;
+    color: @orange !important;
   }
   .list-group {
     display: none;
@@ -545,8 +566,11 @@ a {
           color: @black;
           font-size: @content-text;
           text-decoration: none;
+          &.send-lisk {
+            color: @blue;
+          }
           &:hover, &:active, &:focus {
-            color: @dark-meant;
+            color: @orange;
             text-decoration: none;
           }
         }
@@ -574,10 +598,13 @@ a {
 }
 
 .generate {
- //margin-top: -10px;
   margin-bottom: 20px;
+  color: @generate-text;
+  line-height: @content-text + 2;   
+  font-size: @content-text;   
   cursor: pointer;
   position: relative;
+  top: 6px;
   &:before {
     position: absolute;
     display: block;
@@ -590,9 +617,6 @@ a {
     height: 16px;
     background-image: url('@{images}/sprites/iconset.png');
     background-position: -0 -84px;
-  }
-  span {
-    opacity: 0.54;
   }
 }
 
