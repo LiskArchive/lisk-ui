@@ -3,6 +3,17 @@
         <div class="row height100">
             <div class="col-md-6 col-md-offset-4 height100 valign-wrapper">
                 <div class="modal-content" ng-show="!passmode && !checkSecondPass">
+                    <!--<div class="modal-header clearfix">
+                        <div>
+                            <h2>{{'Send LISK'|translate}}</h2>
+                        </div>
+                        <div>
+                            <translate>Please enter the Recipient Address and LISK Amount that you would like send below.</translate>
+                        </div>
+                        <div class="close-modal" ng-click="close()">
+                            <span class="sr-only"><translate>Close modal</translate></span>
+                        </div>
+                    </div>-->
                     <div class="modal-header modal-iconed">
                         <div class="close-modal" ng-click="close()">
                             <span class="sr-only"><translate>Close modal</translate></span>
@@ -25,6 +36,7 @@
                                     <input id="amount" type="text" ng-model="amount" ng-focus="focus == 'amount'">
                                     <label for="amount"><translate>LISK Amount</translate></label>
                                 </div>
+                                <span class="fee-text flat-text pull-right"><translate>Fee: {{fee | liskFilter}} LISK</span>
                                 <span class="pass-error" ng-show="errorMessage && (rememberedPassphrase || presendError)">{{errorMessage}}</span>
                             </div>
                             <input type="submit" ng-show="false">
@@ -33,7 +45,7 @@
                     <div class="modal-body bordered">
                         <span class="send-info-text flat-text"><translate>Make sure you're sending LISK to the right address. This action can't be undone later.</translate></span>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body bordered">
                         <ul class="nav modal-buttons pull-right">
                             <li>
                                 <a href="#" ng-click="close()"><translate>Cancel</translate></a>
