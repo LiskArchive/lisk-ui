@@ -20,15 +20,16 @@
                                 <input ng-focus="focus == 'username'" id="delegateUsername" type="text" ng-model="delegateData.username" autofocus>
                                 <label for="delegateUsername"><translate>Delegate Name</translate></label>
                             </div>
+                            <span class="fee-text flat-text pull-right"><translate>Fee: {{fee | liskFilter}} LISK</span>
                             <span class="pass-error" ng-show="error">{{error}}</span>
                             <input type="submit" ng-show="false">
                         </form>
                     </div>
                     <div class="modal-body bordered">
                         <span ng-if="!!username" class="pass-error" ng-show="error" style="margin: 20px 40px 0px !important;">{{error}}</span>
-                        <span class="send-info-text padding-right-40 flat-text"><translate>Becoming a delegate requires registration. You may choose your own delegate name, which can be used to promote your delegate. Only the top 101 delegates are eligible to forge. All fees are shared equally between the top 101 delegates. Registration costs: {{fee | liskFilter}} LISK.</translate></span>
+                        <span class="send-info-text padding-right-40 flat-text"><translate>Becoming a delegate requires registration. You may choose your own delegate name, which can be used to promote your delegate. Only the top 101 delegates are eligible to forge. All fees are shared equally between the top 101 delegates.</translate></span>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body bordered">
                         <ul class="nav modal-buttons pull-right">
                             <li>
                                 <a href="#" ng-click="close()"><translate>Cancel</translate></a>
