@@ -1,134 +1,194 @@
-<div class="app-modal" ng-controller="addDappModalController">
-    <div ng-show="step==1" class="modal modal-fixed-footer col-md-6 dapp-modal">
-        <div class="modal-header modal-iconed hide-in-small">
-            <div class="close-modal" ng-click="close()">
-                <span class="sr-only"><translate>Close modal</translate></span>
+<div class="app-modal valign-wrapper" ng-controller="addDappModalController">
+    <div class="container height100">
+        <div class="row height100">
+            <div class="col-md-8 col-md-offset-2 height100 valign-wrapper">
+                <div ng-show="step==1" class="modal-content">
+                    <div class="modal-header modal-iconed hide-in-small">
+                        <div class="close-modal" ng-click="close()">
+                            <span class="sr-only"><translate>Close modal</translate></span>
+                        </div>
+                    </div>
+                     <div class="modal-header clearfix">
+                        <div class="close-modal show-in-small" ng-click="close()">
+                            <span class="sr-only"><translate>Close modal</translate></span>
+                        </div>
+                        <div>
+                            <h2>{{'Step 1/4 - Preamble'|translate}}</h2>
+                        </div>
+                        <div><translate>Please read carefully.</translate></div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="multi-info-text flat-text">
+                            <div ng-include="'partials/modals/addDappModal/licenseDataForm.html'"></div>
+                        </div>
+                    </div>
+                    <div class="modal-body bordered">
+                        <ul class="nav modal-buttons pull-right">
+                            <li>
+                                <a href="#" ng-click="close()"><translate>CANCEL</translate></a>
+                            </li>
+                            <li>
+                                <a href="#" class="blue-link" ng-click="step=step+1;"><translate>Accept / Next Step</translate></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div ng-show="step==2" class="modal-content">
+                    <div class="modal-header modal-iconed hide-in-small">
+                        <div class="close-modal" ng-click="close()">
+                            <span class="sr-only"><translate>Close modal</translate></span>
+                        </div>
+                    </div>
+                     <div class="modal-header clearfix">
+                        <div class="close-modal show-in-small" ng-click="close()">
+                            <span class="sr-only"><translate>Close modal</translate></span>
+                        </div>
+                        <div>
+                            <h2>{{'Step 2/4 - Specifications'|translate}}</h2>
+                        </div>
+                        <div><translate>Please provide a specification for your dapp below.</translate></div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="multi-info-text flat-text">
+                            <div ng-include="'partials/modals/addDappModal/dappDataForm.html'"></div>
+                        </div>
+                    </div>
+                    <div class="modal-body bordered">
+                        <ul class="nav modal-buttons pull-right">
+                            <li>
+                                <a href="#" ng-click="step=step-1;"><translate>GO BACK</translate></a>
+                            </li>
+                            <li>
+                                <a href="#" class="blue-link" ng-click="goToStep3()"><translate>Next Step</translate></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div ng-show="step==3 && !passmode && !checkSecondPass" class="modal-content">
+                    <div class="modal-header modal-iconed hide-in-small">
+                        <div class="close-modal" ng-click="close()">
+                            <span class="sr-only"><translate>Close modal</translate></span>
+                        </div>
+                    </div>
+                     <div class="modal-header clearfix">
+                        <div class="close-modal show-in-small" ng-click="close()">
+                            <span class="sr-only"><translate>Close modal</translate></span>
+                        </div>
+                        <div>
+                            <h2>{{'Step 3/4 - Storage Links'|translate}}</h2>
+                        </div>
+                        <div><translate>Please provide storage links for your dapp below.</translate></div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="multi-info-text flat-text">
+                            <div ng-include="'partials/modals/addDappModal/storageDataForm.html'"></div>
+                        </div>
+                    </div>
+                    <div class="modal-body bordered">
+                        <ul class="nav modal-buttons pull-right">
+                            <li>
+                                <a href="#" ng-click="step=step-1;"><translate>GO BACK</translate></a>
+                            </li>
+                            <li>
+                                <a href="#" class="blue-link" ng-click="goToStep4()"><translate>Next Step</translate></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div ng-show="step==4 && !passmode && !checkSecondPass" class="modal-content">
+                    <div class="modal-header modal-iconed hide-in-small">
+                        <div class="close-modal" ng-click="close()">
+                            <span class="sr-only"><translate>Close modal</translate></span>
+                        </div>
+                    </div>
+                     <div class="modal-header clearfix">
+                        <div class="close-modal show-in-small" ng-click="close()">
+                            <span class="sr-only"><translate>Close modal</translate></span>
+                        </div>
+                        <div>
+                            <h2>{{'Step 4/4 - Confirmation'|translate}}</h2>
+                        </div>
+                        <div><translate>Please ensure all details are correct before confirming your dapp.</translate></div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="multi-info-text flat-text">
+                            <div ng-include="'partials/modals/addDappModal/dappDataConfirmation.html'"></div>
+                        </div>
+                    </div>
+                    <div class="modal-body bordered">
+                        <ul class="nav modal-buttons pull-right">
+                            <li>
+                                <a href="#" ng-click="step=step-1;"><translate>GO BACK</translate></a>
+                            </li>
+                            <li>
+                                <a href="#" class="blue-link" ng-click="passcheck()"><translate>Confirm</translate></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div ng-show="passmode && !checkSecondPass" class="modal-content">
+                    <div class="modal-header modal-iconed hide-in-small">
+                        <div class="close-modal" ng-click="close()">
+                            <span class="sr-only"><translate>Close modal</translate></span>
+                        </div>
+                    </div>
+                     <div class="modal-header clearfix">
+                        <div class="close-modal show-in-small" ng-click="close()">
+                            <span class="sr-only"><translate>Close modal</translate></span>
+                        </div>
+                        <div>
+                            <h2>{{'Account Verification'|translate}}</h2>
+                        </div>
+                        <div><translate>Please enter your passphrase below.</translate></div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="multi-info-text flat-text">
+                            <div ng-include="'partials/modals/addDappModal/accountVerification.html'"></div>
+                        </div>
+                    </div>
+                    <div class="modal-body bordered">
+                        <ul class="nav modal-buttons pull-right">
+                            <li>
+                                <a href="#" ng-click="passcheck()"><translate>GO BACK</translate></a>
+                            </li>
+                            <li>
+                                <a href="#" class="blue-link" ng-click="sendData(secretPhrase, false)"><translate>Confirm</translate></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div ng-show="checkSecondPass" class="modal-content">
+                    <div class="modal-header modal-iconed hide-in-small">
+                        <div class="close-modal" ng-click="close()">
+                            <span class="sr-only"><translate>Close modal</translate></span>
+                        </div>
+                    </div>
+                     <div class="modal-header clearfix">
+                        <div class="close-modal show-in-small" ng-click="close()">
+                            <span class="sr-only"><translate>Close modal</translate></span>
+                        </div>
+                        <div>
+                            <h2>{{'Account Verification'|translate}}</h2>
+                        </div>
+                        <div><translate>Please enter your second passphrase below.</translate></div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="multi-info-text flat-text">
+                            <div ng-include="'partials/modals/addDappModal/accountVerification.html'"></div>
+                        </div>
+                    </div>
+                    <div class="modal-body bordered">
+                        <ul class="nav modal-buttons pull-right">
+                            <li>
+                                <a href="#" ng-click="passcheck(true)"><translate>GO BACK</translate></a>
+                            </li>
+                            <li>
+                                <a href="#" class="blue-link" ng-click="sendData(secretPhrase, true)"><translate>Confirm</translate></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>    
             </div>
-        </div>
-        <div class="modal-header modal-header-mobile clearfix">
-            <div class="close-modal show-in-small" ng-click="close()">
-                <span class="sr-only"><translate>Close modal</translate></span>
-            </div>
-            <div>
-                <h2>{{'Step 1/4 - Preamble'|translate}}</h2>
-            </div>
-            <div><translate>Please read carefully.</translate></div>
-        </div>
-        <div class="modal-content pretty-scrolling" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none; box-shadow: none;">
-            <div ng-include="'partials/modals/addDappModal/licenseDataForm.html'"></div>
-        </div>
-        <div class="modal-footer">
-            <a class="waves-effect btn-flat primary-action" ng-click="step=step+1;"><translate>Accept / Next Step</translate></a>
-            <a class="waves-effect btn-flat second-action" ng-click="close()"><translate>CANCEL</translate></a>
-        </div>
-    </div>
-    <div ng-show="step==2" class="modal modal-fixed-footer col-md-6 dapp-modal">
-        <div class="modal-header  modal-iconed hide-in-small">
-            <div class="close-modal" ng-click="close()">
-                <span class="sr-only"><translate>Close modal</translate></span>
-            </div>
-        </div>
-        <div class="modal-header modal-header-mobile clearfix">
-            <div class="close-modal show-in-small" ng-click="close()">
-                <span class="sr-only"><translate>Close modal</translate></span>
-            </div>
-            <div>
-                <h2>{{'Step 2/4 - Specifications'|translate}}</h2>
-            </div>
-            <div><translate>Please provide a specification for your dapp below.</translate></div>
-        </div>
-        <div class="modal-content pretty-scrolling" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none; box-shadow: none;">
-            <div ng-include="'partials/modals/addDappModal/dappDataForm.html'"></div>
-        </div>
-        <div class="modal-footer">
-            <a class="waves-effect btn-flat primary-action" ng-click="goToStep3()"><translate>Next Step</translate></a>
-            <a class="waves-effect btn-flat second-action" ng-click="step=step-1;"><translate>Go back</translate></a>
-        </div>
-    </div>
-    <div ng-show="step==3 && !passmode && !checkSecondPass" class="modal modal-fixed-footer col-md-6 dapp-modal" style="height: 80%; max-height: 80%; z-index: 1003; display: block; opacity: 1; top: 0; bottom: 0;">
-        <div class="modal-header modal-iconed hide-in-small">
-            <div class="close-modal" ng-click="close()">
-                <span class="sr-only"><translate>Close modal</translate></span>
-            </div>
-        </div>
-        <div class="modal-header modal-header-mobile clearfix">
-            <div class="close-modal show-in-small" ng-click="close()">
-                <span class="sr-only"><translate>Close modal</translate></span>
-            </div>
-            <div>
-                <h2>{{'Step 3/4 - Storage Links'|translate}}</h2>
-            </div>
-            <div><translate>Please provide storage links for your dapp below.</translate></div>
-        </div>
-        <div class="modal-content pretty-scrolling" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none; box-shadow: none;">
-            <div ng-include="'partials/modals/addDappModal/storageDataForm.html'"></div>
-        </div>
-        <div class="modal-footer">
-            <a class="waves-effect btn-flat primary-action" ng-click="goToStep4()"><translate>Next Step</translate></a>
-            <a class="waves-effect btn-flat second-action" ng-click="step=step-1;"><translate>Go back</translate></a>
-        </div>
-    </div>
-    <div ng-show="step==4 && !passmode && !checkSecondPass" class="modal modal-fixed-footer col-md-6 dapp-modal">
-        <div class="modal-header modal-iconed hide-in-small">
-            <div class="close-modal" ng-click="close()">
-                <span class="sr-only"><translate>Close modal</translate></span>
-            </div>
-        </div>
-        <div class="modal-header  modal-header-mobile clearfix">
-            <div class="close-modal show-in-small" ng-click="close()">
-                <span class="sr-only"><translate>Close modal</translate></span>
-            </div>
-            <div>
-                <h2>{{'Step 4/4 - Confirmation'|translate}}</h2>
-            </div>
-            <div class="hide-in-small"><translate>Please ensure all details are correct before confirming your dapp.</translate></div>
-        </div>
-        <div class="modal-content pretty-scrolling" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none; box-shadow: none;">
-            <div ng-include="'partials/modals/addDappModal/dappDataConfirmation.html'"></div>
-        </div>
-        <div class="modal-footer">
-            <a class="waves-effect btn-flat primary-action" ng-click="passcheck()"><translate>Confirm</translate></a>
-            <a class="waves-effect btn-flat second-action" ng-click="step=step-1;"><translate>Go back</translate></a>
-        </div>
-    </div>
-    <div ng-show="passmode && !checkSecondPass" class="modal modal-fixed-footer col-md-6 dapp-modal">
-        <div class="modal-header modal-iconed">
-            <div class="close-modal" ng-click="close()">
-                <span class="sr-only"><translate>Close modal</translate></span>
-            </div>
-        </div>
-        <div class="modal-header modal-header-mobile clearfix">
-            <div>
-                <h2>{{'Account Verification'|translate}}</h2>
-            </div>
-            <div><translate>Please enter your passphrase below.</translate></div>
-        </div>
-        <div class="modal-content pretty-scrolling" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none; box-shadow: none;">
-            <div ng-include="'partials/modals/addDappModal/accountVerification.html'"></div>
-        </div>
-        <div class="modal-footer">
-            <a class="waves-effect btn-flat primary-action" ng-click="sendData(secretPhrase)"><translate>Confirm</translate></a>
-            <a class="waves-effect btn-flat second-action" ng-click="passcheck()"><translate>Go back</translate></a>
-        </div>
-    </div>
-    <div ng-show="checkSecondPass" class="modal modal-fixed-footer col-md-6 dapp-modal">
-        <div class="modal-header modal-iconed">
-            <div class="close-modal" ng-click="close()">
-                <span class="sr-only"><translate>Close modal</translate></span>
-            </div>
-        </div>
-        <div class="modal-header modal-header-mobile clearfix">
-            <div>
-                <h2>{{'Account Verification'|translate}}</h2>
-            </div>
-            <div><translate>Please enter your second passphrase below.</translate></div>
-        </div>
-        <div class="modal-content pretty-scrolling" style="height: calc(100% - 290px); padding: 0; -webkit-box-shadow:none; box-shadow: none;">
-            <div ng-include="'partials/modals/addDappModal/accountVerification.html'"></div>
-        </div>
-        <div class="modal-footer">
-            <a class="waves-effect btn-flat primary-action" ng-click="sendData(secretPhrase, true)"><translate>SEND LISK</translate></a>
-            <a class="waves-effect btn-flat second-action" ng-click="passcheck(true)"><translate>GO BACK</translate></a>
         </div>
     </div>
 </div>
