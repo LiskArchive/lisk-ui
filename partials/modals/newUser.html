@@ -17,12 +17,12 @@
                                 <div><translate>You can find your passphrase below.</translate></div>
                             </div>
                             <div class="modal-body clearfix">
-                                <div class="left-margin-40 right-margin-40">
+                                <div class="left-margin-40 right-margin-40 top-margin-40">
                                     <div class="input-field passphraseGeneration">
                                         <textarea id="newPassphrase" class="materialize-textarea" ng-model="newPassphrase" autofocus readonly ng-trim="false"></textarea>
                                         <label for="newPassphrase" ng-class="{'active':activeLabel(newPassphrase)}">Passphrase</label>
                                     </div>
-                                    <span class="pull-right generate no-select" ng-click="generatePassphrase()">
+                                    <span class="pull-left generate no-select" ng-click="generatePassphrase()">
                                         <span><translate>Generate New</translate></span>
                                     </span>
                                 </div>
@@ -30,12 +30,22 @@
                             <div class="modal-body bordered">
                                 <span class="send-info-text"><translate>Make sure that you keep the passphrase safe. You will be asked to re-type it for confirmation.</translate></span>
                             </div>
-                            <div class="card-action clearfix">
+                            <div class="modal-body bordered clearfix">
+                                <ul class="nav modal-buttons pull-right">
+                                    <li>
+                                        <a href="#" ng-click="savePassToFile(newPassphrase)"><translate>SAVE PASSPHRASE</translate></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="blue-link" ng-click="goToStep(2)"><translate>NEXT STEP</translate></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--<div class="card-action clearfix">
                                 <div class="pull-right">
                                     <a href="#" class="waves-effect second-action" ng-click="savePassToFile(newPassphrase)"><translate>SAVE PASSPHRASE</translate></a>
                                     <a href='#' class="primary-action waves-effect" ng-click="goToStep(2)"><translate>NEXT STEP</translate></a>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                         <div class="material-modal-content" ng-show="step == 2">
                             <div class="modal-header modal-iconed">
@@ -50,23 +60,33 @@
                                 <div><translate>Please re-enter your passphrase below.</translate></div>
                             </div>
                             <div class="modal-body clearfix">
-                                <div class="left-margin-40 right-margin-40">
+                                <div class="left-margin-40 right-margin-40 top-margin-40 bottom-margin-40">
                                     <div class="input-field passphraseGeneration">
                                         <textarea id="repeatPassphrase" class="materialize-textarea" ng-trim="false" ng-model="repeatPassphrase" ng-class="{'invalid': noMatch}" autofocus></textarea>
                                         <label for="repeatPassphrase" ng-class="{'active':activeLabel(repeatPassphrase)}"><translate>Passphrase</translate></label>
                                     </div>
-                                    <span class="pass-error" style="margin-top: 0;" ng-show="noMatch"><translate>Passphrase doesn't match.</translate></span>
+                                    <span class="pass-error" style="margin-top: 0;" ng-show="noMatch"><translate>The passphrase entered doesn't match with the one generated before. Please go back and generate a new one.</translate></span>
                                 </div>
                             </div>
-                            <div class="modal-body bordered" ng-show="noMatch">
-                                <span class="send-info-text"><translate>The passphrase entered doesn't match with the one generated before. Please go back and generate a new one.</translate></span>
+                            <div class="modal-body bordered">
+                                <span class="send-info-text"><translate>Make sure that you keep the passphrase safe. If you lose your passphrase later on, your account can't be restored and all your funds will be lost.</translate></span>
                             </div>
-                            <div class="card-action clearfix">
+                            <div class="modal-body bordered clearfix">
+                                <ul class="nav modal-buttons pull-right">
+                                    <li>
+                                        <a href="#" ng-click="goToStep(1)"><translate>GO BACK</translate></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="blue-link" ng-click="login(repeatPassphrase)"><translate>NEXT STEP</translate></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--<div class="card-action clearfix">
                                 <div class="pull-right">
                                     <a href="#" class="waves-effect second-action" ng-click="goToStep(1)"><translate>GO BACK</translate></a>
                                     <a href='#' class="primary-action waves-effect" ng-click="login(repeatPassphrase)"><translate>GET STARTED</translate></a>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
