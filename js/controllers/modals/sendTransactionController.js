@@ -12,6 +12,8 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
     $scope.address = userService.address;
     $scope.focus = $scope.to ? 'amount' : 'to';
     $scope.presendError = false;
+    $scope.fee = 0;
+
 
     $scope.submit = function () {
         console.log('Transaction sent');
@@ -174,9 +176,9 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
     }
 
     $scope.getCurrentFee = function () {
-        $http.get("/api/blocks/getFee")
-            .then(function (resp) {
+        $http.get("/api/blocks/getFee").then(function (resp) {
                 $scope.currentFee = resp.data.fee;
+                $scope.fee = resp.data.fee;
             });
     }
 
