@@ -336,13 +336,26 @@
       background-color: @white;
     }
     .modal-body {
+      &.voting-fee {    
+        .fee-text {   
+          position: relative;   
+          right: 40px;    
+        }   
+      }
       &.voting-error {
         .pass-error {
-          padding: 20px;
+          padding-left: 65px;
           margin: 0;
+          top: -7px;
           &:after {
-            top: 18px;
-            right: 4px;
+            content: '';
+            height: 15px;
+            width: 17px;
+            display: block;
+            position: absolute;
+            background-image: url('@{images}/sprites/iconset.png');
+            background-position: 0 -69px;
+            left: 40px;
           }
         }
       }
@@ -548,4 +561,16 @@
     background-color: @grey;
     color: @orange;
   }
+}
+
+.fee-text {   
+  position: relative;   
+  top: -10px;   
+  line-height: @content-text + 2;   
+  font-size: @content-text;   
+  color: @fee-text;   
+}
+
+.fee-second-passphrase {
+  top: 3px !important;
 }
