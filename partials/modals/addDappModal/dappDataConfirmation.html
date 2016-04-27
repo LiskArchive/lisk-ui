@@ -41,7 +41,7 @@
     <li class="collection-item">
         <h4>{{'Fee'|translate}}</h4>
         <p>
-          <span ng-if="newDapp.icon" class="cut-text">{{fee}} LISK</span>
+          <span class="cut-text">{{fee | liskFilter}} LISK</span>
         </p>
     </li>
 </ul>
