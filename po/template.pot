@@ -4,10 +4,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 
-#: partials/dapp-entry.html:73
-msgid "(1449)"
-msgstr ""
-
 #: partials/votes.html:25
 msgid "{{count}} in Total"
 msgstr ""
