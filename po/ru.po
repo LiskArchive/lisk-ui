@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: Denis Smirnov <densmirnov@me.com>\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
@@ -17,13 +17,30 @@ msgstr ""
 msgid "(1449)"
 msgstr "(1449)"
 
+#: partials/votes.html:25
+msgid "{{count}} in Total"
+msgstr "{{count}} Всего"
+
+#: partials/delegates.html:93
+msgid "{{countStandby}} in Total"
+msgstr "{{countStandby}} Всего"
+
+#: partials/delegates.html:24
+msgid "{{countTop}} in Total"
+msgstr "{{countTop}} Всего"
+
+#: partials/votes.html:4
+msgid "{{voteList.length}} out of {{count}} Delegates selected"
+msgstr "{{voteList.length}} из {{count}} Делегатов выбрано"
+
+#: partials/delegates.html:4
+msgid ""
+"{{voteList.length}} out of {{countStandby + countTop}} Delegates selected"
+msgstr "{{voteList.length}} из {{countStandby + countTop}} Делегатов выбрано"
+
 #: partials/template.html:162
 msgid "2nd Passphrase"
-msgstr "Доп. Пароль"
-
-#: partials/dapps.html:152
-msgid "ADD NEW DAPP"
-msgstr "ДОБАВИТЬ DAPP"
+msgstr "2-ой Пароль"
 
 #: partials/modals/addDappModal.html:21
 msgid "Accept / Next Step"
@@ -44,22 +61,30 @@ msgstr "Учетная запись"
 #: partials/modals/sendTransaction.html:90 partials/modals/vote.html:44
 #: partials/modals/vote.html:79
 msgid "Account Verification"
-msgstr "Проверка учетной записи"
+msgstr "Проверка Учетной записи"
 
-#: partials/delegates.html:136 partials/delegates.html:67 partials/votes.html:65
+#: partials/delegates.html:136 partials/delegates.html:67
+#: partials/votes.html:65
 msgid "Add as Contact"
 msgstr "Добавить контакт"
 
 #: partials/modals/multisignatureModal.html:46
 msgid "Add group members by typing in their LISK address and pressing enter."
 msgstr ""
-"Введите адрес LISK, публичный ключ или имя участника для добавления в группу."
+
+#: partials/dapps.html:152
+msgid "ADD NEW DAPP"
+msgstr "ДОБАВИТЬ НОВОЕ DAPP"
+
+#: partials/modals/secondPassphraseModal.html:100
+msgid "add second passphrase"
+msgstr "добавить второй пароль"
 
 #: js/controllers/blockchainController.js:45
 #: js/controllers/transactionsController.js:66
 #: js/controllers/walletPendingsController.js:47
-#: js/controllers/walletTransactionsController.js:70
 #: js/controllers/walletsController.js:148
+#: js/controllers/walletTransactionsController.js:70
 #: partials/modals/transactionInfo.html:16 partials/modals/userInfo.html:60
 msgid "Amount"
 msgstr "Количество "
@@ -89,11 +114,11 @@ msgid ""
 "are eligible to forge. All fees are shared equally between the top 101 "
 "delegates. Registration costs: {{fee | liskFilter}} LISK."
 msgstr ""
-"Чтобы стать делегатом необходимо пройти регистрацию. Вы можете выбрать "
-"выбрать произвольное имя и использовать его в дальнейшем для продвижения "
-"вашего делегата. Вознаграждение за форджинг получают только делегаты, "
-"пользующиеся максимальной поддержкой. Все вознаграждения делятся поровну "
-"между 101 участником из списка лучших.\n"
+"Необходима регистрация, чтобы стать делегатом. Вы можете выбрать имя для "
+"делегата, которое можно будет использовать для продвижения вашего делегата. "
+"Вознаграждение за форджинг получают те кто находятся в списке 101 лучший "
+"делегат. Все вознаграждения делятся поровну между участниками находящимися в "
+"списке 101 лучший делегат.\n"
 "Стоимость регистрации: {{fee | liskFilter}} LISK."
 
 #: js/controllers/blockchainController.js:41
@@ -105,33 +130,7 @@ msgstr "Номер Блока"
 
 #: js/controllers/blockchainController.js:8 partials/template.html:117
 msgid "Blockchain"
-msgstr "Блокчейн"
-
-#: partials/modals/addDappModal.html:22
-#: partials/modals/multisignatureModal.html:28 partials/modals/vote.html:18
-msgid "CANCEL"
-msgstr "ОТМЕНИТЬ"
-
-#: partials/template.html:260
-msgid "CATEGORIES"
-msgstr "КАТЕГОРИИ"
-
-#: partials/multi.html:31 partials/wallet-pendings.html:28
-msgid "CONFIRM"
-msgstr "ПОДТВЕРДИТЬ"
-
-#: js/directives/voteActionDirective.js:14
-msgid "CONFIRM VOTE"
-msgstr "ПОДТВЕРДИТЬ ГОЛОС"
-
-#: partials/modals/blockInfo.html:74 partials/modals/blockModal.html:34
-#: partials/modals/transactionInfo.html:50 partials/modals/userInfo.html:94
-msgid "CONFIRMATIONS"
-msgstr "ПОДТВЕРЖДЕНИЯ"
-
-#: partials/multi.html:59
-msgid "CONFIRMED TRANSACTIONS"
-msgstr "ПОДТВЕРЖДЕННЫЕ ТРАНЗАКЦИИ"
+msgstr "Blockchain"
 
 #: partials/modals/forgingModal.html:32
 #: partials/modals/masterPassphraseModal.html:32
@@ -143,6 +142,15 @@ msgstr "ПОДТВЕРЖДЕННЫЕ ТРАНЗАКЦИИ"
 msgid "Cancel"
 msgstr "Отменить"
 
+#: partials/modals/addDappModal.html:22
+#: partials/modals/multisignatureModal.html:28 partials/modals/vote.html:18
+msgid "CANCEL"
+msgstr "ОТМЕНИТЬ"
+
+#: partials/template.html:260
+msgid "CATEGORIES"
+msgstr "КАТЕГОРИИ"
+
 #: partials/dapp-entry.html:61
 msgid "Category:"
 msgstr "Категория:"
@@ -153,8 +161,8 @@ msgstr "Категория:"
 #: partials/modals/addDappModal.html:56 partials/modals/addDappModal.html:74
 #: partials/modals/addDappModal.html:79 partials/modals/addDappModal.html:97
 #: partials/modals/blockInfo.html:10 partials/modals/blockModal.html:9
-#: partials/modals/confirmDeletionModal.html:8 partials/modals/errorModal.html:9
-#: partials/modals/forgingModal.html:9
+#: partials/modals/confirmDeletionModal.html:8
+#: partials/modals/errorModal.html:9 partials/modals/forgingModal.html:9
 #: partials/modals/masterPassphraseModal.html:8
 #: partials/modals/multiMembersModal.html:8
 #: partials/modals/multisignatureModal.html:143
@@ -175,68 +183,96 @@ msgstr "Категория:"
 #: partials/modals/vote.html:39 partials/modals/vote.html:74
 #: partials/modals/vote.html:9
 msgid "Close modal"
-msgstr "Закрыть окно"
+msgstr "Close modal"
 
 #: js/controllers/modals/multisignatureModalController.js:6
 msgid "Configuring multi-signature group"
-msgstr "Настройка группы с мульти-подписью"
+msgstr ""
+
+#: partials/modals/multisignatureModal.html:135
+#: partials/modals/multisignatureModal.html:174
+msgid "confirm"
+msgstr "подтвердить"
 
 #: partials/modals/addDappModal.html:110 partials/modals/addDappModal.html:90
 msgid "Confirm"
 msgstr "Подтвердить"
 
+#: partials/multi.html:31 partials/wallet-pendings.html:28
+msgid "CONFIRM"
+msgstr "ПОДТВЕРДИТЬ"
+
+#: partials/modals/secondPassphraseModal.html:69
+msgid "confirm second passphrase"
+msgstr ""
+
+#: js/directives/voteActionDirective.js:14
+msgid "CONFIRM VOTE"
+msgstr "ПОДТВЕРДИТЬ ГОЛОС"
+
 #: partials/modals/confirmDeletionModal.html:13
 msgid "Confirmation"
 msgstr "Подтверждение"
 
+#: js/controllers/walletsController.js:115
 #: js/controllers/walletTransactionsController.js:72
-#: js/controllers/walletsController.js:115 partials/modals/blockInfo.html:20
-#: partials/modals/transactionInfo.html:13 partials/modals/userInfo.html:57
+#: partials/modals/blockInfo.html:20 partials/modals/transactionInfo.html:13
+#: partials/modals/userInfo.html:57
 msgid "Confirmations"
 msgstr "Подтверждения"
 
-#: js/controllers/walletPendingsController.js:49
-#: js/controllers/walletsController.js:150
-msgid "Confirmations Needed"
-msgstr "Необходимо Подтверждений "
+#: partials/modals/blockInfo.html:74 partials/modals/blockModal.html:34
+#: partials/modals/transactionInfo.html:50 partials/modals/userInfo.html:94
+msgid "CONFIRMATIONS"
+msgstr "ПОДТВЕРЖДЕНИЯ"
 
 #: partials/modals/multisignatureModal.html:113
 #: partials/modals/multisignatureModal.html:73
 msgid "Confirmations needed"
 msgstr "Необходимо подтверждений"
 
+#: js/controllers/walletPendingsController.js:49
+#: js/controllers/walletsController.js:150
+msgid "Confirmations Needed"
+msgstr "Необходимо Подтверждений "
+
 #: js/controllers/modals/multiMembersModalController.js:5
 msgid "Confirmed by"
 msgstr "Подтверждено"
+
+#: partials/multi.html:59
+msgid "CONFIRMED TRANSACTIONS"
+msgstr "ПОДТВЕРЖДЕННЫЕ ТРАНЗАКЦИИ"
 
 #: partials/template.html:84
 msgid "Conversations"
 msgstr "Сообщения"
 
-#: partials/delegates.html:127 partials/delegates.html:58 partials/votes.html:56
+#: partials/delegates.html:127 partials/delegates.html:58
+#: partials/votes.html:56
 msgid "Copy Address"
 msgstr "Скопировать Адрес"
 
-#: partials/delegates.html:130 partials/delegates.html:61 partials/votes.html:59
+#: partials/delegates.html:130 partials/delegates.html:61
+#: partials/votes.html:59
 msgid "Copy Name"
 msgstr "Скопировать Имя"
 
-#: partials/dapp-entry.html:21 partials/dapp-entry.html:31
-#: partials/dapp-entry.html:40
-msgid "DOWNLOAD"
-msgstr "ЗАГРУЗИТЬ"
-
 #: js/controllers/dappsController.js:8 partials/template.html:90
 msgid "Dapp Store"
-msgstr "Магазин DApp"
+msgstr "Dapp Магазин"
 
 #: js/controllers/accountController.js:8 partials/template.html:72
 msgid "Dashboard"
-msgstr "Информация"
+msgstr "Общая информация"
 
 #: partials/modals/registrationDelegateModal.html:21
 msgid "Delegate Name"
-msgstr "ИМЯ ДЕЛЕГАТА"
+msgstr "Имя Делегата"
+
+#: partials/template.html:240
+msgid "delegate registration"
+msgstr "регистрация делегата"
 
 #: partials/template.html:104 partials/template.html:232
 msgid "Delegates"
@@ -255,6 +291,11 @@ msgstr "Отключить Форджинг"
 msgid "Disabled"
 msgstr "Отключено"
 
+#: partials/dapp-entry.html:21 partials/dapp-entry.html:31
+#: partials/dapp-entry.html:40
+msgid "DOWNLOAD"
+msgstr "ЗАГРУЗИТЬ"
+
 #: partials/modals/masterPassphraseModal.html:24
 msgid "Empty passphrase"
 msgstr "Пустой пароль"
@@ -268,36 +309,32 @@ msgstr "Включить Форджинг"
 msgid "Enabled"
 msgstr "Включено"
 
-#: partials/modals/blockInfo.html:72 partials/modals/blockModal.html:32
-#: partials/modals/transactionInfo.html:47 partials/modals/userInfo.html:92
-msgid "FEE"
-msgstr "КОМИССИЯ"
-
-#: partials/template.html:245
-msgid "FORGING"
-msgstr "ФОРДЖИНГ"
-
 #: js/controllers/dappController.js:143
 msgid "Failed to install dapp"
-msgstr "Не удалось установить DApp"
+msgstr ""
 
 #: js/controllers/dappController.js:183
 msgid "Failed to launch Dapp"
-msgstr "Не удалось запустить DApp"
+msgstr ""
 
 #: js/controllers/dappController.js:94
 msgid "Failed to uninstall Dapp"
-msgstr "Не удалось удалить DApp"
+msgstr ""
 
 #: js/controllers/blockchainController.js:46
 #: js/controllers/forgingController.js:117
 #: js/controllers/transactionsController.js:67
 #: js/controllers/walletPendingsController.js:48
-#: js/controllers/walletTransactionsController.js:71
 #: js/controllers/walletsController.js:149
+#: js/controllers/walletTransactionsController.js:71
 #: partials/modals/transactionInfo.html:19 partials/modals/userInfo.html:63
 msgid "Fee"
 msgstr "Комиссия"
+
+#: partials/modals/blockInfo.html:72 partials/modals/blockModal.html:32
+#: partials/modals/transactionInfo.html:47 partials/modals/userInfo.html:92
+msgid "FEE"
+msgstr "КОМИССИЯ"
 
 #: partials/forging.html:74
 msgid "Forged Blocks"
@@ -310,21 +347,43 @@ msgstr "Произведено Блоков"
 msgid "Forging"
 msgstr "Форджинг"
 
+#: partials/template.html:245
+msgid "FORGING"
+msgstr "ФОРДЖИНГ"
+
 #: partials/modals/secondPassphraseModal.html:18
 msgid ""
-"Further protect your account with an optional second passphrase! Please allow "
-"some time for the changes to take effect. Service cost: <b>{{fee | "
+"Further protect your account with an optional second passphrase! Please "
+"allow some time for the changes to take effect. Service cost: <b>{{fee | "
 "liskFilter}} LISK</b>. Your balance: <b>{{totalBalance | liskFilter}} LISK</"
 "b>."
 msgstr ""
-"Защитите вашу ученую запись при помощи дополнительного пароля! Пожалуйста "
-"учтите, что изменения вступят в силу не сразу, а через некоторое время.\n"
+"Усилить защиту вашей ученой записи с помощью второго пароля! Пожалуйста "
+"учтите, что необходимо некоторое время для вступления изменений в силу.\n"
 "Стоимость: <b>{{fee | liskFilter}} LISK</b>. Ваш баланс: <b>{{totalBalance | "
 "liskFilter}} LISK</b>."
 
+#: partials/settings.html:6
+msgid "General"
+msgstr "Основное"
+
+#: partials/modals/newUser.html:26
+#: partials/modals/secondPassphraseModal.html:30
+msgid "Generate New"
+msgstr "Сгенерировать Новый"
+
+#: js/controllers/blockchainController.js:42 partials/modals/blockInfo.html:46
+msgid "Generator"
+msgstr "Генератор"
+
 #: partials/modals/newUser.html:67
 msgid "GET STARTED"
-msgstr "НАЧАЛО"
+msgstr "НАЧАТЬ"
+
+#: partials/modals/addDappModal.html:111 partials/modals/addDappModal.html:45
+#: partials/modals/addDappModal.html:68 partials/modals/addDappModal.html:91
+msgid "Go back"
+msgstr "Назад"
 
 #: partials/modals/addDappModal.html:131
 #: partials/modals/multisignatureModal.html:132
@@ -337,34 +396,13 @@ msgstr "НАЧАЛО"
 msgid "GO BACK"
 msgstr "НАЗАД"
 
-#: partials/settings.html:6
-msgid "General"
-msgstr "Основное"
-
-#: partials/modals/newUser.html:26 partials/modals/secondPassphraseModal.html:30
-msgid "Generate New"
-msgstr "Сгенерировать Новый"
-
-#: js/controllers/blockchainController.js:42 partials/modals/blockInfo.html:46
-msgid "Generator"
-msgstr "Генератор"
-
-#: partials/modals/addDappModal.html:111 partials/modals/addDappModal.html:45
-#: partials/modals/addDappModal.html:68 partials/modals/addDappModal.html:91
-msgid "Go back"
-msgstr "Назад"
-
 #: partials/template.html:137
 msgid "Go to previous page"
 msgstr "Вернуться на предыдущую страницу"
 
 #: js/controllers/walletsController.js:113
 msgid "Group Name"
-msgstr "Название группы"
-
-#: partials/template.html:276
-msgid "HOME"
-msgstr "ДОМОЙ"
+msgstr "Имя Группы"
 
 #: js/controllers/blockchainController.js:40
 #: js/controllers/forgingController.js:114
@@ -373,6 +411,10 @@ msgstr "ДОМОЙ"
 #: partials/modals/blockInfo.html:23
 msgid "Height"
 msgstr "Высота"
+
+#: partials/template.html:276
+msgid "HOME"
+msgstr "ДОМОЙ"
 
 #: partials/dapp-entry.html:20
 msgid "INSTALL"
@@ -384,23 +426,7 @@ msgstr "УСТАНОВЛЕНО"
 
 #: partials/dapps.html:235
 msgid "Installed Dapps"
-msgstr "Установленные DApp"
-
-#: partials/dapp-entry.html:30
-msgid "LAUNCH"
-msgstr "ЗАПУСТИТЬ"
-
-#: partials/modals/multisignatureModal.html:52
-msgid "LISK Address"
-msgstr "Адрес LISK"
-
-#: partials/modals/sendTransaction.html:26
-msgid "LISK Amount"
-msgstr "Количество LISK"
-
-#: partials/forging.html:11
-msgid "LISK Earned"
-msgstr "Заработано LISK"
+msgstr "Установленные Dapp"
 
 #: partials/settings.html:9
 msgid "Language"
@@ -408,7 +434,7 @@ msgstr "Язык"
 
 #: partials/multi.html:6
 msgid "Latest Multi-Signature Transactions"
-msgstr "Последние транзакции с мульти-подписью"
+msgstr "Последние транзакции с Мульти-Подписью"
 
 #: partials/account.html:57
 msgid "Latest Transactions"
@@ -418,58 +444,74 @@ msgstr "Последние Транзакции"
 msgid "Latest version"
 msgstr "Последняя версия"
 
+#: partials/dapp-entry.html:30
+msgid "LAUNCH"
+msgstr "ЗАПУСТИТЬ"
+
 #: wallet.html:20
 msgid "Lisk - Decentralized Application Platform"
-msgstr "LISK - Платформа для децентрализованных приложений"
+msgstr "Lisk - Платформа для децентрализованных приложений"
 
 #: js/controllers/delegatesController.js:158
 #: js/controllers/votedDelegatesController.js:117
 #: js/controllers/walletPendingsController.js:43
 msgid "Lisk Address"
-msgstr "Адрес LISK"
+msgstr "Lisk Адрес"
+
+#: partials/modals/multisignatureModal.html:52
+msgid "LISK Address"
+msgstr ""
+
+#: partials/modals/sendTransaction.html:26
+msgid "LISK Amount"
+msgstr "Количество LISK"
 
 #: partials/account.html:33
 msgid "Lisk Client"
-msgstr "Клиент LISK"
+msgstr "Lisk Клиент"
 
 #: partials/account.html:43
 msgid "Lisk Client Outdated"
-msgstr "Версия LISK устарела!"
+msgstr "Версия Lisk Клиента устарела"
 
-#: js/controllers/walletsController.js:7
-msgid "Loading Multi-Signature Groups"
-msgstr "Загрузка групп с мульти-подписью…"
+#: partials/forging.html:11
+msgid "LISK Earned"
+msgstr "Заработано LISK"
 
 #: js/controllers/blockchainController.js:7
 msgid "Loading blockchain"
-msgstr "Загрузка блокчейна…"
+msgstr "Загрузка Блокчейна"
 
 #: js/controllers/dappController.js:7
 msgid "Loading dapp"
-msgstr "Загрузка DApp…"
+msgstr "Загрузка dapp"
 
 #: js/controllers/dappsCategoryController.js:7
 #: js/controllers/dappsController.js:7
 msgid "Loading dapps"
-msgstr "Загрузка DApp…"
+msgstr "Загрузка dapps"
 
 #: js/controllers/accountController.js:7
 msgid "Loading dashboard"
-msgstr "Загрузка информационной панели…"
+msgstr "Загрузка Панели общей информации"
 
 #: js/controllers/delegatesController.js:7
 #: js/controllers/votedDelegatesController.js:7
 msgid "Loading delegates"
-msgstr "Загрузка делегатов…"
+msgstr "Загрузка делегатов"
 
 #: js/controllers/forgingController.js:82
 msgid "Loading forging status"
-msgstr "Загрузка статуса…"
+msgstr "Загрузка форджинг статуса"
+
+#: js/controllers/walletsController.js:7
+msgid "Loading Multi-Signature Groups"
+msgstr "Загрузка групп Мульти-Подписей"
 
 #: js/controllers/transactionsController.js:7
 #: js/controllers/walletPendingsController.js:7
 msgid "Loading transactions"
-msgstr "Загрузка транзакций…"
+msgstr "Загрузка транзакций"
 
 #: partials/blockchain.html:35 partials/delegates.html:150
 #: partials/delegates.html:81
@@ -478,22 +520,21 @@ msgstr "Загрузка…"
 
 #: partials/template.html:168
 msgid "Logout"
-msgstr "Выход"
+msgstr "Выйти"
 
 #: partials/modals/newUser.html:31
 msgid ""
 "Make sure that you keep the passphrase safe. You will be asked to re-type it "
 "for confirmation."
 msgstr ""
-"Убедитесь, что пароль сохранен в надежном месте. Для подтверждения вам будет "
-"необходимо ввести его повторно."
+"Убедитесь, что ваш пароль находится в безопасном месте. Вам будет необходимо "
+"ввести его повторно для подтверждения."
 
 #: partials/modals/sendTransaction.html:34
 msgid ""
 "Make sure you're sending LISK to the right address. This action can't be "
 "undone later."
 msgstr ""
-"Убедитесь, что отправляете LISK на правильный адрес. Это действие необратимо."
 
 #: js/controllers/modals/masterPassphraseModalController.js:9
 msgid "Master Passphrase"
@@ -510,23 +551,23 @@ msgstr "Больше"
 #: js/controllers/walletsController.js:8 partials/settings.html:11
 #: partials/template.html:78
 msgid "Multi-Signature"
-msgstr "Мульти-подпись"
+msgstr "Мульти-Подпись"
 
 #: js/controllers/modals/multiMembersModalController.js:5
 msgid "Multi-Signature Group Members"
-msgstr "Члены группы с мульти-подписью"
+msgstr ""
 
 #: partials/settings.html:22
 msgid "Multi-Signature is Disabled"
-msgstr "Мульти-подпись отключена"
+msgstr ""
 
 #: partials/settings.html:23
 msgid "Multi-Signature is Enabled"
-msgstr "Мульти-подпись включена"
+msgstr ""
 
 #: partials/multi.html:42
 msgid "My Multi-Signature Groups"
-msgstr "Мои группы с мульти-подписью"
+msgstr "Мои группы Мульти-Подписью"
 
 #: partials/template.html:159
 msgid "My Profile"
@@ -540,15 +581,29 @@ msgstr "Мои Голоса"
 msgid "My votes ({{myVotesCount||'0'}})"
 msgstr "Мои голоса ({{myVotesCount||'0'}})"
 
+#: js/controllers/delegatesController.js:157
+#: js/controllers/votedDelegatesController.js:116
+msgid "Name"
+msgstr "Имя"
+
 #: partials/passphrase.html:26
 msgid "NEW ACCOUNT"
 msgstr "НОВАЯ УЧЕТНАЯ ЗАПИСЬ"
+
+#: partials/modals/multisignatureModal.html:91
+msgid "next"
+msgstr "далее"
 
 #: partials/modals/multisignatureModal.html:31
 msgid "NEXT"
 msgstr "ДАЛЕЕ"
 
-#: partials/modals/newUser.html:36 partials/modals/secondPassphraseModal.html:37
+#: partials/modals/addDappModal.html:44 partials/modals/addDappModal.html:67
+msgid "Next Step"
+msgstr "Следующий Шаг"
+
+#: partials/modals/newUser.html:36
+#: partials/modals/secondPassphraseModal.html:37
 msgid "NEXT STEP"
 msgstr "СЛЕДУЮЩИЙ ШАГ"
 
@@ -556,30 +611,22 @@ msgstr "СЛЕДУЮЩИЙ ШАГ"
 msgid "NO"
 msgstr "НЕТ"
 
-#: js/controllers/delegatesController.js:157
-#: js/controllers/votedDelegatesController.js:116
-msgid "Name"
-msgstr "Имя"
-
-#: partials/modals/addDappModal.html:44 partials/modals/addDappModal.html:67
-msgid "Next Step"
-msgstr "Следующий Шаг"
-
 #: partials/blockchain.html:30
 msgid "No blockchain"
-msgstr "Блокчейн не найден"
+msgstr "Нет блокчейна"
 
 #: partials/dapps-category.html:6 partials/dapps-category.html:7
 msgid "No dapps matching your search criteria were found."
-msgstr "Не было найдено ни одного DApp, соответствующего вашему запросу."
+msgstr "Не было найдено ни одного dapp подходящего вашему критерию"
 
 #: partials/delegates.html:145 partials/delegates.html:76
 msgid "No delegates"
-msgstr "Делегаты отсутствуют"
+msgstr "Нет делегатов"
 
 #: partials/dapps.html:166
 msgid "No results for search '{{searchDapp.searchForDappGlobal}}' in dapps."
-msgstr "Нет результатов по запросу '{{searchDapp.searchForDappGlobal}}'."
+msgstr ""
+"Нет результатов по запросу '{{searchDapp.searchForDappGlobal}}' в dapps."
 
 #: partials/blockchain.html:42 partials/transactions.html:65
 msgid "No results for this search."
@@ -589,23 +636,24 @@ msgstr "Нет результатов по этому запросу"
 msgid "Number of members"
 msgstr "Количество пользователей"
 
-#: partials/modals/errorModal.html:27
-msgid "OK"
-msgstr "ОК"
-
-#: partials/dapp-entry.html:39
-msgid "OPEN"
-msgstr "ОТКРЫТЬ"
-
 #: partials/template.html:248
 msgid "Off"
 msgstr "Выключить"
+
+#: partials/modals/errorModal.html:27
+msgid "OK"
+msgstr "ОК"
 
 #: partials/template.html:251
 msgid "On"
 msgstr "Включить"
 
-#: js/controllers/forgingController.js:41 js/controllers/forgingController.js:53
+#: partials/dapp-entry.html:39
+msgid "OPEN"
+msgstr "ОТКРЫТЬ"
+
+#: js/controllers/forgingController.js:41
+#: js/controllers/forgingController.js:53
 #: js/controllers/forgingController.js:64
 msgid "Others"
 msgstr "Другие"
@@ -614,22 +662,23 @@ msgstr "Другие"
 msgid "Passphrase"
 msgstr "Пароль"
 
-#: partials/modals/newUser.html:58 partials/modals/secondPassphraseModal.html:59
+#: partials/modals/newUser.html:58
+#: partials/modals/secondPassphraseModal.html:59
 msgid "Passphrase doesn't match."
-msgstr "Пароль не совпадает."
+msgstr "Пароль не совпадает"
 
 #: js/controllers/walletPendingsController.js:8
 msgid "Pending transactions"
-msgstr "Транзакции, ожидающие исполнения"
+msgstr "Транзакции в ожидании"
 
 #: partials/modals/multisignatureModal.html:106
 msgid ""
 "Please check your input below and go back if necessary. Double-check the "
 "group members, else you risk losing your LISK balance!"
 msgstr ""
-"Пожалуйста проверьте введенные данные и при необходимости вернитесь назад. \n"
+"Пожалуйста проверьте введенные данные и при необходимости вернитесь назад. "
 "Дважды проверьте членов группы, в противном случае вы рискуете потерять все "
-"средства, хранящиеся на вашем счету!"
+"ваши LISK."
 
 #: partials/modals/registrationDelegateModal.html:15
 msgid "Please choose a delegate name."
@@ -638,20 +687,16 @@ msgstr "Пожалуйста выберите имя делегата."
 #: partials/modals/addDappModal.html:84
 msgid "Please ensure all details are correct before confirming your dapp."
 msgstr ""
-"Пожалуйста убедитесь, что все введенные данные верны, прежде чем отправлять "
-"подтверждение."
+
+#: js/controllers/modals/masterPassphraseModalController.js:8
+msgid "Please enter the master passphrase for this node."
+msgstr ""
 
 #: partials/modals/sendTransaction.html:15
 msgid ""
 "Please enter the Recipient Address and LISK Amount that you would like send "
 "below."
 msgstr ""
-"Пожалуйста введите адрес получателя и количество LISK, которое вы хотите "
-"отправить."
-
-#: js/controllers/modals/masterPassphraseModalController.js:8
-msgid "Please enter the master passphrase for this node."
-msgstr "Пожалуйста введите основной пароль для этого сервера."
 
 #: partials/modals/addDappModal.html:104 partials/modals/forgingModal.html:16
 #: partials/modals/registrationDelegateModal.html:52
@@ -666,33 +711,33 @@ msgstr "Пожалуйста введите ваш пароль."
 
 #: partials/modals/secondPassphraseModal.html:83
 msgid "Please enter your primary passphrase below."
-msgstr "Пожалуйста введите ваш основной пароль:"
+msgstr ""
 
 #: partials/modals/addDappModal.html:124
 #: partials/modals/registrationDelegateModal.html:87
 #: partials/modals/sendTransaction.html:92 partials/modals/vote.html:81
 msgid "Please enter your second passphrase below."
-msgstr "Пожалуйста введите ваш дополнительный пароль:"
+msgstr "Пожалуйста введите ваш второй пароль ниже."
 
 #: partials/modals/secondPassphraseModal.html:20
 msgid "Please find your second passphrase below."
-msgstr "Ваш новый дополнительный пароль:"
+msgstr ""
 
 #: partials/modals/addDappModal.html:38
 msgid "Please provide a specification for your dapp below."
-msgstr "Пожалуйста укажите параметры для вашего DApp"
+msgstr ""
 
 #: partials/modals/addDappModal.html:61
 msgid "Please provide storage links for your dapp below."
-msgstr "Пожалуйста укажите способ хранения для вашего DApp"
+msgstr ""
 
 #: partials/modals/newUser.html:50
 msgid "Please re-enter your passphrase below."
-msgstr "Введите ваш основной пароль еще раз:"
+msgstr "Пожалуйста введите повторно ваш пароль внизу."
 
 #: partials/modals/secondPassphraseModal.html:51
 msgid "Please re-enter your second passphrase below."
-msgstr "Введите ваш дополнительный пароль повторно."
+msgstr ""
 
 #: partials/modals/addDappModal.html:15
 #: partials/modals/multisignatureModal.html:15
@@ -709,19 +754,11 @@ msgstr "Предыдущий Блок"
 
 #: partials/modals/secondPassphraseModal.html:90
 msgid "Primary Passphrase"
-msgstr "Основной пароль"
+msgstr ""
 
 #: partials/modals/userInfo.html:18
 msgid "Public key"
 msgstr "Публичный ключ"
-
-#: partials/dapp-entry.html:90
-msgid "READ MORE"
-msgstr "ПРОЧИТАТЬ БОЛЬШЕ"
-
-#: js/directives/voteActionDirective.js:16
-msgid "REMOVE VOTE"
-msgstr "ОТМЕНИТЬ ГОЛОС"
 
 #: js/controllers/delegatesController.js:156
 #: js/controllers/forgingController.js:41
@@ -729,20 +766,30 @@ msgstr "ОТМЕНИТЬ ГОЛОС"
 msgid "Rank"
 msgstr "Место"
 
+#: partials/dapp-entry.html:90
+msgid "READ MORE"
+msgstr "ПРОЧИТАТЬ БОЛЬШЕ"
+
 #: js/controllers/transactionsController.js:64
 #: js/controllers/walletPendingsController.js:45
-#: js/controllers/walletTransactionsController.js:68
-#: js/controllers/walletsController.js:146 partials/account.html:73
+#: js/controllers/walletsController.js:146
+#: js/controllers/walletTransactionsController.js:68 partials/account.html:73
 msgid "Recipient"
 msgstr "Получатель"
 
 #: partials/modals/sendTransaction.html:20
 msgid "Recipient Address"
-msgstr "Адрес получателя"
+msgstr ""
+
+#: partials/modals/registrationDelegateModal.html:107
+#: partials/modals/registrationDelegateModal.html:37
+#: partials/modals/registrationDelegateModal.html:69
+msgid "register"
+msgstr "зарегистрировать"
 
 #: partials/modals/registrationDelegateModal.html:13
 msgid "Register as a Delegate"
-msgstr "Регистрация делегата"
+msgstr "Зарегистрировать в качестве Делегата"
 
 #: partials/forging.html:6
 msgid "Registered on"
@@ -756,64 +803,70 @@ msgstr "Регистрация пользователя"
 msgid "Remember during this session"
 msgstr "Запомнить в течении данной сессии"
 
+#: partials/votes.html:14
+msgid "remove vote"
+msgstr "удалить голос"
+
+#: js/directives/voteActionDirective.js:16
+msgid "REMOVE VOTE"
+msgstr "УДАЛИТЬ ГОЛОС"
+
 #: js/directives/voteTitleDirective.js:17
 msgid "Removing vote from delegates"
-msgstr "Отмена голоса за делегатов"
+msgstr "Удаление голосов с делегатов"
 
 #: js/controllers/blockchainController.js:47
 #: js/controllers/forgingController.js:118 partials/modals/blockInfo.html:26
 msgid "Reward"
 msgstr "Вознаграждение"
 
-#: partials/modals/newUser.html:35 partials/modals/secondPassphraseModal.html:36
+#: partials/modals/newUser.html:35
+#: partials/modals/secondPassphraseModal.html:36
 msgid "SAVE PASSPHRASE"
 msgstr "СОХРАНИТЬ ПАРОЛЬ"
 
-#: partials/modals/masterPassphraseModal.html:35 partials/template.html:149
-msgid "SEND"
-msgstr "ОТПРАВИТЬ"
-
-#: partials/modals/addDappModal.html:130
-msgid "SEND LISK"
-msgstr "ОТПРАВИТЬ LISK"
-
-#: partials/passphrase.html:27
-msgid "SIGN IN"
-msgstr "ВОЙТИ"
-
-#: partials/dapp-entry.html:25 partials/dapp-entry.html:34
-#: partials/dapp-entry.html:43 partials/dapp-entry.html:50
-msgid "SOURCE CODE"
-msgstr "ИСХОДНЫЙ КОД"
-
 #: js/controllers/modals/addDappModalController.js:6
 msgid "Saving new dapp"
-msgstr "Сохранение нового DApp"
-
-#: partials/template.html:308 partials/template.html:333
-msgid "Search for Dapps"
-msgstr "Поиск DApp"
+msgstr "Сохранение нового dapp"
 
 #: partials/template.html:208
 msgid "Search for blocks"
 msgstr "Поиск блоков"
 
+#: partials/template.html:308 partials/template.html:333
+msgid "Search for Dapps"
+msgstr "Поиск Dapp"
+
 #: partials/template.html:182
 msgid ""
 "Search for transactions (Transaction ID, Sender address, Recipient address)"
 msgstr ""
-"Поиск транзакций (по адресу отправителя, адресу получателя или идентификатору "
-"транзакции)"
+"Поиск транзакций (Идентификатор транзакции, Адрес отправителя, Адрес "
+"получателя)"
 
 #: partials/modals/secondPassphraseModal.html:57
 msgid "Second Passphrase"
-msgstr "Дополнительный пароль"
+msgstr ""
+
+#: partials/modals/masterPassphraseModal.html:35 partials/template.html:149
+msgid "SEND"
+msgstr "ОТПРАВИТЬ"
+
+#: partials/modals/sendTransaction.html:112
+#: partials/modals/sendTransaction.html:42
+#: partials/modals/sendTransaction.html:77
+msgid "send lisk"
+msgstr "отправить lisk"
 
 #: partials/delegates.html:120 partials/delegates.html:51
 #: partials/modals/sendTransaction.html:13 partials/modals/userInfo.html:28
 #: partials/votes.html:49
 msgid "Send LISK"
 msgstr "Отправить LISK"
+
+#: partials/modals/addDappModal.html:130
+msgid "SEND LISK"
+msgstr "ОТПРАВИТЬ LISK"
 
 #: js/controllers/transactionsController.js:63 partials/account.html:70
 msgid "Sender"
@@ -826,52 +879,61 @@ msgstr "Настройки"
 #: partials/blockchain.html:12 partials/forging.html:82
 #: partials/transactions.html:11
 msgid "Show All Columns"
-msgstr "Все колонки"
+msgstr "Показать все колонны"
 
 #: partials/blockchain.html:13 partials/forging.html:85
 #: partials/transactions.html:14
 msgid "Show Full Time"
-msgstr "Время полностью"
+msgstr "Показать время полностью"
 
 #: partials/modals/passphraseCheck.html:35
 msgid "Sign"
 msgstr "Подписать"
 
+#: partials/passphrase.html:27
+msgid "SIGN IN"
+msgstr "ВОЙТИ"
+
+#: partials/dapp-entry.html:25 partials/dapp-entry.html:34
+#: partials/dapp-entry.html:43 partials/dapp-entry.html:50
+msgid "SOURCE CODE"
+msgstr "ИСХОДНЫЙ КОД"
+
 #: partials/delegates.html:92
 msgid "Standby Delegates"
-msgstr "Делегаты в списке ожидания"
+msgstr "Делегаты в ожидании"
 
 #: partials/modals/newUser.html:15
 msgid "Step 1/2 - Generate a Passphrase"
-msgstr "Шаг 1/2 - Создание пароля"
+msgstr "Шаг 1/2 - Сгенерировать пароль"
 
 #: partials/modals/secondPassphraseModal.html:15
 msgid "Step 1/2 - Generate a Second Passphrase"
-msgstr "Шаг 1/2 - Создание дополнительного пароля"
+msgstr ""
 
 #: partials/modals/multisignatureModal.html:13
 msgid "Step 1/3 - Preamble"
-msgstr "Шаг 1/3 - Вступление"
+msgstr "Шаг 1/3 - Лицензионное соглашение"
 
 #: partials/modals/addDappModal.html:13
 msgid "Step 1/4 - Preamble"
-msgstr "Шаг 1/4 - Вступление"
+msgstr ""
 
 #: partials/modals/newUser.html:48
 msgid "Step 2/2 - Confirm your Passphrase"
-msgstr "Шаг 2/2 - Подтверждение пароля"
+msgstr ""
 
 #: partials/modals/secondPassphraseModal.html:49
 msgid "Step 2/2 - Confirm your Second Passphrase"
-msgstr "Шаг 2/2 - Подтверждение дополнительного пароля"
+msgstr ""
 
 #: partials/modals/multisignatureModal.html:44
 msgid "Step 2/3 - Specify Group Members"
-msgstr "Шаг 2/3 - Выбор членов группы"
+msgstr "Шан 2/3 - Определите членов группы"
 
 #: partials/modals/addDappModal.html:36
 msgid "Step 2/4 - Specifications"
-msgstr "Шаг 2/4 - Спецификации"
+msgstr ""
 
 #: partials/modals/multisignatureModal.html:104
 msgid "Step 3/3 - Confirmation"
@@ -879,60 +941,51 @@ msgstr "Шаг 3/3 - Подтверждение"
 
 #: partials/modals/addDappModal.html:59
 msgid "Step 3/4 - Storage Links"
-msgstr "Шаг 3/4 - Ссылки для хранения"
+msgstr ""
 
 #: partials/modals/addDappModal.html:82
 msgid "Step 4/4 - Confirmation"
-msgstr "Шаг 4/4 - Подтверждение"
+msgstr ""
 
 #: partials/modals/blockInfo.html:16 partials/modals/transactionInfo.html:12
 #: partials/modals/userInfo.html:35
 msgid "Summary"
 msgstr "Итог"
 
-#: partials/modals/newUser.html:62 partials/modals/secondPassphraseModal.html:64
+#: partials/modals/newUser.html:62
+#: partials/modals/secondPassphraseModal.html:64
 msgid ""
-"The passphrase entered doesn't match with the one generated before. Please go "
-"back and generate a new one."
+"The passphrase entered doesn't match with the one generated before. Please "
+"go back and generate a new one."
 msgstr ""
-"Введенный пароль не совпадает с созданным ранее. Пожалуйста вернитесь назад и "
-"создайте новый пароль."
+"Введенный пароль не совпадает со сгенерированным ранее паролем. Пожалуйста "
+"вернитесь назад и генерируйте новый пароль."
 
 #: js/directives/voteTitleDirective.js:22
 msgid "This action will cost"
-msgstr "Данное действие будет стоить:"
+msgstr "Данное действие будет стоить"
 
 #: partials/modals/multisignatureModal.html:21
 msgid ""
-"This walkthrough will guide you through the necessary steps to create a multi-"
-"signature group. It's very important that you know what multi-signatures are, "
-"else you risk loosing your LISK balance.<br><br>A multi-signature group "
-"consists of N accounts, the one who created the group is the group owner. "
-"When the owner wants to make a transaction, M of N accounts within the group "
-"need to confirm it, otherwise the transaction will not be processed. The "
-"values M and N are specified in this walkthrough.<br><br><b>Things you need "
-"to know for the multi-signature group setup:</b><br><br>• The number of group "
-"members (N).<br>• The number of needed confirmations (M).<br>• The addresses "
-"of the Lisk accounts you want to add to the group."
+"This walkthrough will guide you through the necessary steps to create a "
+"multi-signature group. It's very important that you know what multi-"
+"signatures are, else you risk loosing your LISK balance.<br><br>A multi-"
+"signature group consists of N accounts, the one who created the group is the "
+"group owner. When the owner wants to make a transaction, M of N accounts "
+"within the group need to confirm it, otherwise the transaction will not be "
+"processed. The values M and N are specified in this walkthrough."
+"<br><br><b>Things you need to know for the multi-signature group setup:</"
+"b><br><br>• The number of group members (N).<br>• The number of needed "
+"confirmations (M).<br>• The addresses of the Lisk accounts you want to add "
+"to the group."
 msgstr ""
-"Это руководство поможет вам пройти необходимые шаги для создания группы с "
-"мульти-подписью. Крайне важно, чтобы вы осознавали цель и необходимость этого "
-"действия, в противном случае вы рискуете потерять все ваши средства.<br><br>В "
-"группу с мульти-подписью входят несколько аккаунтов, при этом создатель "
-"группы становится ее владельцем. Для отправки LISK кому-либо потребуется "
-"дополнительное подтверждение от остальных участников группы, иначе операция "
-"будет отменена. Далее вы сможете определить необходимое количество "
-"подтверждений.<br><br><b>Для создания группы с мульти-подписью необходимы "
-"следующие данные:</b><br><br> ► Общее количество членов группы;<br> ► "
-"Необходимое количество подтверждений;<br> ► Адрес аккаунта LISK каждого "
-"участника группы."
 
 #: js/controllers/blockchainController.js:43
 #: js/controllers/forgingController.js:116
 #: js/controllers/transactionsController.js:65
 #: js/controllers/walletPendingsController.js:46
-#: js/controllers/walletTransactionsController.js:69
-#: js/controllers/walletsController.js:147 partials/account.html:76
+#: js/controllers/walletsController.js:147
+#: js/controllers/walletTransactionsController.js:69 partials/account.html:76
 #: partials/modals/blockInfo.html:38 partials/modals/transactionInfo.html:25
 #: partials/modals/userInfo.html:69
 msgid "Time"
@@ -948,7 +1001,7 @@ msgstr "Переключить навигацию"
 
 #: partials/delegates.html:23
 msgid "Top Delegates"
-msgstr "Лучшие делегаты"
+msgstr "Топ Делегатов"
 
 #: partials/modals/blockInfo.html:32
 msgid "Total Amount"
@@ -964,12 +1017,12 @@ msgstr "Итоговая комиссия"
 
 #: js/controllers/forgingController.js:26
 msgid "Total Forged"
-msgstr "Всего произведено"
+msgstr "Итого сфорджено"
 
 #: js/controllers/transactionsController.js:62
 #: js/controllers/walletPendingsController.js:44
-#: js/controllers/walletTransactionsController.js:67
-#: js/controllers/walletsController.js:145 partials/account.html:67
+#: js/controllers/walletsController.js:145
+#: js/controllers/walletTransactionsController.js:67 partials/account.html:67
 #: partials/modals/blockModal.html:17 partials/modals/userInfo.html:52
 #: partials/modals/userInfo.html:76
 msgid "Transaction ID"
@@ -991,24 +1044,28 @@ msgstr "УДАЛИТЬ"
 msgid "UPDATE"
 msgstr "ОБНОВИТЬ"
 
-#: partials/modals/blockInfo.html:35 partials/modals/transactionInfo.html:22
-#: partials/modals/userInfo.html:39 partials/modals/userInfo.html:66
-msgid "USD Equivalent"
-msgstr "Эквивалент в USD"
-
 #: js/controllers/delegatesController.js:159
 #: js/controllers/forgingController.js:53
 #: js/controllers/votedDelegatesController.js:118 partials/forging.html:35
 msgid "Uptime"
 msgstr "Время в сети"
 
+#: partials/modals/blockInfo.html:35 partials/modals/transactionInfo.html:22
+#: partials/modals/userInfo.html:39 partials/modals/userInfo.html:66
+msgid "USD Equivalent"
+msgstr "Эквивалент в USD"
+
 #: partials/delegates.html:7 partials/votes.html:8
 msgid "View selection"
 msgstr "Просмотр выбранного"
 
+#: partials/delegates.html:13
+msgid "vote"
+msgstr "голосовать"
+
 #: js/directives/voteTitleDirective.js:15
 msgid "Voting for delegates"
-msgstr "Отдать голос за делегата"
+msgstr "Голосовать за делегатов"
 
 #: partials/template.html:64
 msgid "Welcome back, {{username}}"
@@ -1020,15 +1077,15 @@ msgstr "ДА"
 
 #: partials/multi.html:46
 msgid "You are not a member of any one Multi-Signature group."
-msgstr "Вы не входите ни в одну группу с мульти-подписью"
+msgstr "Вы не являетесь членов ни одной из групп Мульти-Подписи"
 
 #: partials/modals/newUser.html:17
 msgid "You can find your passphrase below."
-msgstr "Ваш новый пароль:"
+msgstr "Вы можете найти свой пароль ниже"
 
 #: partials/dapps.html:165
 msgid "You do not have any dapps installed yet."
-msgstr "У вас нет ни одного установленного DApp"
+msgstr "У вас нет ни одного установленного dapp"
 
 #: partials/forging.html:106
 msgid "You have not forged any blocks yet."
@@ -1036,7 +1093,7 @@ msgstr "У вас нет вознаграждений за блоки."
 
 #: partials/dapps.html:242
 msgid "You have not installed dapps yet."
-msgstr "У вас нет ни одного установленного DApp."
+msgstr "У вас нет ни одного установленного dapp."
 
 #: partials/account.html:109
 msgid "You have not made any transactions yet."
@@ -1044,11 +1101,11 @@ msgstr "У вас нет совершенных транзакций."
 
 #: partials/votes.html:75
 msgid "You have not voted for any delegates yet."
-msgstr "Вы еще не отдали голос ни за одного делегата."
+msgstr "Вы еще не проголосовали ни за одного делегата."
 
 #: partials/multi.html:10
 msgid "Your Multi-Signature group(s) have not made any transactions yet."
-msgstr "Ваша группа с мульти-подписью пока еще не совершала никаких транзакций."
+msgstr "Ваша(и) группа Мулти-Подписи не имеет транзакций в данный момент."
 
 #: partials/modals/forgingModal.html:23
 #: partials/modals/multisignatureModal.html:157
@@ -1063,66 +1120,4 @@ msgstr "Ваш пароль"
 #: partials/modals/registrationDelegateModal.html:94
 #: partials/modals/sendTransaction.html:99 partials/modals/vote.html:88
 msgid "Your Second Passphrase"
-msgstr "Ваш дополнительный пароль"
-
-#: partials/modals/secondPassphraseModal.html:100
-msgid "add second passphrase"
-msgstr "добавить дополнительный пароль"
-
-#: partials/modals/multisignatureModal.html:135
-#: partials/modals/multisignatureModal.html:174
-msgid "confirm"
-msgstr "подтвердить"
-
-#: partials/modals/secondPassphraseModal.html:69
-msgid "confirm second passphrase"
-msgstr "подтвердите дополнительный пароль"
-
-#: partials/template.html:240
-msgid "delegate registration"
-msgstr "регистрация делегата"
-
-#: partials/modals/multisignatureModal.html:91
-msgid "next"
-msgstr "далее"
-
-#: partials/modals/registrationDelegateModal.html:107
-#: partials/modals/registrationDelegateModal.html:37
-#: partials/modals/registrationDelegateModal.html:69
-msgid "register"
-msgstr "зарегистрировать"
-
-#: partials/votes.html:14
-msgid "remove vote"
-msgstr "отменить голос"
-
-#: partials/modals/sendTransaction.html:112
-#: partials/modals/sendTransaction.html:42
-#: partials/modals/sendTransaction.html:77
-msgid "send lisk"
-msgstr "отправить LISK"
-
-#: partials/delegates.html:13
-msgid "vote"
-msgstr "отдать голос"
-
-#: partials/delegates.html:93
-msgid "{{countStandby}} in Total"
-msgstr "{{countStandby}} Всего"
-
-#: partials/delegates.html:24
-msgid "{{countTop}} in Total"
-msgstr "{{countTop}} Всего"
-
-#: partials/votes.html:25
-msgid "{{count}} in Total"
-msgstr "{{count}} Всего"
-
-#: partials/delegates.html:4
-msgid ""
-"{{voteList.length}} out of {{countStandby + countTop}} Delegates selected"
-msgstr "{{voteList.length}} из {{countStandby + countTop}} делегатов выбрано"
-
-#: partials/votes.html:4
-msgid "{{voteList.length}} out of {{count}} Delegates selected"
-msgstr "{{voteList.length}} из {{count}} делегатов выбрано"
+msgstr "Ваш второй пароль"
