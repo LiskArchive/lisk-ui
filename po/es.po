@@ -1,20 +1,16 @@
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Language-Team: \n"
-"MIME-Version: 1.0\n"
-"X-Generator: Poedit 1.8.7\n"
 "Last-Translator: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: \n"
 "Language: es\n"
-
-#: partials/dapp-entry.html:73
-msgid "(1449)"
-msgstr "(1449)"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: partials/votes.html:25
 msgid "{{count}} in Total"
@@ -1176,3 +1172,6 @@ msgstr "Tu Passphrase"
 #: partials/modals/sendTransaction.html:111 partials/modals/vote.html:100
 msgid "Your Second Passphrase"
 msgstr "Tu Segunda Passphrase"
+
+#~ msgid "(1449)"
+#~ msgstr "(1449)"
