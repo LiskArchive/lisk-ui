@@ -38,11 +38,11 @@ angular.module('liskApp').controller('registrationDelegateModalController', ["$s
         var isAddress = /^[0-9]+[L|l]$/g;
         var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
 
-        if ($scope.delegateData.username.trim() == "" && !$scope.username) {
+        if ($scope.delegateData.username.trim() == "") {
             $scope.error = "Empty username";
         } else {
-            if (!isAddress.test($scope.delegateData.username) || !!$scope.username) {
-                if (allowSymbols.test($scope.delegateData.username.toLowerCase()) || !!$scope.username) {
+            if (!isAddress.test($scope.delegateData.username)) {
+                if (allowSymbols.test($scope.delegateData.username.toLowerCase())) {
                     return onValid();
                 } else {
                     $scope.error = "Username can only contain alphanumeric characters with the exception of !@$&_.";
