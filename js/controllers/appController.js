@@ -138,6 +138,23 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
         $scope.searchBlocks.searchForBlock = '';
     }
 
+    $scope.resetAppData = function () {
+        $scope.balance = userService.balance = 0;
+        $scope.unconfirmedBalance = userService.unconfirmedBalance = 0;
+
+        $scope.secondPassphrase = userService.secondPassphrase = 0;
+        $scope.unconfirmedPassphrase = userService.unconfirmedPassphrase = 0;
+
+        userService.multisignatures = userService.u_multisignatures = null;
+        $scope.multisignature = false;
+
+        $scope.delegateInRegistration = userService.delegateInRegistration = null;
+        $scope.delegate = userService.delegate = null;
+        $scope.username = userService.username = null;
+    }
+
+    $scope.resetAppData();
+
     $scope.getAppData = function () {
         $http.get("/api/accounts", {params: {address: userService.address}})
             .then(function (resp) {
