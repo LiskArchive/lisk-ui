@@ -199,7 +199,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
                 var fraction = parts[1].substring(0, 8);
             }
         } else {
-            $scope.errorMessage = "Wrong LISK value";
+            $scope.errorMessage = "Invalid LISK amount";
             throw "Invalid input";
         }
 
@@ -211,7 +211,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
 
         // In case there's a comma or something else in there. At this point there should only be numbers.
         if (!/^\d+$/.test(result)) {
-            $scope.errorMessage = "Wrong LISK value";
+            $scope.errorMessage = "Invalid LISK amount";
             throw "Invalid input.";
         }
 
@@ -242,7 +242,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
                 var fraction = parts[1].substring(0, 8);
             }
         } else {
-            $scope.errorMessage = "Wrong LISK value";
+            $scope.errorMessage = "Invalid LISK amount";
             return false;
         }
 
@@ -254,7 +254,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
 
         // In case there's a comma or something else in there. At this point there should only be numbers.
         if (!/^\d+$/.test(result)) {
-            $scope.errorMessage = "Wrong LISK value";
+            $scope.errorMessage = "Invalid LISK amount";
          return false;
         }
 
