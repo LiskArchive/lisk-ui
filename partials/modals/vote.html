@@ -10,7 +10,7 @@
                     </div>
                     <div class="modal-header clearfix">
                         <div>
-                            <h2>{{'Delegate Voting'|translate}}</h2>
+                            <vote-title adding="adding"></vote-title>
                         </div>
                         <div><translate>Please confirm your selection and confirm your vote.</translate></div>
                     </div>
@@ -38,7 +38,7 @@
                                 <a href="#" ng-click="close()"><translate>CANCEL</translate></a>
                             </li>
                             <li>
-                                <a href="#" ng-class="{'blue-link': adding,  'red-link': !adding}" ng-click="passcheck()"><vote-action adding="adding"></vote-action></a>
+                                <a href="#" ng-class="{'blue-link': adding, 'red-link': !adding}" ng-click="passcheck()"><vote-action adding="adding"></vote-action></a>
                             </li>
                         </ul>
                     </div>
