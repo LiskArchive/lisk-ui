@@ -34,6 +34,25 @@ angular.module('liskApp').controller('registrationDelegateModalController', ["$s
         registrationDelegateModal.deactivate();
     }
 
+    function validateUsername (onValid) {
+        var isAddress = /^[0-9]+[L|l]$/g;
+        var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
+
+        if ($scope.delegateData.username.trim() == "" && !$scope.username) {
+            $scope.error = "Empty username";
+        } else {
+            if (!isAddress.test($scope.delegateData.username) || !!$scope.username) {
+                if (allowSymbols.test($scope.delegateData.username.toLowerCase()) || !!$scope.username) {
+                    return onValid();
+                } else {
+                    $scope.error = "Username can only contain alphanumeric characters with the exception of !@$&_.";
+                }
+            } else {
+                $scope.error = "Username cannot be a potential address.";
+            }
+        }
+    }
+
     $scope.passcheck = function (fromSecondPass) {
         $scope.error = null;
         if (fromSecondPass) {
@@ -48,43 +67,19 @@ angular.module('liskApp').controller('registrationDelegateModalController', ["$s
             }
             return;
         }
-        if ($scope.rememberedPassphrase) {
-            var isAddress = /^[0-9]+[L|l]$/g;
-            var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
-            if ($scope.delegateData.username.trim() == '' && !$scope.username) {
-                $scope.error = 'Empty username'
-            } else {
-                if (!isAddress.test($scope.delegateData.username) || !!$scope.username) {
-                    if (allowSymbols.test($scope.delegateData.username.toLowerCase()) || !!$scope.username) {
-                        $scope.error = null;
-                        $scope.registrationDelegate($scope.rememberedPassphrase);
-                    } else {
-                        $scope.error = 'Username can only contain alphanumeric characters with the exception of !@$&_.'
-                    }
-                } else {
-                    $scope.error = 'Username cannot be a potential address.'
-                }
-            }
 
+        if ($scope.rememberedPassphrase) {
+            validateUsername(function () {
+                $scope.error = null;
+                $scope.registrationDelegate($scope.rememberedPassphrase);
+            });
         } else {
-            var isAddress = /^[0-9]+[L|l]$/g;
-            var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
-            if ($scope.delegateData.username.trim() == '' && !$scope.username) {
-                $scope.error = 'Empty username'
-            } else {
-                if (!isAddress.test($scope.delegateData.username) || !!$scope.username) {
-                    if (allowSymbols.test($scope.delegateData.username.toLowerCase()) || !!$scope.username) {
-                        $scope.error = null;
-                        $scope.focus = 'secretPhrase';
-                        $scope.passmode = !$scope.passmode;
-                        $scope.pass = '';
-                    } else {
-                        $scope.error = 'Username can only contain alphanumeric characters with the exception of !@$&_.'
-                    }
-                } else {
-                    $scope.error = 'Username cannot be a potential address.'
-                }
-            }
+            validateUsername(function () {
+                $scope.error = null;
+                $scope.focus = 'secretPhrase';
+                $scope.passmode = !$scope.passmode;
+                $scope.pass = '';
+            });
         }
     }
 
