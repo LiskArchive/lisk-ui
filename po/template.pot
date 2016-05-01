@@ -46,8 +46,8 @@ msgstr ""
 #: partials/modals/secondPassphraseModal.html:104
 #: partials/modals/sendTransaction.html:102
 #: partials/modals/sendTransaction.html:67
-#: partials/modals/vote.html:56
-#: partials/modals/vote.html:91
+#: partials/modals/vote.html:54
+#: partials/modals/vote.html:89
 msgid "Account Verification"
 msgstr ""
 
@@ -116,7 +116,7 @@ msgstr ""
 #: partials/modals/registrationDelegateModal.html:35
 #: partials/modals/registrationDelegateModal.html:67
 #: partials/modals/sendTransaction.html:51
-#: partials/modals/vote.html:75
+#: partials/modals/vote.html:73
 msgid "Cancel"
 msgstr ""
 
@@ -171,9 +171,9 @@ msgstr ""
 #: partials/modals/sendTransaction.html:97
 #: partials/modals/transactionInfo.html:7
 #: partials/modals/userInfo.html:22
-#: partials/modals/vote.html:51
+#: partials/modals/vote.html:49
 #: partials/modals/vote.html:8
-#: partials/modals/vote.html:86
+#: partials/modals/vote.html:84
 msgid "Close modal"
 msgstr ""
 
@@ -193,6 +193,7 @@ msgid "Confirm"
 msgstr ""
 
 #: partials/modals/masterPassphraseModal.html:35
+#: partials/modals/newUser.html:80
 #: partials/multi.html:31
 #: partials/wallet-pendings.html:28
 msgid "CONFIRM"
@@ -277,10 +278,6 @@ msgstr ""
 msgid "delegate registration"
 msgstr ""
 
-#: partials/modals/vote.html:13
-msgid "Delegate Voting"
-msgstr ""
-
 #: partials/template.html:104
 #: partials/template.html:232
 msgid "Delegates"
@@ -295,7 +292,7 @@ msgstr ""
 msgid "Disable Forging"
 msgstr ""
 
-#: js/controllers/appController.js:299
+#: js/controllers/appController.js:315
 msgid "Disabled"
 msgstr ""
 
@@ -314,7 +311,7 @@ msgstr ""
 msgid "Enable Forging"
 msgstr ""
 
-#: js/controllers/appController.js:299
+#: js/controllers/appController.js:315
 msgid "Enabled"
 msgstr ""
 
@@ -403,7 +400,7 @@ msgstr ""
 #: partials/modals/secondPassphraseModal.html:82
 #: partials/modals/sendTransaction.html:121
 #: partials/modals/sendTransaction.html:86
-#: partials/modals/vote.html:110
+#: partials/modals/vote.html:108
 msgid "GO BACK"
 msgstr ""
 
@@ -631,7 +628,6 @@ msgid "Next Step"
 msgstr ""
 
 #: partials/modals/newUser.html:39
-#: partials/modals/newUser.html:80
 #: partials/modals/secondPassphraseModal.html:43
 msgid "NEXT STEP"
 msgstr ""
@@ -721,7 +717,7 @@ msgstr ""
 #: partials/modals/forgingModal.html:16
 #: partials/modals/registrationDelegateModal.html:53
 #: partials/modals/sendTransaction.html:69
-#: partials/modals/vote.html:58
+#: partials/modals/vote.html:56
 msgid "Please enter your passphrase below."
 msgstr ""
 
@@ -737,7 +733,7 @@ msgstr ""
 #: partials/modals/addDappModal.html:173
 #: partials/modals/registrationDelegateModal.html:88
 #: partials/modals/sendTransaction.html:104
-#: partials/modals/vote.html:93
+#: partials/modals/vote.html:91
 msgid "Please enter your second passphrase below."
 msgstr ""
 
@@ -839,7 +835,7 @@ msgstr ""
 msgid "REMOVE VOTE"
 msgstr ""
 
-#: js/directives/voteTitleDirective.js:17
+#: js/directives/voteTitleDirective.js:16
 msgid "Removing vote from delegates"
 msgstr ""
 
@@ -993,10 +989,6 @@ msgstr ""
 msgid "The second passphrase entered doesn't match with the one generated before. Please go back and generate a new one."
 msgstr ""
 
-#: js/directives/voteTitleDirective.js:22
-msgid "This action will cost"
-msgstr ""
-
 #: partials/modals/multisignatureModal.html:21
 msgid "This walkthrough will guide you through the necessary steps to create a multi-signature group. It's very important that you know what multi-signatures are, else you risk loosing your LISK balance.<br><br>A multi-signature group consists of N accounts, the one who created the group is the group owner. When the owner wants to make a transaction, M of N accounts within the group need to confirm it, otherwise the transaction will not be processed. The values M and N are specified in this walkthrough.<br><br><b>Things you need to know for the multi-signature group setup:</b><br><br>• The number of group members (N).<br>• The number of needed confirmations (M).<br>• The addresses of the Lisk accounts you want to add to the group."
 msgstr ""
@@ -1093,7 +1085,7 @@ msgstr ""
 msgid "vote"
 msgstr ""
 
-#: js/directives/voteTitleDirective.js:15
+#: js/directives/voteTitleDirective.js:14
 msgid "Voting for delegates"
 msgstr ""
 
@@ -1147,7 +1139,7 @@ msgstr ""
 #: partials/modals/multisignatureModal.html:163
 #: partials/modals/registrationDelegateModal.html:60
 #: partials/modals/sendTransaction.html:76
-#: partials/modals/vote.html:65
+#: partials/modals/vote.html:63
 #: partials/passphrase.html:10
 msgid "Your Passphrase"
 msgstr ""
@@ -1156,6 +1148,6 @@ msgstr ""
 #: partials/modals/passphraseCheck.html:22
 #: partials/modals/registrationDelegateModal.html:95
 #: partials/modals/sendTransaction.html:111
-#: partials/modals/vote.html:100
+#: partials/modals/vote.html:98
 msgid "Your Second Passphrase"
 msgstr ""
