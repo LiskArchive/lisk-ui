@@ -172,11 +172,13 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
                     userService.secondPassphrase = account.secondSignature || account.unconfirmedSignature;
                     userService.unconfirmedPassphrase = account.unconfirmedSignature;
                 }
+
                 $scope.balance = userService.balance;
                 $scope.unconfirmedBalance = userService.unconfirmedBalance;
                 $scope.secondPassphrase = userService.secondPassphrase;
                 $scope.unconfirmedPassphrase = userService.unconfirmedPassphrase;
                 $scope.delegateInRegistration = userService.delegateInRegistration;
+
                 if ($state.current.name != 'passphrase') {
                     $scope.getMultisignatureAccounts(function (multisignature) {
                         $scope.multisignature = userService.u_multisignatures.length || userService.multisignatures.length
@@ -188,14 +190,15 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
                     $scope.getForging($scope.setForgingText);
                     $scope.getDelegate();
                 }
+
                 if ($state.current.name == 'main.forging' || $state.current.name == 'main.votes' || $state.current.name == 'main.delegates') {
                     $scope.getMyVotesCount();
                     $scope.getForging($scope.setForgingText);
                 }
+
                 if ($state.current.name == 'main.dappstore' || 'main.dashboard') {
                     $scope.getCategories();
                 }
-
             });
     };
 
@@ -247,8 +250,6 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
                         })
                     }
                 });
-
-
         } else {
             $scope.forgingModal = forgingModal.activate({
                 forging: false,
@@ -287,8 +288,6 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
                             }
                         })
                     }
-
-
                 });
         } else {
             $scope.forgingModal = forgingModal.activate({
@@ -357,7 +356,6 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
                                     return userService.setMultisignature(false, cb);
                                 }
                             });
-
                     }
                 } else {
                     return userService.setMultisignature(false, cb);
