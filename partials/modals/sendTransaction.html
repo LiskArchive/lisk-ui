@@ -20,14 +20,20 @@
                                 <input id="to" ng-focus="focus == 'to'" type="text" class="form-control" placeholder="{{'Recipient Address'|translate}}" ng-model="to">
                                 <span class="input-group-addon clear" ng-click="clearRecipient()"></span>
                             </div>
+                            <p class="error-container" ng-show="errorMessage.recipient">
+                                <span class="pass-error">{{errorMessage.recipient}}</span>
+                            </p>
                             <div class="field-padding">
                                 <div class="input-field">
                                     <input id="amount" type="text" ng-model="amount" ng-focus="focus == 'amount'">
                                     <label for="amount"><translate>LISK Amount</translate></label>
                                 </div>
                                 <span class="fee-text flat-text pull-right"><translate>Fee: {{fee | liskFilter}} LISK</span>
-                                <span class="pass-error" ng-show="errorMessage && (rememberedPassphrase || presendError)">{{errorMessage}}</span>
+                                <span class="pass-error" ng-show="errorMessage.amount">{{errorMessage.amount}}</span>
                             </div>
+                            <p class="error-container" ng-show="errorMessage.fromServer">
+                                <span class="pass-error">{{errorMessage.fromServer}}</span>
+                            </p>
                             <input type="submit" ng-show="false">
                         </form>
                     </div>
