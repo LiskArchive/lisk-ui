@@ -121,29 +121,6 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
         }
     }
 
-    $scope.recalculateFee = function ($event) {
-        if (!$scope.amount || isNaN(parseFloat($scope.amount))) {
-            $scope.fee = "";
-        } else {
-            if ($scope.amount.indexOf('.') >= 0) {
-                var strs = $scope.amount.split('.');
-                $scope.maxlength = strs[0].length + 9;
-            }
-
-            // Calculate fee
-            var fee = parseInt($scope.amount * 100000000 / 100 * $scope.currentFee) / 100000000;
-
-            if ($scope.amount == 0) {
-                fee = 0;
-            } else if (parseFloat(fee) == 0) {
-                fee = "0.00000001";
-                $scope.fee = fee;
-            } else {
-                $scope.fee = fee.toFixed(8);
-            }
-        }
-    }
-
     $scope.accountChanged = function (e) {
         var string = $scope.to;
 
