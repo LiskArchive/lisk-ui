@@ -38,8 +38,12 @@ angular.module('liskApp').controller('registrationDelegateModalController', ["$s
         var isAddress = /^[0-9]+[L|l]$/g;
         var allowSymbols = /^[a-z0-9!@$&_.]+$/g;
 
-        if ($scope.delegateData.username.trim() == "") {
+        $scope.delegateData.username = $scope.delegateData.username.trim();
+
+        if ($scope.delegateData.username == "") {
             $scope.error = "Empty username";
+        } else if ($scope.delegateData.username.length() > 20) {
+            $scope.error = "Username is too long. Maximum is 20 characters";
         } else {
             if (!isAddress.test($scope.delegateData.username)) {
                 if (allowSymbols.test($scope.delegateData.username.toLowerCase())) {
@@ -48,7 +52,7 @@ angular.module('liskApp').controller('registrationDelegateModalController', ["$s
                     $scope.error = "Username can only contain alphanumeric characters with the exception of !@$&_.";
                 }
             } else {
-                $scope.error = "Username cannot be a potential address.";
+                $scope.error = "Username cannot be a potential address";
             }
         }
     }
