@@ -44,8 +44,8 @@ msgstr ""
 #: partials/modals/registrationDelegateModal.html:51
 #: partials/modals/registrationDelegateModal.html:86
 #: partials/modals/secondPassphraseModal.html:104
-#: partials/modals/sendTransaction.html:102
-#: partials/modals/sendTransaction.html:67
+#: partials/modals/sendTransaction.html:62
+#: partials/modals/sendTransaction.html:97
 #: partials/modals/vote.html:54
 #: partials/modals/vote.html:89
 msgid "Account Verification"
@@ -115,7 +115,7 @@ msgstr ""
 #: partials/modals/passphraseCheck.html:32
 #: partials/modals/registrationDelegateModal.html:35
 #: partials/modals/registrationDelegateModal.html:67
-#: partials/modals/sendTransaction.html:51
+#: partials/modals/sendTransaction.html:46
 #: partials/modals/vote.html:73
 msgid "Cancel"
 msgstr ""
@@ -166,9 +166,9 @@ msgstr ""
 #: partials/modals/secondPassphraseModal.html:10
 #: partials/modals/secondPassphraseModal.html:57
 #: partials/modals/secondPassphraseModal.html:99
-#: partials/modals/sendTransaction.html:19
-#: partials/modals/sendTransaction.html:62
-#: partials/modals/sendTransaction.html:97
+#: partials/modals/sendTransaction.html:57
+#: partials/modals/sendTransaction.html:8
+#: partials/modals/sendTransaction.html:92
 #: partials/modals/transactionInfo.html:7
 #: partials/modals/userInfo.html:22
 #: partials/modals/vote.html:49
@@ -348,7 +348,7 @@ msgstr ""
 
 #: partials/modals/registrationDelegateModal.html:23
 #: partials/modals/secondPassphraseModal.html:28
-#: partials/modals/sendTransaction.html:39
+#: partials/modals/sendTransaction.html:31
 #: partials/modals/vote.html:25
 msgid "Fee: {{fee | liskFilter}} LISK"
 msgstr ""
@@ -398,8 +398,8 @@ msgstr ""
 #: partials/modals/registrationDelegateModal.html:105
 #: partials/modals/secondPassphraseModal.html:123
 #: partials/modals/secondPassphraseModal.html:82
-#: partials/modals/sendTransaction.html:121
-#: partials/modals/sendTransaction.html:86
+#: partials/modals/sendTransaction.html:116
+#: partials/modals/sendTransaction.html:81
 #: partials/modals/vote.html:108
 msgid "GO BACK"
 msgstr ""
@@ -475,7 +475,7 @@ msgstr ""
 msgid "LISK Address"
 msgstr ""
 
-#: partials/modals/sendTransaction.html:37
+#: partials/modals/sendTransaction.html:29
 msgid "LISK Amount"
 msgstr ""
 
@@ -552,7 +552,7 @@ msgstr ""
 msgid "Make sure that you keep the second passphrase safe. You will be asked to re-type it for confirmation."
 msgstr ""
 
-#: partials/modals/sendTransaction.html:46
+#: partials/modals/sendTransaction.html:41
 msgid "Make sure you're sending LISK to the right address. This action can't be undone later."
 msgstr ""
 
@@ -709,14 +709,14 @@ msgstr ""
 msgid "Please enter the master passphrase for this node."
 msgstr ""
 
-#: partials/modals/sendTransaction.html:26
+#: partials/modals/sendTransaction.html:15
 msgid "Please enter the Recipient Address and LISK Amount that you would like send below."
 msgstr ""
 
 #: partials/modals/addDappModal.html:142
 #: partials/modals/forgingModal.html:16
 #: partials/modals/registrationDelegateModal.html:53
-#: partials/modals/sendTransaction.html:69
+#: partials/modals/sendTransaction.html:64
 #: partials/modals/vote.html:56
 msgid "Please enter your passphrase below."
 msgstr ""
@@ -732,7 +732,7 @@ msgstr ""
 
 #: partials/modals/addDappModal.html:173
 #: partials/modals/registrationDelegateModal.html:88
-#: partials/modals/sendTransaction.html:104
+#: partials/modals/sendTransaction.html:99
 #: partials/modals/vote.html:91
 msgid "Please enter your second passphrase below."
 msgstr ""
@@ -801,7 +801,7 @@ msgstr ""
 msgid "Recipient"
 msgstr ""
 
-#: partials/modals/sendTransaction.html:31
+#: partials/modals/sendTransaction.html:20
 msgid "Recipient Address"
 msgstr ""
 
@@ -875,16 +875,15 @@ msgstr ""
 msgid "SEND"
 msgstr ""
 
-#: partials/modals/sendTransaction.html:124
-#: partials/modals/sendTransaction.html:54
-#: partials/modals/sendTransaction.html:89
+#: partials/modals/sendTransaction.html:119
+#: partials/modals/sendTransaction.html:49
+#: partials/modals/sendTransaction.html:84
 msgid "send lisk"
 msgstr ""
 
 #: partials/delegates.html:120
 #: partials/delegates.html:51
-#: partials/modals/sendTransaction.html:24
-#: partials/modals/sendTransaction.html:8
+#: partials/modals/sendTransaction.html:13
 #: partials/modals/userInfo.html:28
 #: partials/votes.html:49
 msgid "Send LISK"
@@ -1138,7 +1137,7 @@ msgstr ""
 #: partials/modals/forgingModal.html:23
 #: partials/modals/multisignatureModal.html:163
 #: partials/modals/registrationDelegateModal.html:60
-#: partials/modals/sendTransaction.html:76
+#: partials/modals/sendTransaction.html:71
 #: partials/modals/vote.html:63
 #: partials/passphrase.html:10
 msgid "Your Passphrase"
@@ -1147,7 +1146,7 @@ msgstr ""
 #: partials/modals/multisignatureModal.html:167
 #: partials/modals/passphraseCheck.html:22
 #: partials/modals/registrationDelegateModal.html:95
-#: partials/modals/sendTransaction.html:111
+#: partials/modals/sendTransaction.html:106
 #: partials/modals/vote.html:98
 msgid "Your Second Passphrase"
 msgstr ""
