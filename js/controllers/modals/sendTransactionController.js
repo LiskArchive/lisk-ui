@@ -1,11 +1,11 @@
 require('angular');
 
-angular.module('liskApp').controller('sendTransactionController', ["$scope", "sendTransactionModal", "$http", "userService", "$timeout", "$filter", function ($scope, sendTransactionModal, $http, userService, $timeout, $filter) {
+angular.module('liskApp').controller('sendTransactionController', ['$scope', 'sendTransactionModal', '$http', 'userService', '$timeout', '$filter', function ($scope, sendTransactionModal, $http, userService, $timeout, $filter) {
 
     $scope.sending = false;
     $scope.passmode = false;
     $scope.accountValid = true;
-    $scope.errorMessage = "";
+    $scope.errorMessage = '';
     $scope.checkSecondPass = false;
     $scope.onlyNumbers = /^-?\d*(\.\d+)?$/;
     $scope.secondPassphrase = userService.secondPassphrase;
@@ -110,7 +110,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
     }
 
     $scope.moreThanEightDigits = function (number) {
-        if (number.indexOf(".") < 0) {
+        if (number.indexOf('.') < 0) {
             return false;
         } else {
             if (number.split('.')[1].length > 8) {
@@ -141,7 +141,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
     }
 
     $scope.moreThanEightDigits = function (number) {
-        if (number.toString().indexOf(".") < 0) {
+        if (number.toString().indexOf('.') < 0) {
             return false;
         } else {
             if (number.toString().split('.')[1].length > 8) {
@@ -153,7 +153,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
     }
 
     $scope.getCurrentFee = function () {
-        $http.get("/api/blocks/getFee").then(function (resp) {
+        $http.get('/api/blocks/getFee').then(function (resp) {
                 $scope.currentFee = resp.data.fee;
                 $scope.fee = resp.data.fee;
             });
@@ -162,13 +162,13 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
     $scope.convertLISK = function (currency) {
         currency = String(currency);
 
-        var parts = currency.split(".");
+        var parts = currency.split('.');
 
         var amount = parts[0];
 
         // No fractional part
         if (parts.length == 1) {
-            var fraction = "00000000";
+            var fraction = '00000000';
         } else if (parts.length == 2) {
             if (parts[1].length <= 8) {
                 var fraction = parts[1];
@@ -176,27 +176,27 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
                 var fraction = parts[1].substring(0, 8);
             }
         } else {
-            $scope.errorMessage = "Invalid LISK amount";
-            throw "Invalid input";
+            $scope.errorMessage = 'Invalid LISK amount';
+            throw 'Invalid input';
         }
 
         for (var i = fraction.length; i < 8; i++) {
-            fraction += "0";
+            fraction += '0';
         }
 
-        var result = amount + "" + fraction;
+        var result = amount + '' + fraction;
 
         // In case there's a comma or something else in there. At this point there should only be numbers.
         if (!/^\d+$/.test(result)) {
-            $scope.errorMessage = "Invalid LISK amount";
-            throw "Invalid input.";
+            $scope.errorMessage = 'Invalid LISK amount';
+            throw 'Invalid input.';
         }
 
         // Remove leading zeroes
-        result = result.replace(/^0+/, "");
+        result = result.replace(/^0+/, '');
 
-        if (result === "") {
-            result = "0";
+        if (result === '') {
+            result = '0';
         }
 
         return parseInt(result);
@@ -205,13 +205,13 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
     $scope.isCorrectValue = function (currency) {
         currency = String(currency);
 
-        var parts = currency.split(".");
+        var parts = currency.split('.');
 
         var amount = parts[0];
 
         // No fractional part
         if (parts.length == 1) {
-            var fraction = "00000000";
+            var fraction = '00000000';
         } else if (parts.length == 2) {
             if (parts[1].length <= 8) {
                 var fraction = parts[1];
@@ -219,19 +219,19 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
                 var fraction = parts[1].substring(0, 8);
             }
         } else {
-            $scope.errorMessage = "Invalid LISK amount";
+            $scope.errorMessage = 'Invalid LISK amount';
             return false;
         }
 
         for (var i = fraction.length; i < 8; i++) {
-            fraction += "0";
+            fraction += '0';
         }
 
-        var result = amount + "" + fraction;
+        var result = amount + '' + fraction;
 
         // In case there's a comma or something else in there. At this point there should only be numbers.
         if (!/^\d+$/.test(result)) {
-            $scope.errorMessage = "Invalid LISK amount";
+            $scope.errorMessage = 'Invalid LISK amount';
          return false;
         }
 
@@ -248,10 +248,10 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
             $scope.focus = 'secondPhrase';
             return;
         }
-        $scope.errorMessage = "";
+        $scope.errorMessage = '';
         if (($scope.amount + '').indexOf('.') != -1) {
             $scope.lengthError = $scope.amount.split('.')[1].length > 8;
-            $scope.errorMessage = $scope.lengthError ? "More than 8 numbers in decimal part" : '';
+            $scope.errorMessage = $scope.lengthError ? 'More than 8 numbers in decimal part' : '';
         }
 
         if ($scope.lengthError) {
@@ -274,7 +274,7 @@ angular.module('liskApp').controller('sendTransactionController', ["$scope", "se
 
         if (!$scope.lengthError && !$scope.sending) {
             $scope.sending = true;
-            $http.put("/api/transactions", data).then(function (resp) {
+            $http.put('/api/transactions', data).then(function (resp) {
                 $scope.sending = false;
                 if (resp.data.error) {
                     $scope.errorMessage = resp.data.error;
