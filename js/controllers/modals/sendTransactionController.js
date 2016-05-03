@@ -14,7 +14,6 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
     $scope.presendError = false;
     $scope.fee = 0;
 
-
     $scope.submit = function () {
         console.log('Transaction sent');
     };
@@ -163,7 +162,6 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
         currency = String(currency);
 
         var parts = currency.split('.');
-
         var amount = parts[0];
 
         // No fractional part
@@ -206,7 +204,6 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
         currency = String(currency);
 
         var parts = currency.split('.');
-
         var amount = parts[0];
 
         // No fractional part
@@ -232,7 +229,7 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
         // In case there's a comma or something else in there. At this point there should only be numbers.
         if (!/^\d+$/.test(result)) {
             $scope.errorMessage = 'Invalid LISK amount';
-         return false;
+            return false;
         }
 
         return true;
@@ -248,7 +245,9 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
             $scope.focus = 'secondPhrase';
             return;
         }
+
         $scope.errorMessage = '';
+
         if (($scope.amount + '').indexOf('.') != -1) {
             $scope.lengthError = $scope.amount.split('.')[1].length > 8;
             $scope.errorMessage = $scope.lengthError ? 'More than 8 numbers in decimal part' : '';
