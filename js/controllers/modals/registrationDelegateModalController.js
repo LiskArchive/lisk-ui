@@ -42,7 +42,7 @@ angular.module('liskApp').controller('registrationDelegateModalController', ["$s
 
         if ($scope.delegateData.username == "") {
             $scope.error = "Empty username";
-        } else if ($scope.delegateData.username.length() > 20) {
+        } else if ($scope.delegateData.username.length > 20) {
             $scope.error = "Username is too long. Maximum is 20 characters";
         } else {
             if (!isAddress.test($scope.delegateData.username)) {
