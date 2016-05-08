@@ -215,7 +215,7 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
             }
         }
 
-        if (!$scope.lengthError && !$scope.sending) {
+        if (!$scope.sending) {
             $scope.sending = true;
             $http.put('/api/transactions', data).then(function (resp) {
                 $scope.sending = false;
