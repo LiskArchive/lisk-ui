@@ -67,10 +67,10 @@
                         <form ng-submit="sendTransaction(secretPhrase)">
                             <div class="field-padding">
                                 <div class="input-field">
-                                    <input id="passPhrase" type="password" ng-model="secretPhrase" ng-focus="focus == 'secretPhrase'" ng-trim="false" autofocus ng-class="{'invalid': errorMessage}">
+                                    <input id="passPhrase" type="password" ng-model="secretPhrase" ng-focus="focus == 'secretPhrase'" ng-trim="false" autofocus ng-class="{'invalid': errorMessage.fromServer}">
                                     <label for="passPhrase"><translate>Your Passphrase</translate></label>
                                 </div>
-                                <span class="pass-error" ng-show="errorMessage && !secondSecret">{{errorMessage}}</span>
+                                <span class="pass-error" ng-show="errorMessage.fromServer && !secondSecret">{{errorMessage.fromServer}}</span>
                             </div>
                             <input type="submit" ng-show="false">
                         </form>
@@ -105,7 +105,7 @@
                                     <input id="secondPhrase" type="password" ng-model="secondPhrase" ng-trim="false" autofocus ng-focus="focus == 'secondPhrase'" ng-class="{'invalid': errorMessage}">
                                     <label for="secondPhrase"><translate>Your Second Passphrase</translate></label>
                                 </div>
-                                <span class="pass-error" ng-show="errorMessage">{{errorMessage}}</span>
+                                <span class="pass-error" ng-show="errorMessage.fromServer">{{errorMessage.fromServer}}</span>
                             </div>
                             <input type="submit" ng-show="false">
                         </form>
