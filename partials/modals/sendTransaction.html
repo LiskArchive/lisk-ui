@@ -25,7 +25,7 @@
                             </p>
                             <div class="field-padding">
                                 <div class="input-field">
-                                    <input id="amount" type="text" ng-model="amount" ng-focus="focus == 'amount'">
+                                    <input id="amount" type="text" ng-model="amount" ng-focus="focus == 'amount'" ng-class="{'invalid': errorMessage.amount}">
                                     <label for="amount"><translate>LISK Amount</translate></label>
                                 </div>
                                 <span class="fee-text flat-text pull-right"><translate>Fee: {{fee | liskFilter}} LISK</span>
