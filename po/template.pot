@@ -37,7 +37,7 @@ msgid "Account"
 msgstr ""
 
 #: partials/modals/addDappModal.html:140
-#: partials/modals/addDappModal.html:171
+#: partials/modals/addDappModal.html:182
 #: partials/modals/masterPassphraseModal.html:13
 #: partials/modals/multisignatureModal.html:154
 #: partials/modals/passphraseCheck.html:13
@@ -139,8 +139,8 @@ msgstr ""
 #: partials/modals/addDappModal.html:13
 #: partials/modals/addDappModal.html:132
 #: partials/modals/addDappModal.html:137
-#: partials/modals/addDappModal.html:163
-#: partials/modals/addDappModal.html:168
+#: partials/modals/addDappModal.html:174
+#: partials/modals/addDappModal.html:179
 #: partials/modals/addDappModal.html:39
 #: partials/modals/addDappModal.html:44
 #: partials/modals/addDappModal.html:70
@@ -187,8 +187,8 @@ msgid "confirm"
 msgstr ""
 
 #: partials/modals/addDappModal.html:124
-#: partials/modals/addDappModal.html:155
-#: partials/modals/addDappModal.html:186
+#: partials/modals/addDappModal.html:166
+#: partials/modals/addDappModal.html:208
 msgid "Confirm"
 msgstr ""
 
@@ -388,8 +388,8 @@ msgid "Generator"
 msgstr ""
 
 #: partials/modals/addDappModal.html:121
-#: partials/modals/addDappModal.html:152
-#: partials/modals/addDappModal.html:183
+#: partials/modals/addDappModal.html:163
+#: partials/modals/addDappModal.html:205
 #: partials/modals/addDappModal.html:59
 #: partials/modals/addDappModal.html:90
 #: partials/modals/multisignatureModal.html:138
@@ -730,7 +730,7 @@ msgstr ""
 msgid "Please enter your primary passphrase below."
 msgstr ""
 
-#: partials/modals/addDappModal.html:173
+#: partials/modals/addDappModal.html:184
 #: partials/modals/registrationDelegateModal.html:88
 #: partials/modals/sendTransaction.html:99
 #: partials/modals/vote.html:91
@@ -1134,6 +1134,7 @@ msgstr ""
 msgid "Your Multi-Signature group(s) have not made any transactions yet."
 msgstr ""
 
+#: partials/modals/addDappModal.html:151
 #: partials/modals/forgingModal.html:23
 #: partials/modals/multisignatureModal.html:163
 #: partials/modals/registrationDelegateModal.html:60
@@ -1143,6 +1144,7 @@ msgstr ""
 msgid "Your Passphrase"
 msgstr ""
 
+#: partials/modals/addDappModal.html:193
 #: partials/modals/multisignatureModal.html:167
 #: partials/modals/passphraseCheck.html:22
 #: partials/modals/registrationDelegateModal.html:95
