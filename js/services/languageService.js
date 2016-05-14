@@ -14,10 +14,10 @@ angular.module('liskApp').service('languageService', function ($rootScope, $wind
         { id: 'it', name: 'Italiano' },
         { id: 'ja', name: '日本語' },
         { id: 'nl', name: 'Nederlands' },
-        { id: 'no', name: 'Norsk' },
-        { id: 'pt', name: 'Português' },
+        { id: 'nb_NO', name: 'Norsk' },
+        { id: 'pt_BR', name: 'Português' },
         { id: 'ro', name: 'Română' },
-        { id: 'ua', name: 'Yкраїнський' }
+        { id: 'uk_UA', name: 'Yкраїнський' }
     ];
 
     $rootScope.changeLang = function (changed) {
