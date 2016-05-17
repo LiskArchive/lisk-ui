@@ -7,10 +7,10 @@
         </div>
         <div class="error-newdapp-container" ng-show="form.dapp_data.name.$invalid && form.dapp_data.submitted">
             <small class="error" ng-show="form.dapp_data.name.$error.required">
-                <translate>Dapp name is required.</translate>
+                <translate>Application name is required.</translate>
             </small>
             <small class="error" ng-show="form.dapp_data.name.$error.maxlength">
-                <translate>Dapp name cannot be longer than 32 characters</translate>
+                <translate>Application name cannot be longer than 32 characters.</translate>
             </small>
         </div>
     </div>
@@ -21,7 +21,7 @@
         </div>
         <div class="error-newdapp-container" ng-show="form.dapp_data.description.$invalid && form.dapp_data.submitted">
             <small class="error" ng-show="form.dapp_data.description.$error.maxlength">
-                <translate>Dapp description cannot be longer than 160 characters.</translate>
+                <translate>Application description cannot be longer than 160 characters.</translate>
             </small>
         </div>
     </div>
@@ -33,7 +33,7 @@
         <div class="error-newdapp-container" ng-show="form.dapp_data.tags.$invalid && form.dapp_data.submitted">
             {{form.dapp_data.tags.$error}}
             <small class="error" ng-show="form.dapp_data.tags.$error">
-                <translate>Dapp tags cannot be longer than 160 characters.</translate>
+                <translate>Application tags cannot be longer than 160 characters.</translate>
             </small>
         </div>
     </div>
