@@ -136,7 +136,7 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
         if (!throwError) throwError = false;
 
         function error () {
-            $scope.errorMessage.amount = 'Invalid LISK amount';
+            $scope.errorMessage.amount = 'Invalid LSK amount';
 
             if (throwError) {
               throw $scope.errorMessage.amount;
@@ -195,7 +195,7 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
         }
 
         if (($scope.amount + '').indexOf('.') != -1 && $scope.amount.split('.')[1].length > 8) {
-            $scope.errorMessage.amount = 'LISK amount must not have more than 8 decmial places';
+            $scope.errorMessage.amount = 'LSK amount must not have more than 8 decimal places';
             return;
         }
 
