@@ -25,7 +25,7 @@
                     <div class="modal-nav" ng-if="account.address != address">
                         <ul class="nav nav-justified nav-actions" ng-if="account.address">
                             <li>
-                                <a href="#" class="blue-link" ng-click="sendTransactionToUser()"><i class="mdi-content-send"></i><translate>Send LISK</translate></a>
+                                <a href="#" class="blue-link" ng-click="sendTransactionToUser()"><i class="mdi-content-send"></i><translate>Send LSK</translate></a>
                             </li>
                         </ul>
                     </div>
@@ -34,7 +34,7 @@
                             <ul class="list-group">
                                 <li class="list-group-item summary"><translate>Summary</translate></li>
                                 <li class="list-group-item bordered"><translate>Total Balance</translate>
-                                    <span class="pull-right small-text">{{account.unconfirmedBalance | liskFilter }} LISK</span>
+                                    <span class="pull-right small-text">{{account.unconfirmedBalance | liskFilter }} LSK</span>
                                 </li>
                                 <li class="list-group-item"><translate>USD Equivalent</translate>
                                     <span class="pull-right small-text">${{convertToUSD(account.unconfirmedBalance) || 0 | number: 2}}</span>
@@ -58,10 +58,10 @@
                                         <span class="pull-right small-text">{{transaction.confirmations}}</span>
                                     </li>
                                     <li class="list-group-item"><translate>Amount</translate>
-                                        <span class="pull-right small-text">{{transaction.amount / 100000000}} LISK</span>
+                                        <span class="pull-right small-text">{{transaction.amount / 100000000}} LSK</span>
                                     </li>
                                     <li class="list-group-item bordered"><translate>Fee</translate>
-                                        <span class="pull-right small-text">{{transaction.fee / 100000000}} LISK</span>
+                                        <span class="pull-right small-text">{{transaction.fee / 100000000}} LSK</span>
                                     </li>
                                     <li class="list-group-item"><translate>USD Equivalent</translate>
                                         <span class="pull-right small-text">${{convertToUSD(transaction.amount) || 0 | number: 2}}</span>
@@ -79,18 +79,18 @@
                                         <div class="transaction-path">
                                             <div class="transaction-part pull-left">
                                                 <a href="#" class="blue-link" ng-click="getAccountDetail(transaction.senderId)">{{transaction.senderId}}</a>
-                                                <span class="lisk">{{transaction.amount | liskFilter}} LISK</span>
+                                                <span class="lisk">{{transaction.amount | liskFilter}} LSK</span>
                                             </div>
                                             <div class="transaction-direction"></div>
                                             <div class="transaction-part pull-right">
                                                 <a href="#" class="blue-link" ng-click="getAccountDetail(transaction.recipientId)">{{transaction.recipientId
                                                 || ""}}</a>
-                                                <span class="lisk">{{transaction.amount | liskFilter}} LISK</span>
+                                                <span class="lisk">{{transaction.amount | liskFilter}} LSK</span>
                                             </div>
                                         </div>
                                         <div class="transaction-bottom">
-                                            <div class="fee"><translate>FEE</translate>: {{transaction.fee | liskFilter}} LISK</div>
-                                            <div class="lisk">{{transaction.amount | liskFilter}} LISK</div>
+                                            <div class="fee"><translate>FEE</translate>: {{transaction.fee | liskFilter}} LSK</div>
+                                            <div class="lisk">{{transaction.amount | liskFilter}} LSK</div>
                                             <div class="confirmations">{{transaction.confirmations || 0 }} <translate>CONFIRMATIONS</translate></div>
                                         </div>
                                     </li>
