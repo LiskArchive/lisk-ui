@@ -60,17 +60,17 @@
                                     <div class="transaction-path">
                                         <div class="transaction-part pull-left">
                                             <a href="#" ng-click="userInfo(transaction.senderId)">{{transaction.senderId}}</a>
-                                            <span class="lisk">{{transaction.amount | liskFilter}} LISK</span>
+                                            <span class="lisk">{{transaction.amount | liskFilter}} LSK</span>
                                         </div>
                                         <div class="transaction-direction"></div>
                                         <div class="transaction-part pull-right">
                                             <a href="#" ng-click="userInfo(transaction.recipientId)">{{transaction.recipientId || "-"}}</a>
-                                            <span class="lisk">{{transaction.amount | liskFilter}} LISK</span>
+                                            <span class="lisk">{{transaction.amount | liskFilter}} LSK</span>
                                         </div>
                                     </div>
                                     <div class="transaction-bottom">
-                                        <div class="fee"><translate>FEE</translate>: {{transaction.fee | liskFilter}} LISK</div>
-                                        <div class="lisk">{{transaction.amount | liskFilter}} LISK </div>
+                                        <div class="fee"><translate>FEE</translate>: {{transaction.fee | liskFilter}} LSK</div>
+                                        <div class="lisk">{{transaction.amount | liskFilter}} LSK </div>
                                         <div class="confirmations">{{transaction.confirmations || 0}} <translate>CONFIRMATIONS</translate></div>
                                     </div>
                                 </li>
