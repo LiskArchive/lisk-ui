@@ -10,9 +10,9 @@
                     </div>
                     <div class="modal-header clearfix">
                         <div>
-                            <h2>{{'Send LISK'|translate}}</h2>
+                            <h2>{{'Send LSK'|translate}}</h2>
                         </div>
-                        <div><translate>Please enter the Recipient Address and LISK Amount that you would like send below.</translate></div>
+                        <div><translate>Please enter the Recipient Address and LSK Amount that you would like send below.</translate></div>
                     </div>
                     <div class="modal-body">
                         <form ng-submit="passcheck()">
@@ -26,9 +26,9 @@
                             <div class="field-padding">
                                 <div class="input-field">
                                     <input id="amount" type="text" ng-model="amount" ng-focus="focus == 'amount'" ng-class="{'invalid': errorMessage.amount}">
-                                    <label for="amount"><translate>LISK Amount</translate></label>
+                                    <label for="amount"><translate>LSK Amount</translate></label>
                                 </div>
-                                <span class="fee-text flat-text pull-right"><translate>Fee: {{fee | liskFilter}} LISK</span>
+                                <span class="fee-text flat-text pull-right"><translate>Fee: {{fee | liskFilter}} LSK</span>
                                 <span class="pass-error" ng-show="errorMessage.amount">{{errorMessage.amount}}</span>
                             </div>
                             <p class="error-container" ng-show="errorMessage.fromServer">
@@ -38,7 +38,7 @@
                         </form>
                     </div>
                     <div class="modal-body bordered">
-                        <span class="send-info-text flat-text"><translate>Make sure you're sending LISK to the right address. This action can't be undone later.</translate></span>
+                        <span class="send-info-text flat-text"><translate>Make sure you're sending LSK to the right address. This action can't be undone later.</translate></span>
                     </div>
                     <div class="modal-body bordered">
                         <ul class="nav modal-buttons pull-right">
