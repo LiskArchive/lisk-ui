@@ -3,7 +3,7 @@ require('angular');
 angular.module('liskApp').service('delegateService', function ($http, $filter) {
 
     function filterData(data, filter) {
-        return $filter('filter')(data, filter)
+        return $filter('filter')(data, filter);
     }
 
     function orderData(data, params) {
@@ -11,7 +11,7 @@ angular.module('liskApp').service('delegateService', function ($http, $filter) {
     }
 
     function sliceData(data, params) {
-        return data.slice((params.page() - 1) * params.count(), params.page() * params.count())
+        return data.slice((params.page() - 1) * params.count(), params.page() * params.count());
     }
 
     function transformData(data, filter, params) {
@@ -26,9 +26,11 @@ angular.module('liskApp').service('delegateService', function ($http, $filter) {
         cachedTOP: {data: [], time: new Date()},
         cachedStundby: {data: [], time: new Date()},
         cachedVotedDelegates: {data: [], time: new Date()},
+
         isActiveRate: function (rate) {
             return rate <= this.topRate;
         },
+
         getTopList: function ($defer, params, filter, cb) {
             if (!this.gettingTop) {
                 this.gettingTop = !this.gettingTop;
@@ -39,8 +41,7 @@ angular.module('liskApp').service('delegateService', function ($http, $filter) {
                     this.gettingTop = !this.gettingTop;
                     cb();
                     $defer.resolve(transformedData);
-                }
-                else {
+                } else {
                     $http.get("/api/delegates/", {params: {orderBy: "rate:asc", limit: this.topRate, offset: 0}})
                         .then(function (response) {
                             angular.copy(response.data.delegates, delegates.cachedTOP.data);
@@ -74,12 +75,11 @@ angular.module('liskApp').service('delegateService', function ($http, $filter) {
                                 if (response.data.delegates.length > 0) {
                                     delegates.cachedStundby.data = delegates.cachedStundby.data.concat(response.data.delegates);
                                     getPart(limit, limit + offset);
-                                }
-                                else {
+                                } else {
                                     delegates.cachedStundby.time = new Date();
                                     params.total(delegates.cachedStundby.data.length);
                                     var filteredData = $filter('filter')(delegates.cachedStundby.data, filter);
-                                    var transformedData = transformData(delegates.cachedStundby.data, filter, params)
+                                    var transformedData = transformData(delegates.cachedStundby.data, filter, params);
                                     delegates.gettingStandBy = !delegates.gettingStandBy;
                                     cb();
                                     $defer.resolve(transformedData);
@@ -100,8 +100,7 @@ angular.module('liskApp').service('delegateService', function ($http, $filter) {
                     this.gettingVoted = !this.gettingVoted;
                     $defer.resolve(transformedData);
                     cb();
-                }
-                else {
+                } else {
                     $http.get("/api/accounts/delegates/", {params: {address: address}})
                         .then(function (response) {
                             angular.copy(response.data.delegates ? response.data.delegates : [], delegates.cachedVotedDelegates.data);
@@ -113,7 +112,6 @@ angular.module('liskApp').service('delegateService', function ($http, $filter) {
                             $defer.resolve(transformedData);
                             cb();
                         });
-
                 }
             }
         },
@@ -123,11 +121,9 @@ angular.module('liskApp').service('delegateService', function ($http, $filter) {
                     if (response.data.success) {
                         response.data.delegate.active = delegates.isActiveRate(response.data.delegate.rate);
                         cb(response.data.delegate);
+                    } else {
+                        cb({noDelegate: true, rate: 0, productivity: 0, vote: 0});
                     }
-                    else {
-                        cb({noDelegate: true, rate: 0, productivity: 0, vote: 0})
-                    }
-
                 });
         }
     };
