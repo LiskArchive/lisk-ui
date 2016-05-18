@@ -14,10 +14,10 @@
                     <span class="pull-right small-text">{{block.confirmations}}</span>
                 </li>
                 <li class="list-group-item"><translate>Amount</translate>
-                    <span class="pull-right small-text">{{block.amount | liskFilter}} LISK</span>
+                    <span class="pull-right small-text">{{block.amount | liskFilter}} LSK</span>
                 </li>
                 <li class="list-group-item bordered"><translate>Fee</translate>
-                    <span class="pull-right small-text">{{block.fee | liskFilter}} LISK</span>
+                    <span class="pull-right small-text">{{block.fee | liskFilter}} LSK</span>
                 </li>
                 <li class="list-group-item"><translate>USD Equivalent</translate>
                     <span class="pull-right small-text">${{convertToUSD(block.amount) || 0 | number: 2}}</span>
@@ -35,17 +35,17 @@
                     <div class="transaction-path">
                         <div class="transaction-part pull-left">
                             <a href="#" class="blue-link" ng-click="userInfo(block.recipientId)">{{block.senderId}}</a>
-                            <span class="lisk">{{block.amount | liskFilter}} LISK</span>
+                            <span class="lisk">{{block.amount | liskFilter}} LSK</span>
                         </div>
                         <div class="transaction-direction"></div>
                         <div class="transaction-part pull-right">
                             <a href="#" class="blue-link" ng-click="userInfo(block.recipientId)">{{block.recipientId || ""}}</a>
-                            <span class="lisk">{{block.amount | liskFilter}} LISK</span>
+                            <span class="lisk">{{block.amount | liskFilter}} LSK</span>
                         </div>
                     </div>
                     <div class="transaction-bottom">
-                        <div class="fee"><translate>FEE</translate>: {{block.fee | liskFilter}} LISK</div>
-                        <div class="lisk">{{block.amount | liskFilter}} LISK
+                        <div class="fee"><translate>FEE</translate>: {{block.fee | liskFilter}} LSK</div>
+                        <div class="lisk">{{block.amount | liskFilter}} LSK
                         </div>
                         <div class="confirmations">{{block.confirmations || 0}} <translate>CONFIRMATIONS</translate></div>
                     </div>
