@@ -36,11 +36,11 @@ liskApp.config(["ngClipProvider",
                 templateUrl: "/partials/account.html",
                 controller: "accountController"
             })
-            .state('main.multi', {
-                url: "/wallets",
-                templateUrl: "/partials/multi.html",
-                controller: "walletsController"
-            })
+            // .state('main.multi', {
+            //     url: "/wallets",
+            //     templateUrl: "/partials/multi.html",
+            //     controller: "walletsController"
+            // })
             .state('main.dappstore', {
                 url: "/dappstore",
                 templateUrl: "/partials/dapps.html",
@@ -56,16 +56,16 @@ liskApp.config(["ngClipProvider",
                 templateUrl: "/partials/dapp-entry.html",
                 controller: "dappController"
             })
-            .state('main.multiPendings', {
-                url: "/wallets/pendings",
-                templateUrl: "/partials/wallet-pendings.html",
-                controller: "walletPendingsController"
-            })
-            .state('main.walletTransactions', {
-                url: "/wallets/:walletId",
-                templateUrl: "/partials/wallet-transactions.html",
-                controller: "walletTransactionsController"
-            })
+            // .state('main.multiPendings', {
+            //     url: "/wallets/pendings",
+            //     templateUrl: "/partials/wallet-pendings.html",
+            //     controller: "walletPendingsController"
+            // })
+            // .state('main.walletTransactions', {
+            //     url: "/wallets/:walletId",
+            //     templateUrl: "/partials/wallet-transactions.html",
+            //     controller: "walletTransactionsController"
+            // })
             .state('main.settings', {
                 url: "/settings",
                 templateUrl: "/partials/settings.html",
