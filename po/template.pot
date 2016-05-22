@@ -112,6 +112,7 @@ msgstr ""
 #: partials/modals/forgingModal.html:32
 #: partials/modals/masterPassphraseModal.html:32
 #: partials/modals/multisignatureModal.html:89
+#: partials/modals/openDappModal.html:27
 #: partials/modals/passphraseCheck.html:32
 #: partials/modals/registrationDelegateModal.html:35
 #: partials/modals/registrationDelegateModal.html:67
@@ -159,6 +160,7 @@ msgstr ""
 #: partials/modals/multisignatureModal.html:8
 #: partials/modals/newUser.html:10
 #: partials/modals/newUser.html:53
+#: partials/modals/openDappModal.html:8
 #: partials/modals/passphraseCheck.html:8
 #: partials/modals/registrationDelegateModal.html:46
 #: partials/modals/registrationDelegateModal.html:8
@@ -424,6 +426,10 @@ msgstr ""
 msgid "HOME"
 msgstr ""
 
+#: partials/modals/openDappModal.html:21
+msgid "If you are confident the application can be deemed trustworthy, click <strong>Open Anyway</strong>, otherwise click <strong>Cancel</strong> now."
+msgstr ""
+
 #: partials/dapp-entry.html:20
 msgid "INSTALL"
 msgstr ""
@@ -675,6 +681,10 @@ msgstr ""
 msgid "OPEN"
 msgstr ""
 
+#: partials/modals/openDappModal.html:30
+msgid "OPEN ANYWAY"
+msgstr ""
+
 #: js/controllers/forgingController.js:41
 #: js/controllers/forgingController.js:53
 #: js/controllers/forgingController.js:64
@@ -759,6 +769,7 @@ msgstr ""
 
 #: partials/modals/addDappModal.html:18
 #: partials/modals/multisignatureModal.html:15
+#: partials/modals/openDappModal.html:15
 msgid "Please read carefully."
 msgstr ""
 
@@ -871,6 +882,10 @@ msgstr ""
 msgid "Second Passphrase"
 msgstr ""
 
+#: partials/modals/openDappModal.html:13
+msgid "Security Warning"
+msgstr ""
+
 #: partials/template.html:149
 msgid "SEND"
 msgstr ""
@@ -978,6 +993,10 @@ msgstr ""
 #: partials/modals/transactionInfo.html:12
 #: partials/modals/userInfo.html:35
 msgid "Summary"
+msgstr ""
+
+#: partials/modals/openDappModal.html:19
+msgid "The Lisk apps platform currently does not provide any protection against any unauthorized system calls made from the running application. Therefore opening any untrusted applications is not yet advisable, and could potentially lead to loss of funds."
 msgstr ""
 
 #: partials/modals/newUser.html:68

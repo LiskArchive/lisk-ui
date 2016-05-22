@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory', '$stateParams', '$http', "$interval", "userService", "errorModal", "masterPassphraseModal","confirmDeletionModal", 'gettextCatalog', function ($scope, viewFactory, $stateParams, $http, $interval, userService, errorModal, masterPassphraseModal, confirmDeletionModal, gettextCatalog) {
+angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory', '$stateParams', '$http', "$interval", "userService", "errorModal", "masterPassphraseModal", "openDappModal", "confirmDeletionModal", 'gettextCatalog', function ($scope, viewFactory, $stateParams, $http, $interval, userService, errorModal, masterPassphraseModal, openDappModal, confirmDeletionModal, gettextCatalog) {
 
     $scope.view = viewFactory;
     $scope.view.inLoading = true;
@@ -208,17 +208,23 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
         }
     }
 
-    $scope.openDapp = function () {
-        if ($scope.dapp.type == 1) {
-            var link = angular.element('<a href="' + $scope.dapp.link + '" target="_blank"></a>');
-        } else {
-            var link = angular.element('<a href="' +
-                '/dapps/' + $stateParams.dappId + '" target="_blank"></a>');
+    function openDapp (openDapp) {
+        if (openDapp) {
+            if ($scope.dapp.type == 1) {
+                var link = angular.element('<a href="' + $scope.dapp.link + '" target="_blank"></a>');
+            } else {
+                var link = angular.element('<a href="' +
+                    '/dapps/' + $stateParams.dappId + '" target="_blank"></a>');
+            }
+            angular.element(document.body).append(link);
+            link[0].style.display = "none";
+            link[0].click();
+            link.remove();
         }
-        angular.element(document.body).append(link);
-        link[0].style.display = "none";
-        link[0].click();
-        link.remove();
+    }
+
+    $scope.openDapp = function () {
+        openDappModal.activate({ destroy: openDapp });
     }
 
     $scope.isInstalled();
