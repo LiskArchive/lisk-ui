@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('liskApp').controller('multisignatureModalController', ["$scope", "$http", "multisignatureModal", "viewFactory", "userService", 'gettextCatalog', function ($scope, $http, multisignatureModal, viewFactory, userService, gettextCatalog) {
+angular.module('liskApp').controller('multisignatureModalController', ["$scope", "$http", "multisignatureModal", "viewFactory", "userService", "feeService", "gettextCatalog", function ($scope, $http, multisignatureModal, viewFactory, userService, feeService, gettextCatalog) {
 
     $scope.view = viewFactory;
     $scope.view.loadingText = gettextCatalog.getString('Configuring multi-signature group');
@@ -12,7 +12,6 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
     }
     $scope.addingError = '';
     $scope.currentAddress = userService.address;
-    $scope.fee = 5;
 
     $scope.close = function () {
         if ($scope.destroy) {
@@ -131,5 +130,9 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
             }
         });
     }
+
+    feeService(function (fees) {
+        $scope.fee = fees.multisignature;
+    });
 
 }]);

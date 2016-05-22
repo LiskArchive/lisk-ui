@@ -1,24 +1,11 @@
 require('angular');
 
-angular.module('liskApp').controller('secondPassphraseModalController', ["$scope", "secondPassphraseModal", "$http", "userService", function ($scope, secondPassphraseModal, $http, userService) {
+angular.module('liskApp').controller('secondPassphraseModalController', ["$scope", "secondPassphraseModal", "$http", "userService", "feeService", function ($scope, secondPassphraseModal, $http, userService, feeService) {
 
     $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
     $scope.passmode = false;
     $scope.focus = 'secondPass';
-    $scope.fee = 0;
     $scope.step = 1;
-
-    $scope.getFee = function () {
-        $http.get("/api/signatures/fee").then(function (resp) {
-            if (resp.data.success) {
-                $scope.fee = resp.data.fee;
-            } else {
-                $scope.fee = 0;
-            }
-        });
-    }
-
-    $scope.getFee();
 
     $scope.goToStep = function (step) {
         $scope.passmode = false;
@@ -88,5 +75,9 @@ angular.module('liskApp').controller('secondPassphraseModalController', ["$scope
             }
         });
     }
+
+    feeService(function (fees) {
+        $scope.fee = fees.secondsignature;
+    });
 
 }]);

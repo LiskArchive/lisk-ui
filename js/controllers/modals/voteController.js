@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "$http", "userService", "$timeout", function ($scope, voteModal, $http, userService, $timeout) {
+angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "$http", "userService", "feeService", "$timeout", function ($scope, voteModal, $http, userService, feeService, $timeout) {
 
     $scope.voting = false;
     $scope.fromServer = '';
@@ -8,7 +8,6 @@ angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "
     $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
     $scope.secondPassphrase = userService.secondPassphrase;
     $scope.focus = 'secretPhrase';
-    $scope.fee = 0;
 
     Object.size = function (obj) {
         var size = 0, key;
@@ -17,16 +16,6 @@ angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "
         }
         return size;
     };
-
-    $scope.getFee = function () {
-        $http.get("/api/accounts/delegates/fee").then(function (resp) {
-            if (resp.data.success) {
-                $scope.fee = resp.data.fee;
-            } else {
-                $scope.fee = 0;
-            }
-        });
-    }
 
     $scope.passcheck = function (fromSecondPass) {
         $scope.fromServer=null;
@@ -52,8 +41,6 @@ angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "
     }
 
     $scope.secondPassphrase = userService.secondPassphrase;
-
-    $scope.getFee();
 
     $scope.close = function () {
         if ($scope.destroy) {
@@ -105,5 +92,9 @@ angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "
             }
         });
     }
+
+    feeService(function (fees) {
+        $scope.fee = fees.vote;
+    });
 
 }]);

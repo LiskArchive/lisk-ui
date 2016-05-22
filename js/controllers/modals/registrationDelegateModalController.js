@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('liskApp').controller('registrationDelegateModalController', ["$scope", "registrationDelegateModal", "$http", "userService", "delegateService", function ($scope, registrationDelegateModal, $http, userService, delegateService) {
+angular.module('liskApp').controller('registrationDelegateModalController', ["$scope", "registrationDelegateModal", "$http", "userService", "feeService", "delegateService", function ($scope, registrationDelegateModal, $http, userService, feeService, delegateService) {
 
     $scope.error = null;
     $scope.delegate = userService.delegate;
@@ -10,21 +10,7 @@ angular.module('liskApp').controller('registrationDelegateModalController', ["$s
     $scope.delegateData = {username: ''};
     $scope.secondPassphrase = userService.secondPassphrase;
     $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
-
-    $scope.fee = 0;
     $scope.focus = 'username';
-
-    $scope.getFee = function () {
-        $http.get("/api/delegates/fee").then(function (resp) {
-            if (resp.data.success) {
-                $scope.fee = resp.data.fee;
-            } else {
-                $scope.fee = 0;
-            }
-        });
-    }
-
-    $scope.getFee();
 
     $scope.close = function () {
         if ($scope.destroy) {
@@ -127,5 +113,9 @@ angular.module('liskApp').controller('registrationDelegateModalController', ["$s
                 }
             });
     }
+
+    feeService(function (fees) {
+        $scope.fee = fees.delegate;
+    });
 
 }]);

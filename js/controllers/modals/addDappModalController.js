@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('liskApp').controller('addDappModalController', ["$scope", "$http", "addDappModal", "userService", "viewFactory", 'gettextCatalog', function ($scope, $http, addDappModal, userService, viewFactory, gettextCatalog) {
+angular.module('liskApp').controller('addDappModalController', ["$scope", "$http", "addDappModal", "userService", "feeService", "viewFactory", 'gettextCatalog', function ($scope, $http, addDappModal, userService, feeService, viewFactory, gettextCatalog) {
 
     $scope.view = viewFactory;
     $scope.view.loadingText = gettextCatalog.getString('Saving new application');
@@ -9,7 +9,6 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
     $scope.passmode = false;
     $scope.errorMessage = "";
     $scope.checkSecondPass = false;
-    $scope.fee = 50000000000;
 
     $scope.close = function () {
         addDappModal.deactivate();
@@ -121,5 +120,9 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
             $scope.form.storage_data.submitted = false;
         }
     }
+
+    feeService(function (fees) {
+        $scope.fee = fees.dapp;
+    });
 
 }]);

@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('liskApp').controller('sendTransactionController', ['$scope', 'sendTransactionModal', '$http', 'userService', '$timeout', '$filter', function ($scope, sendTransactionModal, $http, userService, $timeout, $filter) {
+angular.module('liskApp').controller('sendTransactionController', ['$scope', 'sendTransactionModal', '$http', 'userService', 'feeService', '$timeout', '$filter', function ($scope, sendTransactionModal, $http, userService, feeService, $timeout, $filter) {
 
     $scope.sending = false;
     $scope.passmode = false;
@@ -12,7 +12,6 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
     $scope.address = userService.address;
     $scope.focus = $scope.to ? 'amount' : 'to';
     $scope.presendError = false;
-    $scope.fee = 0;
 
     $scope.submit = function () {
         console.log('Transaction sent');
@@ -232,6 +231,8 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
         }
     }
 
-    $scope.getCurrentFee();
+    feeService(function (fees) {
+        $scope.fee = fees.send;
+    });
 
 }]);
