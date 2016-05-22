@@ -130,9 +130,10 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
     // end Blocks
 
     $scope.updateGraphs = function () {
-        delegateService.getDelegate(userService.publicKey, function (response) {
-            var totalDelegates = 108;
+        delegateService.getCountedDelegate(userService.publicKey, function (response) {
+            var totalDelegates = response.totalCount;
             var rank = response.rate;
+
             if (!rank || rank == 0) {
                 $scope.graphs.rank.values = [0, 100];
             } else {

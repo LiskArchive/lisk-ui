@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('liskApp').service('delegateService', function ($http, $filter) {
+angular.module('liskApp').service('delegateService', function ($http, $filter, $q) {
 
     function filterData(data, filter) {
         return $filter('filter')(data, filter);
@@ -125,6 +125,27 @@ angular.module('liskApp').service('delegateService', function ($http, $filter) {
                         cb({noDelegate: true, rate: 0, productivity: 0, vote: 0});
                     }
                 });
+        },
+        getCountedDelegate: function (publicKey, cb) {
+            $q.all([
+                $http.get("/api/delegates/get/", {params: {publicKey: publicKey}}),
+                $http.get("/api/delegates/count")
+            ]).then(function(results) {
+                if (results[0].data.success) {
+                    var response = results[0];
+
+                    if (results[1].data.success) {
+                        response.data.delegate.totalCount = parseInt(results[1].data.count) || 0;
+                    } else {
+                        response.data.delegate.totalCount = 0;
+                    }
+
+                    response.data.delegate.active = delegates.isActiveRate(response.data.delegate.rate);
+                    cb(response.data.delegate);
+                } else {
+                    cb({noDelegate: true, rate: 0, productivity: 0, vote: 0, totalCount: 0});
+                }
+            });
         }
     };
 
