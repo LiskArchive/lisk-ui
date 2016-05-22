@@ -12,10 +12,6 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: partials/dapp-entry.html:73
-msgid "(1449)"
-msgstr "(1449)"
-
 #: partials/votes.html:25
 msgid "{{count}} in Total"
 msgstr "{{count}}  Összesen"
@@ -42,7 +38,7 @@ msgstr ""
 msgid "2nd Passphrase"
 msgstr "2. jelmondat"
 
-#: partials/modals/addDappModal.html:21
+#: partials/modals/addDappModal.html:31
 msgid "Accept / Next Step"
 msgstr "Elfogadás / Következő lépés"
 
@@ -50,35 +46,30 @@ msgstr "Elfogadás / Következő lépés"
 msgid "Account"
 msgstr "Fiók"
 
-#: partials/modals/addDappModal.html:102 partials/modals/addDappModal.html:122
+#: partials/modals/addDappModal.html:140 partials/modals/addDappModal.html:182
 #: partials/modals/masterPassphraseModal.html:13
-#: partials/modals/multisignatureModal.html:148
+#: partials/modals/multisignatureModal.html:154
 #: partials/modals/passphraseCheck.html:13
-#: partials/modals/registrationDelegateModal.html:50
-#: partials/modals/registrationDelegateModal.html:85
-#: partials/modals/secondPassphraseModal.html:81
-#: partials/modals/sendTransaction.html:55
-#: partials/modals/sendTransaction.html:90 partials/modals/vote.html:44
-#: partials/modals/vote.html:79
+#: partials/modals/registrationDelegateModal.html:51
+#: partials/modals/registrationDelegateModal.html:86
+#: partials/modals/secondPassphraseModal.html:104
+#: partials/modals/sendTransaction.html:62
+#: partials/modals/sendTransaction.html:97 partials/modals/vote.html:54
+#: partials/modals/vote.html:89
 msgid "Account Verification"
 msgstr "Fiók ellenőrzés"
 
-#: partials/delegates.html:136 partials/delegates.html:67
-#: partials/votes.html:65
-msgid "Add as Contact"
-msgstr "Hozzáadás kapcsolatként"
-
-#: partials/modals/multisignatureModal.html:46
-msgid "Add group members by typing in their LISK address and pressing enter."
+#: partials/dapps.html:152
+msgid "Add a new application"
 msgstr ""
 
-#: partials/dapps.html:152
-msgid "ADD NEW DAPP"
-msgstr "ÚJ DAPP HOZZÁADÁSA"
+#: partials/modals/multisignatureModal.html:46
+msgid "Add group members by typing in their Lisk address and pressing enter."
+msgstr ""
 
-#: partials/modals/secondPassphraseModal.html:100
-msgid "add second passphrase"
-msgstr "második passphrase hozzáadása"
+#: partials/modals/secondPassphraseModal.html:126
+msgid "ADD SECOND PASSPHRASE"
+msgstr ""
 
 #: js/controllers/blockchainController.js:45
 #: js/controllers/transactionsController.js:66
@@ -92,6 +83,10 @@ msgstr "Összeg"
 #: partials/account.html:79
 msgid "Amount (Fee)"
 msgstr "Összeg (díj)"
+
+#: js/controllers/dappsController.js:8 partials/template.html:90
+msgid "Applications"
+msgstr ""
 
 #: js/controllers/delegatesController.js:160
 #: js/controllers/forgingController.js:64
@@ -107,17 +102,13 @@ msgstr "Biztos, hogy törölni kívánja ezt az elemet?"
 msgid "Balance"
 msgstr "Számlaegyenleg"
 
-#: partials/modals/registrationDelegateModal.html:29
+#: partials/modals/registrationDelegateModal.html:30
 msgid ""
 "Becoming a delegate requires registration. You may choose your own delegate "
 "name, which can be used to promote your delegate. Only the top 101 delegates "
 "are eligible to forge. All fees are shared equally between the top 101 "
-"delegates. Registration costs: {{fee | liskFilter}} LISK."
+"delegates."
 msgstr ""
-"A delegációhoz regisztráció szükséges. Kiválaszthatja a saját delegált "
-"nevét, amit felhasználhat arra hogy támogassa a delegációját. Csak a top 101 "
-"delegált jogosult a forge-ra. Minden díj egyenlően van megosztva a top 101 "
-"delegáltak közt. Regisztráció ára: {{fee | liskFilter}} LISK."
 
 #: js/controllers/blockchainController.js:41
 #: js/controllers/forgingController.js:115 partials/modals/blockInfo.html:7
@@ -131,17 +122,18 @@ msgid "Blockchain"
 msgstr "Blockchain"
 
 #: partials/modals/forgingModal.html:32
-#: partials/modals/masterPassphraseModal.html:32
-#: partials/modals/multisignatureModal.html:88
+#: partials/modals/masterPassphraseModal.html:35
+#: partials/modals/multisignatureModal.html:89
+#: partials/modals/openDappModal.html:27
 #: partials/modals/passphraseCheck.html:32
-#: partials/modals/registrationDelegateModal.html:34
-#: partials/modals/registrationDelegateModal.html:66
-#: partials/modals/sendTransaction.html:39 partials/modals/vote.html:63
+#: partials/modals/registrationDelegateModal.html:35
+#: partials/modals/registrationDelegateModal.html:67
+#: partials/modals/sendTransaction.html:46 partials/modals/vote.html:73
 msgid "Cancel"
 msgstr "Mégse"
 
-#: partials/modals/addDappModal.html:22
-#: partials/modals/multisignatureModal.html:28 partials/modals/vote.html:18
+#: partials/modals/addDappModal.html:28
+#: partials/modals/multisignatureModal.html:28 partials/modals/vote.html:38
 msgid "CANCEL"
 msgstr "MÉGSE"
 
@@ -153,33 +145,35 @@ msgstr "KATEGÓRIÁK"
 msgid "Category:"
 msgstr "Kategória:"
 
-#: partials/modals/addDappModal.html:10 partials/modals/addDappModal.html:117
-#: partials/modals/addDappModal.html:28 partials/modals/addDappModal.html:33
-#: partials/modals/addDappModal.html:5 partials/modals/addDappModal.html:51
-#: partials/modals/addDappModal.html:56 partials/modals/addDappModal.html:74
-#: partials/modals/addDappModal.html:79 partials/modals/addDappModal.html:97
+#: partials/modals/addDappModal.html:101 partials/modals/addDappModal.html:106
+#: partials/modals/addDappModal.html:13 partials/modals/addDappModal.html:132
+#: partials/modals/addDappModal.html:137 partials/modals/addDappModal.html:174
+#: partials/modals/addDappModal.html:179 partials/modals/addDappModal.html:39
+#: partials/modals/addDappModal.html:44 partials/modals/addDappModal.html:70
+#: partials/modals/addDappModal.html:75 partials/modals/addDappModal.html:8
 #: partials/modals/blockInfo.html:10 partials/modals/blockModal.html:9
 #: partials/modals/confirmDeletionModal.html:8
 #: partials/modals/errorModal.html:9 partials/modals/forgingModal.html:9
 #: partials/modals/masterPassphraseModal.html:8
 #: partials/modals/multiMembersModal.html:8
-#: partials/modals/multisignatureModal.html:143
+#: partials/modals/multisignatureModal.html:100
+#: partials/modals/multisignatureModal.html:149
 #: partials/modals/multisignatureModal.html:39
-#: partials/modals/multisignatureModal.html:8
-#: partials/modals/multisignatureModal.html:99 partials/modals/newUser.html:10
-#: partials/modals/newUser.html:43 partials/modals/passphraseCheck.html:8
-#: partials/modals/registrationDelegateModal.html:45
+#: partials/modals/multisignatureModal.html:8 partials/modals/newUser.html:10
+#: partials/modals/newUser.html:53 partials/modals/openDappModal.html:8
+#: partials/modals/passphraseCheck.html:8
+#: partials/modals/registrationDelegateModal.html:46
 #: partials/modals/registrationDelegateModal.html:8
-#: partials/modals/registrationDelegateModal.html:80
+#: partials/modals/registrationDelegateModal.html:81
 #: partials/modals/secondPassphraseModal.html:10
-#: partials/modals/secondPassphraseModal.html:44
-#: partials/modals/secondPassphraseModal.html:76
-#: partials/modals/sendTransaction.html:50
+#: partials/modals/secondPassphraseModal.html:57
+#: partials/modals/secondPassphraseModal.html:99
+#: partials/modals/sendTransaction.html:57
 #: partials/modals/sendTransaction.html:8
-#: partials/modals/sendTransaction.html:85
+#: partials/modals/sendTransaction.html:92
 #: partials/modals/transactionInfo.html:7 partials/modals/userInfo.html:22
-#: partials/modals/vote.html:39 partials/modals/vote.html:74
-#: partials/modals/vote.html:9
+#: partials/modals/vote.html:49 partials/modals/vote.html:8
+#: partials/modals/vote.html:84
 msgid "Close modal"
 msgstr "Lista bezárása"
 
@@ -187,21 +181,24 @@ msgstr "Lista bezárása"
 msgid "Configuring multi-signature group"
 msgstr ""
 
-#: partials/modals/multisignatureModal.html:135
-#: partials/modals/multisignatureModal.html:174
+#: partials/modals/multisignatureModal.html:141
+#: partials/modals/multisignatureModal.html:180
 msgid "confirm"
 msgstr "jóváhagy"
 
-#: partials/modals/addDappModal.html:110 partials/modals/addDappModal.html:90
+#: partials/modals/addDappModal.html:124 partials/modals/addDappModal.html:166
+#: partials/modals/addDappModal.html:208
 msgid "Confirm"
 msgstr "Jóváhagy"
 
-#: partials/multi.html:31 partials/wallet-pendings.html:28
+#: partials/modals/masterPassphraseModal.html:38
+#: partials/modals/newUser.html:80 partials/multi.html:31
+#: partials/wallet-pendings.html:28
 msgid "CONFIRM"
 msgstr "JÓVÁHAGY"
 
-#: partials/modals/secondPassphraseModal.html:69
-msgid "confirm second passphrase"
+#: partials/modals/secondPassphraseModal.html:85
+msgid "CONFIRM SECOND PASSPHRASE"
 msgstr ""
 
 #: js/directives/voteActionDirective.js:14
@@ -224,8 +221,8 @@ msgstr "Megerősítések"
 msgid "CONFIRMATIONS"
 msgstr "VISSZAIGAZOLÁSOK"
 
-#: partials/modals/multisignatureModal.html:113
-#: partials/modals/multisignatureModal.html:73
+#: partials/modals/multisignatureModal.html:125
+#: partials/modals/multisignatureModal.html:74
 msgid "Confirmations needed"
 msgstr "Szükséges megerősítések"
 
@@ -256,10 +253,6 @@ msgstr "Cím másolása"
 msgid "Copy Name"
 msgstr "Név másolása"
 
-#: js/controllers/dappsController.js:8 partials/template.html:90
-msgid "Dapp Store"
-msgstr "Dapp Store"
-
 #: js/controllers/accountController.js:8 partials/template.html:72
 msgid "Dashboard"
 msgstr "Dashboard"
@@ -285,7 +278,7 @@ msgstr "Leírás"
 msgid "Disable Forging"
 msgstr "Forge-olás Letiltása"
 
-#: js/controllers/appController.js:299
+#: js/controllers/appController.js:315
 msgid "Disabled"
 msgstr "Letiltva"
 
@@ -303,20 +296,20 @@ msgstr "Üres jelszó"
 msgid "Enable Forging"
 msgstr "Forge-olás engedélyezése"
 
-#: js/controllers/appController.js:299
+#: js/controllers/appController.js:315
 msgid "Enabled"
 msgstr "Engedélyezve"
 
 #: js/controllers/dappController.js:143
-msgid "Failed to install dapp"
+msgid "Failed to install application"
 msgstr ""
 
 #: js/controllers/dappController.js:183
-msgid "Failed to launch Dapp"
+msgid "Failed to launch application"
 msgstr ""
 
 #: js/controllers/dappController.js:94
-msgid "Failed to uninstall Dapp"
+msgid "Failed to uninstall application"
 msgstr ""
 
 #: js/controllers/blockchainController.js:46
@@ -325,6 +318,7 @@ msgstr ""
 #: js/controllers/walletPendingsController.js:48
 #: js/controllers/walletsController.js:149
 #: js/controllers/walletTransactionsController.js:71
+#: partials/modals/multisignatureModal.html:128
 #: partials/modals/transactionInfo.html:19 partials/modals/userInfo.html:63
 msgid "Fee"
 msgstr "Díj"
@@ -333,6 +327,12 @@ msgstr "Díj"
 #: partials/modals/transactionInfo.html:47 partials/modals/userInfo.html:92
 msgid "FEE"
 msgstr "DÍJ"
+
+#: partials/modals/registrationDelegateModal.html:23
+#: partials/modals/secondPassphraseModal.html:28
+#: partials/modals/sendTransaction.html:31 partials/modals/vote.html:25
+msgid "Fee: {{fee | liskFilter}} LSK"
+msgstr ""
 
 #: partials/forging.html:74
 msgid "Forged Blocks"
@@ -351,15 +351,9 @@ msgstr "FORGE-OLÁS"
 
 #: partials/modals/secondPassphraseModal.html:18
 msgid ""
-"Further protect your account with an optional second passphrase! Please "
-"allow some time for the changes to take effect. Service cost: <b>{{fee | "
-"liskFilter}} LISK</b>. Your balance: <b>{{totalBalance | liskFilter}} LISK</"
-"b>."
+"Further protect your account with an optional second passphrase! It may take "
+"a few moments for the changes to take effect."
 msgstr ""
-"A fiókjának érdekében további biztonságért védje meg egy 2. passphrase-el! "
-"Kérjük engedélyezzen egy kis időt a változásért. Szolgáltatás ára: <b>{{fee "
-"| liskFilter}} LISK</b>. Saját egyenleg: <b>{{totalBalance | liskFilter}} "
-"LISK</b>."
 
 #: partials/settings.html:6
 msgid "General"
@@ -374,23 +368,16 @@ msgstr "Generáljon újat"
 msgid "Generator"
 msgstr "Generátor"
 
-#: partials/modals/newUser.html:67
-msgid "GET STARTED"
-msgstr "Kezdjük"
-
-#: partials/modals/addDappModal.html:111 partials/modals/addDappModal.html:45
-#: partials/modals/addDappModal.html:68 partials/modals/addDappModal.html:91
-msgid "Go back"
-msgstr "Vissza"
-
-#: partials/modals/addDappModal.html:131
-#: partials/modals/multisignatureModal.html:132
-#: partials/modals/multisignatureModal.html:171 partials/modals/newUser.html:66
-#: partials/modals/registrationDelegateModal.html:104
-#: partials/modals/secondPassphraseModal.html:68
-#: partials/modals/secondPassphraseModal.html:99
-#: partials/modals/sendTransaction.html:109
-#: partials/modals/sendTransaction.html:74 partials/modals/vote.html:98
+#: partials/modals/addDappModal.html:121 partials/modals/addDappModal.html:163
+#: partials/modals/addDappModal.html:205 partials/modals/addDappModal.html:59
+#: partials/modals/addDappModal.html:90
+#: partials/modals/multisignatureModal.html:138
+#: partials/modals/multisignatureModal.html:177 partials/modals/newUser.html:77
+#: partials/modals/registrationDelegateModal.html:105
+#: partials/modals/secondPassphraseModal.html:123
+#: partials/modals/secondPassphraseModal.html:82
+#: partials/modals/sendTransaction.html:116
+#: partials/modals/sendTransaction.html:81 partials/modals/vote.html:108
 msgid "GO BACK"
 msgstr "VISSZA"
 
@@ -414,6 +401,12 @@ msgstr "Magasság"
 msgid "HOME"
 msgstr "Főoldal"
 
+#: partials/modals/openDappModal.html:21
+msgid ""
+"If you are confident the application can be deemed trustworthy, click "
+"<strong>Open Anyway</strong>, otherwise click <strong>Cancel</strong> now."
+msgstr ""
+
 #: partials/dapp-entry.html:20
 msgid "INSTALL"
 msgstr "TELEPÍTÉS"
@@ -423,18 +416,22 @@ msgid "INSTALLED"
 msgstr "TELEPÍTVE"
 
 #: partials/dapps.html:235
-msgid "Installed Dapps"
-msgstr "Telepített Dapps-ok"
+msgid "Installed Applications"
+msgstr ""
 
 #: partials/settings.html:9
 msgid "Language"
 msgstr "Nyelv"
 
+#: partials/blockchain.html:7
+msgid "Latest Blocks"
+msgstr ""
+
 #: partials/multi.html:6
 msgid "Latest Multi-Signature Transactions"
 msgstr "Legutolsó Multi-Signature tranzakciók"
 
-#: partials/account.html:57
+#: partials/account.html:57 partials/transactions.html:7
 msgid "Latest Transactions"
 msgstr "Legutóbbi tranzakcióink"
 
@@ -447,22 +444,15 @@ msgid "LAUNCH"
 msgstr "INDÍTÁS"
 
 #: wallet.html:20
-msgid "Lisk - Decentralized Application Platform"
-msgstr "Lisk - Decentralizált Alkalmazás Platform"
+msgid "Lisk - Blockchain Application Platform"
+msgstr ""
 
 #: js/controllers/delegatesController.js:158
 #: js/controllers/votedDelegatesController.js:117
 #: js/controllers/walletPendingsController.js:43
+#: partials/modals/multisignatureModal.html:52
 msgid "Lisk Address"
 msgstr "Lisk Cím"
-
-#: partials/modals/multisignatureModal.html:52
-msgid "LISK Address"
-msgstr ""
-
-#: partials/modals/sendTransaction.html:26
-msgid "LISK Amount"
-msgstr "LISK Összeg"
 
 #: partials/account.html:33
 msgid "Lisk Client"
@@ -472,22 +462,15 @@ msgstr "Lisk Kliens"
 msgid "Lisk Client Outdated"
 msgstr "Lisk Kliens elavult"
 
-#: partials/forging.html:11
-msgid "LISK Earned"
-msgstr "Keresett LISK"
+#: js/controllers/dappController.js:7
+#: js/controllers/dappsCategoryController.js:7
+#: js/controllers/dappsController.js:7
+msgid "Loading applications"
+msgstr ""
 
 #: js/controllers/blockchainController.js:7
 msgid "Loading blockchain"
 msgstr "Blockchain betöltése"
-
-#: js/controllers/dappController.js:7
-msgid "Loading dapp"
-msgstr "Dapp betöltése"
-
-#: js/controllers/dappsCategoryController.js:7
-#: js/controllers/dappsController.js:7
-msgid "Loading dapps"
-msgstr "Dapps-ok betöltése"
 
 #: js/controllers/accountController.js:7
 msgid "Loading dashboard"
@@ -511,7 +494,7 @@ msgstr "Multi-Signature Csoportok Betoltése"
 msgid "Loading transactions"
 msgstr "Tranzakciók betöltése"
 
-#: partials/blockchain.html:35 partials/delegates.html:150
+#: partials/blockchain.html:40 partials/delegates.html:150
 #: partials/delegates.html:81
 msgid "Loading..."
 msgstr "Betöltés..."
@@ -520,6 +503,20 @@ msgstr "Betöltés..."
 msgid "Logout"
 msgstr "Kijelentkezés"
 
+#: partials/modals/sendTransaction.html:29
+msgid "LSK Amount"
+msgstr ""
+
+#: partials/forging.html:11
+msgid "LSK Earned"
+msgstr ""
+
+#: partials/modals/newUser.html:72
+msgid ""
+"Make sure that you keep the passphrase safe. If you lose your passphrase "
+"later on, your account can't be restored and all your funds will be lost."
+msgstr ""
+
 #: partials/modals/newUser.html:31
 msgid ""
 "Make sure that you keep the passphrase safe. You will be asked to re-type it "
@@ -527,9 +524,22 @@ msgid ""
 msgstr ""
 "Kérjük tartsa biztonságban a passsphrase-et. Írja be újra megerősitésért."
 
-#: partials/modals/sendTransaction.html:34
+#: partials/modals/secondPassphraseModal.html:77
 msgid ""
-"Make sure you're sending LISK to the right address. This action can't be "
+"Make sure that you keep the second passphrase safe. If you lose your second "
+"passphrase later on, your account can't be restored and all your funds will "
+"be lost."
+msgstr ""
+
+#: partials/modals/secondPassphraseModal.html:35
+msgid ""
+"Make sure that you keep the second passphrase safe. You will be asked to re-"
+"type it for confirmation."
+msgstr ""
+
+#: partials/modals/sendTransaction.html:41
+msgid ""
+"Make sure you're sending LSK to the right address. This action can't be "
 "undone later."
 msgstr ""
 
@@ -545,7 +555,7 @@ msgstr "Tagok"
 msgid "More"
 msgstr "Több"
 
-#: js/controllers/walletsController.js:8 partials/settings.html:11
+#: js/controllers/walletsController.js:8 partials/settings.html:12
 #: partials/template.html:78
 msgid "Multi-Signature"
 msgstr "Multi-Signature"
@@ -554,11 +564,11 @@ msgstr "Multi-Signature"
 msgid "Multi-Signature Group Members"
 msgstr ""
 
-#: partials/settings.html:22
+#: partials/settings.html:23
 msgid "Multi-Signature is Disabled"
 msgstr ""
 
-#: partials/settings.html:23
+#: partials/settings.html:24
 msgid "Multi-Signature is Enabled"
 msgstr ""
 
@@ -587,7 +597,7 @@ msgstr "Név"
 msgid "NEW ACCOUNT"
 msgstr "ÚJ FIÓK"
 
-#: partials/modals/multisignatureModal.html:91
+#: partials/modals/multisignatureModal.html:92
 msgid "next"
 msgstr "következő"
 
@@ -595,12 +605,12 @@ msgstr "következő"
 msgid "NEXT"
 msgstr "KÖVETKEZŐ"
 
-#: partials/modals/addDappModal.html:44 partials/modals/addDappModal.html:67
+#: partials/modals/addDappModal.html:62 partials/modals/addDappModal.html:93
 msgid "Next Step"
 msgstr "Következő Lépés"
 
-#: partials/modals/newUser.html:36
-#: partials/modals/secondPassphraseModal.html:37
+#: partials/modals/newUser.html:39
+#: partials/modals/secondPassphraseModal.html:43
 msgid "NEXT STEP"
 msgstr "KÖVETKEZŐ LÉPÉS"
 
@@ -608,29 +618,23 @@ msgstr "KÖVETKEZŐ LÉPÉS"
 msgid "NO"
 msgstr "NEM"
 
-#: partials/blockchain.html:30
+#: partials/dapps-category.html:6 partials/dapps-category.html:7
+msgid "No applications matching your search criteria were found."
+msgstr ""
+
+#: partials/blockchain.html:35
 msgid "No blockchain"
 msgstr "Hianyzik a blockchain"
-
-#: partials/dapps-category.html:6 partials/dapps-category.html:7
-msgid "No dapps matching your search criteria were found."
-msgstr "Nincs a keresési feltételeknek megfelelő dapp találat."
 
 #: partials/delegates.html:145 partials/delegates.html:76
 msgid "No delegates"
 msgstr "Nincsenek küldöttek"
 
-#: partials/dapps.html:166
-msgid "No results for search '{{searchDapp.searchForDappGlobal}}' in dapps."
-msgstr ""
-"Nincs a keresésnek megfelelő eredmény '{{searchDapp.searchForDappGlobal}}' a "
-"dapp-ok között."
-
-#: partials/blockchain.html:42 partials/transactions.html:65
+#: partials/blockchain.html:47 partials/transactions.html:70
 msgid "No results for this search."
 msgstr "Nincs eredmény."
 
-#: partials/modals/multisignatureModal.html:110
+#: partials/modals/multisignatureModal.html:122
 msgid "Number of members"
 msgstr "Tagok száma"
 
@@ -638,7 +642,7 @@ msgstr "Tagok száma"
 msgid "Off"
 msgstr "Ki"
 
-#: partials/modals/errorModal.html:27
+#: partials/modals/errorModal.html:28
 msgid "OK"
 msgstr "OK"
 
@@ -650,40 +654,42 @@ msgstr "Be"
 msgid "OPEN"
 msgstr "MEGNYIT"
 
+#: partials/modals/openDappModal.html:30
+msgid "OPEN ANYWAY"
+msgstr ""
+
 #: js/controllers/forgingController.js:41
 #: js/controllers/forgingController.js:53
 #: js/controllers/forgingController.js:64
 msgid "Others"
 msgstr "Mások"
 
-#: partials/modals/newUser.html:56
+#: partials/modals/newUser.html:66
 msgid "Passphrase"
 msgstr "Jelmondat"
-
-#: partials/modals/newUser.html:58
-#: partials/modals/secondPassphraseModal.html:59
-msgid "Passphrase doesn't match."
-msgstr "Jelmondat nem egyezik."
 
 #: js/controllers/walletPendingsController.js:8
 msgid "Pending transactions"
 msgstr "Függőben lévő tranzakciók"
 
-#: partials/modals/multisignatureModal.html:106
+#: partials/modals/multisignatureModal.html:107
 msgid ""
 "Please check your input below and go back if necessary. Double-check the "
-"group members, else you risk losing your LISK balance!"
+"group members, else you risk losing your LSK balance!"
 msgstr ""
-"Kérjük, ellenőrizze a beírt adatokat és lépjen vissza, ha szükséges. "
-"Ellenőrizze többször is a csoporttagokat, különben az Ön felelőssége, ha "
-"elveszíti a LISK egyenlegét!"
 
 #: partials/modals/registrationDelegateModal.html:15
 msgid "Please choose a delegate name."
 msgstr "Válassza ki a delegátus nevét."
 
-#: partials/modals/addDappModal.html:84
-msgid "Please ensure all details are correct before confirming your dapp."
+#: partials/modals/vote.html:15
+msgid "Please confirm your selection and confirm your vote."
+msgstr ""
+
+#: partials/modals/addDappModal.html:111
+msgid ""
+"Please ensure all details are correct before confirming your blockchain "
+"application."
 msgstr ""
 
 #: js/controllers/modals/masterPassphraseModalController.js:8
@@ -692,57 +698,58 @@ msgstr ""
 
 #: partials/modals/sendTransaction.html:15
 msgid ""
-"Please enter the Recipient Address and LISK Amount that you would like send "
+"Please enter the Recipient Address and LSK Amount that you would like send "
 "below."
 msgstr ""
 
-#: partials/modals/addDappModal.html:104 partials/modals/forgingModal.html:16
-#: partials/modals/registrationDelegateModal.html:52
-#: partials/modals/sendTransaction.html:57 partials/modals/vote.html:46
+#: partials/modals/addDappModal.html:142 partials/modals/forgingModal.html:16
+#: partials/modals/registrationDelegateModal.html:53
+#: partials/modals/sendTransaction.html:64 partials/modals/vote.html:56
 msgid "Please enter your passphrase below."
 msgstr "Kérjük, írja be a jelmondatot:"
 
-#: partials/modals/multisignatureModal.html:150
+#: partials/modals/multisignatureModal.html:156
 #: partials/modals/passphraseCheck.html:15
 msgid "Please enter your passphrase."
 msgstr "Kérjük, írja be a jelmondatot."
 
-#: partials/modals/secondPassphraseModal.html:83
+#: partials/modals/secondPassphraseModal.html:106
 msgid "Please enter your primary passphrase below."
 msgstr ""
 
-#: partials/modals/addDappModal.html:124
-#: partials/modals/registrationDelegateModal.html:87
-#: partials/modals/sendTransaction.html:92 partials/modals/vote.html:81
+#: partials/modals/addDappModal.html:184
+#: partials/modals/registrationDelegateModal.html:88
+#: partials/modals/sendTransaction.html:99 partials/modals/vote.html:91
 msgid "Please enter your second passphrase below."
 msgstr "Kérjük, írja be a 2. jelmondatot."
 
-#: partials/modals/secondPassphraseModal.html:20
+#: partials/modals/secondPassphraseModal.html:19
 msgid "Please find your second passphrase below."
 msgstr ""
 
-#: partials/modals/addDappModal.html:38
-msgid "Please provide a specification for your dapp below."
+#: partials/modals/addDappModal.html:49
+msgid "Please provide a specification for your blockchain application below."
 msgstr ""
 
-#: partials/modals/addDappModal.html:61
-msgid "Please provide storage links for your dapp below."
+#: partials/modals/addDappModal.html:80
+msgid "Please provide storage a link for your block application below."
 msgstr ""
 
-#: partials/modals/newUser.html:50
+#: partials/modals/newUser.html:60
 msgid "Please re-enter your passphrase below."
 msgstr "Kérjük, írja be újra a jelmondatot."
 
-#: partials/modals/secondPassphraseModal.html:51
+#: partials/modals/secondPassphraseModal.html:64
 msgid "Please re-enter your second passphrase below."
 msgstr ""
 
-#: partials/modals/addDappModal.html:15
+#: partials/modals/addDappModal.html:18
 #: partials/modals/multisignatureModal.html:15
+#: partials/modals/openDappModal.html:15
 msgid "Please read carefully."
 msgstr "Kérjük, olvassa el figyelmesen."
 
-#: partials/modals/multisignatureModal.html:83
+#: partials/modals/multisignatureModal.html:84
 msgid "Pressing enter confirms each member."
 msgstr "Enter gomb lenyomása visszajelöl minden egyes tagot."
 
@@ -750,8 +757,12 @@ msgstr "Enter gomb lenyomása visszajelöl minden egyes tagot."
 msgid "Previous Block"
 msgstr "Korábbi blokk"
 
-#: partials/modals/secondPassphraseModal.html:90
+#: partials/modals/secondPassphraseModal.html:113
 msgid "Primary Passphrase"
+msgstr ""
+
+#: partials/forging.html:35
+msgid "Productivity"
 msgstr ""
 
 #: partials/modals/userInfo.html:18
@@ -779,9 +790,9 @@ msgstr "Résztvevő"
 msgid "Recipient Address"
 msgstr ""
 
-#: partials/modals/registrationDelegateModal.html:107
-#: partials/modals/registrationDelegateModal.html:37
-#: partials/modals/registrationDelegateModal.html:69
+#: partials/modals/registrationDelegateModal.html:108
+#: partials/modals/registrationDelegateModal.html:38
+#: partials/modals/registrationDelegateModal.html:70
 msgid "register"
 msgstr "regisztráció"
 
@@ -809,7 +820,7 @@ msgstr "szavazat eltávolítása"
 msgid "REMOVE VOTE"
 msgstr "SZAVAZAT ELTÁVOLÍTÁSA"
 
-#: js/directives/voteTitleDirective.js:17
+#: js/directives/voteTitleDirective.js:16
 msgid "Removing vote from delegates"
 msgstr "Szavazás eltávolítása delegáltaktol"
 
@@ -818,51 +829,51 @@ msgstr "Szavazás eltávolítása delegáltaktol"
 msgid "Reward"
 msgstr "Jutalom"
 
-#: partials/modals/newUser.html:35
-#: partials/modals/secondPassphraseModal.html:36
+#: partials/modals/newUser.html:36
+#: partials/modals/secondPassphraseModal.html:40
 msgid "SAVE PASSPHRASE"
 msgstr "JELMONDAT MENTÉS"
 
 #: js/controllers/modals/addDappModalController.js:6
-msgid "Saving new dapp"
-msgstr "Új dapp mentése"
+msgid "Saving new application"
+msgstr ""
+
+#: partials/template.html:308 partials/template.html:333
+msgid "Search for applications"
+msgstr ""
 
 #: partials/template.html:208
 msgid "Search for blocks"
 msgstr "Blockok keresése"
-
-#: partials/template.html:308 partials/template.html:333
-msgid "Search for Dapps"
-msgstr "Dappok keresése"
 
 #: partials/template.html:182
 msgid ""
 "Search for transactions (Transaction ID, Sender address, Recipient address)"
 msgstr "Tranzakciók keresése (Tranzakció ID, Feladó címe, Fogadó címe)"
 
-#: partials/modals/secondPassphraseModal.html:57
+#: partials/modals/secondPassphraseModal.html:70
 msgid "Second Passphrase"
 msgstr ""
 
-#: partials/modals/masterPassphraseModal.html:35 partials/template.html:149
+#: partials/modals/openDappModal.html:13
+msgid "Security Warning"
+msgstr ""
+
+#: partials/template.html:149
 msgid "SEND"
 msgstr "KÜLD"
 
-#: partials/modals/sendTransaction.html:112
-#: partials/modals/sendTransaction.html:42
-#: partials/modals/sendTransaction.html:77
+#: partials/modals/sendTransaction.html:119
+#: partials/modals/sendTransaction.html:49
+#: partials/modals/sendTransaction.html:84
 msgid "send lisk"
 msgstr "lisk küldése"
 
 #: partials/delegates.html:120 partials/delegates.html:51
 #: partials/modals/sendTransaction.html:13 partials/modals/userInfo.html:28
 #: partials/votes.html:49
-msgid "Send LISK"
-msgstr "LISK Küldés"
-
-#: partials/modals/addDappModal.html:130
-msgid "SEND LISK"
-msgstr "LISK KÜLDÉS"
+msgid "Send LSK"
+msgstr ""
 
 #: js/controllers/transactionsController.js:63 partials/account.html:70
 msgid "Sender"
@@ -872,13 +883,13 @@ msgstr "Feladó"
 msgid "Settings"
 msgstr "Beállítás"
 
-#: partials/blockchain.html:12 partials/forging.html:82
-#: partials/transactions.html:11
+#: partials/blockchain.html:17 partials/forging.html:82
+#: partials/transactions.html:16
 msgid "Show All Columns"
 msgstr "Minden oszlop megjelenítése"
 
-#: partials/blockchain.html:13 partials/forging.html:85
-#: partials/transactions.html:14
+#: partials/blockchain.html:18 partials/forging.html:85
+#: partials/transactions.html:19
 msgid "Show Full Time"
 msgstr "Teljes idő megjelenítése"
 
@@ -911,15 +922,15 @@ msgstr ""
 msgid "Step 1/3 - Preamble"
 msgstr "Lépés 1/3 - Bevezetés"
 
-#: partials/modals/addDappModal.html:13
+#: partials/modals/addDappModal.html:16
 msgid "Step 1/4 - Preamble"
 msgstr ""
 
-#: partials/modals/newUser.html:48
+#: partials/modals/newUser.html:58
 msgid "Step 2/2 - Confirm your Passphrase"
 msgstr ""
 
-#: partials/modals/secondPassphraseModal.html:49
+#: partials/modals/secondPassphraseModal.html:62
 msgid "Step 2/2 - Confirm your Second Passphrase"
 msgstr ""
 
@@ -927,19 +938,19 @@ msgstr ""
 msgid "Step 2/3 - Specify Group Members"
 msgstr "Lépés 2/3 - Határozza meg a Csoport Tagjai-t"
 
-#: partials/modals/addDappModal.html:36
+#: partials/modals/addDappModal.html:47
 msgid "Step 2/4 - Specifications"
 msgstr ""
 
-#: partials/modals/multisignatureModal.html:104
+#: partials/modals/multisignatureModal.html:105
 msgid "Step 3/3 - Confirmation"
 msgstr "Lépés 3/3 - Megerősítés"
 
-#: partials/modals/addDappModal.html:59
+#: partials/modals/addDappModal.html:78
 msgid "Step 3/4 - Storage Links"
 msgstr ""
 
-#: partials/modals/addDappModal.html:82
+#: partials/modals/addDappModal.html:109
 msgid "Step 4/4 - Confirmation"
 msgstr ""
 
@@ -948,8 +959,23 @@ msgstr ""
 msgid "Summary"
 msgstr "Összefoglaló"
 
-#: partials/modals/newUser.html:62
-#: partials/modals/secondPassphraseModal.html:64
+#: partials/modals/openDappModal.html:19
+msgid ""
+"The Lisk apps platform currently does not provide any protection against any "
+"unauthorized system calls made from the running application. Therefore "
+"opening any untrusted applications is not yet advisable, and could "
+"potentially lead to loss of funds."
+msgstr ""
+
+#: partials/modals/masterPassphraseModal.html:30
+msgid ""
+"The master passphrase is auto-generated upon first launching the Lisk "
+"client. It can be found at the end of the config.json file. Therefore only "
+"node operators can install, launch or uninstall applications. Once "
+"applications are in a launched state, anyone is free to open and use them."
+msgstr ""
+
+#: partials/modals/newUser.html:68
 msgid ""
 "The passphrase entered doesn't match with the one generated before. Please "
 "go back and generate a new one."
@@ -957,15 +983,17 @@ msgstr ""
 "A beírt Jelmondat nem egyezik az előzőekben generáltakkal. Kérjük térjen "
 "vissza és generáljon egy újat. "
 
-#: js/directives/voteTitleDirective.js:22
-msgid "This action will cost"
-msgstr "Ez a művelet LISK-be kerül."
+#: partials/modals/secondPassphraseModal.html:72
+msgid ""
+"The second passphrase entered doesn't match with the one generated before. "
+"Please go back and generate a new one."
+msgstr ""
 
 #: partials/modals/multisignatureModal.html:21
 msgid ""
 "This walkthrough will guide you through the necessary steps to create a "
 "multi-signature group. It's very important that you know what multi-"
-"signatures are, else you risk loosing your LISK balance.<br><br>A multi-"
+"signatures are, else you risk loosing your LSK balance.<br><br>A multi-"
 "signature group consists of N accounts, the one who created the group is the "
 "group owner. When the owner wants to make a transaction, M of N accounts "
 "within the group need to confirm it, otherwise the transaction will not be "
@@ -1043,7 +1071,7 @@ msgstr "FRISSÍTÉS"
 
 #: js/controllers/delegatesController.js:159
 #: js/controllers/forgingController.js:53
-#: js/controllers/votedDelegatesController.js:118 partials/forging.html:35
+#: js/controllers/votedDelegatesController.js:118
 msgid "Uptime"
 msgstr "Üzemidő"
 
@@ -1060,7 +1088,7 @@ msgstr "Nézet kiválasztása"
 msgid "vote"
 msgstr "szavazz"
 
-#: js/directives/voteTitleDirective.js:15
+#: js/directives/voteTitleDirective.js:14
 msgid "Voting for delegates"
 msgstr "Szavazás delegáltakra"
 
@@ -1080,17 +1108,19 @@ msgstr "Ön nem tagja semmilyen Multi-Signature csoportnak."
 msgid "You can find your passphrase below."
 msgstr "Megtalálja passphrase az alábbiakban."
 
-#: partials/dapps.html:165
-msgid "You do not have any dapps installed yet."
-msgstr "Még nincs semilyen dapps telepítve."
+#: partials/modals/vote.html:33
+msgid ""
+"You can select up to 33 delegates in one voting turn. Up to 101 delegates in "
+"total."
+msgstr ""
+
+#: partials/dapps.html:165 partials/dapps.html:242
+msgid "You do not have any applications installed yet."
+msgstr ""
 
 #: partials/forging.html:106
 msgid "You have not forged any blocks yet."
 msgstr "Még nem forge-oltál egy blokkot sem."
-
-#: partials/dapps.html:242
-msgid "You have not installed dapps yet."
-msgstr "Még nem telepítettél dapps-ot."
 
 #: partials/account.html:109
 msgid "You have not made any transactions yet."
@@ -1100,21 +1130,128 @@ msgstr "Ön még nem hozott létre egy tranzakciót sem."
 msgid "You have not voted for any delegates yet."
 msgstr "Ön még nem szavazott delegáltokra."
 
+#: partials/modals/multisignatureModal.html:113
+#: partials/modals/multisignatureModal.html:63
+msgid "Your Account"
+msgstr ""
+
 #: partials/multi.html:10
 msgid "Your Multi-Signature group(s) have not made any transactions yet."
 msgstr "A Multi-Signature csoportod még nem ment át egy tranzakción sem."
 
-#: partials/modals/forgingModal.html:23
-#: partials/modals/multisignatureModal.html:157
-#: partials/modals/registrationDelegateModal.html:59
-#: partials/modals/sendTransaction.html:64 partials/modals/vote.html:53
+#: partials/modals/addDappModal.html:151 partials/modals/forgingModal.html:23
+#: partials/modals/multisignatureModal.html:163
+#: partials/modals/registrationDelegateModal.html:60
+#: partials/modals/sendTransaction.html:71 partials/modals/vote.html:63
 #: partials/passphrase.html:10
 msgid "Your Passphrase"
 msgstr "Jelmondatod"
 
-#: partials/modals/multisignatureModal.html:161
+#: partials/modals/addDappModal.html:193
+#: partials/modals/multisignatureModal.html:167
 #: partials/modals/passphraseCheck.html:22
-#: partials/modals/registrationDelegateModal.html:94
-#: partials/modals/sendTransaction.html:99 partials/modals/vote.html:88
+#: partials/modals/registrationDelegateModal.html:95
+#: partials/modals/sendTransaction.html:106 partials/modals/vote.html:98
 msgid "Your Second Passphrase"
 msgstr "Második Jelmondat-od"
+
+#~ msgid "(1449)"
+#~ msgstr "(1449)"
+
+#~ msgid "Add as Contact"
+#~ msgstr "Hozzáadás kapcsolatként"
+
+#~ msgid "ADD NEW DAPP"
+#~ msgstr "ÚJ DAPP HOZZÁADÁSA"
+
+#~ msgid "add second passphrase"
+#~ msgstr "második passphrase hozzáadása"
+
+#~ msgid ""
+#~ "Becoming a delegate requires registration. You may choose your own "
+#~ "delegate name, which can be used to promote your delegate. Only the top "
+#~ "101 delegates are eligible to forge. All fees are shared equally between "
+#~ "the top 101 delegates. Registration costs: {{fee | liskFilter}} LISK."
+#~ msgstr ""
+#~ "A delegációhoz regisztráció szükséges. Kiválaszthatja a saját delegált "
+#~ "nevét, amit felhasználhat arra hogy támogassa a delegációját. Csak a top "
+#~ "101 delegált jogosult a forge-ra. Minden díj egyenlően van megosztva a "
+#~ "top 101 delegáltak közt. Regisztráció ára: {{fee | liskFilter}} LISK."
+
+#~ msgid "Dapp Store"
+#~ msgstr "Dapp Store"
+
+#~ msgid ""
+#~ "Further protect your account with an optional second passphrase! Please "
+#~ "allow some time for the changes to take effect. Service cost: <b>{{fee | "
+#~ "liskFilter}} LISK</b>. Your balance: <b>{{totalBalance | liskFilter}} "
+#~ "LISK</b>."
+#~ msgstr ""
+#~ "A fiókjának érdekében további biztonságért védje meg egy 2. passphrase-"
+#~ "el! Kérjük engedélyezzen egy kis időt a változásért. Szolgáltatás ára: "
+#~ "<b>{{fee | liskFilter}} LISK</b>. Saját egyenleg: <b>{{totalBalance | "
+#~ "liskFilter}} LISK</b>."
+
+#~ msgid "GET STARTED"
+#~ msgstr "Kezdjük"
+
+#~ msgid "Go back"
+#~ msgstr "Vissza"
+
+#~ msgid "Installed Dapps"
+#~ msgstr "Telepített Dapps-ok"
+
+#~ msgid "Lisk - Decentralized Application Platform"
+#~ msgstr "Lisk - Decentralizált Alkalmazás Platform"
+
+#~ msgid "LISK Amount"
+#~ msgstr "LISK Összeg"
+
+#~ msgid "LISK Earned"
+#~ msgstr "Keresett LISK"
+
+#~ msgid "Loading dapp"
+#~ msgstr "Dapp betöltése"
+
+#~ msgid "Loading dapps"
+#~ msgstr "Dapps-ok betöltése"
+
+#~ msgid "No dapps matching your search criteria were found."
+#~ msgstr "Nincs a keresési feltételeknek megfelelő dapp találat."
+
+#~ msgid "No results for search '{{searchDapp.searchForDappGlobal}}' in dapps."
+#~ msgstr ""
+#~ "Nincs a keresésnek megfelelő eredmény '{{searchDapp."
+#~ "searchForDappGlobal}}' a dapp-ok között."
+
+#~ msgid "Passphrase doesn't match."
+#~ msgstr "Jelmondat nem egyezik."
+
+#~ msgid ""
+#~ "Please check your input below and go back if necessary. Double-check the "
+#~ "group members, else you risk losing your LISK balance!"
+#~ msgstr ""
+#~ "Kérjük, ellenőrizze a beírt adatokat és lépjen vissza, ha szükséges. "
+#~ "Ellenőrizze többször is a csoporttagokat, különben az Ön felelőssége, ha "
+#~ "elveszíti a LISK egyenlegét!"
+
+#~ msgid "Saving new dapp"
+#~ msgstr "Új dapp mentése"
+
+#~ msgid "Search for Dapps"
+#~ msgstr "Dappok keresése"
+
+#~ msgid "Send LISK"
+#~ msgstr "LISK Küldés"
+
+#~ msgid "SEND LISK"
+#~ msgstr "LISK KÜLDÉS"
+
+#~ msgid "This action will cost"
+#~ msgstr "Ez a művelet LISK-be kerül."
+
+#~ msgid "You do not have any dapps installed yet."
+#~ msgstr "Még nincs semilyen dapps telepítve."
+
+#~ msgid "You have not installed dapps yet."
+#~ msgstr "Még nem telepítettél dapps-ot."

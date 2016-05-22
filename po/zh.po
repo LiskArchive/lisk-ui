@@ -12,10 +12,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.8.6\n"
 
-#: partials/dapp-entry.html:73
-msgid "(1449)"
-msgstr "(1449)"
-
 #: partials/votes.html:25
 msgid "{{count}} in Total"
 msgstr "合计{{count}} 个"
@@ -41,7 +37,7 @@ msgstr "已选受托人 ({{countStandby + countTop}} / {{voteList.length}})"
 msgid "2nd Passphrase"
 msgstr "支付密码"
 
-#: partials/modals/addDappModal.html:21
+#: partials/modals/addDappModal.html:31
 msgid "Accept / Next Step"
 msgstr "接受 / 下一步"
 
@@ -49,35 +45,30 @@ msgstr "接受 / 下一步"
 msgid "Account"
 msgstr "账户名"
 
-#: partials/modals/addDappModal.html:102 partials/modals/addDappModal.html:122
+#: partials/modals/addDappModal.html:140 partials/modals/addDappModal.html:182
 #: partials/modals/masterPassphraseModal.html:13
-#: partials/modals/multisignatureModal.html:148
+#: partials/modals/multisignatureModal.html:154
 #: partials/modals/passphraseCheck.html:13
-#: partials/modals/registrationDelegateModal.html:50
-#: partials/modals/registrationDelegateModal.html:85
-#: partials/modals/secondPassphraseModal.html:81
-#: partials/modals/sendTransaction.html:55
-#: partials/modals/sendTransaction.html:90 partials/modals/vote.html:44
-#: partials/modals/vote.html:79
+#: partials/modals/registrationDelegateModal.html:51
+#: partials/modals/registrationDelegateModal.html:86
+#: partials/modals/secondPassphraseModal.html:104
+#: partials/modals/sendTransaction.html:62
+#: partials/modals/sendTransaction.html:97 partials/modals/vote.html:54
+#: partials/modals/vote.html:89
 msgid "Account Verification"
 msgstr "帐户验证"
 
-#: partials/delegates.html:136 partials/delegates.html:67
-#: partials/votes.html:65
-msgid "Add as Contact"
-msgstr "添加为好友"
-
-#: partials/modals/multisignatureModal.html:46
-msgid "Add group members by typing in their LISK address and pressing enter."
+#: partials/dapps.html:152
+msgid "Add a new application"
 msgstr ""
 
-#: partials/dapps.html:152
-msgid "ADD NEW DAPP"
-msgstr "发布新DAPP"
+#: partials/modals/multisignatureModal.html:46
+msgid "Add group members by typing in their Lisk address and pressing enter."
+msgstr ""
 
-#: partials/modals/secondPassphraseModal.html:100
-msgid "add second passphrase"
-msgstr "设置支付密码"
+#: partials/modals/secondPassphraseModal.html:126
+msgid "ADD SECOND PASSPHRASE"
+msgstr ""
 
 #: js/controllers/blockchainController.js:45
 #: js/controllers/transactionsController.js:66
@@ -91,6 +82,10 @@ msgstr "金额"
 #: partials/account.html:79
 msgid "Amount (Fee)"
 msgstr "金额(手续费)"
+
+#: js/controllers/dappsController.js:8 partials/template.html:90
+msgid "Applications"
+msgstr ""
 
 #: js/controllers/delegatesController.js:160
 #: js/controllers/forgingController.js:64
@@ -106,16 +101,13 @@ msgstr "您确定要删除吗？"
 msgid "Balance"
 msgstr "余额"
 
-#: partials/modals/registrationDelegateModal.html:29
+#: partials/modals/registrationDelegateModal.html:30
 msgid ""
 "Becoming a delegate requires registration. You may choose your own delegate "
 "name, which can be used to promote your delegate. Only the top 101 delegates "
 "are eligible to forge. All fees are shared equally between the top 101 "
-"delegates. Registration costs: {{fee | liskFilter}} LISK."
+"delegates."
 msgstr ""
-"成为受托人是需要注册的，请选择您的受托人名称 ，并以此来推广您的受托人名称，只"
-"有得票排名在前101名以内才有资格进行锻造，锻造的所有手续费将均分给所有的101位"
-"受托人"
 
 #: js/controllers/blockchainController.js:41
 #: js/controllers/forgingController.js:115 partials/modals/blockInfo.html:7
@@ -129,17 +121,18 @@ msgid "Blockchain"
 msgstr "区块链"
 
 #: partials/modals/forgingModal.html:32
-#: partials/modals/masterPassphraseModal.html:32
-#: partials/modals/multisignatureModal.html:88
+#: partials/modals/masterPassphraseModal.html:35
+#: partials/modals/multisignatureModal.html:89
+#: partials/modals/openDappModal.html:27
 #: partials/modals/passphraseCheck.html:32
-#: partials/modals/registrationDelegateModal.html:34
-#: partials/modals/registrationDelegateModal.html:66
-#: partials/modals/sendTransaction.html:39 partials/modals/vote.html:63
+#: partials/modals/registrationDelegateModal.html:35
+#: partials/modals/registrationDelegateModal.html:67
+#: partials/modals/sendTransaction.html:46 partials/modals/vote.html:73
 msgid "Cancel"
 msgstr "取消"
 
-#: partials/modals/addDappModal.html:22
-#: partials/modals/multisignatureModal.html:28 partials/modals/vote.html:18
+#: partials/modals/addDappModal.html:28
+#: partials/modals/multisignatureModal.html:28 partials/modals/vote.html:38
 msgid "CANCEL"
 msgstr "取消"
 
@@ -151,33 +144,35 @@ msgstr "分类"
 msgid "Category:"
 msgstr "分类："
 
-#: partials/modals/addDappModal.html:10 partials/modals/addDappModal.html:117
-#: partials/modals/addDappModal.html:28 partials/modals/addDappModal.html:33
-#: partials/modals/addDappModal.html:5 partials/modals/addDappModal.html:51
-#: partials/modals/addDappModal.html:56 partials/modals/addDappModal.html:74
-#: partials/modals/addDappModal.html:79 partials/modals/addDappModal.html:97
+#: partials/modals/addDappModal.html:101 partials/modals/addDappModal.html:106
+#: partials/modals/addDappModal.html:13 partials/modals/addDappModal.html:132
+#: partials/modals/addDappModal.html:137 partials/modals/addDappModal.html:174
+#: partials/modals/addDappModal.html:179 partials/modals/addDappModal.html:39
+#: partials/modals/addDappModal.html:44 partials/modals/addDappModal.html:70
+#: partials/modals/addDappModal.html:75 partials/modals/addDappModal.html:8
 #: partials/modals/blockInfo.html:10 partials/modals/blockModal.html:9
 #: partials/modals/confirmDeletionModal.html:8
 #: partials/modals/errorModal.html:9 partials/modals/forgingModal.html:9
 #: partials/modals/masterPassphraseModal.html:8
 #: partials/modals/multiMembersModal.html:8
-#: partials/modals/multisignatureModal.html:143
+#: partials/modals/multisignatureModal.html:100
+#: partials/modals/multisignatureModal.html:149
 #: partials/modals/multisignatureModal.html:39
-#: partials/modals/multisignatureModal.html:8
-#: partials/modals/multisignatureModal.html:99 partials/modals/newUser.html:10
-#: partials/modals/newUser.html:43 partials/modals/passphraseCheck.html:8
-#: partials/modals/registrationDelegateModal.html:45
+#: partials/modals/multisignatureModal.html:8 partials/modals/newUser.html:10
+#: partials/modals/newUser.html:53 partials/modals/openDappModal.html:8
+#: partials/modals/passphraseCheck.html:8
+#: partials/modals/registrationDelegateModal.html:46
 #: partials/modals/registrationDelegateModal.html:8
-#: partials/modals/registrationDelegateModal.html:80
+#: partials/modals/registrationDelegateModal.html:81
 #: partials/modals/secondPassphraseModal.html:10
-#: partials/modals/secondPassphraseModal.html:44
-#: partials/modals/secondPassphraseModal.html:76
-#: partials/modals/sendTransaction.html:50
+#: partials/modals/secondPassphraseModal.html:57
+#: partials/modals/secondPassphraseModal.html:99
+#: partials/modals/sendTransaction.html:57
 #: partials/modals/sendTransaction.html:8
-#: partials/modals/sendTransaction.html:85
+#: partials/modals/sendTransaction.html:92
 #: partials/modals/transactionInfo.html:7 partials/modals/userInfo.html:22
-#: partials/modals/vote.html:39 partials/modals/vote.html:74
-#: partials/modals/vote.html:9
+#: partials/modals/vote.html:49 partials/modals/vote.html:8
+#: partials/modals/vote.html:84
 msgid "Close modal"
 msgstr "关闭"
 
@@ -185,21 +180,24 @@ msgstr "关闭"
 msgid "Configuring multi-signature group"
 msgstr ""
 
-#: partials/modals/multisignatureModal.html:135
-#: partials/modals/multisignatureModal.html:174
+#: partials/modals/multisignatureModal.html:141
+#: partials/modals/multisignatureModal.html:180
 msgid "confirm"
 msgstr "确认"
 
-#: partials/modals/addDappModal.html:110 partials/modals/addDappModal.html:90
+#: partials/modals/addDappModal.html:124 partials/modals/addDappModal.html:166
+#: partials/modals/addDappModal.html:208
 msgid "Confirm"
 msgstr "确认"
 
-#: partials/multi.html:31 partials/wallet-pendings.html:28
+#: partials/modals/masterPassphraseModal.html:38
+#: partials/modals/newUser.html:80 partials/multi.html:31
+#: partials/wallet-pendings.html:28
 msgid "CONFIRM"
 msgstr "确认"
 
-#: partials/modals/secondPassphraseModal.html:69
-msgid "confirm second passphrase"
+#: partials/modals/secondPassphraseModal.html:85
+msgid "CONFIRM SECOND PASSPHRASE"
 msgstr ""
 
 #: js/directives/voteActionDirective.js:14
@@ -222,8 +220,8 @@ msgstr "确认数"
 msgid "CONFIRMATIONS"
 msgstr "确认数"
 
-#: partials/modals/multisignatureModal.html:113
-#: partials/modals/multisignatureModal.html:73
+#: partials/modals/multisignatureModal.html:125
+#: partials/modals/multisignatureModal.html:74
 msgid "Confirmations needed"
 msgstr "需要的确认数"
 
@@ -254,10 +252,6 @@ msgstr "复制地址"
 msgid "Copy Name"
 msgstr "复制名称"
 
-#: js/controllers/dappsController.js:8 partials/template.html:90
-msgid "Dapp Store"
-msgstr "Dapp商店"
-
 #: js/controllers/accountController.js:8 partials/template.html:72
 msgid "Dashboard"
 msgstr "主控面板"
@@ -283,7 +277,7 @@ msgstr "描述"
 msgid "Disable Forging"
 msgstr "关闭锻造"
 
-#: js/controllers/appController.js:299
+#: js/controllers/appController.js:315
 msgid "Disabled"
 msgstr ""
 
@@ -301,20 +295,20 @@ msgstr "空主密码"
 msgid "Enable Forging"
 msgstr "开启锻造"
 
-#: js/controllers/appController.js:299
+#: js/controllers/appController.js:315
 msgid "Enabled"
 msgstr ""
 
 #: js/controllers/dappController.js:143
-msgid "Failed to install dapp"
+msgid "Failed to install application"
 msgstr ""
 
 #: js/controllers/dappController.js:183
-msgid "Failed to launch Dapp"
+msgid "Failed to launch application"
 msgstr ""
 
 #: js/controllers/dappController.js:94
-msgid "Failed to uninstall Dapp"
+msgid "Failed to uninstall application"
 msgstr ""
 
 #: js/controllers/blockchainController.js:46
@@ -323,6 +317,7 @@ msgstr ""
 #: js/controllers/walletPendingsController.js:48
 #: js/controllers/walletsController.js:149
 #: js/controllers/walletTransactionsController.js:71
+#: partials/modals/multisignatureModal.html:128
 #: partials/modals/transactionInfo.html:19 partials/modals/userInfo.html:63
 msgid "Fee"
 msgstr "费用"
@@ -331,6 +326,12 @@ msgstr "费用"
 #: partials/modals/transactionInfo.html:47 partials/modals/userInfo.html:92
 msgid "FEE"
 msgstr "费用"
+
+#: partials/modals/registrationDelegateModal.html:23
+#: partials/modals/secondPassphraseModal.html:28
+#: partials/modals/sendTransaction.html:31 partials/modals/vote.html:25
+msgid "Fee: {{fee | liskFilter}} LSK"
+msgstr ""
 
 #: partials/forging.html:74
 msgid "Forged Blocks"
@@ -349,14 +350,9 @@ msgstr "区块锻造"
 
 #: partials/modals/secondPassphraseModal.html:18
 msgid ""
-"Further protect your account with an optional second passphrase! Please "
-"allow some time for the changes to take effect. Service cost: <b>{{fee | "
-"liskFilter}} LISK</b>. Your balance: <b>{{totalBalance | liskFilter}} LISK</"
-"b>."
+"Further protect your account with an optional second passphrase! It may take "
+"a few moments for the changes to take effect."
 msgstr ""
-"使用支付密码(可选)来保障帐户安全! 请稍待片刻以使信息成功保存到区块链. 本次费"
-"用: <b>{{fee | liskFilter}} LISK</b>. 您的余额: <b>{{totalBalance | "
-"liskFilter}} LISK</b>."
 
 #: partials/settings.html:6
 msgid "General"
@@ -371,23 +367,16 @@ msgstr "新创建"
 msgid "Generator"
 msgstr "创建者"
 
-#: partials/modals/newUser.html:67
-msgid "GET STARTED"
-msgstr "开始吧！"
-
-#: partials/modals/addDappModal.html:111 partials/modals/addDappModal.html:45
-#: partials/modals/addDappModal.html:68 partials/modals/addDappModal.html:91
-msgid "Go back"
-msgstr "返回"
-
-#: partials/modals/addDappModal.html:131
-#: partials/modals/multisignatureModal.html:132
-#: partials/modals/multisignatureModal.html:171 partials/modals/newUser.html:66
-#: partials/modals/registrationDelegateModal.html:104
-#: partials/modals/secondPassphraseModal.html:68
-#: partials/modals/secondPassphraseModal.html:99
-#: partials/modals/sendTransaction.html:109
-#: partials/modals/sendTransaction.html:74 partials/modals/vote.html:98
+#: partials/modals/addDappModal.html:121 partials/modals/addDappModal.html:163
+#: partials/modals/addDappModal.html:205 partials/modals/addDappModal.html:59
+#: partials/modals/addDappModal.html:90
+#: partials/modals/multisignatureModal.html:138
+#: partials/modals/multisignatureModal.html:177 partials/modals/newUser.html:77
+#: partials/modals/registrationDelegateModal.html:105
+#: partials/modals/secondPassphraseModal.html:123
+#: partials/modals/secondPassphraseModal.html:82
+#: partials/modals/sendTransaction.html:116
+#: partials/modals/sendTransaction.html:81 partials/modals/vote.html:108
 msgid "GO BACK"
 msgstr "返回"
 
@@ -411,6 +400,12 @@ msgstr "高度"
 msgid "HOME"
 msgstr "首页"
 
+#: partials/modals/openDappModal.html:21
+msgid ""
+"If you are confident the application can be deemed trustworthy, click "
+"<strong>Open Anyway</strong>, otherwise click <strong>Cancel</strong> now."
+msgstr ""
+
 #: partials/dapp-entry.html:20
 msgid "INSTALL"
 msgstr "安装"
@@ -420,18 +415,22 @@ msgid "INSTALLED"
 msgstr "已安装"
 
 #: partials/dapps.html:235
-msgid "Installed Dapps"
-msgstr "安装Dapps"
+msgid "Installed Applications"
+msgstr ""
 
 #: partials/settings.html:9
 msgid "Language"
+msgstr ""
+
+#: partials/blockchain.html:7
+msgid "Latest Blocks"
 msgstr ""
 
 #: partials/multi.html:6
 msgid "Latest Multi-Signature Transactions"
 msgstr "最新的多重签名交易"
 
-#: partials/account.html:57
+#: partials/account.html:57 partials/transactions.html:7
 msgid "Latest Transactions"
 msgstr "最新交易"
 
@@ -444,22 +443,15 @@ msgid "LAUNCH"
 msgstr "运行"
 
 #: wallet.html:20
-msgid "Lisk - Decentralized Application Platform"
-msgstr "Lisk - 去中心化应用平台"
+msgid "Lisk - Blockchain Application Platform"
+msgstr ""
 
 #: js/controllers/delegatesController.js:158
 #: js/controllers/votedDelegatesController.js:117
 #: js/controllers/walletPendingsController.js:43
+#: partials/modals/multisignatureModal.html:52
 msgid "Lisk Address"
 msgstr ""
-
-#: partials/modals/multisignatureModal.html:52
-msgid "LISK Address"
-msgstr ""
-
-#: partials/modals/sendTransaction.html:26
-msgid "LISK Amount"
-msgstr "LISK金额"
 
 #: partials/account.html:33
 msgid "Lisk Client"
@@ -469,22 +461,15 @@ msgstr "Lisk 客户端"
 msgid "Lisk Client Outdated"
 msgstr "Lisk 客户端已过期"
 
-#: partials/forging.html:11
-msgid "LISK Earned"
-msgstr "赚取的LISK"
+#: js/controllers/dappController.js:7
+#: js/controllers/dappsCategoryController.js:7
+#: js/controllers/dappsController.js:7
+msgid "Loading applications"
+msgstr ""
 
 #: js/controllers/blockchainController.js:7
 msgid "Loading blockchain"
 msgstr "正在加载区块链"
-
-#: js/controllers/dappController.js:7
-msgid "Loading dapp"
-msgstr "正在加载Dapp"
-
-#: js/controllers/dappsCategoryController.js:7
-#: js/controllers/dappsController.js:7
-msgid "Loading dapps"
-msgstr "安装Dapps"
 
 #: js/controllers/accountController.js:7
 msgid "Loading dashboard"
@@ -508,7 +493,7 @@ msgstr "正在加载多重签名组"
 msgid "Loading transactions"
 msgstr "正在加载交易记录"
 
-#: partials/blockchain.html:35 partials/delegates.html:150
+#: partials/blockchain.html:40 partials/delegates.html:150
 #: partials/delegates.html:81
 msgid "Loading..."
 msgstr "加载中..."
@@ -517,15 +502,42 @@ msgstr "加载中..."
 msgid "Logout"
 msgstr "退出登陆"
 
+#: partials/modals/sendTransaction.html:29
+msgid "LSK Amount"
+msgstr ""
+
+#: partials/forging.html:11
+msgid "LSK Earned"
+msgstr ""
+
+#: partials/modals/newUser.html:72
+msgid ""
+"Make sure that you keep the passphrase safe. If you lose your passphrase "
+"later on, your account can't be restored and all your funds will be lost."
+msgstr ""
+
 #: partials/modals/newUser.html:31
 msgid ""
 "Make sure that you keep the passphrase safe. You will be asked to re-type it "
 "for confirmation."
 msgstr "请确定您已经安全保存了主密码，呆会将会要求您重复输入以确认密码."
 
-#: partials/modals/sendTransaction.html:34
+#: partials/modals/secondPassphraseModal.html:77
 msgid ""
-"Make sure you're sending LISK to the right address. This action can't be "
+"Make sure that you keep the second passphrase safe. If you lose your second "
+"passphrase later on, your account can't be restored and all your funds will "
+"be lost."
+msgstr ""
+
+#: partials/modals/secondPassphraseModal.html:35
+msgid ""
+"Make sure that you keep the second passphrase safe. You will be asked to re-"
+"type it for confirmation."
+msgstr ""
+
+#: partials/modals/sendTransaction.html:41
+msgid ""
+"Make sure you're sending LSK to the right address. This action can't be "
 "undone later."
 msgstr ""
 
@@ -541,7 +553,7 @@ msgstr "成员"
 msgid "More"
 msgstr "更多"
 
-#: js/controllers/walletsController.js:8 partials/settings.html:11
+#: js/controllers/walletsController.js:8 partials/settings.html:12
 #: partials/template.html:78
 msgid "Multi-Signature"
 msgstr "多重签名"
@@ -550,11 +562,11 @@ msgstr "多重签名"
 msgid "Multi-Signature Group Members"
 msgstr ""
 
-#: partials/settings.html:22
+#: partials/settings.html:23
 msgid "Multi-Signature is Disabled"
 msgstr ""
 
-#: partials/settings.html:23
+#: partials/settings.html:24
 msgid "Multi-Signature is Enabled"
 msgstr ""
 
@@ -583,7 +595,7 @@ msgstr "名称"
 msgid "NEW ACCOUNT"
 msgstr "新帐户"
 
-#: partials/modals/multisignatureModal.html:91
+#: partials/modals/multisignatureModal.html:92
 msgid "next"
 msgstr "下一步"
 
@@ -591,12 +603,12 @@ msgstr "下一步"
 msgid "NEXT"
 msgstr "下一步"
 
-#: partials/modals/addDappModal.html:44 partials/modals/addDappModal.html:67
+#: partials/modals/addDappModal.html:62 partials/modals/addDappModal.html:93
 msgid "Next Step"
 msgstr "接受 / 下一步"
 
-#: partials/modals/newUser.html:36
-#: partials/modals/secondPassphraseModal.html:37
+#: partials/modals/newUser.html:39
+#: partials/modals/secondPassphraseModal.html:43
 msgid "NEXT STEP"
 msgstr "接受 / 下一步"
 
@@ -604,27 +616,23 @@ msgstr "接受 / 下一步"
 msgid "NO"
 msgstr "取消"
 
-#: partials/blockchain.html:30
+#: partials/dapps-category.html:6 partials/dapps-category.html:7
+msgid "No applications matching your search criteria were found."
+msgstr ""
+
+#: partials/blockchain.html:35
 msgid "No blockchain"
 msgstr "无区块信息"
-
-#: partials/dapps-category.html:6 partials/dapps-category.html:7
-msgid "No dapps matching your search criteria were found."
-msgstr "无Dapps符合您的搜索要求."
 
 #: partials/delegates.html:145 partials/delegates.html:76
 msgid "No delegates"
 msgstr "没有受托人"
 
-#: partials/dapps.html:166
-msgid "No results for search '{{searchDapp.searchForDappGlobal}}' in dapps."
-msgstr "搜索不到关于 '{{searchDapp.searchForDappGlobal}}' 的Dapps"
-
-#: partials/blockchain.html:42 partials/transactions.html:65
+#: partials/blockchain.html:47 partials/transactions.html:70
 msgid "No results for this search."
 msgstr "本次搜索无搜索结果."
 
-#: partials/modals/multisignatureModal.html:110
+#: partials/modals/multisignatureModal.html:122
 msgid "Number of members"
 msgstr "成员数量"
 
@@ -632,7 +640,7 @@ msgstr "成员数量"
 msgid "Off"
 msgstr "关闭"
 
-#: partials/modals/errorModal.html:27
+#: partials/modals/errorModal.html:28
 msgid "OK"
 msgstr "OK"
 
@@ -644,39 +652,42 @@ msgstr "开启"
 msgid "OPEN"
 msgstr "打开"
 
+#: partials/modals/openDappModal.html:30
+msgid "OPEN ANYWAY"
+msgstr ""
+
 #: js/controllers/forgingController.js:41
 #: js/controllers/forgingController.js:53
 #: js/controllers/forgingController.js:64
 msgid "Others"
 msgstr "其它"
 
-#: partials/modals/newUser.html:56
+#: partials/modals/newUser.html:66
 msgid "Passphrase"
 msgstr "主密码"
-
-#: partials/modals/newUser.html:58
-#: partials/modals/secondPassphraseModal.html:59
-msgid "Passphrase doesn't match."
-msgstr "主密码不符."
 
 #: js/controllers/walletPendingsController.js:8
 msgid "Pending transactions"
 msgstr "待处理交易"
 
-#: partials/modals/multisignatureModal.html:106
+#: partials/modals/multisignatureModal.html:107
 msgid ""
 "Please check your input below and go back if necessary. Double-check the "
-"group members, else you risk losing your LISK balance!"
+"group members, else you risk losing your LSK balance!"
 msgstr ""
-"请核实以下内容，如果有必要请返回上一步。请多次核实组成员信息，否则您有可能损"
-"失您所有LISK."
 
 #: partials/modals/registrationDelegateModal.html:15
 msgid "Please choose a delegate name."
 msgstr "请选择受托人名称"
 
-#: partials/modals/addDappModal.html:84
-msgid "Please ensure all details are correct before confirming your dapp."
+#: partials/modals/vote.html:15
+msgid "Please confirm your selection and confirm your vote."
+msgstr ""
+
+#: partials/modals/addDappModal.html:111
+msgid ""
+"Please ensure all details are correct before confirming your blockchain "
+"application."
 msgstr ""
 
 #: js/controllers/modals/masterPassphraseModalController.js:8
@@ -685,57 +696,58 @@ msgstr ""
 
 #: partials/modals/sendTransaction.html:15
 msgid ""
-"Please enter the Recipient Address and LISK Amount that you would like send "
+"Please enter the Recipient Address and LSK Amount that you would like send "
 "below."
 msgstr ""
 
-#: partials/modals/addDappModal.html:104 partials/modals/forgingModal.html:16
-#: partials/modals/registrationDelegateModal.html:52
-#: partials/modals/sendTransaction.html:57 partials/modals/vote.html:46
+#: partials/modals/addDappModal.html:142 partials/modals/forgingModal.html:16
+#: partials/modals/registrationDelegateModal.html:53
+#: partials/modals/sendTransaction.html:64 partials/modals/vote.html:56
 msgid "Please enter your passphrase below."
 msgstr "请在下方填写主密码"
 
-#: partials/modals/multisignatureModal.html:150
+#: partials/modals/multisignatureModal.html:156
 #: partials/modals/passphraseCheck.html:15
 msgid "Please enter your passphrase."
 msgstr "请填写主密码"
 
-#: partials/modals/secondPassphraseModal.html:83
+#: partials/modals/secondPassphraseModal.html:106
 msgid "Please enter your primary passphrase below."
 msgstr ""
 
-#: partials/modals/addDappModal.html:124
-#: partials/modals/registrationDelegateModal.html:87
-#: partials/modals/sendTransaction.html:92 partials/modals/vote.html:81
+#: partials/modals/addDappModal.html:184
+#: partials/modals/registrationDelegateModal.html:88
+#: partials/modals/sendTransaction.html:99 partials/modals/vote.html:91
 msgid "Please enter your second passphrase below."
 msgstr "请在下方填写支付密码"
 
-#: partials/modals/secondPassphraseModal.html:20
+#: partials/modals/secondPassphraseModal.html:19
 msgid "Please find your second passphrase below."
 msgstr ""
 
-#: partials/modals/addDappModal.html:38
-msgid "Please provide a specification for your dapp below."
+#: partials/modals/addDappModal.html:49
+msgid "Please provide a specification for your blockchain application below."
 msgstr ""
 
-#: partials/modals/addDappModal.html:61
-msgid "Please provide storage links for your dapp below."
+#: partials/modals/addDappModal.html:80
+msgid "Please provide storage a link for your block application below."
 msgstr ""
 
-#: partials/modals/newUser.html:50
+#: partials/modals/newUser.html:60
 msgid "Please re-enter your passphrase below."
 msgstr "请重新输入您的主密码"
 
-#: partials/modals/secondPassphraseModal.html:51
+#: partials/modals/secondPassphraseModal.html:64
 msgid "Please re-enter your second passphrase below."
 msgstr ""
 
-#: partials/modals/addDappModal.html:15
+#: partials/modals/addDappModal.html:18
 #: partials/modals/multisignatureModal.html:15
+#: partials/modals/openDappModal.html:15
 msgid "Please read carefully."
 msgstr "请仔细阅读."
 
-#: partials/modals/multisignatureModal.html:83
+#: partials/modals/multisignatureModal.html:84
 msgid "Pressing enter confirms each member."
 msgstr "请按回车键以确认所有内容."
 
@@ -743,8 +755,12 @@ msgstr "请按回车键以确认所有内容."
 msgid "Previous Block"
 msgstr "上一个区块"
 
-#: partials/modals/secondPassphraseModal.html:90
+#: partials/modals/secondPassphraseModal.html:113
 msgid "Primary Passphrase"
+msgstr ""
+
+#: partials/forging.html:35
+msgid "Productivity"
 msgstr ""
 
 #: partials/modals/userInfo.html:18
@@ -772,9 +788,9 @@ msgstr "接收者"
 msgid "Recipient Address"
 msgstr ""
 
-#: partials/modals/registrationDelegateModal.html:107
-#: partials/modals/registrationDelegateModal.html:37
-#: partials/modals/registrationDelegateModal.html:69
+#: partials/modals/registrationDelegateModal.html:108
+#: partials/modals/registrationDelegateModal.html:38
+#: partials/modals/registrationDelegateModal.html:70
 msgid "register"
 msgstr "注册"
 
@@ -802,7 +818,7 @@ msgstr "去除投票"
 msgid "REMOVE VOTE"
 msgstr ""
 
-#: js/directives/voteTitleDirective.js:17
+#: js/directives/voteTitleDirective.js:16
 msgid "Removing vote from delegates"
 msgstr ""
 
@@ -811,51 +827,51 @@ msgstr ""
 msgid "Reward"
 msgstr "奖励"
 
-#: partials/modals/newUser.html:35
-#: partials/modals/secondPassphraseModal.html:36
+#: partials/modals/newUser.html:36
+#: partials/modals/secondPassphraseModal.html:40
 msgid "SAVE PASSPHRASE"
 msgstr "保存主密码"
 
 #: js/controllers/modals/addDappModalController.js:6
-msgid "Saving new dapp"
-msgstr "保存新Dapp"
+msgid "Saving new application"
+msgstr ""
+
+#: partials/template.html:308 partials/template.html:333
+msgid "Search for applications"
+msgstr ""
 
 #: partials/template.html:208
 msgid "Search for blocks"
 msgstr ""
-
-#: partials/template.html:308 partials/template.html:333
-msgid "Search for Dapps"
-msgstr "搜索Dapps"
 
 #: partials/template.html:182
 msgid ""
 "Search for transactions (Transaction ID, Sender address, Recipient address)"
 msgstr "搜索交易(交易ID，发送者地址，接收者地址)"
 
-#: partials/modals/secondPassphraseModal.html:57
+#: partials/modals/secondPassphraseModal.html:70
 msgid "Second Passphrase"
 msgstr ""
 
-#: partials/modals/masterPassphraseModal.html:35 partials/template.html:149
+#: partials/modals/openDappModal.html:13
+msgid "Security Warning"
+msgstr ""
+
+#: partials/template.html:149
 msgid "SEND"
 msgstr "发送"
 
-#: partials/modals/sendTransaction.html:112
-#: partials/modals/sendTransaction.html:42
-#: partials/modals/sendTransaction.html:77
+#: partials/modals/sendTransaction.html:119
+#: partials/modals/sendTransaction.html:49
+#: partials/modals/sendTransaction.html:84
 msgid "send lisk"
 msgstr "发送Lisk"
 
 #: partials/delegates.html:120 partials/delegates.html:51
 #: partials/modals/sendTransaction.html:13 partials/modals/userInfo.html:28
 #: partials/votes.html:49
-msgid "Send LISK"
-msgstr "发送Lisk"
-
-#: partials/modals/addDappModal.html:130
-msgid "SEND LISK"
-msgstr "发送Lisk"
+msgid "Send LSK"
+msgstr ""
 
 #: js/controllers/transactionsController.js:63 partials/account.html:70
 msgid "Sender"
@@ -865,13 +881,13 @@ msgstr "发送者"
 msgid "Settings"
 msgstr "系统设置"
 
-#: partials/blockchain.html:12 partials/forging.html:82
-#: partials/transactions.html:11
+#: partials/blockchain.html:17 partials/forging.html:82
+#: partials/transactions.html:16
 msgid "Show All Columns"
 msgstr "显示所有列"
 
-#: partials/blockchain.html:13 partials/forging.html:85
-#: partials/transactions.html:14
+#: partials/blockchain.html:18 partials/forging.html:85
+#: partials/transactions.html:19
 msgid "Show Full Time"
 msgstr "显示完整时间"
 
@@ -904,15 +920,15 @@ msgstr ""
 msgid "Step 1/3 - Preamble"
 msgstr "步骤 1/3 - 序言"
 
-#: partials/modals/addDappModal.html:13
+#: partials/modals/addDappModal.html:16
 msgid "Step 1/4 - Preamble"
 msgstr ""
 
-#: partials/modals/newUser.html:48
+#: partials/modals/newUser.html:58
 msgid "Step 2/2 - Confirm your Passphrase"
 msgstr ""
 
-#: partials/modals/secondPassphraseModal.html:49
+#: partials/modals/secondPassphraseModal.html:62
 msgid "Step 2/2 - Confirm your Second Passphrase"
 msgstr ""
 
@@ -920,19 +936,19 @@ msgstr ""
 msgid "Step 2/3 - Specify Group Members"
 msgstr "步骤 2/3 - 指定组员"
 
-#: partials/modals/addDappModal.html:36
+#: partials/modals/addDappModal.html:47
 msgid "Step 2/4 - Specifications"
 msgstr ""
 
-#: partials/modals/multisignatureModal.html:104
+#: partials/modals/multisignatureModal.html:105
 msgid "Step 3/3 - Confirmation"
 msgstr "步骤 3/3 - 确认内容"
 
-#: partials/modals/addDappModal.html:59
+#: partials/modals/addDappModal.html:78
 msgid "Step 3/4 - Storage Links"
 msgstr ""
 
-#: partials/modals/addDappModal.html:82
+#: partials/modals/addDappModal.html:109
 msgid "Step 4/4 - Confirmation"
 msgstr ""
 
@@ -941,22 +957,39 @@ msgstr ""
 msgid "Summary"
 msgstr "摘要"
 
-#: partials/modals/newUser.html:62
-#: partials/modals/secondPassphraseModal.html:64
+#: partials/modals/openDappModal.html:19
+msgid ""
+"The Lisk apps platform currently does not provide any protection against any "
+"unauthorized system calls made from the running application. Therefore "
+"opening any untrusted applications is not yet advisable, and could "
+"potentially lead to loss of funds."
+msgstr ""
+
+#: partials/modals/masterPassphraseModal.html:30
+msgid ""
+"The master passphrase is auto-generated upon first launching the Lisk "
+"client. It can be found at the end of the config.json file. Therefore only "
+"node operators can install, launch or uninstall applications. Once "
+"applications are in a launched state, anyone is free to open and use them."
+msgstr ""
+
+#: partials/modals/newUser.html:68
 msgid ""
 "The passphrase entered doesn't match with the one generated before. Please "
 "go back and generate a new one."
 msgstr "您输入的主密码与刚才创建的主密码不一致，请返回上一步重新创建."
 
-#: js/directives/voteTitleDirective.js:22
-msgid "This action will cost"
+#: partials/modals/secondPassphraseModal.html:72
+msgid ""
+"The second passphrase entered doesn't match with the one generated before. "
+"Please go back and generate a new one."
 msgstr ""
 
 #: partials/modals/multisignatureModal.html:21
 msgid ""
 "This walkthrough will guide you through the necessary steps to create a "
 "multi-signature group. It's very important that you know what multi-"
-"signatures are, else you risk loosing your LISK balance.<br><br>A multi-"
+"signatures are, else you risk loosing your LSK balance.<br><br>A multi-"
 "signature group consists of N accounts, the one who created the group is the "
 "group owner. When the owner wants to make a transaction, M of N accounts "
 "within the group need to confirm it, otherwise the transaction will not be "
@@ -1033,7 +1066,7 @@ msgstr "更新"
 
 #: js/controllers/delegatesController.js:159
 #: js/controllers/forgingController.js:53
-#: js/controllers/votedDelegatesController.js:118 partials/forging.html:35
+#: js/controllers/votedDelegatesController.js:118
 msgid "Uptime"
 msgstr "在线率"
 
@@ -1050,7 +1083,7 @@ msgstr "查看已选"
 msgid "vote"
 msgstr "投票"
 
-#: js/directives/voteTitleDirective.js:15
+#: js/directives/voteTitleDirective.js:14
 msgid "Voting for delegates"
 msgstr ""
 
@@ -1070,17 +1103,19 @@ msgstr "您目前没有加入任何多重签名组！"
 msgid "You can find your passphrase below."
 msgstr "以下就是您的主密码！"
 
-#: partials/dapps.html:165
-msgid "You do not have any dapps installed yet."
-msgstr "您还没有安装过Dapps呢！"
+#: partials/modals/vote.html:33
+msgid ""
+"You can select up to 33 delegates in one voting turn. Up to 101 delegates in "
+"total."
+msgstr ""
+
+#: partials/dapps.html:165 partials/dapps.html:242
+msgid "You do not have any applications installed yet."
+msgstr ""
 
 #: partials/forging.html:106
 msgid "You have not forged any blocks yet."
 msgstr "您还没铸造过区块呢！"
-
-#: partials/dapps.html:242
-msgid "You have not installed dapps yet."
-msgstr "您还没有安装过Dapps呢！"
 
 #: partials/account.html:109
 msgid "You have not made any transactions yet."
@@ -1090,326 +1125,27 @@ msgstr "您还没有交易记录呢！"
 msgid "You have not voted for any delegates yet."
 msgstr "您还没有投过票呢！"
 
+#: partials/modals/multisignatureModal.html:113
+#: partials/modals/multisignatureModal.html:63
+msgid "Your Account"
+msgstr ""
+
 #: partials/multi.html:10
 msgid "Your Multi-Signature group(s) have not made any transactions yet."
 msgstr "您的多重签名组还未产生任何交易."
 
-#: partials/modals/forgingModal.html:23
-#: partials/modals/multisignatureModal.html:157
-#: partials/modals/registrationDelegateModal.html:59
-#: partials/modals/sendTransaction.html:64 partials/modals/vote.html:53
+#: partials/modals/addDappModal.html:151 partials/modals/forgingModal.html:23
+#: partials/modals/multisignatureModal.html:163
+#: partials/modals/registrationDelegateModal.html:60
+#: partials/modals/sendTransaction.html:71 partials/modals/vote.html:63
 #: partials/passphrase.html:10
 msgid "Your Passphrase"
 msgstr "您的主密码"
 
-#: partials/modals/multisignatureModal.html:161
+#: partials/modals/addDappModal.html:193
+#: partials/modals/multisignatureModal.html:167
 #: partials/modals/passphraseCheck.html:22
-#: partials/modals/registrationDelegateModal.html:94
-#: partials/modals/sendTransaction.html:99 partials/modals/vote.html:88
+#: partials/modals/registrationDelegateModal.html:95
+#: partials/modals/sendTransaction.html:106 partials/modals/vote.html:98
 msgid "Your Second Passphrase"
 msgstr "您的支付密码"
-
-#~ msgid "Account name or ID"
-#~ msgstr "帐户名或 ID"
-
-#~ msgid "Account name, ID or public key"
-#~ msgstr "帐户名、 ID 或公钥"
-
-#~ msgid "add contact"
-#~ msgstr "添加好友"
-
-#~ msgid "Add group members by typing in their account name, ID or public key."
-#~ msgstr "使用帐户名、ID或者公钥添加组员"
-
-#~ msgid "Add new contact"
-#~ msgstr "添加新好友"
-
-#~ msgid "Add second passphrase"
-#~ msgstr "设置支付密码"
-
-#~ msgid "Adding new contact"
-#~ msgstr "添加新好友"
-
-#~ msgid "Attention!"
-#~ msgstr "请注意"
-
-#~ msgid "Back"
-#~ msgstr "返回"
-
-#~ msgid "BACK"
-#~ msgstr "返回"
-
-#~ msgid "Category"
-#~ msgstr "分类"
-
-#~ msgid "Centralized"
-#~ msgstr "中心化"
-
-#~ msgid "change to SIA ASCII"
-#~ msgstr "转化为SIA ASCII编码"
-
-#~ msgid "change to url link"
-#~ msgstr "转化为URL链接"
-
-#~ msgid "Check"
-#~ msgstr "检查"
-
-#~ msgid "Confirm Vote"
-#~ msgstr "确认投票"
-
-#~ msgid "Contact Request"
-#~ msgstr "好友添加请求"
-
-#~ msgid "Contacts"
-#~ msgstr "我的好友"
-
-#~ msgid "Decentralized"
-#~ msgstr "去中心化"
-
-#~ msgid "Enable Multi-Signature on this account"
-#~ msgstr "在此帐户开启多重签名"
-
-#~ msgid "Git repository link"
-#~ msgstr "Git源码仓库的链接"
-
-#~ msgid ""
-#~ "GitHub is a Web-based Git repository hosting service, which offers "
-#~ "amongst other things a source code management functionality. GitHub "
-#~ "provides a graphical interface and desktop as well as mobile integration. "
-#~ "If you add your dapp source code to a GitHub repository you need to "
-#~ "specify the repository link in the next step."
-#~ msgstr ""
-#~ "GitHub是一个基于网页的源码托管服务，它提供了源代码管理功能。GitHub提供了图"
-#~ "形界面以及桌面与移动端融合，如果您添加您的Dapp源码到GitHub，那您需要在下一"
-#~ "个步骤提供您的GitHub库链接"
-
-#~ msgid "Hosted at"
-#~ msgstr "存储于"
-
-#~ msgid "Icon Sia ASCII"
-#~ msgstr "Icon的Sia ASCII码"
-
-#~ msgid "Icon URL"
-#~ msgstr "Icon URL"
-
-#~ msgid "Loading contacts"
-#~ msgstr "正在加载好友列表"
-
-#~ msgid ""
-#~ "Make sure you're sending LISK to the right contact. This action can't be "
-#~ "undone later."
-#~ msgstr "请确认您正发送LISK给正确的接收人，因为该过程是无法撤消的."
-
-#~ msgid "MORE INFO"
-#~ msgstr "更多信息"
-
-#~ msgid "My Contacts"
-#~ msgstr "我的好友"
-
-#~ msgid "New second passphrase"
-#~ msgstr "新支付密码"
-
-#~ msgid "Pending ({{contacts.followersCount}})"
-#~ msgstr "待处理 ({{contacts.followersCount}})"
-
-#~ msgid "Pending Requests"
-#~ msgstr "待处理请求"
-
-#~ msgid ""
-#~ "Please be aware, Lisk decentralized applications do not currently run "
-#~ "within a sandboxed virtual machine. This means you are potentially "
-#~ "vulnerable to malicious application behaviour. Before installing any new "
-#~ "application, we recommend checking the source code or asking the Lisk "
-#~ "community for further verification.<br>We will enable sandboxing of "
-#~ "decentralized applications with the next Lisk update."
-#~ msgstr ""
-#~ "请注意，Lisk去中心化应用目前并不是运行在沙箱虚拟机上，这意味着您可能容易受"
-#~ "到恶意应用程序的行为，所以在安装任何新的Dapp之前，我们推荐您检查该Dapp的源"
-#~ "码或者询问Lisk社区以进一步验证.我们将在下一次Lisk的升级时，开始启用Dapp的"
-#~ "沙盒."
-
-#~ msgid "Please check your input below and go back if necessary."
-#~ msgstr "请检查您以下的输入内容，或者返回上一步"
-
-#~ msgid "Please choose between the available options."
-#~ msgstr "请从这些可用选项内选择"
-
-#~ msgid "Please enter master password."
-#~ msgstr "请输入Dapp安装密码."
-
-#~ msgid ""
-#~ "Please make sure you copy and paste the whole Sia ASCII code. "
-#~ "Additionally please check that there were no characters added."
-#~ msgstr ""
-#~ "请确认您复制并粘贴了全部的Sia ASCII编码，同时请确认没有添加额外的字符."
-
-#~ msgid ""
-#~ "Please make sure you copy the complete repository link from GitHub. It "
-#~ "ends in .git."
-#~ msgstr "请确认您复制完整的GitHub源码库的链接，它是以.git结尾的."
-
-#~ msgid "Please set the dapp parameters below."
-#~ msgstr "请在填写Dapp信息"
-
-#~ msgid "Please set the GitHub repository link below."
-#~ msgstr "请填写GitHub源码库链接."
-
-#~ msgid "Please set the Sia ASCII code below."
-#~ msgstr "请填写Sia ASCII 编码."
-
-#~ msgid "Please set your username."
-#~ msgstr "请填写您的用户名"
-
-#~ msgid "Please type in an account name or ID below."
-#~ msgstr "请在下方填写您的帐户名或者帐户ID"
-
-#~ msgid "Profile Information"
-#~ msgstr "个人信息"
-
-#~ msgid "Repeat second passphrase"
-#~ msgstr "再次输入支付密码"
-
-#~ msgid "save Name"
-#~ msgstr "保存名称"
-
-#~ msgid "Set members of account"
-#~ msgstr "设置帐户的成员数"
-
-#~ msgid "Sia ASCII Code"
-#~ msgstr "Sia ASCII 编码"
-
-#~ msgid ""
-#~ "Sia is a new decentralized cloud storage platform aimed at giving users "
-#~ "control of their data. Storage is pulled from a large network of hosts, "
-#~ "each using Sia's blockchain to form storage contracts with clients. Out "
-#~ "of the hundreds of hosts, only a fraction need to be online for the data "
-#~ "to be recovered. Even in a network with many unreliable hosts, the data "
-#~ "is safe.<br><br>You need to upload your dapp source code as a .zip file "
-#~ "to the Sia network. Once the upload was successful you need to specify "
-#~ "the ASCII code of the file in the next step."
-#~ msgstr ""
-#~ "Sia是一个全新的去中心化的云存储平台，致力于为用户提供掌控自己的数据的工"
-#~ "具，存储的数据被存储在一个巨大的区块链网络上，使用Sia区块链时会从客户端生"
-#~ "成存储合约，在数百个主机中，只需要有一小部分的主机在线就能保证数据100%提"
-#~ "取，所以即使有很多不可靠的主机，也不会影响数据的安全.<br><br>您需要以.zip"
-#~ "文件格式来上传您的Dapp源码到Sia网络，一旦上传完成，您需要在下一步操作中填"
-#~ "写Sia生成的ASCII码."
-
-#~ msgid "Sia required"
-#~ msgstr "Sia 为必须"
-
-#~ msgid "Step 1/5 - Preamble"
-#~ msgstr "步骤 1/5 - 序言"
-
-#~ msgid "Step 2/2 - Confirm the Passphrase"
-#~ msgstr "步骤 2/2 - 确认主密码"
-
-#~ msgid "Step 2/5 Dapp Specifications"
-#~ msgstr "步骤 2/5 Dapp规格"
-
-#~ msgid "Step 3/5 - Choose Storage Solution"
-#~ msgstr "步骤 3/5 - 选择存储方案"
-
-#~ msgid "Step 4/5 - Storage Specifications"
-#~ msgstr "cbhi 4/5 - 存储规格"
-
-#~ msgid "Step 5/5 - Confirmation"
-#~ msgstr "步骤 5/5 - 确认内容"
-
-#~ msgid "Tags"
-#~ msgstr "标签"
-
-#~ msgid "Tags (separated with comma)"
-#~ msgstr "标签(用半角逗号分隔)"
-
-#~ msgid "this action will cost {{fee | liskFilter}} LISK"
-#~ msgstr "此操作将花费 {{fee | liskFilter}} LISK"
-
-#~ msgid ""
-#~ "This walkthrough will guide you through the necessary steps to create a "
-#~ "multi-signature group. It's very important that you know what multi-"
-#~ "signatures are, else you risk loosing your LISK balance.<br><br>A multi-"
-#~ "signature group consists of N accounts, the one who created the group is "
-#~ "the group owner. When the owner wants to make a transaction, M of N "
-#~ "accounts within the group need to confirm it, otherwise the transaction "
-#~ "will not be processed. The values M and N are specified in this "
-#~ "walkthrough.<br><br><b>Things you need to know for the multi-signature "
-#~ "group setup:</b><br><br>• The number of group members (N).<br>• The "
-#~ "number of needed confirmations (M).<br>• The account names or IDs from "
-#~ "the Lisk accounts you want to add to the group."
-#~ msgstr ""
-#~ "本介绍将引导您通过必要的步骤来创建一个多重签名组. 请务必先了解何为多重签"
-#~ "名，因为如果操作失误，有可能导致您失去您目前帐户的所有LISK，<br><br>一个多"
-#~ "重签名组由N个帐户组成，创建这个多重签名组的人是签名组的所有者，当所有者想"
-#~ "要创建一条交易的时候，则需要由M个签名组里的人来进行确认，否则这条交易将不"
-#~ "会被通过并广播，M和N的值必须是M<N.<br><br><b>您需要知道的多重签名组的内"
-#~ "容：</b><br><br>• 签名组的成员数量N.<br>• 每次交易需要确认的人数M<br>• 您"
-#~ "需要添加到多重签名组的人员的帐户名称或者帐户ID."
-
-#~ msgid "Transaction"
-#~ msgstr "交易"
-
-#~ msgid "Transactions for 17649443584386761059C"
-#~ msgstr "17649443584386761059C的交易信息"
-
-#~ msgid "Username"
-#~ msgstr "用户名"
-
-#~ msgid "Vote for Delegates"
-#~ msgstr "投票给受托人"
-
-#~ msgid "Welcome, click to edit profile"
-#~ msgstr "欢迎，点击以编辑信息"
-
-#~ msgid ""
-#~ "You are about to register your decentralized application (dapp) on the "
-#~ "Lisk network. After the registration all Lisk users will be able to see "
-#~ "your dapp on the Lisk Dapp Store and they will also be able to install "
-#~ "and launch it.<br><br>One of the characteristics of blockchains is that "
-#~ "you can't delete any content from them. Therefore make sure you have used "
-#~ "the correct dapp parameters. We also advise you to test your dapp on the "
-#~ "official Lisk testnet so you can guarantee that its working flawlessly."
-#~ "<br><br><b>Things you need to know for the registration process:</"
-#~ "b><br><br>• Dapp names are unique, you can't register the same name twice "
-#~ "on the Lisk network.<br>• You can either use a centralized (GitHub) or "
-#~ "decentralized (Sia) hosting method.<br>• Make sure that your dapp icon's "
-#~ "format is a square.<br>• Choose your tags wisely, with them your users "
-#~ "will be able to find your dapp in the Dapp Store.<br><br>The Lisk Team "
-#~ "isn't liable for a dapp, solely the uploader is. So you have to make sure "
-#~ "that your dapp is legal and doesn't harm its users."
-#~ msgstr ""
-#~ "您正在注册您的Dapp到Lisk网络上，在注册流程结束后，所有用户将可以在Lisk的"
-#~ "Dapp商店上看到您的Dapp，而且大家也可以直接下载安装并运行您的Dapp，<br><br>"
-#~ "区块链技术的一个特点是，您无法删除区块链上面的任何内容，因此，请确认您的"
-#~ "Dapp准确无误。同时，我们也建议您先在Lisk官方提供的测试网络上试运行以保证"
-#~ "Dapp完美上线。<br><br><b>注册流程须知</b><br><br>• Dapp的名称是唯一的，您"
-#~ "无法注册一个别人已在Lisk网络上使用的名称<br>• 您可以选择使用中心化的(如"
-#~ "GitHub)或者去中心化的(如SIA)存储方式.<br>• 请确认您的Dapp图标是正方式的."
-#~ "<br>• 请慎重选择标签，这样您的用户才能通过该标签在Dapp商店搜索到您的Dapp."
-#~ "<br><br>Lisk团队不对任何的Dapp承担责任，所有责任归于发布者，所以请确认您的"
-#~ "Dapp是合法且对用户无害."
-
-#~ msgid "You do not have any contacts, try adding a new one!"
-#~ msgstr "您还没有好友，要不要添加一个？"
-
-#~ msgid "You do not have any pending contacts!"
-#~ msgstr "没有待确认的好友添加请求！"
-
-#~ msgid ""
-#~ "You shall receive notification when the contact has accepted your request."
-#~ msgstr "当该好友接受您的请求时，你会收到提醒."
-
-#~ msgid "Your dapp description cannot be longer than 160 characters."
-#~ msgstr "您的DAPP描述不得超过80个汉字"
-
-#~ msgid "Your dapp name cannot be longer than 32 characters"
-#~ msgstr "您的DAPP名称不得超过16个汉字"
-
-#~ msgid "Your dapp name cannot be longer than 32 characters."
-#~ msgstr "您的DAPP名称不得超过16个汉字"
-
-#~ msgid "Your dapp name is required."
-#~ msgstr "请填写您的DAPP名称"
-
-#~ msgid "Your dapp tags cannot be longer than 160 characters."
-#~ msgstr "您的DAPP标签不得超过80个汉字"
