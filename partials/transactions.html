@@ -23,7 +23,7 @@
                 </div>
                 <tr ng-repeat="transaction in unconfirmedTransactions" class="checked">
                     <td data-title="tableTransactions.cols.b_height" sortable="'b_height'"></td>
-                    <td class="td-amount" ng-show="showAllColumns" data-title="tableTransactions.cols.transactionId" class="pointer">
+                    <td class="td-amount" ng-show="showAllColumns" data-title="tableTransactions.cols.t_id" class="pointer">
                         <a href="#" ng-click="transactionInfo(transaction)">{{transaction.id}}</a>
                     </td>
                     <td class="td-amount" data-title="tableTransactions.cols.t_senderId" class="pointer" sortable="'t_senderId'">
@@ -44,7 +44,7 @@
                 </tr>
                 <tr ng-repeat="transaction in $data">
                     <td data-title="tableTransactions.cols.b_height" sortable="'b_height'">{{transaction.height}}</td>
-                    <td class="td-amount" ng-show="showAllColumns" data-title="tableTransactions.cols.transactionId" class="pointer">
+                    <td class="td-amount" ng-show="showAllColumns" data-title="tableTransactions.cols.t_id" class="pointer">
                         <a href="#" ng-click="transactionInfo(transaction)">{{transaction.id}}</a>
                     </td>
                     <td class="td-amount" data-title="tableTransactions.cols.t_senderId" class="pointer" sortable="'t_senderId'">

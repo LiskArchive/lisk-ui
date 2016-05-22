@@ -18,7 +18,7 @@
                         <i ng-if="transaction.recipientId!=transaction.senderId" class="vertical-text" ng-class="{'mdi-content-add-circle dark-meent-font': transaction.recipientId==walletAddress, 'mdi-content-remove-circle dark-red-font': transaction.senderId==walletAddress}"></i>
                         {{transaction.amount | liskFilter}}
                     </td>
-                    <td data-title="tableWalletTransactions.cols.fee">{{transaction.fee | liskFilter}}</td>
+                    <td data-title="tableWalletTransactions.cols.t_fee">{{transaction.t_fee | liskFilter}}</td>
                     <td data-title="tableWalletTransactions.cols.confirmations">
                         <span>{{transaction.signatures.length + 1}}</span>
                     </td>

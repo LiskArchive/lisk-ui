@@ -68,7 +68,7 @@ angular.module('liskApp').controller('walletTransactionsController', ['$scope', 
         t_recipientId : gettextCatalog.getString('Recipient'),
         t_timestamp : gettextCatalog.getString('Time'),
         t_amount : gettextCatalog.getString('Amount'),
-        fee : gettextCatalog.getString('Fee'),
+        t_fee : gettextCatalog.getString('Fee'),
         confirmations : gettextCatalog.getString('Confirmations')
     };
 
