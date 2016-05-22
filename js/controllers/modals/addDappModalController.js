@@ -38,7 +38,7 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
     $scope.newDapp = {
         name: "",
         description: "",
-        category: 0,
+        category: 4, // Miscellaneous
         type: 0,
         tags: "",
         link: "",
