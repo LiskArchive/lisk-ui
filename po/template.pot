@@ -51,10 +51,6 @@ msgstr ""
 msgid "Account Verification"
 msgstr ""
 
-#: partials/dapps.html:152
-msgid "Add a new application"
-msgstr ""
-
 #: partials/modals/multisignatureModal.html:46
 msgid "Add group members by typing in their Lisk address and pressing enter."
 msgstr ""
@@ -438,7 +434,7 @@ msgstr ""
 msgid "INSTALLED"
 msgstr ""
 
-#: partials/dapps.html:235
+#: partials/dapps.html:223
 msgid "Installed Applications"
 msgstr ""
 
@@ -467,7 +463,7 @@ msgstr ""
 msgid "LAUNCH"
 msgstr ""
 
-#: wallet.html:20
+#: wallet.html:22
 msgid "Lisk - Blockchain Application Platform"
 msgstr ""
 
@@ -565,8 +561,8 @@ msgid "Members"
 msgstr ""
 
 #: partials/account.html:60
-#: partials/dapps.html:177
-#: partials/dapps.html:237
+#: partials/dapps.html:165
+#: partials/dapps.html:225
 msgid "More"
 msgstr ""
 
@@ -1125,8 +1121,8 @@ msgstr ""
 msgid "You can select up to 33 delegates in one voting turn. Up to 101 delegates in total."
 msgstr ""
 
-#: partials/dapps.html:165
-#: partials/dapps.html:242
+#: partials/dapps.html:153
+#: partials/dapps.html:230
 msgid "You do not have any applications installed yet."
 msgstr ""
 
