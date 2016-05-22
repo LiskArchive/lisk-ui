@@ -4,7 +4,7 @@ angular.module('liskApp').controller('dappController', ['$scope', 'viewFactory',
 
     $scope.view = viewFactory;
     $scope.view.inLoading = true;
-    $scope.view.loadingText = gettextCatalog.getString('Loading dapp');
+    $scope.view.loadingText = gettextCatalog.getString('Loading applications');
     $scope.loading = true;
     $scope.installed = false;
 

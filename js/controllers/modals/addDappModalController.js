@@ -3,7 +3,7 @@ require('angular');
 angular.module('liskApp').controller('addDappModalController', ["$scope", "$http", "addDappModal", "userService", "viewFactory", 'gettextCatalog', function ($scope, $http, addDappModal, userService, viewFactory, gettextCatalog) {
 
     $scope.view = viewFactory;
-    $scope.view.loadingText = gettextCatalog.getString('Saving new dapp');
+    $scope.view.loadingText = gettextCatalog.getString('Saving new application');
     $scope.secondPassphrase = userService.secondPassphrase;
     $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
     $scope.passmode = false;

@@ -4,8 +4,8 @@ angular.module('liskApp').controller('dappsController', ['$scope', 'viewFactory'
 
     $scope.view = viewFactory;
     $scope.view.inLoading = true;
-    $scope.view.loadingText = gettextCatalog.getString('Loading dapps');
-    $scope.view.page = {title: gettextCatalog.getString('Dapp Store'), previous: null};
+    $scope.view.loadingText = gettextCatalog.getString('Loading applications');
+    $scope.view.page = {title: gettextCatalog.getString('Applications'), previous: null};
     $scope.view.bar = {showDappsBar: true, searchDapps: false, showCategories: false};
     $scope.searchDapp = dappsService;
     $scope.searchDapp.searchForDappGlobal = '';
