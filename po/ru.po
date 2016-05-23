@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.7\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
@@ -61,15 +61,15 @@ msgstr "Проверка учетной записи"
 
 #: partials/dapps.html:152
 msgid "Add a new application"
-msgstr ""
+msgstr "Добавить новое приложение"
 
 #: partials/modals/multisignatureModal.html:46
 msgid "Add group members by typing in their Lisk address and pressing enter."
-msgstr ""
+msgstr "Добавьте членов группы, введя их адреса Lisk, а затем нажмите Enter"
 
 #: partials/modals/secondPassphraseModal.html:126
 msgid "ADD SECOND PASSPHRASE"
-msgstr "ДОБАВИТЬ ДОПОЛНИТЕЛЬНЫЙ ПАРОЛЬ"
+msgstr "УСТАНОВИТЬ ДОПОЛНИТЕЛЬНЫЙ ПАРОЛЬ"
 
 #: js/controllers/blockchainController.js:45
 #: js/controllers/transactionsController.js:66
@@ -86,7 +86,7 @@ msgstr "Количество (Комиссия)"
 
 #: js/controllers/dappsController.js:8 partials/template.html:90
 msgid "Applications"
-msgstr ""
+msgstr "Приложения"
 
 #: js/controllers/delegatesController.js:160
 #: js/controllers/forgingController.js:64
@@ -205,7 +205,7 @@ msgstr "ПОДТВЕРДИТЬ"
 
 #: partials/modals/secondPassphraseModal.html:85
 msgid "CONFIRM SECOND PASSPHRASE"
-msgstr "ПОДТВЕРДИТЕ ДОПОЛНИТЕЛЬНЫЙ ПАРОЛЬ"
+msgstr "ПОДТВЕРДИТЬ ДОПОЛНИТЕЛЬНЫЙ ПАРОЛЬ"
 
 #: js/directives/voteActionDirective.js:14
 msgid "CONFIRM VOTE"
@@ -308,15 +308,15 @@ msgstr "Включено"
 
 #: js/controllers/dappController.js:143
 msgid "Failed to install application"
-msgstr ""
+msgstr "Не удалось установить приложение"
 
 #: js/controllers/dappController.js:183
 msgid "Failed to launch application"
-msgstr ""
+msgstr "Не удалось запустить приложение"
 
 #: js/controllers/dappController.js:94
 msgid "Failed to uninstall application"
-msgstr ""
+msgstr "Не удалось удалить приложение"
 
 #: js/controllers/blockchainController.js:46
 #: js/controllers/forgingController.js:117
@@ -338,7 +338,7 @@ msgstr "КОМИССИЯ"
 #: partials/modals/secondPassphraseModal.html:28
 #: partials/modals/sendTransaction.html:31 partials/modals/vote.html:25
 msgid "Fee: {{fee | liskFilter}} LSK"
-msgstr ""
+msgstr "Комиссия: {{fee | liskFilter}} LSK"
 
 #: partials/forging.html:74
 msgid "Forged Blocks"
@@ -414,6 +414,8 @@ msgid ""
 "If you are confident the application can be deemed trustworthy, click "
 "<strong>Open Anyway</strong>, otherwise click <strong>Cancel</strong> now."
 msgstr ""
+"Если вы доверяете источнику приложения, выберите <strong>Все равно открыть</"
+"strong>, иначе выберите <strong>Отмена</strong>."
 
 #: partials/dapp-entry.html:20
 msgid "INSTALL"
@@ -425,7 +427,7 @@ msgstr "УСТАНОВЛЕНО"
 
 #: partials/dapps.html:235
 msgid "Installed Applications"
-msgstr ""
+msgstr "Установленные Приложения"
 
 #: partials/settings.html:9
 msgid "Language"
@@ -453,7 +455,7 @@ msgstr "ПУСК"
 
 #: wallet.html:20
 msgid "Lisk - Blockchain Application Platform"
-msgstr ""
+msgstr "Lisk - Платформа децентрализованных приложений"
 
 #: js/controllers/delegatesController.js:158
 #: js/controllers/votedDelegatesController.js:117
@@ -474,7 +476,7 @@ msgstr "Версия LISK устарела!"
 #: js/controllers/dappsCategoryController.js:7
 #: js/controllers/dappsController.js:7
 msgid "Loading applications"
-msgstr ""
+msgstr "Загрузка приложений"
 
 #: js/controllers/blockchainController.js:7
 msgid "Loading blockchain"
@@ -513,11 +515,11 @@ msgstr "Выход"
 
 #: partials/modals/sendTransaction.html:29
 msgid "LSK Amount"
-msgstr ""
+msgstr "Количество LSK"
 
 #: partials/forging.html:11
 msgid "LSK Earned"
-msgstr ""
+msgstr "Заработано LSK"
 
 #: partials/modals/newUser.html:72
 msgid ""
@@ -542,25 +544,26 @@ msgid ""
 "be lost."
 msgstr ""
 "Убедитесь, что дополнительный пароль сохранен в надежном месте. Если вы "
-"потеряете свой пароль, то все ваши средства будут безвозвратно утрачены."
+"потеряете свой дополнительный пароль, то все ваши средства будут "
+"безвозвратно утрачены."
 
 #: partials/modals/secondPassphraseModal.html:35
 msgid ""
 "Make sure that you keep the second passphrase safe. You will be asked to re-"
 "type it for confirmation."
 msgstr ""
-"Убедитесь, что пароль сохранен в надежном месте. Для подтверждения вам будет "
-"необходимо ввести его повторно."
+"Убедитесь, что дополнительный пароль сохранен в надежном месте. Для "
+"подтверждения вам будет необходимо ввести его повторно."
 
 #: partials/modals/sendTransaction.html:41
 msgid ""
 "Make sure you're sending LSK to the right address. This action can't be "
 "undone later."
-msgstr ""
+msgstr "Проверьте адрес для отправки. Это действие не может быть отменено."
 
 #: js/controllers/modals/masterPassphraseModalController.js:9
 msgid "Master Passphrase"
-msgstr "Основной Пароль"
+msgstr "Пароль сервера"
 
 #: js/controllers/walletsController.js:114
 msgid "Members"
@@ -635,7 +638,7 @@ msgstr "НЕТ"
 
 #: partials/dapps-category.html:6 partials/dapps-category.html:7
 msgid "No applications matching your search criteria were found."
-msgstr ""
+msgstr "Не было найдено ни одного приложения, соответствующего вашему запросу."
 
 #: partials/blockchain.html:35
 msgid "No blockchain"
@@ -671,7 +674,7 @@ msgstr "ОТКРЫТЬ"
 
 #: partials/modals/openDappModal.html:30
 msgid "OPEN ANYWAY"
-msgstr ""
+msgstr "ВСЕ РАВНО ОТКРЫТЬ"
 
 #: js/controllers/forgingController.js:41
 #: js/controllers/forgingController.js:53
@@ -692,6 +695,8 @@ msgid ""
 "Please check your input below and go back if necessary. Double-check the "
 "group members, else you risk losing your LSK balance!"
 msgstr ""
+"Проверьте, что все поля заполнены верно. Особое внимание уделите членам "
+"группы, т.к. в случае ошибки вы можете потерять ваши средства!"
 
 #: partials/modals/registrationDelegateModal.html:15
 msgid "Please choose a delegate name."
@@ -706,16 +711,19 @@ msgid ""
 "Please ensure all details are correct before confirming your blockchain "
 "application."
 msgstr ""
+"Пожалуйста, перед подтверждением, проверьте, что все поля заполнены верно."
 
 #: js/controllers/modals/masterPassphraseModalController.js:8
 msgid "Please enter the master passphrase for this node."
-msgstr "Пожалуйста введите основной пароль для этого сервера."
+msgstr "Пожалуйста введите пароль для этого сервера."
 
 #: partials/modals/sendTransaction.html:15
 msgid ""
 "Please enter the Recipient Address and LSK Amount that you would like send "
 "below."
 msgstr ""
+"Пожалуйста, введите адрес получателя и количество LSK, которое вы хотите "
+"отправить."
 
 #: partials/modals/addDappModal.html:142 partials/modals/forgingModal.html:16
 #: partials/modals/registrationDelegateModal.html:53
@@ -744,11 +752,11 @@ msgstr "Ваш новый дополнительный пароль:"
 
 #: partials/modals/addDappModal.html:49
 msgid "Please provide a specification for your blockchain application below."
-msgstr ""
+msgstr "Пожалуйста, укажите спецификацию вашего блокчейн-приложения."
 
 #: partials/modals/addDappModal.html:80
 msgid "Please provide storage a link for your block application below."
-msgstr ""
+msgstr "Пожалуйста, укажите ссылку на хранилище вашего приложения."
 
 #: partials/modals/newUser.html:60
 msgid "Please re-enter your passphrase below."
@@ -851,11 +859,11 @@ msgstr "СОХРАНИТЬ ПАРОЛЬ"
 
 #: js/controllers/modals/addDappModalController.js:6
 msgid "Saving new application"
-msgstr ""
+msgstr "Сохранить новое приложение"
 
 #: partials/template.html:308 partials/template.html:333
 msgid "Search for applications"
-msgstr ""
+msgstr "Поиск приложений"
 
 #: partials/template.html:208
 msgid "Search for blocks"
@@ -874,7 +882,7 @@ msgstr "Дополнительный пароль"
 
 #: partials/modals/openDappModal.html:13
 msgid "Security Warning"
-msgstr ""
+msgstr "Предупреждение Безопасности"
 
 #: partials/template.html:149
 msgid "SEND"
@@ -890,7 +898,7 @@ msgstr "отправить LISK"
 #: partials/modals/sendTransaction.html:13 partials/modals/userInfo.html:28
 #: partials/votes.html:49
 msgid "Send LSK"
-msgstr ""
+msgstr "Отправить"
 
 #: js/controllers/transactionsController.js:63 partials/account.html:70
 msgid "Sender"
@@ -983,6 +991,10 @@ msgid ""
 "opening any untrusted applications is not yet advisable, and could "
 "potentially lead to loss of funds."
 msgstr ""
+"Lisk в настоящее время не обеспечивает защиту от несанкционированных "
+"системных вызовов, совершенных активным приложением. Поэтому запуск не "
+"доверенного приложения не рекомендуется и может привести к потере средств на "
+"счете."
 
 #: partials/modals/masterPassphraseModal.html:30
 msgid ""
@@ -991,6 +1003,10 @@ msgid ""
 "node operators can install, launch or uninstall applications. Once "
 "applications are in a launched state, anyone is free to open and use them."
 msgstr ""
+"Пароль сервера генерируется автоматически и сохраняется в конфигурационных "
+"файлах, чтобы только системные администраторы могли устанавливать, запускать "
+"или удалять приложения. Если приложение уже запущено, им могут бесплатно "
+"воспользоваться все желающие."
 
 #: partials/modals/newUser.html:68
 msgid ""
@@ -1022,6 +1038,17 @@ msgid ""
 "confirmations (M).<br>• The addresses of the Lisk accounts you want to add "
 "to the group."
 msgstr ""
+"Это руководство поможет вам пройти необходимые шаги для создания группы с "
+"мульти-подписью. Крайне важно, чтобы вы осознавали цель и необходимость "
+"этого действия, в противном случае вы рискуете потерять все ваши средства."
+"<br><br>В группу с мульти-подписью входят несколько аккаунтов, при этом "
+"создатель группы является её владельцем. Для проведения операций с LSK "
+"потребуется дополнительное подтверждение от остальных участников группы, "
+"иначе операция будет отменена. Далее вы сможете определить необходимое "
+"количество подтверждений.<br><br><b>Для создания группы с мульта-подписью "
+"необходимы следующие данные:</b><br><br> ► Общее количество членов группы;"
+"<br> ► Необходимое количество подтверждений;<br> ► Адрес аккаунта LISK "
+"каждого участника группы."
 
 #: js/controllers/blockchainController.js:43
 #: js/controllers/forgingController.js:116
@@ -1136,7 +1163,7 @@ msgstr ""
 
 #: partials/dapps.html:165 partials/dapps.html:242
 msgid "You do not have any applications installed yet."
-msgstr ""
+msgstr "Вы еще не установили ни одного приложения."
 
 #: partials/forging.html:106
 msgid "You have not forged any blocks yet."
