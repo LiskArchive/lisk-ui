@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.7\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: partials/votes.html:25
@@ -26,12 +26,13 @@ msgstr "{{countTop}} en Total"
 
 #: partials/votes.html:4
 msgid "{{voteList.length}} out of {{count}} Delegates selected"
-msgstr ""
+msgstr "{{voteList.length}} de {{count}} Delegados seleccionados."
 
 #: partials/delegates.html:4
 msgid ""
 "{{voteList.length}} out of {{countStandby + countTop}} Delegates selected"
 msgstr ""
+"{{voteList.length}} de {{countStandby + countTop}} Delegados seleccionados"
 
 #: partials/template.html:162
 msgid "2nd Passphrase"
@@ -60,11 +61,12 @@ msgstr "Verificación de la cuenta"
 
 #: partials/dapps.html:152
 msgid "Add a new application"
-msgstr ""
+msgstr "Añadir nueva aplicación"
 
 #: partials/modals/multisignatureModal.html:46
 msgid "Add group members by typing in their Lisk address and pressing enter."
 msgstr ""
+"Añadir miembros de grupo escribiendo su dirección Lisk y pulsando enter."
 
 #: partials/modals/secondPassphraseModal.html:126
 msgid "ADD SECOND PASSPHRASE"
@@ -85,7 +87,7 @@ msgstr "Cantidad (Comisión)"
 
 #: js/controllers/dappsController.js:8 partials/template.html:90
 msgid "Applications"
-msgstr ""
+msgstr "Aplicaciones"
 
 #: js/controllers/delegatesController.js:160
 #: js/controllers/forgingController.js:64
@@ -258,7 +260,7 @@ msgstr "Copiar Nombre"
 
 #: js/controllers/accountController.js:8 partials/template.html:72
 msgid "Dashboard"
-msgstr "Panel principal"
+msgstr "Panel Principal"
 
 #: partials/modals/registrationDelegateModal.html:21
 msgid "Delegate Name"
@@ -305,15 +307,15 @@ msgstr "Activado"
 
 #: js/controllers/dappController.js:143
 msgid "Failed to install application"
-msgstr ""
+msgstr "Fallo al instalar aplicación"
 
 #: js/controllers/dappController.js:183
 msgid "Failed to launch application"
-msgstr ""
+msgstr "Fallo al lanzar aplicación"
 
 #: js/controllers/dappController.js:94
 msgid "Failed to uninstall application"
-msgstr ""
+msgstr "Fallo al desinstalar aplicación"
 
 #: js/controllers/blockchainController.js:46
 #: js/controllers/forgingController.js:117
@@ -335,7 +337,7 @@ msgstr "COMISIÓN "
 #: partials/modals/secondPassphraseModal.html:28
 #: partials/modals/sendTransaction.html:31 partials/modals/vote.html:25
 msgid "Fee: {{fee | liskFilter}} LSK"
-msgstr ""
+msgstr "Comision"
 
 #: partials/forging.html:74
 msgid "Forged Blocks"
@@ -411,6 +413,9 @@ msgid ""
 "If you are confident the application can be deemed trustworthy, click "
 "<strong>Open Anyway</strong>, otherwise click <strong>Cancel</strong> now."
 msgstr ""
+"Si está seguro de que la aplicación puede ser considerada digna de "
+"confianza, haga clic en <strong>Abrir de todos modos</strong>, de lo "
+"contrario, haga clic en <strong>Cancelar</strong> ahora."
 
 #: partials/dapp-entry.html:20
 msgid "INSTALL"
@@ -418,11 +423,11 @@ msgstr "INSTALAR"
 
 #: partials/template.html:282
 msgid "INSTALLED"
-msgstr "INSTALADO"
+msgstr "INSTALADOS"
 
 #: partials/dapps.html:235
 msgid "Installed Applications"
-msgstr ""
+msgstr "Aplicaciones instaladas"
 
 #: partials/settings.html:9
 msgid "Language"
@@ -450,14 +455,14 @@ msgstr "COMENZAR"
 
 #: wallet.html:20
 msgid "Lisk - Blockchain Application Platform"
-msgstr ""
+msgstr "Lisk - Plataforma de Aplicaciones Blockchain"
 
 #: js/controllers/delegatesController.js:158
 #: js/controllers/votedDelegatesController.js:117
 #: js/controllers/walletPendingsController.js:43
 #: partials/modals/multisignatureModal.html:52
 msgid "Lisk Address"
-msgstr "Dirección Lisk"
+msgstr "Dirección LSK"
 
 #: partials/account.html:33
 msgid "Lisk Client"
@@ -471,7 +476,7 @@ msgstr "Cliente Lisk Desactualizado"
 #: js/controllers/dappsCategoryController.js:7
 #: js/controllers/dappsController.js:7
 msgid "Loading applications"
-msgstr ""
+msgstr "Cargando aplicaciones"
 
 #: js/controllers/blockchainController.js:7
 msgid "Loading blockchain"
@@ -488,7 +493,7 @@ msgstr "Cargando delegados"
 
 #: js/controllers/forgingController.js:82
 msgid "Loading forging status"
-msgstr "Cargando estado de forja"
+msgstr "Cargando estado de forjing"
 
 #: js/controllers/walletsController.js:7
 msgid "Loading Multi-Signature Groups"
@@ -510,11 +515,11 @@ msgstr "Cerrar sesión"
 
 #: partials/modals/sendTransaction.html:29
 msgid "LSK Amount"
-msgstr ""
+msgstr "Cantidad LSK"
 
 #: partials/forging.html:11
 msgid "LSK Earned"
-msgstr ""
+msgstr "LSK Ganados"
 
 #: partials/modals/newUser.html:72
 msgid ""
@@ -555,6 +560,8 @@ msgid ""
 "Make sure you're sending LSK to the right address. This action can't be "
 "undone later."
 msgstr ""
+"Asegúrese de que ha enviado LSK a la dirección correcta. Está acción no "
+"podrá ser revertida más adelante"
 
 #: js/controllers/modals/masterPassphraseModalController.js:9
 msgid "Master Passphrase"
@@ -608,7 +615,7 @@ msgstr "Nombre"
 
 #: partials/passphrase.html:26
 msgid "NEW ACCOUNT"
-msgstr "CUENTA NUEVA"
+msgstr "REGISTRARSE"
 
 #: partials/modals/multisignatureModal.html:92
 msgid "next"
@@ -634,6 +641,7 @@ msgstr "NO"
 #: partials/dapps-category.html:6 partials/dapps-category.html:7
 msgid "No applications matching your search criteria were found."
 msgstr ""
+"No se encontraron aplicaciones que coincidan con su criterio de búsqueda"
 
 #: partials/blockchain.html:35
 msgid "No blockchain"
@@ -669,7 +677,7 @@ msgstr "ABRIR"
 
 #: partials/modals/openDappModal.html:30
 msgid "OPEN ANYWAY"
-msgstr ""
+msgstr "ABRIR DE TODOS MODOS"
 
 #: js/controllers/forgingController.js:41
 #: js/controllers/forgingController.js:53
@@ -690,6 +698,8 @@ msgid ""
 "Please check your input below and go back if necessary. Double-check the "
 "group members, else you risk losing your LSK balance!"
 msgstr ""
+"Por favor revise su input debajo y vuelve atrás si es necesario.  Vuelve a "
+"verificar los miembros del grupo,  de lo contrario perderá su saldo LSK!"
 
 #: partials/modals/registrationDelegateModal.html:15
 msgid "Please choose a delegate name."
@@ -704,6 +714,8 @@ msgid ""
 "Please ensure all details are correct before confirming your blockchain "
 "application."
 msgstr ""
+"Por favor asegúrese de que todos los detalles son correctos antes de "
+"confirmar su aplicación blockchain."
 
 #: js/controllers/modals/masterPassphraseModalController.js:8
 msgid "Please enter the master passphrase for this node."
@@ -714,6 +726,8 @@ msgid ""
 "Please enter the Recipient Address and LSK Amount that you would like send "
 "below."
 msgstr ""
+"Por favor introduzca la Dirección Destinataria y la cantidad LSK que le "
+"gustaría enviar mas abajo."
 
 #: partials/modals/addDappModal.html:142 partials/modals/forgingModal.html:16
 #: partials/modals/registrationDelegateModal.html:53
@@ -743,10 +757,14 @@ msgstr "Por favor encuentre su segunda passphrase más abajo."
 #: partials/modals/addDappModal.html:49
 msgid "Please provide a specification for your blockchain application below."
 msgstr ""
+"Por favor proporcione una especificación para su aplicación blockchain más "
+"bajo."
 
 #: partials/modals/addDappModal.html:80
 msgid "Please provide storage a link for your block application below."
 msgstr ""
+"Por favor proporcione link de almacenamiento para su aplicación blockchain "
+"más bajo."
 
 #: partials/modals/newUser.html:60
 msgid "Please re-enter your passphrase below."
@@ -801,7 +819,7 @@ msgstr "Beneficiario"
 
 #: partials/modals/sendTransaction.html:20
 msgid "Recipient Address"
-msgstr "Dirección del Beneficiario"
+msgstr "Dirección Destinataria"
 
 #: partials/modals/registrationDelegateModal.html:108
 #: partials/modals/registrationDelegateModal.html:38
@@ -849,11 +867,11 @@ msgstr "GUARDAR PASSPHRASE"
 
 #: js/controllers/modals/addDappModalController.js:6
 msgid "Saving new application"
-msgstr ""
+msgstr "Guardando nueva aplicación"
 
 #: partials/template.html:308 partials/template.html:333
 msgid "Search for applications"
-msgstr ""
+msgstr "Buscando aplicaciones"
 
 #: partials/template.html:208
 msgid "Search for blocks"
@@ -872,7 +890,7 @@ msgstr "Segunda Passphrase"
 
 #: partials/modals/openDappModal.html:13
 msgid "Security Warning"
-msgstr ""
+msgstr "Advertencia de Seguridad"
 
 #: partials/template.html:149
 msgid "SEND"
@@ -888,7 +906,7 @@ msgstr "enviar lisk"
 #: partials/modals/sendTransaction.html:13 partials/modals/userInfo.html:28
 #: partials/votes.html:49
 msgid "Send LSK"
-msgstr ""
+msgstr "Enviar LSK"
 
 #: js/controllers/transactionsController.js:63 partials/account.html:70
 msgid "Sender"
@@ -914,7 +932,7 @@ msgstr "Firma"
 
 #: partials/passphrase.html:27
 msgid "SIGN IN"
-msgstr "REGISTRARSE"
+msgstr "INICIAR SESION"
 
 #: partials/dapp-entry.html:25 partials/dapp-entry.html:34
 #: partials/dapp-entry.html:43 partials/dapp-entry.html:50
@@ -981,6 +999,11 @@ msgid ""
 "opening any untrusted applications is not yet advisable, and could "
 "potentially lead to loss of funds."
 msgstr ""
+"La plataforma Lisk apps actualmente no ofrece ninguna protección contra "
+"llamadas del sistema no autorizadas realizadas por las aplicaciones en "
+"ejecución. Por lo tanto, abrir una aplicación no confiable aun no es "
+"aconsejable, ya que podría producir una perdida total de fondos.\n"
+"."
 
 #: partials/modals/masterPassphraseModal.html:30
 msgid ""
@@ -989,6 +1012,11 @@ msgid ""
 "node operators can install, launch or uninstall applications. Once "
 "applications are in a launched state, anyone is free to open and use them."
 msgstr ""
+"La passphrase maestra es generada automáticamente en el primer lanzamiento "
+"del cliente Lisk. Puede ser encontrada al final del archivo config.json. Por "
+"lo tanto, sólo los operadores de nodos pueden instalar, desinstalar o "
+"ejecutar aplicaciones. Una vez lanzadas las aplicaciones, cualquiera es "
+"libre de abrirlas y utilizarlas."
 
 #: partials/modals/newUser.html:68
 msgid ""
@@ -1020,6 +1048,17 @@ msgid ""
 "confirmations (M).<br>• The addresses of the Lisk accounts you want to add "
 "to the group."
 msgstr ""
+"Este tutorial le guiará a través de los pasos necesarios para crear un grupo "
+"multifirma. Es muy importante que sepas que es Multifirma, de lo contrario "
+"corre el riesgo de perder su saldo LSK.<br><br> Un grupo multifirma consta "
+"de N cuentas, el creador del grupo es el propietario del grupo. Cuando el "
+"propietario quiere hacer una transacción, M de N cuentas dentro del grupo "
+"necesitan confirmarlo, de lo contrario la transacción no será procesada. Los "
+"valores M y N se especifican en este tutorial.<br><br><b> Las cosas que "
+"necesita saber para la configuración de grupo multifirma:</b><br><br>• El "
+"número de miembros del grupo (N).<br>• El numero de confirmaciones "
+"necesarias (M).<br>• Las direcciones de las cuentas Lisk que desea añadir al "
+"grupo."
 
 #: js/controllers/blockchainController.js:43
 #: js/controllers/forgingController.js:116
@@ -1124,7 +1163,7 @@ msgstr "No eres miembro de ningún grupo Multifirma."
 
 #: partials/modals/newUser.html:17
 msgid "You can find your passphrase below."
-msgstr "Usted puede encontrar su passphrase a continuación."
+msgstr "Usted puede encontrar su passphrase abajo."
 
 #: partials/modals/vote.html:33
 msgid ""
@@ -1136,7 +1175,7 @@ msgstr ""
 
 #: partials/dapps.html:165 partials/dapps.html:242
 msgid "You do not have any applications installed yet."
-msgstr ""
+msgstr "No tiene ninguna aplicación instalada todavía "
 
 #: partials/forging.html:106
 msgid "You have not forged any blocks yet."
