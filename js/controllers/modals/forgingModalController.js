@@ -5,7 +5,6 @@ angular.module('liskApp').controller('forgingModalController', ["$scope", "forgi
     $scope.error = null;
     $scope.sending = false;
     $scope.forging = userService.forging;
-    $scope.fee = 0;
     $scope.focus = 'secretPhrase';
 
     if ($scope.forging) {
