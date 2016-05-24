@@ -285,7 +285,7 @@ msgid "Description"
 msgstr ""
 
 #: js/controllers/modals/errorModalController.js:10
-#: js/controllers/modals/forgingModalController.js:12
+#: js/controllers/modals/forgingModalController.js:11
 msgid "Disable Forging"
 msgstr ""
 
@@ -304,7 +304,7 @@ msgid "Empty passphrase"
 msgstr ""
 
 #: js/controllers/modals/errorModalController.js:12
-#: js/controllers/modals/forgingModalController.js:14
+#: js/controllers/modals/forgingModalController.js:13
 msgid "Enable Forging"
 msgstr ""
 
