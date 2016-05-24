@@ -33,19 +33,19 @@
                             <div class="modal-body bordered clearfix">
                                 <ul class="nav modal-buttons pull-right">
                                     <li>
-                                        <a href="#" ng-click="savePassToFile(newPassphrase)"><translate>SAVE PASSPHRASE</translate></a>
+                                        <input type="submit" value="{{'SAVE PASSPHRASE' | translate}}" ng-click="savePassToFile(newPassphrase)" class="btn-flat" />
                                     </li>
                                     <li>
-                                        <a href="#" class="blue-link" ng-click="goToStep(2)"><translate>NEXT STEP</translate></a>
+                                        <input type="submit" value="{{'NEXT STEP' | translate}}" ng-click="goToStep(2)" class="btn-flat blue-link" />
                                     </li>
                                 </ul>
                             </div>
-                            <!--<div class="card-action clearfix">
+                            <!-- <div class="card-action clearfix">
                                 <div class="pull-right">
                                     <a href="#" class="waves-effect second-action" ng-click="savePassToFile(newPassphrase)"><translate>SAVE PASSPHRASE</translate></a>
                                     <a href='#' class="primary-action waves-effect" ng-click="goToStep(2)"><translate>NEXT STEP</translate></a>
                                 </div>
-                            </div>-->
+                            </div> -->
                         </div>
                         <div class="material-modal-content" ng-show="step == 2">
                             <div class="modal-header modal-iconed">
@@ -74,19 +74,19 @@
                             <div class="modal-body bordered clearfix">
                                 <ul class="nav modal-buttons pull-right">
                                     <li>
-                                        <a href="#" ng-click="goToStep(1)"><translate>GO BACK</translate></a>
+                                        <input type="submit" value="{{'GO BACK' | translate}}" ng-click="goToStep(1)" class="btn-flat" />
                                     </li>
                                     <li>
-                                        <a href="#" class="blue-link" ng-click="login(repeatPassphrase)"><translate>CONFIRM</translate></a>
+                                        <input type="submit" value="{{'CONFIRM' | translate}}" ng-click="login(repeatPassphrase)" class="btn-flat blue-link" ng-class="{'disabled': sending}" ng-disabled="sending" />
                                     </li>
                                 </ul>
                             </div>
-                            <!--<div class="card-action clearfix">
+                            <!-- <div class="card-action clearfix">
                                 <div class="pull-right">
                                     <a href="#" class="waves-effect second-action" ng-click="goToStep(1)"><translate>GO BACK</translate></a>
                                     <a href='#' class="primary-action waves-effect" ng-click="login(repeatPassphrase)"><translate>GET STARTED</translate></a>
                                 </div>
-                            </div>-->
+                            </div> -->
                         </div>
                     </div>
                 </div>

@@ -19,10 +19,10 @@
                     <div class="modal-body">
                         <ul class="nav modal-buttons pull-right">
                             <li>
-                                <a href="#" ng-click="close()"><translate>NO</translate></a>
+                                <input type="submit" value="{{'NO' | translate}}" ng-click="close()" class="btn-flat" />
                             </li>
                             <li>
-                                <a href="#" class="blue-link" ng-click="close(true)"><translate>YES</translate></a>
+                                <input type="submit" value="{{'YES' | translate}}" ng-click="close(true)" class="btn-flat blue-link" />
                             </li>
                         </ul>
                     </div>
