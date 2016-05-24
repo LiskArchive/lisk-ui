@@ -125,11 +125,13 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
                 $scope.sending = false;
 
                 if (response.data.error) {
+                    Materialize.toast('Transaction error', 3000, 'red white-text');
                     $scope.errorMessage = response.data.error;
                 } else {
                     if ($scope.destroy) {
                         $scope.destroy(true);
                     }
+                    Materialize.toast('Transaction sent', 3000, 'green white-text');
                     multisignatureModal.deactivate();
                 }
             });

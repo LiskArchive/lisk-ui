@@ -86,11 +86,13 @@ angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "
                 $scope.sending = false;
 
                 if (resp.data.error) {
+                    Materialize.toast('Transaction error', 3000, 'red white-text');
                     $scope.fromServer = resp.data.error;
                 } else {
                     if ($scope.destroy) {
                         $scope.destroy();
                     }
+                    Materialize.toast('Transaction sent', 3000, 'green white-text');
                     voteModal.deactivate();
                 }
             });

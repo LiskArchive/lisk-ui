@@ -90,11 +90,13 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
                 $scope.view.inLoading = $scope.sending = false;
 
                 if (response.data.error) {
+                    Materialize.toast('Transaction error', 3000, 'red white-text');
                     $scope.errorMessage = response.data.error;
                 } else {
                     if ($scope.destroy) {
                         $scope.destroy();
                     }
+                    Materialize.toast('Transaction sent', 3000, 'green white-text');
                     addDappModal.deactivate();
                 }
             });

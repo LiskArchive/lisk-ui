@@ -51,6 +51,7 @@ angular.module('liskApp').controller('forgingModalController', ["$scope", "forgi
                             $scope.destroy(resp.data.success);
                         }
 
+                        Materialize.toast('Forging enabled', 3000, 'green white-text');
                         forgingModal.deactivate();
                     } else {
                         $scope.error = resp.data.error;
@@ -76,6 +77,7 @@ angular.module('liskApp').controller('forgingModalController', ["$scope", "forgi
                             $scope.destroy(!resp.data.success);
                         }
 
+                        Materialize.toast('Forging disabled', 3000, 'red white-text');
                         forgingModal.deactivate();
                     } else {
                         $scope.error = resp.data.error;

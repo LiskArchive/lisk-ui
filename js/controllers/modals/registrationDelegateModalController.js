@@ -114,8 +114,10 @@ angular.module('liskApp').controller('registrationDelegateModalController', ["$s
                             $scope.destroy();
                         }
 
+                        Materialize.toast('Transaction sent', 3000, 'green white-text');
                         registrationDelegateModal.deactivate();
                     } else {
+                        Materialize.toast('Transaction error', 3000, 'red white-text');
                         $scope.error = resp.data.error;
                     }
                 });

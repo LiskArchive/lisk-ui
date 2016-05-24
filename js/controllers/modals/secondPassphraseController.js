@@ -71,12 +71,14 @@ angular.module('liskApp').controller('secondPassphraseModalController', ["$scope
                 $scope.sending = false;
 
                 if (resp.data.error) {
+                    Materialize.toast('Transaction error', 3000, 'red white-text');
                     $scope.fromServer = resp.data.error;
                 } else {
                     if ($scope.destroy) {
                         $scope.destroy(true);
                     }
 
+                    Materialize.toast('Transaction sent', 3000, 'green white-text');
                     secondPassphraseModal.deactivate();
                 }
             });
