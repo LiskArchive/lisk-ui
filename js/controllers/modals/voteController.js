@@ -3,7 +3,7 @@ require('angular');
 angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "$http", "userService", "feeService", "$timeout", function ($scope, voteModal, $http, userService, feeService, $timeout) {
 
     $scope.sending = false;
-    $scope.passmode = false; 
+    $scope.passmode = false;
     $scope.fromServer = '';
     $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
     $scope.secondPassphrase = userService.secondPassphrase;

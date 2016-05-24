@@ -93,7 +93,7 @@ angular.module('liskApp').controller('registrationDelegateModalController', ["$s
         if ($scope.delegateData.username.trim() != '') {
             data.username = $scope.delegateData.username.trim()
         }
-        
+
         if ($scope.secondPassphrase) {
             data.secondSecret = $scope.secondPhrase;
             if ($scope.rememberedPassphrase) {
