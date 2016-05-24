@@ -32,10 +32,10 @@
                     <div class="modal-body bordered">
                         <ul class="nav modal-buttons pull-right">
                             <li>
-                                <a href="#" ng-click="close()"><translate>Cancel</translate></a>
+                                <input type="submit" value="{{'Cancel' | translate}}" ng-click="close()" class="btn-flat" />
                             </li>
                             <li>
-                                <a href="#" class="blue-link" ng-click="passcheck()"><translate>register</translate></a>
+                                <input type="submit" value="{{'register' | translate}}" ng-click="passcheck()" class="btn-flat blue-link" ng-class="{'disabled': sending}" ng-disabled="sending" />
                             </li>
                         </ul>
                     </div>
@@ -64,10 +64,10 @@
                             <div class="modal-body">
                                 <ul class="nav modal-buttons pull-right">
                                     <li>
-                                        <a href="#" ng-click="passcheck()"><translate>Cancel</translate></a>
+                                        <input type="submit" value="{{'GO BACK' | translate}}" ng-click="passcheck()" class="btn-flat" />
                                     </li>
                                     <li>
-                                        <a href="#" class="blue-link" ng-click="registrationDelegate(secretPhrase)"><translate>register</translate></a>
+                                        <input type="submit" value="{{'register' | translate}}" ng-click="registrationDelegate(secretPhrase)" class="btn-flat blue-link" ng-class="{'disabled': sending}" ng-disabled="sending" />
                                     </li>
                                 </ul>
                             </div>
@@ -102,10 +102,10 @@
                     <div class="modal-body">
                         <ul class="nav modal-buttons pull-right">
                             <li>
-                                <a href="#" ng-click="passcheck(true)"><translate>GO BACK</translate></a>
+                                <input type="submit" value="{{'GO BACK' | translate}}" ng-click="passcheck(true)" class="btn-flat" />
                             </li>
                             <li>
-                                <a href="#" class="blue-link" ng-click="registrationDelegate(secretPhrase, true)"><translate>register</translate></a>
+                                <input type="submit" value="{{'register' | translate}}" ng-click="registrationDelegate(secretPhrase, true)" class="btn-flat blue-link" ng-class="{'disabled': sending}" ng-disabled="sending" />
                             </li>
                         </ul>
                     </div>
