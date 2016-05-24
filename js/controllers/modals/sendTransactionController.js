@@ -216,8 +216,10 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
 
         if (!$scope.sending) {
             $scope.sending = true;
+
             $http.put('/api/transactions', data).then(function (resp) {
                 $scope.sending = false;
+
                 if (resp.data.error) {
                     $scope.errorMessage.fromServer = resp.data.error;
                 } else {
@@ -227,7 +229,6 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
                     sendTransactionModal.deactivate();
                 }
             });
-
         }
     }
 
