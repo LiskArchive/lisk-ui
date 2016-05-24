@@ -112,11 +112,9 @@ msgstr ""
 
 #: partials/modals/forgingModal.html:32
 #: partials/modals/masterPassphraseModal.html:35
-#: partials/modals/multisignatureModal.html:89
 #: partials/modals/openDappModal.html:27
 #: partials/modals/passphraseCheck.html:32
 #: partials/modals/registrationDelegateModal.html:35
-#: partials/modals/registrationDelegateModal.html:67
 #: partials/modals/sendTransaction.html:46
 #: partials/modals/vote.html:73
 msgid "Cancel"
@@ -124,6 +122,7 @@ msgstr ""
 
 #: partials/modals/addDappModal.html:28
 #: partials/modals/multisignatureModal.html:28
+#: partials/modals/multisignatureModal.html:89
 #: partials/modals/vote.html:38
 msgid "CANCEL"
 msgstr ""
@@ -180,7 +179,7 @@ msgstr ""
 msgid "Close modal"
 msgstr ""
 
-#: js/controllers/modals/multisignatureModalController.js:6
+#: js/controllers/modals/multisignatureModalController.js:7
 msgid "Configuring multi-signature group"
 msgstr ""
 
@@ -206,7 +205,7 @@ msgstr ""
 msgid "CONFIRM SECOND PASSPHRASE"
 msgstr ""
 
-#: js/directives/voteActionDirective.js:14
+#: js/directives/voteActionDirective.js:11
 msgid "CONFIRM VOTE"
 msgstr ""
 
@@ -394,6 +393,7 @@ msgstr ""
 #: partials/modals/multisignatureModal.html:177
 #: partials/modals/newUser.html:77
 #: partials/modals/registrationDelegateModal.html:105
+#: partials/modals/registrationDelegateModal.html:67
 #: partials/modals/secondPassphraseModal.html:123
 #: partials/modals/secondPassphraseModal.html:82
 #: partials/modals/sendTransaction.html:116
@@ -832,7 +832,7 @@ msgstr ""
 msgid "remove vote"
 msgstr ""
 
-#: js/directives/voteActionDirective.js:16
+#: js/directives/voteActionDirective.js:13
 msgid "REMOVE VOTE"
 msgstr ""
 
@@ -851,7 +851,7 @@ msgstr ""
 msgid "SAVE PASSPHRASE"
 msgstr ""
 
-#: js/controllers/modals/addDappModalController.js:6
+#: js/controllers/modals/addDappModalController.js:9
 msgid "Saving new application"
 msgstr ""
 
