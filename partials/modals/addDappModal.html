@@ -25,10 +25,10 @@
                     <div class="modal-body bordered">
                         <ul class="nav modal-buttons pull-right">
                             <li>
-                                <a href="#" ng-click="close()"><translate>CANCEL</translate></a>
+                                <input type="submit" value="{{'CANCEL' | translate}}" ng-click="close()" class="btn-flat" />
                             </li>
                             <li>
-                                <a href="#" class="blue-link" ng-click="step=step+1;"><translate>Accept / Next Step</translate></a>
+                                <input type="submit" value="{{'Accept / Next Step' | translate}}" ng-click="step=step+1;" class="btn-flat blue-link" />
                             </li>
                         </ul>
                     </div>
@@ -56,10 +56,10 @@
                     <div class="modal-body bordered">
                         <ul class="nav modal-buttons pull-right">
                             <li>
-                                <a href="#" ng-click="step=step-1;"><translate>GO BACK</translate></a>
+                                <input type="submit" value="{{'GO BACK' | translate}}" ng-click="step=step-1;" class="btn-flat" />
                             </li>
                             <li>
-                                <a href="#" class="blue-link" ng-click="goToStep3()"><translate>Next Step</translate></a>
+                                <input type="submit" value="{{'Next Step' | translate}}" ng-click="goToStep3()" class="btn-flat blue-link" />
                             </li>
                         </ul>
                     </div>
@@ -87,10 +87,10 @@
                     <div class="modal-body bordered">
                         <ul class="nav modal-buttons pull-right">
                             <li>
-                                <a href="#" ng-click="step=step-1;"><translate>GO BACK</translate></a>
+                                <input type="submit" value="{{'GO BACK' | translate}}" ng-click="step=step-1;" class="btn-flat" />
                             </li>
                             <li>
-                                <a href="#" class="blue-link" ng-click="goToStep4()"><translate>Next Step</translate></a>
+                                <input type="submit" value="{{'Next Step' | translate}}" ng-click="goToStep4()" class="btn-flat blue-link" />
                             </li>
                         </ul>
                     </div>
@@ -118,10 +118,10 @@
                     <div class="modal-body bordered">
                         <ul class="nav modal-buttons pull-right">
                             <li>
-                                <a href="#" ng-click="step=step-1;"><translate>GO BACK</translate></a>
+                                <input type="submit" value="{{'GO BACK' | translate}}" ng-click="step=step-1;" class="btn-flat" />
                             </li>
                             <li>
-                                <a href="#" class="blue-link" ng-click="passcheck()"><translate>Confirm</translate></a>
+                                <input type="submit" value="{{'Confirm' | translate}}" ng-click="passcheck()" class="btn-flat blue-link" />
                             </li>
                         </ul>
                     </div>
@@ -160,10 +160,10 @@
                     <div class="modal-body bordered">
                         <ul class="nav modal-buttons pull-right">
                             <li>
-                                <a href="#" ng-click="passcheck()"><translate>GO BACK</translate></a>
+                                <input type="submit" value="{{'GO BACK' | translate}}" ng-click="passcheck()" class="btn-flat" />
                             </li>
                             <li>
-                                <a href="#" class="blue-link" ng-click="sendData(secretPhrase, false)"><translate>Confirm</translate></a>
+                                <input type="submit" value="{{'Confirm' | translate}}" ng-click="sendData(secretPhrase, false)" class="btn-flat blue-link" ng-class="{'disabled': sending}" ng-disabled="sending" />
                             </li>
                         </ul>
                     </div>
@@ -202,10 +202,10 @@
                     <div class="modal-body bordered">
                         <ul class="nav modal-buttons pull-right">
                             <li>
-                                <a href="#" ng-click="passcheck(true)"><translate>GO BACK</translate></a>
+                                <input type="submit" value="{{'GO BACK' | translate}}" ng-click="passcheck(true)" class="btn-flat" />
                             </li>
                             <li>
-                                <a href="#" class="blue-link" ng-click="sendData(secretPhrase, true)"><translate>Confirm</translate></a>
+                                <input type="submit" value="{{'Confirm' | translate}}" ng-click="sendData(secretPhrase, true)" class="btn-flat blue-link" ng-class="{'disabled': sending}" ng-disabled="sending" />
                             </li>
                         </ul>
                     </div>

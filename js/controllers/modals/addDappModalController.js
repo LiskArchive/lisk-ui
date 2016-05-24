@@ -2,7 +2,9 @@ require('angular');
 
 angular.module('liskApp').controller('addDappModalController', ["$scope", "$http", "addDappModal", "userService", "feeService", "viewFactory", 'gettextCatalog', function ($scope, $http, addDappModal, userService, feeService, viewFactory, gettextCatalog) {
 
+    $scope.sending = false;
     $scope.view = viewFactory;
+    $scope.view.inLoading = false;
     $scope.view.loadingText = gettextCatalog.getString('Saving new application');
     $scope.secondPassphrase = userService.secondPassphrase;
     $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
@@ -16,6 +18,7 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
 
     $scope.passcheck = function (fromSecondPass) {
         $scope.errorMessage = "";
+
         if (fromSecondPass) {
             $scope.checkSecondPass = false;
             $scope.passmode = $scope.rememberedPassphrase ? false : true;
@@ -23,6 +26,7 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
             $scope.secretPhrase = '';
             return;
         }
+
         if ($scope.rememberedPassphrase) {
             $scope.sendData($scope.rememberedPassphrase);
         } else {
@@ -69,8 +73,6 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
         }
         pass = pass || $scope.secretPhrase;
 
-        $scope.view.inLoading = true;
-
         data.secret = pass;
         data.category = $scope.newDapp.category || 0;
 
@@ -81,17 +83,22 @@ angular.module('liskApp').controller('addDappModalController', ["$scope", "$http
             }
         }
 
-        $http.put('/api/dapps', data).then(function (response) {
-            $scope.view.inLoading = false;
-            if (response.data.error) {
-                $scope.errorMessage = response.data.error;
-            } else {
-                if ($scope.destroy) {
-                    $scope.destroy();
+        if (!$scope.sending) {
+            $scope.view.inLoading = $scope.sending = true;
+
+            $http.put('/api/dapps', data).then(function (response) {
+                $scope.view.inLoading = $scope.sending = false;
+
+                if (response.data.error) {
+                    $scope.errorMessage = response.data.error;
+                } else {
+                    if ($scope.destroy) {
+                        $scope.destroy();
+                    }
+                    addDappModal.deactivate();
                 }
-                addDappModal.deactivate();
-            }
-        });
+            });
+        }
     }
 
     $scope.step = 1;
