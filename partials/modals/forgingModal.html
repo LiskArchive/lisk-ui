@@ -29,10 +29,10 @@
                             <div class="modal-body bordered">
                                 <ul class="nav modal-buttons pull-right">
                                     <li>
-                                        <a href="#" ng-click="close()"><translate>Cancel</translate></a>
+                                        <input type="submit" value="{{'Cancel' | translate}}" ng-click="close()" class="btn-flat" />
                                     </li>
                                     <li>
-                                        <a href="#" ng-click="forgingState()">{{label}}</a>
+                                        <input type="submit" value="{{label}}" ng-click="forgingState()" class="btn-flat blue-link" ng-class="{'disabled': sending}" ng-disabled="sending" />
                                     </li>
                                 </ul>
                             </div>
