@@ -25,10 +25,10 @@
                 <div class="modal-body bordered">
                     <ul class="nav modal-buttons pull-right">
                         <li>
-                            <a href="#" ng-click="close()"><translate>CANCEL</translate></a>
+                            <input type="submit" value="{{'CANCEL' | translate}}" ng-click="close()" class="btn-flat" />
                         </li>
                         <li>
-                            <a href="#" class="blue-link" ng-click="step=2;"><translate>NEXT</translate></a>
+                            <input type="submit" value="{{'NEXT' | translate}}" ng-click="step = 2;" class="btn-flat blue-link" />
                         </li>
                     </ul>
                 </div>
@@ -86,10 +86,10 @@
                 <div class="modal-body bordered">
                     <ul class="nav modal-buttons pull-right">
                         <li>
-                            <a href="#" ng-click="close()"><translate>Cancel</translate></a>
+                            <input type="submit" value="{{'CANCEL' | translate}}" ng-click="close()" class="btn-flat" />
                         </li>
                         <li>
-                            <a href="#" class="blue-link" ng-click="goToStep3();"><translate>next</translate></a>
+                            <input type="submit" value="{{'next' | translate}}" ng-click="goToStep3()" class="btn-flat blue-link" />
                         </li>
                     </ul>
                 </div>
@@ -135,10 +135,10 @@
                 <div class="modal-body bordered">
                     <ul class="nav modal-buttons pull-right">
                         <li>
-                            <a href="#" ng-click="step = 2;"><translate>GO BACK</translate></a>
+                            <input type="submit" value="{{'GO BACK' | translate}}" ng-click="step = 2;" class="btn-flat" />
                         </li>
                         <li>
-                            <a href="#" class="blue-link" ng-click="putMembers();"><translate>confirm</translate></a>
+                            <input type="submit" value="{{'confirm' | translate}}" ng-click="putMembers()" class="btn-flat blue-link" />
                         </li>
                     </ul>
                 </div>
@@ -174,10 +174,10 @@
                 <div class="modal-body">
                     <ul class="nav modal-buttons pull-right">
                         <li>
-                            <a href="#" ng-click="errorMessage=''; step=3;"><translate>GO BACK</translate></a>
+                            <input type="submit" value="{{'GO BACK' | translate}}" ng-click="step = 4;" class="btn-flat" />
                         </li>
                         <li>
-                            <a href="#" class="blue-link" ng-click="putMembers(true)"><translate>confirm</translate></a>
+                            <input type="submit" value="{{'confirm' | translate}}" ng-click="putMembers(true)" class="btn-flat blue-link" ng-class="{'disabled': sending}" ng-disabled="sending" />
                         </li>
                     </ul>
                 </div>

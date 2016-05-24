@@ -2,6 +2,7 @@ require('angular');
 
 angular.module('liskApp').controller('multisignatureModalController', ["$scope", "$http", "multisignatureModal", "viewFactory", "userService", "feeService", "gettextCatalog", function ($scope, $http, multisignatureModal, viewFactory, userService, feeService, gettextCatalog) {
 
+    $scope.sending = false;
     $scope.view = viewFactory;
     $scope.view.loadingText = gettextCatalog.getString('Configuring multi-signature group');
     $scope.secondPassphrase = userService.secondPassphrase;
@@ -117,18 +118,22 @@ angular.module('liskApp').controller('multisignatureModalController', ["$scope",
             data.secondSecret = $scope.authData.secondPassphrase;
         }
 
-        $scope.view.inLoading = true;
-        $http.put('/api/multisignatures', data).then(function (response) {
-            $scope.view.inLoading = false;
-            if (response.data.error) {
-                $scope.errorMessage = response.data.error;
-            } else {
-                if ($scope.destroy) {
-                    $scope.destroy(true);
+        if (!$scope.sending) {
+            $scope.sending = true;
+
+            $http.put('/api/multisignatures', data).then(function (response) {
+                $scope.sending = false;
+
+                if (response.data.error) {
+                    $scope.errorMessage = response.data.error;
+                } else {
+                    if ($scope.destroy) {
+                        $scope.destroy(true);
+                    }
+                    multisignatureModal.deactivate();
                 }
-                multisignatureModal.deactivate();
-            }
-        });
+            });
+        }
     }
 
     feeService(function (fees) {
