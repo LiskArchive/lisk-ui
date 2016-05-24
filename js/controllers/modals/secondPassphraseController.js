@@ -2,6 +2,7 @@ require('angular');
 
 angular.module('liskApp').controller('secondPassphraseModalController', ["$scope", "secondPassphraseModal", "$http", "userService", "feeService", function ($scope, secondPassphraseModal, $http, userService, feeService) {
 
+    $scope.sending = false;
     $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
     $scope.passmode = false;
     $scope.focus = 'secondPass';
@@ -59,21 +60,27 @@ angular.module('liskApp').controller('secondPassphraseModalController', ["$scope
     }
 
     $scope.addNewPassphrase = function (pass) {
-        $http.put("/api/signatures", {
-            secret: pass,
-            secondSecret: $scope.newPassphrase,
-            publicKey: userService.publicKey
-        }).then(function (resp) {
-            if (resp.data.error) {
-                $scope.fromServer = resp.data.error;
-            } else {
-                if ($scope.destroy) {
-                    $scope.destroy(true);
-                }
+        if (!$scope.sending) {
+            $scope.sending = true;
 
-                secondPassphraseModal.deactivate();
-            }
-        });
+            $http.put("/api/signatures", {
+                secret: pass,
+                secondSecret: $scope.newPassphrase,
+                publicKey: userService.publicKey
+            }).then(function (resp) {
+                $scope.sending = false;
+
+                if (resp.data.error) {
+                    $scope.fromServer = resp.data.error;
+                } else {
+                    if ($scope.destroy) {
+                        $scope.destroy(true);
+                    }
+
+                    secondPassphraseModal.deactivate();
+                }
+            });
+        }
     }
 
     feeService(function (fees) {

@@ -37,19 +37,19 @@
                             <div class="modal-body bordered clearfix">
                                 <ul class="nav modal-buttons pull-right">
                                     <li>
-                                        <a href="#" ng-click="savePassToFile(newPassphrase)"><translate>SAVE PASSPHRASE</translate></a>
+                                        <input type="submit" value="{{'SAVE PASSPHRASE' | translate}}" ng-click="savePassToFile(newPassphrase)" class="btn-flat" />
                                     </li>
                                     <li>
-                                        <a href="#" class="blue-link" ng-click="goToStep(2)"><translate>NEXT STEP</translate></a>
+                                        <input type="submit" value="{{'NEXT STEP' | translate}}" ng-click="goToStep(2)" class="btn-flat blue-link" />
                                     </li>
                                 </ul>
                             </div>
-                            <!--<div class="card-action clearfix">
+                            <!-- <div class="card-action clearfix">
                                 <div class="pull-right">
                                     <a href="#" class="waves-effect second-action" ng-click="savePassToFile(newPassphrase)"><translate>SAVE PASSPHRASE</translate></a>
                                     <a href='#' class="primary-action waves-effect" ng-click="goToStep(2)"><translate>NEXT STEP</translate></a>
                                 </div>
-                            </div>-->
+                            </div> -->
                         </div>
                         <div class="material-modal-content" ng-show="!passmode && step == 2">
                             <div class="modal-header modal-iconed">
@@ -79,19 +79,19 @@
                             <div class="modal-body bordered clearfix">
                                 <ul class="nav modal-buttons pull-right">
                                     <li>
-                                        <a href="#" ng-click="goToStep(1)"><translate>GO BACK</translate></a>
+                                        <input type="submit" value="{{'GO BACK' | translate}}" ng-click="goToStep(1)" class="btn-flat" />
                                     </li>
                                     <li>
-                                        <a href="#" class="blue-link" ng-click="confirmNewPassphrase()"><translate>CONFIRM SECOND PASSPHRASE</translate></a>
+                                        <input type="submit" value="{{'CONFIRM SECOND PASSPHRASE' | translate}}" ng-click="confirmNewPassphrase()" class="btn-flat blue-link" />
                                     </li>
                                 </ul>
                             </div>
-                            <!--<div class="card-action clearfix">
+                            <!-- <div class="card-action clearfix">
                                 <div class="pull-right">
                                     <a href="#" class="waves-effect second-action" ng-click="goToStep(1)"><translate>GO BACK</translate></a>
                                     <a href='#' class="primary-action waves-effect" ng-click="confirmNewPassphrase()"><translate>confirm second passphrase</translate></a>
                                 </div>
-                            </div>-->
+                            </div> -->
                         </div>
                         <div class="material-modal-content" ng-show="passmode">
                             <div class="modal-header modal-iconed">
@@ -120,19 +120,19 @@
                             <div class="modal-body bordered clearfix">
                                 <ul class="nav modal-buttons pull-right">
                                     <li>
-                                        <a href="#" ng-click="goToStep(2)"><translate>GO BACK</translate></a>
+                                        <input type="submit" value="{{'GO BACK' | translate}}" ng-click="goToStep(2)" class="btn-flat" />
                                     </li>
                                     <li>
-                                        <a href="#" class="blue-link" ng-click="addNewPassphrase(pass)"><translate>ADD SECOND PASSPHRASE</translate></a>
+                                        <input type="submit" value="{{'ADD SECOND PASSPHRASE' | translate}}" ng-click="addNewPassphrase(pass)" class="btn-flat blue-link" ng-class="{'disabled': sending}" ng-disabled="sending" />
                                     </li>
                                 </ul>
                             </div>
-                            <!--<div class="card-action clearfix">
+                            <!-- <div class="card-action clearfix">
                                 <div class="pull-right">
                                     <a href="#" class="waves-effect second-action" ng-click="goToStep(2)"><translate>GO BACK</translate></a>
                                     <a href='#' class="primary-action waves-effect" ng-click="addNewPassphrase(pass)"><translate>add second passphrase</translate></a>
                                 </div>
-                            </div>-->
+                            </div> -->
                         </div>
                     </div>
                 </div>
