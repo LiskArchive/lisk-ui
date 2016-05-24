@@ -35,10 +35,10 @@
                     <div class="modal-body bordered">
                         <ul class="nav modal-buttons pull-right">
                             <li>
-                                <a href="#" ng-click="close()"><translate>CANCEL</translate></a>
+                                <input type="submit" value="{{'CANCEL' | translate}}" ng-click="close()" class="btn-flat" />
                             </li>
                             <li>
-                                <a href="#" ng-class="{'blue-link': adding, 'red-link': !adding}" ng-click="passcheck()"><vote-action adding="adding"></vote-action></a>
+                                <input type="submit" value="" adding="adding" vote-action ng-click="passcheck()" class="btn-flat" ng-class="{'blue-link': adding, 'red-link': !adding, 'disabled': sending}" ng-disabled="sending" />
                             </li>
                         </ul>
                     </div>
@@ -70,10 +70,10 @@
                     <div class="modal-body">
                         <ul class="nav modal-buttons pull-right">
                             <li>
-                                <a href="#" ng-click="passcheck()"><translate>Cancel</translate></a>
+                                <input type="submit" value="{{'Cancel' | translate}}" ng-click="passcheck()" class="btn-flat" />
                             </li>
                             <li>
-                                <a href="#" class="blue-link" ng-click="vote(secretPhrase)"><vote-action adding="adding"></vote-action></a>
+                                <input type="submit" value="" adding="adding" vote-action ng-click="vote(secretPhrase)" class="btn-flat" ng-class="{'blue-link': adding, 'red-link': !adding, 'disabled': sending}" ng-disabled="sending" />
                             </li>
                         </ul>
                     </div>
@@ -105,10 +105,10 @@
                     <div class="modal-body">
                         <ul class="nav modal-buttons pull-right">
                             <li>
-                                <a href="#" ng-click="passcheck(true)"><translate>GO BACK</translate></a>
+                                <input type="submit" value="{{'GO BACK' | translate}}" ng-click="passcheck(true)" class="btn-flat" />
                             </li>
                             <li>
-                                <a href="#" class="blue-link" ng-click="vote(secretPhrase, true)"><vote-action adding="adding"></vote-action></a>
+                                <input type="submit" value="" adding="adding" vote-action ng-click="vote(secretPhrase, true)" class="btn-flat" ng-class="{'blue-link': adding, 'red-link': !adding, 'disabled': sending}" ng-disabled="sending" />
                             </li>
                         </ul>
                     </div>

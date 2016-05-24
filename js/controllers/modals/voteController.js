@@ -2,9 +2,9 @@ require('angular');
 
 angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "$http", "userService", "feeService", "$timeout", function ($scope, voteModal, $http, userService, feeService, $timeout) {
 
-    $scope.voting = false;
+    $scope.sending = false;
+    $scope.passmode = false; 
     $scope.fromServer = '';
-    $scope.passmode = false;
     $scope.rememberedPassphrase = userService.rememberPassphrase ? userService.rememberedPassphrase : false;
     $scope.secondPassphrase = userService.secondPassphrase;
     $scope.focus = 'secretPhrase';
@@ -79,18 +79,22 @@ angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "
             }
         }
 
-        $scope.voting = !$scope.voting;
-        $http.put("/api/accounts/delegates", data).then(function (resp) {
-            $scope.voting = !$scope.voting;
-            if (resp.data.error) {
-                $scope.fromServer = resp.data.error;
-            } else {
-                if ($scope.destroy) {
-                    $scope.destroy();
+        if (!$scope.sending) {
+            $scope.sending = true;
+
+            $http.put("/api/accounts/delegates", data).then(function (resp) {
+                $scope.sending = false;
+
+                if (resp.data.error) {
+                    $scope.fromServer = resp.data.error;
+                } else {
+                    if ($scope.destroy) {
+                        $scope.destroy();
+                    }
+                    voteModal.deactivate();
                 }
-                voteModal.deactivate();
-            }
-        });
+            });
+        }
     }
 
     feeService(function (fees) {
