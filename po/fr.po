@@ -59,10 +59,6 @@ msgstr "Compte"
 msgid "Account Verification"
 msgstr "Vérification du compte"
 
-#: partials/dapps.html:152
-msgid "Add a new application"
-msgstr "Ajouter une nouvelle application"
-
 #: partials/modals/multisignatureModal.html:46
 msgid "Add group members by typing in their Lisk address and pressing enter."
 msgstr ""
@@ -129,17 +125,16 @@ msgstr "Blockchain"
 
 #: partials/modals/forgingModal.html:32
 #: partials/modals/masterPassphraseModal.html:35
-#: partials/modals/multisignatureModal.html:89
 #: partials/modals/openDappModal.html:27
 #: partials/modals/passphraseCheck.html:32
 #: partials/modals/registrationDelegateModal.html:35
-#: partials/modals/registrationDelegateModal.html:67
 #: partials/modals/sendTransaction.html:46 partials/modals/vote.html:73
 msgid "Cancel"
 msgstr "Annuler"
 
 #: partials/modals/addDappModal.html:28
-#: partials/modals/multisignatureModal.html:28 partials/modals/vote.html:38
+#: partials/modals/multisignatureModal.html:28
+#: partials/modals/multisignatureModal.html:89 partials/modals/vote.html:38
 msgid "CANCEL"
 msgstr "ANNULER"
 
@@ -183,7 +178,7 @@ msgstr "Catégorie :"
 msgid "Close modal"
 msgstr "Fermer"
 
-#: js/controllers/modals/multisignatureModalController.js:6
+#: js/controllers/modals/multisignatureModalController.js:7
 msgid "Configuring multi-signature group"
 msgstr "Configuration de groupe multi-signatures"
 
@@ -207,7 +202,7 @@ msgstr "CONFIRMER"
 msgid "CONFIRM SECOND PASSPHRASE"
 msgstr "CONFIRMER LA PHRASE SECRÈTE SECONDAIRE"
 
-#: js/directives/voteActionDirective.js:14
+#: js/directives/voteActionDirective.js:11
 msgid "CONFIRM VOTE"
 msgstr "CONFIRMER LE VOTE"
 
@@ -382,6 +377,7 @@ msgstr "Généré par"
 #: partials/modals/multisignatureModal.html:138
 #: partials/modals/multisignatureModal.html:177 partials/modals/newUser.html:77
 #: partials/modals/registrationDelegateModal.html:105
+#: partials/modals/registrationDelegateModal.html:67
 #: partials/modals/secondPassphraseModal.html:123
 #: partials/modals/secondPassphraseModal.html:82
 #: partials/modals/sendTransaction.html:116
@@ -426,7 +422,7 @@ msgstr "INSTALLER"
 msgid "INSTALLED"
 msgstr "INSTALLÉ"
 
-#: partials/dapps.html:235
+#: partials/dapps.html:223
 msgid "Installed Applications"
 msgstr "APPLICATIONS INSTALLÉS"
 
@@ -454,7 +450,7 @@ msgstr "Dernière version"
 msgid "LAUNCH"
 msgstr "LANCER"
 
-#: wallet.html:20
+#: wallet.html:22
 msgid "Lisk - Blockchain Application Platform"
 msgstr "Lisk - Plate-forme d’Application Blockchain"
 
@@ -562,8 +558,8 @@ msgid ""
 "Make sure you're sending LSK to the right address. This action can't be "
 "undone later."
 msgstr ""
-"Assurez-vous d’envoyez vos LSK à la bonne adresse . Cette action ne peut "
-"être annulée par la suite."
+"Assurez-vous d’envoyez vos LSK à la bonne adresse. Cette action ne peut être "
+"annulée par la suite."
 
 #: js/controllers/modals/masterPassphraseModalController.js:9
 msgid "Master Passphrase"
@@ -573,7 +569,7 @@ msgstr "Phrase secrète principale"
 msgid "Members"
 msgstr "Membres"
 
-#: partials/account.html:60 partials/dapps.html:177 partials/dapps.html:237
+#: partials/account.html:60 partials/dapps.html:165 partials/dapps.html:225
 msgid "More"
 msgstr "Plus"
 
@@ -850,7 +846,7 @@ msgstr "Ne plus me demander durant la session"
 msgid "remove vote"
 msgstr "supprimer le vote"
 
-#: js/directives/voteActionDirective.js:16
+#: js/directives/voteActionDirective.js:13
 msgid "REMOVE VOTE"
 msgstr "RETIRER LE VOTE"
 
@@ -868,7 +864,7 @@ msgstr "Récompense"
 msgid "SAVE PASSPHRASE"
 msgstr "SAUVEGARDER LA PHRASE SECRÈTE"
 
-#: js/controllers/modals/addDappModalController.js:6
+#: js/controllers/modals/addDappModalController.js:8
 msgid "Saving new application"
 msgstr "Enregistrer une nouvelle application"
 
@@ -1016,7 +1012,7 @@ msgid ""
 "applications are in a launched state, anyone is free to open and use them."
 msgstr ""
 "La phrase secrète maîtresse est généré automatiquement sur ​​le premier "
-"lancement du client Lisk . Elle peut être trouvée à la fin du fichier config."
+"lancement du client Lisk. Elle peut être trouvée à la fin du fichier config."
 "json . Par conséquent, seuls les opérateurs de nœuds peuvent installer, "
 "lancer ou désinstaller des applications. Une fois que les applications sont "
 "dans un état lancé, tout le monde est libre d'ouvrir et de les utiliser."
@@ -1058,10 +1054,10 @@ msgstr ""
 "créé le groupe est le propriétaire du groupe. Lorsque le propriétaire veut "
 "effectuer une transaction, M de N comptes au sein du groupe doivent le "
 "confirmer, sinon la transaction ne sera pas traitée. Les valeurs M et N sont "
-"spécifiées dans cette procédure. .<br><br><b> Ce que vous devez savoir pour "
-"la configuration de groupe multi-signature :</b><br><br>• Le nombre de "
-"membres du groupe ( N).<br>• Le nombre de confirmations nécessaires (M)."
-"<br>• Les adresses des comptes Lisk que vous souhaitez ajouter au groupe."
+"spécifiées dans cette procédure.<br><br><b> Ce que vous devez savoir pour la "
+"configuration de groupe multi-signature :</b><br><br>• Le nombre de membres "
+"du groupe ( N).<br>• Le nombre de confirmations nécessaires (M).<br>• Les "
+"adresses des comptes Lisk que vous souhaitez ajouter au groupe."
 
 #: js/controllers/blockchainController.js:43
 #: js/controllers/forgingController.js:116
@@ -1174,7 +1170,7 @@ msgstr ""
 "Vous pouvez sélectionner jusqu'à 33 délégués par tour de scrutin. Jusqu'à "
 "101 délégués au total."
 
-#: partials/dapps.html:165 partials/dapps.html:242
+#: partials/dapps.html:153 partials/dapps.html:230
 msgid "You do not have any applications installed yet."
 msgstr "Vous n'avez pas encore installé d’applications."
 
@@ -1215,6 +1211,9 @@ msgstr "Votre phrase secrète"
 #: partials/modals/sendTransaction.html:106 partials/modals/vote.html:98
 msgid "Your Second Passphrase"
 msgstr "Votre phrase secrète secondaire"
+
+#~ msgid "Add a new application"
+#~ msgstr "Ajouter une nouvelle application"
 
 #~ msgid ""
 #~ "Add group members by typing in their LISK address and pressing enter."
