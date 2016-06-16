@@ -44,7 +44,6 @@ angular.module('liskApp').controller('accountController', ['$state','$scope', '$
     }
 
     $scope.getTransactions = function () {
-
         $http.get("/api/transactions", {
             params: {
                 senderPublicKey: userService.publicKey,
@@ -52,61 +51,55 @@ angular.module('liskApp').controller('accountController', ['$state','$scope', '$
                 limit: 8,
                 orderBy: 't_timestamp:desc'
             }
-        })
-            .then(function (resp) {
-                var transactions = resp.data.transactions;
+        }).then(function (resp) {
+            var transactions = resp.data.transactions;
 
-                $http.get('/api/transactions/unconfirmed', {
-                    params: {
-                        senderPublicKey: userService.publicKey,
-                        address: userService.address
-                    }
-                })
-                    .then(function (resp) {
-                        var unconfirmedTransactions = resp.data.transactions;
+            $http.get('/api/transactions/unconfirmed', {
+                params: {
+                    senderPublicKey: userService.publicKey,
+                    address: userService.address
+                }
+            }).then(function (resp) {
+                var unconfirmedTransactions = resp.data.transactions;
 
-                        $timeout(function () {
-                            $scope.transactions = unconfirmedTransactions.concat(transactions).slice(0, 8);
-
-                        });
-
-                    });
+                $timeout(function () {
+                    $scope.transactions = unconfirmedTransactions.concat(transactions).slice(0, 8);
+                });
             });
+        });
     }
 
     $scope.getAccount = function () {
-        $http.get("/api/accounts", {params: {address: userService.address}})
-            .then(function (resp) {
-                $scope.view.inLoading = false;
-                var account = resp.data.account;
-                userService.balance = account.balance;
-                userService.multisignatures = account.multisignatures;
-                userService.u_multisignatures = account.u_multisignatures;
-                userService.unconfirmedBalance = account.unconfirmedBalance ;
-                userService.secondPassphrase = account.secondSignature || account.unconfirmedSignature;
-                userService.unconfirmedPassphrase = account.unconfirmedSignature;
-                $scope.balance = userService.balance;
-                $scope.unconfirmedBalance = userService.unconfirmedBalance;
-                $scope.balanceToShow = $filter('decimalFilter')(userService.unconfirmedBalance);
-                if ($scope.balanceToShow[1]) {
-                    $scope.balanceToShow[1]='.'+ $scope.balanceToShow[1];
-                }
-                $scope.secondPassphrase = userService.secondPassphrase;
-                $scope.unconfirmedPassphrase = userService.unconfirmedPassphrase;
-
-            });
+        $http.get("/api/accounts", {params: {address: userService.address}}).then(function (resp) {
+            $scope.view.inLoading = false;
+            var account = resp.data.account;
+            userService.balance = account.balance;
+            userService.multisignatures = account.multisignatures;
+            userService.u_multisignatures = account.u_multisignatures;
+            userService.unconfirmedBalance = account.unconfirmedBalance ;
+            userService.secondPassphrase = account.secondSignature || account.unconfirmedSignature;
+            userService.unconfirmedPassphrase = account.unconfirmedSignature;
+            $scope.balance = userService.balance;
+            $scope.unconfirmedBalance = userService.unconfirmedBalance;
+            $scope.balanceToShow = $filter('decimalFilter')(userService.unconfirmedBalance);
+            if ($scope.balanceToShow[1]) {
+                $scope.balanceToShow[1]='.'+ $scope.balanceToShow[1];
+            }
+            $scope.secondPassphrase = userService.secondPassphrase;
+            $scope.unconfirmedPassphrase = userService.unconfirmedPassphrase;
+        });
     }
 
     $scope.getCandles = function () {
-        $http.get("https://explorer.lisk.io/api/candles/getCandles")
-            .then(function (response) {
-                $scope.graphs.liskPrice.data = [
-                    response.data.candles.map(
-                        function (candle) {
-                            return candle.close
-                        })
-                ];
-            });
+        $http.get("https://explorer.lisk.io/api/candles/getCandles").then(function (response) {
+            $scope.graphs.liskPrice.data = [
+                response.data.candles.map(
+                    function (candle) {
+                        return candle.close;
+                    }
+                )
+            ];
+        });
     }
 
     $scope.$on('updateControllerData', function (event, data) {
@@ -118,7 +111,6 @@ angular.module('liskApp').controller('accountController', ['$state','$scope', '$
     $scope.$on('$destroy', function () {
         $interval.cancel($scope.balanceInterval);
         $scope.balanceInterval = null;
-
         $interval.cancel($scope.transactionsInterval);
         $scope.transactionsInterval = null;
     });
@@ -141,7 +133,6 @@ angular.module('liskApp').controller('accountController', ['$state','$scope', '$
         delegateService.getDelegate($scope.publicKey, function (response) {
             $timeout(function () {
                 $scope.delegate = response;
-
             });
         });
     }
