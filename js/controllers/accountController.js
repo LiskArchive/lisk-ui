@@ -63,7 +63,9 @@ angular.module('liskApp').controller('accountController', ['$state','$scope', '$
                 var unconfirmedTransactions = resp.data.transactions;
 
                 $timeout(function () {
-                    $scope.transactions = unconfirmedTransactions.concat(transactions).slice(0, 8);
+                    $scope.transactions = _.compact(
+                        unconfirmedTransactions.concat(transactions).slice(0, 8)
+                    );
                 });
             });
         });
