@@ -9,8 +9,7 @@ angular.module('liskApp').service('transactionsService', function ($http, userSe
             }).then(function (response) {
                 if (response.data.success) {
                     cb(response.data);
-                }
-                else {
+                } else {
                     cb({transactions: [], count: 0});
                 }
             });
@@ -24,12 +23,10 @@ angular.module('liskApp').service('transactionsService', function ($http, userSe
                     if (response.data.success) {
                         if (response.data.transaction.senderId == userService.address || response.data.transaction.recipientId == userService.address) {
                             cb({transactions: [response.data.transaction], count: 1});
-                        }
-                        else {
+                        } else {
                             cb({transactions: [], count: 0});
                         }
-                    }
-                    else {
+                    } else {
                         cb({transactions: [], count: 0});
                     }
                 }
@@ -40,6 +37,7 @@ angular.module('liskApp').service('transactionsService', function ($http, userSe
         getMultiTransactions: function ($defer, params, filter, requestParams, cb) {
             var sortString = '';
             var keys = [];
+
             for (var key in params.$params.sorting) {
                 if (params.$params.sorting.hasOwnProperty(key)) {
                     sortString = key + ':' + params.$params.sorting[key];
@@ -59,8 +57,7 @@ angular.module('liskApp').service('transactionsService', function ($http, userSe
                     params.total(response.data.count);
                     cb(null);
                     $defer.resolve(transactions);
-                }
-                else {
+                } else {
                     var transactions = [];
                     transactionsList.count = 0;
                     params.total(0);
@@ -74,20 +71,22 @@ angular.module('liskApp').service('transactionsService', function ($http, userSe
             if (searchForTransaction != '') {
                 this.getTransaction(searchForTransaction, function (response) {
                     var transactions = response.transactions;
+
                     if (transactions.length) {
                         params.total(transactions.length);
                         cb(null);
                         $defer.resolve(transactions);
 
-                    }
-                    else {
+                    } else {
                         var sortString = '';
                         var keys = [];
+
                         for (var key in params.$params.sorting) {
                             if (params.$params.sorting.hasOwnProperty(key)) {
                                 sortString = key + ':' + params.$params.sorting[key];
                             }
                         }
+
                         transactionsList.requestTransactions({
                             ownerPublicKey: userService.publicKey,
                             ownerAddress: userService.address,
@@ -98,23 +97,24 @@ angular.module('liskApp').service('transactionsService', function ($http, userSe
                             offset: (params.page() - 1) * params.count()
                         }, function (response) {
                             var transactions = response.transactions;
+
                             transactionsList.count = response.count;
                             params.total(response.count);
                             cb(null);
                             $defer.resolve(transactions);
-
                         });
                     }
                 });
-            }
-            else {
+            } else {
                 var sortString = '';
                 var keys = [];
+
                 for (var key in params.$params.sorting) {
                     if (params.$params.sorting.hasOwnProperty(key)) {
                         sortString = key + ':' + params.$params.sorting[key];
                     }
                 }
+
                 this.requestTransactions({
                     senderPublicKey: userService.publicKey,
                     recipientId: userService.address,
@@ -123,11 +123,11 @@ angular.module('liskApp').service('transactionsService', function ($http, userSe
                     offset: (params.page() - 1) * params.count()
                 }, function (response) {
                     var transactions = response.transactions;
+
                     transactionsList.count = response.count;
                     params.total(response.count);
                     cb(null);
                     $defer.resolve(transactions);
-
                 });
             }
         }
