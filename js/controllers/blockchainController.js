@@ -86,6 +86,7 @@ angular.module('liskApp').controller('blockchainController', ['$scope', '$timeou
     // Search blocks watcher
     var tempSearchBlockID = '',
         searchBlockIDTimeout;
+
     $scope.$watch('searchBlocks.searchForBlock', function (val) {
         if (searchBlockIDTimeout) $timeout.cancel(searchBlockIDTimeout);
         if (val.trim() != '') {
@@ -103,6 +104,6 @@ angular.module('liskApp').controller('blockchainController', ['$scope', '$timeou
             $scope.searchBlocks.searchForBlock = tempSearchBlockID;
             $scope.updateBlocks();
         }, 2000); // Delay 2000 ms
-    })
+    });
 
 }]);
