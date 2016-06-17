@@ -293,6 +293,12 @@
         font-size: 20px;
         font-weight: 500;
       }
+      .account {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+      }
     }
     .modal-chapter {
       border-top: 1px solid @border-grey;
@@ -334,6 +340,17 @@
     .modal-nav {
       border-bottom: 1px solid @border-grey;
       background-color: @white;
+      li {
+        text-align: center;
+
+        .btn-flat {
+          width: 100%;
+
+          i {
+            vertical-align: top;
+          }
+        }
+      }
     }
     .modal-body {
       &.voting-fee {

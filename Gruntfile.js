@@ -5,7 +5,7 @@ module.exports = function (grunt) {
         "js/ui-bootstrap.js"
     ];
 
-    var withoutBrowserify = ['static/js/br_app.js', 'static/js/translations.js', 'bower_components/underscore/underscore.js', 'bower_components/materialize/dist/js/materialize.js'];
+    var withoutBrowserify = ['static/js/br_app.js', 'static/js/translations.js', 'bower_components/underscore/underscore.js', 'bower_components/materialize/dist/js/materialize.js', 'bower_components/clipboard/dist/clipboard.js'];
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),

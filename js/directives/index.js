@@ -8,3 +8,4 @@ require('../../js/directives/rangeDirective');
 require('../../js/directives/voteActionDirective');
 require('../../js/directives/voteTitleDirective');
 require('../../js/directives/validLinkDirective');
+require('../../js/directives/clipboardDirective');

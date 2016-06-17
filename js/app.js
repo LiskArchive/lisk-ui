@@ -3,7 +3,6 @@ require('angular-ui-router');
 require('angular-resource');
 require('angular-filter');
 require('browserify-angular-animate');
-require('ng-clip');
 require('../node_modules/angular-animate/angular-animate.js')
 require('../node_modules/angular-gettext/dist/angular-gettext.min.js');
 require('../node_modules/angular-chart.js/dist/angular-chart.js');
@@ -12,15 +11,13 @@ require('../node_modules/ng-table/dist/ng-table.js');
 
 Mnemonic = require('bitcore-mnemonic');
 
-liskApp = angular.module('liskApp', ['ui.router', 'btford.modal', 'ngTable', 'ngAnimate',  'chart.js', 'btford.socket-io', 'ui.bootstrap', 'ngClipboard', 'angular.filter', 'gettext']);
+liskApp = angular.module('liskApp', ['ui.router', 'btford.modal', 'ngTable', 'ngAnimate',  'chart.js', 'btford.socket-io', 'ui.bootstrap', 'angular.filter', 'gettext']);
 
-liskApp.config(["ngClipProvider",
+liskApp.config([
     "$locationProvider",
     "$stateProvider",
     "$urlRouterProvider",
-    function (ngClipProvider, $locationProvider, $stateProvider, $urlRouterProvider) {
-        ngClipProvider.setPath("../node_modules/zeroclipboard/dist/ZeroClipboard.swf");
-
+    function ($locationProvider, $stateProvider, $urlRouterProvider) {
         $locationProvider.html5Mode(true);
         $urlRouterProvider.otherwise("/");
 
@@ -102,6 +99,7 @@ liskApp.config(["ngClipProvider",
                 controller: "passphraseController"
             });
     }
-]).run(function (languageService) {
+]).run(function (languageService, clipboardService) {
     languageService();
+    clipboardService();
 });

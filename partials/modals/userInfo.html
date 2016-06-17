@@ -4,20 +4,14 @@
             <div class="col-md-9 col-md-offset-2 height100 valign-wrapper">
                 <div class="modal-content">
                     <div class="modal-header clearfix">
-                        <div class="media user">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object" src="/images/account.png">
-                                </a>
-                            </div>
-                            <div class="media-body text-left">
-                                <h2 class="media-heading">{{'Account'|translate}}:
-                                    <span class="id">{{account.address}}</span>
-                                    <span class="blockchain-icon" clip-copy="account.address"></span>
-                                </h2>
-                                <p ng-if="thisUser.publicKey==account.publicKey"><strong><translate>Public key</translate>:</strong> {{account.publicKey}}</p>
-                            </div>
-                        </div>
+                        <img class="account" src="/images/account.png">
+
+                        <h2 class="media-heading">{{'Account'|translate}}:</h2>
+
+                        <input id="accountAddress" class="clipboard" value="{{account.address}}" readonly>
+
+                        <input id="accountPublicKey" class="clipboard publicKey" value="{{account.publicKey}}" readonly>
+
                         <div class="close-modal" ng-click="close()">
                             <span class="sr-only"><translate>Close modal</translate></span>
                         </div>
@@ -25,7 +19,13 @@
                     <div class="modal-nav" ng-if="account.address != address">
                         <ul class="nav nav-justified nav-actions" ng-if="account.address">
                             <li>
-                                <a href="#" class="blue-link" ng-click="sendTransactionToUser()"><i class="mdi-content-send"></i><translate>Send LSK</translate></a>
+                                <button class="btn-flat btn-copy blue-link" clipboard data-clipboard-target="#accountAddress" clipboard-success="clipboardSuccess(e);" clipboard-error="clipboardCommand(e);"><i class="small material-icons">assignment</i><translate>Copy Address</translate></button>
+                            </li>
+                            <li>
+                                <button class="btn-flat btn-copy blue-link" clipboard data-clipboard-target="#accountPublicKey" clipboard-success="clipboardSuccess(e);" clipboard-error="clipboardCommand(e);"><i class="small material-icons">assignment</i><translate>Copy Public Key</translate></button>
+                            </li>
+                            <li>
+                                <button class="btn-flat btn-copy blue-link" ng-click="sendTransactionToUser()"><i class="mdi-content-send"></i><translate>Send LSK</translate></button>
                             </li>
                         </ul>
                     </div>
@@ -49,8 +49,10 @@
                         </div>
                         <div ng-repeat="transaction in transactions.list" ng-show="transactions.view">
                             <div class="modal-header">
-                                <h2>{{'Transaction ID'|translate}}:</h2> {{transaction.id}}
-                                <span class="blockchain-icon" clip-copy="transaction.id"></span>
+                                <h2>{{'Transaction ID'|translate}}:</h2>
+
+                                <input id="transactionId" class="clipboard" value="{{transaction.id}}" readonly>
+                                <button class="btn-flat btn-copy blue-link" clipboard data-clipboard-target="#transactionId" clipboard-success="clipboardSuccess(e);" clipboard-error="clipboardCommand(e);"><i class="small material-icons">assignment</i><translate>Copy Transaction ID</translate></button>
                             </div>
                             <div class="modal-body">
                                 <ul class="list-group">

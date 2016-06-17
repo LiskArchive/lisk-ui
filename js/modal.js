@@ -7,8 +7,7 @@
 
 'use strict';
 
-angular.module('btford.modal', []).
-    factory('btfModal', ['$animate', '$compile', '$rootScope', '$controller', '$q', '$http', '$templateCache', modalFactoryFactory]);
+angular.module('btford.modal', []).factory('btfModal', ['$animate', '$compile', '$rootScope', '$controller', '$q', '$http', '$templateCache', modalFactoryFactory]);
 
 function modalFactoryFactory($animate, $compile, $rootScope, $controller, $q, $http, $templateCache) {
   return function modalFactory (config) {
