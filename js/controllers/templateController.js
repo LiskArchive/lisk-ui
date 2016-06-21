@@ -5,7 +5,7 @@ angular.module('liskApp').controller('templateController', ['$scope', '$rootScop
     $scope.getSync = function () {
         $http.get("/api/loader/status/sync").then(function (resp) {
             if (resp.data.success) {
-                $rootScope.sync = resp.data.sync;
+                $rootScope.syncing = resp.data.syncing;
                 $rootScope.height = resp.data.height;
                 $rootScope.heightToSync = resp.data.blocks;
             }
