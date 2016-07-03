@@ -27,7 +27,7 @@ angular.module('liskApp').controller('transactionsController', ['$scope', '$root
         page: 1,
         count: 25,
         sorting: {
-            b_height: 'desc'
+            height: 'desc'
         }
     }, {
         total: 0,
@@ -58,13 +58,13 @@ angular.module('liskApp').controller('transactionsController', ['$scope', '$root
     });
 
     $scope.tableTransactions.cols = {
-        b_height : gettextCatalog.getString('Height'),
-        t_id : gettextCatalog.getString('Transaction ID'),
-        t_senderId : gettextCatalog.getString('Sender'),
-        t_recipientId : gettextCatalog.getString('Recipient'),
-        t_timestamp : gettextCatalog.getString('Time'),
-        t_amount : gettextCatalog.getString('Amount'),
-        t_fee : gettextCatalog.getString('Fee')
+        height : gettextCatalog.getString('Height'),
+        id : gettextCatalog.getString('Transaction ID'),
+        senderId : gettextCatalog.getString('Sender'),
+        recipientId : gettextCatalog.getString('Recipient'),
+        timestamp : gettextCatalog.getString('Time'),
+        amount : gettextCatalog.getString('Amount'),
+        fee : gettextCatalog.getString('Fee')
     };
 
     $scope.tableTransactions.settings().$scope = $scope;

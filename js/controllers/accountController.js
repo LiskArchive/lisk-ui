@@ -49,7 +49,7 @@ angular.module('liskApp').controller('accountController', ['$state','$scope', '$
                 senderPublicKey: userService.publicKey,
                 recipientId: $scope.address,
                 limit: 8,
-                orderBy: 't_timestamp:desc'
+                orderBy: 'timestamp:desc'
             }
         }).then(function (resp) {
             var transactions = resp.data.transactions;

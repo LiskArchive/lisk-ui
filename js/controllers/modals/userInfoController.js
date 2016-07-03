@@ -33,7 +33,7 @@ angular.module('liskApp').controller('userInfoController', ["$scope", "$http", "
                     senderPublicKey: $scope.account.publicKey,
                     recipientId: $scope.account.address,
                     limit: 6,
-                    orderBy: 't_timestamp:desc'
+                    orderBy: 'timestamp:desc'
                 }
             })
             .then(function (resp) {

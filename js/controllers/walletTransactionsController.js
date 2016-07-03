@@ -45,7 +45,7 @@ angular.module('liskApp').controller('walletTransactionsController', ['$scope', 
         page: 1,
         count: 25,
         sorting: {
-            t_timestamp: 'desc'
+            timestamp: 'desc'
         }
     }, {
         total: 0,
@@ -63,12 +63,12 @@ angular.module('liskApp').controller('walletTransactionsController', ['$scope', 
     });
 
     $scope.tableWalletTransactions = {
-        b_height : gettextCatalog.getString('Height'),
-        t_id : gettextCatalog.getString('Transaction ID'),
-        t_recipientId : gettextCatalog.getString('Recipient'),
-        t_timestamp : gettextCatalog.getString('Time'),
-        t_amount : gettextCatalog.getString('Amount'),
-        t_fee : gettextCatalog.getString('Fee'),
+        height : gettextCatalog.getString('Height'),
+        id : gettextCatalog.getString('Transaction ID'),
+        recipientId : gettextCatalog.getString('Recipient'),
+        timestamp : gettextCatalog.getString('Time'),
+        amount : gettextCatalog.getString('Amount'),
+        fee : gettextCatalog.getString('Fee'),
         confirmations : gettextCatalog.getString('Confirmations')
     };
 
