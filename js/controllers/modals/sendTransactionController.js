@@ -151,7 +151,9 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
             // No fractional part
             var fraction = '00000000';
         } else if (parts.length == 2) {
-            if (parts[1].length <= 8) {
+            if (parts[1].length > 8) {
+                return error('LSK amount must not have more than 8 decimal places');
+            } else if (parts[1].length <= 8) {
                 // Less than eight decimal places
                 var fraction = parts[1];
             } else {
@@ -199,11 +201,6 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
         if ($scope.secondPassphrase && !withSecond) {
             $scope.checkSecondPass = true;
             $scope.focus = 'secondPhrase';
-            return;
-        }
-
-        if (($scope.amount + '').indexOf('.') != -1 && $scope.amount.split('.')[1].length > 8) {
-            $scope.errorMessage.amount = 'LSK amount must not have more than 8 decimal places';
             return;
         }
 
