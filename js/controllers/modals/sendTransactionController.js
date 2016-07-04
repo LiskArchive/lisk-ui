@@ -146,23 +146,27 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
             return error();
         }
 
-        // No fractional part
         if (parts.length == 1) {
+            // No fractional part
             var fraction = '00000000';
         } else if (parts.length == 2) {
             if (parts[1].length <= 8) {
+                // Less than eight decimal places
                 var fraction = parts[1];
             } else {
+                // Trim extraneous decimal places
                 var fraction = parts[1].substring(0, 8);
             }
         } else {
             return error();
         }
 
+        // Pad to eight decimal places
         for (var i = fraction.length; i < 8; i++) {
             fraction += '0';
         }
 
+        // Combine whole with fractional part
         var result = amount + fraction;
 
         // In case there's a comma or something else in there.
