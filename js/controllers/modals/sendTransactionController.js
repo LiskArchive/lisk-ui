@@ -127,9 +127,7 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
     }
 
     $scope.isCorrectValue = function (currency, throwError) {
-        currency = String(currency);
-
-        var parts = currency.trim().split('.');
+        var parts = String(currency).trim().split('.');
         var amount = parts[0];
 
         if (!throwError) throwError = false;
@@ -165,9 +163,10 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
             fraction += '0';
         }
 
-        var result = amount + '' + fraction;
+        var result = amount + fraction;
 
-        // In case there's a comma or something else in there. At this point there should only be numbers.
+        // In case there's a comma or something else in there.
+        // At this point there should only be numbers.
         if (!/^\d+$/.test(result)) {
             return error();
         }
