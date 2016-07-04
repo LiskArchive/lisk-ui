@@ -142,7 +142,7 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
             }
         }
 
-        if (amount == '' || amount == '0') {
+        if (amount == '') {
             return error();
         }
 
@@ -164,6 +164,11 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
         // Pad to eight decimal places
         for (var i = fraction.length; i < 8; i++) {
             fraction += '0';
+        }
+
+        // Check for zero amount
+        if (amount == '0' && fraction == '00000000') {
+            return error();
         }
 
         // Combine whole with fractional part
