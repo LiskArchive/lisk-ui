@@ -129,6 +129,7 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
     $scope.isCorrectValue = function (currency, throwError) {
         var parts = String(currency).trim().split('.');
         var amount = parts[0];
+        var fraction;
 
         if (!throwError) throwError = false;
 
@@ -149,16 +150,16 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
 
         if (parts.length == 1) {
             // No fractional part
-            var fraction = '00000000';
+            fraction = '00000000';
         } else if (parts.length == 2) {
             if (parts[1].length > 8) {
                 return error('LSK amount must not have more than 8 decimal places');
             } else if (parts[1].length <= 8) {
                 // Less than eight decimal places
-                var fraction = parts[1];
+                fraction = parts[1];
             } else {
                 // Trim extraneous decimal places
-                var fraction = parts[1].substring(0, 8);
+                fraction = parts[1].substring(0, 8);
             }
         } else {
             return error('LSK amount must have only one decimal point');
