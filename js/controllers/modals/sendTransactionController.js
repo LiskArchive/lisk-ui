@@ -132,18 +132,19 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
 
         if (!throwError) throwError = false;
 
-        function error () {
-            $scope.errorMessage.amount = 'Invalid LSK amount';
+        function error (message) {
+            $scope.errorMessage.amount = message;
 
             if (throwError) {
               throw $scope.errorMessage.amount;
             } else {
+              console.error(message);
               return false;
             }
         }
 
         if (amount == '') {
-            return error();
+            return error('LSK amount can not be blank');
         }
 
         if (parts.length == 1) {
@@ -158,7 +159,7 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
                 var fraction = parts[1].substring(0, 8);
             }
         } else {
-            return error();
+            return error('LSK amount must have only one decimal point');
         }
 
         // Pad to eight decimal places
@@ -168,7 +169,7 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
 
         // Check for zero amount
         if (amount == '0' && fraction == '00000000') {
-            return error();
+            return error('LSK amount can not be zero');
         }
 
         // Combine whole with fractional part
@@ -177,7 +178,7 @@ angular.module('liskApp').controller('sendTransactionController', ['$scope', 'se
         // In case there's a comma or something else in there.
         // At this point there should only be numbers.
         if (!/^\d+$/.test(result)) {
-            return error();
+            return error('LSK amount contains non-numeric characters');
         }
 
         // Remove leading zeroes
