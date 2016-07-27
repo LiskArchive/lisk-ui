@@ -126,7 +126,7 @@
                             <span>{{sign}}</span>
                         </li>
                         <li>{{'Fee'|translate}}:
-                            <span>{{fee*(totalCount+1)}} LSK</span>
+                            <span>{{fee * (totalCount + 1) | liskFilter}} LSK</span>
                     </ul>
                 </div>
                 <div class="modal-body" ng-show="errorMessage">
