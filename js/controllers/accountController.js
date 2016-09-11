@@ -74,21 +74,23 @@ angular.module('liskApp').controller('accountController', ['$state','$scope', '$
     $scope.getAccount = function () {
         $http.get("/api/accounts", {params: {address: userService.address}}).then(function (resp) {
             $scope.view.inLoading = false;
-            var account = resp.data.account;
-            userService.balance = account.balance;
-            userService.multisignatures = account.multisignatures;
-            userService.u_multisignatures = account.u_multisignatures;
-            userService.unconfirmedBalance = account.unconfirmedBalance ;
-            userService.secondPassphrase = account.secondSignature || account.unconfirmedSignature;
-            userService.unconfirmedPassphrase = account.unconfirmedSignature;
-            $scope.balance = userService.balance;
-            $scope.unconfirmedBalance = userService.unconfirmedBalance;
-            $scope.balanceToShow = $filter('decimalFilter')(userService.unconfirmedBalance);
-            if ($scope.balanceToShow[1]) {
-                $scope.balanceToShow[1]='.'+ $scope.balanceToShow[1];
+            if (resp.data.account) {
+                var account = resp.data.account;
+                userService.balance = account.balance;
+                userService.multisignatures = account.multisignatures;
+                userService.u_multisignatures = account.u_multisignatures;
+                userService.unconfirmedBalance = account.unconfirmedBalance ;
+                userService.secondPassphrase = account.secondSignature || account.unconfirmedSignature;
+                userService.unconfirmedPassphrase = account.unconfirmedSignature;
+                $scope.balance = userService.balance;
+                $scope.unconfirmedBalance = userService.unconfirmedBalance;
+                $scope.balanceToShow = $filter('decimalFilter')(userService.unconfirmedBalance);
+                if ($scope.balanceToShow[1]) {
+                    $scope.balanceToShow[1]='.'+ $scope.balanceToShow[1];
+                }
+                $scope.secondPassphrase = userService.secondPassphrase;
+                $scope.unconfirmedPassphrase = userService.unconfirmedPassphrase;
             }
-            $scope.secondPassphrase = userService.secondPassphrase;
-            $scope.unconfirmedPassphrase = userService.unconfirmedPassphrase;
         });
     }
 
