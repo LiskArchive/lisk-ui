@@ -22,9 +22,9 @@ angular.module('liskApp').controller('settingsController', ['$scope', '$rootScop
     $scope.multisignaturesEnabled = false;
 
     $scope.checkEnabledMultisign = function () {
-        if (userService.multisignatures && userService.multisignatures.length) {
+        if (!_.isEmpty(userService.u_multisignatures)) {
             return true;
-        } else if (userService.u_multisignatures && userService.u_multisignatures.length) {
+        } else if (!_.isEmpty(userService.multisignatures)) {
             return true;
         } else {
             return false;

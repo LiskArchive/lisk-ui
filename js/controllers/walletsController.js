@@ -102,7 +102,7 @@ angular.module('liskApp').controller('walletsController', ['$scope', '$rootScope
             multiService.getWallets($defer, params, $scope.filter, function () {
                 $scope.view.inLoading = false;
                 $scope.countWallets = params.total();
-                $scope.showWallets = !!(!(userService.u_multisignatures.length || userService.multisignatures.length) || $scope.countWallets);
+                $scope.showWallets = !!(!(_.isEmpty(userService.u_multisignatures) || _.isEmpty(userService.multisignatures)) || $scope.countWallets);
 
             });
 

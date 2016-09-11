@@ -181,8 +181,7 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
 
                 if ($state.current.name != 'passphrase') {
                     $scope.getMultisignatureAccounts(function (multisignature) {
-                        $scope.multisignature = userService.u_multisignatures.length || userService.multisignatures.length
-                            || multisignature;
+                        $scope.multisignature = !_.isEmpty(userService.u_multisignatures) || !_.isEmpty(userService.multisignatures) || multisignature;
                     });
                 }
 
