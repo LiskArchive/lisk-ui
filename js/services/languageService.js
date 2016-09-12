@@ -16,6 +16,7 @@ angular.module('liskApp').service('languageService', function ($rootScope, $wind
         { id: 'nl', name: 'Nederlands' },
         // { id: 'nb_NO', name: 'Norsk' },
         // { id: 'pt_BR', name: 'Português' },
+        { id: 'pl', name: 'Polski' },
         { id: 'ro', name: 'Română' },
         { id: 'uk_UA', name: 'Yкраїнський' }
     ];
