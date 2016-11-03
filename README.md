@@ -6,22 +6,22 @@ This repository contains the [AngularJS](https://angularjs.org/) based user-inte
 
 ## Installation
 
-Install node modules:
+Install frontend dependencies (will run the `bower install` after the npm instalation):
 
 ```
 npm install
 ```
 
-Install bower components:
+Install bower components (optional and already happening in `npm install`):
 
 ```
-bower install
+npm run bower-install
 ```
 
 Build the user-interface:
 
 ```
-grunt release
+npm run grunt-release
 ```
 
 ## Authors
