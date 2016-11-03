@@ -9,6 +9,11 @@
   "private": true,
   "author": "Vera Nekrasova <vera.limita@gmail.com>, Boris Povod <boris@crypti.me>",
   "license": "MIT",
+  "scripts": {
+    "postinstall": "bower install",
+    "bower-install": "bower install",
+    "grunt-release": "grunt release"
+  },
   "devDependencies": {
     "browserify": "latest",
     "grunt": "=1.0.1",
