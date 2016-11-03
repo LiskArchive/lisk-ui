@@ -24,6 +24,11 @@ Build the user-interface:
 npm run grunt-release
 ```
 
+You can set the following cookies (e.g. using [EditThisCookies](http://www.editthiscookie.com/)) for more comfortable local development:
+- `passphrase` - passphrase to sign you in  
+- `goto` - name of state to go to. See [possible state names](https://github.com/LiskHQ/lisk-ui/blob/development/js/app.js#L25-L100).
+
+
 ## Authors
 
 - Vera Nekrasova <vera.limita@gmail.com>
