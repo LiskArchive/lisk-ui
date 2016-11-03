@@ -1,4 +1,9 @@
 module.exports = function (grunt) {
+    require('jit-grunt')(grunt, {
+      'nggettext_extract': 'grunt-angular-gettext',
+      'nggettext_compile': 'grunt-angular-gettext',
+    }); 
+
     var files = [
         "js/main.js",
         "js/modal.js",
@@ -117,14 +122,6 @@ module.exports = function (grunt) {
           }
         }
     });
-
-    grunt.loadNpmTasks("grunt-angular-gettext");
-    grunt.loadNpmTasks("grunt-contrib-concat");
-    grunt.loadNpmTasks("grunt-contrib-cssmin");
-    grunt.loadNpmTasks("grunt-contrib-less");
-    grunt.loadNpmTasks("grunt-contrib-uglify");
-    grunt.loadNpmTasks("grunt-browserify");
-    grunt.loadNpmTasks("grunt-contrib-watch");
 
     grunt.registerTask("default", ["watch"]);
     grunt.registerTask("release", ["nggettext_extract", "nggettext_compile", "less", "cssmin", "concat:release", "browserify", "concat:withoutBrowserify", "uglify:release"]);
