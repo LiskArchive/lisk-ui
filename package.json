@@ -27,7 +27,7 @@
     "grunt-contrib-nodeunit": "=1.0.0",
     "grunt-contrib-uglify": "=2.0.0",
     "grunt-contrib-watch": "latest",
-    "jit-grunt": "^0.10.0",
+    "jit-grunt": "^0.10.0"
   },
   "dependencies": {
     "angular": "=1.5.8",
