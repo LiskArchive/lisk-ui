@@ -72,12 +72,12 @@
                     </td>
                 </tr>
                 <tr ng-show="!loadingTop && (!$data || $data.length == 0)">
-                    <td colspan="6">
+                    <td colspan="7">
                         <translate>No delegates</translate>
                     </td>
                 </tr>
                 <tr ng-show="loadingTop">
-                    <td colspan="6">
+                    <td colspan="7">
                         <translate>Loading...</translate>
                     </td>
                 </tr>
@@ -140,13 +140,13 @@
                         </div>
                     </td>
                 </tr>
-                <tr ng-show="!loadingTop && (!$data || $data.length == 0)">
-                    <td colspan="6">
+                <tr ng-show="!loadingStandby && (!$data || $data.length == 0)">
+                    <td colspan="7">
                         <translate>No delegates</translate>
                     </td>
                 </tr>
-                <tr ng-show="loadingTop">
-                    <td colspan="6">
+                <tr ng-show="loadingStandby">
+                    <td colspan="7">
                         <translate>Loading...</translate>
                     </td>
                 </tr>
