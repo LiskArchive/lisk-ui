@@ -146,7 +146,17 @@ angular.module('liskApp').service('delegateService', function ($http, $filter, $
                     cb({noDelegate: true, rate: 0, productivity: 0, vote: 0, totalCount: 0});
                 }
             });
-        }
+        },
+        getSearchList: function ($defer, search, params, filter, cb) {
+            $http.get("/api/delegates/search", {params: {q: search}})
+                .then(function (response) {
+                    var delegates = angular.copy(response.data.delegates) || [];
+                    params.total(delegates.length);
+                    var transformedData = transformData(delegates, filter, params);
+                    cb();
+                    $defer.resolve(transformedData);
+                });
+        },
     };
 
     return delegates;
