@@ -49,6 +49,6 @@
     "requests": "0.1.7",
     "socket.io": "=1.4.8",
     "buffer": "=4.9.1",
-    "lisk-js": "=0.2.2"
+    "lisk-js": "=0.2.3"
   }
 }
