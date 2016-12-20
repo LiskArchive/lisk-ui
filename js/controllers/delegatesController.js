@@ -158,9 +158,7 @@ angular.module('liskApp').controller('delegatesController', ['$scope', '$rootSco
         var delegate = $scope.tableSearchDelegates.data[0];
         $scope.voteList.vote(delegate.publicKey, delegate.username);
     };
-    
     // end Search delegates 
-
 
     // Top deletates
     $scope.tableTopDelegates = new ngTableParams({
