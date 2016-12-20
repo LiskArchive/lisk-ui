@@ -2,6 +2,7 @@ require('angular');
 require('angular-ui-router');
 require('angular-resource');
 require('angular-filter');
+require('angular-cookies');
 require('browserify-angular-animate');
 require('../node_modules/angular-animate/angular-animate.js')
 require('../node_modules/angular-gettext/dist/angular-gettext.min.js');
@@ -11,7 +12,7 @@ require('../node_modules/ng-table/dist/ng-table.js');
 
 Mnemonic = require('bitcore-mnemonic');
 
-liskApp = angular.module('liskApp', ['ui.router', 'btford.modal', 'ngTable', 'ngAnimate',  'chart.js', 'btford.socket-io', 'ui.bootstrap', 'angular.filter', 'gettext']);
+liskApp = angular.module('liskApp', ['ui.router', 'btford.modal', 'ngCookies', 'ngTable', 'ngAnimate',  'chart.js', 'btford.socket-io', 'ui.bootstrap', 'angular.filter', 'gettext']);
 
 liskApp.config([
     "$locationProvider",
