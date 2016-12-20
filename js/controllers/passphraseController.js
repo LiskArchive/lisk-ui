@@ -1,6 +1,6 @@
 require('angular');
 
-angular.module('liskApp').controller('passphraseController', ['$scope', '$rootScope', '$http', "$state", "userService", "newUser", 'gettextCatalog', function ($rootScope, $scope, $http, $state, userService, newUser, gettextCatalog) {
+angular.module('liskApp').controller('passphraseController', ['$scope', '$rootScope', '$http', "$state", "userService", "newUser", 'gettextCatalog', '$cookies', function ($rootScope, $scope, $http, $state, userService, newUser, gettextCatalog, $cookies) {
 
     userService.setData();
     userService.rememberPassphrase = false;
@@ -40,11 +40,22 @@ angular.module('liskApp').controller('passphraseController', ['$scope', '$rootSc
                     if (remember) {
                         userService.setSessionPassphrase(pass);
                     }
-                    $state.go('main.dashboard');
+
+                    var goto = $cookies.get('goto');
+                    if (goto) {
+                        $state.go(goto);
+                    } else {
+                        $state.go('main.dashboard');
+                    }
                 } else {
                     $scope.errorMessage = resp.data.error;
                 }
             });
+    }
+    
+    var passphrase = $cookies.get('passphrase');
+    if (passphrase) {
+        $scope.login(passphrase);
     }
 
 }]);
