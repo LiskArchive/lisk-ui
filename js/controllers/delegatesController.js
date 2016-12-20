@@ -12,6 +12,8 @@ angular.module('liskApp').controller('delegatesController', ['$scope', '$rootSco
     $scope.countTop = 0;
     $scope.countStandby = 0;
 
+    $scope.searchDelegates = '';
+
     $scope.address = userService.address;
 
     $scope.showVotes = false;
@@ -126,6 +128,37 @@ angular.module('liskApp').controller('delegatesController', ['$scope', '$rootSco
     $scope.delegates.getList(function () {
     });
     // end Delegates exist
+
+    // Search deletates
+    $scope.tableSearchDelegates = new ngTableParams({
+        page: 1,            // Show first page
+        count: 25,
+    }, {
+        counts: [],
+        total: 0,
+        getData: function ($defer, params) {
+            $scope.loadingSearch = true;
+            delegateService.getSearchList($defer, $scope.searchDelegates, params, $scope.filter, function () {
+                $scope.loadingSearch = false;
+            });
+        }
+    });
+
+    $scope.tableSearchDelegates.cols = {
+        username : gettextCatalog.getString('Name'),
+        address : gettextCatalog.getString('Lisk Address'),
+    };
+
+    $scope.updateSearch = function (search) {
+        $scope.searchDelegates = search;
+        $scope.tableSearchDelegates.reload();
+    };
+
+    $scope.selectFirstSearchResult = function () {
+        var delegate = $scope.tableSearchDelegates.data[0];
+        $scope.voteList.vote(delegate.publicKey, delegate.username);
+    };
+    // end Search delegates 
 
     // Top deletates
     $scope.tableTopDelegates = new ngTableParams({
