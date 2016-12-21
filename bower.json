@@ -8,6 +8,7 @@
     "file-saver": "*",
     "blob": "*",
     "underscore": "=1.8.3",
-    "clipboard": "=1.5.12"
+    "clipboard": "=1.5.12",
+    "moment": "^2.17.1"
   }
 }

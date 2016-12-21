@@ -88,7 +88,9 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
     $scope.totalBalance = userService.balance;
     $scope.unconfirmedBalance = userService.unconfirmedBalance;
     $scope.loadingBlocks = true;
+    $scope.statistics = {};
     $scope.setForgingText(userService.forging);
+
 
     // Blocks
     $scope.tableBlocks = new ngTableParams({
@@ -169,19 +171,43 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
             .then(function (resp) {
                 $scope.totalForged = resp.data.forged;
             });
-    }
+    };
+
+    $scope.getForgingStatistics = function () {
+        $http.get("/api/delegates/forging/getForgedByAccount", {params: {generatorPublicKey: userService.publicKey, start: moment (moment().format('YYYY-MM-DD')).unix (), end: moment().unix ()}})
+            .then(function (resp) {
+                $scope.statistics.today = resp.data.forged;
+            });
+
+        $http.get("/api/delegates/forging/getForgedByAccount", {params: {generatorPublicKey: userService.publicKey, start: moment().subtract (1, 'days').unix (), end: moment().unix ()}})
+            .then(function (resp) {
+                $scope.statistics.last24h = resp.data.forged;
+            });
+
+        $http.get("/api/delegates/forging/getForgedByAccount", {params: {generatorPublicKey: userService.publicKey, start: moment().subtract (7, 'days').unix (), end: moment().unix ()}})
+            .then(function (resp) {
+                $scope.statistics.last7d = resp.data.forged;
+            });
+
+        $http.get("/api/delegates/forging/getForgedByAccount", {params: {generatorPublicKey: userService.publicKey, start: moment().subtract (30, 'days').unix (), end: moment().unix ()}})
+            .then(function (resp) {
+                $scope.statistics.last30d = resp.data.forged;
+            });
+    };
 
     $scope.$on('updateControllerData', function (event, data) {
         if (data.indexOf('main.forging') != -1) {
             $scope.updateBlocks();
             $scope.getForgedAmount();
             $scope.updateGraphs();
+            $scope.getForgingStatistics();
         }
     });
 
     $scope.updateBlocks();
     $scope.getForgedAmount();
     $scope.updateGraphs();
+    $scope.getForgingStatistics();
 
     $scope.blockInfo = function (block) {
         $scope.modal = blockInfo.activate({block: block});
