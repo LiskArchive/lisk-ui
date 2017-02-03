@@ -1,6 +1,6 @@
 {
   "name": "lisk-ui",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Lisk user-interface submodule",
   "repository": {
     "type": "git",
