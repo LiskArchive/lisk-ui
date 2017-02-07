@@ -54,7 +54,6 @@ msgid "Amount (Fee)"
 msgstr ""
 
 #: js/controllers/dappsController.js:8
-#: partials/template.html:90
 msgid "Applications"
 msgstr ""
 

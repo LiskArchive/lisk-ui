@@ -39,21 +39,21 @@ liskApp.config([
             //     templateUrl: "/partials/multi.html",
             //     controller: "walletsController"
             // })
-            .state('main.dappstore', {
-                url: "/dappstore",
-                templateUrl: "/partials/dapps.html",
-                controller: "dappsController"
-            })
-            .state('main.dappsCategory', {
-                url: "/dappstore/:categoryId",
-                templateUrl: "/partials/dapps-category.html",
-                controller: "dappsCategoryController"
-            })
-            .state('main.dappentry', {
-                url: "/dapp/:dappId",
-                templateUrl: "/partials/dapp-entry.html",
-                controller: "dappController"
-            })
+            // .state('main.dappstore', {
+            //     url: "/dappstore",
+            //     templateUrl: "/partials/dapps.html",
+            //     controller: "dappsController"
+            // })
+            // .state('main.dappsCategory', {
+            //     url: "/dappstore/:categoryId",
+            //     templateUrl: "/partials/dapps-category.html",
+            //     controller: "dappsCategoryController"
+            // })
+            // .state('main.dappentry', {
+            //     url: "/dapp/:dappId",
+            //     templateUrl: "/partials/dapp-entry.html",
+            //     controller: "dappController"
+            // })
             // .state('main.multiPendings', {
             //     url: "/wallets/pendings",
             //     templateUrl: "/partials/wallet-pendings.html",
