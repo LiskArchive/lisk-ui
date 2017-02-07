@@ -222,10 +222,6 @@ msgstr ""
 msgid "Confirmed by"
 msgstr ""
 
-#: partials/template.html:84
-msgid "Conversations"
-msgstr ""
-
 #: js/services/clipboardService.js:6
 msgid "Copied!"
 msgstr ""
@@ -578,7 +574,6 @@ msgstr ""
 
 #: js/controllers/walletsController.js:8
 #: partials/settings.html:12
-#: partials/template.html:78
 msgid "Multi-Signature"
 msgstr ""
 
