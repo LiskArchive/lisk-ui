@@ -104,11 +104,17 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
         counts: [],
         getData: function ($defer, params) {
             $scope.loading = true;
-            blockService.getBlocks('', $defer, params, $scope.filter, function () {
+            if (!userService.username) {
                 $scope.loading = false;
-                $scope.countForgingBlocks = params.total();
+                $scope.countForgingBlocks = 0;
                 $scope.view.inLoading = false;
-            }, userService.publicKey);
+            } else {
+                blockService.getBlocks('', $defer, params, $scope.filter, function () {
+                    $scope.loading = false;
+                    $scope.countForgingBlocks = params.total();
+                    $scope.view.inLoading = false;
+                }, userService.publicKey);
+            }
         }
     });
 
@@ -196,7 +202,7 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
     };
 
     $scope.$on('updateControllerData', function (event, data) {
-        if (data.indexOf('main.forging') != -1) {
+        if (data.indexOf('main.forging') != -1 && userService.username) {
             $scope.updateBlocks();
             $scope.getForgedAmount();
             $scope.updateGraphs();
@@ -204,10 +210,12 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
         }
     });
 
-    $scope.updateBlocks();
-    $scope.getForgedAmount();
-    $scope.updateGraphs();
-    $scope.getForgingStatistics();
+    if (userService.username) {
+        $scope.updateBlocks();
+        $scope.getForgedAmount();
+        $scope.updateGraphs();
+        $scope.getForgingStatistics();
+    }
 
     $scope.blockInfo = function (block) {
         $scope.modal = blockInfo.activate({block: block});
