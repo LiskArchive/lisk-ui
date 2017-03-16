@@ -1,8 +1,14 @@
-<div class="row">
+<div class="row" ng-if="!delegate.username">
+    <div class="col-sm-12 col-xs-12 col-md-12">
+        <div class="info-panel info-panel-grey">
+            <span class="title">{{'To become a delegate, click on the "Delegate Registration" button.'|translate}}</span>
+        </div>
+    </div>
+</div>
+<div class="row" ng-if="delegate.username">
     <div class="col-sm-12 col-xs-12 col-md-6">
         <div class="info-panel info-panel-grey">
-            <span class="title" ng-if="delegate.username">{{delegate.username}}</span>
-            <span class="title" ng-if="!delegate.username">{{'To become a delegate, click on the "Delegate Registration" button.'|translate}}</span>
+            <span class="title">{{delegate.username}}</span>
             <span class="plain-text" ng-show="delegate.time">{{'Registered on'|translate}} {{delegate.time | timestampFilter}}</span>
         </div>
     </div>
@@ -44,7 +50,7 @@
         </div>
     </div>
 </div>
-<div class="row">
+<div class="row" ng-if="delegate.username">
     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
         <div class="light-graph">
             <div class="light-graph-heading">{{'Rank'|translate}}</div>
@@ -92,7 +98,7 @@
     </div>
 </div> -->
 
-<div class="row">
+<div class="row" ng-if="delegate.username">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="panel panel-default" ng-class="{'paginated': countForgingBlocks}">
             <div class="panel-heading">
