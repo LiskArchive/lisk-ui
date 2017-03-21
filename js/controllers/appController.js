@@ -171,6 +171,7 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
                     userService.u_multisignatures = account.u_multisignatures;
                     userService.secondPassphrase = account.secondSignature || account.unconfirmedSignature;
                     userService.unconfirmedPassphrase = account.unconfirmedSignature;
+                    
                 }
 
                 $scope.balance = userService.balance;
