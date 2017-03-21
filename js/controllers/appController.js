@@ -321,6 +321,7 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
     $scope.getForging = function (cb) {
         $http.get("/api/delegates/forging/status", {params: {publicKey: userService.publicKey}})
             .then(function (resp) {
+                $scope.forgingAllowed = resp.data.success;
                 $scope.forging = resp.data.enabled;
                 $scope.dataToShow.forging = $scope.forging;
                 userService.setForging($scope.forging);
