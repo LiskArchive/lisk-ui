@@ -60,7 +60,7 @@ msgstr ""
 #: js/controllers/delegatesController.js:193
 #: js/controllers/forgingController.js:64
 #: js/controllers/votedDelegatesController.js:119
-#: partials/forging.html:69
+#: partials/forging.html:75
 msgid "Approval"
 msgstr ""
 
@@ -81,7 +81,7 @@ msgid "Block"
 msgstr ""
 
 #: js/controllers/blockchainController.js:41
-#: js/controllers/forgingController.js:117
+#: js/controllers/forgingController.js:123
 #: partials/modals/transactionInfo.html:35
 msgid "Block ID"
 msgstr ""
@@ -274,7 +274,7 @@ msgid "Delegate Name"
 msgstr ""
 
 #: partials/template.html:104
-#: partials/template.html:232
+#: partials/template.html:250
 msgid "Delegates"
 msgstr ""
 
@@ -311,7 +311,7 @@ msgstr ""
 msgid "FEE"
 msgstr ""
 
-#: partials/template.html:245
+#: partials/template.html:234
 msgid "FORGING"
 msgstr ""
 
@@ -328,7 +328,7 @@ msgid "Failed to uninstall application"
 msgstr ""
 
 #: js/controllers/blockchainController.js:46
-#: js/controllers/forgingController.js:119
+#: js/controllers/forgingController.js:125
 #: js/controllers/transactionsController.js:67
 #: js/controllers/walletPendingsController.js:48
 #: js/controllers/walletTransactionsController.js:71
@@ -346,14 +346,14 @@ msgstr ""
 msgid "Fee: {{fee | liskFilter}} LSK"
 msgstr ""
 
-#: partials/forging.html:99
+#: partials/forging.html:105
 msgid "Forged Blocks"
 msgstr ""
 
 #: js/controllers/delegatesController.js:9
 #: js/controllers/forgingController.js:83
 #: js/controllers/votedDelegatesController.js:8
-#: partials/template.html:229
+#: partials/template.html:247
 #: partials/template.html:96
 msgid "Forging"
 msgstr ""
@@ -407,7 +407,7 @@ msgid "HOME"
 msgstr ""
 
 #: js/controllers/blockchainController.js:40
-#: js/controllers/forgingController.js:116
+#: js/controllers/forgingController.js:122
 #: js/controllers/transactionsController.js:61
 #: js/controllers/walletTransactionsController.js:66
 #: partials/modals/blockInfo.html:26
@@ -438,7 +438,7 @@ msgstr ""
 msgid "LSK Amount"
 msgstr ""
 
-#: partials/forging.html:11
+#: partials/forging.html:17
 msgid "LSK Earned"
 msgstr ""
 
@@ -446,15 +446,15 @@ msgstr ""
 msgid "Language"
 msgstr ""
 
-#: partials/forging.html:30
+#: partials/forging.html:36
 msgid "Last 24 hours"
 msgstr ""
 
-#: partials/forging.html:42
+#: partials/forging.html:48
 msgid "Last 30 days"
 msgstr ""
 
-#: partials/forging.html:36
+#: partials/forging.html:42
 msgid "Last 7 days"
 msgstr ""
 
@@ -602,7 +602,7 @@ msgstr ""
 msgid "My Votes"
 msgstr ""
 
-#: partials/template.html:235
+#: partials/template.html:253
 msgid "My votes ({{myVotesCount||'0'}})"
 msgstr ""
 
@@ -673,11 +673,11 @@ msgstr ""
 msgid "OPEN ANYWAY"
 msgstr ""
 
-#: partials/template.html:248
+#: partials/template.html:237
 msgid "Off"
 msgstr ""
 
-#: partials/template.html:251
+#: partials/template.html:240
 msgid "On"
 msgstr ""
 
@@ -785,7 +785,7 @@ msgstr ""
 msgid "Primary Passphrase"
 msgstr ""
 
-#: partials/forging.html:59
+#: partials/forging.html:65
 msgid "Productivity"
 msgstr ""
 
@@ -800,7 +800,7 @@ msgstr ""
 #: js/controllers/delegatesController.js:189
 #: js/controllers/forgingController.js:41
 #: js/controllers/votedDelegatesController.js:115
-#: partials/forging.html:50
+#: partials/forging.html:56
 msgid "Rank"
 msgstr ""
 
@@ -820,7 +820,7 @@ msgstr ""
 msgid "Register as a Delegate"
 msgstr ""
 
-#: partials/forging.html:6
+#: partials/forging.html:12
 msgid "Registered on"
 msgstr ""
 
@@ -837,7 +837,7 @@ msgid "Removing vote from delegates"
 msgstr ""
 
 #: js/controllers/blockchainController.js:47
-#: js/controllers/forgingController.js:120
+#: js/controllers/forgingController.js:126
 #: partials/modals/blockInfo.html:29
 msgid "Reward"
 msgstr ""
@@ -911,13 +911,13 @@ msgid "Settings"
 msgstr ""
 
 #: partials/blockchain.html:17
-#: partials/forging.html:107
+#: partials/forging.html:113
 #: partials/transactions.html:16
 msgid "Show All Columns"
 msgstr ""
 
 #: partials/blockchain.html:18
-#: partials/forging.html:110
+#: partials/forging.html:116
 #: partials/transactions.html:19
 msgid "Show Full Time"
 msgstr ""
@@ -1001,7 +1001,7 @@ msgid "This walkthrough will guide you through the necessary steps to create a m
 msgstr ""
 
 #: js/controllers/blockchainController.js:43
-#: js/controllers/forgingController.js:118
+#: js/controllers/forgingController.js:124
 #: js/controllers/transactionsController.js:65
 #: js/controllers/walletPendingsController.js:46
 #: js/controllers/walletTransactionsController.js:69
@@ -1013,11 +1013,11 @@ msgstr ""
 msgid "Time"
 msgstr ""
 
-#: partials/forging.html:5
+#: partials/forging.html:4
 msgid "To become a delegate, click on the \"Delegate Registration\" button."
 msgstr ""
 
-#: partials/forging.html:24
+#: partials/forging.html:30
 msgid "Today"
 msgstr ""
 
@@ -1125,7 +1125,7 @@ msgstr ""
 msgid "You do not have any applications installed yet."
 msgstr ""
 
-#: partials/forging.html:131
+#: partials/forging.html:137
 msgid "You have not forged any blocks yet."
 msgstr ""
 
@@ -1170,7 +1170,7 @@ msgstr ""
 msgid "confirm"
 msgstr ""
 
-#: partials/template.html:240
+#: partials/template.html:229
 msgid "delegate registration"
 msgstr ""
 
