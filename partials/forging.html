@@ -7,7 +7,7 @@
 </div>
 <div class="row" ng-if="delegate.username">
     <div class="col-sm-12 col-xs-12 col-md-6">
-        <div class="info-panel info-panel-grey">
+        <div class="info-panel info-panel-grey clearfix">
             <span class="title">{{delegate.username}}</span>
             <span class="plain-text" ng-show="delegate.time">{{'Registered on'|translate}} {{delegate.time | timestampFilter}}</span>
         </div>
@@ -15,7 +15,7 @@
     <div class="col-md-6 col-xs-12 col-sm-12">
         <div class="info-panel info-panel-grey">
             <span class="title">{{'LSK Earned'|translate}}</span>
-            <span class="plain-text">{{totalForged  | liskFilter }} LSK</span>
+            <span class="plain-text text-right">{{totalForged  | liskFilter }} LSK</span>
         </div>
         <!-- <div class="light-graph">
              <div class="light-graph-heading">LSK Earned</div>
@@ -28,25 +28,25 @@
     <div class="col-md-3 col-xs-12 col-sm-12">
         <div class="info-panel info-panel-grey">
             <span class="title">{{'Today'|translate}}</span>
-            <span class="plain-text">{{statistics.today  | liskFilter | number:2 }} LSK</span>
+            <span class="plain-text text-right">{{statistics.today  | liskFilter | number:2 }} LSK</span>
         </div>
     </div>
     <div class="col-md-3 col-xs-12 col-sm-12">
         <div class="info-panel info-panel-grey">
             <span class="title">{{'Last 24 hours'|translate}}</span>
-            <span class="plain-text">{{statistics.last24h  | liskFilter | number:2 }} LSK</span>
+            <span class="plain-text text-right">{{statistics.last24h  | liskFilter | number:2 }} LSK</span>
         </div>
     </div>
     <div class="col-md-3 col-xs-12 col-sm-12">
         <div class="info-panel info-panel-grey">
             <span class="title">{{'Last 7 days'|translate}}</span>
-            <span class="plain-text">{{statistics.last7d  | liskFilter | number:2 }} LSK</span>
+            <span class="plain-text text-right">{{statistics.last7d  | liskFilter | number:2 }} LSK</span>
         </div>
     </div>
     <div class="col-md-3 col-xs-12 col-sm-12">
         <div class="info-panel info-panel-grey">
             <span class="title">{{'Last 30 days'|translate}}</span>
-            <span class="plain-text">{{statistics.last30d  | liskFilter | number:2 }} LSK</span>
+            <span class="plain-text text-right">{{statistics.last30d  | liskFilter | number:2 }} LSK</span>
         </div>
     </div>
 </div>

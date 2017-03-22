@@ -80,6 +80,13 @@
   .btn-floating.blue {
     background-color: @blue !important;
   }
+
+  @media (max-width:767px) {
+    .nav-underline {
+      float: none !important;
+      width: 100%;
+    }
+  }
 }
 
 .categories-menu {
@@ -161,6 +168,9 @@
   }
 
   &.forgin-start {
+    @media (min-width: @screen-xs-min) {
+      padding-left: 0;
+    }
     li {
     text-transform: uppercase;
     font-size: 14px;
@@ -203,6 +213,12 @@
     &.active a {
       font-weight: 500;
       border-bottom: solid 4px @blue;
+      @media (max-width: @screen-xs-max) {
+        background-color: lighten(@blue, 55%);
+        &:hover, &:active, &:focus {
+          background-color: lighten(@blue, 55%);
+        }
+      }
     }
     & > a {
       border-bottom: solid 4px @white;
@@ -210,6 +226,10 @@
       font-size: 14px;
       padding: 24px 30px 18px;
       color: @black;
+      @media (max-width: @screen-xs-max) {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
       &:hover, &:focus, &:active {
         background-color: transparent;
         text-decoration: none;
