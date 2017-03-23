@@ -16,6 +16,7 @@ angular.module('liskApp').controller('votedDelegatesController', ['$scope', '$ro
 
     $scope.voteList = {
         list: {},
+        pendingList: {},
         length: 0,
         recalcLength: function () {
             var size = 0, key;
@@ -33,9 +34,12 @@ angular.module('liskApp').controller('votedDelegatesController', ['$scope', '$ro
             }
             if (this.inList(publicKey)) {
                 delete this.list[publicKey];
+                delete $scope.voteList.pendingList[publicKey];
             } else {
                 this.list[publicKey] = username;
+                $scope.voteList.pendingList[publicKey] = username;
             }
+            
             this.recalcLength();
             if (this.length == 0) {
                 $scope.moreDropdownSeelction.isopen = false;
@@ -54,15 +58,17 @@ angular.module('liskApp').controller('votedDelegatesController', ['$scope', '$ro
         $scope.voteModal = voteModal.activate({
             totalBalance: $scope.unconfirmedBalance,
             voteList: $scope.voteList.list,
+            pendingList: $scope.voteList.pendingList,
             adding: false,
             destroy: function (keepVotes) {
-            if (keepVotes) {
-                $scope.voteList.recalcLength();
-                return;
-            }
+                if (keepVotes) {
+                    $scope.voteList.recalcLength();
+                    return;
+                }
                 $scope.voteList.list = {};
                 $scope.voteList.recalcLength();
                 $scope.unconfirmedTransactions.getList();
+                
             }
         });
     };
@@ -99,17 +105,25 @@ angular.module('liskApp').controller('votedDelegatesController', ['$scope', '$ro
         counts: [],
         total: 0,
         getData: function ($defer, params) {
-            delegateService.getMyDelegates($defer, params, $scope.filter, userService.address, function () {
+            delegateService.getMyDelegates($defer, params, $scope.filter, userService.address, function (response) {
                 $scope.count = params.total();
                 $scope.loading = false;
                 $scope.view.inLoading = false;
                 $timeout(function () {
                     $scope.unconfirmedTransactions.getList();
-
+                    for (publicKey in $scope.voteList.pendingList) {
+                        if ($scope.tableMyDelegates.data.filter(function(e) { return e.publicKey == publicKey; }).length === 0) {
+                            delete $scope.voteList.pendingList[publicKey];
+                        }
+                    }
                 }, 1000);
             });
         }
     });
+
+    $scope.checkPendingStatus = function (delegate) {
+        return (delegate.publicKey in $scope.voteList.pendingList);
+    }
 
     $scope.tableMyDelegates.cols = {
         rate : gettextCatalog.getString('Rank'),

@@ -51,6 +51,7 @@ angular.module('liskApp').controller('voteController', ["$scope", "voteModal", "
 
     $scope.removeVote = function (publicKey) {
         delete $scope.voteList[publicKey];
+        delete $scope.pendingList[publicKey];
         if (!Object.size($scope.voteList)) {
             $scope.close();
         }
