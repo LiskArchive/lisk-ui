@@ -39,12 +39,11 @@
             <div class="pass-window">
                 <div class="pass-window-icon"></div>
                 <div class="loading clearfix" class="clearfix" ng-controller="loadingController">
-                    <div class="progress" ng-show="height">
+                    <div class="progress" ng-show="loadingState">
                         <div class="determinate" style="width: {{loadingState}}%"></div>
                     </div>
-                    <h3 class="heading" ng-show="!height || !blocksCount">Blockchain is loading...</h3>
-                    <h3 class="heading" ng-show="height">{{loadingState}}%</h3>
-                    <h3 class="heading" ng-show="height">Blockchain is loading...</h3>
+                    <h3 class="heading" ng-show="loadingState">{{loadingState}}%</h3>
+                    <h3 class="heading">Blockchain is loading...</h3>
                 </div>
             </div>
         </div>
