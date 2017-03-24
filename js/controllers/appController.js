@@ -108,9 +108,9 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
     $scope.getPriceTicker = function () {
         $http.get("https://explorer.lisk.io/api/getPriceTicker")
             .then(function (response) {
-                $scope.btc_usd = response.data.btc_usd;
-                $scope.lisk_btc = response.data.lisk_btc;
-                $scope.lisk_usd = response.data.lisk_usd;
+                $scope.btc_usd = Math.floor(response.data.tickers.BTC.USD * 1000000) / 1000000;
+                $scope.lisk_btc = Math.floor(response.data.tickers.LSK.BTC * 1000000)  / 1000000;
+                $scope.lisk_usd = Math.floor(response.data.tickers.LSK.USD * 1000000) / 1000000;
             });
     };
 
