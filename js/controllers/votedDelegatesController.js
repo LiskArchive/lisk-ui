@@ -39,7 +39,7 @@ angular.module('liskApp').controller('votedDelegatesController', ['$scope', '$ro
                 this.list[publicKey] = username;
                 $scope.voteList.pendingList[publicKey] = username;
             }
-            
+
             this.recalcLength();
             if (this.length == 0) {
                 $scope.moreDropdownSeelction.isopen = false;
@@ -68,7 +68,6 @@ angular.module('liskApp').controller('votedDelegatesController', ['$scope', '$ro
                 $scope.voteList.list = {};
                 $scope.voteList.recalcLength();
                 $scope.unconfirmedTransactions.getList();
-                
             }
         });
     };
