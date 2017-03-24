@@ -39,6 +39,23 @@ angular.module('liskApp').controller('accountController', ['$state','$scope', '$
         $scope.modal = transactionInfo.activate({block: block});
     }
 
+    $scope.resetAppData = function () {
+        $scope.balance = userService.balance = 0;
+        $scope.unconfirmedBalance = userService.unconfirmedBalance = 0;
+
+        $scope.balanceToShow = [0]
+
+        $scope.secondPassphrase = userService.secondPassphrase = 0;
+        $scope.unconfirmedPassphrase = userService.unconfirmedPassphrase = 0;
+
+        userService.multisignatures = userService.u_multisignatures = null;
+        $scope.multisignature = false;
+
+        $scope.delegateInRegistration = userService.delegateInRegistration = null;
+        $scope.delegate = userService.delegate = null;
+        $scope.username = userService.username = null;
+    }
+
     $scope.userInfo = function (userId) {
         $scope.modal = userInfo.activate({userId: userId});
     }
@@ -90,19 +107,21 @@ angular.module('liskApp').controller('accountController', ['$state','$scope', '$
                 }
                 $scope.secondPassphrase = userService.secondPassphrase;
                 $scope.unconfirmedPassphrase = userService.unconfirmedPassphrase;
+            } else {
+                $scope.resetAppData();
             }
         });
     }
 
     $scope.getCandles = function () {
         $http.get("https://explorer.lisk.io/api/candles/getCandles").then(function (response) {
-            $scope.graphs.liskPrice.data = [
+            $scope.graphs.liskPrice.data = (response.data && response.data.candles) ? [
                 response.data.candles.map(
                     function (candle) {
                         return candle.close;
                     }
                 )
-            ];
+            ] : [];
         });
     }
 
