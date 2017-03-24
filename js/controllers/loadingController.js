@@ -12,7 +12,7 @@ angular.module('liskApp').controller("loadingController", ["$scope", "$http", "$
                     if (!resp.data.loaded) {
                         $scope.height = resp.data.now;
                         $scope.blocksCount = resp.data.blocksCount;
-                        $scope.loadingState = Math.floor($scope.height / $scope.blocksCount * 100);
+                        $scope.loadingState = $scope.blocksCount ? Math.floor($scope.height / $scope.blocksCount * 100) : 0;
                     } else {
                         $window.location.href = '/';
                     }
