@@ -162,7 +162,7 @@ angular.module('liskApp').controller('forgingController', ['$scope', '$rootScope
             }
             $scope.uptime = response.productivity || 0;
 
-            var approval = parseFloat(response.approval || 0);;
+            var approval = parseFloat(response.approval || 0);
 
             $scope.graphs.approval.values = [approval, 100 - approval];
             if (($scope.approval == 0 && approval > 0) || ($scope.approval >= 95 && approval < 95) || ($scope.approval >= 50 && approval < 50)) {
