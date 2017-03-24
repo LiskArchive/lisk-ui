@@ -125,12 +125,6 @@ angular.module('liskApp').controller('accountController', ['$state','$scope', '$
         });
     }
 
-    $scope.$on('updateControllerData', function (event, data) {
-        if (data.indexOf('main.transactions') != -1) {
-            $scope.updateAppView();
-        }
-    });
-
     $scope.$on('$destroy', function () {
         $interval.cancel($scope.balanceInterval);
         $scope.balanceInterval = null;
@@ -161,7 +155,8 @@ angular.module('liskApp').controller('accountController', ['$state','$scope', '$
     }
 
     $scope.$on('updateControllerData', function (event, data) {
-        if (data.indexOf('main.dashboard') != -1 && $state.current.name=="main.dashboard") {
+        $scope.$$listeners.updateControllerData.splice(1);
+        if ((data.indexOf('main.dashboard') != -1 && $state.current.name == 'main.dashboard') || data.indexOf('main.transactions') != -1) {
             $scope.updateAppView();
         }
     });
