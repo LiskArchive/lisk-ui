@@ -111,7 +111,7 @@ angular.module('liskApp').controller('votedDelegatesController', ['$scope', '$ro
                 $timeout(function () {
                     $scope.unconfirmedTransactions.getList();
                     for (publicKey in $scope.voteList.pendingList) {
-                        if ($scope.tableMyDelegates.data.filter(function(e) { return e.publicKey == publicKey; }).length === 0) {
+                        if ($scope.tableMyDelegates.data.filter(function (e) { return e.publicKey == publicKey; }).length === 0) {
                             delete $scope.voteList.pendingList[publicKey];
                         }
                     }
