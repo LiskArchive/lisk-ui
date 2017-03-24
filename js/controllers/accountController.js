@@ -136,11 +136,10 @@ angular.module('liskApp').controller('accountController', ['$state','$scope', '$
     }
 
     $scope.$on('updateControllerData', function (event, data) {
-	    $scope.$$listeners.updateControllerData.splice(1);
-        if ((data.indexOf('main.dashboard') != -1 && $state.current.name=="main.dashboard") || data.indexOf('main.transactions') != -1) {
+        $scope.$$listeners.updateControllerData.splice(1);
+        if ((data.indexOf('main.dashboard') != -1 && $state.current.name == 'main.dashboard') || data.indexOf('main.transactions') != -1) {
             $scope.updateAppView();
         }
-
     });
 
     $scope.updateAppView();
