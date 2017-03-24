@@ -33,8 +33,11 @@ You can set the following cookies (e.g. using [EditThisCookies](http://www.editt
 
 - Vera Nekrasova <vera.limita@gmail.com>
 - Boris Povod <boris@crypti.me>
-- Oliver Beddows <oliver@lisk.io>
-- Max Kordek <max@lisk.io>
+- Oliver Beddows <oliver@lightcurve.io>
+- Max Kordek <max@lightcurve.io>
+- Vít Stanislav <vit@lightcurve.io>
+- Tobias Schwarz <tobias@lightcurve.io>
+- Ali Haghighatkhah <ali@lightcurve.io>
 
 ## License
 
