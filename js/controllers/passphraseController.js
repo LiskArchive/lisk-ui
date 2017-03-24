@@ -48,13 +48,13 @@ angular.module('liskApp').controller('passphraseController', ['$scope', '$rootSc
                         $state.go('main.dashboard');
                     }
                 } else {
-                    $scope.errorMessage = resp.data.error ? resp.data.error : "Error happened connecting to server";
+                    $scope.errorMessage = resp.data.error ? resp.data.error : 'Error connecting to server';
                 }
             }, function (error) {
                 $scope.errorMessage = error.data.error ? error.data.error : error.data;
             });
     }
-    
+
     var passphrase = $cookies.get('passphrase');
     if (passphrase) {
         $scope.login(passphrase);
