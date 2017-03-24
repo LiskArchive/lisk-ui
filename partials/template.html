@@ -240,7 +240,7 @@
                     <a href="#" class="bold-text" ng-click="registrationDelegate()"><translate>delegate registration</translate></a>
                 </li>
             </ul>
-            <ul class="nav nav-underline pull-right forgin-start" ng-show="delegate.username">
+            <ul class="nav nav-underline pull-right forgin-start" ng-show="delegate.username && forgingAllowed">
                 <li>
                     <span><translate>FORGING</translate>:</span>
                     <div class="switch blue-switch">
