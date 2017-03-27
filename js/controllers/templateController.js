@@ -2,7 +2,7 @@ require('angular');
 
 angular.module('liskApp').controller('templateController', ['$scope', '$rootScope', '$http', 'userService', "$interval", 'gettextCatalog', function ($rootScope, $scope, $http, userService, $interval, gettextCatalog) {
 
-    $scope.getSync = function () {
+    $scope.getInitialSync = function () {
         $http.get("/api/loader/status/sync").then(function (resp) {
             if (resp.data.success) {
                 $rootScope.syncing = resp.data.syncing;
@@ -13,9 +13,9 @@ angular.module('liskApp').controller('templateController', ['$scope', '$rootScop
     }
 
     $scope.syncInterval = $interval(function () {
-        $scope.getSync();
+        $scope.getInitialSync();
     }, 1000 * 10);
 
-    $scope.getSync();
+    $scope.getInitialSync();
 
 }]);

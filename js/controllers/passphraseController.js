@@ -27,7 +27,7 @@ angular.module('liskApp').controller('passphraseController', ['$scope', '$rootSc
     }
 
     $scope.login = function (pass, remember) {
-        if (pass.trim().split(/\s+/g).length < 12) {
+        if (!pass || pass.trim().split(/\s+/g).length < 12) {
             $scope.errorMessage = 'Passphrase must consist of 12 or more words.';
             return;
         }
