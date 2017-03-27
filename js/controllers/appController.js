@@ -407,8 +407,8 @@ angular.module('liskApp').controller('appController', ['dappsService', '$scope',
     $scope.getSync = function () {
         $http.get("/api/loader/status/sync").then(function (resp) {
             if (resp.data.success) {
-                $scope.syncState = (resp.data.syncing && resp.data.blocks) ? Math.floor(100 * resp.data.height / resp.data.blocks) : 0;
-                if ($scope.syncState) {
+                $scope.syncState = (resp.data.syncing && resp.data.blocks) ? Math.floor(100 * resp.data.height / resp.data.blocks) : null;
+                if ($scope.syncState != undefined) {
                     $scope.loading.values = [resp.data.height, Math.abs(resp.data.blocks - resp.data.height)];
                 }
             }
