@@ -148,7 +148,7 @@
                 <a class="btn btn-blue-nav waves-effect waves-light left-margin-20" ng-click="sendTransaction()">
                     <i class="mdi-content-send left"></i><translate>SEND</translate>
                 </a>
-                <div class="mini-chart valign-wrapper" ng-show="syncState!=0">
+                <div class="mini-chart valign-wrapper" ng-show="syncState != undefined">
                     <div class="mini-chart-label">{{syncState}}%</div>
                     <canvas id="total-forged" class="chart chart-doughnut" chart-data="loading.values" chart-labels="loading.labels" chart-options="loading.options" chart-colours="loading.colours"></canvas>
                 </div>
