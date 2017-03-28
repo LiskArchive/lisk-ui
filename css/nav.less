@@ -193,16 +193,19 @@
     }
     }
   }
-  &.registration {
+  a.registration {
     font-weight: 500;
     position: relative;
+    line-height: 56px;
+    padding: 0;
+
     &:before {
       content: '';
-      display: block;
-      position: absolute;
-      width: 20px;
+      display: inline-block;
+      position: relative;
+      width: 25px;
       height: 20px;
-      top: 20px;
+      top: 5px;
       background-image: url('@{images}/sprites/iconset.png');
       background-position: -37px -68px;
     }

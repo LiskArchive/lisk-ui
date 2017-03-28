@@ -224,9 +224,9 @@
             </div>
         </div>
         <div id="page-nav" ng-if="view.bar.forgingMenu">
-            <ul class="nav nav-underline pull-right registration" ng-show="!delegate.username && !delegateInRegistration">
+            <ul class="nav nav-underline pull-right" ng-show="!delegate.username && !delegateInRegistration">
                 <li>
-                    <a href="#" class="bold-text" ng-click="registrationDelegate()"><translate>delegate registration</translate></a>
+                    <a href="#" class="bold-text registration" ng-click="registrationDelegate()"><translate>delegate registration</translate></a>
                 </li>
             </ul>
             <ul class="nav nav-underline pull-right forgin-start" ng-show="delegate.username && forgingAllowed">
