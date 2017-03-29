@@ -4,6 +4,8 @@ Lisk is a next generation crypto-currency and blockchain application platform, w
 
 This repository contains the [AngularJS](https://angularjs.org/) based user-interface submodule of the Lisk client.
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+
 ## Installation
 
 Install frontend dependencies (will run the `bower install` after the npm instalation):
