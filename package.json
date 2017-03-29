@@ -8,7 +8,7 @@
   },
   "private": true,
   "author": "Lisk Foundation <admin@lisk.io>, lightcurve GmbH <admin@lightcurve.io>",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "scripts": {
     "postinstall": "bower install",
     "bower-install": "bower install",
