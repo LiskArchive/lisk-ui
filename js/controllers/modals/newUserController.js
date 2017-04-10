@@ -32,7 +32,7 @@ angular.module('liskApp').controller('newUserController', ["$scope", "$http", "n
 
     $scope.login = function (pass) {
         var data = { secret: pass };
-        if (!Mnemonic.isValid(pass) || $scope.newPassphrase != pass) {
+        if (!Mnemonic.isValid(pass) || ($scope.newPassphrase !== pass)) {
             $scope.noMatch = true;
         } else {
             $scope.view.inLoading = true;
