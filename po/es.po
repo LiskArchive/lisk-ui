@@ -337,7 +337,7 @@ msgstr "COMISIÓN "
 #: partials/modals/secondPassphraseModal.html:28
 #: partials/modals/sendTransaction.html:31 partials/modals/vote.html:25
 msgid "Fee: {{fee | liskFilter}} LSK"
-msgstr "Comision"
+msgstr "Comision: {{fee | liskFilter}} LSK"
 
 #: partials/forging.html:74
 msgid "Forged Blocks"
